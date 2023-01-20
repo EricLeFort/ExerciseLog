@@ -33,4 +33,6 @@ date,workout_type,time(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,
 14-JAN-2023,walk (treadmill),00:35:00,2.95,3662,37,172,195,"Elevation isn't exact, forgot to record it. The value is a super rough estimate."
 15-JAN-2023,walk (treadmill),00:11:12,0.93,1204,12,169,183,"Post-workout (legs/shoulders)"
 16-JAN-2023,walk (treadmill),01:02:23,5.44,6574,36,172,201,"Entered beast mode"
+19-JAN-2023,bike (stationary),00:10:19,0,0,6.10,161,186,""
+19-JAN-2023,walk (treadmill),00:20:15,1.71,2218,0,166,172,"Shredded my feet from beast mode last time, in recovery.."
 
