@@ -1,19 +1,139 @@
 date,exercise,reps,weight(lbs),rating
-04-DEC-2023,Bicep Curls,10,10,good
-04-DEC-2023,Bicep Curls,10,10,bad
-04-DEC-2023,Bicep Curls,10,10,good
-04-DEC-2023,Lawnmowers,10,30,good
-04-DEC-2023,Lawnmowers,10,30,good
-04-DEC-2023,Lawnmowers,10,30,good
-04-DEC-2023,Overhead Tricep Extension,10,12.5,good
-04-DEC-2023,Overhead Tricep Extension,10,15,good
-04-DEC-2023,Overhead Tricep Extension,10,15,good
-04-DEC-2023,Seated Row,10,100,good
-04-DEC-2023,Seated Row,10,85,good
-04-DEC-2023,Seated Row,10,77.5,good
-04-DEC-2023,Tricep Pushdown,10,60,good
-04-DEC-2023,Tricep Pushdown,10,60,good
-04-DEC-2023,Tricep Pushdown,10,60,good
-04-DEC-2023,Overhead Pulldown,12,85,good
-04-DEC-2023,Overhead Pulldown,10,100,good
-04-DEC-2023,Overhead Pulldown,10,100,bad
+04-DEC-2022,Bicep Curls,10,10,good
+04-DEC-2022,Bicep Curls,10,10,bad
+04-DEC-2022,Bicep Curls,10,10,good
+04-DEC-2022,Lawnmowers,10,30,good
+04-DEC-2022,Lawnmowers,10,30,good
+04-DEC-2022,Lawnmowers,10,30,good
+04-DEC-2022,Overhead Tricep Extension,10,12.5,good
+04-DEC-2022,Overhead Tricep Extension,10,15,good
+04-DEC-2022,Overhead Tricep Extension,10,15,good
+04-DEC-2022,Seated Row,10,100,good
+04-DEC-2022,Seated Row,10,85,good
+04-DEC-2022,Seated Row,10,77.5,good
+04-DEC-2022,Tricep Pushdown,10,60,good
+04-DEC-2022,Tricep Pushdown,10,60,good
+04-DEC-2022,Tricep Pushdown,10,60,good
+04-DEC-2022,Lat Pulldown,12,85,good
+04-DEC-2022,Lat Pulldown,10,100,good
+04-DEC-2022,Lat Pulldown,10,100,bad
+09-DEC-2022,Seated Row,10,85,good
+09-DEC-2022,Seated Row,10,85,good
+09-DEC-2022,Seated Row,10,85,good
+09-DEC-2022,Bicep Curls,10,10,good
+09-DEC-2022,Bicep Curls,10,10,good
+09-DEC-2022,Bicep Curls,10,10,good
+09-DEC-2022,Lawnmowers,10,35,good
+09-DEC-2022,Lawnmowers,10,35,good
+09-DEC-2022,Lawnmowers,10,35,good
+09-DEC-2022,Overhead Tricep Extension,10,15,good
+09-DEC-2022,Overhead Tricep Extension,10,15,good
+09-DEC-2022,Overhead Tricep Extension,10,15,good
+09-DEC-2022,Lat Pulldown,10,100,good
+09-DEC-2022,Lat Pulldown,8,100,failure
+09-DEC-2022,Lat Pulldown,11,85,good
+21-DEC-2022,Bicep Curls,10,10,easy
+21-DEC-2022,Bicep Curls,10,15,good
+21-DEC-2022,Bicep Curls,10,15,good
+21-DEC-2022,Seated Row,10,95,good
+21-DEC-2022,Seated Row,10,110,bad
+21-DEC-2022,Seated Row,10,110,good
+21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
+21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
+21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
+21-DEC-2022,Lawnmowers,10,35,good
+21-DEC-2022,Lawnmowers,10,35,good
+21-DEC-2022,Lawnmowers,10,35,good
+21-DEC-2022,Tricep Pushdown,10,40.5,good
+21-DEC-2022,Tricep Pushdown,10,45,good
+21-DEC-2022,Tricep Pushdown,10,37.5,good
+21-DEC-2022,Hammer Curls,10,20,good
+21-DEC-2022,Hammer Curls,10,20,good
+21-DEC-2022,Hammer Curls,10,20,good
+05-JAN-2023,Hammer Curls,10,20,good
+05-JAN-2023,Hammer Curls,10,25,good
+05-JAN-2023,Hammer Curls,10,25,good
+05-JAN-2023,Overhead Tricep Extension,10,20,good
+05-JAN-2023,Overhead Tricep Extension,10,25,good
+05-JAN-2023,Overhead Tricep Extension,10,25,good
+05-JAN-2023,Tricep Pushdown,10,37.5,good
+05-JAN-2023,Tricep Pushdown,10,42.5,bad
+05-JAN-2023,Tricep Pushdown,10,40.5,good
+05-JAN-2023,Bicep Curl,10,25,good
+05-JAN-2023,Bicep Curl,10,25,good
+05-JAN-2023,Bicep Curl,10,25,good
+05-JAN-2023,Seated Row,12,85,good
+05-JAN-2023,Seated Row,10,100,easy
+05-JAN-2023,Seated Row,10,115,good
+05-JAN-2023,Lawnmowers,10,40,good
+05-JAN-2023,Lawnmowers,10,40,good
+05-JAN-2023,Lawnmowers,10,40,good
+13-JAN-2023,Barbell Curls,10,25,good
+13-JAN-2023,Barbell Curls,12,20,good
+13-JAN-2023,Barbell Curls,12,20,good
+13-JAN-2023,Barbell Curls,12,20,good
+13-JAN-2023,Barbell Curls,12,20,good
+13-JAN-2023,Overhead Barbell Tricep Extension,15,20,good
+13-JAN-2023,Overhead Barbell Tricep Extension,15,20,good
+13-JAN-2023,Overhead Barbell Tricep Extension,12,20,good
+13-JAN-2023,Tricep Pushdown,10,90,good
+13-JAN-2023,Tricep Pushdown,10,90,good
+13-JAN-2023,Tricep Pushdown,10,90,good
+13-JAN-2023,Lawnmowers,10,35,good
+13-JAN-2023,Lawnmowers,12,35,good
+13-JAN-2023,Lawnmowers,10,35,good
+13-JAN-2023,Seated Row,10,100,good
+13-JAN-2023,Seated Row,10,100,good
+13-JAN-2023,Seated Row,10,100,good
+13-JAN-2023,Lat Pulldown,10,100,good
+13-JAN-2023,Lat Pulldown,10,100,good
+13-JAN-2023,Lat Pulldown,10,110,bad
+21-JAN-2023,Barbell Curls,10,20,good
+21-JAN-2023,Barbell Curls,10,20,good
+21-JAN-2023,Barbell Curls,10,20,good
+21-JAN-2023,Barbell Curls,10,20,good
+21-JAN-2023,Barbell Curls,10,20,good
+21-JAN-2023,Overhead Barbell Tricep Extension,12,20,good
+21-JAN-2023,Overhead Barbell Tricep Extension,12,20,good
+21-JAN-2023,Overhead Barbell Tricep Extension,12,20,good
+21-JAN-2023,Tricep Pushdown,10,90,good
+21-JAN-2023,Tricep Pushdown,10,90,bad
+21-JAN-2023,Tricep Pushdown,10,90,bad
+21-JAN-2023,Skullcrushers,12,25,good
+21-JAN-2023,Skullcrushers,10,35,good
+21-JAN-2023,Skullcrushers,10,40,good
+21-JAN-2023,Lawnmowers,12,35,good
+21-JAN-2023,Lawnmowers,15,35,good
+21-JAN-2023,Lawnmowers,12,35,good
+21-JAN-2023,Seated Row,12,100,good
+21-JAN-2023,Seated Row,12,100,good
+21-JAN-2023,Seated Row,10,115,good
+21-JAN-2023,Lat Pulldown,12,100,good
+21-JAN-2023,Lat Pulldown,10,115,good
+21-JAN-2023,Lat Pulldown,10,115,bad
+25-JAN-2023,Bicep Curls,10,20,good
+25-JAN-2023,Concentration Curls,10,20,good
+25-JAN-2023,Concentration Curls,10,20,good
+25-JAN-2023,Bicep Curls,10,25,good
+25-JAN-2023,Bicep Curls,10,25,good
+25-JAN-2023,Hammer Curls,10,20,good
+25-JAN-2023,Hammer Curls,10,25,good
+25-JAN-2023,Hammer Curls,6,25,good
+25-JAN-2023,Hammer Curls,10,25,good
+25-JAN-2023,Concentration Curls,10,20,bad
+25-JAN-2023,Concentration Curls,10,15,good
+25-JAN-2023,Overhead Tricep Extension,10,25,good
+25-JAN-2023,Overhead Tricep Extension,10,25,good
+25-JAN-2023,Overhead Tricep Extension,10,25,good
+25-JAN-2023,Resistance Tricep Pushdown,12,40,good
+25-JAN-2023,Resistance Tricep Pushdown,10,40,good
+25-JAN-2023,Resistance Tricep Pushdown,10,40,good
+25-JAN-2023,Lawnmowers,10,40,good
+25-JAN-2023,Lawnmowers,10,40,good
+25-JAN-2023,Lawnmowers,10,40,good
+25-JAN-2023,Resistance Seated Row,10,100,good
+25-JAN-2023,Resistance Seated Row,10,100,good
+25-JAN-2023,Resistance Seated Row,10,100,good
+25-JAN-2023,Resistance Lat Pulldown,10,100,good
+25-JAN-2023,Resistance Lat Pulldown,10,100,good
+25-JAN-2023,Resistance Lat Pulldown,10,100,good
