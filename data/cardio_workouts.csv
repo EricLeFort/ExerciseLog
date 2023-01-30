@@ -35,4 +35,8 @@ date,workout_type,time(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,
 16-JAN-2023,walk (treadmill),01:02:23,5.44,6574,36,172,201,"Entered beast mode"
 19-JAN-2023,bike (stationary),00:10:19,6.10,0,0,161,186,""
 19-JAN-2023,walk (treadmill),00:20:15,1.71,2218,0,166,172,"Shredded my feet from beast mode last time, in recovery.."
-
+20-JAN-2023,walk (treadmill),00:39:05,3.27,4064,68,165,188,""
+21-JAN-2023,walk (treadmill),00:23:00,1.97,2438,13,170,189,"Post-workout (arms/back)"
+26-JAN-2023,walk (treadmill),00:36:35,3.21,3700,80,165,183,"End steps is approximate, watch died near the end"
+28-JAN-2023,walk (treadmill),00:46:15,3.94,4774,75,162,186,""
+28-JAN-2023,walk (treadmill),00:41:03,3.78,1.53,4441,0,167,193,"Threw in a minute and a half of jogging"
