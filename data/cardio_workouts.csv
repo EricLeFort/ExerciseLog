@@ -39,4 +39,5 @@ date,workout_type,time(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,
 21-JAN-2023,walk (treadmill),00:23:00,1.97,2438,13,170,189,"Post-workout (arms/back)"
 26-JAN-2023,walk (treadmill),00:36:35,3.21,3700,80,165,183,"End steps is approximate, watch died near the end"
 28-JAN-2023,walk (treadmill),00:46:15,3.94,4774,75,162,186,""
-28-JAN-2023,walk (treadmill),00:41:03,3.78,1.53,4441,0,167,193,"Threw in a minute and a half of jogging"
+28-JAN-2023,walk (treadmill),00:41:03,3.78,4441,0,167,193,"Threw in a minute and a half of jogging"
+30-JAN-2023,walk (treadmill),00:50:09,4.31,5285,40,168,190,""
