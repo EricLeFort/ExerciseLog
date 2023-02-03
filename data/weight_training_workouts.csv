@@ -1,4 +1,4 @@
-date,duration(HH:mm:ss),workout_type,location,note
+date,duration(HH:mm:ss),workout_type,location,notes
 04-DEC-2022,00:35:00,Arms/Back,Via 6 Gym,""
 06-DEC-2022,00:38:00,Shoulders/Legs,Via 6 Gym,""
 09-DEC-2022,00:31:00,Arms/Back,Via 6 Gym,""
