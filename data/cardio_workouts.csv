@@ -43,3 +43,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 30-JAN-2023,walk (treadmill),00:50:09,4.31,5285,40,168,190,""
 01-FEB-2023,walk (treadmill),00:53:59,4.56,5664,100,172,191,"Milestone: 100m gain!!"
 02-FEB-2023,walk (treadmill),00:45:00,3.90,4821,60,169,189,""
+03-FEB-2023,walk (treadmill),00:20:02,1.78,2106,0,150,159,"Post-workout (arms/back)"
