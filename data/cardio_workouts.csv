@@ -45,3 +45,5 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 02-FEB-2023,walk (treadmill),00:45:00,3.90,4821,60,169,189,""
 03-FEB-2023,walk (treadmill),00:20:02,1.78,2106,0,150,159,"Post-workout (arms/back)"
 04-FEB-2023,walk (treadmill),00:50:00,4.32,5280,103,171,190,""
+06-FEB-2023,walk (treadmill),00:10:32,0.85,1061,26,146,165,"Plantar fasciitis (I believe, self-diagnosed) is acting up. Had to end early."
+06-FEB-2023,bike (stationary),00:10:02,6.09,0,0,167,186,"Started tracking workout late on my watch, average heart rate is likely inaccurate."
