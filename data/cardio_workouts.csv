@@ -49,3 +49,5 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 06-FEB-2023,bike (stationary),00:10:02,6.09,0,0,167,186,"Started tracking workout late on my watch, average heart rate is likely inaccurate."
 07-FEB-2023,walk (outdoor),00:16:00,1.25,1650,22,146,171,"Walk to REI. Didn’t get start/end steps, steps is an estimate."
 07-FEB-2023,walk (outdoor),00:15:32,1.19,1550,12,141,160,"Walk back from REI. Didn’t get start/end steps, steps is an estimate."
+08-FEB-2023,walk (outdoor),00:17:31,1.34,1950,20,140,152,"Walk to work-gym. Pressed “end workout” late so numbers are a little off."
+08-FEB-2023,walk (outdoor),00:14:44,1.16,1452,26,151,168,"Walk back from work-gym"
