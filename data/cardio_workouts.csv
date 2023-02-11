@@ -52,3 +52,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 08-FEB-2023,walk (outdoor),00:17:31,1.34,1950,20,140,152,"Walk to work-gym. Pressed “end workout” late so numbers are a little off."
 08-FEB-2023,walk (outdoor),00:14:44,1.16,1452,26,151,168,"Walk back from work-gym"
 09-FEB-2023,walk (treadmill),01:05:00,5.83,6933,40,162,179,""
+10-FEB-2023,walk (treadmill),00:35:00,3.02,3720,72,168,185,""
