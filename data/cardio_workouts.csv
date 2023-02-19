@@ -58,3 +58,5 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 14-FEB-2023,walk (treadmill),00:42:00,3.63,4422,103,169,191,""
 15-FEB-2023,walk (treadmill),00:20:37,1.79,61,166,185,"Post-workout (chest)"
 16-FEB-2023,walk (treadmill),00:30:06,2.62,58,162,184,""
+18-FEB-2023,walk (treadmill),00:30:02,2.58,96,171,190,"5% gain for the first 20 mins"
+18-FEB-2023,walk (treadmill),01:30:09,8.50,0,164,187,"Threw in two 1-minute long jogs"
