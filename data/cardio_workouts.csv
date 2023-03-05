@@ -63,4 +63,5 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 20-FEB-2023,walk (outdoor),00:12:51,1.14,1450,0,143,154,"Walk to work-gym. Carried a ~12lb pack (4L water + 3.2lb bag + odds and ends)"
 20-FEB-2023,walk (outdoor),00:13:36,1.17,1564,23,158,178,"Walk from work-gym. Carried a ~12lb pack (4L water + 3.2lb bag + odds and ends)"
 24-FEB-2023,walk (treadmill),01:00:00,5.30,6585,0,166,183,"Actually did a bit of elevation gain but this treadmill doesn’t record it. Treadmill was also inaccurate for distance so this is an estimate based off watch measure."
-28-FEB-2023,bike (stationary),00:15:32,6.34,0,175,188,"Broke up into a 10 min and a 5 min. At Cap Maison (St. Lucia)."
+28-FEB-2023,bike (stationary),00:15:32,6.34,0,0,175,188,"Broke up into a 10 min and a 5 min. At Cap Maison (St. Lucia)."
+03-MAR-2023,walk (treadmill),01:00:57,5.34,6429,150,169,186,""
