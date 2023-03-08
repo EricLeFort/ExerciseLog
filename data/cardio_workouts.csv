@@ -66,3 +66,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 28-FEB-2023,bike (stationary),00:15:32,6.34,0,0,175,188,"Broke up into a 10 min and a 5 min. At Cap Maison (St. Lucia)."
 03-MAR-2023,walk (treadmill),01:00:57,5.34,6429,150,169,186,""
 06-MAR-2023,walk (treadmill),00:15:30,1.41,1659,0,159,166,"Post-workout (chest/core)"
+07-MAR-2023,walk (treadmill),01:06:03,5.84,7028,175,173,188,""
