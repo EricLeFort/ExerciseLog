@@ -712,3 +712,24 @@ date,exercise,reps,weight(lbs),rating
 06-MAR-2023,Plank,60,0,good
 06-MAR-2023,Plank,60,0,good
 06-MAR-2023,Plank,60,0,good
+08-MAR-2023,Barbell Bicep Curls,12,40,good
+08-MAR-2023,Barbell Bicep Curls,10,40,good
+08-MAR-2023,Barbell Bicep Curls,12,40,good
+08-MAR-2023,Concentration Curls,10,20,good
+08-MAR-2023,Concentration Curls,10,20,good
+08-MAR-2023,Concentration Curls,,10,20,bad (L)
+08-MAR-2023,Tricep Pushdown,12,100,good
+08-MAR-2023,Tricep Pushdown,12,100,good
+08-MAR-2023,Tricep Pushdown,10,100,failure
+08-MAR-2023,Skullcrushers,15,40,good
+08-MAR-2023,Skullcrushers,15,40,good
+08-MAR-2023,Skullcrushers,15,40,good
+08-MAR-2023,Lawnmowers,10,35,easy
+08-MAR-2023,Lawnmowers,12,35,good
+08-MAR-2023,Lawnmowers,12,35,good
+08-MAR-2023,Seated Row,12,115,good
+08-MAR-2023,Seated Row,12,115,good
+08-MAR-2023,Seated Row,12,115,good
+08-MAR-2023,Lat Pulldown,10,130,bad
+08-MAR-2023,Lat Pulldown,10,115,good
+08-MAR-2023,Lat Pulldown,10,115,good
