@@ -717,7 +717,7 @@ date,exercise,reps,weight(lbs),rating
 08-MAR-2023,Barbell Bicep Curls,12,40,good
 08-MAR-2023,Concentration Curls,10,20,good
 08-MAR-2023,Concentration Curls,10,20,good
-08-MAR-2023,Concentration Curls,,10,20,bad (L)
+08-MAR-2023,Concentration Curls,10,20,bad (L)
 08-MAR-2023,Tricep Pushdown,12,100,good
 08-MAR-2023,Tricep Pushdown,12,100,good
 08-MAR-2023,Tricep Pushdown,10,100,failure
