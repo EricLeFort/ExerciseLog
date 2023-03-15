@@ -69,3 +69,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 07-MAR-2023,walk (treadmill),01:06:03,5.84,7028,175,173,188,""
 09-MAR-2023,walk (treadmill),01:05:38,5.95,7024,145,176,196,"100m gain in first 20min + 1 minute of running."
 11-MAR-2023,walk (treadmill),01:00:39,6.00,6787,0,161,187,"2 two-minute + 3 one-minute bits of running."
+14-MAR-2023,walk (tredamill),01:00:00,5.18,6274,189,171,191,""
