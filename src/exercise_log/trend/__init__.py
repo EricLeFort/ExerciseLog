@@ -34,7 +34,7 @@ class Trendsetter:
         padded_dates.index = pd.RangeIndex(start=first_index, stop=first_index + periods)
         return padded_dates
 
-    def _compute_trendline(df: pd.DataFrame, key: str, f_to_fit: Callable, num_days_to_extrapolate: int):
+    def _compute_trendline(df: pd.DataFrame, key: str, f_to_fit: Callable, num_days_to_extrapolate: int) -> np.ndarray:
         """Fits a trendline using the given functionm for the column specified by key in the given DataFrame"""
         nonnulls = df[df[key].notnull()]
         x = nonnulls.index
@@ -43,12 +43,12 @@ class Trendsetter:
         padded_dates = Trendsetter._get_padded_dates(nonnulls, num_days_to_extrapolate)
         return f_to_fit(padded_dates.index, *fitted_params).to_numpy()
 
-    def compute_n_sample_avg(data: pd.DataFrame, field: str, n_days_to_avg: int):
+    def compute_n_sample_avg(data: pd.DataFrame, field: str, n_days_to_avg: int) -> np.ndarray:
         """Compute an average over the most recent N samples"""
         return uniform_filter1d(data[field], size=n_days_to_avg)
 
-    def fit_linear(data: pd.DataFrame, field: str, extrapolate_days: int):
+    def fit_linear(data: pd.DataFrame, field: str, extrapolate_days: int) -> np.ndarray:
         return Trendsetter._compute_trendline(data, field, Trendsetter._f_affine, extrapolate_days)
 
-    def fit_logarithmic(data: pd.DataFrame, field: str, extrapolate_days: int):
+    def fit_logarithmic(data: pd.DataFrame, field: str, extrapolate_days: int) -> np.ndarray:
         return Trendsetter._compute_trendline(data, field, Trendsetter._f_log_curve, extrapolate_days)

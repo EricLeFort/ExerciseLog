@@ -26,3 +26,6 @@ RATE_OF_CLIMB = "rate of climb (m/h)"
 WALK_TREADMILL = "walk (treadmill)"
 WALK_OUTDOOR = "walk (outdoor)"
 BIKE_STATIONARY = "bike (stationary)"
+
+# Health constants
+MIN_DAILY_ACTIVE_MINUTES = 22.5  # Weekly recommended is 150, this is about 150/7
