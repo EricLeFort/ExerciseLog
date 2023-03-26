@@ -75,3 +75,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 19-MAR-2023,walk (treadmill),01:15:30,6.69,8080,128,162,182,""
 21-MAR-2023,walk (treadmill),01:40:45,9.00,10722,210,163,184,"Drank an electrolyte drink mix throughout workout, worked wonders for sustained energy."
 23-MAR-2023,walk (treadmill),01:00:27,5.42,6422,182,166,188,""
+25-MAR-2023,walk (treadmill),01:11:23,6.20,7438,178,167,191,""
