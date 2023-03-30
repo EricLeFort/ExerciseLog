@@ -941,3 +941,28 @@ date,exercise,reps,weight(lbs),rating
 25-MAR-2023,Deadlift,1,275,good
 25-MAR-2023,Deadlift,1,315,good
 25-MAR-2023,Deadlift,1,315,good
+26-MAR-2023,Preacher Curls,10,52,good
+26-MAR-2023,Preacher Curls,8,62,good
+26-MAR-2023,Preacher Curls,5,72,failure
+26-MAR-2023,Hammer Curls,13,25,good
+26-MAR-2023,Hammer Curls,10,30,bad
+26-MAR-2023,Hammer Curls,12,25,good
+26-MAR-2023,Overhead Tricep Extension,12,25,good
+26-MAR-2023,Overhead Tricep Extension,12,25,good
+26-MAR-2023,Overhead Tricep Extension,12,25,failure
+26-MAR-2023,Tricep Pushdown,10,110,good
+26-MAR-2023,Tricep Pushdown,5,130,good
+26-MAR-2023,Tricep Pushdown,5,130,failure
+26-MAR-2023,Tricep Pushdown,5,120,good
+26-MAR-2023,Skullcrushers,10,52,good
+26-MAR-2023,Skullcrushers,12,52,good
+26-MAR-2023,Skullcrushers,12,52,good
+26-MAR-2023,Lawnmowers,12,45,good
+26-MAR-2023,Lawnmowers,10,45,good
+26-MAR-2023,Lawnmowers,10,45,good
+26-MAR-2023,Seated Row,10,130,good
+26-MAR-2023,Seated Row,10,130,good
+26-MAR-2023,Seated Row,10,130,good
+26-MAR-2023,Lat Pulldown,12,130,good
+26-MAR-2023,Lat Pulldown,10,130,good
+26-MAR-2023,Lat Pulldown,10,130,bad
