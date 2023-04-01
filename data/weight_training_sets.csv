@@ -1,7 +1,7 @@
 date,exercise,reps,weight(lbs),rating
-04-DEC-2022,Bicep Curls,10,10,good
-04-DEC-2022,Bicep Curls,10,10,bad
-04-DEC-2022,Bicep Curls,10,10,good
+04-DEC-2022,Bicep Curl,10,10,good
+04-DEC-2022,Bicep Curl,10,10,bad
+04-DEC-2022,Bicep Curl,10,10,good
 04-DEC-2022,Lawnmowers,10,30,good
 04-DEC-2022,Lawnmowers,10,30,good
 04-DEC-2022,Lawnmowers,10,30,good
@@ -20,9 +20,9 @@ date,exercise,reps,weight(lbs),rating
 09-DEC-2022,Seated Row,10,85,good
 09-DEC-2022,Seated Row,10,85,good
 09-DEC-2022,Seated Row,10,85,good
-09-DEC-2022,Bicep Curls,10,10,good
-09-DEC-2022,Bicep Curls,10,10,good
-09-DEC-2022,Bicep Curls,10,10,good
+09-DEC-2022,Bicep Curl,10,10,good
+09-DEC-2022,Bicep Curl,10,10,good
+09-DEC-2022,Bicep Curl,10,10,good
 09-DEC-2022,Lawnmowers,10,35,good
 09-DEC-2022,Lawnmowers,10,35,good
 09-DEC-2022,Lawnmowers,10,35,good
@@ -32,9 +32,9 @@ date,exercise,reps,weight(lbs),rating
 09-DEC-2022,Lat Pulldown,10,100,good
 09-DEC-2022,Lat Pulldown,8,100,failure
 09-DEC-2022,Lat Pulldown,11,85,good
-21-DEC-2022,Bicep Curls,10,10,easy
-21-DEC-2022,Bicep Curls,10,15,good
-21-DEC-2022,Bicep Curls,10,15,good
+21-DEC-2022,Bicep Curl,10,10,easy
+21-DEC-2022,Bicep Curl,10,15,good
+21-DEC-2022,Bicep Curl,10,15,good
 21-DEC-2022,Seated Row,10,95,good
 21-DEC-2022,Seated Row,10,110,bad
 21-DEC-2022,Seated Row,10,110,good
@@ -47,12 +47,12 @@ date,exercise,reps,weight(lbs),rating
 21-DEC-2022,Tricep Pushdown,10,40.5,good
 21-DEC-2022,Tricep Pushdown,10,45,good
 21-DEC-2022,Tricep Pushdown,10,37.5,good
-21-DEC-2022,Hammer Curls,10,20,good
-21-DEC-2022,Hammer Curls,10,20,good
-21-DEC-2022,Hammer Curls,10,20,good
-05-JAN-2023,Hammer Curls,10,20,good
-05-JAN-2023,Hammer Curls,10,25,good
-05-JAN-2023,Hammer Curls,10,25,good
+21-DEC-2022,Hammer Curl,10,20,good
+21-DEC-2022,Hammer Curl,10,20,good
+21-DEC-2022,Hammer Curl,10,20,good
+05-JAN-2023,Hammer Curl,10,20,good
+05-JAN-2023,Hammer Curl,10,25,good
+05-JAN-2023,Hammer Curl,10,25,good
 05-JAN-2023,Overhead Tricep Extension,10,20,good
 05-JAN-2023,Overhead Tricep Extension,10,25,good
 05-JAN-2023,Overhead Tricep Extension,10,25,good
@@ -68,11 +68,11 @@ date,exercise,reps,weight(lbs),rating
 05-JAN-2023,Lawnmowers,10,40,good
 05-JAN-2023,Lawnmowers,10,40,good
 05-JAN-2023,Lawnmowers,10,40,good
-13-JAN-2023,Barbell Curls,10,25,good
-13-JAN-2023,Barbell Curls,12,20,good
-13-JAN-2023,Barbell Curls,12,20,good
-13-JAN-2023,Barbell Curls,12,20,good
-13-JAN-2023,Barbell Curls,12,20,good
+13-JAN-2023,Barbell Bicep Curl,10,25,good
+13-JAN-2023,Barbell Bicep Curl,12,20,good
+13-JAN-2023,Barbell Bicep Curl,12,20,good
+13-JAN-2023,Barbell Bicep Curl,12,20,good
+13-JAN-2023,Barbell Bicep Curl,12,20,good
 13-JAN-2023,Overhead Barbell Tricep Extension,15,20,good
 13-JAN-2023,Overhead Barbell Tricep Extension,15,20,good
 13-JAN-2023,Overhead Barbell Tricep Extension,12,20,good
@@ -88,11 +88,11 @@ date,exercise,reps,weight(lbs),rating
 13-JAN-2023,Lat Pulldown,10,100,good
 13-JAN-2023,Lat Pulldown,10,100,good
 13-JAN-2023,Lat Pulldown,10,110,bad
-21-JAN-2023,Barbell Curls,10,20,good
-21-JAN-2023,Barbell Curls,10,20,good
-21-JAN-2023,Barbell Curls,10,20,good
-21-JAN-2023,Barbell Curls,10,20,good
-21-JAN-2023,Barbell Curls,10,20,good
+21-JAN-2023,Barbell Bicep Curl,10,20,good
+21-JAN-2023,Barbell Bicep Curl,10,20,good
+21-JAN-2023,Barbell Bicep Curl,10,20,good
+21-JAN-2023,Barbell Bicep Curl,10,20,good
+21-JAN-2023,Barbell Bicep Curl,10,20,good
 21-JAN-2023,Overhead Barbell Tricep Extension,12,20,good
 21-JAN-2023,Overhead Barbell Tricep Extension,12,20,good
 21-JAN-2023,Overhead Barbell Tricep Extension,12,20,good
@@ -111,17 +111,17 @@ date,exercise,reps,weight(lbs),rating
 21-JAN-2023,Lat Pulldown,12,100,good
 21-JAN-2023,Lat Pulldown,10,115,good
 21-JAN-2023,Lat Pulldown,10,115,bad
-25-JAN-2023,Bicep Curls,10,20,good
-25-JAN-2023,Concentration Curls,10,20,good
-25-JAN-2023,Concentration Curls,10,20,good
-25-JAN-2023,Bicep Curls,10,25,good
-25-JAN-2023,Bicep Curls,10,25,good
-25-JAN-2023,Hammer Curls,10,20,good
-25-JAN-2023,Hammer Curls,10,25,good
-25-JAN-2023,Hammer Curls,6,25,good
-25-JAN-2023,Hammer Curls,10,25,good
-25-JAN-2023,Concentration Curls,10,20,bad
-25-JAN-2023,Concentration Curls,10,15,good
+25-JAN-2023,Bicep Curl,10,20,good
+25-JAN-2023,Bicep Curl,10,25,good
+25-JAN-2023,Bicep Curl,10,25,good
+25-JAN-2023,Concentration Curl,10,20,good
+25-JAN-2023,Concentration Curl,10,20,good
+25-JAN-2023,Hammer Curl,10,20,good
+25-JAN-2023,Hammer Curl,10,25,good
+25-JAN-2023,Hammer Curl,6,25,good
+25-JAN-2023,Hammer Curl,10,25,good
+25-JAN-2023,Concentration Curl,10,20,bad
+25-JAN-2023,Concentration Curl,10,15,good
 25-JAN-2023,Overhead Tricep Extension,10,25,good
 25-JAN-2023,Overhead Tricep Extension,10,25,good
 25-JAN-2023,Overhead Tricep Extension,10,25,good
@@ -137,9 +137,9 @@ date,exercise,reps,weight(lbs),rating
 25-JAN-2023,Resistance Lat Pulldown,10,100,good
 25-JAN-2023,Resistance Lat Pulldown,10,100,good
 25-JAN-2023,Resistance Lat Pulldown,10,100,good
-06-DEC-2022,Lateral Lifts,10,15,good
-06-DEC-2022,Lateral Lifts,10,15,good
-06-DEC-2022,Lateral Lifts,10,15,good
+06-DEC-2022,Lateral Lift,10,15,good
+06-DEC-2022,Lateral Lift,10,15,good
+06-DEC-2022,Lateral Lift,10,15,good
 06-DEC-2022,Front Lift,10,15,good
 06-DEC-2022,Front Lift,10,15,good
 06-DEC-2022,Front Lift,10,15,good
@@ -150,12 +150,12 @@ date,exercise,reps,weight(lbs),rating
 06-DEC-2022,Leg Press,10,190,good
 06-DEC-2022,Leg Press,10,190,good
 06-DEC-2022,Leg Press,10,190,good
-06-DEC-2022,Leg Curls,10,80,easy
-06-DEC-2022,Leg Curls,10,90,good
-06-DEC-2022,Leg Curls,10,90,good
-06-DEC-2022,Leg Extensions,10,90,good
-06-DEC-2022,Leg Extensions,10,90,good
-06-DEC-2022,Leg Extensions,15,90,good
+06-DEC-2022,Leg Curl,10,80,easy
+06-DEC-2022,Leg Curl,10,90,good
+06-DEC-2022,Leg Curl,10,90,good
+06-DEC-2022,Leg Extension,10,90,good
+06-DEC-2022,Leg Extension,10,90,good
+06-DEC-2022,Leg Extension,15,90,good
 16-DEC-2022,Lateral Lift,10,15,good
 16-DEC-2022,Lateral Lift,10,20,good
 16-DEC-2022,Lateral Lift,10,15,good
@@ -170,12 +170,12 @@ date,exercise,reps,weight(lbs),rating
 16-DEC-2022,Leg Press,10,190,good
 16-DEC-2022,Leg Press,10,190,good
 16-DEC-2022,Leg Press,10,190,good
-16-DEC-2022,Leg Curls,15,100,good
-16-DEC-2022,Leg Curls,15,100,good
-16-DEC-2022,Leg Curls,10,120,good
-16-DEC-2022,Leg Extensions,10,100,good
-16-DEC-2022,Leg Extensions,10,100,good
-16-DEC-2022,Leg Extensions,10,110,good
+16-DEC-2022,Leg Curl,15,100,good
+16-DEC-2022,Leg Curl,15,100,good
+16-DEC-2022,Leg Curl,10,120,good
+16-DEC-2022,Leg Extension,10,100,good
+16-DEC-2022,Leg Extension,10,100,good
+16-DEC-2022,Leg Extension,10,110,good
 16-DEC-2022,Lunges,10,0,good
 28-DEC-2023,Lateral Lift,10,17.5,good
 28-DEC-2023,Lateral Lift,10,17.5,good
@@ -192,12 +192,12 @@ date,exercise,reps,weight(lbs),rating
 28-DEC-2023,Leg Press,5,310,good
 28-DEC-2023,Leg Press,3,350,good
 28-DEC-2023,Leg Press,10,400,good
-28-DEC-2023,Leg Curls,12,100,good
-28-DEC-2023,Leg Curls,10,120,good
-28-DEC-2023,Leg Curls,10,120,good
-28-DEC-2023,Leg Extensions,12,110,good
-28-DEC-2023,Leg Extensions,10,110,good
-28-DEC-2023,Leg Extensions,10,115,good
+28-DEC-2023,Leg Curl,12,100,good
+28-DEC-2023,Leg Curl,10,120,good
+28-DEC-2023,Leg Curl,10,120,good
+28-DEC-2023,Leg Extension,12,110,good
+28-DEC-2023,Leg Extension,10,110,good
+28-DEC-2023,Leg Extension,10,115,good
 03-JAN-2023,Lateral Lift,10,20,good
 03-JAN-2023,Lateral Lift,10,20,good
 03-JAN-2023,Lateral Lift,10,20,good
@@ -210,12 +210,12 @@ date,exercise,reps,weight(lbs),rating
 03-JAN-2023,Leg Press,10,310,good
 03-JAN-2023,Leg Press,10,330,good
 03-JAN-2023,Leg Press,10,400,bad
-03-JAN-2023,Leg Curls,10,130,good
-03-JAN-2023,Leg Curls,10,130,good
-03-JAN-2023,Leg Curls,10,130,good
-03-JAN-2023,Leg Extensions,10,115,good
-03-JAN-2023,Leg Extensions,10,115,good
-03-JAN-2023,Leg Extensions,10,115,good
+03-JAN-2023,Leg Curl,10,130,good
+03-JAN-2023,Leg Curl,10,130,good
+03-JAN-2023,Leg Curl,10,130,good
+03-JAN-2023,Leg Extension,10,115,good
+03-JAN-2023,Leg Extension,10,115,good
+03-JAN-2023,Leg Extension,10,115,good
 11-JAN-2023,Cable Lateral Lift,10,35,good
 11-JAN-2023,Cable Lateral Lift,10,35,good
 11-JAN-2023,Cable Lateral Lift,10,35,good
@@ -231,12 +231,12 @@ date,exercise,reps,weight(lbs),rating
 11-JAN-2023,Lunges,10,0,good
 11-JAN-2023,Lunges,10,0,good
 11-JAN-2023,Lunges,10,0,good
-11-JAN-2023,Leg Curls,10,140,easy
-11-JAN-2023,Leg Curls,10,150,good
-11-JAN-2023,Leg Curls,12,150,good
-11-JAN-2023,Leg Extensions,10,125,easy
-11-JAN-2023,Leg Extensions,10,140,good
-11-JAN-2023,Leg Extensions,10,140,good
+11-JAN-2023,Leg Curl,10,140,easy
+11-JAN-2023,Leg Curl,10,150,good
+11-JAN-2023,Leg Curl,12,150,good
+11-JAN-2023,Leg Extension,10,125,easy
+11-JAN-2023,Leg Extension,10,140,good
+11-JAN-2023,Leg Extension,10,140,good
 15-JAN-2023,Lateral Lift,10,20,good
 15-JAN-2023,Lateral Lift,10,20,good
 15-JAN-2023,Lateral Lift,10,20,good
@@ -252,12 +252,12 @@ date,exercise,reps,weight(lbs),rating
 15-JAN-2023,Lunges,10,0,good
 15-JAN-2023,Lunges,10,0,good
 15-JAN-2023,Lunges,10,0,good
-15-JAN-2023,Leg Curls,10,140,easy
-15-JAN-2023,Leg Curls,10,150,good
-15-JAN-2023,Leg Curls,12,150,good
-15-JAN-2023,Leg Extensions,10,125,easy
-15-JAN-2023,Leg Extensions,10,140,good
-15-JAN-2023,Leg Extensions,10,140,good
+15-JAN-2023,Leg Curl,10,140,easy
+15-JAN-2023,Leg Curl,10,150,good
+15-JAN-2023,Leg Curl,12,150,good
+15-JAN-2023,Leg Extension,10,125,easy
+15-JAN-2023,Leg Extension,10,140,good
+15-JAN-2023,Leg Extension,10,140,good
 22-JAN-2023,Cable Lateral Lift,12,35,good
 22-JAN-2023,Cable Lateral Lift,10,40,bad
 22-JAN-2023,Cable Lateral Lift,10,35,good
@@ -273,12 +273,12 @@ date,exercise,reps,weight(lbs),rating
 22-JAN-2023,Lunges,10,0,good
 22-JAN-2023,Lunges,10,0,good
 22-JAN-2023,Lunges,10,0,good
-22-JAN-2023,Leg Curls,10,150,good
-22-JAN-2023,Leg Curls,10,150,good
-22-JAN-2023,Leg Curls,12,150,good
-22-JAN-2023,Leg Extensions,10,140,good
-22-JAN-2023,Leg Extensions,12,150,good
-22-JAN-2023,Leg Extensions,12,160,good
+22-JAN-2023,Leg Curl,10,150,good
+22-JAN-2023,Leg Curl,10,150,good
+22-JAN-2023,Leg Curl,12,150,good
+22-JAN-2023,Leg Extension,10,140,good
+22-JAN-2023,Leg Extension,12,150,good
+22-JAN-2023,Leg Extension,12,160,good
 29-JAN-2023,Lateral Lift,10,20,easy
 29-JAN-2023,Lateral Lift,12,20,good
 29-JAN-2023,Lateral Lift,12,20,good
@@ -294,13 +294,13 @@ date,exercise,reps,weight(lbs),rating
 29-JAN-2023,Lunges,10,0,good
 29-JAN-2023,Lunges,10,0,good
 29-JAN-2023,Lunges,10,0,good
-29-JAN-2023,Leg Curls,10,160,good
-29-JAN-2023,Leg Curls,10,160,good
-29-JAN-2023,Leg Curls,10,160,good
-29-JAN-2023,Leg Extensions,10,160,easy
-29-JAN-2023,Leg Extensions,10,170,good
-29-JAN-2023,Leg Extensions,10,170,good
-30-JAN-2023,Barbell Bicep Curls,12,50,good
+29-JAN-2023,Leg Curl,10,160,good
+29-JAN-2023,Leg Curl,10,160,good
+29-JAN-2023,Leg Curl,10,160,good
+29-JAN-2023,Leg Extension,10,160,easy
+29-JAN-2023,Leg Extension,10,170,good
+29-JAN-2023,Leg Extension,10,170,good
+30-JAN-2023,Barbell Bicep Curl,12,50,good
 30-JAN-2023,Military Press,1,100,good
 30-JAN-2023,Military Press,1,150,good
 30-JAN-2023,Military Press,1,200,good
@@ -322,9 +322,9 @@ date,exercise,reps,weight(lbs),rating
 13-DEC-2023,Dumbell Press,12,35,good
 13-DEC-2023,Dumbell Press,10,35,good
 13-DEC-2023,Dumbell Press,10,35,good
-13-DEC-2023,Resistance Pec Flies,10,60,good
-13-DEC-2023,Resistance Pec Flies,10,60,good
-13-DEC-2023,Resistance Pec Flies,10,30,good
+13-DEC-2023,Cable Pec Flies,10,60,good
+13-DEC-2023,Cable Pec Flies,10,60,good
+13-DEC-2023,Cable Pec Flies,10,30,good
 13-DEC-2023,Deadlift,10,115,good
 13-DEC-2023,Deadlift,10,115,good
 13-DEC-2023,Deadlift,10,115,good
@@ -363,9 +363,9 @@ date,exercise,reps,weight(lbs),rating
 12-JAN-2023,Machine Bench Press,12,150,good
 12-JAN-2023,Machine Bench Press,10,170,good
 12-JAN-2023,Machine Bench Press,10,180,good
-12-JAN-2023,Resistance Pec Flies,12,55,good
-12-JAN-2023,Resistance Pec Flies,10,60,good
-12-JAN-2023,Resistance Pec Flies,10,70,good
+12-JAN-2023,Cable Pec Flies,12,55,good
+12-JAN-2023,Cable Pec Flies,10,60,good
+12-JAN-2023,Cable Pec Flies,10,70,good
 12-JAN-2023,Upward Bench Press,10,150,good
 12-JAN-2023,Upward Bench Press,10,150,good
 12-JAN-2023,Upward Bench Press,10,150,good
@@ -380,9 +380,9 @@ date,exercise,reps,weight(lbs),rating
 18-JAN-2023,Machine Bench Press,10,180,good
 18-JAN-2023,Machine Bench Press,25,120,good
 18-JAN-2023,Machine Bench Press,10,120,good
-18-JAN-2023,Resistance Pec Flies,10,70,good
-18-JAN-2023,Resistance Pec Flies,10,70,good
-18-JAN-2023,Resistance Pec Flies,10,70,good
+18-JAN-2023,Cable Pec Flies,10,70,good
+18-JAN-2023,Cable Pec Flies,10,70,good
+18-JAN-2023,Cable Pec Flies,10,70,good
 18-JAN-2023,Pec Flies,12,130,good
 18-JAN-2023,Pec Flies,10,140,good
 18-JAN-2023,Pec Flies,10,140,good
@@ -401,9 +401,9 @@ date,exercise,reps,weight(lbs),rating
 24-JAN-2023,Dumbell Press,12,40,good
 24-JAN-2023,Dumbell Press,10,45,good
 24-JAN-2023,Dumbell Press,10,45,good
-24-JAN-2023,Resistance Pec Flies,10,35,good
-24-JAN-2023,Resistance Pec Flies,10,35,good
-24-JAN-2023,Resistance Pec Flies,10,35,good
+24-JAN-2023,Cable Pec Flies,10,35,good
+24-JAN-2023,Cable Pec Flies,10,35,good
+24-JAN-2023,Cable Pec Flies,10,35,good
 24-JAN-2023,Upward Dumbell Bench Press,12,40,good
 24-JAN-2023,Upward Dumbell Bench Press,15,40,good
 24-JAN-2023,Upward Dumbell Bench Press,12,40,good
@@ -420,9 +420,9 @@ date,exercise,reps,weight(lbs),rating
 31-JAN-2023,Machine Bench Press,12,180,good
 31-JAN-2023,Machine Bench Press,12,180,good
 31-JAN-2023,Machine Bench Press,10,190,good
-31-JAN-2023,Resistance Pec Flies,10,70,easy
-31-JAN-2023,Resistance Pec Flies,12,70,good
-31-JAN-2023,Resistance Pec Flies,10,70,good
+31-JAN-2023,Cable Pec Flies,10,70,easy
+31-JAN-2023,Cable Pec Flies,12,70,good
+31-JAN-2023,Cable Pec Flies,10,70,good
 31-JAN-2023,Pec Flies,10,140,good
 31-JAN-2023,Pec Flies,10,140,good
 31-JAN-2023,Pec Flies,10,140,good
@@ -439,9 +439,9 @@ date,exercise,reps,weight(lbs),rating
 01-FEB-2023,Overhead Pulldown,12,100,good
 01-FEB-2023,Seated Row,12,100,good
 01-FEB-2023,Barbell Bicep Curl,12,40,good
-03-FEB-2023,Barbell Bicep Curls,12,40,good
-03-FEB-2023,Barbell Bicep Curls,20,30,good
-03-FEB-2023,Barbell Bicep Curls,20,30,good
+03-FEB-2023,Barbell Bicep Curl,12,40,good
+03-FEB-2023,Barbell Bicep Curl,20,30,good
+03-FEB-2023,Barbell Bicep Curl,20,30,good
 03-FEB-2023,Overhead Barbell Tricep Extension,20,30,easy
 03-FEB-2023,Overhead Barbell Tricep Extension,20,35,good
 03-FEB-2023,Overhead Barbell Tricep Extension,20,35,good
@@ -469,9 +469,9 @@ date,exercise,reps,weight(lbs),rating
 05-FEB-2023,Calf Raise,12,190,bad
 05-FEB-2023,Calf Raise,20,190,bad
 05-FEB-2023,Calf Raise,15,190,bad
-05-FEB-2023,Leg Extensions,20,135,good
-05-FEB-2023,Leg Extensions,20,135,good
-05-FEB-2023,Leg Extensions,20,135,good
+05-FEB-2023,Leg Extension,20,135,good
+05-FEB-2023,Leg Extension,20,135,good
+05-FEB-2023,Leg Extension,20,135,good
 08-FEB-2023,Bench Press,5,135,good
 08-FEB-2023,Bench Press,10,155,good
 08-FEB-2023,Bench Press,10,175,good
@@ -480,10 +480,10 @@ date,exercise,reps,weight(lbs),rating
 08-FEB-2023,Incline Dumbell Press,10,45,easy
 08-FEB-2023,Incline Dumbell Press,10,55,good
 08-FEB-2023,Incline Dumbell Press,10,55,good
-08-FEB-2023,Resistance Pec Flies,10,70,easy
-08-FEB-2023,Resistance Pec Flies,10,80,bad
-08-FEB-2023,Resistance Pec Flies,5,75,failure
-08-FEB-2023,Resistance Pec Flies,10,70,good
+08-FEB-2023,Cable Pec Flies,10,70,easy
+08-FEB-2023,Cable Pec Flies,10,80,bad
+08-FEB-2023,Cable Pec Flies,5,75,failure
+08-FEB-2023,Cable Pec Flies,10,70,good
 08-FEB-2023,Deadlift,12,135,good
 08-FEB-2023,Deadlift,10,155,good
 08-FEB-2023,Deadlift,10,175,good
@@ -496,12 +496,12 @@ date,exercise,reps,weight(lbs),rating
 08-FEB-2023,Clean & Jerk,1,135,good
 08-FEB-2023,Clean & Jerk,2,135,good
 08-FEB-2023,Clean & Jerk,1,135,good
-11-FEB-2023,Barbell Bicep Curls,12,40,good
-11-FEB-2023,Barbell Bicep Curls,12,40,good
-11-FEB-2023,Barbell Bicep Curls,12,40,good
-11-FEB-2023,Concentration Curls,10,20,bad (L)
-11-FEB-2023,Concentration Curls,10,20,bad (L)
-11-FEB-2023,Concentration Curls,10,20,bad (L)
+11-FEB-2023,Barbell Bicep Curl,12,40,good
+11-FEB-2023,Barbell Bicep Curl,12,40,good
+11-FEB-2023,Barbell Bicep Curl,12,40,good
+11-FEB-2023,Concentration Curl,10,20,bad (L)
+11-FEB-2023,Concentration Curl,10,20,bad (L)
+11-FEB-2023,Concentration Curl,10,20,bad (L)
 11-FEB-2023,Tricep Pushdown,12,90,good
 11-FEB-2023,Tricep Pushdown,10,100,bad
 11-FEB-2023,Tricep Pushdown,10,100,bad
@@ -546,28 +546,28 @@ date,exercise,reps,weight(lbs),rating
 13-FEB-2023,Leg Curl,12,160,good
 13-FEB-2023,Leg Curl,10,165,good
 13-FEB-2023,Leg Curl,10,170,good
-13-FEB-2023,Leg Extensions,10,170,good
-13-FEB-2023,Leg Extensions,10,175,good
-13-FEB-2023,Leg Extensions,10,175,good
-13-FEB-2023,Push Ups,10,0,good
+13-FEB-2023,Leg Extension,10,170,good
+13-FEB-2023,Leg Extension,10,175,good
+13-FEB-2023,Leg Extension,10,175,good
+13-FEB-2023,Push-Ups,10,0,good
 15-FEB-2023,Machine Bench Press,7,210,good
 15-FEB-2023,Machine Bench Press,5,220,good
 15-FEB-2023,Machine Bench Press,5,220,good
-15-FEB-2023,Resistance Pec Flies,5,90,good
-15-FEB-2023,Resistance Pec Flies,5,90,good
-15-FEB-2023,Resistance Pec Flies,5,100,good
+15-FEB-2023,Cable Pec Flies,5,90,good
+15-FEB-2023,Cable Pec Flies,5,90,good
+15-FEB-2023,Cable Pec Flies,5,100,good
 15-FEB-2023,Machine Pec Flies,5,170,good
 15-FEB-2023,Machine Pec Flies,5,180,good
 15-FEB-2023,Machine Pec Flies,5,180,good
 15-FEB-2023,Machine Upward Bench Press,10,180,good
 15-FEB-2023,Machine Upward Bench Press,5,200,good
 15-FEB-2023,Machine Upward Bench Press,7,200,good
-16-FEB-2023,Bicep Curls,5,30,good
-16-FEB-2023,Bicep Curls,5,30,good
-16-FEB-2023,Bicep Curls,5,30,good
-16-FEB-2023,Concentration Curls,10,20,good
-16-FEB-2023,Concentration Curls,10,20,good
-16-FEB-2023,Concentration Curls,10,20,good
+16-FEB-2023,Bicep Curl,5,30,good
+16-FEB-2023,Bicep Curl,5,30,good
+16-FEB-2023,Bicep Curl,5,30,good
+16-FEB-2023,Concentration Curl,10,20,good
+16-FEB-2023,Concentration Curl,10,20,good
+16-FEB-2023,Concentration Curl,10,20,good
 16-FEB-2023,Tricep Pushdown,7,120,good
 16-FEB-2023,Tricep Pushdown,5,130,good
 16-FEB-2023,Tricep Pushdown,5,130,good
@@ -609,18 +609,18 @@ date,exercise,reps,weight(lbs),rating
 20-FEB-2023,Dumbell Press,10,60,good
 20-FEB-2023,Dumbell Press,10,60,good
 20-FEB-2023,Dumbell Press,10,60,good
-20-FEB-2023,Resistance Pec Flies,10,75,good
-20-FEB-2023,Resistance Pec Flies,10,75,good
-20-FEB-2023,Resistance Pec Flies,10,75,good
+20-FEB-2023,Cable Pec Flies,10,75,good
+20-FEB-2023,Cable Pec Flies,10,75,good
+20-FEB-2023,Cable Pec Flies,10,75,good
 20-FEB-2023,Deadlift,10,185,good
 20-FEB-2023,Deadlift,10,185,good
 20-FEB-2023,Deadlift,10,185,good
 20-FEB-2023,Deadlift,1,225,good
 20-FEB-2023,Deadlift,1,245,good
 20-FEB-2023,Deadlift,1,275,good
-21-FEB-2023,Bicep Curls,12,20,good
-21-FEB-2023,Bicep Curls,10,20,good
-21-FEB-2023,Bicep Curls,10,20,good
+21-FEB-2023,Bicep Curl,12,20,good
+21-FEB-2023,Bicep Curl,10,20,good
+21-FEB-2023,Bicep Curl,10,20,good
 21-FEB-2023,Tricep Pushdown,12,100,good
 21-FEB-2023,Tricep Pushdown,10,100,good
 21-FEB-2023,Tricep Pushdown,10,100,bad
@@ -637,18 +637,18 @@ date,exercise,reps,weight(lbs),rating
 26-FEB-2023,Upward Dumbell Press,10,50,good
 26-FEB-2023,Upward Dumbell Press,8,50,failure
 26-FEB-2023,Upward Dumbell Press,2,45,good
-26-FEB-2023,Bicep Curls,10,25,good
-26-FEB-2023,Bicep Curls,10,25,good
-26-FEB-2023,Bicep Curls,10,25,good
+26-FEB-2023,Bicep Curl,10,25,good
+26-FEB-2023,Bicep Curl,10,25,good
+26-FEB-2023,Bicep Curl,10,25,good
 26-FEB-2023,Pec Flies,10,145,good
 26-FEB-2023,Pec Flies,10,145,good
 26-FEB-2023,Pec Flies,10,145,good
 26-FEB-2023,Lat Pulldown,10,115,good
 26-FEB-2023,Lat Pulldown,10,115,good
 26-FEB-2023,Lat Pulldown,10,115,good
-26-FEB-2023,Concentration Curls,10,20,good
-26-FEB-2023,Concentration Curls,10,20,good
-26-FEB-2023,Concentration Curls,10,20,good
+26-FEB-2023,Concentration Curl,10,20,good
+26-FEB-2023,Concentration Curl,10,20,good
+26-FEB-2023,Concentration Curl,10,20,good
 26-FEB-2023,Overhead Tricep Extension,10,25,easy
 26-FEB-2023,Overhead Tricep Extension,7,30,bad
 26-FEB-2023,Overhead Tricep Extension,3,25,good
@@ -656,15 +656,15 @@ date,exercise,reps,weight(lbs),rating
 27-FEB-2023,Upward Dumbell Bench Press,10,50,easy
 27-FEB-2023,Upward Dumbell Bench Press,12,50,good
 27-FEB-2023,Upward Dumbell Bench Press,12,50,good
-27-FEB-2023,Hammer Curls,15,25,good
-27-FEB-2023,Hammer Curls,10,30,good
-27-FEB-2023,Hammer Curls,10,30,good
+27-FEB-2023,Hammer Curl,15,25,good
+27-FEB-2023,Hammer Curl,10,30,good
+27-FEB-2023,Hammer Curl,10,30,good
 27-FEB-2023,Machine Bench Press,10,130,good
 27-FEB-2023,Machine Bench Press,10,130,good
 27-FEB-2023,Machine Bench Press,10,130,good
-27-FEB-2023,Bicep Curls,10,25,good
-27-FEB-2023,Bicep Curls,10,25,good
-27-FEB-2023,Bicep Curls,10,25,good
+27-FEB-2023,Bicep Curl,10,25,good
+27-FEB-2023,Bicep Curl,10,25,good
+27-FEB-2023,Bicep Curl,10,25,good
 27-FEB-2023,Delt Flies,12,85,good
 27-FEB-2023,Delt Flies,10,85,good
 27-FEB-2023,Delt Flies,10,85,good
@@ -703,21 +703,21 @@ date,exercise,reps,weight(lbs),rating
 06-MAR-2023,Machine Bench Press,10,210,good
 06-MAR-2023,Machine Bench Press,5,240,good
 06-MAR-2023,Machine Bench Press,3,245,good
-06-MAR-2023,Resistance Pec Flies,10,80,good
-06-MAR-2023,Resistance Pec Flies,10,80,good
-06-MAR-2023,Resistance Pec Flies,10,80,failure
+06-MAR-2023,Cable Pec Flies,10,80,good
+06-MAR-2023,Cable Pec Flies,10,80,good
+06-MAR-2023,Cable Pec Flies,10,80,failure
 06-MAR-2023,Machine Pec Flies,10,150,good
 06-MAR-2023,Machine Pec Flies,10,160,good
 06-MAR-2023,Machine Pec Flies,10,160,good
 06-MAR-2023,Plank,60,0,good
 06-MAR-2023,Plank,60,0,good
 06-MAR-2023,Plank,60,0,good
-08-MAR-2023,Barbell Bicep Curls,12,40,good
-08-MAR-2023,Barbell Bicep Curls,10,40,good
-08-MAR-2023,Barbell Bicep Curls,12,40,good
-08-MAR-2023,Concentration Curls,10,20,good
-08-MAR-2023,Concentration Curls,10,20,good
-08-MAR-2023,Concentration Curls,10,20,bad (L)
+08-MAR-2023,Barbell Bicep Curl,12,40,good
+08-MAR-2023,Barbell Bicep Curl,10,40,good
+08-MAR-2023,Barbell Bicep Curl,12,40,good
+08-MAR-2023,Concentration Curl,10,20,good
+08-MAR-2023,Concentration Curl,10,20,good
+08-MAR-2023,Concentration Curl,10,20,bad (L)
 08-MAR-2023,Tricep Pushdown,12,100,good
 08-MAR-2023,Tricep Pushdown,12,100,good
 08-MAR-2023,Tricep Pushdown,10,100,failure
@@ -761,21 +761,21 @@ date,exercise,reps,weight(lbs),rating
 12-MAR-2023,Machine Bench Press,7,245,good
 12-MAR-2023,Machine Bench Press,7,245,good
 12-MAR-2023,Machine Bench Press,10,245,good
-12-MAR-2023,Resistance Pec Flies,10,80,good
-12-MAR-2023,Resistance Pec Flies,10,80,good
-12-MAR-2023,Resistance Pec Flies,10,80,good
+12-MAR-2023,Cable Pec Flies,10,80,good
+12-MAR-2023,Cable Pec Flies,10,80,good
+12-MAR-2023,Cable Pec Flies,10,80,good
 12-MAR-2023,Machine Pec Flies,10,160,good
 12-MAR-2023,Machine Pec Flies,10,160,good
 12-MAR-2023,Machine Pec Flies,10,160,good
 12-MAR-2023,Plank,60,0,good
 12-MAR-2023,Plank,60,0,good
 12-MAR-2023,Plank,60,0,good
-13-MAR-2023,Bicep Curls,10,25,good
-13-MAR-2023,Bicep Curls,10,25,good
-13-MAR-2023,Bicep Curls,10,25,good
-13-MAR-2023,Concentration Curls,10,20,good
-13-MAR-2023,Concentration Curls,12,20,good
-13-MAR-2023,Concentration Curls,12,20,good
+13-MAR-2023,Bicep Curl,10,25,good
+13-MAR-2023,Bicep Curl,10,25,good
+13-MAR-2023,Bicep Curl,10,25,good
+13-MAR-2023,Concentration Curl,10,20,good
+13-MAR-2023,Concentration Curl,12,20,good
+13-MAR-2023,Concentration Curl,12,20,good
 13-MAR-2023,Overhead Tricep Extension,10,26.4,good
 13-MAR-2023,Overhead Tricep Extension,10,26.4,good
 13-MAR-2023,Overhead Tricep Extension,10,26.4,good
@@ -800,7 +800,7 @@ date,exercise,reps,weight(lbs),rating
 13-MAR-2023,Barbell Military Press,2,135,easy
 13-MAR-2023,Barbell Military Press,2,135,easy
 13-MAR-2023,Barbell Military Press,3,165,good
-13-MAR-2023,EZ-Bar Curls,12,35,easy
+13-MAR-2023,EZ-Bar Curl,12,35,easy
 16-MAR-2023,Lateral Lift,12,20,good
 16-MAR-2023,Lateral Lift,12,20,good
 16-MAR-2023,Lateral Lift,12,20,good
@@ -853,15 +853,15 @@ date,exercise,reps,weight(lbs),rating
 17-MAR-2023,Machine Pec Flies,10,160,good
 17-MAR-2023,Machine Pec Flies,10,160,good
 17-MAR-2023,Machine Pec Flies,10,160,good
-20-MAR-2023,Preacher Curls,8,62,good
-20-MAR-2023,Preacher Curls,8,62,failure
-20-MAR-2023,Preacher Curls,10,52,good
-20-MAR-2023,Hammer Curls,10,25,good
-20-MAR-2023,Hammer Curls,10,25,good
-20-MAR-2023,Hammer Curls,10,25,good
-20-MAR-2023,Concentration Curls,10,20,good
-20-MAR-2023,Concentration Curls,10,20,good
-20-MAR-2023,Concentration Curls,10,20,good
+20-MAR-2023,Preacher Curl,8,62,good
+20-MAR-2023,Preacher Curl,8,62,failure
+20-MAR-2023,Preacher Curl,10,52,good
+20-MAR-2023,Hammer Curl,10,25,good
+20-MAR-2023,Hammer Curl,10,25,good
+20-MAR-2023,Hammer Curl,10,25,good
+20-MAR-2023,Concentration Curl,10,20,good
+20-MAR-2023,Concentration Curl,10,20,good
+20-MAR-2023,Concentration Curl,10,20,good
 20-MAR-2023,Overhead Tricep Extension,10,25,easy
 20-MAR-2023,Overhead Tricep Extension,10,25,good
 20-MAR-2023,Overhead Tricep Extension,10,25,good
@@ -919,12 +919,12 @@ date,exercise,reps,weight(lbs),rating
 24-MAR-2023,Machine Bench Press,10,230,good
 24-MAR-2023,Machine Bench Press,12,230,good
 24-MAR-2023,Machine Bench Press,12,230,good
-24-MAR-2023,Resistance Pec Flies,10,80,good
-24-MAR-2023,Resistance Pec Flies,10,80,good
-24-MAR-2023,Resistance Pec Flies,10,80,good
-24-MAR-2023,Upward Resistance Pec Flies,10,50,good
-24-MAR-2023,Upward Resistance Pec Flies,10,50,good
-24-MAR-2023,Upward Resistance Pec Flies,12,50,good
+24-MAR-2023,Cable Pec Flies,10,80,good
+24-MAR-2023,Cable Pec Flies,10,80,good
+24-MAR-2023,Cable Pec Flies,10,80,good
+24-MAR-2023,Upward Cable Pec Flies,10,50,good
+24-MAR-2023,Upward Cable Pec Flies,10,50,good
+24-MAR-2023,Upward Cable Pec Flies,12,50,good
 24-MAR-2023,Pec Flies,12,160,good
 24-MAR-2023,Pec Flies,12,160,good
 24-MAR-2023,Pec Flies,10,170,good
@@ -941,12 +941,12 @@ date,exercise,reps,weight(lbs),rating
 25-MAR-2023,Deadlift,1,275,good
 25-MAR-2023,Deadlift,1,315,good
 25-MAR-2023,Deadlift,1,315,good
-26-MAR-2023,Preacher Curls,10,52,good
-26-MAR-2023,Preacher Curls,8,62,good
-26-MAR-2023,Preacher Curls,5,72,failure
-26-MAR-2023,Hammer Curls,13,25,good
-26-MAR-2023,Hammer Curls,10,30,bad
-26-MAR-2023,Hammer Curls,12,25,good
+26-MAR-2023,Preacher Curl,10,52,good
+26-MAR-2023,Preacher Curl,8,62,good
+26-MAR-2023,Preacher Curl,5,72,failure
+26-MAR-2023,Hammer Curl,13,25,good
+26-MAR-2023,Hammer Curl,10,30,bad
+26-MAR-2023,Hammer Curl,12,25,good
 26-MAR-2023,Overhead Tricep Extension,12,25,good
 26-MAR-2023,Overhead Tricep Extension,12,25,good
 26-MAR-2023,Overhead Tricep Extension,12,25,failure
@@ -1004,9 +1004,9 @@ date,exercise,reps,weight(lbs),rating
 31-MAR-2023,Dumbell Press,10,60,good
 31-MAR-2023,Dumbell Press,10,60,good
 31-MAR-2023,Dumbell Press,10,60,good
-31-MAR-2023,Upward Resistance Pec Flies,15,50,easy
-31-MAR-2023,Upward Resistance Pec Flies,8,60,good
-31-MAR-2023,Upward Resistance Pec Flies,10,55,good
+31-MAR-2023,Upward Cable Pec Flies,15,50,easy
+31-MAR-2023,Upward Cable Pec Flies,8,60,good
+31-MAR-2023,Upward Cable Pec Flies,10,55,good
 31-MAR-2023,Pec Flies,10,170,good
 31-MAR-2023,Pec Flies,10,170,good
 31-MAR-2023,Pec Flies,10,170,good

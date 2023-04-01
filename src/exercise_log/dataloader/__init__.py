@@ -6,6 +6,8 @@ from exercise_log.constants import (
     DISTANCE,
     DURATION,
     ELEVATION,
+    EXERCISE,
+    EXPECTED_EXERCISES,
     NOTES,
     PACE,
     RATE_OF_CLIMB,
@@ -33,8 +35,25 @@ class DataLoader:
             df.rename(columns={DATA_DURATION: DURATION}, inplace=True)
         if NOTES in df:
             df[NOTES] = df[NOTES].fillna("")
+        if EXERCISE in df:
+            DataLoader._validate_exercises(df)
         return df
 
+    @staticmethod
+    def _validate_exercises(df: pd.DataFrame):
+        if df[EXERCISE].isin(EXPECTED_EXERCISES).all():
+            return
+
+        first_invalid_idx = df[~df[EXERCISE].isin(EXPECTED_EXERCISES)].index.tolist()[0]
+        first_invalid = df[EXERCISE][first_invalid_idx]
+
+        possible_valid = first_invalid[:-1]
+        base_msg = f'"{first_invalid}" at row {first_invalid_idx + 2} is not an expected exercise'
+        if possible_valid in EXPECTED_EXERCISES:
+            raise ValueError(base_msg + f', did you mean "{possible_valid}"')
+        raise ValueError(base_msg)
+
+    @staticmethod
     def _det_workout_type(joined_workout_types: str):
         """Determines the workout type given all of the comma-joined workout types for a given day."""
         result = ""
@@ -45,6 +64,7 @@ class DataLoader:
                 return "Mixed"
         return result
 
+    @staticmethod
     def _compute_total_durations(
         all_workouts: pd.DataFrame,
         cardio_workouts: pd.DataFrame,
@@ -64,6 +84,7 @@ class DataLoader:
         total_durations.index = pd.DatetimeIndex(total_durations.index)
         return total_durations.reindex(all_workouts.index, fill_value=0)
 
+    @staticmethod
     def _compute_workout_types(
         all_workouts: pd.DataFrame,
         cardio_workouts: pd.DataFrame,
