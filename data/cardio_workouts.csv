@@ -78,3 +78,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 25-MAR-2023,walk (treadmill),01:11:23,6.20,7438,178,167,191,""
 28-MAR-2023,walk (treadmill),01:27:00,7.55,9158,238,169,189,""
 30-MAR-2023,walk (treadmill),01:13:49,6.74,7925,100,160,183,""
+02-APR-2023,walk (treadmill),01:40:15,8.83,10555,263,167,191,""
