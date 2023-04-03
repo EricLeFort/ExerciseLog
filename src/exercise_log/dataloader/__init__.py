@@ -1,3 +1,4 @@
+import csv
 import pandas as pd
 
 from exercise_log.constants import (
@@ -28,6 +29,8 @@ class DataLoader:
         Loads the CSV at the given fname and cleans up the data (convert date/times to proper types, NA -> "", etc.)
         """
         df = pd.read_csv(fname)
+
+        # Clean the data
         df[DATE] = pd.to_datetime(df[DATE])
         if DATA_DURATION in df:
             df[DATA_DURATION] = pd.to_timedelta(df[DATA_DURATION])
@@ -35,12 +38,31 @@ class DataLoader:
             df.rename(columns={DATA_DURATION: DURATION}, inplace=True)
         if NOTES in df:
             df[NOTES] = df[NOTES].fillna("")
+
+        # Validate the data
+        DataLoader._validate_csv(fname)
         if EXERCISE in df:
-            DataLoader._validate_exercises(df)
+            DataLoader._validate_exercises(df, fname)
+
         return df
 
     @staticmethod
-    def _validate_exercises(df: pd.DataFrame):
+    def _validate_csv(fname: str):
+        with open(fname, 'r') as f:
+            reader = csv.reader(f)
+
+            try:
+                headers = next(reader)
+
+                # Ensure the data is not ragged
+                for row in reader:
+                    if len(row) != len(headers):
+                        raise ValueError(f'File is ragged at row {reader.line_num}: "{row}"')
+            except StopIteration:
+                raise ValueError(f"CSV at {fname} was empty.")
+
+    @staticmethod
+    def _validate_exercises(df: pd.DataFrame, fname: str):
         if df[EXERCISE].isin(EXPECTED_EXERCISES).all():
             return
 
@@ -48,7 +70,7 @@ class DataLoader:
         first_invalid = df[EXERCISE][first_invalid_idx]
 
         possible_valid = first_invalid[:-1]
-        base_msg = f'"{first_invalid}" at row {first_invalid_idx + 2} is not an expected exercise'
+        base_msg = f'"{first_invalid}" at row {first_invalid_idx + 2} in {fname} is not an expected exercise'
         if possible_valid in EXPECTED_EXERCISES:
             raise ValueError(base_msg + f', did you mean "{possible_valid}"')
         raise ValueError(base_msg)
