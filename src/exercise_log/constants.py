@@ -22,6 +22,9 @@ RATING = "rating"
 PACE = "pace (m/s)"
 RATE_OF_CLIMB = "rate of climb (m/h)"
 
+# Ratings
+WARMUP = "warm-up"
+
 # Workout Types
 WALK_TREADMILL = "walk (treadmill)"
 WALK_OUTDOOR = "walk (outdoor)"
@@ -48,7 +51,6 @@ EXPECTED_EXERCISES = {
     "Deadlift",
     "Delt Flies",
     "Dumbell Press",
-    "EZ-Bar Curl",
     "Front Lift",
     "Hammer Curl",
     "Incline Dumbell Press",
@@ -65,7 +67,6 @@ EXPECTED_EXERCISES = {
     "Machine Upward Bench Press",
     "Military Press",
     "Overhead Barbell Tricep Extension",
-    "Overhead Pulldown",
     "Overhead Tricep Extension",
     "Pec Flies",
     "Plank",

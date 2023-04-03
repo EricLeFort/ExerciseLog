@@ -436,7 +436,7 @@ date,exercise,reps,weight(lbs),rating
 31-JAN-2023,5th Point of Flight,60,0,good
 31-JAN-2023,5th Point of Flight,60,0,good
 01-FEB-2023,Barbell Overhead Tricep Extension,20,30,good
-01-FEB-2023,Overhead Pulldown,12,100,good
+01-FEB-2023,Lat Pulldown,12,100,good
 01-FEB-2023,Seated Row,12,100,good
 01-FEB-2023,Barbell Bicep Curl,12,40,good
 03-FEB-2023,Barbell Bicep Curl,12,40,good
@@ -583,9 +583,9 @@ date,exercise,reps,weight(lbs),rating
 19-FEB-2023,Cable Lateral Lift,10,40,good
 19-FEB-2023,Cable Lateral Lift,10,40,good
 19-FEB-2023,Cable Lateral Lift,10,40,good
-19-FEB-2023,Front Lift,10.26,4,good
-19-FEB-2023,Front Lift,10.26,4,good
-19-FEB-2023,Front Lift,10.26,4,good
+19-FEB-2023,Front Lift,10,26.4,good
+19-FEB-2023,Front Lift,10,26.4,good
+19-FEB-2023,Front Lift,10,26.4,good
 19-FEB-2023,Military Press,10,160,good
 19-FEB-2023,Military Press,10,160,good
 19-FEB-2023,Military Press,10,160,good
@@ -601,8 +601,8 @@ date,exercise,reps,weight(lbs),rating
 19-FEB-2023,Calf Raise,20,190,good
 19-FEB-2023,Calf Raise,18,190,good
 19-FEB-2023,Calf Raise,20,190,good
-20-FEB-2023,Bench Press,3,95,good
-20-FEB-2023,Bench Press,3,135,good
+20-FEB-2023,Bench Press,3,95,warm-up
+20-FEB-2023,Bench Press,3,135,warm-up
 20-FEB-2023,Bench Press,10,185,good
 20-FEB-2023,Bench Press,10,185,good
 20-FEB-2023,Bench Press,10,185,good
@@ -800,7 +800,7 @@ date,exercise,reps,weight(lbs),rating
 13-MAR-2023,Barbell Military Press,2,135,easy
 13-MAR-2023,Barbell Military Press,2,135,easy
 13-MAR-2023,Barbell Military Press,3,165,good
-13-MAR-2023,EZ-Bar Curl,12,35,easy
+13-MAR-2023,Preacher Curl,12,42,easy
 16-MAR-2023,Lateral Lift,12,20,good
 16-MAR-2023,Lateral Lift,12,20,good
 16-MAR-2023,Lateral Lift,12,20,good

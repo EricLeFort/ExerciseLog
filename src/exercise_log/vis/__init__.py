@@ -8,9 +8,11 @@ from exercise_log.constants import (
     DURATION,
     EXERCISE,
     MIN_DAILY_ACTIVE_MINUTES,
+    RATING,
     REPS,
     RESTING_HEART_RATE,
     SET_TYPE_TO_REP_RANGE,
+    WARMUP,
     WEIGHT,
 )
 from exercise_log.utils import convert_mins_to_hour_mins, convert_pd_to_np, get_padded_dates
@@ -171,6 +173,9 @@ def plot_strength_over_time(
         # Filter to only the max weight set of this type for that day
         idx = sets.groupby(DATE)[WEIGHT].idxmax()
         sets = sets.loc[idx]
+
+        # Filter out warmup sets
+        sets = sets[sets[RATING] != WARMUP]
 
         if not sets.empty:
             last_weight = sets[WEIGHT].iloc[-1]
