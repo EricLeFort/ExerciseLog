@@ -3,13 +3,26 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
-from exercise_log.constants import DATE, DURATION, MIN_DAILY_ACTIVE_MINUTES, RESTING_HEART_RATE, WEIGHT
+from exercise_log.constants import (
+    DATE,
+    DURATION,
+    EXERCISE,
+    MIN_DAILY_ACTIVE_MINUTES,
+    REPS,
+    RESTING_HEART_RATE,
+    SET_TYPE_TO_REP_RANGE,
+    WEIGHT,
+)
 from exercise_log.utils import convert_mins_to_hour_mins, convert_pd_to_np, get_padded_dates
 from exercise_log.vis.constants import BOTTOM_OFFSET, RIGHT_OF_AXIS_X_COORD, NON_GRAPH_AREA_SCALER
 from exercise_log.vis.utils import configure_x_axis_by_month, create_legend_and_title
 
 
-def plot_workout_frequency(all_workouts: pd.DataFrame, n_day_avg_workout_duration: pd.DataFrame, n_days_to_avg: int):
+def plot_workout_frequency(
+    all_workouts: pd.DataFrame,
+    n_day_avg_workout_duration: pd.DataFrame,
+    n_days_to_avg: int
+):
     NON_GRAPH_GCF_PERCENT = 0.06
 
     # Draw the main graph contents and setup the axes
@@ -44,7 +57,6 @@ def plot_workout_frequency(all_workouts: pd.DataFrame, n_day_avg_workout_duratio
     create_legend_and_title("Workout Frequency", reverse_labels=True)
     plt.savefig('../img/workout_frequency.png', bbox_inches="tight")
     plt.show()
-
 
 def plot_resting_heart_rate(
     all_workouts: pd.DataFrame,
@@ -143,3 +155,49 @@ def plot_weight(
     create_legend_and_title("Weight", reverse_labels=True)
     plt.savefig('../img/weight.png', bbox_inches="tight")
     plt.show()
+
+
+def plot_strength_over_time(
+    all_workouts: pd.DataFrame,
+    weight_training_sets: pd.DataFrame,
+    exercise: str,
+):
+    final_date = all_workouts[DATE].max()
+    single_exercise = weight_training_sets[weight_training_sets[EXERCISE] == exercise]
+    for set_type, rep_range in SET_TYPE_TO_REP_RANGE.items():
+        sets = single_exercise[(rep_range[0] <= single_exercise[REPS]) & (single_exercise[REPS] <= rep_range[1])]
+
+        # TODO filter out sets that shouldn't be counted (e.g. Leg Press from Earnscliffe rec center)
+        # Filter to only the max weight set of this type for that day
+        idx = sets.groupby(DATE)[WEIGHT].idxmax()
+        sets = sets.loc[idx]
+
+        if not sets.empty:
+            last_weight = sets[WEIGHT].iloc[-1]
+            sets = sets.append({DATE: final_date, WEIGHT: last_weight}, ignore_index=True)
+            plt.scatter(
+                sets[DATE],
+                sets[WEIGHT],
+                s=2,
+                label=set_type,
+            )
+            plt.step(
+                sets[DATE].to_numpy(),
+                sets[WEIGHT].to_numpy(),
+                where="post",
+            )
+
+    # Set up axes
+    ax = plt.gca()
+    configure_x_axis_by_month(all_workouts)
+    chunk_of_range = (single_exercise[WEIGHT].max() - single_exercise[WEIGHT].min()) / 20
+    y_step = max(1, round(chunk_of_range / 10) * 10)
+    ax.yaxis.set_major_locator(ticker.MultipleLocator(5 * y_step))
+    ax.yaxis.set_minor_locator(ticker.MultipleLocator(y_step))
+    plt.grid(visible=True)
+    plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
+
+    # Add in the surrounding information
+    create_legend_and_title(exercise)
+    plt.savefig(f"../img/strength/{exercise}.png", bbox_inches="tight")
+    plt. close()

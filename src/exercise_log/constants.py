@@ -85,3 +85,10 @@ EXPECTED_EXERCISES = {
     "Upward Dumbell Bench Press",
     "Upward Dumbell Press",
 }
+
+SET_TYPE_TO_REP_RANGE = {
+    "one_rm": (1, 1),
+    "strength": (2, 7),
+    "hypertrophy": (8, 14),
+    "endurance": (15, float("inf")),
+}
