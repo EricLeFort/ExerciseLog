@@ -319,9 +319,9 @@ date,exercise,reps,weight(lbs),rating
 13-DEC-2023,Bench Press,12,95,good
 13-DEC-2023,Bench Press,10,115,good
 13-DEC-2023,Bench Press,10,135,good
-13-DEC-2023,Dumbell Press,12,35,good
-13-DEC-2023,Dumbell Press,10,35,good
-13-DEC-2023,Dumbell Press,10,35,good
+13-DEC-2023,Dumbbell Press,12,35,good
+13-DEC-2023,Dumbbell Press,10,35,good
+13-DEC-2023,Dumbbell Press,10,35,good
 13-DEC-2023,Cable Pec Flies,10,60,good
 13-DEC-2023,Cable Pec Flies,10,60,good
 13-DEC-2023,Cable Pec Flies,10,30,good
@@ -333,9 +333,9 @@ date,exercise,reps,weight(lbs),rating
 23-DEC-2023,Bench Press,10,135,good
 23-DEC-2023,Bench Press,10,135,bad
 23-DEC-2023,Bench Press,10,115,good
-23-DEC-2023,Dumbell Press,10,35,good
-23-DEC-2023,Dumbell Press,10,35,good
-23-DEC-2023,Dumbell Press,10,35,good
+23-DEC-2023,Dumbbell Press,10,35,good
+23-DEC-2023,Dumbbell Press,10,35,good
+23-DEC-2023,Dumbbell Press,10,35,good
 23-DEC-2023,Pec Flies,12,100,good
 23-DEC-2023,Pec Flies,10,115,good
 23-DEC-2023,Pec Flies,12,115,good
@@ -348,9 +348,9 @@ date,exercise,reps,weight(lbs),rating
 02-JAN-2023,Bench Press,10,135,good
 02-JAN-2023,Bench Press,10,135,good
 02-JAN-2023,Bench Press,10,135,good
-02-JAN-2023,Dumbell Press,10,35,good
-02-JAN-2023,Dumbell Press,10,40,good
-02-JAN-2023,Dumbell Press,10,40,good
+02-JAN-2023,Dumbbell Press,10,35,good
+02-JAN-2023,Dumbbell Press,10,40,good
+02-JAN-2023,Dumbbell Press,10,40,good
 02-JAN-2023,Pec Flies,10,115,good
 02-JAN-2023,Pec Flies,10,130,good
 02-JAN-2023,Pec Flies,10,130,good
@@ -366,9 +366,9 @@ date,exercise,reps,weight(lbs),rating
 12-JAN-2023,Cable Pec Flies,12,55,good
 12-JAN-2023,Cable Pec Flies,10,60,good
 12-JAN-2023,Cable Pec Flies,10,70,good
-12-JAN-2023,Upward Bench Press,10,150,good
-12-JAN-2023,Upward Bench Press,10,150,good
-12-JAN-2023,Upward Bench Press,10,150,good
+12-JAN-2023,Incline Bench Press,10,150,good
+12-JAN-2023,Incline Bench Press,10,150,good
+12-JAN-2023,Incline Bench Press,10,150,good
 12-JAN-2023,Plank,60,0,good
 12-JAN-2023,Plank,50,0,good
 12-JAN-2023,Plank,60,0,good
@@ -386,9 +386,9 @@ date,exercise,reps,weight(lbs),rating
 18-JAN-2023,Pec Flies,12,130,good
 18-JAN-2023,Pec Flies,10,140,good
 18-JAN-2023,Pec Flies,10,140,good
-18-JAN-2023,Upward Bench Press,10,150,good
-18-JAN-2023,Upward Bench Press,10,150,good
-18-JAN-2023,Upward Bench Press,10,150,bad
+18-JAN-2023,Incline Bench Press,10,150,good
+18-JAN-2023,Incline Bench Press,10,150,good
+18-JAN-2023,Incline Bench Press,10,150,bad
 18-JAN-2023,Plank,60,0,good
 18-JAN-2023,Plank,60,0,good
 18-JAN-2023,Plank,60,0,good
@@ -398,15 +398,15 @@ date,exercise,reps,weight(lbs),rating
 18-JAN-2023,Leg Raise,10,0,bad
 18-JAN-2023,Leg Raise,5,0,bad
 18-JAN-2023,Leg Raise,5,0,bad
-24-JAN-2023,Dumbell Press,12,40,good
-24-JAN-2023,Dumbell Press,10,45,good
-24-JAN-2023,Dumbell Press,10,45,good
+24-JAN-2023,Dumbbell Press,12,40,good
+24-JAN-2023,Dumbbell Press,10,45,good
+24-JAN-2023,Dumbbell Press,10,45,good
 24-JAN-2023,Cable Pec Flies,10,35,good
 24-JAN-2023,Cable Pec Flies,10,35,good
 24-JAN-2023,Cable Pec Flies,10,35,good
-24-JAN-2023,Upward Dumbell Bench Press,12,40,good
-24-JAN-2023,Upward Dumbell Bench Press,15,40,good
-24-JAN-2023,Upward Dumbell Bench Press,12,40,good
+24-JAN-2023,Incline Dumbbell Press,12,40,good
+24-JAN-2023,Incline Dumbbell Press,15,40,good
+24-JAN-2023,Incline Dumbbell Press,12,40,good
 24-JAN-2023,Plank,60,0,good
 24-JAN-2023,Plank,60,0,good
 24-JAN-2023,Plank,60,0,good
@@ -426,9 +426,9 @@ date,exercise,reps,weight(lbs),rating
 31-JAN-2023,Pec Flies,10,140,good
 31-JAN-2023,Pec Flies,10,140,good
 31-JAN-2023,Pec Flies,10,140,good
-31-JAN-2023,Upward Bench Press,10,150,good
-31-JAN-2023,Upward Bench Press,10,150,good
-31-JAN-2023,Upward Bench Press,10,150,good
+31-JAN-2023,Incline Bench Press,10,150,good
+31-JAN-2023,Incline Bench Press,10,150,good
+31-JAN-2023,Incline Bench Press,10,150,good
 31-JAN-2023,Plank,60,0,good
 31-JAN-2023,Plank,60,0,good
 31-JAN-2023,Plank,60,0,good
@@ -477,9 +477,9 @@ date,exercise,reps,weight(lbs),rating
 08-FEB-2023,Bench Press,10,175,good
 08-FEB-2023,Bench Press,5,185,good
 08-FEB-2023,Bench Press,5,195,good
-08-FEB-2023,Incline Dumbell Press,10,45,easy
-08-FEB-2023,Incline Dumbell Press,10,55,good
-08-FEB-2023,Incline Dumbell Press,10,55,good
+08-FEB-2023,Incline Dumbbell Press,10,45,easy
+08-FEB-2023,Incline Dumbbell Press,10,55,good
+08-FEB-2023,Incline Dumbbell Press,10,55,good
 08-FEB-2023,Cable Pec Flies,10,70,easy
 08-FEB-2023,Cable Pec Flies,10,80,bad
 08-FEB-2023,Cable Pec Flies,5,75,failure
@@ -559,9 +559,9 @@ date,exercise,reps,weight(lbs),rating
 15-FEB-2023,Machine Pec Flies,5,170,good
 15-FEB-2023,Machine Pec Flies,5,180,good
 15-FEB-2023,Machine Pec Flies,5,180,good
-15-FEB-2023,Machine Upward Bench Press,10,180,good
-15-FEB-2023,Machine Upward Bench Press,5,200,good
-15-FEB-2023,Machine Upward Bench Press,7,200,good
+15-FEB-2023,Machine Incline Bench Press,10,180,good
+15-FEB-2023,Machine Incline Bench Press,5,200,good
+15-FEB-2023,Machine Incline Bench Press,7,200,good
 16-FEB-2023,Bicep Curl,5,30,good
 16-FEB-2023,Bicep Curl,5,30,good
 16-FEB-2023,Bicep Curl,5,30,good
@@ -606,9 +606,9 @@ date,exercise,reps,weight(lbs),rating
 20-FEB-2023,Bench Press,10,185,good
 20-FEB-2023,Bench Press,10,185,good
 20-FEB-2023,Bench Press,10,185,good
-20-FEB-2023,Dumbell Press,10,60,good
-20-FEB-2023,Dumbell Press,10,60,good
-20-FEB-2023,Dumbell Press,10,60,good
+20-FEB-2023,Dumbbell Press,10,60,good
+20-FEB-2023,Dumbbell Press,10,60,good
+20-FEB-2023,Dumbbell Press,10,60,good
 20-FEB-2023,Cable Pec Flies,10,75,good
 20-FEB-2023,Cable Pec Flies,10,75,good
 20-FEB-2023,Cable Pec Flies,10,75,good
@@ -633,10 +633,10 @@ date,exercise,reps,weight(lbs),rating
 21-FEB-2023,Lat Pulldown,10,115,good
 21-FEB-2023,Lat Pulldown,10,115,good
 21-FEB-2023,Lat Pulldown,10,115,good
-26-FEB-2023,Upward Dumbell Press,10,50,good
-26-FEB-2023,Upward Dumbell Press,10,50,good
-26-FEB-2023,Upward Dumbell Press,8,50,failure
-26-FEB-2023,Upward Dumbell Press,2,45,good
+26-FEB-2023,Incline Dumbbell Press,10,50,good
+26-FEB-2023,Incline Dumbbell Press,10,50,good
+26-FEB-2023,Incline Dumbbell Press,8,50,failure
+26-FEB-2023,Incline Dumbbell Press,2,45,good
 26-FEB-2023,Bicep Curl,10,25,good
 26-FEB-2023,Bicep Curl,10,25,good
 26-FEB-2023,Bicep Curl,10,25,good
@@ -653,9 +653,9 @@ date,exercise,reps,weight(lbs),rating
 26-FEB-2023,Overhead Tricep Extension,7,30,bad
 26-FEB-2023,Overhead Tricep Extension,3,25,good
 26-FEB-2023,Overhead Tricep Extension,10,25,good
-27-FEB-2023,Upward Dumbell Bench Press,10,50,easy
-27-FEB-2023,Upward Dumbell Bench Press,12,50,good
-27-FEB-2023,Upward Dumbell Bench Press,12,50,good
+27-FEB-2023,Incline Dumbbell Press,10,50,easy
+27-FEB-2023,Incline Dumbbell Press,12,50,good
+27-FEB-2023,Incline Dumbbell Press,12,50,good
 27-FEB-2023,Hammer Curl,15,25,good
 27-FEB-2023,Hammer Curl,10,30,good
 27-FEB-2023,Hammer Curl,10,30,good
@@ -847,9 +847,9 @@ date,exercise,reps,weight(lbs),rating
 17-MAR-2023,Bench Press,5,205,good
 17-MAR-2023,Bench Press,5,205,good
 17-MAR-2023,Bench Press,5,205,good
-17-MAR-2023,Dumbell Press,10,60,good
-17-MAR-2023,Dumbell Press,10,60,good
-17-MAR-2023,Dumbell Press,10,60,good
+17-MAR-2023,Dumbbell Press,10,60,good
+17-MAR-2023,Dumbbell Press,10,60,good
+17-MAR-2023,Dumbbell Press,10,60,good
 17-MAR-2023,Machine Pec Flies,10,160,good
 17-MAR-2023,Machine Pec Flies,10,160,good
 17-MAR-2023,Machine Pec Flies,10,160,good
@@ -1001,9 +1001,9 @@ date,exercise,reps,weight(lbs),rating
 31-MAR-2023,Bench Press,5,215,good
 31-MAR-2023,Bench Press,5,225,good
 31-MAR-2023,Bench Press,10,185,good
-31-MAR-2023,Dumbell Press,10,60,good
-31-MAR-2023,Dumbell Press,10,60,good
-31-MAR-2023,Dumbell Press,10,60,good
+31-MAR-2023,Dumbbell Press,10,60,good
+31-MAR-2023,Dumbbell Press,10,60,good
+31-MAR-2023,Dumbbell Press,10,60,good
 31-MAR-2023,Upward Cable Pec Flies,15,50,easy
 31-MAR-2023,Upward Cable Pec Flies,8,60,good
 31-MAR-2023,Upward Cable Pec Flies,10,55,good
@@ -1074,3 +1074,22 @@ date,exercise,reps,weight(lbs),rating
 05-APR-2023,Military Press,5,245,good
 05-APR-2023,Push-Ups,20,0,good
 05-APR-2023,Push-Ups,20,0,good
+06-APR-2023,Bench Press,10,135,warm-up
+06-APR-2023,Bench Press,10,185,good
+06-APR-2023,Bench Press,10,195,good
+06-APR-2023,Bench Press,10,205,good
+06-APR-2023,Bench Press,5,225,failure
+06-APR-2023,Dumbbell Press,10,60,good
+06-APR-2023,Dumbbell Press,10,65,good
+06-APR-2023,Dumbbell Press,10,65,good
+06-APR-2023,Upward Cable Pec Flies,10,55,good
+06-APR-2023,Upward Cable Pec Flies,10,55,good
+06-APR-2023,Upward Cable Pec Flies,10,55,good
+06-APR-2023,Pec Flies,10,170,good
+06-APR-2023,Pec Flies,10,175,good
+06-APR-2023,Pec Flies,10,175,good
+06-APR-2023,Deadlift,10,195,good
+06-APR-2023,Deadlift,10,205,good
+06-APR-2023,Deadlift,10,205,good
+06-APR-2023,Deadlift,1,315,good
+06-APR-2023,Deadlift,1,335,failure
