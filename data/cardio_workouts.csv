@@ -81,3 +81,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 01-APR-2023,walk (treadmill),01:40:15,8.83,10555,263,167,191,""
 03-APR-2023,walk (treadmill),01:30:00,7.82,9461,312,167,188,"200m gain in 54:57, 1000ft gain in 86:08"
 05-APR-2023,walk (treadmill),01:00:00,5.57,6470,134,161,179,""
+08-APR-2023,walk (treadmill),01:10:12,6.12,7387,201,166,187,""
