@@ -797,9 +797,9 @@ date,exercise,reps,weight(lbs),rating
 13-MAR-2023,Shrugs,10,35,easy
 13-MAR-2023,Shrugs,10,35,easy
 13-MAR-2023,Shrugs,15,35,easy
-13-MAR-2023,Barbell Military Press,2,135,easy
-13-MAR-2023,Barbell Military Press,2,135,easy
-13-MAR-2023,Barbell Military Press,3,165,good
+13-MAR-2023,Strict Press,2,135,easy
+13-MAR-2023,Strict Press,2,135,easy
+13-MAR-2023,Strict Press,3,165,good
 13-MAR-2023,Preacher Curl,12,42,easy
 16-MAR-2023,Lateral Lift,12,20,good
 16-MAR-2023,Lateral Lift,12,20,good
@@ -890,11 +890,11 @@ date,exercise,reps,weight(lbs),rating
 22-MAR-2023,Military Press,10,180,good
 22-MAR-2023,Military Press,10,185,good
 22-MAR-2023,Military Press,10,185,good
-22-MAR-2023,Barbell Military Press,5,135,good
-22-MAR-2023,Barbell Military Press,5,135,good
-22-MAR-2023,Barbell Military Press,5,135,good
-22-MAR-2023,Barbell Military Press,5,135,good
-22-MAR-2023,Barbell Military Press,5,135,good
+22-MAR-2023,Strict Press,5,135,good
+22-MAR-2023,Strict Press,5,135,good
+22-MAR-2023,Strict Press,5,135,good
+22-MAR-2023,Strict Press,5,135,good
+22-MAR-2023,Strict Press,5,135,good
 22-MAR-2023,Arnold Press,10,35,good
 22-MAR-2023,Arnold Press,10,35,good
 22-MAR-2023,Arnold Press,12,35,good
@@ -972,11 +972,11 @@ date,exercise,reps,weight(lbs),rating
 29-MAR-2023,Front Lift,12,25,good
 29-MAR-2023,Front Lift,12,25,good
 29-MAR-2023,Front Lift,12,25,good
-29-MAR-2023,Barbell Military Press,5,135,good
-29-MAR-2023,Barbell Military Press,5,135,good
-29-MAR-2023,Barbell Military Press,5,135,good
-29-MAR-2023,Barbell Military Press,6,135,good
-29-MAR-2023,Barbell Military Press,6,135,good
+29-MAR-2023,Strict Press,5,135,good
+29-MAR-2023,Strict Press,5,135,good
+29-MAR-2023,Strict Press,5,135,good
+29-MAR-2023,Strict Press,6,135,good
+29-MAR-2023,Strict Press,6,135,good
 29-MAR-2023,Arnold Press,10,35,good
 29-MAR-2023,Arnold Press,12,35,good
 29-MAR-2023,Arnold Press,12,35,good
@@ -1047,10 +1047,10 @@ date,exercise,reps,weight(lbs),rating
 04-APR-2023,Front Lift,12,25,good
 04-APR-2023,Front Lift,12,25,good
 04-APR-2023,Front Lift,12,25,good
-04-APR-2023,Barbell Military Press,6,135,good
-04-APR-2023,Barbell Military Press,6,135,good
-04-APR-2023,Barbell Military Press,7,135,good
-04-APR-2023,Barbell Military Press,7,135,good
+04-APR-2023,Strict Press,6,135,good
+04-APR-2023,Strict Press,6,135,good
+04-APR-2023,Strict Press,7,135,good
+04-APR-2023,Strict Press,7,135,good
 04-APR-2023,Arnold Press,10,40,good
 04-APR-2023,Arnold Press,10,40,good
 04-APR-2023,Arnold Press,10,40,good
@@ -1125,3 +1125,34 @@ date,exercise,reps,weight(lbs),rating
 08-APR-2023,Full Cans,20,5,good
 08-APR-2023,Full Cans,20,5,good
 08-APR-2023,Full Cans,20,5,good
+10-APR-2023,Lunges,10,20,good
+10-APR-2023,Lunges,10,25,good
+10-APR-2023,Lunges,10,25,good
+10-APR-2023,Single-Leg Leg Curl,10,90,good
+10-APR-2023,Single-Leg Leg Curl,10,90,good
+10-APR-2023,Single-Leg Leg Curl,10,90,good
+10-APR-2023,Single-Leg Leg Extension,10,100,good
+10-APR-2023,Single-Leg Leg Extension,10,100,good
+10-APR-2023,Single-Leg Leg Extension,10,100,good
+10-APR-2023,Squats,12,135,warm-up
+10-APR-2023,Squats,10,205,good
+10-APR-2023,Squats,10,205,good
+10-APR-2023,Squats,10,205,good
+10-APR-2023,Lateral Lift,10,25,good
+10-APR-2023,Lateral Lift,10,25,good
+10-APR-2023,Lateral Lift,10,25,good
+10-APR-2023,Front Lift,10,30,good
+10-APR-2023,Front Lift,10,30,good
+10-APR-2023,Front Lift,10,30,good
+10-APR-2023,Military Press,10,190,good
+10-APR-2023,Military Press,10,190,good
+10-APR-2023,Military Press,10,190,good
+10-APR-2023,Strict Press,8,135,good
+10-APR-2023,Strict Press,8,135,good
+10-APR-2023,Strict Press,7,135,good
+10-APR-2023,Arnold Press,10,40,good
+10-APR-2023,Arnold Press,10,40,good
+10-APR-2023,Arnold Press,10,40,good
+10-APR-2023,Pullovers,10,20,good
+10-APR-2023,Pullovers,10,30,good
+10-APR-2023,Pullovers,10,30,good
