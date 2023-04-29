@@ -91,3 +91,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 20-APR-2023,walk (treadmill),01:09:59,6.01,7500,233,168,186,"200m gain in 49:40, 232m gain in 60:00. Missed recording exact starting steps so step count is probably +/- 200."
 22-APR-2023,walk (treadmill),01:17:38,6.70,8120,245,165,182,""
 24-APR-2023,walk (treadmill),02:00:00,10.79,12852,227,165,189,"100m gain in 19:42, 200m gain in 48:01, 223m gain in 60:00"
+27-APR-2023,walk (treadmill),01:00:01,5.51,6503,107,156,178,""
