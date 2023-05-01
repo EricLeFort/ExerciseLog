@@ -25,7 +25,7 @@ def plot_workout_frequency(
     n_day_avg_workout_duration: pd.DataFrame,
     n_days_to_avg: int
 ):
-    NON_GRAPH_GCF_PERCENT = 0.06
+    NON_GRAPH_GCF_PERCENT = 0.1
 
     # Draw the main graph contents and setup the axes
     workout_durations_mins = all_workouts[DURATION] // 60
@@ -54,6 +54,10 @@ def plot_workout_frequency(
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(5))
     plt.grid(visible=True)
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
+
+    # Scale up the plot
+    fig = plt.gcf()
+    fig.set_size_inches(15, 9)
 
     # Add in the surrounding information
     create_legend_and_title("Workout Frequency", reverse_labels=True)
@@ -105,6 +109,10 @@ def plot_resting_heart_rate(
     plt.grid(visible=True)
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
 
+    # Scale up the plot
+    fig = plt.gcf()
+    fig.set_size_inches(15, 9)
+
     # Add in the surrounding information
     create_legend_and_title("Resting Heart Rate", reverse_labels=True)
     plt.savefig('../img/resting_heart_rate.png', bbox_inches="tight")
@@ -152,6 +160,10 @@ def plot_weight(
     ax.set_ylim([Y_MIN, Y_MAX])
     plt.grid(visible=True)
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
+
+    # Scale up the plot
+    fig = plt.gcf()
+    fig.set_size_inches(18.5, 10.5)
 
     # Add in the surrounding information
     create_legend_and_title("Weight", reverse_labels=True)
