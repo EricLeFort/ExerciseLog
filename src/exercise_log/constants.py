@@ -80,6 +80,7 @@ EXPECTED_EXERCISES = {
     "Resistance Tricep Pushdown",
     "Seated Row",
     "Side-Lying External Rotation",
+    "Side-Plank",
     "Single-Leg Leg Curl",
     "Single-Leg Leg Extension",
     "Shrugs",
