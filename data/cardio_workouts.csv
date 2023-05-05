@@ -94,3 +94,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 27-APR-2023,walk (treadmill),01:00:01,5.51,6503,107,156,178,"3m + 2m of running"
 28-APR-2023,walk (treadmill),01:00:04,5.17,6289,219,157,175,"200m gain in 47:30, maintained 5% @ 5.2kph for about 50 mins straight"
 30-APR-2023,walk (treadmill),01:11:32,6.14,7313,205,162,181,"2m + 2m + 3m spent walking backwards @ 4.1kph"
+04-MAY-2023,walk (treadmill),01:20:01,6.96,8228,305,167,182,"200m gain in 46:29; 258m in 60:00; 300m in 75:54; 1000ft in 77:01; maintained 5% @ 5.2kph for 60 mins straight"
