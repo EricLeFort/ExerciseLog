@@ -19,9 +19,6 @@ from exercise_log.constants import (
 from exercise_log.utils import join_with_comma
 
 
-ROOT_DATA_DIR = "../data/"
-
-
 class DataLoader:
     @staticmethod
     def _load_and_clean_data(fname: str) -> pd.DataFrame:
@@ -124,22 +121,22 @@ class DataLoader:
         return workout_types.reindex(all_workouts.index, fill_value="Rest Day")
 
     @staticmethod
-    def load_health_metrics():
-        health_metrics = DataLoader._load_and_clean_data(f"{ROOT_DATA_DIR}health_metrics.csv")
+    def load_health_metrics(root_data_dir: str):
+        health_metrics = DataLoader._load_and_clean_data(f"{root_data_dir}/health_metrics.csv")
 
         # Filter out any empty rows from the health metrics
         return health_metrics[health_metrics[WEIGHT].notnull() | health_metrics[RESTING_HEART_RATE].notnull()]
 
     @staticmethod
-    def load_travel_days():
-        travel_days = DataLoader._load_and_clean_data(f"{ROOT_DATA_DIR}travel_days.csv")
+    def load_travel_days(root_data_dir: str):
+        travel_days = DataLoader._load_and_clean_data(f"{root_data_dir}/travel_days.csv")
         # Filling in an explicit workout type since its implicit for travel days
         travel_days[WORKOUT_TYPE] = "Travel"
         return travel_days
 
     @staticmethod
-    def load_cardio_workouts():
-        cardio_workouts = DataLoader._load_and_clean_data(f"{ROOT_DATA_DIR}cardio_workouts.csv")
+    def load_cardio_workouts(root_data_dir: str):
+        cardio_workouts = DataLoader._load_and_clean_data(f"{root_data_dir}/cardio_workouts.csv")
 
         # Populate computed fields
         cardio_workouts[PACE] = cardio_workouts[DISTANCE] / cardio_workouts[DURATION]
@@ -149,12 +146,12 @@ class DataLoader:
         return cardio_workouts
 
     @staticmethod
-    def load_weight_training_workouts():
-        return DataLoader._load_and_clean_data(f"{ROOT_DATA_DIR}weight_training_workouts.csv")
+    def load_weight_training_workouts(root_data_dir: str):
+        return DataLoader._load_and_clean_data(f"{root_data_dir}/weight_training_workouts.csv")
 
     @staticmethod
-    def load_weight_training_sets():
-        return DataLoader._load_and_clean_data(f"{ROOT_DATA_DIR}weight_training_sets.csv")
+    def load_weight_training_sets(root_data_dir: str):
+        return DataLoader._load_and_clean_data(f"{root_data_dir}/weight_training_sets.csv")
 
     @staticmethod
     def load_all_workouts(cardio_workouts: pd.DataFrame, weight_training_workouts: pd.DataFrame, travel_days: pd.DataFrame):

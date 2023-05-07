@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
+from typing import Optional
+
 from exercise_log.constants import (
     DATE,
     DURATION,
@@ -23,7 +25,9 @@ from exercise_log.vis.utils import configure_x_axis_by_month, create_legend_and_
 def plot_workout_frequency(
     all_workouts: pd.DataFrame,
     n_day_avg_workout_duration: pd.DataFrame,
-    n_days_to_avg: int
+    n_days_to_avg: int,
+    export_dir: Optional[str] = None,
+    show_plot=True,
 ):
     NON_GRAPH_GCF_PERCENT = 0.1
 
@@ -61,14 +65,18 @@ def plot_workout_frequency(
 
     # Add in the surrounding information
     create_legend_and_title("Workout Frequency", reverse_labels=True)
-    plt.savefig('../img/workout_frequency.png', bbox_inches="tight")
-    plt.show()
+    if export_dir:
+        plt.savefig(f"{export_dir}/workout_frequency.png", bbox_inches="tight")
+    if show_plot:
+        plt.show()
 
 def plot_resting_heart_rate(
     all_workouts: pd.DataFrame,
     health_metrics: pd.DataFrame,
     heart_rate_trendline: np.ndarray,
-    n_days_to_extrapolate: int
+    n_days_to_extrapolate: int,
+    export_dir: Optional[str] = None,
+    show_plot=True,
 ):
     Y_MIN, Y_MAX = 45, 90
 
@@ -115,15 +123,19 @@ def plot_resting_heart_rate(
 
     # Add in the surrounding information
     create_legend_and_title("Resting Heart Rate", reverse_labels=True)
-    plt.savefig('../img/resting_heart_rate.png', bbox_inches="tight")
-    plt.show()
+    if export_dir:
+        plt.savefig(f"{export_dir}/resting_heart_rate.png", bbox_inches="tight")
+    if show_plot:
+        plt.show()
 
 
 def plot_weight(
     all_workouts: pd.DataFrame,
     health_metrics: pd.DataFrame,
     weight_trendline: np.ndarray,
-    n_days_to_extrapolate: int
+    n_days_to_extrapolate: int,
+    export_dir: Optional[str] = None,
+    show_plot=True,
 ):
     Y_MIN, Y_MAX = 180, 300
 
@@ -167,14 +179,19 @@ def plot_weight(
 
     # Add in the surrounding information
     create_legend_and_title("Weight", reverse_labels=True)
-    plt.savefig('../img/weight.png', bbox_inches="tight")
-    plt.show()
+    if export_dir:
+        plt.savefig(f"{export_dir}/weight.png", bbox_inches="tight")
+    if show_plot:
+        plt.show()
+
 
 
 def plot_strength_over_time(
     all_workouts: pd.DataFrame,
     weight_training_sets: pd.DataFrame,
     exercise: str,
+    export_dir: Optional[str] = None,
+    show_plot=True,
 ):
     final_date = all_workouts[DATE].max()
     single_exercise = weight_training_sets[weight_training_sets[EXERCISE] == exercise]
@@ -215,6 +232,7 @@ def plot_strength_over_time(
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
 
     # Add in the surrounding information
-    create_legend_and_title(exercise)
-    plt.savefig(f"../img/strength/{exercise}.png", bbox_inches="tight")
-    plt. close()
+    if export_dir:
+        plt.savefig(f"{export_dir}/strength/{exercise}.png", bbox_inches="tight")
+    if show_plot:
+        plt.show()
