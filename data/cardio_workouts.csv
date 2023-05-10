@@ -101,3 +101,5 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 07-MAY-2023,walk (treadmill),00:10:01,0.89,1037,0,130,146,""
 07-MAY-2023,walk (treadmill),00:10:00,0.83,969,0,146,150,"3m walking backwards @ 4.1kph"
 08-MAY-2023,walk (treadmill),01:17:37,6.68,9112,243,160,177,"200m gain in 43:20; 243m gain in 60:00"
+09-MAY-2023,walk (treadmill),00:10:03,0.85,1033,0,136,146,"3m walking backwards @ 4.2kph"
+09-MAY-2023,walk (treadmill),00:10:01,0.84,1022,0,145,150,"3m walking backwards @ 4.1kph"
