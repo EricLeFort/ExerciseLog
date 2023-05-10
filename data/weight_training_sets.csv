@@ -1361,12 +1361,12 @@ date,exercise,reps,weight(lbs),rating
 29-APR-2023,Lunges,10,25,good
 29-APR-2023,Lunges,10,25,good
 29-APR-2023,Lunges,10,25,good
-29-APR-2023,Leg Curl,10,100,good
-29-APR-2023,Leg Curl,10,100,good
-29-APR-2023,Leg Curl,10,100,good
-29-APR-2023,Leg Extension,10,110,good
-29-APR-2023,Leg Extension,10,110,good
-29-APR-2023,Leg Extension,10,110,good
+29-APR-2023,Single-Leg Leg Curl,10,100,good
+29-APR-2023,Single-Leg Leg Curl,10,100,good
+29-APR-2023,Single-Leg Leg Curl,10,100,good
+29-APR-2023,Single-Leg Leg Extension,10,110,good
+29-APR-2023,Single-Leg Leg Extension,10,110,good
+29-APR-2023,Single-Leg Leg Extension,10,110,good
 29-APR-2023,Squats,5,135,warm-up
 29-APR-2023,Squats,10,205,good
 29-APR-2023,Squats,10,205,good
@@ -1442,13 +1442,45 @@ date,exercise,reps,weight(lbs),rating
 05-MAY-2023,Lunges,10,25,good
 05-MAY-2023,Lunges,10,25,good
 05-MAY-2023,Lunges,10,25,good
-05-MAY-2023,Leg Curl,12,100,good
-05-MAY-2023,Leg Curl,12,100,good
-05-MAY-2023,Leg Curl,12,100,good
-05-MAY-2023,Leg Extension,10,110,good
-05-MAY-2023,Leg Extension,10,110,good
-05-MAY-2023,Leg Extension,10,110,good
+05-MAY-2023,Single-Leg Leg Curl,12,100,good
+05-MAY-2023,Single-Leg Leg Curl,12,100,good
+05-MAY-2023,Single-Leg Leg Curl,12,100,good
+05-MAY-2023,Single-Leg Leg Extension,10,110,good
+05-MAY-2023,Single-Leg Leg Extension,10,110,good
+05-MAY-2023,Single-Leg Leg Extension,10,110,good
 05-MAY-2023,Squats,5,135,warm-up
 05-MAY-2023,Squats,10,205,good
 05-MAY-2023,Squats,10,205,good
 05-MAY-2023,Squats,10,205,good
+06-MAY-2023,Full Cans,10,10,good
+06-MAY-2023,Full Cans,12,10,good
+06-MAY-2023,Full Cans,12,10,good
+07-MAY-2023,Deadlift,5,145,warm-up
+07-MAY-2023,Deadlift,5,225,good
+07-MAY-2023,Deadlift,5,245,good
+07-MAY-2023,Deadlift,5,245,good
+07-MAY-2023,Deadlift,5,245,good
+07-MAY-2023,Deadlift,5,245,good
+07-MAY-2023,Plank,60,0,good
+07-MAY-2023,Plank,60,0,good
+07-MAY-2023,Plank,60,0,good
+07-MAY-2023,Side-Plank,30,0,good
+07-MAY-2023,Side-Plank,30,0,good
+07-MAY-2023,Side-Plank,30,0,good
+07-MAY-2023,Bench Press,5,135,warm-up
+07-MAY-2023,Bench Press,5,225,good
+07-MAY-2023,Bench Press,5,245,good
+07-MAY-2023,Bench Press,5,245,good
+07-MAY-2023,Bench Press,5,245,good
+07-MAY-2023,Bench Press,5,245,good
+07-MAY-2023,Cable Pec Flies,10,80,good
+07-MAY-2023,Cable Pec Flies,10,80,good
+07-MAY-2023,Cable Pec Flies,10,80,good
+07-MAY-2023,Machine Pec Flies,5,105,warm-up
+07-MAY-2023,Machine Pec Flies,10,190,good
+07-MAY-2023,Machine Pec Flies,10,190,good
+07-MAY-2023,Machine Pec Flies,10,190,good
+07-MAY-2023,Decline Bench Press,10,135,warm-up
+07-MAY-2023,Decline Bench Press,10,155,warm-up
+07-MAY-2023,Decline Bench Press,10,185,good
+07-MAY-2023,Decline Bench Press,10,185,good
