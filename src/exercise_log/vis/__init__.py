@@ -69,6 +69,7 @@ def plot_workout_frequency(
         plt.savefig(f"{export_dir}/workout_frequency.png", bbox_inches="tight")
     if show_plot:
         plt.show()
+    plt.clf()
 
 def plot_resting_heart_rate(
     all_workouts: pd.DataFrame,
@@ -127,6 +128,7 @@ def plot_resting_heart_rate(
         plt.savefig(f"{export_dir}/resting_heart_rate.png", bbox_inches="tight")
     if show_plot:
         plt.show()
+    plt.clf()
 
 
 def plot_weight(
@@ -183,6 +185,7 @@ def plot_weight(
         plt.savefig(f"{export_dir}/weight.png", bbox_inches="tight")
     if show_plot:
         plt.show()
+    plt.clf()
 
 
 
@@ -232,7 +235,9 @@ def plot_strength_over_time(
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
 
     # Add in the surrounding information
+    create_legend_and_title(exercise, reverse_labels=True)
     if export_dir:
         plt.savefig(f"{export_dir}/strength/{exercise}.png", bbox_inches="tight")
     if show_plot:
         plt.show()
+    plt.clf()

@@ -48,6 +48,7 @@ EXPECTED_EXERCISES = {
     "Close-Grip Lat Pulldown",
     "Concentration Curl",
     "Deadlift",
+    "Decline Bench Press",
     "Delt Flies",
     "Dumbbell Press",
     "Front Lift",
