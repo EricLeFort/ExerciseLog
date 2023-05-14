@@ -104,3 +104,5 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 09-MAY-2023,walk (treadmill),00:10:03,0.85,1033,0,136,146,"3m walking backwards @ 4.2kph"
 09-MAY-2023,walk (treadmill),00:10:01,0.84,1022,0,145,150,"3m walking backwards @ 4.1kph"
 10-MAY-2023,walk (treadmill),01:35:00,8.03,9792,305,162,184,"1000ft in 80:49"
+12-MAY-2023,walk (outdoor),00:26:35,2.12,2694,46,144,174,"Walk to/from optometrist"
+12-MAY-2023,walk (treadmill),00:10:08,0.87,1055,0,124,130,""
