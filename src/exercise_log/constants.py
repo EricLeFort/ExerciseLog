@@ -24,6 +24,12 @@ RATE_OF_CLIMB = "rate of climb (m/h)"
 
 # Ratings
 WARMUP = "warm-up"
+BAD = "bad"
+BAD_LEFT = "bad (L)"
+BAD_RIGHT = "bad (R)"
+FAILURE = "failure"
+FAILURE_LEFT = "failure (L)"
+FAILURE_RIGHT = "failure (R)"
 
 # Workout Types
 WALK_TREADMILL = "walk (treadmill)"

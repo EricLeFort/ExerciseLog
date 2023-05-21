@@ -30,8 +30,11 @@ def main():
 
     for exercise in weight_training_sets[EXERCISE].unique():
         print(f"Plotting {exercise}... ", end="")
-        plot_strength_over_time(all_workouts, weight_training_sets, exercise, export_dir=ROOT_IMG_DIR, show_plot=False)
-        print(f"done.")
+        try:
+            plot_strength_over_time(all_workouts, weight_training_sets, exercise, export_dir=ROOT_IMG_DIR, show_plot=False)
+            print("done.")
+        except ValueError as ve:
+            print(f"SKIPPED: {str(ve)}.")
 
 
 if __name__ == "__main__":

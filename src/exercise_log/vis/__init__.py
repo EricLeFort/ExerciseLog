@@ -6,9 +6,11 @@ import matplotlib.ticker as ticker
 from typing import Optional
 
 from exercise_log.constants import (
+    BAD,
     DATE,
     DURATION,
     EXERCISE,
+    FAILURE,
     MIN_DAILY_ACTIVE_MINUTES,
     RATING,
     REPS,
@@ -206,8 +208,10 @@ def plot_strength_over_time(
         idx = sets.groupby(DATE)[WEIGHT].idxmax()
         sets = sets.loc[idx]
 
-        # Filter out warmup sets
+        # Filter out warmup, failure, and bad sets
         sets = sets[sets[RATING] != WARMUP]
+        sets = sets[~sets[RATING].str.startswith(FAILURE)]
+        sets = sets[~sets[RATING].str.startswith(BAD)]
 
         if not sets.empty:
             last_weight = sets[WEIGHT].iloc[-1]
@@ -223,6 +227,10 @@ def plot_strength_over_time(
                 sets[WEIGHT].to_numpy(),
                 where="post",
             )
+
+    # It's possible (but not common) to have an exercise that only has failed/bad sets
+    if not plt.gca().has_data():
+        raise ValueError("missing good sets")
 
     # Set up axes
     ax = plt.gca()
