@@ -111,3 +111,5 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 15-MAY-2023,walk (treadmill),01:19:09,6.06,7260,314,167,188,"100m gain in 19:11; 200m gain in 37:55; 1000ft in 57:52; 314m in 60:00"
 17-MAY-2023,walk (treadmill),01:31:10,8.08,9557,140,153,186,"3m walking backwards @ 4.2kph, 2x3m walking backwards @ 4.3kph"
 20-MAY-2023,walk (treadmill),01:07:30,6.26,7402,167,167,191,"4 2 minute runs, 100m gain in 18:45"
+21-MAY-2023,walk (outdoor),00:14:31,1.09,1550,16,133,160,"Walk to REI with a 13.8lb pack, end steps was recorded a little late so may be inaccurate"
+21-MAY-2023,walk (outdoor),00:13:13,1.07,1445,14,138,163,"Walk from REI with a 16.0lb pack"
