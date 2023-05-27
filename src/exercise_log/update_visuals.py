@@ -3,6 +3,7 @@ import numpy as np
 from exercise_log.constants import *
 from exercise_log.dataloader import DataLoader
 from exercise_log.trend import Trendsetter
+from exercise_log.utils import TermColour
 from exercise_log.vis import plot_resting_heart_rate, plot_strength_over_time, plot_weight, plot_workout_frequency
 
 ROOT_DATA_DIR = "data"
@@ -34,7 +35,7 @@ def main():
             plot_strength_over_time(all_workouts, weight_training_sets, exercise, export_dir=ROOT_IMG_DIR, show_plot=False)
             print("done.")
         except ValueError as ve:
-            print(f"SKIPPED: {str(ve)}.")
+            TermColour.print_warning(f"SKIPPED: {str(ve)}.")
 
 
 if __name__ == "__main__":

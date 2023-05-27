@@ -1,10 +1,36 @@
-import numpy as np
-import pandas as pd
-
-from pandas.core.generic import NDFrame  # This is the generic type that encompasses Series and DataFrame
+from enum import Enum
 from typing import List
 
+import numpy as np
+import pandas as pd
+from pandas.core.generic import NDFrame  # This is the generic type that encompasses Series and DataFrame
+
 from exercise_log.constants import number, DATE
+
+
+class TermColour(str, Enum):
+    FAIL = '\033[91m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    OKBLUE = '\033[94m'
+    HEADER = '\033[95m'
+    OKCYAN = '\033[96m'
+    END = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+    @staticmethod
+    def print_warning(msg: str):
+        print(f"{TermColour.WARNING}{msg}{TermColour.END}")
+
+    @staticmethod
+    def print_error(msg: str):
+        print(f"{TermColour.FAIL}{msg}{TermColour.END}")
+
+    @staticmethod
+    def print_success(msg: str):
+        print(f"{TermColour.OKGREEN}{msg}{TermColour.END}")
+
 
 def join_with_comma(items: List[str]):
     """Wrapper function to join a list of strs with commas"""
