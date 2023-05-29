@@ -203,15 +203,15 @@ def plot_strength_over_time(
     for set_type, rep_range in SET_TYPE_TO_REP_RANGE.items():
         sets = single_exercise[(rep_range[0] <= single_exercise[REPS]) & (single_exercise[REPS] <= rep_range[1])]
 
-        # TODO filter out sets that shouldn't be counted (e.g. Leg Press from Earnscliffe rec center)
-        # Filter to only the max weight set of this type for that day
-        idx = sets.groupby(DATE)[WEIGHT].idxmax()
-        sets = sets.loc[idx]
-
         # Filter out warmup, failure, and bad sets
         sets = sets[sets[RATING] != WARMUP]
         sets = sets[~sets[RATING].str.startswith(FAILURE)]
         sets = sets[~sets[RATING].str.startswith(BAD)]
+
+        # TODO filter out sets that shouldn't be counted (e.g. Leg Press from Earnscliffe rec center)
+        # Filter to only the max weight set of this type for that day
+        idx = sets.groupby(DATE)[WEIGHT].idxmax()
+        sets = sets.loc[idx]
 
         if not sets.empty:
             last_weight = sets[WEIGHT].iloc[-1]
