@@ -119,3 +119,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 28-MAY-2023,walk (treadmill),01:20:22,7.00,8411,312,159,173,"1000ft in 70:13; maintained 5% @ 5.2kph for ~70 mins straight, easy pace"
 30-MAY-2023,walk (outdoor),00:17:55,1.56,1932,26,141,157,”walk home from work”
 30-MAY-2023,walk (treadmill),01:07:35,5.93,7039,273,166,185,””
+31-MAY-2023,walk (outdoor),00:15:16,1.22,1643,0,143,152,”walk to work”
