@@ -8,7 +8,6 @@ from exercise_log.constants import (
     DURATION,
     ELEVATION,
     EXERCISE,
-    EXPECTED_EXERCISES,
     NOTES,
     PACE,
     RATE_OF_CLIMB,
@@ -16,6 +15,7 @@ from exercise_log.constants import (
     WEIGHT,
     WORKOUT_TYPE,
 )
+from exercise_log.strength import Exercise
 from exercise_log.utils import join_with_comma
 
 
@@ -60,15 +60,15 @@ class DataLoader:
 
     @staticmethod
     def _validate_exercises(df: pd.DataFrame, fname: str):
-        if df[EXERCISE].isin(EXPECTED_EXERCISES).all():
+        if df[EXERCISE].isin(Exercise).all():
             return
 
-        first_invalid_idx = df[~df[EXERCISE].isin(EXPECTED_EXERCISES)].index.tolist()[0]
+        first_invalid_idx = df[~df[EXERCISE].isin(Exercise)].index.tolist()[0]
         first_invalid = df[EXERCISE][first_invalid_idx]
 
         possible_valid = first_invalid[:-1]
         base_msg = f'"{first_invalid}" at row {first_invalid_idx + 2} in {fname} is not an expected exercise'
-        if possible_valid in EXPECTED_EXERCISES:
+        if possible_valid in Exercise:
             raise ValueError(base_msg + f', did you mean "{possible_valid}"')
         raise ValueError(base_msg)
 

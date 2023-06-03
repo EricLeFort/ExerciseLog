@@ -1,0 +1,1 @@
+from exercise_log.strength.exercise import Exercise, ExerciseInfo
