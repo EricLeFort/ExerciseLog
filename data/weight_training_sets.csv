@@ -801,9 +801,9 @@ date,exercise,reps,weight(lbs),rating
 13-MAR-2023,Strict Press,2,135,easy
 13-MAR-2023,Strict Press,3,165,good
 13-MAR-2023,Preacher Curl,12,42,easy
-16-MAR-2023,Lateral Lift,12,20,good
-16-MAR-2023,Lateral Lift,12,20,good
-16-MAR-2023,Lateral Lift,12,20,good
+16-MAR-2023,Bent-Over Lateral Lift,12,20,good
+16-MAR-2023,Bent-Over Lateral Lift,12,20,good
+16-MAR-2023,Bent-Over Lateral Lift,12,20,good
 16-MAR-2023,Front Lift,10,25,good
 16-MAR-2023,Front Lift,10,25,good
 16-MAR-2023,Front Lift,10,25,good
@@ -881,9 +881,9 @@ date,exercise,reps,weight(lbs),rating
 20-MAR-2023,Lat Pulldown,10,130,good
 20-MAR-2023,Lat Pulldown,10,130,good
 21-MAR-2023,Push-Ups,20,0,good
-22-MAR-2023,Lateral Lift,12,20,good
-22-MAR-2023,Lateral Lift,12,20,good
-22-MAR-2023,Lateral Lift,12,20,good
+22-MAR-2023,Bent-Over Lateral Lift,12,20,good
+22-MAR-2023,Bent-Over Lateral Lift,12,20,good
+22-MAR-2023,Bent-Over Lateral Lift,12,20,good
 22-MAR-2023,Front Lift,10,25,easy
 22-MAR-2023,Front Lift,12,25,good
 22-MAR-2023,Front Lift,12,25,good
@@ -966,9 +966,9 @@ date,exercise,reps,weight(lbs),rating
 26-MAR-2023,Lat Pulldown,12,130,good
 26-MAR-2023,Lat Pulldown,10,130,good
 26-MAR-2023,Lat Pulldown,10,130,bad
-29-MAR-2023,Lateral Lift,12,20,good
-29-MAR-2023,Lateral Lift,12,20,good
-29-MAR-2023,Lateral Lift,12,20,good
+29-MAR-2023,Bent-Over Lateral Lift,12,20,good
+29-MAR-2023,Bent-Over Lateral Lift,12,20,good
+29-MAR-2023,Bent-Over Lateral Lift,12,20,good
 29-MAR-2023,Front Lift,12,25,good
 29-MAR-2023,Front Lift,12,25,good
 29-MAR-2023,Front Lift,12,25,good
@@ -1041,9 +1041,9 @@ date,exercise,reps,weight(lbs),rating
 02-APR-2023,Lat Pulldown,10,130,good
 02-APR-2023,Lat Pulldown,10,130,good
 02-APR-2023,Lat Pulldown,15,85,good
-04-APR-2023,Lateral Lift,10,25,good
-04-APR-2023,Lateral Lift,10,25,good
-04-APR-2023,Lateral Lift,10,25,good
+04-APR-2023,Bent-Over Lateral Lift,10,25,good
+04-APR-2023,Bent-Over Lateral Lift,10,25,good
+04-APR-2023,Bent-Over Lateral Lift,10,25,good
 04-APR-2023,Front Lift,12,25,good
 04-APR-2023,Front Lift,12,25,good
 04-APR-2023,Front Lift,12,25,good
@@ -1138,9 +1138,9 @@ date,exercise,reps,weight(lbs),rating
 10-APR-2023,Squats,10,205,good
 10-APR-2023,Squats,10,205,good
 10-APR-2023,Squats,10,205,good
-10-APR-2023,Lateral Lift,10,25,good
-10-APR-2023,Lateral Lift,10,25,good
-10-APR-2023,Lateral Lift,10,25,good
+10-APR-2023,Bent-Over Lateral Lift,10,25,good
+10-APR-2023,Bent-Over Lateral Lift,10,25,good
+10-APR-2023,Bent-Over Lateral Lift,10,25,good
 10-APR-2023,Front Lift,10,30,good
 10-APR-2023,Front Lift,10,30,good
 10-APR-2023,Front Lift,10,30,good
@@ -1209,9 +1209,9 @@ date,exercise,reps,weight(lbs),rating
 16-APR-2023,Full Cans,20,5,good
 16-APR-2023,Full Cans,20,5,good
 16-APR-2023,Side-Lying External Rotation,20,5,good
-16-APR-2023,Lateral Lift,12,25,good
-16-APR-2023,Lateral Lift,12,25,good
-16-APR-2023,Lateral Lift,12,25,good
+16-APR-2023,Bent-Over Lateral Lift,12,25,good
+16-APR-2023,Bent-Over Lateral Lift,12,25,good
+16-APR-2023,Bent-Over Lateral Lift,12,25,good
 16-APR-2023,Front Lift,10,30,good
 16-APR-2023,Front Lift,10,30,good
 16-APR-2023,Front Lift,10,30,good
@@ -1278,9 +1278,9 @@ date,exercise,reps,weight(lbs),rating
 21-APR-2023,Lat Pulldown,10,130,good
 21-APR-2023,Lat Pulldown,10,130,bad
 23-APR-2023,Push-Ups,20,0,good
-23-APR-2023,Lateral Lift,10,30,good
-23-APR-2023,Lateral Lift,10,30,good
-23-APR-2023,Lateral Lift,10,30,bad
+23-APR-2023,Bent-Over Lateral Lift,10,30,good
+23-APR-2023,Bent-Over Lateral Lift,10,30,good
+23-APR-2023,Bent-Over Lateral Lift,10,30,bad
 23-APR-2023,Front Lift,10,30,good
 23-APR-2023,Front Lift,10,30,good
 23-APR-2023,Front Lift,10,30,good
@@ -1346,9 +1346,9 @@ date,exercise,reps,weight(lbs),rating
 27-APR-2023,Seated Row,10,130,good
 27-APR-2023,Seated Row,10,130,good
 27-APR-2023,Barbell Bicep Curl,15,40,good
-29-APR-2023,Lateral Lift,10,30,good
-29-APR-2023,Lateral Lift,10,30,good
-29-APR-2023,Lateral Lift,10,30,good
+29-APR-2023,Bent-Over Lateral Lift,10,30,good
+29-APR-2023,Bent-Over Lateral Lift,10,30,good
+29-APR-2023,Bent-Over Lateral Lift,10,30,good
 29-APR-2023,Front Lift,12,30,good
 29-APR-2023,Front Lift,10,30,good
 29-APR-2023,Front Lift,12,30,good
@@ -1427,9 +1427,9 @@ date,exercise,reps,weight(lbs),rating
 03-MAY-2023,Skullcrushers,10,72,good
 03-MAY-2023,Skullcrushers,8,72,good
 03-MAY-2023,Skullcrushers,8,72,good
-05-MAY-2023,Lateral Lift,10,30,good
-05-MAY-2023,Lateral Lift,10,30,good
-05-MAY-2023,Lateral Lift,10,30,good
+05-MAY-2023,Bent-Over Lateral Lift,10,30,good
+05-MAY-2023,Bent-Over Lateral Lift,10,30,good
+05-MAY-2023,Bent-Over Lateral Lift,10,30,good
 05-MAY-2023,Front Lift,12,30,good
 05-MAY-2023,Front Lift,12,30,good
 05-MAY-2023,Front Lift,12,30,good
@@ -1512,9 +1512,9 @@ date,exercise,reps,weight(lbs),rating
 09-MAY-2023,Skullcrushers,10,72,good
 09-MAY-2023,Skullcrushers,10,72,good
 09-MAY-2023,Skullcrushers,10,72,good
-11-MAY-2023,Lateral Lift,10,30,good
-11-MAY-2023,Lateral Lift,10,30,good
-11-MAY-2023,Lateral Lift,10,30,good
+11-MAY-2023,Bent-Over Lateral Lift,10,30,good
+11-MAY-2023,Bent-Over Lateral Lift,10,30,good
+11-MAY-2023,Bent-Over Lateral Lift,10,30,good
 11-MAY-2023,Strict Press,10,135,good
 11-MAY-2023,Strict Press,10,135,good
 11-MAY-2023,Strict Press,8,135,good
@@ -1597,9 +1597,9 @@ date,exercise,reps,weight(lbs),rating
 14-MAY-2023,Skullcrushers,10,72,good
 14-MAY-2023,Skullcrushers,10,72,good
 14-MAY-2023,Skullcrushers,10,72,good
-16-MAY-2023,Lateral Lift,10,30,good
-16-MAY-2023,Lateral Lift,10,30,good
-16-MAY-2023,Lateral Lift,10,30,good
+16-MAY-2023,Bent-Over Lateral Lift,10,30,good
+16-MAY-2023,Bent-Over Lateral Lift,10,30,good
+16-MAY-2023,Bent-Over Lateral Lift,10,30,good
 16-MAY-2023,Front Lift,10,30,good
 16-MAY-2023,Front Lift,12,30,good
 16-MAY-2023,Front Lift,12,30,good
@@ -1699,21 +1699,21 @@ date,exercise,reps,weight(lbs),rating
 23-MAY-2023,Front Lift,12,30,good
 23-MAY-2023,Front Lift,12,30,good
 23-MAY-2023,Front Lift,12,30,good
-23-MAY-2023,Lateral Lift,10,30,good
-23-MAY-2023,Lateral Lift,10,30,good
-23-MAY-2023,Lateral Lift,10,30,good
+23-MAY-2023,Bent-Over Lateral Lift,10,30,good
+23-MAY-2023,Bent-Over Lateral Lift,10,30,good
+23-MAY-2023,Bent-Over Lateral Lift,10,30,good
 23-MAY-2023,Arnold Press,10,45,good
 23-MAY-2023,Arnold Press,10,45,good
 23-MAY-2023,Arnold Press,10,45,good
 23-MAY-2023,Lunges,10,30,good
 23-MAY-2023,Lunges,10,30,good
 23-MAY-2023,Lunges,10,30,good
-23-MAY-2023,Leg Curl,12,100,good
-23-MAY-2023,Leg Curl,10,105,good
-23-MAY-2023,Leg Curl,10,105,good
-23-MAY-2023,Leg Extension,12,110,good
-23-MAY-2023,Leg Extension,12,110,good
-23-MAY-2023,Leg Extension,12,110,good
+23-MAY-2023,Single-Leg Leg Curl,12,100,good
+23-MAY-2023,Single-Leg Leg Curl,10,105,good
+23-MAY-2023,Single-Leg Leg Curl,10,105,good
+23-MAY-2023,Single-Leg Leg Extension,12,110,good
+23-MAY-2023,Single-Leg Leg Extension,12,110,good
+23-MAY-2023,Single-Leg Leg Extension,12,110,good
 23-MAY-2023,Squats,5,135,warm-up
 23-MAY-2023,Squats,10,225,good
 23-MAY-2023,Squats,10,225,good
@@ -1811,19 +1811,19 @@ date,exercise,reps,weight(lbs),rating
 29-MAY-2023,Lunges,10,30,good
 29-MAY-2023,Lunges,10,30,good
 29-MAY-2023,Lunges,10,30,good
-29-MAY-2023,Leg Curl,10,105,good
-29-MAY-2023,Leg Curl,10,105,good
-29-MAY-2023,Leg Curl,10,105,good
-29-MAY-2023,Leg Extension,10,115,good
-29-MAY-2023,Leg Extension,10,115,good
-29-MAY-2023,Leg Extension,10,115,good
+29-MAY-2023,Single-Leg Leg Curl,10,105,good
+29-MAY-2023,Single-Leg Leg Curl,10,105,good
+29-MAY-2023,Single-Leg Leg Curl,10,105,good
+29-MAY-2023,Single-Leg Leg Extension,10,115,good
+29-MAY-2023,Single-Leg Leg Extension,10,115,good
+29-MAY-2023,Single-Leg Leg Extension,10,115,good
 29-MAY-2023,Squats,5,135,warm-up
 29-MAY-2023,Squats,10,225,good
 29-MAY-2023,Squats,10,225,good
 29-MAY-2023,Squats,10,235,good
-29-MAY-2023,Lateral Lift,10,30,good
-29-MAY-2023,Lateral Lift,10,30,good
-29-MAY-2023,Lateral Lift,10,30,good
+29-MAY-2023,Bent-Over Lateral Lift,10,30,good
+29-MAY-2023,Bent-Over Lateral Lift,10,30,good
+29-MAY-2023,Bent-Over Lateral Lift,10,30,good
 29-MAY-2023,Front Lift,12,30,good
 29-MAY-2023,Front Lift,12,30,good
 29-MAY-2023,Front Lift,12,30,good
@@ -1899,3 +1899,44 @@ date,exercise,reps,weight(lbs),rating
 02-JUN-2023,Pullovers,12,35,good
 02-JUN-2023,Pullovers,12,35,good
 02-JUN-2023,Pullovers,12,35,good
+04-JUN-2023,Lateral Lift,5,30,good
+04-JUN-2023,Lateral Lift,5,30,good
+04-JUN-2023,Lateral Lift,5,30,good
+04-JUN-2023,Front Lift,5,40,bad
+04-JUN-2023,Front Lift,5,35,good
+04-JUN-2023,Front Lift,5,35,good
+04-JUN-2023,Front Lift,5,35,good
+04-JUN-2023,Front Lift,5,35,good
+04-JUN-2023,Strict Press,2,135,warm-up
+04-JUN-2023,Strict Press,5,145,good
+04-JUN-2023,Strict Press,5,155,good
+04-JUN-2023,Strict Press,5,155,good
+04-JUN-2023,Strict Press,5,155,good
+04-JUN-2023,Strict Press,5,155,good
+04-JUN-2023,Arnold Press,5,55,good
+04-JUN-2023,Arnold Press,5,55,good
+04-JUN-2023,Arnold Press,5,60,good
+04-JUN-2023,Arnold Press,5,60,good
+04-JUN-2023,Arnold Press,5,60,good
+04-JUN-2023,Full Cans,20,10,good
+04-JUN-2023,Full Cans,20,10,good
+04-JUN-2023,Full Cans,20,10,good
+04-JUN-2023,Lunges,10,30,good
+04-JUN-2023,Lunges,10,30,good
+04-JUN-2023,Lunges,10,30,good
+04-JUN-2023,Single-Leg Leg Curl,5,115,good
+04-JUN-2023,Single-Leg Leg Curl,5,120,good
+04-JUN-2023,Single-Leg Leg Curl,5,120,good
+04-JUN-2023,Single-Leg Leg Curl,5,120,good
+04-JUN-2023,Single-Leg Leg Curl,5,120,good
+04-JUN-2023,Single-Leg Leg Extension,5,130,good
+04-JUN-2023,Single-Leg Leg Extension,5,135,good
+04-JUN-2023,Single-Leg Leg Extension,5,135,good
+04-JUN-2023,Single-Leg Leg Extension,5,135,good
+04-JUN-2023,Single-Leg Leg Extension,5,135,good
+04-JUN-2023,Squats,5,135,warm-up
+04-JUN-2023,Squats,5,245,good
+04-JUN-2023,Squats,5,275,good
+04-JUN-2023,Squats,5,275,good
+04-JUN-2023,Squats,5,265,good
+04-JUN-2023,Squats,5,265,good
