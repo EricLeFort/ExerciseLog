@@ -40,8 +40,8 @@ BIKE_STATIONARY = "bike (stationary)"
 MIN_DAILY_ACTIVE_MINUTES = 22.5  # Weekly recommended is 150, this is about 150/7
 
 SET_TYPE_TO_REP_RANGE = {
-    "one_rm": (1, 1),
-    "strength": (2, 7),
+    "one_rm": (1, 2),  # Include the 2-rep for when you hit 2 at a lower weight and then fail at the next weight
+    "strength": (3, 7),
     "hypertrophy": (8, 14),
     "endurance": (15, float("inf")),
 }
