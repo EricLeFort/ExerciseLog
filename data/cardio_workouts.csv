@@ -125,3 +125,4 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 01-JUN-2023,walk (treadmill),00:30:05,2.60,3134,108,150,161,"exhaustion pt. 2"
 03-JUN-2023,walk (treadmill),01:40:01,8.68,10291,404,163,176,"3.5m walking backwards @4.4kph; 1000ft in 72:22; 400m in 94:09"
 07-JUN-2023,walk (treadmill),01:11:13,6.16,7367,306,167,194,"1000ft in 69:46; had to work through some pretty bad calf DOMS from stairs"
+09-JUN-2023,walk (treadmill),01:15:24,6.54,7959,260,161,177,""
