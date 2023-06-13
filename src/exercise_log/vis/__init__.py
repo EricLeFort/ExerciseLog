@@ -11,6 +11,7 @@ from exercise_log.constants import (
     DURATION,
     EXERCISE,
     FAILURE,
+    FUN,
     MIN_DAILY_ACTIVE_MINUTES,
     RATING,
     REPS,
@@ -207,6 +208,7 @@ def plot_strength_over_time(
         sets = sets[sets[RATING] != WARMUP]
         sets = sets[~sets[RATING].str.startswith(FAILURE)]
         sets = sets[~sets[RATING].str.startswith(BAD)]
+        sets = sets[~sets[RATING].str.startswith(FUN)]
 
         # TODO filter out sets that shouldn't be counted (e.g. Leg Press from Earnscliffe rec center)
         # Filter to only the max weight set of this type for that day

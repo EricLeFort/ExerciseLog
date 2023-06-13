@@ -22,14 +22,16 @@ RATING = "rating"
 PACE = "pace (m/s)"
 RATE_OF_CLIMB = "rate of climb (m/h)"
 
-# Ratings
-WARMUP = "warm-up"
+# Set ratings
 BAD = "bad"
 BAD_LEFT = "bad (L)"
 BAD_RIGHT = "bad (R)"
 FAILURE = "failure"
 FAILURE_LEFT = "failure (L)"
 FAILURE_RIGHT = "failure (R)"
+FUN = "fun"
+GOOD = "good"
+WARMUP = "warm-up"
 
 # Workout Types
 WALK_TREADMILL = "walk (treadmill)"
