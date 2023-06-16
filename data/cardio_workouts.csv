@@ -129,3 +129,5 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 10-JUN-2023,walk (treadmill),00:30:02,2.49,3207,67,153,164,"Ruck walk with a ~28lb pack"
 11-JUN-2023,walk (treadmill),01:06:45,6.70,7466,101,158,184,"4x1m @ 9-12kph warmup runs; 4x30s @ 14kph sprints (not quite full-out); 1m @ 15% @ 5.0kph; 1m @ 15% @ 5.4kph"
 13-JUN-2023,walk (treadmill),01:05:00,5.64,6769,312,170,188,"1000ft in "58:43; 312m in 60:00"
+14-JUN-2023,walk (outdoor),00:29:46,2.06,2699,12,141,158,"Walk to work office; forgot something and didn't realize until halfway"
+14-JUN-2023,walk (outdoor),00:12:58,1.07,1584,19,139,161,"Walk home from work office"
