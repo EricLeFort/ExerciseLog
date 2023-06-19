@@ -1391,9 +1391,9 @@ date,exercise,reps,weight(lbs),rating
 02-MAY-2023,Dumbbell Press,10,70,good
 02-MAY-2023,Dumbbell Press,10,70,good
 02-MAY-2023,Dumbbell Press,10,70,good
-02-MAY-2023,Cable Pec Flies,10,55,good
-02-MAY-2023,Cable Pec Flies,10,55,good
-02-MAY-2023,Cable Pec Flies,10,55,good
+02-MAY-2023,Upward Cable Pec Flies,10,55,good
+02-MAY-2023,Upward Cable Pec Flies,10,55,good
+02-MAY-2023,Upward Cable Pec Flies,10,55,good
 02-MAY-2023,Machine Pec Flies,12,180,good
 02-MAY-2023,Machine Pec Flies,12,180,good
 02-MAY-2023,Machine Pec Flies,10,180,good
@@ -1960,8 +1960,8 @@ date,exercise,reps,weight(lbs),rating
 06-JUN-2023,Dumbbell Press,8,75,good
 06-JUN-2023,Dumbbell Press,8,75,good
 06-JUN-2023,Dumbbell Press,8,75,good
-06-JUN-2023,Cable Pec Flies,10,55,good
-06-JUN-2023,Cable Pec Flies,12,55,good
+06-JUN-2023,Upward Cable Pec Flies,10,55,good
+06-JUN-2023,Upward Cable Pec Flies,12,55,good
 06-JUN-2023,Machine Pec Flies,5,230,good
 06-JUN-2023,Machine Pec Flies,5,230,good
 06-JUN-2023,Machine Pec Flies,5,230,good
@@ -2134,3 +2134,26 @@ date,exercise,reps,weight(lbs),rating
 16-JUN-2023,Calf Raise,20,135,easy
 16-JUN-2023,Calf Raise,20,155,easy
 16-JUN-2023,Calf Raise,20,175,good
+18-JUN-2023,Deadlift,5,135,good
+18-JUN-2023,Deadlift,8,235,good
+18-JUN-2023,Deadlift,8,235,good
+18-JUN-2023,Deadlift,8,235,good
+18-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+18-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+18-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+18-JUN-2023,Plank,60,0,good
+18-JUN-2023,Plank,60,0,good
+18-JUN-2023,Plank,60,0,good
+18-JUN-2023,Side-Plank,30,0,good
+18-JUN-2023,Side-Plank,30,0,good
+18-JUN-2023,Side-Plank,30,0,good
+18-JUN-2023,Bench Press,5,135,warm-up
+18-JUN-2023,Bench Press,8,225,good
+18-JUN-2023,Bench Press,8,225,good
+18-JUN-2023,Bench Press,8,225,good
+18-JUN-2023,Dumbbell Press,8,75,good
+18-JUN-2023,Dumbbell Press,8,75,good
+18-JUN-2023,Dumbbell Press,8,75,good
+18-JUN-2023,Cable Pec Flies,10,90,good
+18-JUN-2023,Cable Pec Flies,10,90,good
+18-JUN-2023,Cable Pec Flies,10,90,good
