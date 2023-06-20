@@ -598,9 +598,9 @@ date,exercise,reps,weight(lbs),rating
 19-FEB-2023,Leg Extension,12,175,good
 19-FEB-2023,Leg Extension,10,180,good
 19-FEB-2023,Leg Extension,10,180,good
-19-FEB-2023,Calf Raise,20,190,good
-19-FEB-2023,Calf Raise,18,190,good
-19-FEB-2023,Calf Raise,20,190,good
+19-FEB-2023,Leg Press Calf Raise,20,190,good
+19-FEB-2023,Leg Press Calf Raise,18,190,good
+19-FEB-2023,Leg Press Calf Raise,20,190,good
 20-FEB-2023,Bench Press,3,95,warm-up
 20-FEB-2023,Bench Press,3,135,warm-up
 20-FEB-2023,Bench Press,10,185,good
@@ -2131,10 +2131,15 @@ date,exercise,reps,weight(lbs),rating
 16-JUN-2023,Squats,10,235,good
 16-JUN-2023,Squats,10,235,good
 16-JUN-2023,Squats,10,235,good
-16-JUN-2023,Calf Raise,20,135,easy
-16-JUN-2023,Calf Raise,20,155,easy
-16-JUN-2023,Calf Raise,20,175,good
-18-JUN-2023,Deadlift,5,135,good
+16-JUN-2023,Barbell Calf Raise,20,135,easy
+16-JUN-2023,Barbell Calf Raise,20,155,easy
+16-JUN-2023,Barbell Calf Raise,20,175,good
+17-JUN-2023,Deadlift,2,225,warm-up
+17-JUN-2023,Deadlift,5,275,warm-up
+17-JUN-2023,Deadlift,1,315,good
+17-JUN-2023,Deadlift,1,345,good
+17-JUN-2023,Deadlift,1,345,failure
+18-JUN-2023,Deadlift,5,135,warm-up
 18-JUN-2023,Deadlift,8,235,good
 18-JUN-2023,Deadlift,8,235,good
 18-JUN-2023,Deadlift,8,235,good
@@ -2157,3 +2162,29 @@ date,exercise,reps,weight(lbs),rating
 18-JUN-2023,Cable Pec Flies,10,90,good
 18-JUN-2023,Cable Pec Flies,10,90,good
 18-JUN-2023,Cable Pec Flies,10,90,good
+19-JUN-2023,Lateral Lift,10,25,good
+19-JUN-2023,Lateral Lift,10,25,good
+19-JUN-2023,Lateral Lift,10,25,good
+19-JUN-2023,Arnold Press,10,50,good
+19-JUN-2023,Arnold Press,10,50,good
+19-JUN-2023,Arnold Press,10,50,good
+19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Plank,60,0,good
+19-JUN-2023,Plank,60,0,good
+19-JUN-2023,Plank,60,0,good
+19-JUN-2023,Side-Plank,30,0,good
+19-JUN-2023,Side-Plank,30,0,good
+19-JUN-2023,Side-Plank,30,0,good
+19-JUN-2023,Concentration Curl,10,25,good
+19-JUN-2023,Concentration Curl,10,25,good
+19-JUN-2023,Concentration Curl,10,25,good
+19-JUN-2023,Barbell Calf Raise,20,175,good
+19-JUN-2023,Barbell Calf Raise,20,175,good
+19-JUN-2023,Barbell Calf Raise,20,175,good
+19-JUN-2023,Leg Press,20,190,good
+19-JUN-2023,Leg Press,20,190,good
+19-JUN-2023,Leg Press,20,190,good
