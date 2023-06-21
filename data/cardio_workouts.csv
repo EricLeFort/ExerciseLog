@@ -133,3 +133,6 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 14-JUN-2023,walk (outdoor),00:12:58,1.07,1584,19,139,161,"Walk home from work office"
 15-JUN-2023,walk (treadmill),01:01:09,5.30,6389,325,163,179,"200m in 38:14; 1000ft in 57:07; 320m in 60:00; much easier than the last one, maintained 6% and did small 7% climbs for 2 mins every 10 mins (after the first 10 mins)"
 17-JUN-2023,walk (treadmill),00:33:00,3.94,4170,0,162,193,"Step count is approximate, forgot to record start steps; 3x4m @ 8.5kph; 2x3m @ 8.5kph"
+20-JUN-2023,walk (outdoor),00:12:13,1.08,1331,19,138,168,"Walk to optometrist"
+20-JUN-2023,walk (outdoor),00:11:55,1.01,1293,24,137,159,"Walk back from optometrist"
+20-JUN-2023,walk (treadmill),00:30:13,2.68,3174,157,169,177,"100m in 19:01"
