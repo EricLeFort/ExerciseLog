@@ -140,3 +140,5 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_r
 22-JUN-2023,walk (treadmill),00:35:19,3.03,3560,156,163,173,"3m walking backwards @ 4.4kph"
 24-JUN-2023,hike (backpacking),14:40:00,18.2,42000,1974,,,"Backpacked up to Spade Lake; 40lb starting pack weight; steps probably undercounted slightly, watch and phone were dead the last couple kms; these workout types will include time for breaks and lunches"
 25-JUN-2023,hike (backpacking),11:20:00,18.0,41000,936,,,"Backpacked down from Spade Lake; 40lb starting pack weight"
+01-JUL-2023,hike (backpacking),07:15:00,19.2,33173,1177,,,"Backpacked up to Sixteen Mile Campsite by Mt. Daniel; 30.7lb starting pack weight"
+02-JUL-2023,hike (backpacking),06:45:00,19.1,30047,690,,,"Backpacked back from Sixteen Mile"
