@@ -29,6 +29,7 @@ class DataLoader:
 
         # Clean the data
         df[DATE] = pd.to_datetime(df[DATE])
+        df = df.sort_values(DATE, ignore_index=True)
         if DATA_DURATION in df:
             df[DATA_DURATION] = pd.to_timedelta(df[DATA_DURATION])
             df[DATA_DURATION] = df[DATA_DURATION].apply(lambda x: int(x.total_seconds()))
@@ -161,6 +162,7 @@ class DataLoader:
         # Initialize the dataframe including all dates spanning the range of the data (rest days are missing in the workout data)
         all_workouts = pd.DataFrame()
         all_workouts[DATE] = pd.date_range(all_dates.min(), all_dates.max())
+        all_workouts = all_workouts.sort_values(DATE, ignore_index=True)
         all_workouts = all_workouts.set_index(DATE)
 
         # Populate computed fields

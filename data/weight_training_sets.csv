@@ -1,2290 +1,2290 @@
 date,exercise,reps,weight(lbs),rating
-04-DEC-2022,Bicep Curl,10,10,good
-04-DEC-2022,Bicep Curl,10,10,bad
-04-DEC-2022,Bicep Curl,10,10,good
-04-DEC-2022,Lawnmowers,10,30,good
-04-DEC-2022,Lawnmowers,10,30,good
-04-DEC-2022,Lawnmowers,10,30,good
-04-DEC-2022,Overhead Tricep Extension,10,12.5,good
-04-DEC-2022,Overhead Tricep Extension,10,15,good
-04-DEC-2022,Overhead Tricep Extension,10,15,good
-04-DEC-2022,Seated Row,10,100,good
-04-DEC-2022,Seated Row,10,85,good
-04-DEC-2022,Seated Row,10,77.5,good
-04-DEC-2022,Tricep Pushdown,10,60,good
-04-DEC-2022,Tricep Pushdown,10,60,good
-04-DEC-2022,Tricep Pushdown,10,60,good
-04-DEC-2022,Lat Pulldown,12,85,good
-04-DEC-2022,Lat Pulldown,10,100,good
-04-DEC-2022,Lat Pulldown,10,100,bad
-09-DEC-2022,Seated Row,10,85,good
-09-DEC-2022,Seated Row,10,85,good
-09-DEC-2022,Seated Row,10,85,good
-09-DEC-2022,Bicep Curl,10,10,good
-09-DEC-2022,Bicep Curl,10,10,good
-09-DEC-2022,Bicep Curl,10,10,good
-09-DEC-2022,Lawnmowers,10,35,good
-09-DEC-2022,Lawnmowers,10,35,good
-09-DEC-2022,Lawnmowers,10,35,good
-09-DEC-2022,Overhead Tricep Extension,10,15,good
-09-DEC-2022,Overhead Tricep Extension,10,15,good
-09-DEC-2022,Overhead Tricep Extension,10,15,good
-09-DEC-2022,Lat Pulldown,10,100,good
-09-DEC-2022,Lat Pulldown,8,100,failure
-09-DEC-2022,Lat Pulldown,11,85,good
-21-DEC-2022,Bicep Curl,10,10,easy
-21-DEC-2022,Bicep Curl,10,15,good
-21-DEC-2022,Bicep Curl,10,15,good
-21-DEC-2022,Seated Row,10,95,good
-21-DEC-2022,Seated Row,10,110,bad
-21-DEC-2022,Seated Row,10,110,good
-21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
-21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
-21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
-21-DEC-2022,Lawnmowers,10,35,good
-21-DEC-2022,Lawnmowers,10,35,good
-21-DEC-2022,Lawnmowers,10,35,good
-21-DEC-2022,Tricep Pushdown,10,40.5,good
-21-DEC-2022,Tricep Pushdown,10,45,good
-21-DEC-2022,Tricep Pushdown,10,37.5,good
-21-DEC-2022,Hammer Curl,10,20,good
-21-DEC-2022,Hammer Curl,10,20,good
-21-DEC-2022,Hammer Curl,10,20,good
-05-JAN-2023,Hammer Curl,10,20,good
-05-JAN-2023,Hammer Curl,10,25,good
-05-JAN-2023,Hammer Curl,10,25,good
-05-JAN-2023,Overhead Tricep Extension,10,20,good
-05-JAN-2023,Overhead Tricep Extension,10,25,good
-05-JAN-2023,Overhead Tricep Extension,10,25,good
-05-JAN-2023,Tricep Pushdown,10,37.5,good
-05-JAN-2023,Tricep Pushdown,10,42.5,bad
-05-JAN-2023,Tricep Pushdown,10,40.5,good
-05-JAN-2023,Bicep Curl,10,25,good
-05-JAN-2023,Bicep Curl,10,25,good
-05-JAN-2023,Bicep Curl,10,25,good
-05-JAN-2023,Seated Row,12,85,good
-05-JAN-2023,Seated Row,10,100,easy
-05-JAN-2023,Seated Row,10,115,good
-05-JAN-2023,Lawnmowers,10,40,good
-05-JAN-2023,Lawnmowers,10,40,good
-05-JAN-2023,Lawnmowers,10,40,good
-13-JAN-2023,Barbell Bicep Curl,10,25,good
-13-JAN-2023,Barbell Bicep Curl,12,20,good
-13-JAN-2023,Barbell Bicep Curl,12,20,good
-13-JAN-2023,Barbell Bicep Curl,12,20,good
-13-JAN-2023,Barbell Bicep Curl,12,20,good
-13-JAN-2023,Barbell Overhead Tricep Extension,15,20,good
-13-JAN-2023,Barbell Overhead Tricep Extension,15,20,good
-13-JAN-2023,Barbell Overhead Tricep Extension,12,20,good
-13-JAN-2023,Tricep Pushdown,10,90,good
-13-JAN-2023,Tricep Pushdown,10,90,good
-13-JAN-2023,Tricep Pushdown,10,90,good
-13-JAN-2023,Lawnmowers,10,35,good
-13-JAN-2023,Lawnmowers,12,35,good
-13-JAN-2023,Lawnmowers,10,35,good
-13-JAN-2023,Seated Row,10,100,good
-13-JAN-2023,Seated Row,10,100,good
-13-JAN-2023,Seated Row,10,100,good
-13-JAN-2023,Lat Pulldown,10,100,good
-13-JAN-2023,Lat Pulldown,10,100,good
-13-JAN-2023,Lat Pulldown,10,110,bad
-21-JAN-2023,Barbell Bicep Curl,10,20,good
-21-JAN-2023,Barbell Bicep Curl,10,20,good
-21-JAN-2023,Barbell Bicep Curl,10,20,good
-21-JAN-2023,Barbell Bicep Curl,10,20,good
-21-JAN-2023,Barbell Bicep Curl,10,20,good
-21-JAN-2023,Barbell Overhead Tricep Extension,12,20,good
-21-JAN-2023,Barbell Overhead Tricep Extension,12,20,good
-21-JAN-2023,Barbell Overhead Tricep Extension,12,20,good
-21-JAN-2023,Tricep Pushdown,10,90,good
-21-JAN-2023,Tricep Pushdown,10,90,bad
-21-JAN-2023,Tricep Pushdown,10,90,bad
-21-JAN-2023,Skullcrushers,12,25,good
-21-JAN-2023,Skullcrushers,10,35,good
-21-JAN-2023,Skullcrushers,10,40,good
-21-JAN-2023,Lawnmowers,12,35,good
-21-JAN-2023,Lawnmowers,15,35,good
-21-JAN-2023,Lawnmowers,12,35,good
-21-JAN-2023,Seated Row,12,100,good
-21-JAN-2023,Seated Row,12,100,good
-21-JAN-2023,Seated Row,10,115,good
-21-JAN-2023,Lat Pulldown,12,100,good
-21-JAN-2023,Lat Pulldown,10,115,good
-21-JAN-2023,Lat Pulldown,10,115,bad
-25-JAN-2023,Bicep Curl,10,20,good
-25-JAN-2023,Bicep Curl,10,25,good
-25-JAN-2023,Bicep Curl,10,25,good
-25-JAN-2023,Concentration Curl,10,20,good
-25-JAN-2023,Concentration Curl,10,20,good
-25-JAN-2023,Hammer Curl,10,20,good
-25-JAN-2023,Hammer Curl,10,25,good
-25-JAN-2023,Hammer Curl,6,25,good
-25-JAN-2023,Hammer Curl,10,25,good
-25-JAN-2023,Concentration Curl,10,20,bad
-25-JAN-2023,Concentration Curl,10,15,good
-25-JAN-2023,Overhead Tricep Extension,10,25,good
-25-JAN-2023,Overhead Tricep Extension,10,25,good
-25-JAN-2023,Overhead Tricep Extension,10,25,good
-25-JAN-2023,Resistance Tricep Pushdown,12,40,good
-25-JAN-2023,Resistance Tricep Pushdown,10,40,good
-25-JAN-2023,Resistance Tricep Pushdown,10,40,good
-25-JAN-2023,Lawnmowers,10,40,good
-25-JAN-2023,Lawnmowers,10,40,good
-25-JAN-2023,Lawnmowers,10,40,good
-25-JAN-2023,Resistance Seated Row,10,100,good
-25-JAN-2023,Resistance Seated Row,10,100,good
-25-JAN-2023,Resistance Seated Row,10,100,good
-25-JAN-2023,Resistance Lat Pulldown,10,100,good
-25-JAN-2023,Resistance Lat Pulldown,10,100,good
-25-JAN-2023,Resistance Lat Pulldown,10,100,good
-06-DEC-2022,Lateral Lift,10,15,good
-06-DEC-2022,Lateral Lift,10,15,good
-06-DEC-2022,Lateral Lift,10,15,good
-06-DEC-2022,Front Lift,10,15,good
-06-DEC-2022,Front Lift,10,15,good
-06-DEC-2022,Front Lift,10,15,good
-06-DEC-2022,Military Press,10,70,good
-06-DEC-2022,Military Press,1,190,good
-06-DEC-2022,Military Press,10,100,good
-06-DEC-2022,Military Press,10,100,good
-06-DEC-2022,Leg Press,10,190,good
-06-DEC-2022,Leg Press,10,190,good
-06-DEC-2022,Leg Press,10,190,good
-06-DEC-2022,Leg Curl,10,80,easy
-06-DEC-2022,Leg Curl,10,90,good
-06-DEC-2022,Leg Curl,10,90,good
-06-DEC-2022,Leg Extension,10,90,good
-06-DEC-2022,Leg Extension,10,90,good
-06-DEC-2022,Leg Extension,15,90,good
-16-DEC-2022,Lateral Lift,10,15,good
-16-DEC-2022,Lateral Lift,10,20,good
-16-DEC-2022,Lateral Lift,10,15,good
-16-DEC-2022,Cable Lateral Lift,10,30,good
-16-DEC-2022,Cable Lateral Lift,10,30,good
-16-DEC-2022,Cable Lateral Lift,10,30,good
-16-DEC-2022,Military Press,10,100,good
-16-DEC-2022,Military Press,1,190,good
-16-DEC-2022,Military Press,1,200,good
-16-DEC-2022,Military Press,10,110,good
-16-DEC-2022,Military Press,10,110,good
-16-DEC-2022,Leg Press,10,190,good
-16-DEC-2022,Leg Press,10,190,good
-16-DEC-2022,Leg Press,10,190,good
-16-DEC-2022,Leg Curl,15,100,good
-16-DEC-2022,Leg Curl,15,100,good
-16-DEC-2022,Leg Curl,10,120,good
-16-DEC-2022,Leg Extension,10,100,good
-16-DEC-2022,Leg Extension,10,100,good
-16-DEC-2022,Leg Extension,10,110,good
-16-DEC-2022,Lunges,10,0,good
-28-DEC-2023,Lateral Lift,10,17.5,good
-28-DEC-2023,Lateral Lift,10,17.5,good
-28-DEC-2023,Lateral Lift,10,17.5,bad (L)
-28-DEC-2023,Military Press,10,100,good
-28-DEC-2023,Military Press,8,100,bad
-28-DEC-2023,Military Press,10,85,good
-28-DEC-2023,Arnold Press,10,25,good
-28-DEC-2023,Arnold Press,10,25,good
-28-DEC-2023,Arnold Press,10,25,good
-28-DEC-2023,Leg Press,10,230,easy
-28-DEC-2023,Leg Press,15,230,good
-28-DEC-2023,Leg Press,10,270,good
-28-DEC-2023,Leg Press,5,310,good
-28-DEC-2023,Leg Press,3,350,good
-28-DEC-2023,Leg Press,10,400,good
-28-DEC-2023,Leg Curl,12,100,good
-28-DEC-2023,Leg Curl,10,120,good
-28-DEC-2023,Leg Curl,10,120,good
-28-DEC-2023,Leg Extension,12,110,good
-28-DEC-2023,Leg Extension,10,110,good
-28-DEC-2023,Leg Extension,10,115,good
-03-JAN-2023,Lateral Lift,10,20,good
-03-JAN-2023,Lateral Lift,10,20,good
-03-JAN-2023,Lateral Lift,10,20,good
-03-JAN-2023,Military Press,10,100,good
-03-JAN-2023,Military Press,10,100,good
-03-JAN-2023,Military Press,10,100,good
-03-JAN-2023,Arnold Press,10,25,good
-03-JAN-2023,Arnold Press,10,25,good
-03-JAN-2023,Arnold Press,10,25,good
-03-JAN-2023,Leg Press,10,310,good
-03-JAN-2023,Leg Press,10,330,good
-03-JAN-2023,Leg Press,10,400,bad
-03-JAN-2023,Leg Curl,10,130,good
-03-JAN-2023,Leg Curl,10,130,good
-03-JAN-2023,Leg Curl,10,130,good
-03-JAN-2023,Leg Extension,10,115,good
-03-JAN-2023,Leg Extension,10,115,good
-03-JAN-2023,Leg Extension,10,115,good
-11-JAN-2023,Cable Lateral Lift,10,35,good
-11-JAN-2023,Cable Lateral Lift,10,35,good
-11-JAN-2023,Cable Lateral Lift,10,35,good
-11-JAN-2023,Front Lift,10,20,good
-11-JAN-2023,Front Lift,10,20,good
-11-JAN-2023,Front Lift,10,20,good
-11-JAN-2023,Military Press,12,110,good
-11-JAN-2023,Military Press,10,120,good
-11-JAN-2023,Military Press,10,125,good
-11-JAN-2023,Leg Press,12,225,good
-11-JAN-2023,Leg Press,10,235,good
-11-JAN-2023,Leg Press,10,235,good
-11-JAN-2023,Lunges,10,0,good
-11-JAN-2023,Lunges,10,0,good
-11-JAN-2023,Lunges,10,0,good
-11-JAN-2023,Leg Curl,10,140,easy
-11-JAN-2023,Leg Curl,10,150,good
-11-JAN-2023,Leg Curl,12,150,good
-11-JAN-2023,Leg Extension,10,125,easy
-11-JAN-2023,Leg Extension,10,140,good
-11-JAN-2023,Leg Extension,10,140,good
-15-JAN-2023,Lateral Lift,10,20,good
-15-JAN-2023,Lateral Lift,10,20,good
-15-JAN-2023,Lateral Lift,10,20,good
-15-JAN-2023,Front Lift,10,20,good
-15-JAN-2023,Front Lift,10,20,good
-15-JAN-2023,Front Lift,10,20,good
-15-JAN-2023,Military Press,10,125,easy
-15-JAN-2023,Military Press,12,130,good
-15-JAN-2023,Military Press,10,140,good
-15-JAN-2023,Leg Press,12,225,good
-15-JAN-2023,Leg Press,10,235,good
-15-JAN-2023,Leg Press,10,235,good
-15-JAN-2023,Lunges,10,0,good
-15-JAN-2023,Lunges,10,0,good
-15-JAN-2023,Lunges,10,0,good
-15-JAN-2023,Leg Curl,10,140,easy
-15-JAN-2023,Leg Curl,10,150,good
-15-JAN-2023,Leg Curl,12,150,good
-15-JAN-2023,Leg Extension,10,125,easy
-15-JAN-2023,Leg Extension,10,140,good
-15-JAN-2023,Leg Extension,10,140,good
-22-JAN-2023,Cable Lateral Lift,12,35,good
-22-JAN-2023,Cable Lateral Lift,10,40,bad
-22-JAN-2023,Cable Lateral Lift,10,35,good
-22-JAN-2023,Front Lift,10,20,good
-22-JAN-2023,Front Lift,10,20,good
-22-JAN-2023,Front Lift,12,20,good
-22-JAN-2023,Military Press,12,140,good
-22-JAN-2023,Military Press,10,140,good
-22-JAN-2023,Military Press,12,140,good
-22-JAN-2023,Leg Press,10,235,good
-22-JAN-2023,Leg Press,10,235,good
-22-JAN-2023,Leg Press,10,235,good
-22-JAN-2023,Lunges,10,0,good
-22-JAN-2023,Lunges,10,0,good
-22-JAN-2023,Lunges,10,0,good
-22-JAN-2023,Leg Curl,10,150,good
-22-JAN-2023,Leg Curl,10,150,good
-22-JAN-2023,Leg Curl,12,150,good
-22-JAN-2023,Leg Extension,10,140,good
-22-JAN-2023,Leg Extension,12,150,good
-22-JAN-2023,Leg Extension,12,160,good
-29-JAN-2023,Lateral Lift,10,20,easy
-29-JAN-2023,Lateral Lift,12,20,good
-29-JAN-2023,Lateral Lift,12,20,good
-29-JAN-2023,Front Lift,12,20,good
-29-JAN-2023,Front Lift,12,20,good
-29-JAN-2023,Front Lift,12,20,good
-29-JAN-2023,Military Press,12,140,good
-29-JAN-2023,Military Press,10,150,good
-29-JAN-2023,Military Press,10,150,good
-29-JAN-2023,Leg Press,10,235,good
-29-JAN-2023,Leg Press,12,235,good
-29-JAN-2023,Leg Press,10,235,good
-29-JAN-2023,Lunges,10,0,good
-29-JAN-2023,Lunges,10,0,good
-29-JAN-2023,Lunges,10,0,good
-29-JAN-2023,Leg Curl,10,160,good
-29-JAN-2023,Leg Curl,10,160,good
-29-JAN-2023,Leg Curl,10,160,good
-29-JAN-2023,Leg Extension,10,160,easy
-29-JAN-2023,Leg Extension,10,170,good
-29-JAN-2023,Leg Extension,10,170,good
-30-JAN-2023,Barbell Bicep Curl,12,50,good
-30-JAN-2023,Military Press,1,100,good
-30-JAN-2023,Military Press,1,150,good
-30-JAN-2023,Military Press,1,200,good
-30-JAN-2023,Military Press,1,210,good
-30-JAN-2023,Military Press,1,220,good
-30-JAN-2023,Military Press,1,230,good
-30-JAN-2023,Military Press,1,240,failure
-30-JAN-2023,Machine Bench Press,1,100,good
-30-JAN-2023,Machine Bench Press,1,150,good
-30-JAN-2023,Machine Bench Press,1,200,good
-30-JAN-2023,Machine Bench Press,1,210,good
-30-JAN-2023,Machine Bench Press,1,220,good
-30-JAN-2023,Machine Bench Press,1,230,good
-30-JAN-2023,Machine Bench Press,1,240,bad
-30-JAN-2023,Machine Bench Press,1,245,bad
-13-DEC-2023,Bench Press,12,95,good
-13-DEC-2023,Bench Press,10,115,good
-13-DEC-2023,Bench Press,10,135,good
-13-DEC-2023,Dumbbell Press,12,35,good
-13-DEC-2023,Dumbbell Press,10,35,good
-13-DEC-2023,Dumbbell Press,10,35,good
-13-DEC-2023,Cable Pec Flies,10,60,good
-13-DEC-2023,Cable Pec Flies,10,60,good
-13-DEC-2023,Cable Pec Flies,10,30,good
-13-DEC-2023,Deadlift,10,115,good
-13-DEC-2023,Deadlift,10,115,good
-13-DEC-2023,Deadlift,10,115,good
-13-DEC-2023,Plank,45,0,good
-13-DEC-2023,Plank,45,0,good
-23-DEC-2023,Bench Press,10,135,good
-23-DEC-2023,Bench Press,10,135,bad
-23-DEC-2023,Bench Press,10,115,good
-23-DEC-2023,Dumbbell Press,10,35,good
-23-DEC-2023,Dumbbell Press,10,35,good
-23-DEC-2023,Dumbbell Press,10,35,good
-23-DEC-2023,Pec Flies,12,100,good
-23-DEC-2023,Pec Flies,10,115,good
-23-DEC-2023,Pec Flies,12,115,good
-23-DEC-2023,Deadlift,10,115,good
-23-DEC-2023,Deadlift,10,115,good
-23-DEC-2023,Deadlift,10,115,good
-23-DEC-2023,Plank,45,0,good
-23-DEC-2023,Plank,45,0,good
-23-DEC-2023,Plank,45,0,good
-02-JAN-2023,Bench Press,10,135,good
-02-JAN-2023,Bench Press,10,135,good
-02-JAN-2023,Bench Press,10,135,good
-02-JAN-2023,Dumbbell Press,10,35,good
-02-JAN-2023,Dumbbell Press,10,40,good
-02-JAN-2023,Dumbbell Press,10,40,good
-02-JAN-2023,Pec Flies,10,115,good
-02-JAN-2023,Pec Flies,10,130,good
-02-JAN-2023,Pec Flies,10,130,good
-02-JAN-2023,Deadlift,10,135,good
-02-JAN-2023,Deadlift,10,135,good
-02-JAN-2023,Deadlift,10,135,good
-02-JAN-2023,Plank,50,0,good
-02-JAN-2023,Plank,50,0,good
-02-JAN-2023,Plank,50,0,good
-12-JAN-2023,Machine Bench Press,12,150,good
-12-JAN-2023,Machine Bench Press,10,170,good
-12-JAN-2023,Machine Bench Press,10,180,good
-12-JAN-2023,Cable Pec Flies,12,55,good
-12-JAN-2023,Cable Pec Flies,10,60,good
-12-JAN-2023,Cable Pec Flies,10,70,good
-12-JAN-2023,Incline Bench Press,10,150,good
-12-JAN-2023,Incline Bench Press,10,150,good
-12-JAN-2023,Incline Bench Press,10,150,good
-12-JAN-2023,Plank,60,0,good
-12-JAN-2023,Plank,50,0,good
-12-JAN-2023,Plank,60,0,good
-12-JAN-2023,5th Point of Flight,45,0,good
-12-JAN-2023,5th Point of Flight,50,0,good
-12-JAN-2023,5th Point of Flight,50,0,good
-18-JAN-2023,Machine Bench Press,10,170,good
-18-JAN-2023,Machine Bench Press,10,180,good
-18-JAN-2023,Machine Bench Press,10,180,good
-18-JAN-2023,Machine Bench Press,25,120,good
-18-JAN-2023,Machine Bench Press,10,120,good
-18-JAN-2023,Cable Pec Flies,10,70,good
-18-JAN-2023,Cable Pec Flies,10,70,good
-18-JAN-2023,Cable Pec Flies,10,70,good
-18-JAN-2023,Pec Flies,12,130,good
-18-JAN-2023,Pec Flies,10,140,good
-18-JAN-2023,Pec Flies,10,140,good
-18-JAN-2023,Incline Bench Press,10,150,good
-18-JAN-2023,Incline Bench Press,10,150,good
-18-JAN-2023,Incline Bench Press,10,150,bad
-18-JAN-2023,Plank,60,0,good
-18-JAN-2023,Plank,60,0,good
-18-JAN-2023,Plank,60,0,good
-18-JAN-2023,5th Point of Flight,45,0,good
-18-JAN-2023,5th Point of Flight,50,0,good
-18-JAN-2023,5th Point of Flight,45,0,good
-18-JAN-2023,Leg Raise,10,0,bad
-18-JAN-2023,Leg Raise,5,0,bad
-18-JAN-2023,Leg Raise,5,0,bad
-24-JAN-2023,Dumbbell Press,12,40,good
-24-JAN-2023,Dumbbell Press,10,45,good
-24-JAN-2023,Dumbbell Press,10,45,good
-24-JAN-2023,Cable Pec Flies,10,35,good
-24-JAN-2023,Cable Pec Flies,10,35,good
-24-JAN-2023,Cable Pec Flies,10,35,good
-24-JAN-2023,Incline Dumbbell Press,12,40,good
-24-JAN-2023,Incline Dumbbell Press,15,40,good
-24-JAN-2023,Incline Dumbbell Press,12,40,good
-24-JAN-2023,Plank,60,0,good
-24-JAN-2023,Plank,60,0,good
-24-JAN-2023,Plank,60,0,good
-24-JAN-2023,5th Point of Flight,50,0,good
-24-JAN-2023,5th Point of Flight,50,0,good
-24-JAN-2023,5th Point of Flight,60,0,good
-25-JAN-2023,Bench Press,10,135,good
-25-JAN-2023,Bench Press,10,135,good
-25-JAN-2023,Bench Press,5,185,good
-25-JAN-2023,Bench Press,5,185,good
-31-JAN-2023,Machine Bench Press,12,180,good
-31-JAN-2023,Machine Bench Press,12,180,good
-31-JAN-2023,Machine Bench Press,10,190,good
-31-JAN-2023,Cable Pec Flies,10,70,easy
-31-JAN-2023,Cable Pec Flies,12,70,good
-31-JAN-2023,Cable Pec Flies,10,70,good
-31-JAN-2023,Pec Flies,10,140,good
-31-JAN-2023,Pec Flies,10,140,good
-31-JAN-2023,Pec Flies,10,140,good
-31-JAN-2023,Incline Bench Press,10,150,good
-31-JAN-2023,Incline Bench Press,10,150,good
-31-JAN-2023,Incline Bench Press,10,150,good
-31-JAN-2023,Plank,60,0,good
-31-JAN-2023,Plank,60,0,good
-31-JAN-2023,Plank,60,0,good
-31-JAN-2023,5th Point of Flight,60,0,good
-31-JAN-2023,5th Point of Flight,60,0,good
-31-JAN-2023,5th Point of Flight,60,0,good
-01-FEB-2023,Barbell Overhead Tricep Extension,20,30,good
-01-FEB-2023,Lat Pulldown,12,100,good
-01-FEB-2023,Seated Row,12,100,good
-01-FEB-2023,Barbell Bicep Curl,12,40,good
-03-FEB-2023,Barbell Bicep Curl,12,40,good
-03-FEB-2023,Barbell Bicep Curl,20,30,good
-03-FEB-2023,Barbell Bicep Curl,20,30,good
-03-FEB-2023,Barbell Overhead Tricep Extension,20,30,easy
-03-FEB-2023,Barbell Overhead Tricep Extension,20,35,good
-03-FEB-2023,Barbell Overhead Tricep Extension,20,35,good
-03-FEB-2023,Seated Row,20,85,good
-03-FEB-2023,Seated Row,20,85,good
-03-FEB-2023,Seated Row,20,85,good
-03-FEB-2023,Lat Pulldown,20,85,good
-03-FEB-2023,Lat Pulldown,20,85,good
-03-FEB-2023,Lat Pulldown,20,85,good
-05-FEB-2023,Military Press,20,120,good
-05-FEB-2023,Military Press,15,120,good
-05-FEB-2023,Military Press,20,100,good
-05-FEB-2023,Front Lift,20,15,good
-05-FEB-2023,Front Lift,20,15,good
-05-FEB-2023,Front Lift,20,15,good
-05-FEB-2023,Cable Lateral Lift,20,25,good
-05-FEB-2023,Cable Lateral Lift,20,25,good
-05-FEB-2023,Cable Lateral Lift,20,25,good
-05-FEB-2023,Leg Curl,20,130,good
-05-FEB-2023,Leg Curl,12,120,good
-05-FEB-2023,Leg Curl,15,110,good
-05-FEB-2023,Leg Press,20,190,good
-05-FEB-2023,Leg Press,20,190,good
-05-FEB-2023,Leg Press,20,190,good
-05-FEB-2023,Calf Raise,12,190,bad
-05-FEB-2023,Calf Raise,20,190,bad
-05-FEB-2023,Calf Raise,15,190,bad
-05-FEB-2023,Leg Extension,20,135,good
-05-FEB-2023,Leg Extension,20,135,good
-05-FEB-2023,Leg Extension,20,135,good
-08-FEB-2023,Bench Press,5,135,good
-08-FEB-2023,Bench Press,10,155,good
-08-FEB-2023,Bench Press,10,175,good
-08-FEB-2023,Bench Press,5,185,good
-08-FEB-2023,Bench Press,5,195,good
-08-FEB-2023,Incline Dumbbell Press,10,45,easy
-08-FEB-2023,Incline Dumbbell Press,10,55,good
-08-FEB-2023,Incline Dumbbell Press,10,55,good
-08-FEB-2023,Cable Pec Flies,10,70,easy
-08-FEB-2023,Cable Pec Flies,10,80,bad
-08-FEB-2023,Cable Pec Flies,5,75,failure
-08-FEB-2023,Cable Pec Flies,10,70,good
-08-FEB-2023,Deadlift,12,135,good
-08-FEB-2023,Deadlift,10,155,good
-08-FEB-2023,Deadlift,10,175,good
-08-FEB-2023,Clean & Jerk,1,135,good
-08-FEB-2023,Clean & Jerk,1,135,good
-08-FEB-2023,Clean & Jerk,1,135,good
-08-FEB-2023,Clean & Jerk,1,135,good
-08-FEB-2023,Clean & Jerk,1,135,good
-08-FEB-2023,Clean & Jerk,1,135,good
-08-FEB-2023,Clean & Jerk,1,135,good
-08-FEB-2023,Clean & Jerk,2,135,good
-08-FEB-2023,Clean & Jerk,1,135,good
-11-FEB-2023,Barbell Bicep Curl,12,40,good
-11-FEB-2023,Barbell Bicep Curl,12,40,good
-11-FEB-2023,Barbell Bicep Curl,12,40,good
-11-FEB-2023,Concentration Curl,10,20,bad (L)
-11-FEB-2023,Concentration Curl,10,20,bad (L)
-11-FEB-2023,Concentration Curl,10,20,bad (L)
-11-FEB-2023,Tricep Pushdown,12,90,good
-11-FEB-2023,Tricep Pushdown,10,100,bad
-11-FEB-2023,Tricep Pushdown,10,100,bad
-11-FEB-2023,Skullcrushers,10,40,easy
-11-FEB-2023,Skullcrushers,10,40,good
-11-FEB-2023,Skullcrushers,10,40,good
-11-FEB-2023,Lawnmowers,12,35,good
-11-FEB-2023,Lawnmowers,15,35,good
-11-FEB-2023,Lawnmowers,15,35,good
-11-FEB-2023,Seated Row,20,85,good
-11-FEB-2023,Seated Row,12,115,good
-11-FEB-2023,Seated Row,10,130,bad
-11-FEB-2023,Lat Pulldown,10,115,good
-11-FEB-2023,Lat Pulldown,10,115,good
-11-FEB-2023,Lat Pulldown,10,115,good
-12-FEB-2023,Lunges,10,0,good
-12-FEB-2023,Lunges,10,0,good
-12-FEB-2023,Lunges,10,0,good
-13-FEB-2023,Lateral Lift,10,20,easy
-13-FEB-2023,Lateral Lift,10,20,good
-13-FEB-2023,Lateral Lift,10,20,good
-13-FEB-2023,Front Lift,10,20,good
-13-FEB-2023,Front Lift,12,20,good
-13-FEB-2023,Front Lift,1,25,good
-13-FEB-2023,Front Lift,1,30,good
-13-FEB-2023,Front Lift,12,20,good
-13-FEB-2023,Military Press,1,150,good
-13-FEB-2023,Military Press,1,180,good
-13-FEB-2023,Military Press,1,210,good
-13-FEB-2023,Military Press,1,230,good
-13-FEB-2023,Military Press,1,240,good
-13-FEB-2023,Military Press,1,245,good
-13-FEB-2023,Military Press,10,160,good
-13-FEB-2023,Military Press,10,160,good
-13-FEB-2023,Military Press,10,160,good
-13-FEB-2023,Leg Press,10,235,good
-13-FEB-2023,Leg Press,10,250,good
-13-FEB-2023,Leg Press,10,250,good
-13-FEB-2023,Lunges,10,0,good
-13-FEB-2023,Lunges,10,0,good
-13-FEB-2023,Lunges,10,0,good
-13-FEB-2023,Leg Curl,12,160,good
-13-FEB-2023,Leg Curl,10,165,good
-13-FEB-2023,Leg Curl,10,170,good
-13-FEB-2023,Leg Extension,10,170,good
-13-FEB-2023,Leg Extension,10,175,good
-13-FEB-2023,Leg Extension,10,175,good
-13-FEB-2023,Push-Ups,10,0,good
-15-FEB-2023,Machine Bench Press,7,210,good
-15-FEB-2023,Machine Bench Press,5,220,good
-15-FEB-2023,Machine Bench Press,5,220,good
-15-FEB-2023,Cable Pec Flies,5,90,good
-15-FEB-2023,Cable Pec Flies,5,90,good
-15-FEB-2023,Cable Pec Flies,5,100,good
-15-FEB-2023,Machine Pec Flies,5,170,good
-15-FEB-2023,Machine Pec Flies,5,180,good
-15-FEB-2023,Machine Pec Flies,5,180,good
-15-FEB-2023,Machine Incline Bench Press,10,180,good
-15-FEB-2023,Machine Incline Bench Press,5,200,good
-15-FEB-2023,Machine Incline Bench Press,7,200,good
-16-FEB-2023,Bicep Curl,5,30,good
-16-FEB-2023,Bicep Curl,5,30,good
-16-FEB-2023,Bicep Curl,5,30,good
-16-FEB-2023,Concentration Curl,10,20,good
-16-FEB-2023,Concentration Curl,10,20,good
-16-FEB-2023,Concentration Curl,10,20,good
-16-FEB-2023,Tricep Pushdown,7,120,good
-16-FEB-2023,Tricep Pushdown,5,130,good
-16-FEB-2023,Tricep Pushdown,5,130,good
-16-FEB-2023,Skullcrushers,12,40,good
-16-FEB-2023,Skullcrushers,10,40,good
-16-FEB-2023,Skullcrushers,10,40,good
-16-FEB-2023,Seated Row,7,130,good
-16-FEB-2023,Seated Row,5,130,easy
-16-FEB-2023,Seated Row,5,145,bad
-16-FEB-2023,Lat Pulldown,5,145,good
-16-FEB-2023,Lat Pulldown,5,145,good
-16-FEB-2023,Lat Pulldown,5,145,good
-19-FEB-2023,Cable Lateral Lift,10,40,good
-19-FEB-2023,Cable Lateral Lift,10,40,good
-19-FEB-2023,Cable Lateral Lift,10,40,good
-19-FEB-2023,Front Lift,10,26.4,good
-19-FEB-2023,Front Lift,10,26.4,good
-19-FEB-2023,Front Lift,10,26.4,good
-19-FEB-2023,Military Press,10,160,good
-19-FEB-2023,Military Press,10,160,good
-19-FEB-2023,Military Press,10,160,good
-19-FEB-2023,Leg Press,10,250,good
-19-FEB-2023,Leg Press,10,250,good
-19-FEB-2023,Leg Press,10,265,good
-19-FEB-2023,Leg Curl,10,170,good
-19-FEB-2023,Leg Curl,12,170,good
-19-FEB-2023,Leg Curl,10,170,good
-19-FEB-2023,Leg Extension,12,175,good
-19-FEB-2023,Leg Extension,10,180,good
-19-FEB-2023,Leg Extension,10,180,good
-19-FEB-2023,Leg Press Calf Raise,20,190,good
-19-FEB-2023,Leg Press Calf Raise,18,190,good
-19-FEB-2023,Leg Press Calf Raise,20,190,good
-20-FEB-2023,Bench Press,3,95,warm-up
-20-FEB-2023,Bench Press,3,135,warm-up
-20-FEB-2023,Bench Press,10,185,good
-20-FEB-2023,Bench Press,10,185,good
-20-FEB-2023,Bench Press,10,185,good
-20-FEB-2023,Dumbbell Press,10,60,good
-20-FEB-2023,Dumbbell Press,10,60,good
-20-FEB-2023,Dumbbell Press,10,60,good
-20-FEB-2023,Cable Pec Flies,10,75,good
-20-FEB-2023,Cable Pec Flies,10,75,good
-20-FEB-2023,Cable Pec Flies,10,75,good
-20-FEB-2023,Deadlift,10,185,good
-20-FEB-2023,Deadlift,10,185,good
-20-FEB-2023,Deadlift,10,185,good
-20-FEB-2023,Deadlift,1,225,good
-20-FEB-2023,Deadlift,1,245,good
-20-FEB-2023,Deadlift,1,275,good
-21-FEB-2023,Bicep Curl,12,20,good
-21-FEB-2023,Bicep Curl,10,20,good
-21-FEB-2023,Bicep Curl,10,20,good
-21-FEB-2023,Tricep Pushdown,12,100,good
-21-FEB-2023,Tricep Pushdown,10,100,good
-21-FEB-2023,Tricep Pushdown,10,100,bad
-21-FEB-2023,Skullcrushers,12,40,good
-21-FEB-2023,Skullcrushers,12,40,good
-21-FEB-2023,Skullcrushers,12,40,good
-21-FEB-2023,Seated Row,10,130,good
-21-FEB-2023,Seated Row,10,130,bad
-21-FEB-2023,Seated Row,10,115,good
-21-FEB-2023,Lat Pulldown,10,115,good
-21-FEB-2023,Lat Pulldown,10,115,good
-21-FEB-2023,Lat Pulldown,10,115,good
-26-FEB-2023,Incline Dumbbell Press,10,50,good
-26-FEB-2023,Incline Dumbbell Press,10,50,good
-26-FEB-2023,Incline Dumbbell Press,8,50,failure
-26-FEB-2023,Incline Dumbbell Press,2,45,good
-26-FEB-2023,Bicep Curl,10,25,good
-26-FEB-2023,Bicep Curl,10,25,good
-26-FEB-2023,Bicep Curl,10,25,good
-26-FEB-2023,Pec Flies,10,145,good
-26-FEB-2023,Pec Flies,10,145,good
-26-FEB-2023,Pec Flies,10,145,good
-26-FEB-2023,Lat Pulldown,10,115,good
-26-FEB-2023,Lat Pulldown,10,115,good
-26-FEB-2023,Lat Pulldown,10,115,good
-26-FEB-2023,Concentration Curl,10,20,good
-26-FEB-2023,Concentration Curl,10,20,good
-26-FEB-2023,Concentration Curl,10,20,good
-26-FEB-2023,Overhead Tricep Extension,10,25,easy
-26-FEB-2023,Overhead Tricep Extension,7,30,bad
-26-FEB-2023,Overhead Tricep Extension,3,25,good
-26-FEB-2023,Overhead Tricep Extension,10,25,good
-27-FEB-2023,Incline Dumbbell Press,10,50,easy
-27-FEB-2023,Incline Dumbbell Press,12,50,good
-27-FEB-2023,Incline Dumbbell Press,12,50,good
-27-FEB-2023,Hammer Curl,15,25,good
-27-FEB-2023,Hammer Curl,10,30,good
-27-FEB-2023,Hammer Curl,10,30,good
-27-FEB-2023,Machine Bench Press,10,130,good
-27-FEB-2023,Machine Bench Press,10,130,good
-27-FEB-2023,Machine Bench Press,10,130,good
-27-FEB-2023,Bicep Curl,10,25,good
-27-FEB-2023,Bicep Curl,10,25,good
-27-FEB-2023,Bicep Curl,10,25,good
-27-FEB-2023,Delt Flies,12,85,good
-27-FEB-2023,Delt Flies,10,85,good
-27-FEB-2023,Delt Flies,10,85,good
-27-FEB-2023,Lat Pulldown,10,115,good
-27-FEB-2023,Lat Pulldown,10,115,good
-27-FEB-2023,Lat Pulldown,10,115,good
-28-FEB-2023,Machine Bench Press,10,130,good
-28-FEB-2023,Machine Bench Press,8,145,good
-28-FEB-2023,Machine Bench Press,5,160,good
-28-FEB-2023,Machine Bench Press,5,175,good
-28-FEB-2023,Machine Bench Press,5,190,good
-05-MAR-2023,Lateral Lift,10,20,good
-05-MAR-2023,Lateral Lift,10,20,good
-05-MAR-2023,Lateral Lift,10,20,good
-05-MAR-2023,Front Lift,10,26.4,good
-05-MAR-2023,Front Lift,10,26.4,good
-05-MAR-2023,Front Lift,10,26.4,good
-05-MAR-2023,Military Press,10,170,good
-05-MAR-2023,Military Press,10,170,good
-05-MAR-2023,Military Press,10,170,good
-05-MAR-2023,Leg Press,10,265,good
-05-MAR-2023,Leg Press,10,265,good
-05-MAR-2023,Leg Press,10,265,good
-05-MAR-2023,Lunges,10,0,good
-05-MAR-2023,Lunges,10,20,good
-05-MAR-2023,Lunges,10,20,good
-05-MAR-2023,Leg Curl,15,170,good
-05-MAR-2023,Leg Curl,10,180,good
-05-MAR-2023,Leg Curl,10,180,good
-05-MAR-2023,Leg Extension,12,190,good
-05-MAR-2023,Leg Extension,12,190,good
-05-MAR-2023,Leg Extension,10,190,good
-06-MAR-2023,Machine Bench Press,12,205,good
-06-MAR-2023,Machine Bench Press,10,210,good
-06-MAR-2023,Machine Bench Press,10,210,good
-06-MAR-2023,Machine Bench Press,10,210,good
-06-MAR-2023,Machine Bench Press,5,240,good
-06-MAR-2023,Machine Bench Press,3,245,good
-06-MAR-2023,Cable Pec Flies,10,80,good
-06-MAR-2023,Cable Pec Flies,10,80,good
-06-MAR-2023,Cable Pec Flies,10,80,failure
-06-MAR-2023,Machine Pec Flies,10,150,good
-06-MAR-2023,Machine Pec Flies,10,160,good
-06-MAR-2023,Machine Pec Flies,10,160,good
-06-MAR-2023,Plank,60,0,good
-06-MAR-2023,Plank,60,0,good
-06-MAR-2023,Plank,60,0,good
-08-MAR-2023,Barbell Bicep Curl,12,40,good
-08-MAR-2023,Barbell Bicep Curl,10,40,good
-08-MAR-2023,Barbell Bicep Curl,12,40,good
-08-MAR-2023,Concentration Curl,10,20,good
-08-MAR-2023,Concentration Curl,10,20,good
-08-MAR-2023,Concentration Curl,10,20,bad (L)
-08-MAR-2023,Tricep Pushdown,12,100,good
-08-MAR-2023,Tricep Pushdown,12,100,good
-08-MAR-2023,Tricep Pushdown,10,100,failure
-08-MAR-2023,Skullcrushers,15,40,good
-08-MAR-2023,Skullcrushers,15,40,good
-08-MAR-2023,Skullcrushers,15,40,good
-08-MAR-2023,Lawnmowers,10,35,easy
-08-MAR-2023,Lawnmowers,12,35,good
-08-MAR-2023,Lawnmowers,12,35,good
-08-MAR-2023,Seated Row,12,115,good
-08-MAR-2023,Seated Row,12,115,good
-08-MAR-2023,Seated Row,12,115,good
-08-MAR-2023,Lat Pulldown,10,130,bad
-08-MAR-2023,Lat Pulldown,10,115,good
-08-MAR-2023,Lat Pulldown,10,115,good
-10-MAR-2023,Leg Press,10,265,good
-10-MAR-2023,Leg Press,10,280,good
-10-MAR-2023,Leg Press,10,280,good
-10-MAR-2023,Leg Curl,10,180,good
-10-MAR-2023,Leg Curl,10,180,good
-10-MAR-2023,Leg Curl,10,180,good
-10-MAR-2023,Leg Extension,10,200,good
-10-MAR-2023,Leg Extension,10,200,good
-10-MAR-2023,Leg Extension,10,200,good
-10-MAR-2023,Close-Grip Lat Pulldown,15,100,good
-10-MAR-2023,Close-Grip Lat Pulldown,10,115,good
-10-MAR-2023,Close-Grip Lat Pulldown,10,130,good
-10-MAR-2023,Cable Lateral Lift,10,40,good
-10-MAR-2023,Cable Lateral Lift,10,45,good
-10-MAR-2023,Cable Lateral Lift,10,45,good
-10-MAR-2023,Front Lift,10,26.4,good
-10-MAR-2023,Front Lift,10,26.4,good
-10-MAR-2023,Front Lift,10,26.4,good
-10-MAR-2023,Military Press,10,170,good
-10-MAR-2023,Military Press,10,180,good
-10-MAR-2023,Military Press,10,180,good
-12-MAR-2023,Machine Bench Press,12,210,good
-12-MAR-2023,Machine Bench Press,10,220,good
-12-MAR-2023,Machine Bench Press,10,220,good
-12-MAR-2023,Machine Bench Press,12,220,good
-12-MAR-2023,Machine Bench Press,7,245,good
-12-MAR-2023,Machine Bench Press,7,245,good
-12-MAR-2023,Machine Bench Press,10,245,good
-12-MAR-2023,Cable Pec Flies,10,80,good
-12-MAR-2023,Cable Pec Flies,10,80,good
-12-MAR-2023,Cable Pec Flies,10,80,good
-12-MAR-2023,Machine Pec Flies,10,160,good
-12-MAR-2023,Machine Pec Flies,10,160,good
-12-MAR-2023,Machine Pec Flies,10,160,good
-12-MAR-2023,Plank,60,0,good
-12-MAR-2023,Plank,60,0,good
-12-MAR-2023,Plank,60,0,good
-13-MAR-2023,Bicep Curl,10,25,good
-13-MAR-2023,Bicep Curl,10,25,good
-13-MAR-2023,Bicep Curl,10,25,good
-13-MAR-2023,Concentration Curl,10,20,good
-13-MAR-2023,Concentration Curl,12,20,good
-13-MAR-2023,Concentration Curl,12,20,good
-13-MAR-2023,Overhead Tricep Extension,10,26.4,good
-13-MAR-2023,Overhead Tricep Extension,10,26.4,good
-13-MAR-2023,Overhead Tricep Extension,10,26.4,good
-13-MAR-2023,Tricep Pushdown,12,100,good
-13-MAR-2023,Tricep Pushdown,12,100,good
-13-MAR-2023,Tricep Pushdown,12,100,failure
-13-MAR-2023,Skullcrushers,15,40,good
-13-MAR-2023,Skullcrushers,15,40,good
-13-MAR-2023,Skullcrushers,15,40,good
-13-MAR-2023,Bent-Over Single-Arm Barbell Row,10,40,easy
-13-MAR-2023,Bent-Over Single-Arm Barbell Row,12,40,easy
-13-MAR-2023,Bent-Over Single-Arm Barbell Row,15,40,good
-13-MAR-2023,Seated Row,15,115,good
-13-MAR-2023,Seated Row,15,115,good
-13-MAR-2023,Seated Row,15,115,good
-13-MAR-2023,Lat Pulldown,12,115,good
-13-MAR-2023,Lat Pulldown,12,115,good
-13-MAR-2023,Lat Pulldown,12,115,good
-13-MAR-2023,Shrugs,10,35,easy
-13-MAR-2023,Shrugs,10,35,easy
-13-MAR-2023,Shrugs,15,35,easy
-13-MAR-2023,Strict Press,2,135,easy
-13-MAR-2023,Strict Press,2,135,easy
-13-MAR-2023,Strict Press,3,165,good
-13-MAR-2023,Preacher Curl,12,42,easy
-16-MAR-2023,Bent-Over Lateral Lift,12,20,good
-16-MAR-2023,Bent-Over Lateral Lift,12,20,good
-16-MAR-2023,Bent-Over Lateral Lift,12,20,good
-16-MAR-2023,Front Lift,10,25,good
-16-MAR-2023,Front Lift,10,25,good
-16-MAR-2023,Front Lift,10,25,good
-16-MAR-2023,Military Press,10,180,good
-16-MAR-2023,Military Press,10,180,good
-16-MAR-2023,Military Press,10,180,failure
-16-MAR-2023,Arnold Press,15,30,good
-16-MAR-2023,Arnold Press,10,35,good
-16-MAR-2023,Arnold Press,10,35,good
-16-MAR-2023,Clean & Jerk,1,135,good
-16-MAR-2023,Clean & Jerk,1,165,good
-16-MAR-2023,Clean & Jerk,1,165,good
-16-MAR-2023,Clean & Jerk,1,165,good
-16-MAR-2023,Clean & Jerk,1,165,good
-16-MAR-2023,Clean & Jerk,1,165,good
-16-MAR-2023,Clean & Jerk,1,165,good
-16-MAR-2023,Clean & Jerk,1,165,good
-16-MAR-2023,Clean & Jerk,1,165,good
-16-MAR-2023,Clean & Jerk,1,165,good
-16-MAR-2023,Clean & Jerk,1,165,good
-16-MAR-2023,Leg Curl,12,180,good
-16-MAR-2023,Leg Curl,12,180,good
-16-MAR-2023,Leg Curl,10,180,good
-16-MAR-2023,Leg Extension,10,200,good
-16-MAR-2023,Leg Extension,10,200,good
-16-MAR-2023,Leg Extension,10,200,good
-16-MAR-2023,Squats,5,135,good
-16-MAR-2023,Squats,5,185,good
-16-MAR-2023,Squats,5,185,good
-16-MAR-2023,Squats,5,185,good
-17-MAR-2023,Deadlift,5,135,good
-17-MAR-2023,Deadlift,10,185,good
-17-MAR-2023,Deadlift,10,185,good
-17-MAR-2023,Deadlift,10,185,good
-17-MAR-2023,Deadlift,3,225,good
-17-MAR-2023,Deadlift,1,275,good
-17-MAR-2023,Deadlift,1,275,good
-17-MAR-2023,Push-Ups (Perfect Device),5,0,easy
-17-MAR-2023,Bench Press,6,135,good
-17-MAR-2023,Bench Press,5,185,good
-17-MAR-2023,Bench Press,5,205,good
-17-MAR-2023,Bench Press,5,205,good
-17-MAR-2023,Bench Press,5,205,good
-17-MAR-2023,Dumbbell Press,10,60,good
-17-MAR-2023,Dumbbell Press,10,60,good
-17-MAR-2023,Dumbbell Press,10,60,good
-17-MAR-2023,Machine Pec Flies,10,160,good
-17-MAR-2023,Machine Pec Flies,10,160,good
-17-MAR-2023,Machine Pec Flies,10,160,good
-20-MAR-2023,Preacher Curl,8,62,good
-20-MAR-2023,Preacher Curl,8,62,failure
-20-MAR-2023,Preacher Curl,10,52,good
-20-MAR-2023,Hammer Curl,10,25,good
-20-MAR-2023,Hammer Curl,10,25,good
-20-MAR-2023,Hammer Curl,10,25,good
-20-MAR-2023,Concentration Curl,10,20,good
-20-MAR-2023,Concentration Curl,10,20,good
-20-MAR-2023,Concentration Curl,10,20,good
-20-MAR-2023,Overhead Tricep Extension,10,25,easy
-20-MAR-2023,Overhead Tricep Extension,10,25,good
-20-MAR-2023,Overhead Tricep Extension,10,25,good
-20-MAR-2023,Tricep Pushdown,12,100,good
-20-MAR-2023,Tricep Pushdown,10,110,good
-20-MAR-2023,Tricep Pushdown,10,110,good
-20-MAR-2023,Skullcrushers,10,52,good
-20-MAR-2023,Skullcrushers,10,52,good
-20-MAR-2023,Skullcrushers,10,52,good
-20-MAR-2023,Lawnmowers,10,40,easy
-20-MAR-2023,Lawnmowers,10,45,good
-20-MAR-2023,Lawnmowers,10,45,good
-20-MAR-2023,Seated Row,10,130,good
-20-MAR-2023,Seated Row,10,130,good
-20-MAR-2023,Seated Row,10,130,good
-20-MAR-2023,Lat Pulldown,10,130,good
-20-MAR-2023,Lat Pulldown,10,130,good
-20-MAR-2023,Lat Pulldown,10,130,good
-21-MAR-2023,Push-Ups,20,0,good
-22-MAR-2023,Bent-Over Lateral Lift,12,20,good
-22-MAR-2023,Bent-Over Lateral Lift,12,20,good
-22-MAR-2023,Bent-Over Lateral Lift,12,20,good
-22-MAR-2023,Front Lift,10,25,easy
-22-MAR-2023,Front Lift,12,25,good
-22-MAR-2023,Front Lift,12,25,good
-22-MAR-2023,Military Press,10,180,good
-22-MAR-2023,Military Press,10,185,good
-22-MAR-2023,Military Press,10,185,good
-22-MAR-2023,Strict Press,5,135,good
-22-MAR-2023,Strict Press,5,135,good
-22-MAR-2023,Strict Press,5,135,good
-22-MAR-2023,Strict Press,5,135,good
-22-MAR-2023,Strict Press,5,135,good
-22-MAR-2023,Arnold Press,10,35,good
-22-MAR-2023,Arnold Press,10,35,good
-22-MAR-2023,Arnold Press,12,35,good
-22-MAR-2023,Lunges,10,20,good
-22-MAR-2023,Lunges,10,20,good
-22-MAR-2023,Lunges,10,20,good
-22-MAR-2023,Leg Curl,10,180,good
-22-MAR-2023,Leg Curl,10,180,good
-22-MAR-2023,Leg Curl,10,180,good
-22-MAR-2023,Leg Extension,10,200,good
-22-MAR-2023,Leg Extension,10,200,good
-22-MAR-2023,Leg Extension,10,200,good
-22-MAR-2023,Squats,5,135,easy
-22-MAR-2023,Squats,5,185,good
-22-MAR-2023,Squats,5,225,good
-22-MAR-2023,Squats,5,225,good
-22-MAR-2023,Squats,5,225,good
-22-MAR-2023,Squats,5,225,good
-24-MAR-2023,Plank,60,0,good
-24-MAR-2023,Plank,60,0,good
-24-MAR-2023,Plank,60,0,good
-24-MAR-2023,Machine Bench Press,10,230,good
-24-MAR-2023,Machine Bench Press,12,230,good
-24-MAR-2023,Machine Bench Press,12,230,good
-24-MAR-2023,Cable Pec Flies,10,80,good
-24-MAR-2023,Cable Pec Flies,10,80,good
-24-MAR-2023,Cable Pec Flies,10,80,good
-24-MAR-2023,Upward Cable Pec Flies,10,50,good
-24-MAR-2023,Upward Cable Pec Flies,10,50,good
-24-MAR-2023,Upward Cable Pec Flies,12,50,good
-24-MAR-2023,Pec Flies,12,160,good
-24-MAR-2023,Pec Flies,12,160,good
-24-MAR-2023,Pec Flies,10,170,good
-25-MAR-2023,Bench Press,5,135,easy
-25-MAR-2023,Bench Press,5,185,easy
-25-MAR-2023,Bench Press,5,205,good
-25-MAR-2023,Bench Press,5,225,good
-25-MAR-2023,Bench Press,5,225,good
-25-MAR-2023,Bench Press,5,225,good
-25-MAR-2023,Deadlift,10,195,good
-25-MAR-2023,Deadlift,10,195,good
-25-MAR-2023,Deadlift,10,195,good
-25-MAR-2023,Deadlift,1,225,good
-25-MAR-2023,Deadlift,1,275,good
-25-MAR-2023,Deadlift,1,315,good
-25-MAR-2023,Deadlift,1,315,good
-26-MAR-2023,Preacher Curl,10,52,good
-26-MAR-2023,Preacher Curl,8,62,good
-26-MAR-2023,Preacher Curl,5,72,failure
-26-MAR-2023,Hammer Curl,13,25,good
-26-MAR-2023,Hammer Curl,10,30,bad
-26-MAR-2023,Hammer Curl,12,25,good
-26-MAR-2023,Overhead Tricep Extension,12,25,good
-26-MAR-2023,Overhead Tricep Extension,12,25,good
-26-MAR-2023,Overhead Tricep Extension,12,25,failure
-26-MAR-2023,Tricep Pushdown,10,110,good
-26-MAR-2023,Tricep Pushdown,5,130,good
-26-MAR-2023,Tricep Pushdown,5,130,failure
-26-MAR-2023,Tricep Pushdown,5,120,good
-26-MAR-2023,Skullcrushers,10,52,good
-26-MAR-2023,Skullcrushers,12,52,good
-26-MAR-2023,Skullcrushers,12,52,good
-26-MAR-2023,Lawnmowers,12,45,good
-26-MAR-2023,Lawnmowers,10,45,good
-26-MAR-2023,Lawnmowers,10,45,good
-26-MAR-2023,Seated Row,10,130,good
-26-MAR-2023,Seated Row,10,130,good
-26-MAR-2023,Seated Row,10,130,good
-26-MAR-2023,Lat Pulldown,12,130,good
-26-MAR-2023,Lat Pulldown,10,130,good
-26-MAR-2023,Lat Pulldown,10,130,bad
-29-MAR-2023,Bent-Over Lateral Lift,12,20,good
-29-MAR-2023,Bent-Over Lateral Lift,12,20,good
-29-MAR-2023,Bent-Over Lateral Lift,12,20,good
-29-MAR-2023,Front Lift,12,25,good
-29-MAR-2023,Front Lift,12,25,good
-29-MAR-2023,Front Lift,12,25,good
-29-MAR-2023,Strict Press,5,135,good
-29-MAR-2023,Strict Press,5,135,good
-29-MAR-2023,Strict Press,5,135,good
-29-MAR-2023,Strict Press,6,135,good
-29-MAR-2023,Strict Press,6,135,good
-29-MAR-2023,Arnold Press,10,35,good
-29-MAR-2023,Arnold Press,12,35,good
-29-MAR-2023,Arnold Press,12,35,good
-29-MAR-2023,Lunges,10,20,good
-29-MAR-2023,Lunges,10,20,good
-29-MAR-2023,Lunges,10,20,good
-29-MAR-2023,Leg Curl,12,180,good
-29-MAR-2023,Leg Curl,10,185,good
-29-MAR-2023,Leg Curl,10,185,good
-29-MAR-2023,Leg Extension,10,200,good
-29-MAR-2023,Leg Extension,10,200,good
-29-MAR-2023,Leg Extension,10,200,good
-29-MAR-2023,Squats,10,135,easy
-29-MAR-2023,Squats,5,225,good
-29-MAR-2023,Squats,5,245,good
-29-MAR-2023,Squats,5,245,good
-29-MAR-2023,Squats,5,245,good
-29-MAR-2023,Squats,5,245,good
-31-MAR-2023,Bench Press,10,135,easy
-31-MAR-2023,Bench Press,6,205,good
-31-MAR-2023,Bench Press,5,205,good
-31-MAR-2023,Bench Press,5,215,good
-31-MAR-2023,Bench Press,5,225,good
-31-MAR-2023,Bench Press,10,185,good
-31-MAR-2023,Dumbbell Press,10,60,good
-31-MAR-2023,Dumbbell Press,10,60,good
-31-MAR-2023,Dumbbell Press,10,60,good
-31-MAR-2023,Upward Cable Pec Flies,15,50,easy
-31-MAR-2023,Upward Cable Pec Flies,8,60,good
-31-MAR-2023,Upward Cable Pec Flies,10,55,good
-31-MAR-2023,Pec Flies,10,170,good
-31-MAR-2023,Pec Flies,10,170,good
-31-MAR-2023,Pec Flies,10,170,good
-31-MAR-2023,Pec Flies,3,200,good
-31-MAR-2023,Pec Flies,3,220,good
-31-MAR-2023,Deadlift,10,195,good
-31-MAR-2023,Deadlift,10,205,good
-31-MAR-2023,Deadlift,10,205,good
-31-MAR-2023,Deadlift,1,275,good
-31-MAR-2023,Deadlift,1,315,good
-31-MAR-2023,Deadlift,1,335,good
-02-APR-2023,Bicep Curl,12,25,good
-02-APR-2023,Bicep Curl,12,25,good
-02-APR-2023,Bicep Curl,12,25,good
-02-APR-2023,Hammer Curl,10,30,good
-02-APR-2023,Hammer Curl,10,30,good
-02-APR-2023,Hammer Curl,10,30,good
-02-APR-2023,Overhead Tricep Extension,12,25,good
-02-APR-2023,Overhead Tricep Extension,12,25,good
-02-APR-2023,Overhead Tricep Extension,12,25,good
-02-APR-2023,Tricep Pushdown,10,110,good
-02-APR-2023,Tricep Pushdown,10,120,good
-02-APR-2023,Tricep Pushdown,10,120,good
-02-APR-2023,Lawnmowers,10,50,good
-02-APR-2023,Lawnmowers,10,50,good
-02-APR-2023,Lawnmowers,10,50,good
-02-APR-2023,Seated Row,10,130,good
-02-APR-2023,Seated Row,10,130,good
-02-APR-2023,Seated Row,10,130,good
-02-APR-2023,Seated Row,15,85,good
-02-APR-2023,Lat Pulldown,10,130,good
-02-APR-2023,Lat Pulldown,10,130,good
-02-APR-2023,Lat Pulldown,10,130,good
-02-APR-2023,Lat Pulldown,15,85,good
-04-APR-2023,Bent-Over Lateral Lift,10,25,good
-04-APR-2023,Bent-Over Lateral Lift,10,25,good
-04-APR-2023,Bent-Over Lateral Lift,10,25,good
-04-APR-2023,Front Lift,12,25,good
-04-APR-2023,Front Lift,12,25,good
-04-APR-2023,Front Lift,12,25,good
-04-APR-2023,Strict Press,6,135,good
-04-APR-2023,Strict Press,6,135,good
-04-APR-2023,Strict Press,7,135,good
-04-APR-2023,Strict Press,7,135,good
-04-APR-2023,Arnold Press,10,40,good
-04-APR-2023,Arnold Press,10,40,good
-04-APR-2023,Arnold Press,10,40,good
-04-APR-2023,Leg Curl,12,185,good
-04-APR-2023,Leg Curl,12,185,good
-04-APR-2023,Leg Curl,12,185,good
-04-APR-2023,Leg Extension,10,200,good
-04-APR-2023,Leg Extension,10,200,good
-04-APR-2023,Leg Extension,10,200,good
-04-APR-2023,Squats,5,225,good
-04-APR-2023,Squats,5,245,good
-04-APR-2023,Squats,5,245,good
-04-APR-2023,Squats,5,245,good
-04-APR-2023,Squats,5,245,good
-04-APR-2023,Squats,5,245,good
-05-APR-2023,Barbell Bicep Curl,20,40,good
-05-APR-2023,Barbell Bicep Curl,20,40,good
-05-APR-2023,Barbell Overhead Tricep Extension,20,40,good
-05-APR-2023,Barbell Overhead Tricep Extension,20,40,good
-05-APR-2023,Military Press,5,245,good
-05-APR-2023,Military Press,5,245,good
-05-APR-2023,Push-Ups,20,0,good
-05-APR-2023,Push-Ups,20,0,good
-06-APR-2023,Bench Press,10,135,warm-up
-06-APR-2023,Bench Press,10,185,good
-06-APR-2023,Bench Press,10,195,good
-06-APR-2023,Bench Press,10,205,good
-06-APR-2023,Bench Press,5,225,failure
-06-APR-2023,Dumbbell Press,10,60,good
-06-APR-2023,Dumbbell Press,10,65,good
-06-APR-2023,Dumbbell Press,10,65,good
-06-APR-2023,Upward Cable Pec Flies,10,55,good
-06-APR-2023,Upward Cable Pec Flies,10,55,good
-06-APR-2023,Upward Cable Pec Flies,10,55,good
-06-APR-2023,Pec Flies,10,170,good
-06-APR-2023,Pec Flies,10,175,good
-06-APR-2023,Pec Flies,10,175,good
-06-APR-2023,Deadlift,10,195,good
-06-APR-2023,Deadlift,10,205,good
-06-APR-2023,Deadlift,10,205,good
-06-APR-2023,Deadlift,1,315,good
-06-APR-2023,Deadlift,1,335,failure
-08-APR-2023,Bicep Curl,8,30,good
-08-APR-2023,Bicep Curl,8,30,good
-08-APR-2023,Bicep Curl,12,25,good
-08-APR-2023,Hammer Curl,10,30,good
-08-APR-2023,Hammer Curl,10,30,good
-08-APR-2023,Hammer Curl,10,30,bad (L)
-08-APR-2023,Concentration Curl,12,20,good
-08-APR-2023,Concentration Curl,12,20,good
-08-APR-2023,Concentration Curl,12,20,good
-08-APR-2023,Overhead Tricep Extension,10,30,good
-08-APR-2023,Overhead Tricep Extension,8,30,good
-08-APR-2023,Overhead Tricep Extension,8,30,good
-08-APR-2023,Tricep Pushdown,12,120,good
-08-APR-2023,Tricep Pushdown,10,120,good
-08-APR-2023,Tricep Pushdown,8,120,failure
-08-APR-2023,Skullcrushers,12,52,good
-08-APR-2023,Skullcrushers,10,62,good
-08-APR-2023,Skullcrushers,10,62,good
-08-APR-2023,Lawnmowers,10,50,good
-08-APR-2023,Lawnmowers,10,50,good
-08-APR-2023,Lawnmowers,10,50,good
-08-APR-2023,Seated Row,12,130,good
-08-APR-2023,Seated Row,10,130,good
-08-APR-2023,Seated Row,15,100,good
-08-APR-2023,Lat Pulldown,10,130,good
-08-APR-2023,Lat Pulldown,15,100,good
-08-APR-2023,Lat Pulldown,10,130,good
-08-APR-2023,Lat Pulldown Hang,20,160,good
-08-APR-2023,Lat Pulldown Hang,30,160,good
-08-APR-2023,Full Cans,20,5,good
-08-APR-2023,Full Cans,20,5,good
-08-APR-2023,Full Cans,20,5,good
-10-APR-2023,Lunges,10,20,good
-10-APR-2023,Lunges,10,25,good
-10-APR-2023,Lunges,10,25,good
-10-APR-2023,Single-Leg Leg Curl,10,90,good
-10-APR-2023,Single-Leg Leg Curl,10,90,good
-10-APR-2023,Single-Leg Leg Curl,10,90,good
-10-APR-2023,Single-Leg Leg Extension,10,100,good
-10-APR-2023,Single-Leg Leg Extension,10,100,good
-10-APR-2023,Single-Leg Leg Extension,10,100,good
-10-APR-2023,Squats,12,135,warm-up
-10-APR-2023,Squats,10,205,good
-10-APR-2023,Squats,10,205,good
-10-APR-2023,Squats,10,205,good
-10-APR-2023,Bent-Over Lateral Lift,10,25,good
-10-APR-2023,Bent-Over Lateral Lift,10,25,good
-10-APR-2023,Bent-Over Lateral Lift,10,25,good
-10-APR-2023,Front Lift,10,30,good
-10-APR-2023,Front Lift,10,30,good
-10-APR-2023,Front Lift,10,30,good
-10-APR-2023,Military Press,10,190,good
-10-APR-2023,Military Press,10,190,good
-10-APR-2023,Military Press,10,190,good
-10-APR-2023,Strict Press,8,135,good
-10-APR-2023,Strict Press,8,135,good
-10-APR-2023,Strict Press,7,135,good
-10-APR-2023,Arnold Press,10,40,good
-10-APR-2023,Arnold Press,10,40,good
-10-APR-2023,Arnold Press,10,40,good
-10-APR-2023,Pullovers,10,20,good
-10-APR-2023,Pullovers,10,30,good
-10-APR-2023,Pullovers,10,30,good
-12-APR-2023,Deadlift,5,225,good
-12-APR-2023,Deadlift,5,225,good
-12-APR-2023,Deadlift,5,225,good
-12-APR-2023,Deadlift,5,225,good
-12-APR-2023,Deadlift,5,225,good
-12-APR-2023,Lat Pulldown Hang,30,160,good
-12-APR-2023,Lat Pulldown Hang,30,160,good
-12-APR-2023,Lat Pulldown Hang,35,160,good
-12-APR-2023,Bench Press,10,135,warm-up
-12-APR-2023,Bench Press,8,205,good
-12-APR-2023,Bench Press,10,185,good
-12-APR-2023,Bench Press,10,185,good
-12-APR-2023,Cable Pec Flies,10,80,bad
-12-APR-2023,Cable Pec Flies,10,70,good
-12-APR-2023,Cable Pec Flies,10,70,good
-12-APR-2023,Machine Pec Flies,10,175,good
-12-APR-2023,Machine Pec Flies,10,180,good
-12-APR-2023,Machine Pec Flies,10,180,good
-12-APR-2023,Machine Pec Flies,5,220,good
-12-APR-2023,Machine Pec Flies,2,245,good
-14-APR-2023,Lawnmowers,12,50,good
-14-APR-2023,Lawnmowers,12,50,good
-14-APR-2023,Lawnmowers,12,50,good
-14-APR-2023,Seated Row,12,130,good
-14-APR-2023,Seated Row,10,130,good
-14-APR-2023,Seated Row,12,130,good
-14-APR-2023,Lat Pulldown,12,130,good
-14-APR-2023,Lat Pulldown,10,130,good
-14-APR-2023,Lat Pulldown,10,130,good
-14-APR-2023,Bicep Curl,10,30,good
-14-APR-2023,Bicep Curl,12,25,good
-14-APR-2023,Bicep Curl,10,25,good
-14-APR-2023,Hammer Curl,10,30,good
-14-APR-2023,Hammer Curl,10,30,good
-14-APR-2023,Hammer Curl,10,30,good
-14-APR-2023,Preacher Curl,10,62,good
-14-APR-2023,Preacher Curl,10,62,failure
-14-APR-2023,Preacher Curl,10,62,failure
-14-APR-2023,Overhead Tricep Extension,10,30,good
-14-APR-2023,Overhead Tricep Extension,10,30,good
-14-APR-2023,Overhead Tricep Extension,8,30,failure
-14-APR-2023,Skullcrushers,10,62,good
-14-APR-2023,Skullcrushers,10,62,good
-14-APR-2023,Skullcrushers,10,62,good
-14-APR-2023,Push-Ups,20,0,good
-15-APR-2023,Single-Leg Leg Curl,20,70,good
-15-APR-2023,Single-Leg Leg Curl,20,60,good
-15-APR-2023,Plank,60,0,good
-15-APR-2023,Plank,60,0,good
-16-APR-2023,Full Cans,20,5,good
-16-APR-2023,Full Cans,20,5,good
-16-APR-2023,Full Cans,20,5,good
-16-APR-2023,Side-Lying External Rotation,20,5,good
-16-APR-2023,Bent-Over Lateral Lift,12,25,good
-16-APR-2023,Bent-Over Lateral Lift,12,25,good
-16-APR-2023,Bent-Over Lateral Lift,12,25,good
-16-APR-2023,Front Lift,10,30,good
-16-APR-2023,Front Lift,10,30,good
-16-APR-2023,Front Lift,10,30,good
-16-APR-2023,Military Press,5,150,warm-up
-16-APR-2023,Military Press,10,190,good
-16-APR-2023,Military Press,10,190,good
-16-APR-2023,Military Press,10,190,failure
-16-APR-2023,Strict Press,9,135,good
-16-APR-2023,Strict Press,8,135,good
-16-APR-2023,Strict Press,10,135,failure
-16-APR-2023,Arnold Press,10,40,good
-16-APR-2023,Arnold Press,10,40,good
-16-APR-2023,Arnold Press,12,40,good
-18-APR-2023,Deadlift,10,135,warm-up
-18-APR-2023,Deadlift,10,205,good
-18-APR-2023,Deadlift,10,205,good
-18-APR-2023,Deadlift,10,205,good
-18-APR-2023,Deadlift,5,225,good
-18-APR-2023,Deadlift,2,315,good
-18-APR-2023,Deadlift,1,335,good
-18-APR-2023,Plank,60,0,good
-18-APR-2023,Plank,60,0,good
-18-APR-2023,Plank,60,0,good
-18-APR-2023,Bench Press,10,135,warm-up
-18-APR-2023,Bench Press,10,205,good
-18-APR-2023,Bench Press,8,205,good
-18-APR-2023,Bench Press,10,185,good
-18-APR-2023,Bench Press,15,135,good
-18-APR-2023,Dumbbell Press,10,70,good
-18-APR-2023,Dumbbell Press,10,70,good
-18-APR-2023,Dumbbell Press,10,70,good
-18-APR-2023,Upward Cable Pec Flies,10,55,good
-18-APR-2023,Upward Cable Pec Flies,10,55,good
-18-APR-2023,Upward Cable Pec Flies,10,55,good
-18-APR-2023,Machine Pec Flies,10,180,good
-18-APR-2023,Machine Pec Flies,10,180,good
-18-APR-2023,Machine Pec Flies,10,180,good
-18-APR-2023,Machine Pec Flies,3,245,good
-21-APR-2023,Bicep Curl,10,30,good
-21-APR-2023,Bicep Curl,10,30,good
-21-APR-2023,Bicep Curl,10,30,good
-21-APR-2023,Hammer Curl,10,30,good
-21-APR-2023,Hammer Curl,10,30,good
-21-APR-2023,Hammer Curl,10,30,good
-21-APR-2023,Concentration Curl,15,20,good
-21-APR-2023,Concentration Curl,15,20,good
-21-APR-2023,Concentration Curl,15,20,bad (L)
-21-APR-2023,Overhead Tricep Extension,10,30,good
-21-APR-2023,Overhead Tricep Extension,10,30,good
-21-APR-2023,Overhead Tricep Extension,10,30,good
-21-APR-2023,Tricep Pushdown,10,120,good
-21-APR-2023,Tricep Pushdown,10,120,good
-21-APR-2023,Tricep Pushdown,10,120,good
-21-APR-2023,Skullcrushers,10,62,good
-21-APR-2023,Skullcrushers,10,62,good
-21-APR-2023,Skullcrushers,10,62,good
-21-APR-2023,Lawnmowers,10,55,good
-21-APR-2023,Lawnmowers,10,55,good
-21-APR-2023,Lawnmowers,10,55,good
-21-APR-2023,Seated Row,10,130,good
-21-APR-2023,Seated Row,10,130,good
-21-APR-2023,Seated Row,10,130,bad
-21-APR-2023,Lat Pulldown,10,130,good
-21-APR-2023,Lat Pulldown,10,130,good
-21-APR-2023,Lat Pulldown,10,130,bad
-23-APR-2023,Push-Ups,20,0,good
-23-APR-2023,Bent-Over Lateral Lift,10,30,good
-23-APR-2023,Bent-Over Lateral Lift,10,30,good
-23-APR-2023,Bent-Over Lateral Lift,10,30,bad
-23-APR-2023,Front Lift,10,30,good
-23-APR-2023,Front Lift,10,30,good
-23-APR-2023,Front Lift,10,30,good
-23-APR-2023,Military Press,10,190,good
-23-APR-2023,Military Press,10,190,good
-23-APR-2023,Military Press,10,190,good
-23-APR-2023,Strict Press,10,135,good
-23-APR-2023,Strict Press,10,135,good
-23-APR-2023,Strict Press,10,135,good
-23-APR-2023,Arnold Press,12,40,good
-23-APR-2023,Arnold Press,12,40,good
-23-APR-2023,Arnold Press,12,40,good
-23-APR-2023,Single-Leg Leg Curl,10,90,good
-23-APR-2023,Single-Leg Leg Curl,10,100,good
-23-APR-2023,Single-Leg Leg Curl,10,100,bad (R)
-23-APR-2023,Single-Leg Leg Extension,10,100,good
-23-APR-2023,Single-Leg Leg Extension,10,100,good
-23-APR-2023,Single-Leg Leg Extension,10,100,good
-23-APR-2023,Squats,10,205,good
-23-APR-2023,Squats,10,205,good
-23-APR-2023,Squats,10,205,good
-25-APR-2023,Deadlift,10,135,warm-up
-25-APR-2023,Deadlift,10,205,good
-25-APR-2023,Deadlift,10,205,good
-25-APR-2023,Deadlift,10,205,good
-25-APR-2023,Bench Press,5,135,warm-up
-25-APR-2023,Bench Press,10,205,good
-25-APR-2023,Bench Press,10,205,good
-25-APR-2023,Bench Press,10,205,bad
-25-APR-2023,Cable Pec Flies,10,70,good
-25-APR-2023,Cable Pec Flies,12,70,good
-25-APR-2023,Cable Pec Flies,12,70,good
-25-APR-2023,Machine Pec Flies,12,180,good
-25-APR-2023,Machine Pec Flies,12,180,good
-25-APR-2023,Machine Pec Flies,12,180,good
-26-APR-2023,Lawnmowers,10,55,good
-26-APR-2023,Lawnmowers,10,55,good
-26-APR-2023,Lawnmowers,10,55,good
-26-APR-2023,Pullovers,12,30,good
-26-APR-2023,Pullovers,12,30,good
-26-APR-2023,Pullovers,12,30,good
-26-APR-2023,Bicep Curl,10,30,good
-26-APR-2023,Bicep Curl,10,30,good
-26-APR-2023,Bicep Curl,10,30,good
-26-APR-2023,Hammer Curl,12,30,good
-26-APR-2023,Hammer Curl,12,30,good
-26-APR-2023,Hammer Curl,12,30,good
-26-APR-2023,Concentration Curl,10,25,good
-26-APR-2023,Concentration Curl,10,25,good
-26-APR-2023,Concentration Curl,10,25,good
-26-APR-2023,Overhead Tricep Extension,10,30,good
-26-APR-2023,Overhead Tricep Extension,10,30,good
-26-APR-2023,Overhead Tricep Extension,10,30,good
-26-APR-2023,Skullcrushers,12,62,good
-26-APR-2023,Skullcrushers,12,62,good
-26-APR-2023,Skullcrushers,12,62,good
-27-APR-2023,Bench Press,5,135,warm-up
-27-APR-2023,Bench Press,5,225,good
-27-APR-2023,Bench Press,5,245,good
-27-APR-2023,Bench Press,1,275,good
-27-APR-2023,Lat Pulldown,10,130,good
-27-APR-2023,Lat Pulldown,10,130,good
-27-APR-2023,Seated Row,10,130,good
-27-APR-2023,Seated Row,10,130,good
-27-APR-2023,Barbell Bicep Curl,15,40,good
-29-APR-2023,Bent-Over Lateral Lift,10,30,good
-29-APR-2023,Bent-Over Lateral Lift,10,30,good
-29-APR-2023,Bent-Over Lateral Lift,10,30,good
-29-APR-2023,Front Lift,12,30,good
-29-APR-2023,Front Lift,10,30,good
-29-APR-2023,Front Lift,12,30,good
-29-APR-2023,Strict Press,10,135,good
-29-APR-2023,Strict Press,10,135,good
-29-APR-2023,Strict Press,10,135,good
-29-APR-2023,Arnold Press,12,40,good
-29-APR-2023,Arnold Press,12,40,good
-29-APR-2023,Arnold Press,12,40,good
-29-APR-2023,Lunges,10,25,good
-29-APR-2023,Lunges,10,25,good
-29-APR-2023,Lunges,10,25,good
-29-APR-2023,Single-Leg Leg Curl,10,100,good
-29-APR-2023,Single-Leg Leg Curl,10,100,good
-29-APR-2023,Single-Leg Leg Curl,10,100,good
-29-APR-2023,Single-Leg Leg Extension,10,110,good
-29-APR-2023,Single-Leg Leg Extension,10,110,good
-29-APR-2023,Single-Leg Leg Extension,10,110,good
-29-APR-2023,Squats,5,135,warm-up
-29-APR-2023,Squats,10,205,good
-29-APR-2023,Squats,10,205,good
-29-APR-2023,Squats,10,205,good
-01-MAY-2023,Push-Ups,20,0,good
-01-MAY-2023,Push-Ups,20,0,good
-02-MAY-2023,Deadlift,3,145,warm-up
-02-MAY-2023,Deadlift,10,215,good
-02-MAY-2023,Deadlift,10,215,good
-02-MAY-2023,Deadlift,10,215,good
-02-MAY-2023,Deadlift,2,315,good
-02-MAY-2023,Plank,60,0,good
-02-MAY-2023,Plank,60,0,good
-02-MAY-2023,Plank,60,0,good
-02-MAY-2023,Side-Plank,30,0,good
-02-MAY-2023,Side-Plank,30,0,good
-02-MAY-2023,Bench Press,5,135,warm-up
-02-MAY-2023,Bench Press,10,205,good
-02-MAY-2023,Bench Press,8,215,good
-02-MAY-2023,Bench Press,5,225,good
-02-MAY-2023,Bench Press,3,245,good
-02-MAY-2023,Dumbbell Press,10,70,good
-02-MAY-2023,Dumbbell Press,10,70,good
-02-MAY-2023,Dumbbell Press,10,70,good
-02-MAY-2023,Upward Cable Pec Flies,10,55,good
-02-MAY-2023,Upward Cable Pec Flies,10,55,good
-02-MAY-2023,Upward Cable Pec Flies,10,55,good
-02-MAY-2023,Machine Pec Flies,12,180,good
-02-MAY-2023,Machine Pec Flies,12,180,good
-02-MAY-2023,Machine Pec Flies,10,180,good
-03-MAY-2023,Lawnmowers,12,55,good
-03-MAY-2023,Lawnmowers,12,55,good
-03-MAY-2023,Lawnmowers,12,55,good
-03-MAY-2023,Seated Row,10,130,good
-03-MAY-2023,Seated Row,10,130,good
-03-MAY-2023,Seated Row,10,130,good
-03-MAY-2023,Lat Pulldown,10,130,good
-03-MAY-2023,Lat Pulldown,10,130,good
-03-MAY-2023,Lat Pulldown,5,145,good
-03-MAY-2023,Pullovers,12,30,good
-03-MAY-2023,Pullovers,12,30,good
-03-MAY-2023,Pullovers,12,30,good
-03-MAY-2023,Bicep Curl,10,30,good
-03-MAY-2023,Bicep Curl,10,30,good
-03-MAY-2023,Bicep Curl,10,30,good
-03-MAY-2023,Hammer Curl,10,30,good
-03-MAY-2023,Hammer Curl,10,30,good
-03-MAY-2023,Hammer Curl,12,30,good
-03-MAY-2023,Concentration Curl,12,25,good
-03-MAY-2023,Concentration Curl,10,25,good
-03-MAY-2023,Concentration Curl,10,25,good
-03-MAY-2023,Overhead Tricep Extension,10,30,good
-03-MAY-2023,Overhead Tricep Extension,10,30,good
-03-MAY-2023,Overhead Tricep Extension,10,30,good
-03-MAY-2023,Tricep Pushdown,10,120,good
-03-MAY-2023,Tricep Pushdown,10,120,good
-03-MAY-2023,Tricep Pushdown,10,120,good
-03-MAY-2023,Skullcrushers,10,72,good
-03-MAY-2023,Skullcrushers,8,72,good
-03-MAY-2023,Skullcrushers,8,72,good
-05-MAY-2023,Bent-Over Lateral Lift,10,30,good
-05-MAY-2023,Bent-Over Lateral Lift,10,30,good
-05-MAY-2023,Bent-Over Lateral Lift,10,30,good
-05-MAY-2023,Front Lift,12,30,good
-05-MAY-2023,Front Lift,12,30,good
-05-MAY-2023,Front Lift,12,30,good
-05-MAY-2023,Strict Press,10,135,good
-05-MAY-2023,Strict Press,8,135,good
-05-MAY-2023,Strict Press,10,135,good
-05-MAY-2023,Arnold Press,8,45,good
-05-MAY-2023,Arnold Press,8,45,good
-05-MAY-2023,Arnold Press,8,45,good
-05-MAY-2023,Lunges,10,25,good
-05-MAY-2023,Lunges,10,25,good
-05-MAY-2023,Lunges,10,25,good
-05-MAY-2023,Single-Leg Leg Curl,12,100,good
-05-MAY-2023,Single-Leg Leg Curl,12,100,good
-05-MAY-2023,Single-Leg Leg Curl,12,100,good
-05-MAY-2023,Single-Leg Leg Extension,10,110,good
-05-MAY-2023,Single-Leg Leg Extension,10,110,good
-05-MAY-2023,Single-Leg Leg Extension,10,110,good
-05-MAY-2023,Squats,5,135,warm-up
-05-MAY-2023,Squats,10,205,good
-05-MAY-2023,Squats,10,205,good
-05-MAY-2023,Squats,10,205,good
-06-MAY-2023,Full Cans,10,10,good
-06-MAY-2023,Full Cans,12,10,good
-06-MAY-2023,Full Cans,12,10,good
-07-MAY-2023,Deadlift,5,145,warm-up
-07-MAY-2023,Deadlift,5,225,good
-07-MAY-2023,Deadlift,5,245,good
-07-MAY-2023,Deadlift,5,245,good
-07-MAY-2023,Deadlift,5,245,good
-07-MAY-2023,Deadlift,5,245,good
-07-MAY-2023,Plank,60,0,good
-07-MAY-2023,Plank,60,0,good
-07-MAY-2023,Plank,60,0,good
-07-MAY-2023,Side-Plank,30,0,good
-07-MAY-2023,Side-Plank,30,0,good
-07-MAY-2023,Side-Plank,30,0,good
-07-MAY-2023,Bench Press,5,135,warm-up
-07-MAY-2023,Bench Press,5,225,good
-07-MAY-2023,Bench Press,5,245,good
-07-MAY-2023,Bench Press,5,245,good
-07-MAY-2023,Bench Press,5,245,good
-07-MAY-2023,Bench Press,5,245,good
-07-MAY-2023,Cable Pec Flies,10,80,good
-07-MAY-2023,Cable Pec Flies,10,80,good
-07-MAY-2023,Cable Pec Flies,10,80,good
-07-MAY-2023,Machine Pec Flies,5,105,warm-up
-07-MAY-2023,Machine Pec Flies,10,190,good
-07-MAY-2023,Machine Pec Flies,10,190,good
-07-MAY-2023,Machine Pec Flies,10,190,good
-07-MAY-2023,Decline Bench Press,10,135,warm-up
-07-MAY-2023,Decline Bench Press,10,155,warm-up
-07-MAY-2023,Decline Bench Press,10,185,good
-07-MAY-2023,Decline Bench Press,10,185,good
-09-MAY-2023,Lawnmowers,12,55,good
-09-MAY-2023,Lawnmowers,12,55,good
-09-MAY-2023,Lawnmowers,12,55,good
-09-MAY-2023,Seated Row,10,130,good
-09-MAY-2023,Seated Row,10,130,good
-09-MAY-2023,Seated Row,10,130,good
-09-MAY-2023,Lat Pulldown,10,130,good
-09-MAY-2023,Lat Pulldown,10,130,bad
-09-MAY-2023,Lat Pulldown,10,130,bad
-09-MAY-2023,Pullovers,8,35,good
-09-MAY-2023,Pullovers,8,35,good
-09-MAY-2023,Pullovers,8,35,good
-09-MAY-2023,Bicep Curl,10,30,good
-09-MAY-2023,Bicep Curl,10,30,good
-09-MAY-2023,Bicep Curl,10,30,good
-09-MAY-2023,Bicep Curl,1,45,good
-09-MAY-2023,Concentration Curl,10,25,good
-09-MAY-2023,Concentration Curl,10,25,good
-09-MAY-2023,Concentration Curl,10,25,good
-09-MAY-2023,Overhead Tricep Extension,12,30,good
-09-MAY-2023,Overhead Tricep Extension,10,30,good
-09-MAY-2023,Overhead Tricep Extension,10,30,good
-09-MAY-2023,Tricep Pushdown,10,120,good
-09-MAY-2023,Tricep Pushdown,10,120,good
-09-MAY-2023,Tricep Pushdown,12,120,good
-09-MAY-2023,Skullcrushers,10,72,good
-09-MAY-2023,Skullcrushers,10,72,good
-09-MAY-2023,Skullcrushers,10,72,good
-11-MAY-2023,Bent-Over Lateral Lift,10,30,good
-11-MAY-2023,Bent-Over Lateral Lift,10,30,good
-11-MAY-2023,Bent-Over Lateral Lift,10,30,good
-11-MAY-2023,Strict Press,10,135,good
-11-MAY-2023,Strict Press,10,135,good
-11-MAY-2023,Strict Press,8,135,good
-11-MAY-2023,Strict Press,3,155,good
-11-MAY-2023,Arnold Press,10,45,good
-11-MAY-2023,Arnold Press,10,45,good
-11-MAY-2023,Arnold Press,10,45,good
-11-MAY-2023,Lunges,10,25,good
-11-MAY-2023,Lunges,10,25,good
-11-MAY-2023,Lunges,10,25,good
-11-MAY-2023,Single-Leg Leg Curl,12,100,good
-11-MAY-2023,Single-Leg Leg Curl,12,100,good
-11-MAY-2023,Single-Leg Leg Curl,12,100,good
-11-MAY-2023,Single-Leg Leg Extension,10,110,good
-11-MAY-2023,Single-Leg Leg Extension,12,110,good
-11-MAY-2023,Single-Leg Leg Extension,12,110,good
-11-MAY-2023,Squats,5,135,warm-up
-11-MAY-2023,Squats,10,215,good
-11-MAY-2023,Squats,10,215,good
-11-MAY-2023,Squats,10,215,good
-12-MAY-2023,Deadlift,5,135,warm-up
-12-MAY-2023,Deadlift,1,315,good
-12-MAY-2023,Deadlift,1,345,good
-12-MAY-2023,Deadlift,10,225,good
-12-MAY-2023,Side-Plank,30,0,good
-12-MAY-2023,Side-Plank,30,0,good
-12-MAY-2023,Side-Plank,30,0,good
-12-MAY-2023,Bench Press,5,135,warm-up
-12-MAY-2023,Bench Press,1,225,warm-up
-12-MAY-2023,Bench Press,1,275,good
-12-MAY-2023,Bench Press,10,205,good
-12-MAY-2023,Bench Press,10,205,good
-12-MAY-2023,Cable Pec Flies,8,80,good
-12-MAY-2023,Cable Pec Flies,10,80,good
-12-MAY-2023,Cable Pec Flies,10,80,good
-12-MAY-2023,Machine Pec Flies,10,190,good
-12-MAY-2023,Machine Pec Flies,10,190,good
-12-MAY-2023,Machine Pec Flies,10,190,good
-12-MAY-2023,Machine Pec Flies,4,245,good
-13-MAY-2023,Push-Ups,20,0,good
-13-MAY-2023,Push-Ups,20,0,good
-14-MAY-2023,Deadlift,1,135,warm-up
-14-MAY-2023,Deadlift,1,225,warm-up
-14-MAY-2023,Deadlift,1,315,warm-up
-14-MAY-2023,Long-Hang Deadlift,25,225,good
-14-MAY-2023,Long-Hang Deadlift,20,225,good
-14-MAY-2023,Single-Arm Farmer's Carry,50,50,good
-14-MAY-2023,Single-Arm Farmer's Carry,50,50,good
-14-MAY-2023,Single-Arm Farmer's Carry,50,50,good
-14-MAY-2023,Lawnmowers,15,55,good
-14-MAY-2023,Lawnmowers,12,55,good
-14-MAY-2023,Lawnmowers,12,55,good
-14-MAY-2023,Seated Row,10,130,good
-14-MAY-2023,Seated Row,10,130,good
-14-MAY-2023,Seated Row,10,130,good
-14-MAY-2023,Lat Pulldown,8,130,good
-14-MAY-2023,Lat Pulldown,10,130,good
-14-MAY-2023,Lat Pulldown,10,130,good
-14-MAY-2023,Pullovers,10,35,good
-14-MAY-2023,Pullovers,10,35,good
-14-MAY-2023,Pullovers,10,35,good
-14-MAY-2023,Bicep Curl,10,30,good
-14-MAY-2023,Bicep Curl,10,30,good
-14-MAY-2023,Bicep Curl,10,30,good
-14-MAY-2023,Barbell Bicep Curl,20,40,good
-14-MAY-2023,Barbell Bicep Curl,20,40,good
-14-MAY-2023,Barbell Bicep Curl,20,40,good
-14-MAY-2023,Hammer Curl,10,30,good
-14-MAY-2023,Hammer Curl,10,30,good
-14-MAY-2023,Hammer Curl,12,30,good
-14-MAY-2023,Concentration Curl,10,25,good
-14-MAY-2023,Concentration Curl,10,25,good
-14-MAY-2023,Concentration Curl,10,25,good
-14-MAY-2023,Overhead Tricep Extension,10,30,good
-14-MAY-2023,Overhead Tricep Extension,10,30,good
-14-MAY-2023,Overhead Tricep Extension,10,30,good
-14-MAY-2023,Tricep Pushdown,12,120,good
-14-MAY-2023,Tricep Pushdown,10,120,good
-14-MAY-2023,Tricep Pushdown,10,120,good
-14-MAY-2023,Skullcrushers,10,72,good
-14-MAY-2023,Skullcrushers,10,72,good
-14-MAY-2023,Skullcrushers,10,72,good
-16-MAY-2023,Bent-Over Lateral Lift,10,30,good
-16-MAY-2023,Bent-Over Lateral Lift,10,30,good
-16-MAY-2023,Bent-Over Lateral Lift,10,30,good
-16-MAY-2023,Front Lift,10,30,good
-16-MAY-2023,Front Lift,12,30,good
-16-MAY-2023,Front Lift,12,30,good
-16-MAY-2023,Strict Press,5,75,warm-up
-16-MAY-2023,Strict Press,10,135,good
-16-MAY-2023,Strict Press,10,135,good
-16-MAY-2023,Strict Press,10,135,good
-16-MAY-2023,Arnold Press,10,45,good
-16-MAY-2023,Arnold Press,10,45,good
-16-MAY-2023,Arnold Press,10,45,good
-16-MAY-2023,Single-Leg Leg Curl,12,100,good
-16-MAY-2023,Single-Leg Leg Curl,12,100,good
-16-MAY-2023,Single-Leg Leg Curl,12,100,good
-16-MAY-2023,Single-Leg Leg Extension,12,110,good
-16-MAY-2023,Single-Leg Leg Extension,12,110,good
-16-MAY-2023,Single-Leg Leg Extension,12,110,good
-16-MAY-2023,Squats,5,135,warm-up
-16-MAY-2023,Squats,10,225,good
-16-MAY-2023,Squats,10,225,good
-16-MAY-2023,Squats,10,225,good
-17-MAY-2023,Bench Press,20,135,good
-17-MAY-2023,Bench Press,20,155,good
-17-MAY-2023,Decline Bench Press,15,135,good
-19-MAY-2023,Bench Press,5,135,warm-up
-19-MAY-2023,Bench Press,10,205,good
-19-MAY-2023,Bench Press,10,205,good
-19-MAY-2023,Bench Press,12,205,good
-19-MAY-2023,Dumbbell Press,10,70,good
-19-MAY-2023,Dumbbell Press,10,70,good
-19-MAY-2023,Dumbbell Press,10,70,good
-19-MAY-2023,Cable Pec Flies,10,80,good
-19-MAY-2023,Cable Pec Flies,10,80,good
-19-MAY-2023,Cable Pec Flies,10,80,good
-19-MAY-2023,Deadlift,5,135,warm-up
-19-MAY-2023,Deadlift,10,225,good
-19-MAY-2023,Deadlift,10,225,good
-19-MAY-2023,Deadlift,10,225,good
-19-MAY-2023,Plank,60,0,good
-19-MAY-2023,Plank,60,0,good
-19-MAY-2023,Plank,60,0,good
-19-MAY-2023,Side-Plank,30,0,good
-19-MAY-2023,Side-Plank,30,0,good
-19-MAY-2023,Side-Plank,30,0,good
-19-MAY-2023,Push-Ups,20,0,good
-19-MAY-2023,Push-Ups,20,0,good
-19-MAY-2023,Push-Ups,20,0,good
-20-MAY-2023,Strict Press,2,135,warm-up
-20-MAY-2023,Strict Press,1,155,warm-up
-20-MAY-2023,Strict Press,1,185,good
-20-MAY-2023,Strict Press,1,195,good
-20-MAY-2023,Squats,3,135,warm-up
-20-MAY-2023,Squats,1,225,warm-up
-20-MAY-2023,Squats,1,275,good
-20-MAY-2023,Squats,1,315,good
-20-MAY-2023,Squats,1,335,good
-20-MAY-2023,Overhead Tricep Extension,2,40,good
-20-MAY-2023,Overhead Tricep Extension,1,45,failure (L)
-20-MAY-2023,Full Cans,12,10,good
-20-MAY-2023,Full Cans,12,10,good
-20-MAY-2023,Full Cans,12,10,good
-20-MAY-2023,Long-Hang Deadlift,30,225,good
-20-MAY-2023,Long-Hang Deadlift,30,225,good
-20-MAY-2023,Long-Hang Deadlift,24,225,failure
-20-MAY-2023,Delt Flies,10,80,good
-20-MAY-2023,Delt Flies,10,80,good
-20-MAY-2023,Delt Flies,10,90,good
-21-MAY-2023,Bicep Curl,10,30,good
-21-MAY-2023,Bicep Curl,10,30,good
-21-MAY-2023,Bicep Curl,10,30,good
-21-MAY-2023,Overhead Tricep Extension,5,35,good
-21-MAY-2023,Overhead Tricep Extension,5,35,good
-21-MAY-2023,Overhead Tricep Extension,5,35,good
-21-MAY-2023,Hammer Curl,10,30,good
-21-MAY-2023,Hammer Curl,10,30,good
-21-MAY-2023,Hammer Curl,10,30,good
-21-MAY-2023,Skullcrushers,10,72,good
-21-MAY-2023,Skullcrushers,10,72,good
-21-MAY-2023,Skullcrushers,10,72,good
-21-MAY-2023,Tricep Pushdown,10,130,good
-21-MAY-2023,Tricep Pushdown,10,130,good
-21-MAY-2023,Tricep Pushdown,10,130,bad
-21-MAY-2023,Lawnmowers,12,55,good
-21-MAY-2023,Lawnmowers,12,55,good
-21-MAY-2023,Lawnmowers,15,55,good
-21-MAY-2023,Seated Row,10,130,good
-21-MAY-2023,Seated Row,10,130,good
-21-MAY-2023,Seated Row,10,130,good
-21-MAY-2023,Lat Pulldown,10,130,good
-21-MAY-2023,Lat Pulldown,10,130,good
-21-MAY-2023,Lat Pulldown,10,130,good
-21-MAY-2023,Pullovers,10,35,good
-21-MAY-2023,Pullovers,12,35,good
-21-MAY-2023,Pullovers,12,35,good
-23-MAY-2023,Strict Press,10,135,good
-23-MAY-2023,Strict Press,10,135,good
-23-MAY-2023,Strict Press,10,135,good
-23-MAY-2023,Front Lift,12,30,good
-23-MAY-2023,Front Lift,12,30,good
-23-MAY-2023,Front Lift,12,30,good
-23-MAY-2023,Bent-Over Lateral Lift,10,30,good
-23-MAY-2023,Bent-Over Lateral Lift,10,30,good
-23-MAY-2023,Bent-Over Lateral Lift,10,30,good
-23-MAY-2023,Arnold Press,10,45,good
-23-MAY-2023,Arnold Press,10,45,good
-23-MAY-2023,Arnold Press,10,45,good
-23-MAY-2023,Lunges,10,30,good
-23-MAY-2023,Lunges,10,30,good
-23-MAY-2023,Lunges,10,30,good
-23-MAY-2023,Single-Leg Leg Curl,12,100,good
-23-MAY-2023,Single-Leg Leg Curl,10,105,good
-23-MAY-2023,Single-Leg Leg Curl,10,105,good
-23-MAY-2023,Single-Leg Leg Extension,12,110,good
-23-MAY-2023,Single-Leg Leg Extension,12,110,good
-23-MAY-2023,Single-Leg Leg Extension,12,110,good
-23-MAY-2023,Squats,5,135,warm-up
-23-MAY-2023,Squats,10,225,good
-23-MAY-2023,Squats,10,225,good
-23-MAY-2023,Squats,10,225,good
-24-MAY-2023,Bench Press,5,135,warm-up
-24-MAY-2023,Bench Press,5,225,warm-up
-24-MAY-2023,Long-Hang Deadlift,30,225,good
-24-MAY-2023,Long-Hang Deadlift,30,225,good
-24-MAY-2023,Long-Hang Deadlift,20,225,failure
-24-MAY-2023,Deadlift,5,135,warm-up
-25-MAY-2023,Bench Press,5,135,warm-up
-25-MAY-2023,Bench Press,12,205,good
-25-MAY-2023,Bench Press,10,205,good
-25-MAY-2023,Bench Press,11,205,failure
-25-MAY-2023,Dumbbell Press,12,70,good
-25-MAY-2023,Dumbbell Press,12,70,good
-25-MAY-2023,Dumbbell Press,12,70,good
-25-MAY-2023,Cable Pec Flies,8,90,good
-25-MAY-2023,Cable Pec Flies,10,90,good
-25-MAY-2023,Cable Pec Flies,10,90,bad
-25-MAY-2023,Machine Pec Flies,10,195,good
-25-MAY-2023,Machine Pec Flies,10,195,good
-25-MAY-2023,Machine Pec Flies,10,195,good
-25-MAY-2023,Deadlift,15,135,good
-25-MAY-2023,Deadlift,15,155,good
-25-MAY-2023,Deadlift,15,155,good
-25-MAY-2023,Plank,60,0,good
-25-MAY-2023,Plank,60,0,good
-25-MAY-2023,Plank,60,0,good
-25-MAY-2023,Side-Plank,30,0,good
-25-MAY-2023,Side-Plank,30,0,good
-25-MAY-2023,Side-Plank,30,0,good
-25-MAY-2023,Single-Arm Farmer's Carry,50,50,good
-25-MAY-2023,Single-Arm Farmer's Carry,50,50,good
-25-MAY-2023,Single-Arm Farmer's Carry,50,50,good
-26-MAY-2023,Deadlift,15,155,good
-26-MAY-2023,Full Cans,20,10,good
-26-MAY-2023,Full Cans,20,10,good
-26-MAY-2023,Full Cans,20,10,good
-26-MAY-2023,Preacher Curl,5,32,warm-up
-26-MAY-2023,Preacher Curl,1,72,good
-26-MAY-2023,Preacher Curl,1,82,good
-26-MAY-2023,Preacher Curl,1,87,failure
-26-MAY-2023,Lawnmowers,1,60,warm-up
-26-MAY-2023,Lawnmowers,1,70,good
-26-MAY-2023,Lawnmowers,2,75,good
-26-MAY-2023,Lawnmowers,1,82,good
-26-MAY-2023,Arnold Press,5,45,warm-up
-26-MAY-2023,Arnold Press,5,55,good
-26-MAY-2023,Arnold Press,3,65,good
-26-MAY-2023,Arnold Press,1,70,good
-27-MAY-2023,Push-Ups,20,0,good
-27-MAY-2023,Leg Curl,1,150,warm-up
-27-MAY-2023,Leg Curl,1,200,warm-up
-27-MAY-2023,Leg Curl,1,220,good
-27-MAY-2023,Leg Curl,1,240,good
-27-MAY-2023,Leg Curl,1,245,good
-27-MAY-2023,Leg Extension,1,210,warm-up
-27-MAY-2023,Leg Extension,1,230,good
-27-MAY-2023,Leg Extension,1,240,good
-27-MAY-2023,Leg Extension,1,245,good
-27-MAY-2023,Barbell Bicep Curl,12,40,warm-up
-27-MAY-2023,Bicep Curl,12,30,good
-27-MAY-2023,Bicep Curl,12,30,bad
-27-MAY-2023,Bicep Curl,10,30,good
-27-MAY-2023,Hammer Curl,12,30,good
-27-MAY-2023,Hammer Curl,12,30,good
-27-MAY-2023,Hammer Curl,12,30,good
-27-MAY-2023,Overhead Tricep Extension,12,30,good
-27-MAY-2023,Overhead Tricep Extension,12,30,good
-27-MAY-2023,Overhead Tricep Extension,12,30,good
-27-MAY-2023,Tricep Pushdown,10,130,good
-27-MAY-2023,Tricep Pushdown,10,130,good
-27-MAY-2023,Tricep Pushdown,10,130,good
-27-MAY-2023,Skullcrushers,12,72,good
-27-MAY-2023,Skullcrushers,12,72,good
-27-MAY-2023,Skullcrushers,12,72,good
-27-MAY-2023,Lawnmowers,8,60,good
-27-MAY-2023,Lawnmowers,8,60,good
-27-MAY-2023,Lawnmowers,8,60,good
-27-MAY-2023,Seated Row,12,130,good
-27-MAY-2023,Seated Row,12,130,good
-27-MAY-2023,Seated Row,12,130,good
-27-MAY-2023,Lat Pulldown,5,100,warm-up
-27-MAY-2023,Lat Pulldown,1,145,good
-27-MAY-2023,Lat Pulldown,1,160,good
-27-MAY-2023,Lat Pulldown,1,175,good
-27-MAY-2023,Lat Pulldown,1,190,failure
-27-MAY-2023,Lat Pulldown,10,130,good
-27-MAY-2023,Lat Pulldown,10,130,good
-27-MAY-2023,Lat Pulldown,12,130,good
-27-MAY-2023,Pullovers,12,35,good
-27-MAY-2023,Pullovers,12,35,good
-27-MAY-2023,Pullovers,12,35,good
-29-MAY-2023,Lunges,10,30,good
-29-MAY-2023,Lunges,10,30,good
-29-MAY-2023,Lunges,10,30,good
-29-MAY-2023,Single-Leg Leg Curl,10,105,good
-29-MAY-2023,Single-Leg Leg Curl,10,105,good
-29-MAY-2023,Single-Leg Leg Curl,10,105,good
-29-MAY-2023,Single-Leg Leg Extension,10,115,good
-29-MAY-2023,Single-Leg Leg Extension,10,115,good
-29-MAY-2023,Single-Leg Leg Extension,10,115,good
-29-MAY-2023,Squats,5,135,warm-up
-29-MAY-2023,Squats,10,225,good
-29-MAY-2023,Squats,10,225,good
-29-MAY-2023,Squats,10,235,good
-29-MAY-2023,Bent-Over Lateral Lift,10,30,good
-29-MAY-2023,Bent-Over Lateral Lift,10,30,good
-29-MAY-2023,Bent-Over Lateral Lift,10,30,good
-29-MAY-2023,Front Lift,12,30,good
-29-MAY-2023,Front Lift,12,30,good
-29-MAY-2023,Front Lift,12,30,good
-29-MAY-2023,Strict Press,10,135,good
-29-MAY-2023,Strict Press,10,135,good
-29-MAY-2023,Strict Press,10,135,good
-29-MAY-2023,Arnold Press,8,50,good
-29-MAY-2023,Arnold Press,8,50,good
-29-MAY-2023,Arnold Press,8,50,good
-30-MAY-2023,Bench Press,5,135,warm-up
-30-MAY-2023,Bench Press,5,225,good
-30-MAY-2023,Bench Press,5,225,good
-30-MAY-2023,Bench Press,5,245,good
-30-MAY-2023,Bench Press,5,245,good
-30-MAY-2023,Strict Press,5,155,good
-30-MAY-2023,Strict Press,5,155,good
-30-MAY-2023,Overhead Tricep Extension,8,35,good
-30-MAY-2023,Overhead Tricep Extension,5,35,good
-30-MAY-2023,Overhead Tricep Extension,5,35,good
-31-MAY-2023,Deadlift,5,135,warm-up
-31-MAY-2023,Deadlift,10,225,good
-31-MAY-2023,Deadlift,10,225,good
-31-MAY-2023,Deadlift,10,225,good
-31-MAY-2023,Plank,60,0,good
-31-MAY-2023,Plank,60,0,good
-31-MAY-2023,Plank,60,0,good
-31-MAY-2023,Side-Plank,30,0,good
-31-MAY-2023,Side-Plank,30,0,good
-31-MAY-2023,Side-Plank,30,0,good
-31-MAY-2023,Single-Arm Farmer's Carry,50,50,good
-31-MAY-2023,Single-Arm Farmer's Carry,50,50,good
-31-MAY-2023,Single-Arm Farmer's Carry,50,50,good
-31-MAY-2023,Bench Press,5,135,warm-up
-31-MAY-2023,Bench Press,8,225,good
-31-MAY-2023,Bench Press,8,225,good
-31-MAY-2023,Bench Press,8,225,bad
-31-MAY-2023,Dumbbell Press,12,70,good
-31-MAY-2023,Dumbbell Press,12,70,good
-31-MAY-2023,Dumbbell Press,12,70,good
-31-MAY-2023,Cable Pec Flies,10,90,good
-31-MAY-2023,Cable Pec Flies,10,90,good
-31-MAY-2023,Cable Pec Flies,10,90,good
-31-MAY-2023,Machine Pec Flies,10,195,good
-31-MAY-2023,Machine Pec Flies,10,195,good
-31-MAY-2023,Machine Pec Flies,12,195,good
-02-JUN-2023,Bicep Curl,12,30,good
-02-JUN-2023,Bicep Curl,12,30,good
-02-JUN-2023,Bicep Curl,12,30,good
-02-JUN-2023,Hammer Curl,12,30,good
-02-JUN-2023,Hammer Curl,12,30,good
-02-JUN-2023,Hammer Curl,12,30,good
-02-JUN-2023,Preacher Curl,10,62,good
-02-JUN-2023,Preacher Curl,10,62,good
-02-JUN-2023,Preacher Curl,10,62,good
-02-JUN-2023,Overhead Tricep Extension,12,30,good
-02-JUN-2023,Overhead Tricep Extension,12,30,good
-02-JUN-2023,Overhead Tricep Extension,12,30,good
-02-JUN-2023,Tricep Pushdown,10,130,good
-02-JUN-2023,Tricep Pushdown,10,130,good
-02-JUN-2023,Tricep Pushdown,10,130,good
-02-JUN-2023,Skullcrushers,12,72,good
-02-JUN-2023,Skullcrushers,8,82,good
-02-JUN-2023,Skullcrushers,8,82,good
-02-JUN-2023,Lawnmowers,10,60,good
-02-JUN-2023,Lawnmowers,10,60,good
-02-JUN-2023,Lawnmowers,10,60,good
-02-JUN-2023,Seated Row,12,130,good
-02-JUN-2023,Seated Row,10,130,good
-02-JUN-2023,Seated Row,12,130,bad
-02-JUN-2023,Lat Pulldown,12,130,good
-02-JUN-2023,Lat Pulldown,12,130,bad
-02-JUN-2023,Lat Pulldown,10,130,good
-02-JUN-2023,Pullovers,12,35,good
-02-JUN-2023,Pullovers,12,35,good
-02-JUN-2023,Pullovers,12,35,good
-04-JUN-2023,Lateral Lift,5,30,good
-04-JUN-2023,Lateral Lift,5,30,good
-04-JUN-2023,Lateral Lift,5,30,good
-04-JUN-2023,Front Lift,5,40,bad
-04-JUN-2023,Front Lift,5,35,good
-04-JUN-2023,Front Lift,5,35,good
-04-JUN-2023,Front Lift,5,35,good
-04-JUN-2023,Front Lift,5,35,good
-04-JUN-2023,Strict Press,2,135,warm-up
-04-JUN-2023,Strict Press,5,145,good
-04-JUN-2023,Strict Press,5,155,good
-04-JUN-2023,Strict Press,5,155,good
-04-JUN-2023,Strict Press,5,155,good
-04-JUN-2023,Strict Press,5,155,good
-04-JUN-2023,Arnold Press,5,55,good
-04-JUN-2023,Arnold Press,5,55,good
-04-JUN-2023,Arnold Press,5,60,good
-04-JUN-2023,Arnold Press,5,60,good
-04-JUN-2023,Arnold Press,5,60,good
-04-JUN-2023,Full Cans,20,10,good
-04-JUN-2023,Full Cans,20,10,good
-04-JUN-2023,Full Cans,20,10,good
-04-JUN-2023,Lunges,10,30,good
-04-JUN-2023,Lunges,10,30,good
-04-JUN-2023,Lunges,10,30,good
-04-JUN-2023,Single-Leg Leg Curl,5,115,good
-04-JUN-2023,Single-Leg Leg Curl,5,120,good
-04-JUN-2023,Single-Leg Leg Curl,5,120,good
-04-JUN-2023,Single-Leg Leg Curl,5,120,good
-04-JUN-2023,Single-Leg Leg Curl,5,120,good
-04-JUN-2023,Single-Leg Leg Extension,5,130,good
-04-JUN-2023,Single-Leg Leg Extension,5,135,good
-04-JUN-2023,Single-Leg Leg Extension,5,135,good
-04-JUN-2023,Single-Leg Leg Extension,5,135,good
-04-JUN-2023,Single-Leg Leg Extension,5,135,good
-04-JUN-2023,Squats,5,135,warm-up
-04-JUN-2023,Squats,5,245,good
-04-JUN-2023,Squats,5,275,good
-04-JUN-2023,Squats,5,275,good
-04-JUN-2023,Squats,5,265,good
-04-JUN-2023,Squats,5,265,good
-06-JUN-2023,Deadlift,5,135,warm-up
-06-JUN-2023,Deadlift,5,275,good
-06-JUN-2023,Deadlift,5,275,good
-06-JUN-2023,Deadlift,5,275,good
-06-JUN-2023,Deadlift,5,275,good
-06-JUN-2023,Deadlift,5,285,good
-06-JUN-2023,Plank,60,0,good
-06-JUN-2023,Plank,60,0,good
-06-JUN-2023,Side-Plank,30,0,good
-06-JUN-2023,Side-Plank,30,0,good
-06-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-06-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-06-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-06-JUN-2023,Bench Press,5,135,warm-up
-06-JUN-2023,Bench Press,8,225,good
-06-JUN-2023,Bench Press,8,225,good
-06-JUN-2023,Bench Press,8,225,good
-06-JUN-2023,Dumbbell Press,8,75,good
-06-JUN-2023,Dumbbell Press,8,75,good
-06-JUN-2023,Dumbbell Press,8,75,good
-06-JUN-2023,Upward Cable Pec Flies,10,55,good
-06-JUN-2023,Upward Cable Pec Flies,12,55,good
-06-JUN-2023,Machine Pec Flies,5,230,good
-06-JUN-2023,Machine Pec Flies,5,230,good
-06-JUN-2023,Machine Pec Flies,5,230,good
-06-JUN-2023,Machine Pec Flies,5,230,good
-06-JUN-2023,Machine Pec Flies,5,230,good
-08-JUN-2023,Bicep Curl,5,35,good
-08-JUN-2023,Bicep Curl,5,35,good
-08-JUN-2023,Bicep Curl,5,35,good
-08-JUN-2023,Bicep Curl,5,35,good
-08-JUN-2023,Bicep Curl,5,35,good
-08-JUN-2023,Hammer Curl,5,35,good
-08-JUN-2023,Hammer Curl,5,35,good
-08-JUN-2023,Hammer Curl,5,35,good
-08-JUN-2023,Hammer Curl,5,35,good
-08-JUN-2023,Hammer Curl,5,35,good
-08-JUN-2023,Concentration Curl,5,30,good
-08-JUN-2023,Concentration Curl,5,30,good
-08-JUN-2023,Concentration Curl,5,30,good
-08-JUN-2023,Concentration Curl,5,30,good
-08-JUN-2023,Concentration Curl,5,30,good
-08-JUN-2023,Concentration Curl,5,35,good
-08-JUN-2023,Overhead Tricep Extension,5,35,good
-08-JUN-2023,Overhead Tricep Extension,5,35,good
-08-JUN-2023,Overhead Tricep Extension,5,35,good
-08-JUN-2023,Overhead Tricep Extension,5,35,good
-08-JUN-2023,Overhead Tricep Extension,5,35,good
-08-JUN-2023,Overhead Tricep Extension,5,40,failure (L)
-08-JUN-2023,Tricep Pushdown,5,150,good
-08-JUN-2023,Tricep Pushdown,5,150,good
-08-JUN-2023,Tricep Pushdown,5,150,good
-08-JUN-2023,Tricep Pushdown,5,150,good
-08-JUN-2023,Tricep Pushdown,5,150,good
-08-JUN-2023,Skullcrushers,5,92,bad
-08-JUN-2023,Skullcrushers,5,82,good
-08-JUN-2023,Skullcrushers,5,82,good
-08-JUN-2023,Skullcrushers,5,82,good
-08-JUN-2023,Skullcrushers,5,82,good
-08-JUN-2023,Lawnmowers,8,70,good
-08-JUN-2023,Lawnmowers,5,75,good
-08-JUN-2023,Lawnmowers,5,75,good
-08-JUN-2023,Lawnmowers,5,75,good
-08-JUN-2023,Lawnmowers,5,75,good
-08-JUN-2023,Seated Row,5,145,good
-08-JUN-2023,Seated Row,5,145,good
-08-JUN-2023,Seated Row,5,145,good
-08-JUN-2023,Seated Row,5,145,good
-08-JUN-2023,Seated Row,5,145,bad
-08-JUN-2023,Lat Pulldown,5,145,good
-08-JUN-2023,Lat Pulldown,5,145,good
-08-JUN-2023,Lat Pulldown,5,145,good
-08-JUN-2023,Lat Pulldown,5,145,good
-08-JUN-2023,Lat Pulldown,5,145,good
-08-JUN-2023,Pullovers,8,45,good
-08-JUN-2023,Pullovers,5,50,good
-08-JUN-2023,Pullovers,5,50,good
-08-JUN-2023,Pullovers,5,50,good
-08-JUN-2023,Pullovers,5,50,good
-10-JUN-2023,Bent-Over Lateral Lift,15,20,good
-10-JUN-2023,Bent-Over Lateral Lift,15,20,good
-10-JUN-2023,Bent-Over Lateral Lift,15,20,good
-10-JUN-2023,Front Lift,15,25,good
-10-JUN-2023,Front Lift,20,20,good
-10-JUN-2023,Front Lift,20,20,good
-10-JUN-2023,Strict Press,17,105,good
-10-JUN-2023,Strict Press,15,100,good
-10-JUN-2023,Strict Press,15,95,good
-10-JUN-2023,Arnold Press,20,40,bad
-10-JUN-2023,Arnold Press,20,35,good
-10-JUN-2023,Arnold Press,20,35,good
-10-JUN-2023,Full Cans,20,10,good
-10-JUN-2023,Full Cans,20,10,good
-10-JUN-2023,Full Cans,20,10,good
-10-JUN-2023,Leg Press,20,175,good
-10-JUN-2023,Leg Press,20,190,good
-10-JUN-2023,Leg Press,20,190,good
-10-JUN-2023,Lunges,10,30,good
-10-JUN-2023,Lunges,10,30,good
-10-JUN-2023,Lunges,10,30,good
-10-JUN-2023,Single-Leg Leg Curl,20,70,good
-10-JUN-2023,Single-Leg Leg Curl,20,70,good
-10-JUN-2023,Single-Leg Leg Curl,20,70,good
-10-JUN-2023,Single-Leg Leg Extension,15,80,good
-10-JUN-2023,Single-Leg Leg Extension,20,70,good
-10-JUN-2023,Single-Leg Leg Extension,20,70,good
-10-JUN-2023,Squats,5,135,warm-up
-10-JUN-2023,Squats,20,175,good
-10-JUN-2023,Squats,20,175,good
-10-JUN-2023,Squats,20,175,good
-12-JUN-2023,Plank,60,0,good
-12-JUN-2023,Plank,60,0,good
-12-JUN-2023,Plank,60,0,good
-12-JUN-2023,Side-Plank,30,0,good
-12-JUN-2023,Side-Plank,30,0,good
-12-JUN-2023,Side-Plank,30,0,good
-12-JUN-2023,Deadlift,20,155,good
-12-JUN-2023,Deadlift,20,155,good
-12-JUN-2023,Deadlift,20,155,good
-12-JUN-2023,Deadlift,3,225,warm-up
-12-JUN-2023,Deadlift,1,315,fun
-12-JUN-2023,Deadlift,1,335,fun
-12-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-12-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-12-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-12-JUN-2023,Bench Press,5,135,warm-up
-12-JUN-2023,Bench Press,20,155,good
-12-JUN-2023,Bench Press,15,155,good
-12-JUN-2023,Bench Press,20,135,good
-12-JUN-2023,Dumbbell Press,20,50,good
-12-JUN-2023,Dumbbell Press,20,50,good
-12-JUN-2023,Dumbbell Press,20,50,good
-12-JUN-2023,Decline Bench Press,10,185,good
-12-JUN-2023,Decline Bench Press,10,185,good
-12-JUN-2023,Decline Bench Press,10,205,good
-14-JUN-2023,Bicep Curl,5,20,warm-up
-14-JUN-2023,Bicep Curl,12,30,good
-14-JUN-2023,Bicep Curl,12,30,bad
-14-JUN-2023,Bicep Curl,10,30,good
-14-JUN-2023,Hammer Curl,12,30,good
-14-JUN-2023,Hammer Curl,12,30,bad
-14-JUN-2023,Hammer Curl,12,30,good
-14-JUN-2023,Preacher Curl,5,72,good
-14-JUN-2023,Preacher Curl,8,62,good
-14-JUN-2023,Preacher Curl,10,62,good
-14-JUN-2023,Overhead Tricep Extension,5,20,warm-up
-14-JUN-2023,Overhead Tricep Extension,12,30,good
-14-JUN-2023,Overhead Tricep Extension,10,30,good
-14-JUN-2023,Overhead Tricep Extension,10,30,good
-14-JUN-2023,Tricep Pushdown,10,130,good
-14-JUN-2023,Tricep Pushdown,10,130,good
-14-JUN-2023,Tricep Pushdown,10,130,good
-14-JUN-2023,Skullcrushers,10,82,good
-14-JUN-2023,Skullcrushers,10,82,good
-14-JUN-2023,Skullcrushers,10,82,good
-14-JUN-2023,Lawnmowers,10,60,good
-14-JUN-2023,Lawnmowers,10,60,good
-14-JUN-2023,Lawnmowers,10,60,good
-14-JUN-2023,Seated Row,10,130,good
-14-JUN-2023,Seated Row,10,130,bad
-14-JUN-2023,Seated Row,10,130,good
-14-JUN-2023,Lat Pulldown,10,130,good
-14-JUN-2023,Lat Pulldown,10,130,good
-14-JUN-2023,Lat Pulldown,10,130,bad
-16-JUN-2023,Lateral Lift,10,25,good
-16-JUN-2023,Lateral Lift,10,25,good
-16-JUN-2023,Lateral Lift,10,25,good
-16-JUN-2023,Military Press,5,245,good
-16-JUN-2023,Military Press,4,245,fun
-16-JUN-2023,Military Press,3,245,fun
-16-JUN-2023,Military Press,2,245,fun
-16-JUN-2023,Military Press,1,245,fun
-16-JUN-2023,Strict Press,10,135,good
-16-JUN-2023,Strict Press,10,135,good
-16-JUN-2023,Strict Press,10,135,good
-16-JUN-2023,Arnold Press,10,50,good
-16-JUN-2023,Arnold Press,10,50,good
-16-JUN-2023,Arnold Press,10,50,good
-16-JUN-2023,Full Cans,20,10,good
-16-JUN-2023,Full Cans,20,10,good
-16-JUN-2023,Full Cans,20,10,good
-16-JUN-2023,Single-Leg Leg Curl,10,115,bad
-16-JUN-2023,Single-Leg Leg Curl,10,110,good
-16-JUN-2023,Single-Leg Leg Curl,8,110,good
-16-JUN-2023,Single-Leg Leg Extension,10,120,good
-16-JUN-2023,Single-Leg Leg Extension,10,120,good
-16-JUN-2023,Single-Leg Leg Extension,10,120,good
-16-JUN-2023,Squats,5,135,warm-up
-16-JUN-2023,Squats,10,235,good
-16-JUN-2023,Squats,10,235,good
-16-JUN-2023,Squats,10,235,good
-16-JUN-2023,Barbell Calf Raise,20,135,easy
-16-JUN-2023,Barbell Calf Raise,20,155,easy
-16-JUN-2023,Barbell Calf Raise,20,175,good
-17-JUN-2023,Deadlift,2,225,warm-up
-17-JUN-2023,Deadlift,5,275,warm-up
-17-JUN-2023,Deadlift,1,315,good
-17-JUN-2023,Deadlift,1,345,good
-17-JUN-2023,Deadlift,1,345,failure
-18-JUN-2023,Deadlift,5,135,warm-up
-18-JUN-2023,Deadlift,8,235,good
-18-JUN-2023,Deadlift,8,235,good
-18-JUN-2023,Deadlift,8,235,good
-18-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-18-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-18-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-18-JUN-2023,Plank,60,0,good
-18-JUN-2023,Plank,60,0,good
-18-JUN-2023,Plank,60,0,good
-18-JUN-2023,Side-Plank,30,0,good
-18-JUN-2023,Side-Plank,30,0,good
-18-JUN-2023,Side-Plank,30,0,good
-18-JUN-2023,Bench Press,5,135,warm-up
-18-JUN-2023,Bench Press,8,225,good
-18-JUN-2023,Bench Press,8,225,good
-18-JUN-2023,Bench Press,8,225,good
-18-JUN-2023,Dumbbell Press,8,75,good
-18-JUN-2023,Dumbbell Press,8,75,good
-18-JUN-2023,Dumbbell Press,8,75,good
-18-JUN-2023,Cable Pec Flies,10,90,good
-18-JUN-2023,Cable Pec Flies,10,90,good
-18-JUN-2023,Cable Pec Flies,10,90,good
-19-JUN-2023,Lateral Lift,10,25,good
-19-JUN-2023,Lateral Lift,10,25,good
-19-JUN-2023,Lateral Lift,10,25,good
-19-JUN-2023,Arnold Press,10,50,good
-19-JUN-2023,Arnold Press,10,50,good
-19-JUN-2023,Arnold Press,10,50,good
-19-JUN-2023,Overhead Tricep Extension,5,35,good
-19-JUN-2023,Overhead Tricep Extension,5,35,good
-19-JUN-2023,Overhead Tricep Extension,5,35,good
-19-JUN-2023,Overhead Tricep Extension,5,35,good
-19-JUN-2023,Overhead Tricep Extension,5,35,good
-19-JUN-2023,Plank,60,0,good
-19-JUN-2023,Plank,60,0,good
-19-JUN-2023,Plank,60,0,good
-19-JUN-2023,Side-Plank,30,0,good
-19-JUN-2023,Side-Plank,30,0,good
-19-JUN-2023,Side-Plank,30,0,good
-19-JUN-2023,Concentration Curl,10,25,good
-19-JUN-2023,Concentration Curl,10,25,good
-19-JUN-2023,Concentration Curl,10,25,good
-19-JUN-2023,Barbell Calf Raise,20,175,good
-19-JUN-2023,Barbell Calf Raise,20,175,good
-19-JUN-2023,Barbell Calf Raise,20,175,good
-19-JUN-2023,Leg Press,20,190,good
-19-JUN-2023,Leg Press,20,190,good
-19-JUN-2023,Leg Press,20,190,good
-20-JUN-2023,Lunges,10,30,good
-20-JUN-2023,Lunges,10,30,good
-20-JUN-2023,Lunges,10,30,good
-20-JUN-2023,Shrugs,10,40,good
-20-JUN-2023,Shrugs,10,40,good
-20-JUN-2023,Shrugs,10,40,good
-21-JUN-2023,Delt Flies,10,90,good
-21-JUN-2023,Delt Flies,10,90,good
-21-JUN-2023,Delt Flies,10,90,bad
-21-JUN-2023,Lat Pulldown,15,115,good
-21-JUN-2023,Lat Pulldown,15,115,bad
-21-JUN-2023,Lat Pulldown,10,115,bad
-22-JUN-2023,Single-Leg Leg Curl,20,80,good
-22-JUN-2023,Single-Leg Leg Curl,20,75,good
-22-JUN-2023,Single-Leg Leg Curl,20,75,good
-22-JUN-2023,Seated Row (Wide-Natural Grip),15,100,good
-22-JUN-2023,Seated Row,15,115,good
-22-JUN-2023,Seated Row,15,115,good
-27-JUN-2023,Bicep Curl,10,30,good
-27-JUN-2023,Bicep Curl,10,30,good
-27-JUN-2023,Bicep Curl,10,30,good
-27-JUN-2023,Overhead Tricep Extension,10,30,good
-27-JUN-2023,Overhead Tricep Extension,10,30,good
-27-JUN-2023,Overhead Tricep Extension,10,30,good
-27-JUN-2023,Bench Press,5,135,warm-up
-27-JUN-2023,Bench Press,2,225,warm-up
-27-JUN-2023,Bench Press,1,285,good
-27-JUN-2023,Bench Press,5,255,good
-27-JUN-2023,Bench Press,5,245,good
-27-JUN-2023,Bench Press,5,245,good
-27-JUN-2023,Bench Press,5,245,failure
-27-JUN-2023,Bench Press,5,225,good
-28-JUN-2023,Arnold Press,10,50,good
-28-JUN-2023,Arnold Press,10,50,good
-28-JUN-2023,Arnold Press,10,50,good
-28-JUN-2023,Lawnmowers,8,65,good
-28-JUN-2023,Lawnmowers,8,65,good
-28-JUN-2023,Lawnmowers,8,65,good
-28-JUN-2023,Lateral Lift,10,25,good
-28-JUN-2023,Lateral Lift,10,25,good
-28-JUN-2023,Lateral Lift,10,25,good
-29-JUN-2023,Strict Press,5,145,good
-29-JUN-2023,Strict Press,5,155,good
+05-JUL-2023,Push-Ups,20,0,good
+05-JUL-2023,Push-Ups,20,0,good
+05-JUL-2023,Push-Ups,20,0,good
+05-JUL-2023,Side-Plank,30,0,good
+05-JUL-2023,Side-Plank,30,0,good
+05-JUL-2023,Side-Plank,30,0,good
+05-JUL-2023,Plank,60,0,good
+05-JUL-2023,Plank,60,0,good
+05-JUL-2023,Plank,60,0,good
+05-JUL-2023,Pullovers,12,35,good
+05-JUL-2023,Pullovers,12,35,good
+05-JUL-2023,Pullovers,12,35,good
+05-JUL-2023,Concentration Curl,10,25,good
+05-JUL-2023,Concentration Curl,10,25,good
+05-JUL-2023,Concentration Curl,12,25,good
+05-JUL-2023,Deadlift,10,235,good
+05-JUL-2023,Deadlift,10,235,good
+05-JUL-2023,Deadlift,10,225,good
+05-JUL-2023,Deadlift,5,135,warm-up
+04-JUL-2023,Bench Press,20,145,good
+04-JUL-2023,Bench Press,20,155,good
+04-JUL-2023,Bench Press,20,155,good
+04-JUL-2023,Bench Press,5,135,warm-up
+04-JUL-2023,Skullcrushers,10,82,good
+04-JUL-2023,Skullcrushers,10,82,good
+04-JUL-2023,Skullcrushers,10,82,good
+04-JUL-2023,Lateral Lift,15,20,good
+04-JUL-2023,Lateral Lift,15,20,good
+04-JUL-2023,Lateral Lift,15,20,good
+04-JUL-2023,Hammer Curl,12,30,good
+04-JUL-2023,Hammer Curl,12,30,good
+04-JUL-2023,Hammer Curl,12,30,good
+29-JUN-2023,Full Cans,20,10,good
+29-JUN-2023,Full Cans,20,10,good
+29-JUN-2023,Full Cans,20,10,good
+29-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+29-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+29-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+29-JUN-2023,Front Lift,10,30,good
+29-JUN-2023,Front Lift,10,30,good
+29-JUN-2023,Front Lift,10,30,good
+29-JUN-2023,Side-Plank,30,0,good
+29-JUN-2023,Side-Plank,30,0,good
+29-JUN-2023,Side-Plank,30,0,good
+29-JUN-2023,Plank,60,0,good
+29-JUN-2023,Plank,60,0,good
+29-JUN-2023,Plank,60,0,good
+29-JUN-2023,Deadlift,5,255,good
+29-JUN-2023,Deadlift,5,255,good
+29-JUN-2023,Deadlift,5,255,good
+29-JUN-2023,Deadlift,5,255,good
+29-JUN-2023,Deadlift,5,255,good
+29-JUN-2023,Deadlift,3,225,warm-up
+29-JUN-2023,Deadlift,5,135,warm-up
 29-JUN-2023,Strict Press,5,155,good
 29-JUN-2023,Strict Press,5,165,bad
 29-JUN-2023,Strict Press,5,155,good
-29-JUN-2023,Deadlift,5,135,warm-up
-29-JUN-2023,Deadlift,3,225,warm-up
-29-JUN-2023,Deadlift,5,255,good
-29-JUN-2023,Deadlift,5,255,good
-29-JUN-2023,Deadlift,5,255,good
-29-JUN-2023,Deadlift,5,255,good
-29-JUN-2023,Deadlift,5,255,good
-29-JUN-2023,Plank,60,0,good
-29-JUN-2023,Plank,60,0,good
-29-JUN-2023,Plank,60,0,good
-29-JUN-2023,Side-Plank,30,0,good
-29-JUN-2023,Side-Plank,30,0,good
-29-JUN-2023,Side-Plank,30,0,good
-29-JUN-2023,Front Lift,10,30,good
-29-JUN-2023,Front Lift,10,30,good
-29-JUN-2023,Front Lift,10,30,good
-29-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-29-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-29-JUN-2023,Single-Arm Farmer's Carry,50,50,good
-29-JUN-2023,Full Cans,20,10,good
-29-JUN-2023,Full Cans,20,10,good
-29-JUN-2023,Full Cans,20,10,good
-04-JUL-2023,Hammer Curl,12,30,good
-04-JUL-2023,Hammer Curl,12,30,good
-04-JUL-2023,Hammer Curl,12,30,good
-04-JUL-2023,Lateral Lift,15,20,good
-04-JUL-2023,Lateral Lift,15,20,good
-04-JUL-2023,Lateral Lift,15,20,good
-04-JUL-2023,Skullcrushers,10,82,good
-04-JUL-2023,Skullcrushers,10,82,good
-04-JUL-2023,Skullcrushers,10,82,good
-04-JUL-2023,Bench Press,5,135,warm-up
-04-JUL-2023,Bench Press,20,155,good
-04-JUL-2023,Bench Press,20,155,good
-04-JUL-2023,Bench Press,20,145,good
-05-JUL-2023,Deadlift,5,135,warm-up
-05-JUL-2023,Deadlift,10,225,good
-05-JUL-2023,Deadlift,10,235,good
-05-JUL-2023,Deadlift,10,235,good
-05-JUL-2023,Concentration Curl,12,25,good
-05-JUL-2023,Concentration Curl,10,25,good
-05-JUL-2023,Concentration Curl,10,25,good
-05-JUL-2023,Pullovers,12,35,good
-05-JUL-2023,Pullovers,12,35,good
-05-JUL-2023,Pullovers,12,35,good
-05-JUL-2023,Plank,60,0,good
-05-JUL-2023,Plank,60,0,good
-05-JUL-2023,Plank,60,0,good
-05-JUL-2023,Side-Plank,30,0,good
-05-JUL-2023,Side-Plank,30,0,good
-05-JUL-2023,Side-Plank,30,0,good
-05-JUL-2023,Push-Ups,20,0,good
-05-JUL-2023,Push-Ups,20,0,good
-05-JUL-2023,Push-Ups,20,0,good
+29-JUN-2023,Strict Press,5,155,good
+29-JUN-2023,Strict Press,5,145,good
+28-JUN-2023,Lateral Lift,10,25,good
+28-JUN-2023,Lateral Lift,10,25,good
+28-JUN-2023,Lateral Lift,10,25,good
+28-JUN-2023,Lawnmowers,8,65,good
+28-JUN-2023,Lawnmowers,8,65,good
+28-JUN-2023,Lawnmowers,8,65,good
+28-JUN-2023,Arnold Press,10,50,good
+28-JUN-2023,Arnold Press,10,50,good
+28-JUN-2023,Arnold Press,10,50,good
+27-JUN-2023,Bench Press,5,225,good
+27-JUN-2023,Bench Press,5,245,failure
+27-JUN-2023,Bench Press,5,245,good
+27-JUN-2023,Bench Press,5,245,good
+27-JUN-2023,Bench Press,5,255,good
+27-JUN-2023,Bench Press,1,285,good
+27-JUN-2023,Bench Press,2,225,warm-up
+27-JUN-2023,Bench Press,5,135,warm-up
+27-JUN-2023,Overhead Tricep Extension,10,30,good
+27-JUN-2023,Overhead Tricep Extension,10,30,good
+27-JUN-2023,Overhead Tricep Extension,10,30,good
+27-JUN-2023,Bicep Curl,10,30,good
+27-JUN-2023,Bicep Curl,10,30,good
+27-JUN-2023,Bicep Curl,10,30,good
+22-JUN-2023,Seated Row,15,115,good
+22-JUN-2023,Seated Row,15,115,good
+22-JUN-2023,Seated Row (Wide-Natural Grip),15,100,good
+22-JUN-2023,Single-Leg Leg Curl,20,75,good
+22-JUN-2023,Single-Leg Leg Curl,20,75,good
+22-JUN-2023,Single-Leg Leg Curl,20,80,good
+21-JUN-2023,Lat Pulldown,10,115,bad
+21-JUN-2023,Lat Pulldown,15,115,bad
+21-JUN-2023,Lat Pulldown,15,115,good
+21-JUN-2023,Delt Flies,10,90,bad
+21-JUN-2023,Delt Flies,10,90,good
+21-JUN-2023,Delt Flies,10,90,good
+20-JUN-2023,Shrugs,10,40,good
+20-JUN-2023,Shrugs,10,40,good
+20-JUN-2023,Shrugs,10,40,good
+20-JUN-2023,Lunges,10,30,good
+20-JUN-2023,Lunges,10,30,good
+20-JUN-2023,Lunges,10,30,good
+19-JUN-2023,Leg Press,20,190,good
+19-JUN-2023,Leg Press,20,190,good
+19-JUN-2023,Leg Press,20,190,good
+19-JUN-2023,Barbell Calf Raise,20,175,good
+19-JUN-2023,Barbell Calf Raise,20,175,good
+19-JUN-2023,Barbell Calf Raise,20,175,good
+19-JUN-2023,Concentration Curl,10,25,good
+19-JUN-2023,Concentration Curl,10,25,good
+19-JUN-2023,Concentration Curl,10,25,good
+19-JUN-2023,Side-Plank,30,0,good
+19-JUN-2023,Side-Plank,30,0,good
+19-JUN-2023,Side-Plank,30,0,good
+19-JUN-2023,Plank,60,0,good
+19-JUN-2023,Plank,60,0,good
+19-JUN-2023,Plank,60,0,good
+19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Arnold Press,10,50,good
+19-JUN-2023,Arnold Press,10,50,good
+19-JUN-2023,Arnold Press,10,50,good
+19-JUN-2023,Lateral Lift,10,25,good
+19-JUN-2023,Lateral Lift,10,25,good
+19-JUN-2023,Lateral Lift,10,25,good
+18-JUN-2023,Cable Pec Flies,10,90,good
+18-JUN-2023,Cable Pec Flies,10,90,good
+18-JUN-2023,Cable Pec Flies,10,90,good
+18-JUN-2023,Dumbbell Press,8,75,good
+18-JUN-2023,Dumbbell Press,8,75,good
+18-JUN-2023,Dumbbell Press,8,75,good
+18-JUN-2023,Bench Press,8,225,good
+18-JUN-2023,Bench Press,8,225,good
+18-JUN-2023,Bench Press,8,225,good
+18-JUN-2023,Bench Press,5,135,warm-up
+18-JUN-2023,Side-Plank,30,0,good
+18-JUN-2023,Side-Plank,30,0,good
+18-JUN-2023,Side-Plank,30,0,good
+18-JUN-2023,Plank,60,0,good
+18-JUN-2023,Plank,60,0,good
+18-JUN-2023,Plank,60,0,good
+18-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+18-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+18-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+18-JUN-2023,Deadlift,8,235,good
+18-JUN-2023,Deadlift,8,235,good
+18-JUN-2023,Deadlift,8,235,good
+18-JUN-2023,Deadlift,5,135,warm-up
+17-JUN-2023,Deadlift,1,345,failure
+17-JUN-2023,Deadlift,1,345,good
+17-JUN-2023,Deadlift,1,315,good
+17-JUN-2023,Deadlift,5,275,warm-up
+17-JUN-2023,Deadlift,2,225,warm-up
+16-JUN-2023,Barbell Calf Raise,20,175,good
+16-JUN-2023,Barbell Calf Raise,20,155,easy
+16-JUN-2023,Barbell Calf Raise,20,135,easy
+16-JUN-2023,Squats,10,235,good
+16-JUN-2023,Squats,10,235,good
+16-JUN-2023,Squats,10,235,good
+16-JUN-2023,Squats,5,135,warm-up
+16-JUN-2023,Single-Leg Leg Extension,10,120,good
+16-JUN-2023,Single-Leg Leg Extension,10,120,good
+16-JUN-2023,Single-Leg Leg Extension,10,120,good
+16-JUN-2023,Single-Leg Leg Curl,8,110,good
+16-JUN-2023,Single-Leg Leg Curl,10,110,good
+16-JUN-2023,Single-Leg Leg Curl,10,115,bad
+16-JUN-2023,Full Cans,20,10,good
+16-JUN-2023,Full Cans,20,10,good
+16-JUN-2023,Full Cans,20,10,good
+16-JUN-2023,Arnold Press,10,50,good
+16-JUN-2023,Arnold Press,10,50,good
+16-JUN-2023,Arnold Press,10,50,good
+16-JUN-2023,Strict Press,10,135,good
+16-JUN-2023,Strict Press,10,135,good
+16-JUN-2023,Strict Press,10,135,good
+16-JUN-2023,Military Press,1,245,fun
+16-JUN-2023,Military Press,2,245,fun
+16-JUN-2023,Military Press,3,245,fun
+16-JUN-2023,Military Press,4,245,fun
+16-JUN-2023,Military Press,5,245,good
+16-JUN-2023,Lateral Lift,10,25,good
+16-JUN-2023,Lateral Lift,10,25,good
+16-JUN-2023,Lateral Lift,10,25,good
+14-JUN-2023,Lat Pulldown,10,130,bad
+14-JUN-2023,Lat Pulldown,10,130,good
+14-JUN-2023,Lat Pulldown,10,130,good
+14-JUN-2023,Seated Row,10,130,good
+14-JUN-2023,Seated Row,10,130,bad
+14-JUN-2023,Seated Row,10,130,good
+14-JUN-2023,Lawnmowers,10,60,good
+14-JUN-2023,Lawnmowers,10,60,good
+14-JUN-2023,Lawnmowers,10,60,good
+14-JUN-2023,Skullcrushers,10,82,good
+14-JUN-2023,Skullcrushers,10,82,good
+14-JUN-2023,Skullcrushers,10,82,good
+14-JUN-2023,Tricep Pushdown,10,130,good
+14-JUN-2023,Tricep Pushdown,10,130,good
+14-JUN-2023,Tricep Pushdown,10,130,good
+14-JUN-2023,Overhead Tricep Extension,10,30,good
+14-JUN-2023,Overhead Tricep Extension,10,30,good
+14-JUN-2023,Overhead Tricep Extension,12,30,good
+14-JUN-2023,Overhead Tricep Extension,5,20,warm-up
+14-JUN-2023,Preacher Curl,10,62,good
+14-JUN-2023,Preacher Curl,8,62,good
+14-JUN-2023,Preacher Curl,5,72,good
+14-JUN-2023,Hammer Curl,12,30,good
+14-JUN-2023,Hammer Curl,12,30,bad
+14-JUN-2023,Hammer Curl,12,30,good
+14-JUN-2023,Bicep Curl,10,30,good
+14-JUN-2023,Bicep Curl,12,30,bad
+14-JUN-2023,Bicep Curl,12,30,good
+14-JUN-2023,Bicep Curl,5,20,warm-up
+12-JUN-2023,Decline Bench Press,10,205,good
+12-JUN-2023,Decline Bench Press,10,185,good
+12-JUN-2023,Decline Bench Press,10,185,good
+12-JUN-2023,Dumbbell Press,20,50,good
+12-JUN-2023,Dumbbell Press,20,50,good
+12-JUN-2023,Dumbbell Press,20,50,good
+12-JUN-2023,Bench Press,20,135,good
+12-JUN-2023,Bench Press,15,155,good
+12-JUN-2023,Bench Press,20,155,good
+12-JUN-2023,Bench Press,5,135,warm-up
+12-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+12-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+12-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+12-JUN-2023,Deadlift,1,335,fun
+12-JUN-2023,Deadlift,1,315,fun
+12-JUN-2023,Deadlift,3,225,warm-up
+12-JUN-2023,Deadlift,20,155,good
+12-JUN-2023,Deadlift,20,155,good
+12-JUN-2023,Deadlift,20,155,good
+12-JUN-2023,Side-Plank,30,0,good
+12-JUN-2023,Side-Plank,30,0,good
+12-JUN-2023,Side-Plank,30,0,good
+12-JUN-2023,Plank,60,0,good
+12-JUN-2023,Plank,60,0,good
+12-JUN-2023,Plank,60,0,good
+10-JUN-2023,Squats,20,175,good
+10-JUN-2023,Squats,20,175,good
+10-JUN-2023,Squats,20,175,good
+10-JUN-2023,Squats,5,135,warm-up
+10-JUN-2023,Single-Leg Leg Extension,20,70,good
+10-JUN-2023,Single-Leg Leg Extension,20,70,good
+10-JUN-2023,Single-Leg Leg Extension,15,80,good
+10-JUN-2023,Single-Leg Leg Curl,20,70,good
+10-JUN-2023,Single-Leg Leg Curl,20,70,good
+10-JUN-2023,Single-Leg Leg Curl,20,70,good
+10-JUN-2023,Lunges,10,30,good
+10-JUN-2023,Lunges,10,30,good
+10-JUN-2023,Lunges,10,30,good
+10-JUN-2023,Leg Press,20,190,good
+10-JUN-2023,Leg Press,20,190,good
+10-JUN-2023,Leg Press,20,175,good
+10-JUN-2023,Full Cans,20,10,good
+10-JUN-2023,Full Cans,20,10,good
+10-JUN-2023,Full Cans,20,10,good
+10-JUN-2023,Arnold Press,20,35,good
+10-JUN-2023,Arnold Press,20,35,good
+10-JUN-2023,Arnold Press,20,40,bad
+10-JUN-2023,Strict Press,15,95,good
+10-JUN-2023,Strict Press,15,100,good
+10-JUN-2023,Strict Press,17,105,good
+10-JUN-2023,Front Lift,20,20,good
+10-JUN-2023,Front Lift,20,20,good
+10-JUN-2023,Front Lift,15,25,good
+10-JUN-2023,Bent-Over Lateral Lift,15,20,good
+10-JUN-2023,Bent-Over Lateral Lift,15,20,good
+10-JUN-2023,Bent-Over Lateral Lift,15,20,good
+08-JUN-2023,Pullovers,5,50,good
+08-JUN-2023,Pullovers,5,50,good
+08-JUN-2023,Pullovers,5,50,good
+08-JUN-2023,Pullovers,5,50,good
+08-JUN-2023,Pullovers,8,45,good
+08-JUN-2023,Lat Pulldown,5,145,good
+08-JUN-2023,Lat Pulldown,5,145,good
+08-JUN-2023,Lat Pulldown,5,145,good
+08-JUN-2023,Lat Pulldown,5,145,good
+08-JUN-2023,Lat Pulldown,5,145,good
+08-JUN-2023,Seated Row,5,145,bad
+08-JUN-2023,Seated Row,5,145,good
+08-JUN-2023,Seated Row,5,145,good
+08-JUN-2023,Seated Row,5,145,good
+08-JUN-2023,Seated Row,5,145,good
+08-JUN-2023,Lawnmowers,5,75,good
+08-JUN-2023,Lawnmowers,5,75,good
+08-JUN-2023,Lawnmowers,5,75,good
+08-JUN-2023,Lawnmowers,5,75,good
+08-JUN-2023,Lawnmowers,8,70,good
+08-JUN-2023,Skullcrushers,5,82,good
+08-JUN-2023,Skullcrushers,5,82,good
+08-JUN-2023,Skullcrushers,5,82,good
+08-JUN-2023,Skullcrushers,5,82,good
+08-JUN-2023,Skullcrushers,5,92,bad
+08-JUN-2023,Tricep Pushdown,5,150,good
+08-JUN-2023,Tricep Pushdown,5,150,good
+08-JUN-2023,Tricep Pushdown,5,150,good
+08-JUN-2023,Tricep Pushdown,5,150,good
+08-JUN-2023,Tricep Pushdown,5,150,good
+08-JUN-2023,Overhead Tricep Extension,5,40,failure (L)
+08-JUN-2023,Overhead Tricep Extension,5,35,good
+08-JUN-2023,Overhead Tricep Extension,5,35,good
+08-JUN-2023,Overhead Tricep Extension,5,35,good
+08-JUN-2023,Overhead Tricep Extension,5,35,good
+08-JUN-2023,Overhead Tricep Extension,5,35,good
+08-JUN-2023,Concentration Curl,5,35,good
+08-JUN-2023,Concentration Curl,5,30,good
+08-JUN-2023,Concentration Curl,5,30,good
+08-JUN-2023,Concentration Curl,5,30,good
+08-JUN-2023,Concentration Curl,5,30,good
+08-JUN-2023,Concentration Curl,5,30,good
+08-JUN-2023,Hammer Curl,5,35,good
+08-JUN-2023,Hammer Curl,5,35,good
+08-JUN-2023,Hammer Curl,5,35,good
+08-JUN-2023,Hammer Curl,5,35,good
+08-JUN-2023,Hammer Curl,5,35,good
+08-JUN-2023,Bicep Curl,5,35,good
+08-JUN-2023,Bicep Curl,5,35,good
+08-JUN-2023,Bicep Curl,5,35,good
+08-JUN-2023,Bicep Curl,5,35,good
+08-JUN-2023,Bicep Curl,5,35,good
+06-JUN-2023,Machine Pec Flies,5,230,good
+06-JUN-2023,Machine Pec Flies,5,230,good
+06-JUN-2023,Machine Pec Flies,5,230,good
+06-JUN-2023,Machine Pec Flies,5,230,good
+06-JUN-2023,Machine Pec Flies,5,230,good
+06-JUN-2023,Upward Cable Pec Flies,12,55,good
+06-JUN-2023,Upward Cable Pec Flies,10,55,good
+06-JUN-2023,Dumbbell Press,8,75,good
+06-JUN-2023,Dumbbell Press,8,75,good
+06-JUN-2023,Dumbbell Press,8,75,good
+06-JUN-2023,Bench Press,8,225,good
+06-JUN-2023,Bench Press,8,225,good
+06-JUN-2023,Bench Press,8,225,good
+06-JUN-2023,Bench Press,5,135,warm-up
+06-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+06-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+06-JUN-2023,Single-Arm Farmer's Carry,50,50,good
+06-JUN-2023,Side-Plank,30,0,good
+06-JUN-2023,Side-Plank,30,0,good
+06-JUN-2023,Plank,60,0,good
+06-JUN-2023,Plank,60,0,good
+06-JUN-2023,Deadlift,5,285,good
+06-JUN-2023,Deadlift,5,275,good
+06-JUN-2023,Deadlift,5,275,good
+06-JUN-2023,Deadlift,5,275,good
+06-JUN-2023,Deadlift,5,275,good
+06-JUN-2023,Deadlift,5,135,warm-up
+04-JUN-2023,Squats,5,265,good
+04-JUN-2023,Squats,5,265,good
+04-JUN-2023,Squats,5,275,good
+04-JUN-2023,Squats,5,275,good
+04-JUN-2023,Squats,5,245,good
+04-JUN-2023,Squats,5,135,warm-up
+04-JUN-2023,Single-Leg Leg Extension,5,135,good
+04-JUN-2023,Single-Leg Leg Extension,5,135,good
+04-JUN-2023,Single-Leg Leg Extension,5,135,good
+04-JUN-2023,Single-Leg Leg Extension,5,135,good
+04-JUN-2023,Single-Leg Leg Extension,5,130,good
+04-JUN-2023,Single-Leg Leg Curl,5,120,good
+04-JUN-2023,Single-Leg Leg Curl,5,120,good
+04-JUN-2023,Single-Leg Leg Curl,5,120,good
+04-JUN-2023,Single-Leg Leg Curl,5,120,good
+04-JUN-2023,Single-Leg Leg Curl,5,115,good
+04-JUN-2023,Lunges,10,30,good
+04-JUN-2023,Lunges,10,30,good
+04-JUN-2023,Lunges,10,30,good
+04-JUN-2023,Full Cans,20,10,good
+04-JUN-2023,Full Cans,20,10,good
+04-JUN-2023,Full Cans,20,10,good
+04-JUN-2023,Arnold Press,5,60,good
+04-JUN-2023,Arnold Press,5,60,good
+04-JUN-2023,Arnold Press,5,60,good
+04-JUN-2023,Arnold Press,5,55,good
+04-JUN-2023,Arnold Press,5,55,good
+04-JUN-2023,Strict Press,5,155,good
+04-JUN-2023,Strict Press,5,155,good
+04-JUN-2023,Strict Press,5,155,good
+04-JUN-2023,Strict Press,5,155,good
+04-JUN-2023,Strict Press,5,145,good
+04-JUN-2023,Strict Press,2,135,warm-up
+04-JUN-2023,Front Lift,5,35,good
+04-JUN-2023,Front Lift,5,35,good
+04-JUN-2023,Front Lift,5,35,good
+04-JUN-2023,Front Lift,5,35,good
+04-JUN-2023,Front Lift,5,40,bad
+04-JUN-2023,Lateral Lift,5,30,good
+04-JUN-2023,Lateral Lift,5,30,good
+04-JUN-2023,Lateral Lift,5,30,good
+02-JUN-2023,Pullovers,12,35,good
+02-JUN-2023,Pullovers,12,35,good
+02-JUN-2023,Pullovers,12,35,good
+02-JUN-2023,Lat Pulldown,10,130,good
+02-JUN-2023,Lat Pulldown,12,130,bad
+02-JUN-2023,Lat Pulldown,12,130,good
+02-JUN-2023,Seated Row,12,130,bad
+02-JUN-2023,Seated Row,10,130,good
+02-JUN-2023,Seated Row,12,130,good
+02-JUN-2023,Lawnmowers,10,60,good
+02-JUN-2023,Lawnmowers,10,60,good
+02-JUN-2023,Lawnmowers,10,60,good
+02-JUN-2023,Skullcrushers,8,82,good
+02-JUN-2023,Skullcrushers,8,82,good
+02-JUN-2023,Skullcrushers,12,72,good
+02-JUN-2023,Tricep Pushdown,10,130,good
+02-JUN-2023,Tricep Pushdown,10,130,good
+02-JUN-2023,Tricep Pushdown,10,130,good
+02-JUN-2023,Overhead Tricep Extension,12,30,good
+02-JUN-2023,Overhead Tricep Extension,12,30,good
+02-JUN-2023,Overhead Tricep Extension,12,30,good
+02-JUN-2023,Preacher Curl,10,62,good
+02-JUN-2023,Preacher Curl,10,62,good
+02-JUN-2023,Preacher Curl,10,62,good
+02-JUN-2023,Hammer Curl,12,30,good
+02-JUN-2023,Hammer Curl,12,30,good
+02-JUN-2023,Hammer Curl,12,30,good
+02-JUN-2023,Bicep Curl,12,30,good
+02-JUN-2023,Bicep Curl,12,30,good
+02-JUN-2023,Bicep Curl,12,30,good
+31-MAY-2023,Machine Pec Flies,12,195,good
+31-MAY-2023,Machine Pec Flies,10,195,good
+31-MAY-2023,Machine Pec Flies,10,195,good
+31-MAY-2023,Cable Pec Flies,10,90,good
+31-MAY-2023,Cable Pec Flies,10,90,good
+31-MAY-2023,Cable Pec Flies,10,90,good
+31-MAY-2023,Dumbbell Press,12,70,good
+31-MAY-2023,Dumbbell Press,12,70,good
+31-MAY-2023,Dumbbell Press,12,70,good
+31-MAY-2023,Bench Press,8,225,bad
+31-MAY-2023,Bench Press,8,225,good
+31-MAY-2023,Bench Press,8,225,good
+31-MAY-2023,Bench Press,5,135,warm-up
+31-MAY-2023,Single-Arm Farmer's Carry,50,50,good
+31-MAY-2023,Single-Arm Farmer's Carry,50,50,good
+31-MAY-2023,Single-Arm Farmer's Carry,50,50,good
+31-MAY-2023,Side-Plank,30,0,good
+31-MAY-2023,Side-Plank,30,0,good
+31-MAY-2023,Side-Plank,30,0,good
+31-MAY-2023,Plank,60,0,good
+31-MAY-2023,Plank,60,0,good
+31-MAY-2023,Plank,60,0,good
+31-MAY-2023,Deadlift,10,225,good
+31-MAY-2023,Deadlift,10,225,good
+31-MAY-2023,Deadlift,10,225,good
+31-MAY-2023,Deadlift,5,135,warm-up
+30-MAY-2023,Overhead Tricep Extension,5,35,good
+30-MAY-2023,Overhead Tricep Extension,5,35,good
+30-MAY-2023,Overhead Tricep Extension,8,35,good
+30-MAY-2023,Strict Press,5,155,good
+30-MAY-2023,Strict Press,5,155,good
+30-MAY-2023,Bench Press,5,245,good
+30-MAY-2023,Bench Press,5,245,good
+30-MAY-2023,Bench Press,5,225,good
+30-MAY-2023,Bench Press,5,225,good
+30-MAY-2023,Bench Press,5,135,warm-up
+29-MAY-2023,Arnold Press,8,50,good
+29-MAY-2023,Arnold Press,8,50,good
+29-MAY-2023,Arnold Press,8,50,good
+29-MAY-2023,Strict Press,10,135,good
+29-MAY-2023,Strict Press,10,135,good
+29-MAY-2023,Strict Press,10,135,good
+29-MAY-2023,Front Lift,12,30,good
+29-MAY-2023,Front Lift,12,30,good
+29-MAY-2023,Front Lift,12,30,good
+29-MAY-2023,Bent-Over Lateral Lift,10,30,good
+29-MAY-2023,Bent-Over Lateral Lift,10,30,good
+29-MAY-2023,Bent-Over Lateral Lift,10,30,good
+29-MAY-2023,Squats,10,235,good
+29-MAY-2023,Squats,10,225,good
+29-MAY-2023,Squats,10,225,good
+29-MAY-2023,Squats,5,135,warm-up
+29-MAY-2023,Single-Leg Leg Extension,10,115,good
+29-MAY-2023,Single-Leg Leg Extension,10,115,good
+29-MAY-2023,Single-Leg Leg Extension,10,115,good
+29-MAY-2023,Single-Leg Leg Curl,10,105,good
+29-MAY-2023,Single-Leg Leg Curl,10,105,good
+29-MAY-2023,Single-Leg Leg Curl,10,105,good
+29-MAY-2023,Lunges,10,30,good
+29-MAY-2023,Lunges,10,30,good
+29-MAY-2023,Lunges,10,30,good
+27-MAY-2023,Pullovers,12,35,good
+27-MAY-2023,Pullovers,12,35,good
+27-MAY-2023,Pullovers,12,35,good
+27-MAY-2023,Lat Pulldown,12,130,good
+27-MAY-2023,Lat Pulldown,10,130,good
+27-MAY-2023,Lat Pulldown,10,130,good
+27-MAY-2023,Lat Pulldown,1,190,failure
+27-MAY-2023,Lat Pulldown,1,175,good
+27-MAY-2023,Lat Pulldown,1,160,good
+27-MAY-2023,Lat Pulldown,1,145,good
+27-MAY-2023,Lat Pulldown,5,100,warm-up
+27-MAY-2023,Seated Row,12,130,good
+27-MAY-2023,Seated Row,12,130,good
+27-MAY-2023,Seated Row,12,130,good
+27-MAY-2023,Lawnmowers,8,60,good
+27-MAY-2023,Lawnmowers,8,60,good
+27-MAY-2023,Lawnmowers,8,60,good
+27-MAY-2023,Skullcrushers,12,72,good
+27-MAY-2023,Skullcrushers,12,72,good
+27-MAY-2023,Skullcrushers,12,72,good
+27-MAY-2023,Tricep Pushdown,10,130,good
+27-MAY-2023,Tricep Pushdown,10,130,good
+27-MAY-2023,Tricep Pushdown,10,130,good
+27-MAY-2023,Overhead Tricep Extension,12,30,good
+27-MAY-2023,Overhead Tricep Extension,12,30,good
+27-MAY-2023,Overhead Tricep Extension,12,30,good
+27-MAY-2023,Hammer Curl,12,30,good
+27-MAY-2023,Hammer Curl,12,30,good
+27-MAY-2023,Hammer Curl,12,30,good
+27-MAY-2023,Bicep Curl,10,30,good
+27-MAY-2023,Bicep Curl,12,30,bad
+27-MAY-2023,Bicep Curl,12,30,good
+27-MAY-2023,Barbell Bicep Curl,12,40,warm-up
+27-MAY-2023,Leg Extension,1,245,good
+27-MAY-2023,Leg Extension,1,240,good
+27-MAY-2023,Leg Extension,1,230,good
+27-MAY-2023,Leg Extension,1,210,warm-up
+27-MAY-2023,Leg Curl,1,245,good
+27-MAY-2023,Leg Curl,1,240,good
+27-MAY-2023,Leg Curl,1,220,good
+27-MAY-2023,Leg Curl,1,200,warm-up
+27-MAY-2023,Leg Curl,1,150,warm-up
+27-MAY-2023,Push-Ups,20,0,good
+26-MAY-2023,Arnold Press,1,70,good
+26-MAY-2023,Arnold Press,3,65,good
+26-MAY-2023,Arnold Press,5,55,good
+26-MAY-2023,Arnold Press,5,45,warm-up
+26-MAY-2023,Lawnmowers,1,82,good
+26-MAY-2023,Lawnmowers,2,75,good
+26-MAY-2023,Lawnmowers,1,70,good
+26-MAY-2023,Lawnmowers,1,60,warm-up
+26-MAY-2023,Preacher Curl,1,87,failure
+26-MAY-2023,Preacher Curl,1,82,good
+26-MAY-2023,Preacher Curl,1,72,good
+26-MAY-2023,Preacher Curl,5,32,warm-up
+26-MAY-2023,Full Cans,20,10,good
+26-MAY-2023,Full Cans,20,10,good
+26-MAY-2023,Full Cans,20,10,good
+26-MAY-2023,Deadlift,15,155,good
+25-MAY-2023,Single-Arm Farmer's Carry,50,50,good
+25-MAY-2023,Single-Arm Farmer's Carry,50,50,good
+25-MAY-2023,Single-Arm Farmer's Carry,50,50,good
+25-MAY-2023,Side-Plank,30,0,good
+25-MAY-2023,Side-Plank,30,0,good
+25-MAY-2023,Side-Plank,30,0,good
+25-MAY-2023,Plank,60,0,good
+25-MAY-2023,Plank,60,0,good
+25-MAY-2023,Plank,60,0,good
+25-MAY-2023,Deadlift,15,155,good
+25-MAY-2023,Deadlift,15,155,good
+25-MAY-2023,Deadlift,15,135,good
+25-MAY-2023,Machine Pec Flies,10,195,good
+25-MAY-2023,Machine Pec Flies,10,195,good
+25-MAY-2023,Machine Pec Flies,10,195,good
+25-MAY-2023,Cable Pec Flies,10,90,bad
+25-MAY-2023,Cable Pec Flies,10,90,good
+25-MAY-2023,Cable Pec Flies,8,90,good
+25-MAY-2023,Dumbbell Press,12,70,good
+25-MAY-2023,Dumbbell Press,12,70,good
+25-MAY-2023,Dumbbell Press,12,70,good
+25-MAY-2023,Bench Press,11,205,failure
+25-MAY-2023,Bench Press,10,205,good
+25-MAY-2023,Bench Press,12,205,good
+25-MAY-2023,Bench Press,5,135,warm-up
+24-MAY-2023,Deadlift,5,135,warm-up
+24-MAY-2023,Long-Hang Deadlift,20,225,failure
+24-MAY-2023,Long-Hang Deadlift,30,225,good
+24-MAY-2023,Long-Hang Deadlift,30,225,good
+24-MAY-2023,Bench Press,5,225,warm-up
+24-MAY-2023,Bench Press,5,135,warm-up
+23-MAY-2023,Squats,10,225,good
+23-MAY-2023,Squats,10,225,good
+23-MAY-2023,Squats,10,225,good
+23-MAY-2023,Squats,5,135,warm-up
+23-MAY-2023,Single-Leg Leg Extension,12,110,good
+23-MAY-2023,Single-Leg Leg Extension,12,110,good
+23-MAY-2023,Single-Leg Leg Extension,12,110,good
+23-MAY-2023,Single-Leg Leg Curl,10,105,good
+23-MAY-2023,Single-Leg Leg Curl,10,105,good
+23-MAY-2023,Single-Leg Leg Curl,12,100,good
+23-MAY-2023,Lunges,10,30,good
+23-MAY-2023,Lunges,10,30,good
+23-MAY-2023,Lunges,10,30,good
+23-MAY-2023,Arnold Press,10,45,good
+23-MAY-2023,Arnold Press,10,45,good
+23-MAY-2023,Arnold Press,10,45,good
+23-MAY-2023,Bent-Over Lateral Lift,10,30,good
+23-MAY-2023,Bent-Over Lateral Lift,10,30,good
+23-MAY-2023,Bent-Over Lateral Lift,10,30,good
+23-MAY-2023,Front Lift,12,30,good
+23-MAY-2023,Front Lift,12,30,good
+23-MAY-2023,Front Lift,12,30,good
+23-MAY-2023,Strict Press,10,135,good
+23-MAY-2023,Strict Press,10,135,good
+23-MAY-2023,Strict Press,10,135,good
+21-MAY-2023,Pullovers,12,35,good
+21-MAY-2023,Pullovers,12,35,good
+21-MAY-2023,Pullovers,10,35,good
+21-MAY-2023,Lat Pulldown,10,130,good
+21-MAY-2023,Lat Pulldown,10,130,good
+21-MAY-2023,Lat Pulldown,10,130,good
+21-MAY-2023,Seated Row,10,130,good
+21-MAY-2023,Seated Row,10,130,good
+21-MAY-2023,Seated Row,10,130,good
+21-MAY-2023,Lawnmowers,15,55,good
+21-MAY-2023,Lawnmowers,12,55,good
+21-MAY-2023,Lawnmowers,12,55,good
+21-MAY-2023,Tricep Pushdown,10,130,bad
+21-MAY-2023,Tricep Pushdown,10,130,good
+21-MAY-2023,Tricep Pushdown,10,130,good
+21-MAY-2023,Skullcrushers,10,72,good
+21-MAY-2023,Skullcrushers,10,72,good
+21-MAY-2023,Skullcrushers,10,72,good
+21-MAY-2023,Hammer Curl,10,30,good
+21-MAY-2023,Hammer Curl,10,30,good
+21-MAY-2023,Hammer Curl,10,30,good
+21-MAY-2023,Overhead Tricep Extension,5,35,good
+21-MAY-2023,Overhead Tricep Extension,5,35,good
+21-MAY-2023,Overhead Tricep Extension,5,35,good
+21-MAY-2023,Bicep Curl,10,30,good
+21-MAY-2023,Bicep Curl,10,30,good
+21-MAY-2023,Bicep Curl,10,30,good
+20-MAY-2023,Delt Flies,10,90,good
+20-MAY-2023,Delt Flies,10,80,good
+20-MAY-2023,Delt Flies,10,80,good
+20-MAY-2023,Long-Hang Deadlift,24,225,failure
+20-MAY-2023,Long-Hang Deadlift,30,225,good
+20-MAY-2023,Long-Hang Deadlift,30,225,good
+20-MAY-2023,Full Cans,12,10,good
+20-MAY-2023,Full Cans,12,10,good
+20-MAY-2023,Full Cans,12,10,good
+20-MAY-2023,Overhead Tricep Extension,1,45,failure (L)
+20-MAY-2023,Overhead Tricep Extension,2,40,good
+20-MAY-2023,Squats,1,335,good
+20-MAY-2023,Squats,1,315,good
+20-MAY-2023,Squats,1,275,good
+20-MAY-2023,Squats,1,225,warm-up
+20-MAY-2023,Squats,3,135,warm-up
+20-MAY-2023,Strict Press,1,195,good
+20-MAY-2023,Strict Press,1,185,good
+20-MAY-2023,Strict Press,1,155,warm-up
+20-MAY-2023,Strict Press,2,135,warm-up
+19-MAY-2023,Push-Ups,20,0,good
+19-MAY-2023,Push-Ups,20,0,good
+19-MAY-2023,Push-Ups,20,0,good
+19-MAY-2023,Side-Plank,30,0,good
+19-MAY-2023,Side-Plank,30,0,good
+19-MAY-2023,Side-Plank,30,0,good
+19-MAY-2023,Plank,60,0,good
+19-MAY-2023,Plank,60,0,good
+19-MAY-2023,Plank,60,0,good
+19-MAY-2023,Deadlift,10,225,good
+19-MAY-2023,Deadlift,10,225,good
+19-MAY-2023,Deadlift,10,225,good
+19-MAY-2023,Deadlift,5,135,warm-up
+19-MAY-2023,Cable Pec Flies,10,80,good
+19-MAY-2023,Cable Pec Flies,10,80,good
+19-MAY-2023,Cable Pec Flies,10,80,good
+19-MAY-2023,Dumbbell Press,10,70,good
+19-MAY-2023,Dumbbell Press,10,70,good
+19-MAY-2023,Dumbbell Press,10,70,good
+19-MAY-2023,Bench Press,12,205,good
+19-MAY-2023,Bench Press,10,205,good
+19-MAY-2023,Bench Press,10,205,good
+19-MAY-2023,Bench Press,5,135,warm-up
+17-MAY-2023,Decline Bench Press,15,135,good
+17-MAY-2023,Bench Press,20,155,good
+17-MAY-2023,Bench Press,20,135,good
+16-MAY-2023,Squats,10,225,good
+16-MAY-2023,Squats,10,225,good
+16-MAY-2023,Squats,10,225,good
+16-MAY-2023,Squats,5,135,warm-up
+16-MAY-2023,Single-Leg Leg Extension,12,110,good
+16-MAY-2023,Single-Leg Leg Extension,12,110,good
+16-MAY-2023,Single-Leg Leg Extension,12,110,good
+16-MAY-2023,Single-Leg Leg Curl,12,100,good
+16-MAY-2023,Single-Leg Leg Curl,12,100,good
+16-MAY-2023,Single-Leg Leg Curl,12,100,good
+16-MAY-2023,Arnold Press,10,45,good
+16-MAY-2023,Arnold Press,10,45,good
+16-MAY-2023,Arnold Press,10,45,good
+16-MAY-2023,Strict Press,10,135,good
+16-MAY-2023,Strict Press,10,135,good
+16-MAY-2023,Strict Press,10,135,good
+16-MAY-2023,Strict Press,5,75,warm-up
+16-MAY-2023,Front Lift,12,30,good
+16-MAY-2023,Front Lift,12,30,good
+16-MAY-2023,Front Lift,10,30,good
+16-MAY-2023,Bent-Over Lateral Lift,10,30,good
+16-MAY-2023,Bent-Over Lateral Lift,10,30,good
+16-MAY-2023,Bent-Over Lateral Lift,10,30,good
+14-MAY-2023,Skullcrushers,10,72,good
+14-MAY-2023,Skullcrushers,10,72,good
+14-MAY-2023,Skullcrushers,10,72,good
+14-MAY-2023,Tricep Pushdown,10,120,good
+14-MAY-2023,Tricep Pushdown,10,120,good
+14-MAY-2023,Tricep Pushdown,12,120,good
+14-MAY-2023,Overhead Tricep Extension,10,30,good
+14-MAY-2023,Overhead Tricep Extension,10,30,good
+14-MAY-2023,Overhead Tricep Extension,10,30,good
+14-MAY-2023,Concentration Curl,10,25,good
+14-MAY-2023,Concentration Curl,10,25,good
+14-MAY-2023,Concentration Curl,10,25,good
+14-MAY-2023,Hammer Curl,12,30,good
+14-MAY-2023,Hammer Curl,10,30,good
+14-MAY-2023,Hammer Curl,10,30,good
+14-MAY-2023,Barbell Bicep Curl,20,40,good
+14-MAY-2023,Barbell Bicep Curl,20,40,good
+14-MAY-2023,Barbell Bicep Curl,20,40,good
+14-MAY-2023,Bicep Curl,10,30,good
+14-MAY-2023,Bicep Curl,10,30,good
+14-MAY-2023,Bicep Curl,10,30,good
+14-MAY-2023,Pullovers,10,35,good
+14-MAY-2023,Pullovers,10,35,good
+14-MAY-2023,Pullovers,10,35,good
+14-MAY-2023,Lat Pulldown,10,130,good
+14-MAY-2023,Lat Pulldown,10,130,good
+14-MAY-2023,Lat Pulldown,8,130,good
+14-MAY-2023,Seated Row,10,130,good
+14-MAY-2023,Seated Row,10,130,good
+14-MAY-2023,Seated Row,10,130,good
+14-MAY-2023,Lawnmowers,12,55,good
+14-MAY-2023,Lawnmowers,12,55,good
+14-MAY-2023,Lawnmowers,15,55,good
+14-MAY-2023,Single-Arm Farmer's Carry,50,50,good
+14-MAY-2023,Single-Arm Farmer's Carry,50,50,good
+14-MAY-2023,Single-Arm Farmer's Carry,50,50,good
+14-MAY-2023,Long-Hang Deadlift,20,225,good
+14-MAY-2023,Long-Hang Deadlift,25,225,good
+14-MAY-2023,Deadlift,1,315,warm-up
+14-MAY-2023,Deadlift,1,225,warm-up
+14-MAY-2023,Deadlift,1,135,warm-up
+13-MAY-2023,Push-Ups,20,0,good
+13-MAY-2023,Push-Ups,20,0,good
+12-MAY-2023,Machine Pec Flies,4,245,good
+12-MAY-2023,Machine Pec Flies,10,190,good
+12-MAY-2023,Machine Pec Flies,10,190,good
+12-MAY-2023,Machine Pec Flies,10,190,good
+12-MAY-2023,Cable Pec Flies,10,80,good
+12-MAY-2023,Cable Pec Flies,10,80,good
+12-MAY-2023,Cable Pec Flies,8,80,good
+12-MAY-2023,Bench Press,10,205,good
+12-MAY-2023,Bench Press,10,205,good
+12-MAY-2023,Bench Press,1,275,good
+12-MAY-2023,Bench Press,1,225,warm-up
+12-MAY-2023,Bench Press,5,135,warm-up
+12-MAY-2023,Side-Plank,30,0,good
+12-MAY-2023,Side-Plank,30,0,good
+12-MAY-2023,Side-Plank,30,0,good
+12-MAY-2023,Deadlift,10,225,good
+12-MAY-2023,Deadlift,1,345,good
+12-MAY-2023,Deadlift,1,315,good
+12-MAY-2023,Deadlift,5,135,warm-up
+11-MAY-2023,Squats,10,215,good
+11-MAY-2023,Squats,10,215,good
+11-MAY-2023,Squats,10,215,good
+11-MAY-2023,Squats,5,135,warm-up
+11-MAY-2023,Single-Leg Leg Extension,12,110,good
+11-MAY-2023,Single-Leg Leg Extension,12,110,good
+11-MAY-2023,Single-Leg Leg Extension,10,110,good
+11-MAY-2023,Single-Leg Leg Curl,12,100,good
+11-MAY-2023,Single-Leg Leg Curl,12,100,good
+11-MAY-2023,Single-Leg Leg Curl,12,100,good
+11-MAY-2023,Lunges,10,25,good
+11-MAY-2023,Lunges,10,25,good
+11-MAY-2023,Lunges,10,25,good
+11-MAY-2023,Arnold Press,10,45,good
+11-MAY-2023,Arnold Press,10,45,good
+11-MAY-2023,Arnold Press,10,45,good
+11-MAY-2023,Strict Press,3,155,good
+11-MAY-2023,Strict Press,8,135,good
+11-MAY-2023,Strict Press,10,135,good
+11-MAY-2023,Strict Press,10,135,good
+11-MAY-2023,Bent-Over Lateral Lift,10,30,good
+11-MAY-2023,Bent-Over Lateral Lift,10,30,good
+11-MAY-2023,Bent-Over Lateral Lift,10,30,good
+09-MAY-2023,Skullcrushers,10,72,good
+09-MAY-2023,Skullcrushers,10,72,good
+09-MAY-2023,Skullcrushers,10,72,good
+09-MAY-2023,Tricep Pushdown,12,120,good
+09-MAY-2023,Tricep Pushdown,10,120,good
+09-MAY-2023,Tricep Pushdown,10,120,good
+09-MAY-2023,Overhead Tricep Extension,10,30,good
+09-MAY-2023,Overhead Tricep Extension,10,30,good
+09-MAY-2023,Overhead Tricep Extension,12,30,good
+09-MAY-2023,Concentration Curl,10,25,good
+09-MAY-2023,Concentration Curl,10,25,good
+09-MAY-2023,Concentration Curl,10,25,good
+09-MAY-2023,Bicep Curl,1,45,good
+09-MAY-2023,Bicep Curl,10,30,good
+09-MAY-2023,Bicep Curl,10,30,good
+09-MAY-2023,Bicep Curl,10,30,good
+09-MAY-2023,Pullovers,8,35,good
+09-MAY-2023,Pullovers,8,35,good
+09-MAY-2023,Pullovers,8,35,good
+09-MAY-2023,Lat Pulldown,10,130,bad
+09-MAY-2023,Lat Pulldown,10,130,bad
+09-MAY-2023,Lat Pulldown,10,130,good
+09-MAY-2023,Seated Row,10,130,good
+09-MAY-2023,Seated Row,10,130,good
+09-MAY-2023,Seated Row,10,130,good
+09-MAY-2023,Lawnmowers,12,55,good
+09-MAY-2023,Lawnmowers,12,55,good
+09-MAY-2023,Lawnmowers,12,55,good
+07-MAY-2023,Decline Bench Press,10,185,good
+07-MAY-2023,Decline Bench Press,10,185,good
+07-MAY-2023,Decline Bench Press,10,155,warm-up
+07-MAY-2023,Decline Bench Press,10,135,warm-up
+07-MAY-2023,Machine Pec Flies,10,190,good
+07-MAY-2023,Machine Pec Flies,10,190,good
+07-MAY-2023,Machine Pec Flies,10,190,good
+07-MAY-2023,Machine Pec Flies,5,105,warm-up
+07-MAY-2023,Cable Pec Flies,10,80,good
+07-MAY-2023,Cable Pec Flies,10,80,good
+07-MAY-2023,Cable Pec Flies,10,80,good
+07-MAY-2023,Bench Press,5,245,good
+07-MAY-2023,Bench Press,5,245,good
+07-MAY-2023,Bench Press,5,245,good
+07-MAY-2023,Bench Press,5,245,good
+07-MAY-2023,Bench Press,5,225,good
+07-MAY-2023,Bench Press,5,135,warm-up
+07-MAY-2023,Side-Plank,30,0,good
+07-MAY-2023,Side-Plank,30,0,good
+07-MAY-2023,Side-Plank,30,0,good
+07-MAY-2023,Plank,60,0,good
+07-MAY-2023,Plank,60,0,good
+07-MAY-2023,Plank,60,0,good
+07-MAY-2023,Deadlift,5,245,good
+07-MAY-2023,Deadlift,5,245,good
+07-MAY-2023,Deadlift,5,245,good
+07-MAY-2023,Deadlift,5,245,good
+07-MAY-2023,Deadlift,5,225,good
+07-MAY-2023,Deadlift,5,145,warm-up
+06-MAY-2023,Full Cans,12,10,good
+06-MAY-2023,Full Cans,12,10,good
+06-MAY-2023,Full Cans,10,10,good
+05-MAY-2023,Squats,10,205,good
+05-MAY-2023,Squats,10,205,good
+05-MAY-2023,Squats,10,205,good
+05-MAY-2023,Squats,5,135,warm-up
+05-MAY-2023,Single-Leg Leg Extension,10,110,good
+05-MAY-2023,Single-Leg Leg Extension,10,110,good
+05-MAY-2023,Single-Leg Leg Extension,10,110,good
+05-MAY-2023,Single-Leg Leg Curl,12,100,good
+05-MAY-2023,Single-Leg Leg Curl,12,100,good
+05-MAY-2023,Single-Leg Leg Curl,12,100,good
+05-MAY-2023,Lunges,10,25,good
+05-MAY-2023,Lunges,10,25,good
+05-MAY-2023,Lunges,10,25,good
+05-MAY-2023,Arnold Press,8,45,good
+05-MAY-2023,Arnold Press,8,45,good
+05-MAY-2023,Arnold Press,8,45,good
+05-MAY-2023,Strict Press,10,135,good
+05-MAY-2023,Strict Press,8,135,good
+05-MAY-2023,Strict Press,10,135,good
+05-MAY-2023,Front Lift,12,30,good
+05-MAY-2023,Front Lift,12,30,good
+05-MAY-2023,Front Lift,12,30,good
+05-MAY-2023,Bent-Over Lateral Lift,10,30,good
+05-MAY-2023,Bent-Over Lateral Lift,10,30,good
+05-MAY-2023,Bent-Over Lateral Lift,10,30,good
+03-MAY-2023,Skullcrushers,8,72,good
+03-MAY-2023,Skullcrushers,8,72,good
+03-MAY-2023,Skullcrushers,10,72,good
+03-MAY-2023,Tricep Pushdown,10,120,good
+03-MAY-2023,Tricep Pushdown,10,120,good
+03-MAY-2023,Tricep Pushdown,10,120,good
+03-MAY-2023,Overhead Tricep Extension,10,30,good
+03-MAY-2023,Overhead Tricep Extension,10,30,good
+03-MAY-2023,Overhead Tricep Extension,10,30,good
+03-MAY-2023,Concentration Curl,10,25,good
+03-MAY-2023,Concentration Curl,10,25,good
+03-MAY-2023,Concentration Curl,12,25,good
+03-MAY-2023,Hammer Curl,12,30,good
+03-MAY-2023,Hammer Curl,10,30,good
+03-MAY-2023,Hammer Curl,10,30,good
+03-MAY-2023,Bicep Curl,10,30,good
+03-MAY-2023,Bicep Curl,10,30,good
+03-MAY-2023,Bicep Curl,10,30,good
+03-MAY-2023,Pullovers,12,30,good
+03-MAY-2023,Pullovers,12,30,good
+03-MAY-2023,Pullovers,12,30,good
+03-MAY-2023,Lat Pulldown,5,145,good
+03-MAY-2023,Lat Pulldown,10,130,good
+03-MAY-2023,Lat Pulldown,10,130,good
+03-MAY-2023,Seated Row,10,130,good
+03-MAY-2023,Seated Row,10,130,good
+03-MAY-2023,Seated Row,10,130,good
+03-MAY-2023,Lawnmowers,12,55,good
+03-MAY-2023,Lawnmowers,12,55,good
+03-MAY-2023,Lawnmowers,12,55,good
+02-MAY-2023,Machine Pec Flies,10,180,good
+02-MAY-2023,Machine Pec Flies,12,180,good
+02-MAY-2023,Machine Pec Flies,12,180,good
+02-MAY-2023,Upward Cable Pec Flies,10,55,good
+02-MAY-2023,Upward Cable Pec Flies,10,55,good
+02-MAY-2023,Upward Cable Pec Flies,10,55,good
+02-MAY-2023,Dumbbell Press,10,70,good
+02-MAY-2023,Dumbbell Press,10,70,good
+02-MAY-2023,Dumbbell Press,10,70,good
+02-MAY-2023,Bench Press,3,245,good
+02-MAY-2023,Bench Press,5,225,good
+02-MAY-2023,Bench Press,8,215,good
+02-MAY-2023,Bench Press,10,205,good
+02-MAY-2023,Bench Press,5,135,warm-up
+02-MAY-2023,Side-Plank,30,0,good
+02-MAY-2023,Side-Plank,30,0,good
+02-MAY-2023,Plank,60,0,good
+02-MAY-2023,Plank,60,0,good
+02-MAY-2023,Plank,60,0,good
+02-MAY-2023,Deadlift,2,315,good
+02-MAY-2023,Deadlift,10,215,good
+02-MAY-2023,Deadlift,10,215,good
+02-MAY-2023,Deadlift,10,215,good
+02-MAY-2023,Deadlift,3,145,warm-up
+01-MAY-2023,Push-Ups,20,0,good
+01-MAY-2023,Push-Ups,20,0,good
+29-APR-2023,Squats,10,205,good
+29-APR-2023,Squats,10,205,good
+29-APR-2023,Squats,10,205,good
+29-APR-2023,Squats,5,135,warm-up
+29-APR-2023,Single-Leg Leg Extension,10,110,good
+29-APR-2023,Single-Leg Leg Extension,10,110,good
+29-APR-2023,Single-Leg Leg Extension,10,110,good
+29-APR-2023,Single-Leg Leg Curl,10,100,good
+29-APR-2023,Single-Leg Leg Curl,10,100,good
+29-APR-2023,Single-Leg Leg Curl,10,100,good
+29-APR-2023,Lunges,10,25,good
+29-APR-2023,Lunges,10,25,good
+29-APR-2023,Lunges,10,25,good
+29-APR-2023,Arnold Press,12,40,good
+29-APR-2023,Arnold Press,12,40,good
+29-APR-2023,Arnold Press,12,40,good
+29-APR-2023,Strict Press,10,135,good
+29-APR-2023,Strict Press,10,135,good
+29-APR-2023,Strict Press,10,135,good
+29-APR-2023,Front Lift,12,30,good
+29-APR-2023,Front Lift,10,30,good
+29-APR-2023,Front Lift,12,30,good
+29-APR-2023,Bent-Over Lateral Lift,10,30,good
+29-APR-2023,Bent-Over Lateral Lift,10,30,good
+29-APR-2023,Bent-Over Lateral Lift,10,30,good
+27-APR-2023,Barbell Bicep Curl,15,40,good
+27-APR-2023,Seated Row,10,130,good
+27-APR-2023,Seated Row,10,130,good
+27-APR-2023,Lat Pulldown,10,130,good
+27-APR-2023,Lat Pulldown,10,130,good
+27-APR-2023,Bench Press,1,275,good
+27-APR-2023,Bench Press,5,245,good
+27-APR-2023,Bench Press,5,225,good
+27-APR-2023,Bench Press,5,135,warm-up
+26-APR-2023,Skullcrushers,12,62,good
+26-APR-2023,Skullcrushers,12,62,good
+26-APR-2023,Skullcrushers,12,62,good
+26-APR-2023,Overhead Tricep Extension,10,30,good
+26-APR-2023,Overhead Tricep Extension,10,30,good
+26-APR-2023,Overhead Tricep Extension,10,30,good
+26-APR-2023,Concentration Curl,10,25,good
+26-APR-2023,Concentration Curl,10,25,good
+26-APR-2023,Concentration Curl,10,25,good
+26-APR-2023,Hammer Curl,12,30,good
+26-APR-2023,Hammer Curl,12,30,good
+26-APR-2023,Hammer Curl,12,30,good
+26-APR-2023,Bicep Curl,10,30,good
+26-APR-2023,Bicep Curl,10,30,good
+26-APR-2023,Bicep Curl,10,30,good
+26-APR-2023,Pullovers,12,30,good
+26-APR-2023,Pullovers,12,30,good
+26-APR-2023,Pullovers,12,30,good
+26-APR-2023,Lawnmowers,10,55,good
+26-APR-2023,Lawnmowers,10,55,good
+26-APR-2023,Lawnmowers,10,55,good
+25-APR-2023,Machine Pec Flies,12,180,good
+25-APR-2023,Machine Pec Flies,12,180,good
+25-APR-2023,Machine Pec Flies,12,180,good
+25-APR-2023,Cable Pec Flies,12,70,good
+25-APR-2023,Cable Pec Flies,12,70,good
+25-APR-2023,Cable Pec Flies,10,70,good
+25-APR-2023,Bench Press,10,205,bad
+25-APR-2023,Bench Press,10,205,good
+25-APR-2023,Bench Press,10,205,good
+25-APR-2023,Bench Press,5,135,warm-up
+25-APR-2023,Deadlift,10,205,good
+25-APR-2023,Deadlift,10,205,good
+25-APR-2023,Deadlift,10,205,good
+25-APR-2023,Deadlift,10,135,warm-up
+23-APR-2023,Squats,10,205,good
+23-APR-2023,Squats,10,205,good
+23-APR-2023,Squats,10,205,good
+23-APR-2023,Single-Leg Leg Extension,10,100,good
+23-APR-2023,Single-Leg Leg Extension,10,100,good
+23-APR-2023,Single-Leg Leg Extension,10,100,good
+23-APR-2023,Single-Leg Leg Curl,10,100,bad (R)
+23-APR-2023,Single-Leg Leg Curl,10,100,good
+23-APR-2023,Single-Leg Leg Curl,10,90,good
+23-APR-2023,Arnold Press,12,40,good
+23-APR-2023,Arnold Press,12,40,good
+23-APR-2023,Arnold Press,12,40,good
+23-APR-2023,Strict Press,10,135,good
+23-APR-2023,Strict Press,10,135,good
+23-APR-2023,Strict Press,10,135,good
+23-APR-2023,Military Press,10,190,good
+23-APR-2023,Military Press,10,190,good
+23-APR-2023,Military Press,10,190,good
+23-APR-2023,Front Lift,10,30,good
+23-APR-2023,Front Lift,10,30,good
+23-APR-2023,Front Lift,10,30,good
+23-APR-2023,Bent-Over Lateral Lift,10,30,bad
+23-APR-2023,Bent-Over Lateral Lift,10,30,good
+23-APR-2023,Bent-Over Lateral Lift,10,30,good
+23-APR-2023,Push-Ups,20,0,good
+21-APR-2023,Lat Pulldown,10,130,bad
+21-APR-2023,Lat Pulldown,10,130,good
+21-APR-2023,Lat Pulldown,10,130,good
+21-APR-2023,Seated Row,10,130,bad
+21-APR-2023,Seated Row,10,130,good
+21-APR-2023,Seated Row,10,130,good
+21-APR-2023,Lawnmowers,10,55,good
+21-APR-2023,Lawnmowers,10,55,good
+21-APR-2023,Lawnmowers,10,55,good
+21-APR-2023,Skullcrushers,10,62,good
+21-APR-2023,Skullcrushers,10,62,good
+21-APR-2023,Skullcrushers,10,62,good
+21-APR-2023,Tricep Pushdown,10,120,good
+21-APR-2023,Tricep Pushdown,10,120,good
+21-APR-2023,Tricep Pushdown,10,120,good
+21-APR-2023,Overhead Tricep Extension,10,30,good
+21-APR-2023,Overhead Tricep Extension,10,30,good
+21-APR-2023,Overhead Tricep Extension,10,30,good
+21-APR-2023,Concentration Curl,15,20,bad (L)
+21-APR-2023,Concentration Curl,15,20,good
+21-APR-2023,Concentration Curl,15,20,good
+21-APR-2023,Hammer Curl,10,30,good
+21-APR-2023,Hammer Curl,10,30,good
+21-APR-2023,Hammer Curl,10,30,good
+21-APR-2023,Bicep Curl,10,30,good
+21-APR-2023,Bicep Curl,10,30,good
+21-APR-2023,Bicep Curl,10,30,good
+18-APR-2023,Machine Pec Flies,3,245,good
+18-APR-2023,Machine Pec Flies,10,180,good
+18-APR-2023,Machine Pec Flies,10,180,good
+18-APR-2023,Machine Pec Flies,10,180,good
+18-APR-2023,Upward Cable Pec Flies,10,55,good
+18-APR-2023,Upward Cable Pec Flies,10,55,good
+18-APR-2023,Upward Cable Pec Flies,10,55,good
+18-APR-2023,Dumbbell Press,10,70,good
+18-APR-2023,Dumbbell Press,10,70,good
+18-APR-2023,Dumbbell Press,10,70,good
+18-APR-2023,Bench Press,15,135,good
+18-APR-2023,Bench Press,10,185,good
+18-APR-2023,Bench Press,8,205,good
+18-APR-2023,Bench Press,10,205,good
+18-APR-2023,Bench Press,10,135,warm-up
+18-APR-2023,Plank,60,0,good
+18-APR-2023,Plank,60,0,good
+18-APR-2023,Plank,60,0,good
+18-APR-2023,Deadlift,1,335,good
+18-APR-2023,Deadlift,2,315,good
+18-APR-2023,Deadlift,5,225,good
+18-APR-2023,Deadlift,10,205,good
+18-APR-2023,Deadlift,10,205,good
+18-APR-2023,Deadlift,10,205,good
+18-APR-2023,Deadlift,10,135,warm-up
+16-APR-2023,Arnold Press,12,40,good
+16-APR-2023,Arnold Press,10,40,good
+16-APR-2023,Arnold Press,10,40,good
+16-APR-2023,Strict Press,10,135,failure
+16-APR-2023,Strict Press,8,135,good
+16-APR-2023,Strict Press,9,135,good
+16-APR-2023,Military Press,10,190,failure
+16-APR-2023,Military Press,10,190,good
+16-APR-2023,Military Press,10,190,good
+16-APR-2023,Military Press,5,150,warm-up
+16-APR-2023,Front Lift,10,30,good
+16-APR-2023,Front Lift,10,30,good
+16-APR-2023,Front Lift,10,30,good
+16-APR-2023,Bent-Over Lateral Lift,12,25,good
+16-APR-2023,Bent-Over Lateral Lift,12,25,good
+16-APR-2023,Bent-Over Lateral Lift,12,25,good
+16-APR-2023,Side-Lying External Rotation,20,5,good
+16-APR-2023,Full Cans,20,5,good
+16-APR-2023,Full Cans,20,5,good
+16-APR-2023,Full Cans,20,5,good
+15-APR-2023,Plank,60,0,good
+15-APR-2023,Plank,60,0,good
+15-APR-2023,Single-Leg Leg Curl,20,60,good
+15-APR-2023,Single-Leg Leg Curl,20,70,good
+14-APR-2023,Push-Ups,20,0,good
+14-APR-2023,Skullcrushers,10,62,good
+14-APR-2023,Skullcrushers,10,62,good
+14-APR-2023,Skullcrushers,10,62,good
+14-APR-2023,Overhead Tricep Extension,8,30,failure
+14-APR-2023,Overhead Tricep Extension,10,30,good
+14-APR-2023,Overhead Tricep Extension,10,30,good
+14-APR-2023,Preacher Curl,10,62,failure
+14-APR-2023,Preacher Curl,10,62,failure
+14-APR-2023,Preacher Curl,10,62,good
+14-APR-2023,Hammer Curl,10,30,good
+14-APR-2023,Hammer Curl,10,30,good
+14-APR-2023,Hammer Curl,10,30,good
+14-APR-2023,Bicep Curl,10,25,good
+14-APR-2023,Bicep Curl,12,25,good
+14-APR-2023,Bicep Curl,10,30,good
+14-APR-2023,Lat Pulldown,10,130,good
+14-APR-2023,Lat Pulldown,10,130,good
+14-APR-2023,Lat Pulldown,12,130,good
+14-APR-2023,Seated Row,12,130,good
+14-APR-2023,Seated Row,10,130,good
+14-APR-2023,Seated Row,12,130,good
+14-APR-2023,Lawnmowers,12,50,good
+14-APR-2023,Lawnmowers,12,50,good
+14-APR-2023,Lawnmowers,12,50,good
+12-APR-2023,Machine Pec Flies,2,245,good
+12-APR-2023,Machine Pec Flies,5,220,good
+12-APR-2023,Machine Pec Flies,10,180,good
+12-APR-2023,Machine Pec Flies,10,180,good
+12-APR-2023,Machine Pec Flies,10,175,good
+12-APR-2023,Cable Pec Flies,10,70,good
+12-APR-2023,Cable Pec Flies,10,70,good
+12-APR-2023,Cable Pec Flies,10,80,bad
+12-APR-2023,Bench Press,10,185,good
+12-APR-2023,Bench Press,10,185,good
+12-APR-2023,Bench Press,8,205,good
+12-APR-2023,Bench Press,10,135,warm-up
+12-APR-2023,Lat Pulldown Hang,35,160,good
+12-APR-2023,Lat Pulldown Hang,30,160,good
+12-APR-2023,Lat Pulldown Hang,30,160,good
+12-APR-2023,Deadlift,5,225,good
+12-APR-2023,Deadlift,5,225,good
+12-APR-2023,Deadlift,5,225,good
+12-APR-2023,Deadlift,5,225,good
+12-APR-2023,Deadlift,5,225,good
+10-APR-2023,Pullovers,10,30,good
+10-APR-2023,Pullovers,10,30,good
+10-APR-2023,Pullovers,10,20,good
+10-APR-2023,Arnold Press,10,40,good
+10-APR-2023,Arnold Press,10,40,good
+10-APR-2023,Arnold Press,10,40,good
+10-APR-2023,Strict Press,7,135,good
+10-APR-2023,Strict Press,8,135,good
+10-APR-2023,Strict Press,8,135,good
+10-APR-2023,Military Press,10,190,good
+10-APR-2023,Military Press,10,190,good
+10-APR-2023,Military Press,10,190,good
+10-APR-2023,Front Lift,10,30,good
+10-APR-2023,Front Lift,10,30,good
+10-APR-2023,Front Lift,10,30,good
+10-APR-2023,Bent-Over Lateral Lift,10,25,good
+10-APR-2023,Bent-Over Lateral Lift,10,25,good
+10-APR-2023,Bent-Over Lateral Lift,10,25,good
+10-APR-2023,Squats,10,205,good
+10-APR-2023,Squats,10,205,good
+10-APR-2023,Squats,10,205,good
+10-APR-2023,Squats,12,135,warm-up
+10-APR-2023,Single-Leg Leg Extension,10,100,good
+10-APR-2023,Single-Leg Leg Extension,10,100,good
+10-APR-2023,Single-Leg Leg Extension,10,100,good
+10-APR-2023,Single-Leg Leg Curl,10,90,good
+10-APR-2023,Single-Leg Leg Curl,10,90,good
+10-APR-2023,Single-Leg Leg Curl,10,90,good
+10-APR-2023,Lunges,10,25,good
+10-APR-2023,Lunges,10,25,good
+10-APR-2023,Lunges,10,20,good
+08-APR-2023,Full Cans,20,5,good
+08-APR-2023,Full Cans,20,5,good
+08-APR-2023,Full Cans,20,5,good
+08-APR-2023,Lat Pulldown Hang,30,160,good
+08-APR-2023,Lat Pulldown Hang,20,160,good
+08-APR-2023,Lat Pulldown,10,130,good
+08-APR-2023,Lat Pulldown,15,100,good
+08-APR-2023,Lat Pulldown,10,130,good
+08-APR-2023,Seated Row,15,100,good
+08-APR-2023,Seated Row,10,130,good
+08-APR-2023,Seated Row,12,130,good
+08-APR-2023,Lawnmowers,10,50,good
+08-APR-2023,Lawnmowers,10,50,good
+08-APR-2023,Lawnmowers,10,50,good
+08-APR-2023,Skullcrushers,10,62,good
+08-APR-2023,Skullcrushers,10,62,good
+08-APR-2023,Skullcrushers,12,52,good
+08-APR-2023,Tricep Pushdown,8,120,failure
+08-APR-2023,Tricep Pushdown,10,120,good
+08-APR-2023,Tricep Pushdown,12,120,good
+08-APR-2023,Overhead Tricep Extension,8,30,good
+08-APR-2023,Overhead Tricep Extension,8,30,good
+08-APR-2023,Overhead Tricep Extension,10,30,good
+08-APR-2023,Concentration Curl,12,20,good
+08-APR-2023,Concentration Curl,12,20,good
+08-APR-2023,Concentration Curl,12,20,good
+08-APR-2023,Hammer Curl,10,30,bad (L)
+08-APR-2023,Hammer Curl,10,30,good
+08-APR-2023,Hammer Curl,10,30,good
+08-APR-2023,Bicep Curl,12,25,good
+08-APR-2023,Bicep Curl,8,30,good
+08-APR-2023,Bicep Curl,8,30,good
+06-APR-2023,Deadlift,1,335,failure
+06-APR-2023,Deadlift,1,315,good
+06-APR-2023,Deadlift,10,205,good
+06-APR-2023,Deadlift,10,205,good
+06-APR-2023,Deadlift,10,195,good
+06-APR-2023,Pec Flies,10,175,good
+06-APR-2023,Pec Flies,10,175,good
+06-APR-2023,Pec Flies,10,170,good
+06-APR-2023,Upward Cable Pec Flies,10,55,good
+06-APR-2023,Upward Cable Pec Flies,10,55,good
+06-APR-2023,Upward Cable Pec Flies,10,55,good
+06-APR-2023,Dumbbell Press,10,65,good
+06-APR-2023,Dumbbell Press,10,65,good
+06-APR-2023,Dumbbell Press,10,60,good
+06-APR-2023,Bench Press,5,225,failure
+06-APR-2023,Bench Press,10,205,good
+06-APR-2023,Bench Press,10,195,good
+06-APR-2023,Bench Press,10,185,good
+06-APR-2023,Bench Press,10,135,warm-up
+05-APR-2023,Push-Ups,20,0,good
+05-APR-2023,Push-Ups,20,0,good
+05-APR-2023,Military Press,5,245,good
+05-APR-2023,Military Press,5,245,good
+05-APR-2023,Barbell Overhead Tricep Extension,20,40,good
+05-APR-2023,Barbell Overhead Tricep Extension,20,40,good
+05-APR-2023,Barbell Bicep Curl,20,40,good
+05-APR-2023,Barbell Bicep Curl,20,40,good
+04-APR-2023,Squats,5,245,good
+04-APR-2023,Squats,5,245,good
+04-APR-2023,Squats,5,245,good
+04-APR-2023,Squats,5,245,good
+04-APR-2023,Squats,5,245,good
+04-APR-2023,Squats,5,225,good
+04-APR-2023,Leg Extension,10,200,good
+04-APR-2023,Leg Extension,10,200,good
+04-APR-2023,Leg Extension,10,200,good
+04-APR-2023,Leg Curl,12,185,good
+04-APR-2023,Leg Curl,12,185,good
+04-APR-2023,Leg Curl,12,185,good
+04-APR-2023,Arnold Press,10,40,good
+04-APR-2023,Arnold Press,10,40,good
+04-APR-2023,Arnold Press,10,40,good
+04-APR-2023,Strict Press,7,135,good
+04-APR-2023,Strict Press,7,135,good
+04-APR-2023,Strict Press,6,135,good
+04-APR-2023,Strict Press,6,135,good
+04-APR-2023,Front Lift,12,25,good
+04-APR-2023,Front Lift,12,25,good
+04-APR-2023,Front Lift,12,25,good
+04-APR-2023,Bent-Over Lateral Lift,10,25,good
+04-APR-2023,Bent-Over Lateral Lift,10,25,good
+04-APR-2023,Bent-Over Lateral Lift,10,25,good
+02-APR-2023,Lat Pulldown,15,85,good
+02-APR-2023,Lat Pulldown,10,130,good
+02-APR-2023,Lat Pulldown,10,130,good
+02-APR-2023,Lat Pulldown,10,130,good
+02-APR-2023,Seated Row,15,85,good
+02-APR-2023,Seated Row,10,130,good
+02-APR-2023,Seated Row,10,130,good
+02-APR-2023,Seated Row,10,130,good
+02-APR-2023,Lawnmowers,10,50,good
+02-APR-2023,Lawnmowers,10,50,good
+02-APR-2023,Lawnmowers,10,50,good
+02-APR-2023,Tricep Pushdown,10,120,good
+02-APR-2023,Tricep Pushdown,10,120,good
+02-APR-2023,Tricep Pushdown,10,110,good
+02-APR-2023,Overhead Tricep Extension,12,25,good
+02-APR-2023,Overhead Tricep Extension,12,25,good
+02-APR-2023,Overhead Tricep Extension,12,25,good
+02-APR-2023,Hammer Curl,10,30,good
+02-APR-2023,Hammer Curl,10,30,good
+02-APR-2023,Hammer Curl,10,30,good
+02-APR-2023,Bicep Curl,12,25,good
+02-APR-2023,Bicep Curl,12,25,good
+02-APR-2023,Bicep Curl,12,25,good
+31-MAR-2023,Deadlift,1,335,good
+31-MAR-2023,Deadlift,1,315,good
+31-MAR-2023,Deadlift,1,275,good
+31-MAR-2023,Deadlift,10,205,good
+31-MAR-2023,Deadlift,10,205,good
+31-MAR-2023,Deadlift,10,195,good
+31-MAR-2023,Pec Flies,3,220,good
+31-MAR-2023,Pec Flies,3,200,good
+31-MAR-2023,Pec Flies,10,170,good
+31-MAR-2023,Pec Flies,10,170,good
+31-MAR-2023,Pec Flies,10,170,good
+31-MAR-2023,Upward Cable Pec Flies,10,55,good
+31-MAR-2023,Upward Cable Pec Flies,8,60,good
+31-MAR-2023,Upward Cable Pec Flies,15,50,easy
+31-MAR-2023,Dumbbell Press,10,60,good
+31-MAR-2023,Dumbbell Press,10,60,good
+31-MAR-2023,Dumbbell Press,10,60,good
+31-MAR-2023,Bench Press,10,185,good
+31-MAR-2023,Bench Press,5,225,good
+31-MAR-2023,Bench Press,5,215,good
+31-MAR-2023,Bench Press,5,205,good
+31-MAR-2023,Bench Press,6,205,good
+31-MAR-2023,Bench Press,10,135,easy
+29-MAR-2023,Squats,5,245,good
+29-MAR-2023,Squats,5,245,good
+29-MAR-2023,Squats,5,245,good
+29-MAR-2023,Squats,5,245,good
+29-MAR-2023,Squats,5,225,good
+29-MAR-2023,Squats,10,135,easy
+29-MAR-2023,Leg Extension,10,200,good
+29-MAR-2023,Leg Extension,10,200,good
+29-MAR-2023,Leg Extension,10,200,good
+29-MAR-2023,Leg Curl,10,185,good
+29-MAR-2023,Leg Curl,10,185,good
+29-MAR-2023,Leg Curl,12,180,good
+29-MAR-2023,Lunges,10,20,good
+29-MAR-2023,Lunges,10,20,good
+29-MAR-2023,Lunges,10,20,good
+29-MAR-2023,Arnold Press,12,35,good
+29-MAR-2023,Arnold Press,12,35,good
+29-MAR-2023,Arnold Press,10,35,good
+29-MAR-2023,Strict Press,6,135,good
+29-MAR-2023,Strict Press,6,135,good
+29-MAR-2023,Strict Press,5,135,good
+29-MAR-2023,Strict Press,5,135,good
+29-MAR-2023,Strict Press,5,135,good
+29-MAR-2023,Front Lift,12,25,good
+29-MAR-2023,Front Lift,12,25,good
+29-MAR-2023,Front Lift,12,25,good
+29-MAR-2023,Bent-Over Lateral Lift,12,20,good
+29-MAR-2023,Bent-Over Lateral Lift,12,20,good
+29-MAR-2023,Bent-Over Lateral Lift,12,20,good
+26-MAR-2023,Lat Pulldown,10,130,bad
+26-MAR-2023,Lat Pulldown,10,130,good
+26-MAR-2023,Lat Pulldown,12,130,good
+26-MAR-2023,Seated Row,10,130,good
+26-MAR-2023,Seated Row,10,130,good
+26-MAR-2023,Seated Row,10,130,good
+26-MAR-2023,Lawnmowers,10,45,good
+26-MAR-2023,Lawnmowers,10,45,good
+26-MAR-2023,Lawnmowers,12,45,good
+26-MAR-2023,Skullcrushers,12,52,good
+26-MAR-2023,Skullcrushers,12,52,good
+26-MAR-2023,Skullcrushers,10,52,good
+26-MAR-2023,Tricep Pushdown,5,120,good
+26-MAR-2023,Tricep Pushdown,5,130,failure
+26-MAR-2023,Tricep Pushdown,5,130,good
+26-MAR-2023,Tricep Pushdown,10,110,good
+26-MAR-2023,Overhead Tricep Extension,12,25,failure
+26-MAR-2023,Overhead Tricep Extension,12,25,good
+26-MAR-2023,Overhead Tricep Extension,12,25,good
+26-MAR-2023,Hammer Curl,12,25,good
+26-MAR-2023,Hammer Curl,10,30,bad
+26-MAR-2023,Hammer Curl,13,25,good
+26-MAR-2023,Preacher Curl,5,72,failure
+26-MAR-2023,Preacher Curl,8,62,good
+26-MAR-2023,Preacher Curl,10,52,good
+25-MAR-2023,Deadlift,1,315,good
+25-MAR-2023,Deadlift,1,315,good
+25-MAR-2023,Deadlift,1,275,good
+25-MAR-2023,Deadlift,1,225,good
+25-MAR-2023,Deadlift,10,195,good
+25-MAR-2023,Deadlift,10,195,good
+25-MAR-2023,Deadlift,10,195,good
+25-MAR-2023,Bench Press,5,225,good
+25-MAR-2023,Bench Press,5,225,good
+25-MAR-2023,Bench Press,5,225,good
+25-MAR-2023,Bench Press,5,205,good
+25-MAR-2023,Bench Press,5,185,easy
+25-MAR-2023,Bench Press,5,135,easy
+24-MAR-2023,Pec Flies,10,170,good
+24-MAR-2023,Pec Flies,12,160,good
+24-MAR-2023,Pec Flies,12,160,good
+24-MAR-2023,Upward Cable Pec Flies,12,50,good
+24-MAR-2023,Upward Cable Pec Flies,10,50,good
+24-MAR-2023,Upward Cable Pec Flies,10,50,good
+24-MAR-2023,Cable Pec Flies,10,80,good
+24-MAR-2023,Cable Pec Flies,10,80,good
+24-MAR-2023,Cable Pec Flies,10,80,good
+24-MAR-2023,Machine Bench Press,12,230,good
+24-MAR-2023,Machine Bench Press,12,230,good
+24-MAR-2023,Machine Bench Press,10,230,good
+24-MAR-2023,Plank,60,0,good
+24-MAR-2023,Plank,60,0,good
+24-MAR-2023,Plank,60,0,good
+22-MAR-2023,Squats,5,225,good
+22-MAR-2023,Squats,5,225,good
+22-MAR-2023,Squats,5,225,good
+22-MAR-2023,Squats,5,225,good
+22-MAR-2023,Squats,5,185,good
+22-MAR-2023,Squats,5,135,easy
+22-MAR-2023,Leg Extension,10,200,good
+22-MAR-2023,Leg Extension,10,200,good
+22-MAR-2023,Leg Extension,10,200,good
+22-MAR-2023,Leg Curl,10,180,good
+22-MAR-2023,Leg Curl,10,180,good
+22-MAR-2023,Leg Curl,10,180,good
+22-MAR-2023,Lunges,10,20,good
+22-MAR-2023,Lunges,10,20,good
+22-MAR-2023,Lunges,10,20,good
+22-MAR-2023,Arnold Press,12,35,good
+22-MAR-2023,Arnold Press,10,35,good
+22-MAR-2023,Arnold Press,10,35,good
+22-MAR-2023,Strict Press,5,135,good
+22-MAR-2023,Strict Press,5,135,good
+22-MAR-2023,Strict Press,5,135,good
+22-MAR-2023,Strict Press,5,135,good
+22-MAR-2023,Strict Press,5,135,good
+22-MAR-2023,Military Press,10,185,good
+22-MAR-2023,Military Press,10,185,good
+22-MAR-2023,Military Press,10,180,good
+22-MAR-2023,Front Lift,12,25,good
+22-MAR-2023,Front Lift,12,25,good
+22-MAR-2023,Front Lift,10,25,easy
+22-MAR-2023,Bent-Over Lateral Lift,12,20,good
+22-MAR-2023,Bent-Over Lateral Lift,12,20,good
+22-MAR-2023,Bent-Over Lateral Lift,12,20,good
+21-MAR-2023,Push-Ups,20,0,good
+20-MAR-2023,Lat Pulldown,10,130,good
+20-MAR-2023,Lat Pulldown,10,130,good
+20-MAR-2023,Lat Pulldown,10,130,good
+20-MAR-2023,Seated Row,10,130,good
+20-MAR-2023,Seated Row,10,130,good
+20-MAR-2023,Seated Row,10,130,good
+20-MAR-2023,Lawnmowers,10,45,good
+20-MAR-2023,Lawnmowers,10,45,good
+20-MAR-2023,Lawnmowers,10,40,easy
+20-MAR-2023,Skullcrushers,10,52,good
+20-MAR-2023,Skullcrushers,10,52,good
+20-MAR-2023,Skullcrushers,10,52,good
+20-MAR-2023,Tricep Pushdown,10,110,good
+20-MAR-2023,Tricep Pushdown,10,110,good
+20-MAR-2023,Tricep Pushdown,12,100,good
+20-MAR-2023,Overhead Tricep Extension,10,25,good
+20-MAR-2023,Overhead Tricep Extension,10,25,good
+20-MAR-2023,Overhead Tricep Extension,10,25,easy
+20-MAR-2023,Concentration Curl,10,20,good
+20-MAR-2023,Concentration Curl,10,20,good
+20-MAR-2023,Concentration Curl,10,20,good
+20-MAR-2023,Hammer Curl,10,25,good
+20-MAR-2023,Hammer Curl,10,25,good
+20-MAR-2023,Hammer Curl,10,25,good
+20-MAR-2023,Preacher Curl,10,52,good
+20-MAR-2023,Preacher Curl,8,62,failure
+20-MAR-2023,Preacher Curl,8,62,good
+17-MAR-2023,Machine Pec Flies,10,160,good
+17-MAR-2023,Machine Pec Flies,10,160,good
+17-MAR-2023,Machine Pec Flies,10,160,good
+17-MAR-2023,Dumbbell Press,10,60,good
+17-MAR-2023,Dumbbell Press,10,60,good
+17-MAR-2023,Dumbbell Press,10,60,good
+17-MAR-2023,Bench Press,5,205,good
+17-MAR-2023,Bench Press,5,205,good
+17-MAR-2023,Bench Press,5,205,good
+17-MAR-2023,Bench Press,5,185,good
+17-MAR-2023,Bench Press,6,135,good
+17-MAR-2023,Push-Ups (Perfect Device),5,0,easy
+17-MAR-2023,Deadlift,1,275,good
+17-MAR-2023,Deadlift,1,275,good
+17-MAR-2023,Deadlift,3,225,good
+17-MAR-2023,Deadlift,10,185,good
+17-MAR-2023,Deadlift,10,185,good
+17-MAR-2023,Deadlift,10,185,good
+17-MAR-2023,Deadlift,5,135,good
+16-MAR-2023,Squats,5,185,good
+16-MAR-2023,Squats,5,185,good
+16-MAR-2023,Squats,5,185,good
+16-MAR-2023,Squats,5,135,good
+16-MAR-2023,Leg Extension,10,200,good
+16-MAR-2023,Leg Extension,10,200,good
+16-MAR-2023,Leg Extension,10,200,good
+16-MAR-2023,Leg Curl,10,180,good
+16-MAR-2023,Leg Curl,12,180,good
+16-MAR-2023,Leg Curl,12,180,good
+16-MAR-2023,Clean & Jerk,1,165,good
+16-MAR-2023,Clean & Jerk,1,165,good
+16-MAR-2023,Clean & Jerk,1,165,good
+16-MAR-2023,Clean & Jerk,1,165,good
+16-MAR-2023,Clean & Jerk,1,165,good
+16-MAR-2023,Clean & Jerk,1,165,good
+16-MAR-2023,Clean & Jerk,1,165,good
+16-MAR-2023,Clean & Jerk,1,165,good
+16-MAR-2023,Clean & Jerk,1,165,good
+16-MAR-2023,Clean & Jerk,1,165,good
+16-MAR-2023,Clean & Jerk,1,135,good
+16-MAR-2023,Arnold Press,10,35,good
+16-MAR-2023,Arnold Press,10,35,good
+16-MAR-2023,Arnold Press,15,30,good
+16-MAR-2023,Military Press,10,180,failure
+16-MAR-2023,Military Press,10,180,good
+16-MAR-2023,Military Press,10,180,good
+16-MAR-2023,Front Lift,10,25,good
+16-MAR-2023,Front Lift,10,25,good
+16-MAR-2023,Front Lift,10,25,good
+16-MAR-2023,Bent-Over Lateral Lift,12,20,good
+16-MAR-2023,Bent-Over Lateral Lift,12,20,good
+16-MAR-2023,Bent-Over Lateral Lift,12,20,good
+13-MAR-2023,Preacher Curl,12,42,easy
+13-MAR-2023,Strict Press,3,165,good
+13-MAR-2023,Strict Press,2,135,easy
+13-MAR-2023,Strict Press,2,135,easy
+13-MAR-2023,Shrugs,15,35,easy
+13-MAR-2023,Shrugs,10,35,easy
+13-MAR-2023,Shrugs,10,35,easy
+13-MAR-2023,Lat Pulldown,12,115,good
+13-MAR-2023,Lat Pulldown,12,115,good
+13-MAR-2023,Lat Pulldown,12,115,good
+13-MAR-2023,Seated Row,15,115,good
+13-MAR-2023,Seated Row,15,115,good
+13-MAR-2023,Seated Row,15,115,good
+13-MAR-2023,Bent-Over Single-Arm Barbell Row,15,40,good
+13-MAR-2023,Bent-Over Single-Arm Barbell Row,12,40,easy
+13-MAR-2023,Bent-Over Single-Arm Barbell Row,10,40,easy
+13-MAR-2023,Skullcrushers,15,40,good
+13-MAR-2023,Skullcrushers,15,40,good
+13-MAR-2023,Skullcrushers,15,40,good
+13-MAR-2023,Tricep Pushdown,12,100,failure
+13-MAR-2023,Tricep Pushdown,12,100,good
+13-MAR-2023,Tricep Pushdown,12,100,good
+13-MAR-2023,Overhead Tricep Extension,10,26.4,good
+13-MAR-2023,Overhead Tricep Extension,10,26.4,good
+13-MAR-2023,Overhead Tricep Extension,10,26.4,good
+13-MAR-2023,Concentration Curl,12,20,good
+13-MAR-2023,Concentration Curl,12,20,good
+13-MAR-2023,Concentration Curl,10,20,good
+13-MAR-2023,Bicep Curl,10,25,good
+13-MAR-2023,Bicep Curl,10,25,good
+13-MAR-2023,Bicep Curl,10,25,good
+12-MAR-2023,Plank,60,0,good
+12-MAR-2023,Plank,60,0,good
+12-MAR-2023,Plank,60,0,good
+12-MAR-2023,Machine Pec Flies,10,160,good
+12-MAR-2023,Machine Pec Flies,10,160,good
+12-MAR-2023,Machine Pec Flies,10,160,good
+12-MAR-2023,Cable Pec Flies,10,80,good
+12-MAR-2023,Cable Pec Flies,10,80,good
+12-MAR-2023,Cable Pec Flies,10,80,good
+12-MAR-2023,Machine Bench Press,10,245,good
+12-MAR-2023,Machine Bench Press,7,245,good
+12-MAR-2023,Machine Bench Press,7,245,good
+12-MAR-2023,Machine Bench Press,12,220,good
+12-MAR-2023,Machine Bench Press,10,220,good
+12-MAR-2023,Machine Bench Press,10,220,good
+12-MAR-2023,Machine Bench Press,12,210,good
+10-MAR-2023,Military Press,10,180,good
+10-MAR-2023,Military Press,10,180,good
+10-MAR-2023,Military Press,10,170,good
+10-MAR-2023,Front Lift,10,26.4,good
+10-MAR-2023,Front Lift,10,26.4,good
+10-MAR-2023,Front Lift,10,26.4,good
+10-MAR-2023,Cable Lateral Lift,10,45,good
+10-MAR-2023,Cable Lateral Lift,10,45,good
+10-MAR-2023,Cable Lateral Lift,10,40,good
+10-MAR-2023,Close-Grip Lat Pulldown,10,130,good
+10-MAR-2023,Close-Grip Lat Pulldown,10,115,good
+10-MAR-2023,Close-Grip Lat Pulldown,15,100,good
+10-MAR-2023,Leg Extension,10,200,good
+10-MAR-2023,Leg Extension,10,200,good
+10-MAR-2023,Leg Extension,10,200,good
+10-MAR-2023,Leg Curl,10,180,good
+10-MAR-2023,Leg Curl,10,180,good
+10-MAR-2023,Leg Curl,10,180,good
+10-MAR-2023,Leg Press,10,280,good
+10-MAR-2023,Leg Press,10,280,good
+10-MAR-2023,Leg Press,10,265,good
+08-MAR-2023,Lat Pulldown,10,115,good
+08-MAR-2023,Lat Pulldown,10,115,good
+08-MAR-2023,Lat Pulldown,10,130,bad
+08-MAR-2023,Seated Row,12,115,good
+08-MAR-2023,Seated Row,12,115,good
+08-MAR-2023,Seated Row,12,115,good
+08-MAR-2023,Lawnmowers,12,35,good
+08-MAR-2023,Lawnmowers,12,35,good
+08-MAR-2023,Lawnmowers,10,35,easy
+08-MAR-2023,Skullcrushers,15,40,good
+08-MAR-2023,Skullcrushers,15,40,good
+08-MAR-2023,Skullcrushers,15,40,good
+08-MAR-2023,Tricep Pushdown,10,100,failure
+08-MAR-2023,Tricep Pushdown,12,100,good
+08-MAR-2023,Tricep Pushdown,12,100,good
+08-MAR-2023,Concentration Curl,10,20,bad (L)
+08-MAR-2023,Concentration Curl,10,20,good
+08-MAR-2023,Concentration Curl,10,20,good
+08-MAR-2023,Barbell Bicep Curl,12,40,good
+08-MAR-2023,Barbell Bicep Curl,10,40,good
+08-MAR-2023,Barbell Bicep Curl,12,40,good
+06-MAR-2023,Plank,60,0,good
+06-MAR-2023,Plank,60,0,good
+06-MAR-2023,Plank,60,0,good
+06-MAR-2023,Machine Pec Flies,10,160,good
+06-MAR-2023,Machine Pec Flies,10,160,good
+06-MAR-2023,Machine Pec Flies,10,150,good
+06-MAR-2023,Cable Pec Flies,10,80,failure
+06-MAR-2023,Cable Pec Flies,10,80,good
+06-MAR-2023,Cable Pec Flies,10,80,good
+06-MAR-2023,Machine Bench Press,3,245,good
+06-MAR-2023,Machine Bench Press,5,240,good
+06-MAR-2023,Machine Bench Press,10,210,good
+06-MAR-2023,Machine Bench Press,10,210,good
+06-MAR-2023,Machine Bench Press,10,210,good
+06-MAR-2023,Machine Bench Press,12,205,good
+05-MAR-2023,Leg Extension,10,190,good
+05-MAR-2023,Leg Extension,12,190,good
+05-MAR-2023,Leg Extension,12,190,good
+05-MAR-2023,Leg Curl,10,180,good
+05-MAR-2023,Leg Curl,10,180,good
+05-MAR-2023,Leg Curl,15,170,good
+05-MAR-2023,Lunges,10,20,good
+05-MAR-2023,Lunges,10,20,good
+05-MAR-2023,Lunges,10,0,good
+05-MAR-2023,Leg Press,10,265,good
+05-MAR-2023,Leg Press,10,265,good
+05-MAR-2023,Leg Press,10,265,good
+05-MAR-2023,Military Press,10,170,good
+05-MAR-2023,Military Press,10,170,good
+05-MAR-2023,Military Press,10,170,good
+05-MAR-2023,Front Lift,10,26.4,good
+05-MAR-2023,Front Lift,10,26.4,good
+05-MAR-2023,Front Lift,10,26.4,good
+05-MAR-2023,Lateral Lift,10,20,good
+05-MAR-2023,Lateral Lift,10,20,good
+05-MAR-2023,Lateral Lift,10,20,good
+28-FEB-2023,Machine Bench Press,5,190,good
+28-FEB-2023,Machine Bench Press,5,175,good
+28-FEB-2023,Machine Bench Press,5,160,good
+28-FEB-2023,Machine Bench Press,8,145,good
+28-FEB-2023,Machine Bench Press,10,130,good
+27-FEB-2023,Lat Pulldown,10,115,good
+27-FEB-2023,Lat Pulldown,10,115,good
+27-FEB-2023,Lat Pulldown,10,115,good
+27-FEB-2023,Delt Flies,10,85,good
+27-FEB-2023,Delt Flies,10,85,good
+27-FEB-2023,Delt Flies,12,85,good
+27-FEB-2023,Bicep Curl,10,25,good
+27-FEB-2023,Bicep Curl,10,25,good
+27-FEB-2023,Bicep Curl,10,25,good
+27-FEB-2023,Machine Bench Press,10,130,good
+27-FEB-2023,Machine Bench Press,10,130,good
+27-FEB-2023,Machine Bench Press,10,130,good
+27-FEB-2023,Hammer Curl,10,30,good
+27-FEB-2023,Hammer Curl,10,30,good
+27-FEB-2023,Hammer Curl,15,25,good
+27-FEB-2023,Incline Dumbbell Press,12,50,good
+27-FEB-2023,Incline Dumbbell Press,12,50,good
+27-FEB-2023,Incline Dumbbell Press,10,50,easy
+26-FEB-2023,Overhead Tricep Extension,10,25,good
+26-FEB-2023,Overhead Tricep Extension,3,25,good
+26-FEB-2023,Overhead Tricep Extension,7,30,bad
+26-FEB-2023,Overhead Tricep Extension,10,25,easy
+26-FEB-2023,Concentration Curl,10,20,good
+26-FEB-2023,Concentration Curl,10,20,good
+26-FEB-2023,Concentration Curl,10,20,good
+26-FEB-2023,Lat Pulldown,10,115,good
+26-FEB-2023,Lat Pulldown,10,115,good
+26-FEB-2023,Lat Pulldown,10,115,good
+26-FEB-2023,Pec Flies,10,145,good
+26-FEB-2023,Pec Flies,10,145,good
+26-FEB-2023,Pec Flies,10,145,good
+26-FEB-2023,Bicep Curl,10,25,good
+26-FEB-2023,Bicep Curl,10,25,good
+26-FEB-2023,Bicep Curl,10,25,good
+26-FEB-2023,Incline Dumbbell Press,2,45,good
+26-FEB-2023,Incline Dumbbell Press,8,50,failure
+26-FEB-2023,Incline Dumbbell Press,10,50,good
+26-FEB-2023,Incline Dumbbell Press,10,50,good
+21-FEB-2023,Lat Pulldown,10,115,good
+21-FEB-2023,Lat Pulldown,10,115,good
+21-FEB-2023,Lat Pulldown,10,115,good
+21-FEB-2023,Seated Row,10,115,good
+21-FEB-2023,Seated Row,10,130,bad
+21-FEB-2023,Seated Row,10,130,good
+21-FEB-2023,Skullcrushers,12,40,good
+21-FEB-2023,Skullcrushers,12,40,good
+21-FEB-2023,Skullcrushers,12,40,good
+21-FEB-2023,Tricep Pushdown,10,100,bad
+21-FEB-2023,Tricep Pushdown,10,100,good
+21-FEB-2023,Tricep Pushdown,12,100,good
+21-FEB-2023,Bicep Curl,10,20,good
+21-FEB-2023,Bicep Curl,10,20,good
+21-FEB-2023,Bicep Curl,12,20,good
+20-FEB-2023,Deadlift,1,275,good
+20-FEB-2023,Deadlift,1,245,good
+20-FEB-2023,Deadlift,1,225,good
+20-FEB-2023,Deadlift,10,185,good
+20-FEB-2023,Deadlift,10,185,good
+20-FEB-2023,Deadlift,10,185,good
+20-FEB-2023,Cable Pec Flies,10,75,good
+20-FEB-2023,Cable Pec Flies,10,75,good
+20-FEB-2023,Cable Pec Flies,10,75,good
+20-FEB-2023,Dumbbell Press,10,60,good
+20-FEB-2023,Dumbbell Press,10,60,good
+20-FEB-2023,Dumbbell Press,10,60,good
+20-FEB-2023,Bench Press,10,185,good
+20-FEB-2023,Bench Press,10,185,good
+20-FEB-2023,Bench Press,10,185,good
+20-FEB-2023,Bench Press,3,135,warm-up
+20-FEB-2023,Bench Press,3,95,warm-up
+19-FEB-2023,Leg Press Calf Raise,20,190,good
+19-FEB-2023,Leg Press Calf Raise,18,190,good
+19-FEB-2023,Leg Press Calf Raise,20,190,good
+19-FEB-2023,Leg Extension,10,180,good
+19-FEB-2023,Leg Extension,10,180,good
+19-FEB-2023,Leg Extension,12,175,good
+19-FEB-2023,Leg Curl,10,170,good
+19-FEB-2023,Leg Curl,12,170,good
+19-FEB-2023,Leg Curl,10,170,good
+19-FEB-2023,Leg Press,10,265,good
+19-FEB-2023,Leg Press,10,250,good
+19-FEB-2023,Leg Press,10,250,good
+19-FEB-2023,Military Press,10,160,good
+19-FEB-2023,Military Press,10,160,good
+19-FEB-2023,Military Press,10,160,good
+19-FEB-2023,Front Lift,10,26.4,good
+19-FEB-2023,Front Lift,10,26.4,good
+19-FEB-2023,Front Lift,10,26.4,good
+19-FEB-2023,Cable Lateral Lift,10,40,good
+19-FEB-2023,Cable Lateral Lift,10,40,good
+19-FEB-2023,Cable Lateral Lift,10,40,good
+16-FEB-2023,Lat Pulldown,5,145,good
+16-FEB-2023,Lat Pulldown,5,145,good
+16-FEB-2023,Lat Pulldown,5,145,good
+16-FEB-2023,Seated Row,5,145,bad
+16-FEB-2023,Seated Row,5,130,easy
+16-FEB-2023,Seated Row,7,130,good
+16-FEB-2023,Skullcrushers,10,40,good
+16-FEB-2023,Skullcrushers,10,40,good
+16-FEB-2023,Skullcrushers,12,40,good
+16-FEB-2023,Tricep Pushdown,5,130,good
+16-FEB-2023,Tricep Pushdown,5,130,good
+16-FEB-2023,Tricep Pushdown,7,120,good
+16-FEB-2023,Concentration Curl,10,20,good
+16-FEB-2023,Concentration Curl,10,20,good
+16-FEB-2023,Concentration Curl,10,20,good
+16-FEB-2023,Bicep Curl,5,30,good
+16-FEB-2023,Bicep Curl,5,30,good
+16-FEB-2023,Bicep Curl,5,30,good
+15-FEB-2023,Machine Incline Bench Press,7,200,good
+15-FEB-2023,Machine Incline Bench Press,5,200,good
+15-FEB-2023,Machine Incline Bench Press,10,180,good
+15-FEB-2023,Machine Pec Flies,5,180,good
+15-FEB-2023,Machine Pec Flies,5,180,good
+15-FEB-2023,Machine Pec Flies,5,170,good
+15-FEB-2023,Cable Pec Flies,5,100,good
+15-FEB-2023,Cable Pec Flies,5,90,good
+15-FEB-2023,Cable Pec Flies,5,90,good
+15-FEB-2023,Machine Bench Press,5,220,good
+15-FEB-2023,Machine Bench Press,5,220,good
+15-FEB-2023,Machine Bench Press,7,210,good
+13-FEB-2023,Push-Ups,10,0,good
+13-FEB-2023,Leg Extension,10,175,good
+13-FEB-2023,Leg Extension,10,175,good
+13-FEB-2023,Leg Extension,10,170,good
+13-FEB-2023,Leg Curl,10,170,good
+13-FEB-2023,Leg Curl,10,165,good
+13-FEB-2023,Leg Curl,12,160,good
+13-FEB-2023,Lunges,10,0,good
+13-FEB-2023,Lunges,10,0,good
+13-FEB-2023,Lunges,10,0,good
+13-FEB-2023,Leg Press,10,250,good
+13-FEB-2023,Leg Press,10,250,good
+13-FEB-2023,Leg Press,10,235,good
+13-FEB-2023,Military Press,10,160,good
+13-FEB-2023,Military Press,10,160,good
+13-FEB-2023,Military Press,10,160,good
+13-FEB-2023,Military Press,1,245,good
+13-FEB-2023,Military Press,1,240,good
+13-FEB-2023,Military Press,1,230,good
+13-FEB-2023,Military Press,1,210,good
+13-FEB-2023,Military Press,1,180,good
+13-FEB-2023,Military Press,1,150,good
+13-FEB-2023,Front Lift,12,20,good
+13-FEB-2023,Front Lift,1,30,good
+13-FEB-2023,Front Lift,1,25,good
+13-FEB-2023,Front Lift,12,20,good
+13-FEB-2023,Front Lift,10,20,good
+13-FEB-2023,Lateral Lift,10,20,good
+13-FEB-2023,Lateral Lift,10,20,good
+13-FEB-2023,Lateral Lift,10,20,easy
+12-FEB-2023,Lunges,10,0,good
+12-FEB-2023,Lunges,10,0,good
+12-FEB-2023,Lunges,10,0,good
+11-FEB-2023,Lat Pulldown,10,115,good
+11-FEB-2023,Lat Pulldown,10,115,good
+11-FEB-2023,Lat Pulldown,10,115,good
+11-FEB-2023,Seated Row,10,130,bad
+11-FEB-2023,Seated Row,12,115,good
+11-FEB-2023,Seated Row,20,85,good
+11-FEB-2023,Lawnmowers,15,35,good
+11-FEB-2023,Lawnmowers,15,35,good
+11-FEB-2023,Lawnmowers,12,35,good
+11-FEB-2023,Skullcrushers,10,40,good
+11-FEB-2023,Skullcrushers,10,40,good
+11-FEB-2023,Skullcrushers,10,40,easy
+11-FEB-2023,Tricep Pushdown,10,100,bad
+11-FEB-2023,Tricep Pushdown,10,100,bad
+11-FEB-2023,Tricep Pushdown,12,90,good
+11-FEB-2023,Concentration Curl,10,20,bad (L)
+11-FEB-2023,Concentration Curl,10,20,bad (L)
+11-FEB-2023,Concentration Curl,10,20,bad (L)
+11-FEB-2023,Barbell Bicep Curl,12,40,good
+11-FEB-2023,Barbell Bicep Curl,12,40,good
+11-FEB-2023,Barbell Bicep Curl,12,40,good
+08-FEB-2023,Clean & Jerk,1,135,good
+08-FEB-2023,Clean & Jerk,2,135,good
+08-FEB-2023,Clean & Jerk,1,135,good
+08-FEB-2023,Clean & Jerk,1,135,good
+08-FEB-2023,Clean & Jerk,1,135,good
+08-FEB-2023,Clean & Jerk,1,135,good
+08-FEB-2023,Clean & Jerk,1,135,good
+08-FEB-2023,Clean & Jerk,1,135,good
+08-FEB-2023,Clean & Jerk,1,135,good
+08-FEB-2023,Deadlift,10,175,good
+08-FEB-2023,Deadlift,10,155,good
+08-FEB-2023,Deadlift,12,135,good
+08-FEB-2023,Cable Pec Flies,10,70,good
+08-FEB-2023,Cable Pec Flies,5,75,failure
+08-FEB-2023,Cable Pec Flies,10,80,bad
+08-FEB-2023,Cable Pec Flies,10,70,easy
+08-FEB-2023,Incline Dumbbell Press,10,55,good
+08-FEB-2023,Incline Dumbbell Press,10,55,good
+08-FEB-2023,Incline Dumbbell Press,10,45,easy
+08-FEB-2023,Bench Press,5,195,good
+08-FEB-2023,Bench Press,5,185,good
+08-FEB-2023,Bench Press,10,175,good
+08-FEB-2023,Bench Press,10,155,good
+08-FEB-2023,Bench Press,5,135,good
+05-FEB-2023,Leg Extension,20,135,good
+05-FEB-2023,Leg Extension,20,135,good
+05-FEB-2023,Leg Extension,20,135,good
+05-FEB-2023,Calf Raise,15,190,bad
+05-FEB-2023,Calf Raise,20,190,bad
+05-FEB-2023,Calf Raise,12,190,bad
+05-FEB-2023,Leg Press,20,190,good
+05-FEB-2023,Leg Press,20,190,good
+05-FEB-2023,Leg Press,20,190,good
+05-FEB-2023,Leg Curl,15,110,good
+05-FEB-2023,Leg Curl,12,120,good
+05-FEB-2023,Leg Curl,20,130,good
+05-FEB-2023,Cable Lateral Lift,20,25,good
+05-FEB-2023,Cable Lateral Lift,20,25,good
+05-FEB-2023,Cable Lateral Lift,20,25,good
+05-FEB-2023,Front Lift,20,15,good
+05-FEB-2023,Front Lift,20,15,good
+05-FEB-2023,Front Lift,20,15,good
+05-FEB-2023,Military Press,20,100,good
+05-FEB-2023,Military Press,15,120,good
+05-FEB-2023,Military Press,20,120,good
+03-FEB-2023,Lat Pulldown,20,85,good
+03-FEB-2023,Lat Pulldown,20,85,good
+03-FEB-2023,Lat Pulldown,20,85,good
+03-FEB-2023,Seated Row,20,85,good
+03-FEB-2023,Seated Row,20,85,good
+03-FEB-2023,Seated Row,20,85,good
+03-FEB-2023,Barbell Overhead Tricep Extension,20,35,good
+03-FEB-2023,Barbell Overhead Tricep Extension,20,35,good
+03-FEB-2023,Barbell Overhead Tricep Extension,20,30,easy
+03-FEB-2023,Barbell Bicep Curl,20,30,good
+03-FEB-2023,Barbell Bicep Curl,20,30,good
+03-FEB-2023,Barbell Bicep Curl,12,40,good
+01-FEB-2023,Barbell Bicep Curl,12,40,good
+01-FEB-2023,Seated Row,12,100,good
+01-FEB-2023,Lat Pulldown,12,100,good
+01-FEB-2023,Barbell Overhead Tricep Extension,20,30,good
+31-JAN-2023,5th Point of Flight,60,0,good
+31-JAN-2023,5th Point of Flight,60,0,good
+31-JAN-2023,5th Point of Flight,60,0,good
+31-JAN-2023,Plank,60,0,good
+31-JAN-2023,Plank,60,0,good
+31-JAN-2023,Plank,60,0,good
+31-JAN-2023,Incline Bench Press,10,150,good
+31-JAN-2023,Incline Bench Press,10,150,good
+31-JAN-2023,Incline Bench Press,10,150,good
+31-JAN-2023,Pec Flies,10,140,good
+31-JAN-2023,Pec Flies,10,140,good
+31-JAN-2023,Pec Flies,10,140,good
+31-JAN-2023,Cable Pec Flies,10,70,good
+31-JAN-2023,Cable Pec Flies,12,70,good
+31-JAN-2023,Cable Pec Flies,10,70,easy
+31-JAN-2023,Machine Bench Press,10,190,good
+31-JAN-2023,Machine Bench Press,12,180,good
+31-JAN-2023,Machine Bench Press,12,180,good
+25-JAN-2023,Bench Press,5,185,good
+25-JAN-2023,Bench Press,5,185,good
+25-JAN-2023,Bench Press,10,135,good
+25-JAN-2023,Bench Press,10,135,good
+24-JAN-2023,5th Point of Flight,60,0,good
+24-JAN-2023,5th Point of Flight,50,0,good
+24-JAN-2023,5th Point of Flight,50,0,good
+24-JAN-2023,Plank,60,0,good
+24-JAN-2023,Plank,60,0,good
+24-JAN-2023,Plank,60,0,good
+24-JAN-2023,Incline Dumbbell Press,12,40,good
+24-JAN-2023,Incline Dumbbell Press,15,40,good
+24-JAN-2023,Incline Dumbbell Press,12,40,good
+24-JAN-2023,Cable Pec Flies,10,35,good
+24-JAN-2023,Cable Pec Flies,10,35,good
+24-JAN-2023,Cable Pec Flies,10,35,good
+24-JAN-2023,Dumbbell Press,10,45,good
+24-JAN-2023,Dumbbell Press,10,45,good
+24-JAN-2023,Dumbbell Press,12,40,good
+18-JAN-2023,Leg Raise,5,0,bad
+18-JAN-2023,Leg Raise,5,0,bad
+18-JAN-2023,Leg Raise,10,0,bad
+18-JAN-2023,5th Point of Flight,45,0,good
+18-JAN-2023,5th Point of Flight,50,0,good
+18-JAN-2023,5th Point of Flight,45,0,good
+18-JAN-2023,Plank,60,0,good
+18-JAN-2023,Plank,60,0,good
+18-JAN-2023,Plank,60,0,good
+18-JAN-2023,Incline Bench Press,10,150,bad
+18-JAN-2023,Incline Bench Press,10,150,good
+18-JAN-2023,Incline Bench Press,10,150,good
+18-JAN-2023,Pec Flies,10,140,good
+18-JAN-2023,Pec Flies,10,140,good
+18-JAN-2023,Pec Flies,12,130,good
+18-JAN-2023,Cable Pec Flies,10,70,good
+18-JAN-2023,Cable Pec Flies,10,70,good
+18-JAN-2023,Cable Pec Flies,10,70,good
+18-JAN-2023,Machine Bench Press,10,120,good
+18-JAN-2023,Machine Bench Press,25,120,good
+18-JAN-2023,Machine Bench Press,10,180,good
+18-JAN-2023,Machine Bench Press,10,180,good
+18-JAN-2023,Machine Bench Press,10,170,good
+12-JAN-2023,5th Point of Flight,50,0,good
+12-JAN-2023,5th Point of Flight,50,0,good
+12-JAN-2023,5th Point of Flight,45,0,good
+12-JAN-2023,Plank,60,0,good
+12-JAN-2023,Plank,50,0,good
+12-JAN-2023,Plank,60,0,good
+12-JAN-2023,Incline Bench Press,10,150,good
+12-JAN-2023,Incline Bench Press,10,150,good
+12-JAN-2023,Incline Bench Press,10,150,good
+12-JAN-2023,Cable Pec Flies,10,70,good
+12-JAN-2023,Cable Pec Flies,10,60,good
+12-JAN-2023,Cable Pec Flies,12,55,good
+12-JAN-2023,Machine Bench Press,10,180,good
+12-JAN-2023,Machine Bench Press,10,170,good
+12-JAN-2023,Machine Bench Press,12,150,good
+02-JAN-2023,Plank,50,0,good
+02-JAN-2023,Plank,50,0,good
+02-JAN-2023,Plank,50,0,good
+02-JAN-2023,Deadlift,10,135,good
+02-JAN-2023,Deadlift,10,135,good
+02-JAN-2023,Deadlift,10,135,good
+02-JAN-2023,Pec Flies,10,130,good
+02-JAN-2023,Pec Flies,10,130,good
+02-JAN-2023,Pec Flies,10,115,good
+02-JAN-2023,Dumbbell Press,10,40,good
+02-JAN-2023,Dumbbell Press,10,40,good
+02-JAN-2023,Dumbbell Press,10,35,good
+02-JAN-2023,Bench Press,10,135,good
+02-JAN-2023,Bench Press,10,135,good
+02-JAN-2023,Bench Press,10,135,good
+23-DEC-2023,Plank,45,0,good
+23-DEC-2023,Plank,45,0,good
+23-DEC-2023,Plank,45,0,good
+23-DEC-2023,Deadlift,10,115,good
+23-DEC-2023,Deadlift,10,115,good
+23-DEC-2023,Deadlift,10,115,good
+23-DEC-2023,Pec Flies,12,115,good
+23-DEC-2023,Pec Flies,10,115,good
+23-DEC-2023,Pec Flies,12,100,good
+23-DEC-2023,Dumbbell Press,10,35,good
+23-DEC-2023,Dumbbell Press,10,35,good
+23-DEC-2023,Dumbbell Press,10,35,good
+23-DEC-2023,Bench Press,10,115,good
+23-DEC-2023,Bench Press,10,135,bad
+23-DEC-2023,Bench Press,10,135,good
+13-DEC-2023,Plank,45,0,good
+13-DEC-2023,Plank,45,0,good
+13-DEC-2023,Deadlift,10,115,good
+13-DEC-2023,Deadlift,10,115,good
+13-DEC-2023,Deadlift,10,115,good
+13-DEC-2023,Cable Pec Flies,10,30,good
+13-DEC-2023,Cable Pec Flies,10,60,good
+13-DEC-2023,Cable Pec Flies,10,60,good
+13-DEC-2023,Dumbbell Press,10,35,good
+13-DEC-2023,Dumbbell Press,10,35,good
+13-DEC-2023,Dumbbell Press,12,35,good
+13-DEC-2023,Bench Press,10,135,good
+13-DEC-2023,Bench Press,10,115,good
+13-DEC-2023,Bench Press,12,95,good
+30-JAN-2023,Machine Bench Press,1,245,bad
+30-JAN-2023,Machine Bench Press,1,240,bad
+30-JAN-2023,Machine Bench Press,1,230,good
+30-JAN-2023,Machine Bench Press,1,220,good
+30-JAN-2023,Machine Bench Press,1,210,good
+30-JAN-2023,Machine Bench Press,1,200,good
+30-JAN-2023,Machine Bench Press,1,150,good
+30-JAN-2023,Machine Bench Press,1,100,good
+30-JAN-2023,Military Press,1,240,failure
+30-JAN-2023,Military Press,1,230,good
+30-JAN-2023,Military Press,1,220,good
+30-JAN-2023,Military Press,1,210,good
+30-JAN-2023,Military Press,1,200,good
+30-JAN-2023,Military Press,1,150,good
+30-JAN-2023,Military Press,1,100,good
+30-JAN-2023,Barbell Bicep Curl,12,50,good
+29-JAN-2023,Leg Extension,10,170,good
+29-JAN-2023,Leg Extension,10,170,good
+29-JAN-2023,Leg Extension,10,160,easy
+29-JAN-2023,Leg Curl,10,160,good
+29-JAN-2023,Leg Curl,10,160,good
+29-JAN-2023,Leg Curl,10,160,good
+29-JAN-2023,Lunges,10,0,good
+29-JAN-2023,Lunges,10,0,good
+29-JAN-2023,Lunges,10,0,good
+29-JAN-2023,Leg Press,10,235,good
+29-JAN-2023,Leg Press,12,235,good
+29-JAN-2023,Leg Press,10,235,good
+29-JAN-2023,Military Press,10,150,good
+29-JAN-2023,Military Press,10,150,good
+29-JAN-2023,Military Press,12,140,good
+29-JAN-2023,Front Lift,12,20,good
+29-JAN-2023,Front Lift,12,20,good
+29-JAN-2023,Front Lift,12,20,good
+29-JAN-2023,Lateral Lift,12,20,good
+29-JAN-2023,Lateral Lift,12,20,good
+29-JAN-2023,Lateral Lift,10,20,easy
+22-JAN-2023,Leg Extension,12,160,good
+22-JAN-2023,Leg Extension,12,150,good
+22-JAN-2023,Leg Extension,10,140,good
+22-JAN-2023,Leg Curl,12,150,good
+22-JAN-2023,Leg Curl,10,150,good
+22-JAN-2023,Leg Curl,10,150,good
+22-JAN-2023,Lunges,10,0,good
+22-JAN-2023,Lunges,10,0,good
+22-JAN-2023,Lunges,10,0,good
+22-JAN-2023,Leg Press,10,235,good
+22-JAN-2023,Leg Press,10,235,good
+22-JAN-2023,Leg Press,10,235,good
+22-JAN-2023,Military Press,12,140,good
+22-JAN-2023,Military Press,10,140,good
+22-JAN-2023,Military Press,12,140,good
+22-JAN-2023,Front Lift,12,20,good
+22-JAN-2023,Front Lift,10,20,good
+22-JAN-2023,Front Lift,10,20,good
+22-JAN-2023,Cable Lateral Lift,10,35,good
+22-JAN-2023,Cable Lateral Lift,10,40,bad
+22-JAN-2023,Cable Lateral Lift,12,35,good
+15-JAN-2023,Leg Extension,10,140,good
+15-JAN-2023,Leg Extension,10,140,good
+15-JAN-2023,Leg Extension,10,125,easy
+15-JAN-2023,Leg Curl,12,150,good
+15-JAN-2023,Leg Curl,10,150,good
+15-JAN-2023,Leg Curl,10,140,easy
+15-JAN-2023,Lunges,10,0,good
+15-JAN-2023,Lunges,10,0,good
+15-JAN-2023,Lunges,10,0,good
+15-JAN-2023,Leg Press,10,235,good
+15-JAN-2023,Leg Press,10,235,good
+15-JAN-2023,Leg Press,12,225,good
+15-JAN-2023,Military Press,10,140,good
+15-JAN-2023,Military Press,12,130,good
+15-JAN-2023,Military Press,10,125,easy
+15-JAN-2023,Front Lift,10,20,good
+15-JAN-2023,Front Lift,10,20,good
+15-JAN-2023,Front Lift,10,20,good
+15-JAN-2023,Lateral Lift,10,20,good
+15-JAN-2023,Lateral Lift,10,20,good
+15-JAN-2023,Lateral Lift,10,20,good
+11-JAN-2023,Leg Extension,10,140,good
+11-JAN-2023,Leg Extension,10,140,good
+11-JAN-2023,Leg Extension,10,125,easy
+11-JAN-2023,Leg Curl,12,150,good
+11-JAN-2023,Leg Curl,10,150,good
+11-JAN-2023,Leg Curl,10,140,easy
+11-JAN-2023,Lunges,10,0,good
+11-JAN-2023,Lunges,10,0,good
+11-JAN-2023,Lunges,10,0,good
+11-JAN-2023,Leg Press,10,235,good
+11-JAN-2023,Leg Press,10,235,good
+11-JAN-2023,Leg Press,12,225,good
+11-JAN-2023,Military Press,10,125,good
+11-JAN-2023,Military Press,10,120,good
+11-JAN-2023,Military Press,12,110,good
+11-JAN-2023,Front Lift,10,20,good
+11-JAN-2023,Front Lift,10,20,good
+11-JAN-2023,Front Lift,10,20,good
+11-JAN-2023,Cable Lateral Lift,10,35,good
+11-JAN-2023,Cable Lateral Lift,10,35,good
+11-JAN-2023,Cable Lateral Lift,10,35,good
+03-JAN-2023,Leg Extension,10,115,good
+03-JAN-2023,Leg Extension,10,115,good
+03-JAN-2023,Leg Extension,10,115,good
+03-JAN-2023,Leg Curl,10,130,good
+03-JAN-2023,Leg Curl,10,130,good
+03-JAN-2023,Leg Curl,10,130,good
+03-JAN-2023,Leg Press,10,400,bad
+03-JAN-2023,Leg Press,10,330,good
+03-JAN-2023,Leg Press,10,310,good
+03-JAN-2023,Arnold Press,10,25,good
+03-JAN-2023,Arnold Press,10,25,good
+03-JAN-2023,Arnold Press,10,25,good
+03-JAN-2023,Military Press,10,100,good
+03-JAN-2023,Military Press,10,100,good
+03-JAN-2023,Military Press,10,100,good
+03-JAN-2023,Lateral Lift,10,20,good
+03-JAN-2023,Lateral Lift,10,20,good
+03-JAN-2023,Lateral Lift,10,20,good
+28-DEC-2023,Leg Extension,10,115,good
+28-DEC-2023,Leg Extension,10,110,good
+28-DEC-2023,Leg Extension,12,110,good
+28-DEC-2023,Leg Curl,10,120,good
+28-DEC-2023,Leg Curl,10,120,good
+28-DEC-2023,Leg Curl,12,100,good
+28-DEC-2023,Leg Press,10,400,good
+28-DEC-2023,Leg Press,3,350,good
+28-DEC-2023,Leg Press,5,310,good
+28-DEC-2023,Leg Press,10,270,good
+28-DEC-2023,Leg Press,15,230,good
+28-DEC-2023,Leg Press,10,230,easy
+28-DEC-2023,Arnold Press,10,25,good
+28-DEC-2023,Arnold Press,10,25,good
+28-DEC-2023,Arnold Press,10,25,good
+28-DEC-2023,Military Press,10,85,good
+28-DEC-2023,Military Press,8,100,bad
+28-DEC-2023,Military Press,10,100,good
+28-DEC-2023,Lateral Lift,10,17.5,bad (L)
+28-DEC-2023,Lateral Lift,10,17.5,good
+28-DEC-2023,Lateral Lift,10,17.5,good
+16-DEC-2022,Lunges,10,0,good
+16-DEC-2022,Leg Extension,10,110,good
+16-DEC-2022,Leg Extension,10,100,good
+16-DEC-2022,Leg Extension,10,100,good
+16-DEC-2022,Leg Curl,10,120,good
+16-DEC-2022,Leg Curl,15,100,good
+16-DEC-2022,Leg Curl,15,100,good
+16-DEC-2022,Leg Press,10,190,good
+16-DEC-2022,Leg Press,10,190,good
+16-DEC-2022,Leg Press,10,190,good
+16-DEC-2022,Military Press,10,110,good
+16-DEC-2022,Military Press,10,110,good
+16-DEC-2022,Military Press,1,200,good
+16-DEC-2022,Military Press,1,190,good
+16-DEC-2022,Military Press,10,100,good
+16-DEC-2022,Cable Lateral Lift,10,30,good
+16-DEC-2022,Cable Lateral Lift,10,30,good
+16-DEC-2022,Cable Lateral Lift,10,30,good
+16-DEC-2022,Lateral Lift,10,15,good
+16-DEC-2022,Lateral Lift,10,20,good
+16-DEC-2022,Lateral Lift,10,15,good
+06-DEC-2022,Leg Extension,15,90,good
+06-DEC-2022,Leg Extension,10,90,good
+06-DEC-2022,Leg Extension,10,90,good
+06-DEC-2022,Leg Curl,10,90,good
+06-DEC-2022,Leg Curl,10,90,good
+06-DEC-2022,Leg Curl,10,80,easy
+06-DEC-2022,Leg Press,10,190,good
+06-DEC-2022,Leg Press,10,190,good
+06-DEC-2022,Leg Press,10,190,good
+06-DEC-2022,Military Press,10,100,good
+06-DEC-2022,Military Press,10,100,good
+06-DEC-2022,Military Press,1,190,good
+06-DEC-2022,Military Press,10,70,good
+06-DEC-2022,Front Lift,10,15,good
+06-DEC-2022,Front Lift,10,15,good
+06-DEC-2022,Front Lift,10,15,good
+06-DEC-2022,Lateral Lift,10,15,good
+06-DEC-2022,Lateral Lift,10,15,good
+06-DEC-2022,Lateral Lift,10,15,good
+25-JAN-2023,Resistance Lat Pulldown,10,100,good
+25-JAN-2023,Resistance Lat Pulldown,10,100,good
+25-JAN-2023,Resistance Lat Pulldown,10,100,good
+25-JAN-2023,Resistance Seated Row,10,100,good
+25-JAN-2023,Resistance Seated Row,10,100,good
+25-JAN-2023,Resistance Seated Row,10,100,good
+25-JAN-2023,Lawnmowers,10,40,good
+25-JAN-2023,Lawnmowers,10,40,good
+25-JAN-2023,Lawnmowers,10,40,good
+25-JAN-2023,Resistance Tricep Pushdown,10,40,good
+25-JAN-2023,Resistance Tricep Pushdown,10,40,good
+25-JAN-2023,Resistance Tricep Pushdown,12,40,good
+25-JAN-2023,Overhead Tricep Extension,10,25,good
+25-JAN-2023,Overhead Tricep Extension,10,25,good
+25-JAN-2023,Overhead Tricep Extension,10,25,good
+25-JAN-2023,Concentration Curl,10,15,good
+25-JAN-2023,Concentration Curl,10,20,bad
+25-JAN-2023,Hammer Curl,10,25,good
+25-JAN-2023,Hammer Curl,6,25,good
+25-JAN-2023,Hammer Curl,10,25,good
+25-JAN-2023,Hammer Curl,10,20,good
+25-JAN-2023,Concentration Curl,10,20,good
+25-JAN-2023,Concentration Curl,10,20,good
+25-JAN-2023,Bicep Curl,10,25,good
+25-JAN-2023,Bicep Curl,10,25,good
+25-JAN-2023,Bicep Curl,10,20,good
+21-JAN-2023,Lat Pulldown,10,115,bad
+21-JAN-2023,Lat Pulldown,10,115,good
+21-JAN-2023,Lat Pulldown,12,100,good
+21-JAN-2023,Seated Row,10,115,good
+21-JAN-2023,Seated Row,12,100,good
+21-JAN-2023,Seated Row,12,100,good
+21-JAN-2023,Lawnmowers,12,35,good
+21-JAN-2023,Lawnmowers,15,35,good
+21-JAN-2023,Lawnmowers,12,35,good
+21-JAN-2023,Skullcrushers,10,40,good
+21-JAN-2023,Skullcrushers,10,35,good
+21-JAN-2023,Skullcrushers,12,25,good
+21-JAN-2023,Tricep Pushdown,10,90,bad
+21-JAN-2023,Tricep Pushdown,10,90,bad
+21-JAN-2023,Tricep Pushdown,10,90,good
+21-JAN-2023,Barbell Overhead Tricep Extension,12,20,good
+21-JAN-2023,Barbell Overhead Tricep Extension,12,20,good
+21-JAN-2023,Barbell Overhead Tricep Extension,12,20,good
+21-JAN-2023,Barbell Bicep Curl,10,20,good
+21-JAN-2023,Barbell Bicep Curl,10,20,good
+21-JAN-2023,Barbell Bicep Curl,10,20,good
+21-JAN-2023,Barbell Bicep Curl,10,20,good
+21-JAN-2023,Barbell Bicep Curl,10,20,good
+13-JAN-2023,Lat Pulldown,10,110,bad
+13-JAN-2023,Lat Pulldown,10,100,good
+13-JAN-2023,Lat Pulldown,10,100,good
+13-JAN-2023,Seated Row,10,100,good
+13-JAN-2023,Seated Row,10,100,good
+13-JAN-2023,Seated Row,10,100,good
+13-JAN-2023,Lawnmowers,10,35,good
+13-JAN-2023,Lawnmowers,12,35,good
+13-JAN-2023,Lawnmowers,10,35,good
+13-JAN-2023,Tricep Pushdown,10,90,good
+13-JAN-2023,Tricep Pushdown,10,90,good
+13-JAN-2023,Tricep Pushdown,10,90,good
+13-JAN-2023,Barbell Overhead Tricep Extension,12,20,good
+13-JAN-2023,Barbell Overhead Tricep Extension,15,20,good
+13-JAN-2023,Barbell Overhead Tricep Extension,15,20,good
+13-JAN-2023,Barbell Bicep Curl,12,20,good
+13-JAN-2023,Barbell Bicep Curl,12,20,good
+13-JAN-2023,Barbell Bicep Curl,12,20,good
+13-JAN-2023,Barbell Bicep Curl,12,20,good
+13-JAN-2023,Barbell Bicep Curl,10,25,good
+05-JAN-2023,Lawnmowers,10,40,good
+05-JAN-2023,Lawnmowers,10,40,good
+05-JAN-2023,Lawnmowers,10,40,good
+05-JAN-2023,Seated Row,10,115,good
+05-JAN-2023,Seated Row,10,100,easy
+05-JAN-2023,Seated Row,12,85,good
+05-JAN-2023,Bicep Curl,10,25,good
+05-JAN-2023,Bicep Curl,10,25,good
+05-JAN-2023,Bicep Curl,10,25,good
+05-JAN-2023,Tricep Pushdown,10,40.5,good
+05-JAN-2023,Tricep Pushdown,10,42.5,bad
+05-JAN-2023,Tricep Pushdown,10,37.5,good
+05-JAN-2023,Overhead Tricep Extension,10,25,good
+05-JAN-2023,Overhead Tricep Extension,10,25,good
+05-JAN-2023,Overhead Tricep Extension,10,20,good
+05-JAN-2023,Hammer Curl,10,25,good
+05-JAN-2023,Hammer Curl,10,25,good
+05-JAN-2023,Hammer Curl,10,20,good
+21-DEC-2022,Hammer Curl,10,20,good
+21-DEC-2022,Hammer Curl,10,20,good
+21-DEC-2022,Hammer Curl,10,20,good
+21-DEC-2022,Tricep Pushdown,10,37.5,good
+21-DEC-2022,Tricep Pushdown,10,45,good
+21-DEC-2022,Tricep Pushdown,10,40.5,good
+21-DEC-2022,Lawnmowers,10,35,good
+21-DEC-2022,Lawnmowers,10,35,good
+21-DEC-2022,Lawnmowers,10,35,good
+21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
+21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
+21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
+21-DEC-2022,Seated Row,10,110,good
+21-DEC-2022,Seated Row,10,110,bad
+21-DEC-2022,Seated Row,10,95,good
+21-DEC-2022,Bicep Curl,10,15,good
+21-DEC-2022,Bicep Curl,10,15,good
+21-DEC-2022,Bicep Curl,10,10,easy
+09-DEC-2022,Lat Pulldown,11,85,good
+09-DEC-2022,Lat Pulldown,8,100,failure
+09-DEC-2022,Lat Pulldown,10,100,good
+09-DEC-2022,Overhead Tricep Extension,10,15,good
+09-DEC-2022,Overhead Tricep Extension,10,15,good
+09-DEC-2022,Overhead Tricep Extension,10,15,good
+09-DEC-2022,Lawnmowers,10,35,good
+09-DEC-2022,Lawnmowers,10,35,good
+09-DEC-2022,Lawnmowers,10,35,good
+09-DEC-2022,Bicep Curl,10,10,good
+09-DEC-2022,Bicep Curl,10,10,good
+09-DEC-2022,Bicep Curl,10,10,good
+09-DEC-2022,Seated Row,10,85,good
+09-DEC-2022,Seated Row,10,85,good
+09-DEC-2022,Seated Row,10,85,good
+04-DEC-2022,Lat Pulldown,10,100,bad
+04-DEC-2022,Lat Pulldown,10,100,good
+04-DEC-2022,Lat Pulldown,12,85,good
+04-DEC-2022,Tricep Pushdown,10,60,good
+04-DEC-2022,Tricep Pushdown,10,60,good
+04-DEC-2022,Tricep Pushdown,10,60,good
+04-DEC-2022,Seated Row,10,77.5,good
+04-DEC-2022,Seated Row,10,85,good
+04-DEC-2022,Seated Row,10,100,good
+04-DEC-2022,Overhead Tricep Extension,10,15,good
+04-DEC-2022,Overhead Tricep Extension,10,15,good
+04-DEC-2022,Overhead Tricep Extension,10,12.5,good
+04-DEC-2022,Lawnmowers,10,30,good
+04-DEC-2022,Lawnmowers,10,30,good
+04-DEC-2022,Lawnmowers,10,30,good
+04-DEC-2022,Bicep Curl,10,10,good
+04-DEC-2022,Bicep Curl,10,10,bad
+04-DEC-2022,Bicep Curl,10,10,good
