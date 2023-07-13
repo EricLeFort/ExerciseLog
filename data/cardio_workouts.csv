@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+10-JUL-2023,walk (treadmill),01:12:08,6.66,7758,204,160,192,"2 x 4m walking backwards @ 4.4kph; 1m @ 10 kph; 30s @ 14.0kph; 2 x 30s @ 15kph; 40s @ 15kph"
 08-JUL-2023,walk (treadmill),01:06:45,5.86,6931,362,170,181,"100m in 16:36; 120m in 20:00; 200m in 34:23; 1000ft in 53:18; 340m in 60:00"
 08-JUL-2023,run (treadmill),00:07:42,1.00,1056,0,159,187,"Ran 5m @ 9.0kph"
 06-JUL-2023,walk (treadmill),01:11:33,6.27,7446,339,154,165,"1000ft in 59:23"
