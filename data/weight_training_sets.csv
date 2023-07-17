@@ -1,4 +1,30 @@
 date,exercise,reps,weight(lbs),rating
+16-JUL-2023,Bench Press,5,135,warm-up
+16-JUL-2023,Bench Press,8,225,good
+16-JUL-2023,Bench Press,8,225,failure
+16-JUL-2023,Bench Press,8,225,good
+16-JUL-2023,Machine Pec Flies,12,195,good
+16-JUL-2023,Machine Pec Flies,10,195,good
+16-JUL-2023,Machine Pec Flies,10,195,good
+16-JUL-2023,Decline Bench Press,5,135,warm-up
+16-JUL-2023,Decline Bench Press,10,205,good
+16-JUL-2023,Decline Bench Press,10,205,good
+16-JUL-2023,Decline Bench Press,10,195,good
+16-JUL-2023,Deadlift,5,135,warm-up
+16-JUL-2023,Deadlift,5,255,good
+16-JUL-2023,Deadlift,5,255,good
+16-JUL-2023,Deadlift,5,275,good
+16-JUL-2023,Deadlift,5,275,good
+16-JUL-2023,Deadlift,5,275,good
+16-JUL-2023,Plank,60,0,good
+16-JUL-2023,Plank,60,0,good
+16-JUL-2023,Plank,60,0,good
+16-JUL-2023,Side-Plank,30,0,good
+16-JUL-2023,Side-Plank,30,0,good
+16-JUL-2023,Side-Plank,30,0,good
+16-JUL-2023,Shrugs,10,40,easy
+16-JUL-2023,Shrugs,10,45,good
+16-JUL-2023,Shrugs,10,45,good
 15-JUL-2023,Lateral Lift,10,25,good
 15-JUL-2023,Lateral Lift,10,25,good
 15-JUL-2023,Lateral Lift,10,25,good
@@ -98,12 +124,12 @@ date,exercise,reps,weight(lbs),rating
 09-JUL-2023,Lunges,10,30,good
 09-JUL-2023,Lunges,10,30,good
 09-JUL-2023,Lunges,10,30,good
-09-JUL-2023,Leg Curl,10,110,good
-09-JUL-2023,Leg Curl,10,110,good
-09-JUL-2023,Leg Curl,10,110,good
-09-JUL-2023,Leg Extension,10,120,good
-09-JUL-2023,Leg Extension,10,120,good
-09-JUL-2023,Leg Extension,10,120,good
+09-JUL-2023,Single-Leg Leg Curl,10,110,good
+09-JUL-2023,Single-Leg Leg Curl,10,110,good
+09-JUL-2023,Single-Leg Leg Curl,10,110,good
+09-JUL-2023,Single-Leg Leg Extension,10,120,good
+09-JUL-2023,Single-Leg Leg Extension,10,120,good
+09-JUL-2023,Single-Leg Leg Extension,10,120,good
 09-JUL-2023,Squats,5,135,warm-up
 09-JUL-2023,Squats,10,235,good
 09-JUL-2023,Squats,10,235,good
