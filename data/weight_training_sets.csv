@@ -1,4 +1,30 @@
 date,exercise,reps,weight(lbs),rating
+18-JUL-2023,Hammer Curl,8,35,good
+18-JUL-2023,Hammer Curl,8,35,bad
+18-JUL-2023,Hammer Curl,8,35,good
+18-JUL-2023,Concentration Curl,10,25,good
+18-JUL-2023,Concentration Curl,10,25,good
+18-JUL-2023,Concentration Curl,10,25,good
+18-JUL-2023,Overhead Tricep Extension,8,35,good
+18-JUL-2023,Overhead Tricep Extension,8,35,good
+18-JUL-2023,Overhead Tricep Extension,8,35,good
+18-JUL-2023,Tricep Pushdown,10,130,good
+18-JUL-2023,Tricep Pushdown,10,130,good
+18-JUL-2023,Tricep Pushdown,10,130,good
+18-JUL-2023,Lawnmowers,10,60,good
+18-JUL-2023,Lawnmowers,10,60,good
+18-JUL-2023,Lawnmowers,10,60,good
+18-JUL-2023,Lat Pulldown,10,130,good
+18-JUL-2023,Lat Pulldown,10,130,good
+18-JUL-2023,Lat Pulldown,10,130,bad
+18-JUL-2023,Seated Row,10,130,bad
+18-JUL-2023,Seated Row,10,130,good
+18-JUL-2023,Seated Row,10,130,good
+18-JUL-2023,Pullovers,10,45,good
+18-JUL-2023,Pullovers,8,45,good
+18-JUL-2023,Pullovers,8,45,good
+18-JUL-2023,Wide-Grip Pull-Up,8,-100,good
+17-JUL-2023,Burpees,10,0,good
 16-JUL-2023,Bench Press,5,135,warm-up
 16-JUL-2023,Bench Press,8,225,good
 16-JUL-2023,Bench Press,8,225,failure
