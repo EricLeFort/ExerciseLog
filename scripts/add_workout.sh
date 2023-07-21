@@ -48,6 +48,6 @@ then
     then
         git commit --amend --no-edit
     else
-        git commit -m "Added $1 workout"
+        git commit -m "Added $date workout"
     fi
 fi
