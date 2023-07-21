@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+19-JUL-2023,walk (treadmill),01:16:09,6.74,7938,369,164,186,"1000ft in 58:19; 314m in 60:00"
 18-JUL-2023,bike (stationary),00:10:00,5.01,0,0,173,178,""
 18-JUL-2023,run (treadmill),00:08:25,1.04,1097,0,157,179,""
 17-JUL-2023,bike (stationary),00:10:00,5.02,0,0,163,181,"First time doing an instructor led session, it was much more chill than my default pace"
