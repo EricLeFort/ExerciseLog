@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+29-JUL-2023,walk (treadmill),01:11:11,6.20,7463,309,154,167,""
 28-JUL-2023,bike (stationary),00:10:00,5.58,0,0,,,"Watch app decided it didn't want to connect so no data"
 27-JUL-2023,walk (treadmill),01:07:24,6.04,7118,264,147,162,""
 26-JUL-2023,walk (treadmill),00:35:14,3.09,3692,201,154,178,"100m in 15:44; 129m in 20:00; 193m in 30:00; 200m in 30:58"
