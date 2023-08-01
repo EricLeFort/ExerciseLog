@@ -1,4 +1,42 @@
 date,exercise,reps,weight(lbs),rating
+30-JUL-2023,Bicep Curl,8,35,good
+30-JUL-2023,Bicep Curl,8,35,good
+30-JUL-2023,Bicep Curl,8,35,good
+30-JUL-2023,Hammer Curl,10,35,good
+30-JUL-2023,Hammer Curl,10,35,bad
+30-JUL-2023,Hammer Curl,10,35,bad
+30-JUL-2023,Concentration Curl,10,25,good
+30-JUL-2023,Concentration Curl,10,25,good
+30-JUL-2023,Concentration Curl,10,25,good
+30-JUL-2023,Overhead Tricep Extension,8,35,good
+30-JUL-2023,Overhead Tricep Extension,8,35,good
+30-JUL-2023,Overhead Tricep Extension,8,35,good
+30-JUL-2023,Tricep Pushdown,10,130,good
+30-JUL-2023,Tricep Pushdown,8,140,good
+30-JUL-2023,Tricep Pushdown,10,130,bad
+30-JUL-2023,Skullcrushers,10,82,good
+30-JUL-2023,Skullcrushers,10,82,good
+30-JUL-2023,Skullcrushers,10,82,good
+30-JUL-2023,Lawnmowers,8,65,good
+30-JUL-2023,Lawnmowers,8,65,good
+30-JUL-2023,Lawnmowers,8,65,good
+30-JUL-2023,Seated Row,10,130,good
+30-JUL-2023,Seated Row,10,130,good
+30-JUL-2023,Seated Row,10,130,good
+30-JUL-2023,Pullovers,10,45,good
+30-JUL-2023,Pullovers,10,45,good
+30-JUL-2023,Pullovers,10,45,good
+30-JUL-2023,Finger Curl,20,5,easy
+30-JUL-2023,Finger Curl,20,10,easy
+30-JUL-2023,Finger Curl,20,15,easy
+30-JUL-2023,Wrist Extension,20,10,good
+30-JUL-2023,Wrist Extension,20,10,good
+30-JUL-2023,Wrist Extension,20,10,good
+30-JUL-2023,Wide-Grip Pull-Up,5,-100,good
+30-JUL-2023,Wide-Grip Pull-Up,5,-70,bad
+30-JUL-2023,Wide-Grip Pull-Up,5,-80,good
+30-JUL-2023,Wide-Grip Pull-Up,5,-80,good
+30-JUL-2023,Wide-Grip Pull-Up,5,-80,good
 29-JUL-2023,Machine Hip Abductors,10,85,good
 29-JUL-2023,Machine Hip Abductors,10,90,good
 29-JUL-2023,Machine Hip Abductors,10,95,good
