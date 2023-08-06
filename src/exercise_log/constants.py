@@ -21,6 +21,7 @@ WEIGHT = "weight(lbs)"
 RATING = "rating"
 PACE = "pace (m/s)"
 RATE_OF_CLIMB = "rate of climb (m/h)"
+STEP_SIZE = "avg step size (m)"
 
 # Set ratings
 BAD = "bad"

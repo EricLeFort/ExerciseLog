@@ -2,16 +2,20 @@ import csv
 import pandas as pd
 
 from exercise_log.constants import (
+    AVG_HEART_RATE,
     DATA_DURATION,
     DATE,
     DISTANCE,
     DURATION,
     ELEVATION,
     EXERCISE,
+    MAX_HEART_RATE,
     NOTES,
     PACE,
     RATE_OF_CLIMB,
     RESTING_HEART_RATE,
+    STEPS,
+    STEP_SIZE,
     WEIGHT,
     WORKOUT_TYPE,
 )
@@ -138,12 +142,8 @@ class DataLoader:
     @staticmethod
     def load_cardio_workouts(root_data_dir: str):
         cardio_workouts = DataLoader._load_and_clean_data(f"{root_data_dir}/cardio_workouts.csv")
-
-        # Populate computed fields
-        cardio_workouts[PACE] = cardio_workouts[DISTANCE] / cardio_workouts[DURATION]
-        cardio_workouts[PACE] = cardio_workouts[PACE] * 1000                            # Convert from km/s to m/s
-        cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[ELEVATION] / cardio_workouts[DURATION]
-        cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[RATE_OF_CLIMB] * (60 * 60)     # Convert from m/s to m/h
+        cardio_workouts[AVG_HEART_RATE] = cardio_workouts[AVG_HEART_RATE].astype('Int64')
+        cardio_workouts[MAX_HEART_RATE] = cardio_workouts[MAX_HEART_RATE].astype('Int64')
         return cardio_workouts
 
     @staticmethod
@@ -179,3 +179,23 @@ class DataLoader:
             travel_days
         )
         return all_workouts.reset_index()
+
+    @staticmethod
+    def add_computed_cardio_metrics(cardio_workouts: pd.DataFrame) -> None:
+        """
+        Adds computed metrics to the cardio workouts DataFrame.
+
+        Added metrics include:
+            * pace (m/s)
+            * rate of climb (m/h)
+
+        Args:
+            cardio_workouts (pd.DataFrame): The cardio workouts dataframe to add the columns to
+        """
+        cardio_workouts[PACE] = cardio_workouts[DISTANCE] / cardio_workouts[DURATION]
+        cardio_workouts[PACE] = (cardio_workouts[PACE] * 1000).round(2)                 # Convert from km/s to m/s
+        cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[ELEVATION] / cardio_workouts[DURATION]
+        cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[RATE_OF_CLIMB] * (60 * 60)     # Convert from m/s to m/h
+        cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[RATE_OF_CLIMB].round(0).astype('Int64')
+        cardio_workouts[STEP_SIZE] = cardio_workouts[DISTANCE] / cardio_workouts[STEPS]
+        cardio_workouts[STEP_SIZE] = (cardio_workouts[STEP_SIZE] * 1000).round(2)       # Convert from km to m
