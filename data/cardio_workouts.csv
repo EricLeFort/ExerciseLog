@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+05-AUG-2023,walk (treadmill),01:12:39,6.45,7956,200,161,181,"Ruck walk with a ~32lb pack; did a few 8kph trots throughout"
 04-AUG-2023,walk (treadmill),00:13:13,1.15,1409,44,151,161,"2min backwards @ 4.5kph"
 04-AUG-2023,walk (treadmill),00:11:42,1.00,1184,42,132,141,"1min backwards @ 4.5kph"
 03-AUG-2023,walk (treadmill),01:15:44,6.59,7935,365,155,169,""
