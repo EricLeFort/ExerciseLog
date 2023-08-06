@@ -23,8 +23,8 @@ def main():
     # Fit relevant trendlines and plot data
     # n-day average over a week gives a sense of if I'm keeping above a relatively low baseline of 150 minutes/week
     n_day_avg_workout_duration = Trendsetter.compute_n_sample_avg(all_workouts, DURATION, N_DAYS_TO_AVG)
-    weight_trendline = Trendsetter.fit_linear(health_metrics, WEIGHT, EXTRAPOLATE_DAYS)
-    heart_rate_trendline = Trendsetter.fit_logarithmic(health_metrics, RESTING_HEART_RATE, EXTRAPOLATE_DAYS)
+    weight_trendline = Trendsetter.get_line_of_best_fit(health_metrics, WEIGHT, EXTRAPOLATE_DAYS)
+    heart_rate_trendline = Trendsetter.get_logarithmic_curve_of_best_fit(health_metrics, RESTING_HEART_RATE, EXTRAPOLATE_DAYS)
     plot_workout_frequency(all_workouts, n_day_avg_workout_duration, N_DAYS_TO_AVG, export_dir=ROOT_IMG_DIR, show_plot=False)
     plot_resting_heart_rate(all_workouts, health_metrics, heart_rate_trendline, EXTRAPOLATE_DAYS, export_dir=ROOT_IMG_DIR, show_plot=False)
     plot_weight(all_workouts, health_metrics, weight_trendline, EXTRAPOLATE_DAYS, export_dir=ROOT_IMG_DIR, show_plot=False)
