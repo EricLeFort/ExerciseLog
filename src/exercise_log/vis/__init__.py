@@ -33,6 +33,8 @@ def plot_workout_frequency(
     show_plot=True,
 ):
     NON_GRAPH_GCF_PERCENT = 0.1
+    WORKOUT_FREQUENCY_BOTTOM_OFFSET = 0.03
+    Y_MIN, Y_MAX = 0, 180  # Setting a 3 hour max since there's a few backpacking days that mess up the scale
 
     # Draw the main graph contents and setup the axes
     workout_durations_mins = all_workouts[DURATION] // 60
@@ -50,7 +52,7 @@ def plot_workout_frequency(
 
     # Delineate the ideal minimum daily exercise threshold as a horizontal reference line
     plt.axhline(y=MIN_DAILY_ACTIVE_MINUTES, color='r', linestyle='-')
-    y_percent_min_daily_active = MIN_DAILY_ACTIVE_MINUTES / max(workout_durations_mins)
+    y_percent_min_daily_active = (MIN_DAILY_ACTIVE_MINUTES / Y_MAX) - WORKOUT_FREQUENCY_BOTTOM_OFFSET
     y_pos = y_percent_min_daily_active + NON_GRAPH_GCF_PERCENT
     plt.gcf().text(RIGHT_OF_AXIS_X_COORD, y_pos, "Target\nMinimum")
 
@@ -59,6 +61,7 @@ def plot_workout_frequency(
     configure_x_axis_by_month(all_workouts)
     ax.yaxis.set_major_formatter(ticker.FuncFormatter(convert_mins_to_hour_mins))
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(5))
+    ax.set_ylim([Y_MIN, Y_MAX])
     plt.grid(visible=True)
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
 
@@ -142,7 +145,7 @@ def plot_weight(
     export_dir: Optional[str] = None,
     show_plot=True,
 ):
-    Y_MIN, Y_MAX = 180, 300
+    Y_MIN, Y_MAX = 180, 305
 
     nonnull_weights = health_metrics[health_metrics[WEIGHT].notnull()]
     padded_dates = get_padded_dates(nonnull_weights, n_days_to_extrapolate)
@@ -172,7 +175,7 @@ def plot_weight(
 
     # Set up axes
     ax = plt.gca()
-    configure_x_axis_by_month(all_workouts, end_padding_days=n_days_to_extrapolate)
+    configure_x_axis_by_month(nonnull_weights, end_padding_days=n_days_to_extrapolate)
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(5))
     ax.set_ylim([Y_MIN, Y_MAX])
     plt.grid(visible=True)
