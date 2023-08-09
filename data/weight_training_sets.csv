@@ -1702,9 +1702,9 @@ date,exercise,reps,weight(lbs),rating
 06-APR-2023,Deadlift,10,205,good
 06-APR-2023,Deadlift,10,205,good
 06-APR-2023,Deadlift,10,195,good
-06-APR-2023,Pec Flies,10,175,good
-06-APR-2023,Pec Flies,10,175,good
-06-APR-2023,Pec Flies,10,170,good
+06-APR-2023,Machine Pec Flies,10,175,good
+06-APR-2023,Machine Pec Flies,10,175,good
+06-APR-2023,Machine Pec Flies,10,170,good
 06-APR-2023,Upward Cable Pec Flies,10,55,good
 06-APR-2023,Upward Cable Pec Flies,10,55,good
 06-APR-2023,Upward Cable Pec Flies,10,55,good
@@ -1778,11 +1778,11 @@ date,exercise,reps,weight(lbs),rating
 31-MAR-2023,Deadlift,10,205,good
 31-MAR-2023,Deadlift,10,205,good
 31-MAR-2023,Deadlift,10,195,good
-31-MAR-2023,Pec Flies,3,220,good
-31-MAR-2023,Pec Flies,3,200,good
-31-MAR-2023,Pec Flies,10,170,good
-31-MAR-2023,Pec Flies,10,170,good
-31-MAR-2023,Pec Flies,10,170,good
+31-MAR-2023,Machine Pec Flies,3,220,good
+31-MAR-2023,Machine Pec Flies,3,200,good
+31-MAR-2023,Machine Pec Flies,10,170,good
+31-MAR-2023,Machine Pec Flies,10,170,good
+31-MAR-2023,Machine Pec Flies,10,170,good
 31-MAR-2023,Upward Cable Pec Flies,10,55,good
 31-MAR-2023,Upward Cable Pec Flies,8,60,good
 31-MAR-2023,Upward Cable Pec Flies,15,50,easy
@@ -1862,9 +1862,9 @@ date,exercise,reps,weight(lbs),rating
 25-MAR-2023,Bench Press,5,205,good
 25-MAR-2023,Bench Press,5,185,easy
 25-MAR-2023,Bench Press,5,135,easy
-24-MAR-2023,Pec Flies,10,170,good
-24-MAR-2023,Pec Flies,12,160,good
-24-MAR-2023,Pec Flies,12,160,good
+24-MAR-2023,Machine Pec Flies,10,170,good
+24-MAR-2023,Machine Pec Flies,12,160,good
+24-MAR-2023,Machine Pec Flies,12,160,good
 24-MAR-2023,Upward Cable Pec Flies,12,50,good
 24-MAR-2023,Upward Cable Pec Flies,10,50,good
 24-MAR-2023,Upward Cable Pec Flies,10,50,good
@@ -2147,9 +2147,9 @@ date,exercise,reps,weight(lbs),rating
 26-FEB-2023,Lat Pulldown,10,115,good
 26-FEB-2023,Lat Pulldown,10,115,good
 26-FEB-2023,Lat Pulldown,10,115,good
-26-FEB-2023,Pec Flies,10,145,good
-26-FEB-2023,Pec Flies,10,145,good
-26-FEB-2023,Pec Flies,10,145,good
+26-FEB-2023,Machine Pec Flies,10,145,good
+26-FEB-2023,Machine Pec Flies,10,145,good
+26-FEB-2023,Machine Pec Flies,10,145,good
 26-FEB-2023,Bicep Curl,10,25,good
 26-FEB-2023,Bicep Curl,10,25,good
 26-FEB-2023,Bicep Curl,10,25,good
@@ -2364,9 +2364,9 @@ date,exercise,reps,weight(lbs),rating
 31-JAN-2023,Incline Bench Press,10,150,good
 31-JAN-2023,Incline Bench Press,10,150,good
 31-JAN-2023,Incline Bench Press,10,150,good
-31-JAN-2023,Pec Flies,10,140,good
-31-JAN-2023,Pec Flies,10,140,good
-31-JAN-2023,Pec Flies,10,140,good
+31-JAN-2023,Machine Pec Flies,10,140,good
+31-JAN-2023,Machine Pec Flies,10,140,good
+31-JAN-2023,Machine Pec Flies,10,140,good
 31-JAN-2023,Cable Pec Flies,10,70,good
 31-JAN-2023,Cable Pec Flies,12,70,good
 31-JAN-2023,Cable Pec Flies,10,70,easy
@@ -2404,9 +2404,9 @@ date,exercise,reps,weight(lbs),rating
 18-JAN-2023,Incline Bench Press,10,150,bad
 18-JAN-2023,Incline Bench Press,10,150,good
 18-JAN-2023,Incline Bench Press,10,150,good
-18-JAN-2023,Pec Flies,10,140,good
-18-JAN-2023,Pec Flies,10,140,good
-18-JAN-2023,Pec Flies,12,130,good
+18-JAN-2023,Machine Pec Flies,10,140,good
+18-JAN-2023,Machine Pec Flies,10,140,good
+18-JAN-2023,Machine Pec Flies,12,130,good
 18-JAN-2023,Cable Pec Flies,10,70,good
 18-JAN-2023,Cable Pec Flies,10,70,good
 18-JAN-2023,Cable Pec Flies,10,70,good
@@ -2436,9 +2436,9 @@ date,exercise,reps,weight(lbs),rating
 02-JAN-2023,Deadlift,10,135,good
 02-JAN-2023,Deadlift,10,135,good
 02-JAN-2023,Deadlift,10,135,good
-02-JAN-2023,Pec Flies,10,130,good
-02-JAN-2023,Pec Flies,10,130,good
-02-JAN-2023,Pec Flies,10,115,good
+02-JAN-2023,Machine Pec Flies,10,130,good
+02-JAN-2023,Machine Pec Flies,10,130,good
+02-JAN-2023,Machine Pec Flies,10,115,good
 02-JAN-2023,Dumbbell Press,10,40,good
 02-JAN-2023,Dumbbell Press,10,40,good
 02-JAN-2023,Dumbbell Press,10,35,good
@@ -2451,9 +2451,9 @@ date,exercise,reps,weight(lbs),rating
 23-DEC-2023,Deadlift,10,115,good
 23-DEC-2023,Deadlift,10,115,good
 23-DEC-2023,Deadlift,10,115,good
-23-DEC-2023,Pec Flies,12,115,good
-23-DEC-2023,Pec Flies,10,115,good
-23-DEC-2023,Pec Flies,12,100,good
+23-DEC-2023,Machine Pec Flies,12,115,good
+23-DEC-2023,Machine Pec Flies,10,115,good
+23-DEC-2023,Machine Pec Flies,12,100,good
 23-DEC-2023,Dumbbell Press,10,35,good
 23-DEC-2023,Dumbbell Press,10,35,good
 23-DEC-2023,Dumbbell Press,10,35,good
