@@ -35,9 +35,10 @@ GOOD = "good"
 WARMUP = "warm-up"
 
 # Workout Types
+BIKE_STATIONARY = "bike (stationary)"
+RUN_TREADMILL = "run (treadmill)"
 WALK_TREADMILL = "walk (treadmill)"
 WALK_OUTDOOR = "walk (outdoor)"
-BIKE_STATIONARY = "bike (stationary)"
 
 # Health constants
 MIN_DAILY_ACTIVE_MINUTES = 22.5  # Weekly recommended is 150, this is about 150/7

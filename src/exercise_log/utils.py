@@ -1,7 +1,7 @@
 import os
 
 from enum import Enum
-from typing import List, Optional
+from typing import Any, List, Optional
 
 import numpy as np
 import pandas as pd
@@ -16,7 +16,21 @@ CR = b"\r"
 LF = b"\n"
 
 
-class TermColour(str, Enum):
+class StrEnum(str, Enum):
+    def __contains__(self: "StrEnum", item: Any) -> bool:
+        """
+        Checks if the given item is a member of this enum.
+
+        Note: this is a little hacky due to the access to a private member but the alternative is try-casting which is
+        ~8x slower.
+
+        Args:
+            item (Any): The item to check for membership
+        """
+        return item in self._value2member_map_
+
+
+class TermColour(StrEnum):
     FAIL = '\033[91m'
     OKGREEN = '\033[92m'
     WARNING = '\033[93m'
