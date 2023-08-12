@@ -1,4 +1,6 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+11-AUG-2023,bike (stationary),00:20:00,10.75,0,0,168,183,""
+11-AUG-2023,walk (treadmill),01:15:59,6.59,7958,402,156,182,"1000ft in 58:58; 400m in 74:42"
 09-AUG-2023,walk (treadmill),01:14:14,7.01,8338,320,154,183,"1000ft in 58:20; 314m in 60:00"
 09-AUG-2023,run (treadmill),00:22:11,3.05,3346,0,170,184,"~21:00 @ 8.5kph"
 07-AUG-2023,walk (treadmill),01:08:36,6.14,7420,313,155,181,"1000ft in 58:36; 312m in 60:00; did some leg raises beforehand that were pain-free"
