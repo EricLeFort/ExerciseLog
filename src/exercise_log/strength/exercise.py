@@ -35,6 +35,7 @@ class Exercise(StrEnum):
     FINGER_CURL = "Finger Curl"
     FRONT_LIFT = "Front Lift"
     FULL_CANS = "Full Cans"
+    GOOD_MORNING = "Good Morning"
     HAMMER_CURL = "Hammer Curl"
     INC_BENCH_PRESS = "Incline Bench Press"
     INC_DUMBBELL_PRESS = "Incline Dumbbell Press"
