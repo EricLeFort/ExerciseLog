@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+15-AUG-2023,walk (treadmill),01:25:10,7.44,8876,369,142,156,"1000ft in 70:17; tweaked back the day before, this was a very low-intensity session"
 13-AUG-2023,walk (treadmill),01:14:00,6.75,7962,450,169,187,"100m in 14:49; 200m in 29:08; 206m in 30:00; 1000ft in 43:33; 400m in 57:08; 420m in 60:00; 5m @ 8.5kph"
 12-AUG-2023,walk (treadmill),00:10:24,0.93,1089,27,139,148,"Easy post-workout cooldown"
 11-AUG-2023,bike (stationary),00:20:00,10.75,0,0,168,183,""
