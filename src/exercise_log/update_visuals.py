@@ -2,6 +2,7 @@ import numpy as np
 
 from exercise_log.constants import *
 from exercise_log.dataloader import DataLoader
+from exercise_log.strength import Exercise
 from exercise_log.trend import Trendsetter
 from exercise_log.utils import TermColour
 from exercise_log.vis import plot_resting_heart_rate, plot_strength_over_time, plot_weight, plot_workout_frequency
@@ -10,6 +11,19 @@ ROOT_DATA_DIR = "data"
 ROOT_IMG_DIR = "img"
 EXTRAPOLATE_DAYS = 100
 N_DAYS_TO_AVG = 8
+
+SKIP_EXERCISE_PLOTS = {
+    Exercise.FIFTH_POINT_OF_FLIGHT,
+    Exercise.BURPEES,
+    Exercise.DEFICIT_PUSH_UPS,
+    Exercise.JUMPING_JACKS,
+    Exercise.LEG_RAISE,
+    Exercise.LAT_PULLDOWN_HANG,
+    Exercise.PLANK,
+    Exercise.SIDE_PLANK,
+    Exercise.PUSH_UPS,
+    Exercise.PUSH_UPS_PERFECT_DEVICE,
+}
 
 def main():
     # Load data
@@ -30,6 +44,9 @@ def main():
     plot_weight(all_workouts, health_metrics, weight_trendline, EXTRAPOLATE_DAYS, export_dir=ROOT_IMG_DIR, show_plot=False)
 
     for exercise in weight_training_sets[EXERCISE].unique():
+        if exercise in SKIP_EXERCISE_PLOTS:
+            print(f"Manually skipping {exercise}.")
+            continue
         print(f"Plotting {exercise}... ", end="")
         try:
             plot_strength_over_time(all_workouts, weight_training_sets, exercise, export_dir=ROOT_IMG_DIR, show_plot=False)
