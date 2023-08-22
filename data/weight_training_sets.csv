@@ -1,4 +1,39 @@
 date,exercise,reps,weight(lbs),rating
+20-AUG-2023,Bicep Curl,15,25,good
+20-AUG-2023,Bicep Curl,15,25,good
+20-AUG-2023,Bicep Curl,15,25,good
+20-AUG-2023,Hammer Curl,15,25,good
+20-AUG-2023,Hammer Curl,15,25,good
+20-AUG-2023,Hammer Curl,15,25,good
+20-AUG-2023,Concentration Curl,20,20,bad
+20-AUG-2023,Concentration Curl,15,20,bad
+20-AUG-2023,Concentration Curl,15,20,bad
+20-AUG-2023,Overhead Tricep Extension,5,20,warm-up
+20-AUG-2023,Overhead Tricep Extension,8,35,good
+20-AUG-2023,Overhead Tricep Extension,20,25,good
+20-AUG-2023,Overhead Tricep Extension,15,25,good
+20-AUG-2023,Tricep Pushdown,5,70,warm-up
+20-AUG-2023,Tricep Pushdown,10,130,bad
+20-AUG-2023,Skullcrushers,15,72,good
+20-AUG-2023,Skullcrushers,15,72,good
+20-AUG-2023,Skullcrushers,15,72,good
+20-AUG-2023,Lawnmowers,15,60,good
+20-AUG-2023,Lawnmowers,12,60,good
+20-AUG-2023,Lawnmowers,12,60,good
+20-AUG-2023,Seated Row,5,85,warm-up
+20-AUG-2023,Seated Row,12,130,good
+20-AUG-2023,Seated Row,12,130,good
+20-AUG-2023,Seated Row,12,130,good
+20-AUG-2023,Lat Pulldown,5,85,warm-up
+20-AUG-2023,Lat Pulldown,10,130,good
+20-AUG-2023,Lat Pulldown,10,130,good
+20-AUG-2023,Lat Pulldown,10,130,good
+20-AUG-2023,Pullovers,12,45,good
+20-AUG-2023,Pullovers,12,45,good
+20-AUG-2023,Pullovers,12,45,good
+20-AUG-2023,Wide-Grip Pull-Up,5,-90,good
+20-AUG-2023,Wide-Grip Pull-Up,5,-90,failure
+20-AUG-2023,Wide-Grip Pull-Up,5,-100,failure
 18-AUG-2023,Bench Press,9,225,good
 18-AUG-2023,Bench Press,7,225,good
 18-AUG-2023,Bench Press,7,225,good
