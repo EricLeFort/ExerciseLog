@@ -8,6 +8,7 @@ from typing import Optional
 from exercise_log.constants import (
     BAD,
     DATE,
+    DELOAD,
     DURATION,
     EXERCISE,
     FAILURE,
@@ -207,11 +208,12 @@ def plot_strength_over_time(
     for set_type, rep_range in SET_TYPE_TO_REP_RANGE.items():
         sets = single_exercise[(rep_range[0] <= single_exercise[REPS]) & (single_exercise[REPS] <= rep_range[1])]
 
-        # Filter out warmup, failure, and bad sets
+        # Filter out sets that should be ignored
         sets = sets[sets[RATING] != WARMUP]
-        sets = sets[~sets[RATING].str.startswith(FAILURE)]
         sets = sets[~sets[RATING].str.startswith(BAD)]
-        sets = sets[~sets[RATING].str.startswith(FUN)]
+        sets = sets[~sets[RATING].str.startswith(FAILURE)]
+        sets = sets[sets[RATING] != FUN]
+        sets = sets[sets[RATING] != DELOAD]
 
         # TODO filter out sets that shouldn't be counted (e.g. Leg Press from Earnscliffe rec center)
         # Filter to only the max weight set of this type for that day
