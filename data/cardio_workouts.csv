@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+24-AUG-2023,walk (treadmill),01:00:00,5.42,6713,125,161,181,"Ruck walk with a ~35lb pack; did a few 8kph trots throughout; 100m in 24:57"
 23-AUG-2023,walk (treadmill),01:08:01,5.91,7197,350,149,173,"1000ft in 56:09; 325m in 60:00"
 21-AUG-2023,bike (stationary),00:10:00,5.91,0,0,161,180,""
 21-AUG-2023,walk (treadmill),01:09:07,6.28,7440,309,149,185,"1000ft in 67:31"
