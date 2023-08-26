@@ -188,14 +188,17 @@ class DataLoader:
         Added metrics include:
             * pace (m/s)
             * rate of climb (m/h)
+            * step size (m)
 
         Args:
             cardio_workouts (pd.DataFrame): The cardio workouts dataframe to add the columns to
         """
         cardio_workouts[PACE] = cardio_workouts[DISTANCE] / cardio_workouts[DURATION]
         cardio_workouts[PACE] = (cardio_workouts[PACE] * 1000).round(2)                 # Convert from km/s to m/s
-        cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[ELEVATION] / cardio_workouts[DURATION]
-        cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[RATE_OF_CLIMB] * (60 * 60)     # Convert from m/s to m/h
-        cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[RATE_OF_CLIMB].round(0).astype('Int64')
-        cardio_workouts[STEP_SIZE] = cardio_workouts[DISTANCE] / cardio_workouts[STEPS]
-        cardio_workouts[STEP_SIZE] = (cardio_workouts[STEP_SIZE] * 1000).round(2)       # Convert from km to m
+        if ELEVATION in cardio_workouts:  # Skip this metric for workouts like stationary biking where elevation isn't tracked
+            cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[ELEVATION] / cardio_workouts[DURATION]
+            cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[RATE_OF_CLIMB] * (60 * 60)     # Convert from m/s to m/h
+            cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[RATE_OF_CLIMB].round(0).astype('Int64')
+        if STEPS in cardio_workouts:      # Skip this metric for workouts like biking where steps aren't tracked
+            cardio_workouts[STEP_SIZE] = cardio_workouts[DISTANCE] / cardio_workouts[STEPS]
+            cardio_workouts[STEP_SIZE] = (cardio_workouts[STEP_SIZE] * 1000).round(2)       # Convert from km to m
