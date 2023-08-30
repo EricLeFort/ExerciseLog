@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+29-AUG-2023,bike (stationary),00:30:00,16.22,0,0,154,190,""
 28-AUG-2023,bike (stationary),00:15:00,8.71,0,0,162,178,""
 28-AUG-2023,walk (treadmill),01:00:00,5.29,6282,261,144,155,"100m in 22:45"
 27-AUG-2023,bike (stationary),00:20:00,11.17,0,0,158,182,""
