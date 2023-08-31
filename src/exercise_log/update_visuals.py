@@ -1,7 +1,6 @@
 import numpy as np
 
-from exercise_log.constants import *
-from exercise_log.dataloader import DataLoader
+from exercise_log.dataloader import DataLoader, ColumnName
 from exercise_log.strength import Exercise
 from exercise_log.trend import Trendsetter
 from exercise_log.utils import TermColour
@@ -36,14 +35,14 @@ def main():
 
     # Fit relevant trendlines and plot data
     # n-day average over a week gives a sense of if I'm keeping above a relatively low baseline of 150 minutes/week
-    n_day_avg_workout_duration = Trendsetter.compute_n_sample_avg(all_workouts, DURATION, N_DAYS_TO_AVG)
-    weight_trendline = Trendsetter.get_line_of_best_fit(health_metrics, WEIGHT, EXTRAPOLATE_DAYS)
-    heart_rate_trendline = Trendsetter.get_logarithmic_curve_of_best_fit(health_metrics, RESTING_HEART_RATE, EXTRAPOLATE_DAYS)
+    n_day_avg_workout_duration = Trendsetter.compute_n_sample_avg(all_workouts, ColumnName.DURATION, N_DAYS_TO_AVG)
+    weight_trendline = Trendsetter.get_line_of_best_fit(health_metrics, ColumnName.WEIGHT, EXTRAPOLATE_DAYS)
+    heart_rate_trendline = Trendsetter.get_logarithmic_curve_of_best_fit(health_metrics, ColumnName.RESTING_HEART_RATE, EXTRAPOLATE_DAYS)
     plot_workout_frequency(all_workouts, n_day_avg_workout_duration, N_DAYS_TO_AVG, export_dir=ROOT_IMG_DIR, show_plot=False)
     plot_resting_heart_rate(all_workouts, health_metrics, heart_rate_trendline, EXTRAPOLATE_DAYS, export_dir=ROOT_IMG_DIR, show_plot=False)
     plot_weight(all_workouts, health_metrics, weight_trendline, EXTRAPOLATE_DAYS, export_dir=ROOT_IMG_DIR, show_plot=False)
 
-    for exercise in weight_training_sets[EXERCISE].unique():
+    for exercise in weight_training_sets[ColumnName.EXERCISE].unique():
         if exercise in SKIP_EXERCISE_PLOTS:
             print(f"Manually skipping {exercise}.")
             continue

@@ -111,3 +111,42 @@ class ExerciseInfo:
         self.muscle_groups_worked = info[MUSCLE_GROUPS_WORKED]
         self.antagonist_muscles = info[ANTAGONIST_MUSCLES]
         self.exercise_type = info[EXERCISE_TYPE]
+
+
+class CardioType(StrEnum):
+    BIKE_STATIONARY = "bike (stationary)"
+    RUN_TREADMILL = "run (treadmill)"
+    WALK_TREADMILL = "walk (treadmill)"
+    WALK_OUTDOOR = "walk (outdoor)"
+
+
+class SetRating(StrEnum):
+    BAD = "bad"
+    BAD_LEFT = "bad (L)"
+    BAD_RIGHT = "bad (R)"
+    DELOAD = "deload"
+    FAILURE = "failure"
+    FAILURE_LEFT = "failure (L)"
+    FAILURE_RIGHT = "failure (R)"
+    FUN = "fun"
+    GOOD = "good"
+    WARMUP = "warm-up"
+
+
+class SetType(StrEnum):
+    ONE_RM = "one_rm"
+    STRENGTH = "strength"
+    HYPERTROPHY = "hypertrophy"
+    ENDURANCE = "endurance"
+
+    def get_rep_range(self):
+        return SET_TYPE_TO_REP_RANGE[self]
+
+
+# TODO ONE_RM should be 1 and there should instead be logic to rectify results at the scope of an entire workout
+SET_TYPE_TO_REP_RANGE = {
+    SetType.ONE_RM: (1, 2),  # Include the 2-rep for when you hit 2 at a lower weight and then fail at the next weight
+    SetType.STRENGTH: (3, 7),
+    SetType.HYPERTROPHY: (8, 14),
+    SetType.ENDURANCE: (15, float("inf")),
+}

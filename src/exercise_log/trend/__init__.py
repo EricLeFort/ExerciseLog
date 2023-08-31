@@ -5,12 +5,8 @@ from scipy.optimize import curve_fit
 from scipy.ndimage import uniform_filter1d
 from typing import Callable
 
-from exercise_log.constants import (
-    DATE,
-    DURATION,
-    RESTING_HEART_RATE,
-    WEIGHT,
-)
+from exercise_log.dataloader import ColumnName
+
 
 EXTRAPOLATE_DAYS = 100
 MIN_DAILY_ACTIVE_MINUTES = 22.5  # Weekly is 150, this is about 150/7
@@ -32,8 +28,8 @@ class Trendsetter:
         """Computes a list of dates using the given dataframe padded with extra days at the end"""
         first_index = df.index[0]
         periods = df.shape[0] + num_days_to_pad
-        padded_dates = pd.date_range(df.iloc[0][DATE], periods=periods, freq='1d')
-        padded_dates = padded_dates.to_series(name=DATE).reset_index(drop=True)
+        padded_dates = pd.date_range(df.iloc[0][ColumnName.DATE], periods=periods, freq='1d')
+        padded_dates = padded_dates.to_series(name=ColumnName.DATE).reset_index(drop=True)
         padded_dates.index = pd.RangeIndex(start=first_index, stop=first_index + periods)
         return padded_dates
 

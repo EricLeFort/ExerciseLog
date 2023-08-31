@@ -1,26 +1,35 @@
 import csv
 import pandas as pd
 
-from exercise_log.constants import (
-    AVG_HEART_RATE,
-    DATA_DURATION,
-    DATE,
-    DISTANCE,
-    DURATION,
-    ELEVATION,
-    EXERCISE,
-    MAX_HEART_RATE,
-    NOTES,
-    PACE,
-    RATE_OF_CLIMB,
-    RESTING_HEART_RATE,
-    STEPS,
-    STEP_SIZE,
-    WEIGHT,
-    WORKOUT_TYPE,
-)
+from exercise_log.constants import DATE as DATE_CONST
 from exercise_log.strength import Exercise
-from exercise_log.utils import join_with_comma
+from exercise_log.utils import StrEnum, join_with_comma
+
+
+class ColumnName(StrEnum):
+    AVG_HEART_RATE = "avg_heart_rate"
+    DATE = DATE_CONST
+    DATA_DURATION = "duration(HH:mm:ss)"  # This is the human-readable version -- it'll be dropped during processing
+    DURATION = "duration(s)"              # Convert the human-readable durations to seconds for computational simplicity
+    DISTANCE = "distance(km)"
+    ELEVATION = "elevation(m)"
+    EXERCISE = "exercise"
+    LOCATION = "location"
+    MAX_HEART_RATE = "max_heart_rate"
+    NOTES = "notes"
+    PACE = "pace (m/s)"
+    RATE_OF_CLIMB = "rate of climb (m/h)"
+    RATING = "rating"
+    REPS = "reps"
+    RESTING_HEART_RATE = "resting_heart_rate(bpm)"
+    STEPS = "steps"
+    STEP_SIZE = "avg step size (m)"
+    WEIGHT = "weight(lbs)"
+    WORKOUT_TYPE = "workout_type"
+
+
+# This is just for convenience since ColumnName is a long string
+CName = ColumnName
 
 
 class DataLoader:
@@ -32,18 +41,18 @@ class DataLoader:
         df = pd.read_csv(fname)
 
         # Clean the data
-        df[DATE] = pd.to_datetime(df[DATE])
-        df = df.sort_values(DATE, ignore_index=True)
-        if DATA_DURATION in df:
-            df[DATA_DURATION] = pd.to_timedelta(df[DATA_DURATION])
-            df[DATA_DURATION] = df[DATA_DURATION].apply(lambda x: int(x.total_seconds()))
-            df.rename(columns={DATA_DURATION: DURATION}, inplace=True)
-        if NOTES in df:
-            df[NOTES] = df[NOTES].fillna("")
+        df[CName.DATE] = pd.to_datetime(df[CName.DATE])
+        df = df.sort_values(CName.DATE, ignore_index=True)
+        if CName.DATA_DURATION in df:
+            df[CName.DATA_DURATION] = pd.to_timedelta(df[CName.DATA_DURATION])
+            df[CName.DATA_DURATION] = df[CName.DATA_DURATION].apply(lambda x: int(x.total_seconds()))
+            df.rename(columns={CName.DATA_DURATION: CName.DURATION}, inplace=True)
+        if CName.NOTES in df:
+            df[CName.NOTES] = df[CName.NOTES].fillna("")
 
         # Validate the data
         DataLoader._validate_csv(fname)
-        if EXERCISE in df:
+        if CName.EXERCISE in df:
             DataLoader._validate_exercises(df, fname)
 
         return df
@@ -65,11 +74,11 @@ class DataLoader:
 
     @staticmethod
     def _validate_exercises(df: pd.DataFrame, fname: str):
-        if df[EXERCISE].isin(Exercise).all():
+        if df[CName.EXERCISE].isin(Exercise).all():
             return
 
-        first_invalid_idx = df[~df[EXERCISE].isin(Exercise)].index.tolist()[0]
-        first_invalid = df[EXERCISE][first_invalid_idx]
+        first_invalid_idx = df[~df[CName.EXERCISE].isin(Exercise)].index.tolist()[0]
+        first_invalid = df[CName.EXERCISE][first_invalid_idx]
 
         possible_valid = first_invalid[:-1]
         base_msg = f'"{first_invalid}" at row {first_invalid_idx + 2} in {fname} is not an expected exercise'
@@ -101,10 +110,10 @@ class DataLoader:
         Note: there can be more than one per day or rest days, this smooths that out.
         """
         total_durations = pd.concat([
-            weight_training_workouts.groupby(DATE)[DURATION].agg(sum),
-            cardio_workouts.groupby(DATE)[DURATION].agg(sum),
-            travel_days.groupby(DATE)[DURATION].agg(sum),
-        ]).groupby(DATE).agg(sum)
+            weight_training_workouts.groupby(CName.DATE)[CName.DURATION].agg(sum),
+            cardio_workouts.groupby(CName.DATE)[CName.DURATION].agg(sum),
+            travel_days.groupby(CName.DATE)[CName.DURATION].agg(sum),
+        ]).groupby(CName.DATE).agg(sum)
         total_durations.index = pd.DatetimeIndex(total_durations.index)
         return total_durations.reindex(all_workouts.index, fill_value=0)
 
@@ -117,10 +126,10 @@ class DataLoader:
     ) -> pd.DataFrame:
         """Computes the daily workout type for each day"""
         workout_types = pd.concat([
-            weight_training_workouts.groupby(DATE)[WORKOUT_TYPE].agg(join_with_comma),
-            cardio_workouts.groupby(DATE)[WORKOUT_TYPE].agg(join_with_comma),
-            travel_days.groupby(DATE)[WORKOUT_TYPE].agg(join_with_comma),
-        ]).groupby(DATE).agg(join_with_comma)
+            weight_training_workouts.groupby(CName.DATE)[CName.WORKOUT_TYPE].agg(join_with_comma),
+            cardio_workouts.groupby(CName.DATE)[CName.WORKOUT_TYPE].agg(join_with_comma),
+            travel_days.groupby(CName.DATE)[CName.WORKOUT_TYPE].agg(join_with_comma),
+        ]).groupby(CName.DATE).agg(join_with_comma)
         workout_types = workout_types.apply(DataLoader._det_workout_type)
         workout_types.index = pd.DatetimeIndex(workout_types.index)
         return workout_types.reindex(all_workouts.index, fill_value="Rest Day")
@@ -130,20 +139,21 @@ class DataLoader:
         health_metrics = DataLoader._load_and_clean_data(f"{root_data_dir}/health_metrics.csv")
 
         # Filter out any empty rows from the health metrics
-        return health_metrics[health_metrics[WEIGHT].notnull() | health_metrics[RESTING_HEART_RATE].notnull()]
+        return health_metrics[health_metrics[CName.WEIGHT].notnull() \
+          | health_metrics[CName.RESTING_HEART_RATE].notnull()]
 
     @staticmethod
     def load_travel_days(root_data_dir: str):
         travel_days = DataLoader._load_and_clean_data(f"{root_data_dir}/travel_days.csv")
         # Filling in an explicit workout type since its implicit for travel days
-        travel_days[WORKOUT_TYPE] = "Travel"
+        travel_days[CName.WORKOUT_TYPE] = "Travel"
         return travel_days
 
     @staticmethod
     def load_cardio_workouts(root_data_dir: str):
         cardio_workouts = DataLoader._load_and_clean_data(f"{root_data_dir}/cardio_workouts.csv")
-        cardio_workouts[AVG_HEART_RATE] = cardio_workouts[AVG_HEART_RATE].astype('Int64')
-        cardio_workouts[MAX_HEART_RATE] = cardio_workouts[MAX_HEART_RATE].astype('Int64')
+        cardio_workouts[CName.AVG_HEART_RATE] = cardio_workouts[CName.AVG_HEART_RATE].astype('Int64')
+        cardio_workouts[CName.MAX_HEART_RATE] = cardio_workouts[CName.MAX_HEART_RATE].astype('Int64')
         return cardio_workouts
 
     @staticmethod
@@ -157,22 +167,26 @@ class DataLoader:
     @staticmethod
     def load_all_workouts(cardio_workouts: pd.DataFrame, weight_training_workouts: pd.DataFrame, travel_days: pd.DataFrame):
         # Will be used to pad all datasets to have consistent dates
-        all_dates = pd.concat([cardio_workouts[DATE], weight_training_workouts[DATE], travel_days[DATE]])
+        all_dates = pd.concat([
+            cardio_workouts[CName.DATE],
+            weight_training_workouts[CName.DATE],
+            travel_days[CName.DATE]
+        ])
 
         # Initialize the dataframe including all dates spanning the range of the data (rest days are missing in the workout data)
         all_workouts = pd.DataFrame()
-        all_workouts[DATE] = pd.date_range(all_dates.min(), all_dates.max())
-        all_workouts = all_workouts.sort_values(DATE, ignore_index=True)
-        all_workouts = all_workouts.set_index(DATE)
+        all_workouts[CName.DATE] = pd.date_range(all_dates.min(), all_dates.max())
+        all_workouts = all_workouts.sort_values(CName.DATE, ignore_index=True)
+        all_workouts = all_workouts.set_index(CName.DATE)
 
         # Populate computed fields
-        all_workouts[DURATION] = DataLoader._compute_total_durations(
+        all_workouts[CName.DURATION.value] = DataLoader._compute_total_durations(
             all_workouts,
             cardio_workouts,
             weight_training_workouts,
             travel_days
         )
-        all_workouts[WORKOUT_TYPE] = DataLoader._compute_workout_types(
+        all_workouts[CName.WORKOUT_TYPE.value] = DataLoader._compute_workout_types(
             all_workouts,
             cardio_workouts,
             weight_training_workouts,
@@ -193,12 +207,15 @@ class DataLoader:
         Args:
             cardio_workouts (pd.DataFrame): The cardio workouts dataframe to add the columns to
         """
-        cardio_workouts[PACE] = cardio_workouts[DISTANCE] / cardio_workouts[DURATION]
-        cardio_workouts[PACE] = (cardio_workouts[PACE] * 1000).round(2)                 # Convert from km/s to m/s
-        if ELEVATION in cardio_workouts:  # Skip this metric for workouts like stationary biking where elevation isn't tracked
-            cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[ELEVATION] / cardio_workouts[DURATION]
-            cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[RATE_OF_CLIMB] * (60 * 60)     # Convert from m/s to m/h
-            cardio_workouts[RATE_OF_CLIMB] = cardio_workouts[RATE_OF_CLIMB].round(0).astype('Int64')
-        if STEPS in cardio_workouts:      # Skip this metric for workouts like biking where steps aren't tracked
-            cardio_workouts[STEP_SIZE] = cardio_workouts[DISTANCE] / cardio_workouts[STEPS]
-            cardio_workouts[STEP_SIZE] = (cardio_workouts[STEP_SIZE] * 1000).round(2)       # Convert from km to m
+        # Convert km/s to m/s
+        cardio_workouts[CName.PACE] = cardio_workouts[CName.DISTANCE] / cardio_workouts[CName.DURATION]
+        cardio_workouts[CName.PACE] = (cardio_workouts[CName.PACE] * 1000).round(2)
+        if CName.ELEVATION in cardio_workouts:  # Skip this metric for workouts where elevation isn't tracked
+            # Convert m/s to m/h
+            cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.ELEVATION] / cardio_workouts[CName.DURATION]
+            cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.RATE_OF_CLIMB] * (60 * 60)
+            cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.RATE_OF_CLIMB].round(0).astype('Int64')
+        if CName.STEPS in cardio_workouts:      # Skip this metric for workouts like biking where steps aren't tracked
+            # Convert km to m
+            cardio_workouts[CName.STEP_SIZE] = cardio_workouts[CName.DISTANCE] / cardio_workouts[CName.STEPS]
+            cardio_workouts[CName.STEP_SIZE] = (cardio_workouts[CName.STEP_SIZE] * 1000).round(2)

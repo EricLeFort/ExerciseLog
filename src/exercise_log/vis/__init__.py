@@ -5,22 +5,9 @@ import matplotlib.ticker as ticker
 
 from typing import Optional
 
-from exercise_log.constants import (
-    BAD,
-    DATE,
-    DELOAD,
-    DURATION,
-    EXERCISE,
-    FAILURE,
-    FUN,
-    MIN_DAILY_ACTIVE_MINUTES,
-    RATING,
-    REPS,
-    RESTING_HEART_RATE,
-    SET_TYPE_TO_REP_RANGE,
-    WARMUP,
-    WEIGHT,
-)
+from exercise_log.strength.exercise import SetRating, SetType
+from exercise_log.dataloader import ColumnName
+from exercise_log.constants import MIN_DAILY_ACTIVE_MINUTES
 from exercise_log.utils import convert_mins_to_hour_mins, convert_pd_to_np, get_padded_dates
 from exercise_log.vis.constants import BOTTOM_OFFSET, RIGHT_OF_AXIS_X_COORD, NON_GRAPH_AREA_SCALER
 from exercise_log.vis.utils import configure_x_axis_by_month, create_legend_and_title
@@ -38,15 +25,15 @@ def plot_workout_frequency(
     Y_MIN, Y_MAX = 0, 180  # Setting a 3 hour max since there's a few backpacking days that mess up the scale
 
     # Draw the main graph contents and setup the axes
-    workout_durations_mins = all_workouts[DURATION] // 60
+    workout_durations_mins = all_workouts[ColumnName.DURATION] // 60
     plt.scatter(
-        all_workouts[DATE],
+        all_workouts[ColumnName.DATE],
         workout_durations_mins,
         s=5,
         label="Workout Duration",
     )
     plt.plot(
-        convert_pd_to_np(all_workouts[DATE]),
+        convert_pd_to_np(all_workouts[ColumnName.DATE]),
         convert_pd_to_np(n_day_avg_workout_duration // 60),
         label=f"{n_days_to_avg}-Day Avg Daily Duration",
     )
@@ -88,11 +75,11 @@ def plot_resting_heart_rate(
 ):
     Y_MIN, Y_MAX = 45, 90
 
-    nonnull_heart_rates = health_metrics[health_metrics[RESTING_HEART_RATE].notnull()]
+    nonnull_heart_rates = health_metrics[health_metrics[ColumnName.RESTING_HEART_RATE].notnull()]
     padded_dates = get_padded_dates(nonnull_heart_rates, n_days_to_extrapolate)
     plt.scatter(
-        nonnull_heart_rates[DATE].to_numpy(),
-        nonnull_heart_rates[RESTING_HEART_RATE].to_numpy(),
+        nonnull_heart_rates[ColumnName.DATE].to_numpy(),
+        nonnull_heart_rates[ColumnName.RESTING_HEART_RATE].to_numpy(),
         s=5,
         label="Resting HR"
     )
@@ -148,11 +135,11 @@ def plot_weight(
 ):
     Y_MIN, Y_MAX = 180, 305
 
-    nonnull_weights = health_metrics[health_metrics[WEIGHT].notnull()]
+    nonnull_weights = health_metrics[health_metrics[ColumnName.WEIGHT].notnull()]
     padded_dates = get_padded_dates(nonnull_weights, n_days_to_extrapolate)
     plt.scatter(
-        nonnull_weights[DATE].to_numpy(),
-        nonnull_weights[WEIGHT].to_numpy(),
+        nonnull_weights[ColumnName.DATE].to_numpy(),
+        nonnull_weights[ColumnName.WEIGHT].to_numpy(),
         s=5,
         label="Weight"
     )
@@ -203,35 +190,37 @@ def plot_strength_over_time(
     export_dir: Optional[str] = None,
     show_plot=True,
 ):
-    final_date = all_workouts[DATE].max()
-    single_exercise = weight_training_sets[weight_training_sets[EXERCISE] == exercise]
-    for set_type, rep_range in SET_TYPE_TO_REP_RANGE.items():
-        sets = single_exercise[(rep_range[0] <= single_exercise[REPS]) & (single_exercise[REPS] <= rep_range[1])]
+    final_date = all_workouts[ColumnName.DATE].max()
+    single_exercise = weight_training_sets[weight_training_sets[ColumnName.EXERCISE] == exercise]
+    for set_type in SetType:
+        rep_range = set_type.get_rep_range()
+        sets = single_exercise[(rep_range[0] <= single_exercise[ColumnName.REPS]) \
+          & (single_exercise[ColumnName.REPS] <= rep_range[1])]
 
         # Filter out sets that should be ignored
-        sets = sets[sets[RATING] != WARMUP]
-        sets = sets[~sets[RATING].str.startswith(BAD)]
-        sets = sets[~sets[RATING].str.startswith(FAILURE)]
-        sets = sets[sets[RATING] != FUN]
-        sets = sets[sets[RATING] != DELOAD]
+        sets = sets[sets[ColumnName.RATING] != SetRating.WARMUP]
+        sets = sets[~sets[ColumnName.RATING].str.startswith(SetRating.BAD)]
+        sets = sets[~sets[ColumnName.RATING].str.startswith(SetRating.FAILURE)]
+        sets = sets[sets[ColumnName.RATING] != SetRating.FUN]
+        sets = sets[sets[ColumnName.RATING] != SetRating.DELOAD]
 
         # TODO filter out sets that shouldn't be counted (e.g. Leg Press from Earnscliffe rec center)
         # Filter to only the max weight set of this type for that day
-        idx = sets.groupby(DATE)[WEIGHT].idxmax()
+        idx = sets.groupby(ColumnName.DATE)[ColumnName.WEIGHT].idxmax()
         sets = sets.loc[idx]
 
         if not sets.empty:
-            last_weight = sets[WEIGHT].iloc[-1]
-            sets = sets.append({DATE: final_date, WEIGHT: last_weight}, ignore_index=True)
+            last_weight = sets[ColumnName.WEIGHT].iloc[-1]
+            sets = sets.append({ColumnName.DATE: final_date, ColumnName.WEIGHT: last_weight}, ignore_index=True)
             plt.scatter(
-                sets[DATE],
-                sets[WEIGHT],
+                sets[ColumnName.DATE],
+                sets[ColumnName.WEIGHT],
                 s=2,
                 label=set_type,
             )
             plt.step(
-                sets[DATE].to_numpy(),
-                sets[WEIGHT].to_numpy(),
+                sets[ColumnName.DATE].to_numpy(),
+                sets[ColumnName.WEIGHT].to_numpy(),
                 where="post",
             )
 
@@ -242,7 +231,7 @@ def plot_strength_over_time(
     # Set up axes
     ax = plt.gca()
     configure_x_axis_by_month(all_workouts)
-    chunk_of_range = (single_exercise[WEIGHT].max() - single_exercise[WEIGHT].min()) / 20
+    chunk_of_range = (single_exercise[ColumnName.WEIGHT].max() - single_exercise[ColumnName.WEIGHT].min()) / 20
     y_step = max(1, round(chunk_of_range / 10) * 10)
     ax.yaxis.set_major_locator(ticker.MultipleLocator(5 * y_step))
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(y_step))
