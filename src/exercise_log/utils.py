@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from pandas.core.generic import NDFrame  # This is the generic type that encompasses Series and DataFrame
 
-from exercise_log.constants import number, DATE
+from exercise_log.constants import DATE, number
 
 
 UTF8 = "utf-8"
@@ -28,6 +28,10 @@ class StrEnum(str, Enum):
             item (Any): The item to check for membership
         """
         return item in self._value2member_map_
+
+
+    def __str__(self):
+        return self.value
 
 
 class TermColour(StrEnum):
