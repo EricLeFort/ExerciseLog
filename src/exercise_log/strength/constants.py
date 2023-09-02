@@ -1,9 +1,11 @@
+ANTAGONIST_MUSCLES = "Antagonist Muscles"
 COUNT_TYPE = "Count Type"
 EXERCISE_TYPE = "Excercise Type"
-ANTAGONIST_MUSCLES = "Antagonist Muscles"
 MUSCLE_GROUPS_WORKED = "Muscle Groups Worked"
 MUSCLES_WORKED = "Muscles Worked"
+OPTIMAL_REP_RANGE = "Optimal Rep Range"
 SECONDARY_MUSCLES = "Secondary Muscles"
+TENSILE_FOCUS = "Tensile Focus"
 
 
 # Count Types
