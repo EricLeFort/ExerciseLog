@@ -8,9 +8,11 @@ from exercise_log.strength import Exercise
 from exercise_log.utils import StrEnum, join_with_comma
 
 
-# TODO add more columns (e.g. avg/max wattage) to biking csv
 class ColumnName(StrEnum):
+    AVG_CADENCE = "avg_cadence(rpm)"
     AVG_HEART_RATE = "avg_heart_rate"
+    AVG_RES = "avg_resistance"
+    AVG_WATT = "avg_wattage"
     DATE = DATE_CONST
     DATA_DURATION = "duration(HH:mm:ss)"  # This is the human-readable version -- it'll be dropped during processing
     DURATION = "duration(s)"              # Convert the human-readable durations to seconds for computational simplicity
@@ -18,7 +20,11 @@ class ColumnName(StrEnum):
     ELEVATION = "elevation(m)"
     EXERCISE = "exercise"
     LOCATION = "location"
+    MAX_CADENCE = "max_cadence(rpm)"
     MAX_HEART_RATE = "max_heart_rate"
+    MAX_RES = "max_resistance"
+    MAX_SPEED = "max_speed(km/h)"
+    MAX_WATT = "max_wattage"
     NOTES = "notes"
     PACE = "pace (m/s)"
     RATE_OF_CLIMB = "rate of climb (m/h)"
@@ -180,7 +186,12 @@ class DataLoader:
 
     @staticmethod
     def load_bike_workouts(root_data_dir: str):
-        return DataLoader._clean_cardio_workout(f"{root_data_dir}/bikes.csv")
+        workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/bikes.csv")
+        workouts[CName.AVG_CADENCE] = workouts[CName.AVG_CADENCE].astype('Int64')
+        workouts[CName.MAX_CADENCE] = workouts[CName.MAX_CADENCE].astype('Int64')
+        workouts[CName.AVG_WATT] = workouts[CName.AVG_WATT].astype('Int64')
+        workouts[CName.MAX_WATT] = workouts[CName.MAX_WATT].astype('Int64')
+        return workouts
 
     @staticmethod
     def load_weight_training_workouts(root_data_dir: str):
