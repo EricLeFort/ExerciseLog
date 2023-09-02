@@ -28,7 +28,10 @@ def main():
     # Load data
     health_metrics = DataLoader.load_health_metrics(ROOT_DATA_DIR)
     travel_days = DataLoader.load_travel_days(ROOT_DATA_DIR)
-    cardio_workouts = DataLoader.load_cardio_workouts(ROOT_DATA_DIR)
+    walk_workouts = DataLoader.load_walk_workouts(ROOT_DATA_DIR)
+    run_workouts = DataLoader.load_run_workouts(ROOT_DATA_DIR)
+    bike_workouts = DataLoader.load_bike_workouts(ROOT_DATA_DIR)
+    cardio_workouts = DataLoader.merge_cardio_workouts([walk_workouts, run_workouts, bike_workouts])
     weight_training_workouts = DataLoader.load_weight_training_workouts(ROOT_DATA_DIR)
     weight_training_sets = DataLoader.load_weight_training_sets(ROOT_DATA_DIR)
     all_workouts = DataLoader.load_all_workouts(cardio_workouts, weight_training_workouts, travel_days)

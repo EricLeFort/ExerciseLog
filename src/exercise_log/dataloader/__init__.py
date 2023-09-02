@@ -1,3 +1,5 @@
+from typing import List
+
 import csv
 import pandas as pd
 
@@ -6,6 +8,7 @@ from exercise_log.strength import Exercise
 from exercise_log.utils import StrEnum, join_with_comma
 
 
+# TODO add more columns (e.g. avg/max wattage) to biking csv
 class ColumnName(StrEnum):
     AVG_HEART_RATE = "avg_heart_rate"
     DATE = DATE_CONST
@@ -135,6 +138,24 @@ class DataLoader:
         return workout_types.reindex(all_workouts.index, fill_value="Rest Day")
 
     @staticmethod
+    def _clean_cardio_workout(fname: str):
+        workouts = DataLoader._load_and_clean_data(fname)
+        workouts[CName.AVG_HEART_RATE] = workouts[CName.AVG_HEART_RATE].astype('Int64')
+        workouts[CName.MAX_HEART_RATE] = workouts[CName.MAX_HEART_RATE].astype('Int64')
+        return workouts
+
+    @staticmethod
+    def _get_all_dates(workouts: List[pd.DataFrame]) -> pd.DataFrame:
+        """
+        Builds a pd.DataFrame with all of the dates in the given DataFrames
+
+        Returns:
+            The new pd.DataFrame
+        """
+        return pd.concat([workout[CName.DATE] for workout in workouts])
+
+
+    @staticmethod
     def load_health_metrics(root_data_dir: str):
         health_metrics = DataLoader._load_and_clean_data(f"{root_data_dir}/health_metrics.csv")
 
@@ -150,11 +171,16 @@ class DataLoader:
         return travel_days
 
     @staticmethod
-    def load_cardio_workouts(root_data_dir: str):
-        cardio_workouts = DataLoader._load_and_clean_data(f"{root_data_dir}/cardio_workouts.csv")
-        cardio_workouts[CName.AVG_HEART_RATE] = cardio_workouts[CName.AVG_HEART_RATE].astype('Int64')
-        cardio_workouts[CName.MAX_HEART_RATE] = cardio_workouts[CName.MAX_HEART_RATE].astype('Int64')
-        return cardio_workouts
+    def load_walk_workouts(root_data_dir: str):
+        return DataLoader._clean_cardio_workout(f"{root_data_dir}/walks.csv")
+
+    @staticmethod
+    def load_run_workouts(root_data_dir: str):
+        return DataLoader._clean_cardio_workout(f"{root_data_dir}/runs.csv")
+
+    @staticmethod
+    def load_bike_workouts(root_data_dir: str):
+        return DataLoader._clean_cardio_workout(f"{root_data_dir}/bikes.csv")
 
     @staticmethod
     def load_weight_training_workouts(root_data_dir: str):
@@ -165,13 +191,15 @@ class DataLoader:
         return DataLoader._load_and_clean_data(f"{root_data_dir}/weight_training_sets.csv")
 
     @staticmethod
+    def merge_cardio_workouts(workouts: List[pd.DataFrame]) -> pd.DataFrame:
+        all_dates = DataLoader._get_all_dates(workouts)
+        cardio_workouts = pd.concat(workouts, join="inner")  # Use inner so we only preserve the common fields
+        return cardio_workouts.reset_index(drop=True)
+
+    @staticmethod
     def load_all_workouts(cardio_workouts: pd.DataFrame, weight_training_workouts: pd.DataFrame, travel_days: pd.DataFrame):
         # Will be used to pad all datasets to have consistent dates
-        all_dates = pd.concat([
-            cardio_workouts[CName.DATE],
-            weight_training_workouts[CName.DATE],
-            travel_days[CName.DATE]
-        ])
+        all_dates = DataLoader._get_all_dates([cardio_workouts, weight_training_workouts, travel_days])
 
         # Initialize the dataframe including all dates spanning the range of the data (rest days are missing in the workout data)
         all_workouts = pd.DataFrame()

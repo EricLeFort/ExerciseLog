@@ -1,0 +1,6 @@
+date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+19-AUG-2023,run (treadmill),00:30:03,4.01,4244,0,176,193,"25min @ 8.5kph"
+09-AUG-2023,run (treadmill),00:22:11,3.05,3346,0,170,184,"~21:00 @ 8.5kph"
+18-JUL-2023,run (treadmill),00:08:25,1.04,1097,0,157,179,""
+14-JUL-2023,run (treadmill),00:45:00,5.59,6223,1,178,198,"ran 5km in 38:06; last km was pretty grueling but felt more like an HR of 180 than the 190+ it really was"
+08-JUL-2023,run (treadmill),00:07:42,1.00,1056,0,159,187,"Ran 5m @ 9.0kph"
