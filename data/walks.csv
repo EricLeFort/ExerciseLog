@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+05-SEP-2023,walk (treadmill),01:01:12,5.40,6426,422,163,171,"100m in 14:28; 200m in 28:35; 300m in 42:42; 1000ft in 43:26; 400m in 56:50; 422m in 60:00; didn't get exact distance from treadmill but this should be close"
 03-SEP-2023,walk (treadmill),01:00:04,5.31,6279,358,172,184,"1000ft in 51:30"
 30-AUG-2023,walk (treadmill),01:10:00,6.74,7935,224,156,184,"2x1km @ 8.0kph to start and end the session; 5%@5.2kph for the rest in the middle"
 28-AUG-2023,walk (treadmill),01:00:00,5.29,6282,261,144,155,"100m in 22:45"
