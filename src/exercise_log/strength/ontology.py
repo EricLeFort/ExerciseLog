@@ -26,15 +26,22 @@ class TensileFocus(StrEnum):
     ISOMETRIC = "Isometric"
 
 
+# Ideal strength ratios:
+# Tricep should be slightly stronger than bicep
+# Hip abductors and adductors should be fairly close in strength
+
+
 # TODO: come back later and fill in:
 #.        * set of strings of antagonist muscles for each exercise
 #         * percentages for muscles/groups worked (should be as a percentage of that muscle's effort)
 #         * ideal rep ranges
+#         * Whether a machine is required
 # This is a large data field containing metadata about the various exercises logged in this repo
 EXERCISE_INFO = {
     Exercise.FIFTH_POINT_OF_FLIGHT: {
         COUNT_TYPE: SECONDS,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: ISOMETRIC_CALISTHENIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
@@ -48,6 +55,7 @@ EXERCISE_INFO = {
     Exercise.ARNOLD_PRESS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -61,6 +69,7 @@ EXERCISE_INFO = {
     Exercise.BARBELL_BICEP_CURL: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -74,6 +83,7 @@ EXERCISE_INFO = {
     Exercise.BARBELL_CALF_RAISE: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -87,6 +97,7 @@ EXERCISE_INFO = {
     Exercise.BARBELL_OVERHEAD_TRICEP_EXTENSION: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -113,6 +124,7 @@ EXERCISE_INFO = {
     Exercise.BENT_OVER_LATERAL_LIFT: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -126,6 +138,7 @@ EXERCISE_INFO = {
     Exercise.BENT_OVER_SINGLE_ARM_BARBELL_ROW: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -139,6 +152,7 @@ EXERCISE_INFO = {
     Exercise.BICEP_CURL: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -152,6 +166,7 @@ EXERCISE_INFO = {
     Exercise.BURPEES: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -165,6 +180,7 @@ EXERCISE_INFO = {
     Exercise.CABLE_LATERAL_LIFT: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -178,6 +194,7 @@ EXERCISE_INFO = {
     Exercise.CABLE_PEC_FLIES: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -191,6 +208,7 @@ EXERCISE_INFO = {
     Exercise.CALF_RAISE: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -204,6 +222,7 @@ EXERCISE_INFO = {
     Exercise.CLEAN_AND_JERK: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -217,6 +236,7 @@ EXERCISE_INFO = {
     Exercise.CLOSE_GRIP_LAT_PULLDOWN: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -230,6 +250,7 @@ EXERCISE_INFO = {
     Exercise.CONCENTRAION_CURL: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -243,6 +264,7 @@ EXERCISE_INFO = {
     Exercise.DEADLIFT: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -256,6 +278,7 @@ EXERCISE_INFO = {
     Exercise.DEC_BENCH_PRESS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -269,6 +292,7 @@ EXERCISE_INFO = {
     Exercise.DEFICIT_PUSH_UPS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -282,6 +306,7 @@ EXERCISE_INFO = {
     Exercise.DELT_FLIES: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -295,6 +320,7 @@ EXERCISE_INFO = {
     Exercise.DUMBBELL_PRESS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -308,6 +334,7 @@ EXERCISE_INFO = {
     Exercise.FINGER_CURL: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -321,6 +348,7 @@ EXERCISE_INFO = {
     Exercise.FRONT_LIFT: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -334,6 +362,7 @@ EXERCISE_INFO = {
     Exercise.FULL_CANS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -347,6 +376,7 @@ EXERCISE_INFO = {
     Exercise.GOOD_MORNING: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -360,6 +390,7 @@ EXERCISE_INFO = {
     Exercise.HAMMER_CURL: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -373,6 +404,7 @@ EXERCISE_INFO = {
     Exercise.HEX_BAR_DEADLIFT: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -386,6 +418,7 @@ EXERCISE_INFO = {
     Exercise.INC_BENCH_PRESS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -399,6 +432,7 @@ EXERCISE_INFO = {
     Exercise.INC_DUMBBELL_PRESS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -412,6 +446,7 @@ EXERCISE_INFO = {
     Exercise.JUMPING_JACKS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -425,6 +460,7 @@ EXERCISE_INFO = {
     Exercise.KETTLEBELL_FLIPS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -438,6 +474,7 @@ EXERCISE_INFO = {
     Exercise.LAT_PULLDOWN: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -451,6 +488,7 @@ EXERCISE_INFO = {
     Exercise.LAT_PULLDOWN_HANG: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -464,6 +502,7 @@ EXERCISE_INFO = {
     Exercise.LATERAL_LIFT: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -477,6 +516,7 @@ EXERCISE_INFO = {
     Exercise.LAWNMOWERS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -490,6 +530,7 @@ EXERCISE_INFO = {
     Exercise.LEG_CURL: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -503,6 +544,7 @@ EXERCISE_INFO = {
     Exercise.LEG_EXTENSION: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -516,6 +558,7 @@ EXERCISE_INFO = {
     Exercise.LEG_PRESS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -529,6 +572,7 @@ EXERCISE_INFO = {
     Exercise.LEG_PRESS_CALF_RAISE: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -542,6 +586,7 @@ EXERCISE_INFO = {
     Exercise.LEG_RAISE: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -555,6 +600,7 @@ EXERCISE_INFO = {
     Exercise.LONG_HANG_DEADLIFT: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -568,6 +614,7 @@ EXERCISE_INFO = {
     Exercise.LUNGES: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -581,6 +628,7 @@ EXERCISE_INFO = {
     Exercise.MACH_BENCH_PRESS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -594,6 +642,7 @@ EXERCISE_INFO = {
     Exercise.MACH_HIP_ABDUCTORS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -607,6 +656,7 @@ EXERCISE_INFO = {
     Exercise.MACH_HIP_ADDUCTORS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -620,6 +670,7 @@ EXERCISE_INFO = {
     Exercise.MACH_INCLINE_BENCH_PRESS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -633,6 +684,7 @@ EXERCISE_INFO = {
     Exercise.MACH_PEC_FLIES: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -646,6 +698,7 @@ EXERCISE_INFO = {
     Exercise.MILITARY_PRESS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -659,6 +712,7 @@ EXERCISE_INFO = {
     Exercise.NEUTRAL_GRIP_PULL_UP: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -672,6 +726,7 @@ EXERCISE_INFO = {
     Exercise.OVERHEAD_TRICEP_EXTENSION: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -685,6 +740,7 @@ EXERCISE_INFO = {
     Exercise.PLANK: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -698,6 +754,7 @@ EXERCISE_INFO = {
     Exercise.PREACHER_CURL: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -711,6 +768,7 @@ EXERCISE_INFO = {
     Exercise.PUSH_UPS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -724,6 +782,7 @@ EXERCISE_INFO = {
     Exercise.PUSH_UPS_PERFECT_DEVICE: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -737,6 +796,7 @@ EXERCISE_INFO = {
     Exercise.PULLOVERS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -750,6 +810,7 @@ EXERCISE_INFO = {
     Exercise.RES_LAT_PULLDOWN: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -763,6 +824,7 @@ EXERCISE_INFO = {
     Exercise.RES_SEATED_ROW: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -776,6 +838,7 @@ EXERCISE_INFO = {
     Exercise.RES_TRICEP_PUSHDOWN: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -789,6 +852,7 @@ EXERCISE_INFO = {
     Exercise.SEATED_ROW: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -802,6 +866,7 @@ EXERCISE_INFO = {
     Exercise.SEATED_ROW_WIDE_NATURAL: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -815,6 +880,7 @@ EXERCISE_INFO = {
     Exercise.SIDE_LYING_EXTERNAL_ROTATION: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -828,6 +894,7 @@ EXERCISE_INFO = {
     Exercise.SIDE_PLANK: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -841,6 +908,7 @@ EXERCISE_INFO = {
     Exercise.SINGLE_ARM_FARMERS_CARRY: {
         COUNT_TYPE: STEPS,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: (40, 80),
         MUSCLE_GROUPS_WORKED: {
@@ -854,6 +922,7 @@ EXERCISE_INFO = {
     Exercise.SINGLE_LEG_LEG_CURL: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -867,6 +936,7 @@ EXERCISE_INFO = {
     Exercise.SINGLE_LEG_LEG_EXTENSION: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -880,6 +950,7 @@ EXERCISE_INFO = {
     Exercise.SHRUGS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -893,6 +964,7 @@ EXERCISE_INFO = {
     Exercise.SKULLCRUSHERS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -925,6 +997,7 @@ EXERCISE_INFO = {
     Exercise.STRICT_PRESS: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -938,6 +1011,7 @@ EXERCISE_INFO = {
     Exercise.TRICEP_PUSHDOWN: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -951,6 +1025,7 @@ EXERCISE_INFO = {
     Exercise.UPWARD_CABLE_PEC_FLIES: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -964,6 +1039,7 @@ EXERCISE_INFO = {
     Exercise.WIDE_GRIP_PULL_UP: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -977,6 +1053,7 @@ EXERCISE_INFO = {
     Exercise.WRIST_CURL: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -990,6 +1067,7 @@ EXERCISE_INFO = {
     Exercise.WRIST_EXTENSION: {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
+        REQUIRES_MACHINE: None,
         TENSILE_FOCUS: None,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
@@ -1001,8 +1079,3 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
 }
-
-
-# Ideal strength ratios:
-# Tricep should be slightly stronger than bicep
-# Hip abductors and adductors should be fairly close in strength
