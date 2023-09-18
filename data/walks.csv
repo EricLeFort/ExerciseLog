@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+15-SEP-2023,walk (treadmill),01:01:25,5.38,6327,426,163,181,"100m in 14:26; 200m in 28:33; 400m in 56:47"
 12-SEP-2023,walk (outdoor),01:05:56,7.36,,18,147,181,"Forgot to record steps"
 11-SEP-2023,walk (treadmill),00:30:19,2.66,3201,184,149,157,""
 05-SEP-2023,walk (treadmill),01:01:12,5.40,6426,422,163,171,"100m in 14:28; 200m in 28:35; 300m in 42:42; 1000ft in 43:26; 400m in 56:50; 422m in 60:00; didn't get exact distance from treadmill but this should be close"
