@@ -35,7 +35,21 @@ class TensileFocus(StrEnum):
 #.        * set of strings of antagonist muscles for each exercise
 #         * percentages for muscles/groups worked (should be as a percentage of that muscle's effort)
 #         * ideal rep ranges
+# TODO write logic to estimate "FATIGUE_FACTOR - The amount of systemic fatigue accumulated by the exercise. Useful for session planning."
+#      This is basically just a summation for every muscle worked dependant on 1. muscle size/energy requirement, 2. % activation of that muscle.
+# TODO write logic that uses the exercise-level FATIGUE_FACTOR and reps/sets/%RM for that exercise to estimate a session-level fatigue score.
 # This is a large data field containing metadata about the various exercises logged in this repo
+"""
+COUNT_TYPE - The way to count this exercise. An isometric movement is measured in seconds, a compound lift in reps.
+EXERCISE_TYPE - The type of exercise. E.g. compound weight lifting, calisthenics, etc.
+REQUIRES_MACHINE - Whether a machine in required. Useful for knowing if an exercise can be compared across gyms.
+TENSILE_FOCUS - The type of muscle contraction happening during the primary portion of the lift.
+OPTIMAL_REP_RANGE - A bound of the ideal count for this exercise. They are just guiding values, not strict rules.
+MUSCLE_GROUPS_WORKED - A dict from the major muscle groups worked to a % activation of that muscle group.
+  e.g. biceps are involved in pec flies but their activation percentage is much lower than that of the pecs
+MUSCLES_WORKED - A dict from the muscles worked to a % activation of that muscle.
+ANTAGONIST_MUSCLES - A set the antagonist muscles for the movement. Useful for root causing instability issues.
+"""
 EXERCISE_INFO = {
     Exercise.FIFTH_POINT_OF_FLIGHT: {
         COUNT_TYPE: SECONDS,
