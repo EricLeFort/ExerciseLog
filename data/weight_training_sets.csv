@@ -1,4 +1,26 @@
 date,exercise,reps,weight(lbs),rating
+18-SEP-2023,Bicep Curl,20,20,good
+18-SEP-2023,Bicep Curl,15,25,good
+18-SEP-2023,Bicep Curl,12,30,good
+18-SEP-2023,Concentration Curl,12,20,good
+18-SEP-2023,Concentration Curl,12,20,good
+18-SEP-2023,Concentration Curl,12,20,good
+18-SEP-2023,Overhead Tricep Extension,10,35,good
+18-SEP-2023,Overhead Tricep Extension,10,35,good
+18-SEP-2023,Overhead Tricep Extension,10,35,failure (L)
+18-SEP-2023,Skullcrushers,10,82,good
+18-SEP-2023,Lawnmowers,10,65,good
+18-SEP-2023,Lawnmowers,10,65,good
+18-SEP-2023,Lawnmowers,10,65,good
+18-SEP-2023,Seated Row,12,130,good
+18-SEP-2023,Seated Row,12,130,good
+18-SEP-2023,Seated Row,12,130,good
+18-SEP-2023,Lat Pulldown,10,130,bad
+18-SEP-2023,Lat Pulldown,10,130,good
+18-SEP-2023,Lat Pulldown,10,130,bad
+18-SEP-2023,Pullovers,8,50,good
+18-SEP-2023,Pullovers,8,50,good
+18-SEP-2023,Pullovers,8,50,good
 16-SEP-2023,Strict Press,8,145,good
 16-SEP-2023,Strict Press,6,145,good
 16-SEP-2023,Strict Press,8,135,good
