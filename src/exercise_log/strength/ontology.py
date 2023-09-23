@@ -66,7 +66,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.ARNOLD_PRESS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -80,7 +80,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.BARBELL_BICEP_CURL: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -94,7 +94,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.BARBELL_CALF_RAISE: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -108,7 +108,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.BARBELL_OVERHEAD_TRICEP_EXTENSION: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -136,7 +136,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.BENT_OVER_LATERAL_LIFT: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -150,7 +150,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.BENT_OVER_SINGLE_ARM_BARBELL_ROW: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -164,7 +164,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.BICEP_CURL: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -178,7 +178,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.BURPEES: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
@@ -192,7 +192,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.CABLE_LATERAL_LIFT: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -206,7 +206,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.CABLE_PEC_FLIES: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -220,7 +220,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.CALF_RAISE: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -234,7 +234,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.CLEAN_AND_JERK: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
@@ -248,7 +248,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.CLOSE_GRIP_LAT_PULLDOWN: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -262,7 +262,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.CONCENTRAION_CURL: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -276,7 +276,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.DEADLIFT: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -290,7 +290,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.DEC_BENCH_PRESS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -304,7 +304,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.DEFICIT_PUSH_UPS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -318,7 +318,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.DELT_FLIES: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -332,7 +332,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.DUMBBELL_PRESS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -346,7 +346,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.FINGER_CURL: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -360,7 +360,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.FRONT_LIFT: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -374,7 +374,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.FULL_CANS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -388,7 +388,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.GOOD_MORNING: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -402,7 +402,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.HAMMER_CURL: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -416,7 +416,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.HEX_BAR_DEADLIFT: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -430,7 +430,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.INC_BENCH_PRESS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -444,7 +444,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.INC_DUMBBELL_PRESS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -458,7 +458,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.JUMPING_JACKS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
@@ -472,7 +472,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.KETTLEBELL_FLIPS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -486,7 +486,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LAT_PULLDOWN: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -500,7 +500,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LAT_PULLDOWN_HANG: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: SECONDS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
@@ -514,7 +514,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LATERAL_LIFT: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -528,7 +528,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LAWNMOWERS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -542,7 +542,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LEG_CURL: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -556,7 +556,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LEG_EXTENSION: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -570,7 +570,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LEG_PRESS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -584,7 +584,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LEG_PRESS_CALF_RAISE: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -598,7 +598,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LEG_RAISE: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -612,7 +612,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LONG_HANG_DEADLIFT: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: SECONDS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
@@ -626,7 +626,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.LUNGES: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -640,7 +640,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.MACH_BENCH_PRESS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -654,7 +654,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.MACH_HIP_ABDUCTORS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -668,7 +668,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.MACH_HIP_ADDUCTORS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -682,7 +682,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.MACH_INCLINE_BENCH_PRESS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -696,7 +696,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.MACH_PEC_FLIES: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -710,7 +710,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.MILITARY_PRESS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -724,7 +724,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.NEUTRAL_GRIP_PULL_UP: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -738,7 +738,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.OVERHEAD_TRICEP_EXTENSION: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -752,7 +752,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.PLANK: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: SECONDS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
@@ -766,7 +766,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.PREACHER_CURL: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -780,7 +780,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.PUSH_UPS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -794,7 +794,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.PUSH_UPS_PERFECT_DEVICE: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -808,7 +808,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.PULLOVERS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -822,7 +822,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.RES_LAT_PULLDOWN: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -836,7 +836,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.RES_SEATED_ROW: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -850,7 +850,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.RES_TRICEP_PUSHDOWN: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -864,7 +864,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.SEATED_ROW: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -878,7 +878,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.SEATED_ROW_WIDE_NATURAL: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -892,7 +892,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.SIDE_LYING_EXTERNAL_ROTATION: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -906,7 +906,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.SIDE_PLANK: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: SECONDS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
@@ -934,7 +934,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.SINGLE_LEG_LEG_CURL: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -948,7 +948,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.SINGLE_LEG_LEG_EXTENSION: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -962,7 +962,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.SHRUGS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -976,7 +976,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.SKULLCRUSHERS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -1010,7 +1010,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.STRICT_PRESS: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -1024,7 +1024,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.TRICEP_PUSHDOWN: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -1038,7 +1038,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.UPWARD_CABLE_PEC_FLIES: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -1052,7 +1052,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.WIDE_GRIP_PULL_UP: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -1066,7 +1066,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.WRIST_CURL: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
@@ -1080,7 +1080,7 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.WRIST_EXTENSION: {
-        COUNT_TYPE: None,
+        COUNT_TYPE: REPS,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
