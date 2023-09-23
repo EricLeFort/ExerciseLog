@@ -68,7 +68,7 @@ EXERCISE_INFO = {
     },
     Exercise.ARNOLD_PRESS: {
         COUNT_TYPE: CountType.REPS,
-        EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
+        EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
@@ -514,7 +514,20 @@ EXERCISE_INFO = {
         },
         ANTAGONIST_MUSCLES: None,
     },
-    Exercise.LATERAL_LIFT: {
+    Exercise.LAT_PUSHDOWN: {
+        COUNT_TYPE: CountType.REPS,
+        EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
+        REQUIRES_MACHINE: True,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
+        OPTIMAL_REP_RANGE: (None, None),
+        MUSCLE_GROUPS_WORKED: {
+            None: None,
+        },
+        MUSCLES_WORKED: {
+            None: None,
+        },
+        ANTAGONIST_MUSCLES: None,
+    },Exercise.LATERAL_LIFT: {
         COUNT_TYPE: CountType.REPS,
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,

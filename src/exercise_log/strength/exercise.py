@@ -45,6 +45,7 @@ class Exercise(StrEnum):
     KETTLEBELL_FLIPS = "Kettlebell Flips"
     LAT_PULLDOWN = "Lat Pulldown"
     LAT_PULLDOWN_HANG = "Lat Pulldown Hang"
+    LAT_PUSHDOWN = "Lat Pushdown"
     LATERAL_LIFT = "Lateral Lift"
     LAWNMOWERS = "Lawnmowers"
     LEG_CURL = "Leg Curl"

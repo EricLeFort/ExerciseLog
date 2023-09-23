@@ -9,7 +9,7 @@ from exercise_log.vis import plot_resting_heart_rate, plot_strength_over_time, p
 ROOT_DATA_DIR = "data"
 ROOT_IMG_DIR = "img"
 EXTRAPOLATE_DAYS = 100
-N_DAYS_TO_AVG = 8
+N_DAYS_TO_AVG = 28
 
 SKIP_EXERCISE_PLOTS = {
     Exercise.FIFTH_POINT_OF_FLIGHT,
