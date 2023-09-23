@@ -15,8 +15,16 @@ from exercise_log.strength import CountType, Exercise, ExerciseType
 from exercise_log.utils import StrEnum
 
 
-COMPOUND_REP_RANGE = (3, 12)
-ISOMETRIC_CALISTHENIC_REP_RANGE = (30, 120)
+# Rep ranges for various common groups of exercise type
+EXPLOSIVE_COMPOUND_REP_RANGE = (1, 5)
+COMPLEX_COMPOUND_REP_RANGE = (1, 10)
+SIMPLE_COMPOUND_REP_RANGE = (5, 12)
+STEP_BASED_COMPOUND_REP_RANGE = (40, 80)
+UPPER_ISOLATED_REP_RANGE = (5, 15)
+LOWER_ISOLATED_REP_RANGE = (8, 20)
+ISOMETRIC_REP_RANGE = (30, 120)
+CALI_PLYO_REP_RANGE = (5, 20)
+ROTATOR_CUFF_REP_RANGE = (10, 25)
 
 
 class TensileFocus(StrEnum):
@@ -57,7 +65,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.CALISTHENIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
-        OPTIMAL_REP_RANGE: ISOMETRIC_CALISTHENIC_REP_RANGE,
+        OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -71,7 +79,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -85,7 +93,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -99,7 +107,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -113,7 +121,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -127,7 +135,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: COMPOUND_REP_RANGE,
+        OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -141,7 +149,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -155,7 +163,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -169,7 +177,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -183,7 +191,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.PLYOMETRICS,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -197,7 +205,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -211,7 +219,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -225,7 +233,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -239,7 +247,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: EXPLOSIVE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -250,10 +258,10 @@ EXERCISE_INFO = {
     },
     Exercise.CLOSE_GRIP_LAT_PULLDOWN: {
         COUNT_TYPE: CountType.REPS,
-        EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
+        EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -267,7 +275,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -281,7 +289,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -295,7 +303,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -309,7 +317,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.CALISTHENIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -323,7 +331,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -337,7 +345,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -351,7 +359,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -365,7 +373,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -379,7 +387,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: ROTATOR_CUFF_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -393,7 +401,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -407,7 +415,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -421,7 +429,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -435,7 +443,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -449,7 +457,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -463,7 +471,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.PLYOMETRICS,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -477,7 +485,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -491,7 +499,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -505,7 +513,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.WEIGHTED_COMPOUND_ISOMETRIC,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -519,7 +527,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -532,7 +540,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -546,7 +554,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -560,7 +568,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -574,7 +582,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -588,7 +596,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -602,7 +610,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -613,10 +621,10 @@ EXERCISE_INFO = {
     },
     Exercise.LEG_RAISE: {
         COUNT_TYPE: CountType.REPS,
-        EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
+        EXERCISE_TYPE: ExerciseType.CALISTHENIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -630,7 +638,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.WEIGHTED_COMPOUND_ISOMETRIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -644,7 +652,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -658,7 +666,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -672,7 +680,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -686,7 +694,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -700,7 +708,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -714,7 +722,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -728,7 +736,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -742,7 +750,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -756,7 +764,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -770,7 +778,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.CALISTHENIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -784,7 +792,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -798,7 +806,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.CALISTHENIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -812,7 +820,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.CALISTHENIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -826,7 +834,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -840,7 +848,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -854,7 +862,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -868,7 +876,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -882,7 +890,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -896,7 +904,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -910,7 +918,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: ROTATOR_CUFF_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -924,7 +932,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.CALISTHENIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -938,7 +946,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.WEIGHTED_COMPOUND_ISOMETRIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
-        OPTIMAL_REP_RANGE: (40, 80),
+        OPTIMAL_REP_RANGE: STEP_BASED_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -952,7 +960,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -966,7 +974,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -980,7 +988,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -994,7 +1002,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -1008,7 +1016,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: COMPOUND_REP_RANGE,
+        OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             MuscleGroup.ABS: None,
             MuscleGroup.CALVES: None,
@@ -1028,7 +1036,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -1042,7 +1050,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -1056,7 +1064,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -1070,7 +1078,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -1084,7 +1092,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
@@ -1098,7 +1106,7 @@ EXERCISE_INFO = {
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        OPTIMAL_REP_RANGE: (None, None),
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
             None: None,
         },
