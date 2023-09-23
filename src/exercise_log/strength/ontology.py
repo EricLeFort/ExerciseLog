@@ -22,6 +22,7 @@ ISOMETRIC_CALISTHENIC_REP_RANGE = (30, 120)
 
 class TensileFocus(StrEnum):
     CONCENTRIC = "Concentric"
+    EXPLOSIVE = "Explosive"
     ECCENTRIC = "Eccentric"
     ISOMETRIC = "Isometric"
 
@@ -35,9 +36,8 @@ class TensileFocus(StrEnum):
 #.        * set of strings of antagonist muscles for each exercise
 #         * percentages for muscles/groups worked (should be as a percentage of that muscle's effort)
 #         * ideal rep ranges
-# TODO write logic to estimate "FATIGUE_FACTOR - The amount of systemic fatigue accumulated by the exercise. Useful for session planning."
-#      This is basically just a summation for every muscle worked dependant on 1. muscle size/energy requirement, 2. % activation of that muscle.
-# TODO write logic that uses the exercise-level FATIGUE_FACTOR and reps/sets/%RM for that exercise to estimate a session-level fatigue score.
+# TODO: add info about the capacity of a muscle/muscle group (e.g. biceps/triceps can handle more volume than quads)
+
 # This is a large data field containing metadata about the various exercises logged in this repo
 """
 COUNT_TYPE - The way to count this exercise. An isometric movement is measured in seconds, a compound lift in reps.
@@ -69,7 +69,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -83,7 +83,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -97,7 +97,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -111,7 +111,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -139,7 +139,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -153,7 +153,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -167,7 +167,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -181,7 +181,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -195,7 +195,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -209,7 +209,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -223,7 +223,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -237,7 +237,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -251,7 +251,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -265,7 +265,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -279,7 +279,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -293,7 +293,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -307,7 +307,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -321,7 +321,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -335,7 +335,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -349,7 +349,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -363,7 +363,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -377,7 +377,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -391,7 +391,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -405,7 +405,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -419,7 +419,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -433,7 +433,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -447,7 +447,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -461,7 +461,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -475,7 +475,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -489,7 +489,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -503,7 +503,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -517,7 +517,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -531,7 +531,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -545,7 +545,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -559,7 +559,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -573,7 +573,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -587,7 +587,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -601,7 +601,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -615,7 +615,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -629,7 +629,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -643,7 +643,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -657,7 +657,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -671,7 +671,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -685,7 +685,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -699,7 +699,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -713,7 +713,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -727,7 +727,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -741,7 +741,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -755,7 +755,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -769,7 +769,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -783,7 +783,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -797,7 +797,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -811,7 +811,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -825,7 +825,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -839,7 +839,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -853,7 +853,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -867,7 +867,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -881,7 +881,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -895,7 +895,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -909,7 +909,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -937,7 +937,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -951,7 +951,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -965,7 +965,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -979,7 +979,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -1013,7 +1013,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -1027,7 +1027,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -1041,7 +1041,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: True,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -1055,7 +1055,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -1069,7 +1069,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
@@ -1083,7 +1083,7 @@ EXERCISE_INFO = {
         COUNT_TYPE: None,
         EXERCISE_TYPE: None,
         REQUIRES_MACHINE: False,
-        TENSILE_FOCUS: None,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: (None, None),
         MUSCLE_GROUPS_WORKED: {
             None: None,
