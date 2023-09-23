@@ -94,6 +94,21 @@ class ExerciseType(StrEnum):
     COMPOUND_LIFT = "Compound Lift"
     HIIT = "HIIT"
     ISOLATED_LIFT = "Isolated Lift"
+    PLYOMETRICS = "Plyometrics"
+    WEIGHTED_COMPOUND_ISOMETRIC = "Weighted Compound Isometrics"
+
+
+class CardioType(StrEnum):
+    BIKE_STATIONARY = "bike (stationary)"
+    RUN_TREADMILL = "run (treadmill)"
+    WALK_TREADMILL = "walk (treadmill)"
+    WALK_OUTDOOR = "walk (outdoor)"
+
+
+class CountType(StrEnum):
+    REPS = "Reps"
+    STEPS = "Steps"
+    SECONDS = "Seconds"
 
 
 class ExerciseInfo:
@@ -112,12 +127,14 @@ class ExerciseInfo:
         self.antagonist_muscles = info[ANTAGONIST_MUSCLES]
         self.exercise_type = info[EXERCISE_TYPE]
 
+        self._fatigue_factor = None
 
-class CardioType(StrEnum):
-    BIKE_STATIONARY = "bike (stationary)"
-    RUN_TREADMILL = "run (treadmill)"
-    WALK_TREADMILL = "walk (treadmill)"
-    WALK_OUTDOOR = "walk (outdoor)"
+    def get_fatigue_factor(self):
+        if self._fatigue_factor is not None:
+            return self._fatigue_factor
+        # TODO write logic to estimate "FATIGUE_FACTOR - The amount of systemic fatigue accumulated by the exercise. Useful for session planning."
+        #      This is basically just a summation for every muscle worked dependant on 1. muscle size/energy requirement, 2. % activation of that muscle.
+        pass
 
 
 class SetRating(StrEnum):

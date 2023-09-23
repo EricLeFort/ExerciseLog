@@ -1,1 +1,1 @@
-from exercise_log.strength.exercise import Exercise, ExerciseInfo
+from exercise_log.strength.exercise import CountType, Exercise, ExerciseInfo, ExerciseType
