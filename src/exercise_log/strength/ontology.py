@@ -1,3 +1,4 @@
+from exercise_log.strength import CountType, ExerciseType, TensileFocus
 from exercise_log.strength.anatomy import MuscleGroup, Muscle
 from exercise_log.strength.constants import (
     ANTAGONIST_MUSCLES,
@@ -6,12 +7,10 @@ from exercise_log.strength.constants import (
     MUSCLE_GROUPS_WORKED,
     MUSCLES_WORKED,
     OPTIMAL_REP_RANGE,
-    REPS,
-    SECONDS,
-    STEPS,
+    REQUIRES_MACHINE,
     TENSILE_FOCUS,
 )
-from exercise_log.strength import CountType, Exercise, ExerciseType
+from exercise_log.strength import Exercise
 from exercise_log.utils import StrEnum
 
 
@@ -27,22 +26,45 @@ CALI_PLYO_REP_RANGE = (5, 20)
 ROTATOR_CUFF_REP_RANGE = (10, 25)
 
 
-class TensileFocus(StrEnum):
-    CONCENTRIC = "Concentric"
-    EXPLOSIVE = "Explosive"
-    ECCENTRIC = "Eccentric"
-    ISOMETRIC = "Isometric"
-
-
 # Ideal strength ratios:
 # Tricep should be slightly stronger than bicep
 # Hip abductors and adductors should be fairly close in strength
 
 
+class ExerciseInfo:
+    """
+    Stores metadata about an Exercise such as which muscles and muscle groups it works, which antagonist muscle is
+    worked, and which ExerciseType it is.
+    """
+    def __init__(self, exercise: Exercise):
+        """
+        Initializes an ExerciseInfo by looking up the relevant data for the given Exercise.
+        """
+        info = EXERCISE_INFO[exercise]
+
+        self.count_type = CountType[info[COUNT_TYPE]]
+        self.exercise_type = ExerciseType[info[EXERCISE_TYPE]]
+        self.requires_machine = info[REQUIRES_MACHINE] == "True"
+        self.tensile_focus = TensileFocus[info[TENSILE_FOCUS]]
+        self.optimal_rep_range = info[OPTIMAL_REP_RANGE]
+
+        self.muscles_worked = info[MUSCLES_WORKED]
+        self.muscle_groups_worked = info[MUSCLE_GROUPS_WORKED]
+        self.antagonist_muscles = info[ANTAGONIST_MUSCLES]
+
+        self._fatigue_factor = None
+
+    def get_fatigue_factor(self):
+        if self._fatigue_factor is not None:
+            return self._fatigue_factor
+        # TODO write logic to estimate "FATIGUE_FACTOR - The amount of systemic fatigue accumulated by the exercise. Useful for session planning."
+        #      This is basically just a summation for every muscle worked dependant on 1. muscle size/energy requirement, 2. % activation of that muscle.
+        pass
+
+
 # TODO: come back later and fill in:
 #.        * set of strings of antagonist muscles for each exercise
 #         * percentages for muscles/groups worked (should be as a percentage of that muscle's effort)
-#         * ideal rep ranges
 # TODO: add info about the capacity of a muscle/muscle group (e.g. biceps/triceps can handle more volume than quads)
 
 """

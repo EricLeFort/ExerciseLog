@@ -5,7 +5,7 @@ import matplotlib.ticker as ticker
 
 from typing import Optional
 
-from exercise_log.strength.exercise import SetRating, SetType
+from exercise_log.strength import SetRating, SetType
 from exercise_log.dataloader import ColumnName
 from exercise_log.constants import MIN_DAILY_ACTIVE_MINUTES
 from exercise_log.utils import convert_mins_to_hour_mins, convert_pd_to_np, get_padded_dates
