@@ -90,8 +90,8 @@ class ExerciseType(StrEnum):
     COMPOUND_LIFT = "Compound Lift"
     HIIT = "HIIT"
     ISOLATED_LIFT = "Isolated Lift"
-    PLYOMETRICS = "Plyometrics"
-    WEIGHTED_COMPOUND_ISOMETRIC = "Weighted Compound Isometrics"
+    PLYOMETRIC = "Plyometric"
+    WEIGHTED_COMPOUND_ISOMETRIC = "Weighted Compound Isometric"
 
 
 class CardioType(StrEnum):
@@ -144,6 +144,3 @@ SET_TYPE_TO_REP_RANGE = {
     SetType.HYPERTROPHY: (8, 14),
     SetType.ENDURANCE: (15, float("inf")),
 }
-
-# Imports for module-level import convenience
-#from exercise_log.strength.exercise import Exercise, ExerciseInfo

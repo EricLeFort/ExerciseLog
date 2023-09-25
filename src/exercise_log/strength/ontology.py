@@ -44,7 +44,7 @@ class ExerciseInfo:
 
         self.count_type = CountType[info[COUNT_TYPE]]
         self.exercise_type = ExerciseType[info[EXERCISE_TYPE]]
-        self.requires_machine = info[REQUIRES_MACHINE] == "True"
+        self.requires_machine = info[REQUIRES_MACHINE]
         self.tensile_focus = TensileFocus[info[TENSILE_FOCUS]]
         self.optimal_rep_range = info[OPTIMAL_REP_RANGE]
 
@@ -210,7 +210,7 @@ EXERCISE_INFO = {
     },
     Exercise.BURPEES: {
         COUNT_TYPE: CountType.REPS,
-        EXERCISE_TYPE: ExerciseType.PLYOMETRICS,
+        EXERCISE_TYPE: ExerciseType.PLYOMETRIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
@@ -490,7 +490,7 @@ EXERCISE_INFO = {
     },
     Exercise.JUMPING_JACKS: {
         COUNT_TYPE: CountType.REPS,
-        EXERCISE_TYPE: ExerciseType.PLYOMETRICS,
+        EXERCISE_TYPE: ExerciseType.PLYOMETRIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
