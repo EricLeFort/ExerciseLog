@@ -1,6 +1,6 @@
 import os
 
-from enum import Enum
+from enum import Enum, EnumMeta
 from typing import Any, List, Optional
 
 import numpy as np
@@ -16,7 +16,19 @@ CR = b"\r"
 LF = b"\n"
 
 
-class StrEnum(str, Enum):
+class StrEnumMeta(EnumMeta):
+    def __getitem__(self, name):
+        """
+        Allows access to a StrEnum using the instance's value and not just the variable name
+
+        Note: if you have an enum named X and another with the value "X", the one with the value will be returned
+        """
+        if name in self._value2member_map_:
+            return self._value2member_map_[name]
+        return super().__getitem__(self, name)
+
+
+class StrEnum(str, Enum, metaclass=StrEnumMeta):
     def __contains__(self: "StrEnum", item: Any) -> bool:
         """
         Checks if the given item is a member of this enum.
