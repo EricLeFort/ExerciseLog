@@ -125,6 +125,7 @@ class SetRating(StrEnum):
     FUN = "fun"
     GOOD = "good"
     WARMUP = "warm-up"
+    SKIPPED = "skipped"
 
 
 class SetType(StrEnum):

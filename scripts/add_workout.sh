@@ -42,8 +42,8 @@ then
 fi
 
 # Update visuals
-export PYTHONPATH="${SCRIPT_DIR}/../src/"
-python3 "${SCRIPT_DIR}/../src/exercise_log/update_visuals.py"
+export PYTHONPATH="${SCRIPT_DIR}/../python/src/"
+python3 "${SCRIPT_DIR}/../python/src/exercise_log/update_visuals.py"
 
 # Add the new commit
 if [ ${dryrun} = false ]

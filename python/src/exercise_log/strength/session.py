@@ -1,5 +1,6 @@
 from enum import Enum
 
+from exercise_log.strength import SetRating
 from exercise_log.strength.anatomy import MuscleGroup
 from exercise_log.strength.exercise import Exercise, ExerciseInfo
 
@@ -23,28 +24,47 @@ class SessionFocus(Enum):
     FULL_BODY = ARMS.union(BACK).union(CHEST).union(CORE).union(SHOULDERS).union(LEGS)
 
 
-class SessionInfo:
-    def __init__(self, focus: List[MuscleGroup]):
-        self.focus = focus
-        # TODO this will store/compute info about a Session (volume per muscle/muscle group, fatigue score)
-        pass
-
-
 class ExerciseSet:
-    def __init__(self):
-        # TODO this will store info about an ExerciseSet (target count, target weight)
+    """
+    Stores info about a single set in a Session
+    """
+    def __init__(self, target_count: int, target_weight: float):
+        self.target_count = target_count
+        self.target_weight = target_weight
+        
+        self._fatigue_score = None
+
+    def get_fatigue_score():
+        if self._fatigue_score is not None:
+            return self._fatigue_score
+        # TODO compute the fatigue score
         pass
 
 
 class Result:
-    def __init__(self):
-        # TODO this will store info about the result of an ExerciseSet (actual count, actual weight, set rating)
-        pass
+    """
+    Stores info about the result of an ExerciseSet
+    """
+    def __init__(self, count: Optional[int], weight: Optional[float], set_rating: SetRating):
+        self.count = count
+        self.weight = weight
+        self.set_rating = set_rating
 
 
 class SkippedResult(Result):
+    """
+    This is just a special case of Result where the rating is SKIPPED and the counts/weight are None
+    """
     def __init__(self):
-        # TODO implement the super constructor. This is just a special case of Result where the rating is SKIPPED and the counts/weight is None
+        super().__init__(None, None, SetRating.SKIPPED)
+
+
+class SessionInfo:
+    def __init__(self, focus: List[MuscleGroup], exercise_sets: Dict[List[ExerciseSet]]):
+        self.focus = focus
+
+        self.fatigue_score = sum(exercise_set.get_fatigue_score() for exercise_set in exercise_sets)
+        # TODO this will store/compute info about a Session (volume per muscle/muscle group, fatigue score)
         pass
 
 
@@ -71,4 +91,5 @@ class Session:
             # This re-uses the SkippedResult instance but that's fine; it technically could be a singleton anyway
             # It also assumes the exercise has been added to the results dict (which is handled by add_exercise())
             self.results[exercise] += [SkippedResult()] * (len(sets) - len(self.results[exercise]))
+        # TODO also save the actual fatigue score (e.g. if more/less reps were hit in a set, or if sets were added/skipped)
         # TODO save these results somewhere, somehow
