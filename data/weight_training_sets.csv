@@ -1,4 +1,31 @@
 date,exercise,reps,weight(lbs),rating
+27-SEP-2023,Bench Press,10,135,warm-up
+27-SEP-2023,Bench Press,10,225,good
+27-SEP-2023,Bench Press,1,275,warm-up
+27-SEP-2023,Bench Press,1,300,failure
+27-SEP-2023,Bench Press,1,285,failure
+27-SEP-2023,Bench Press,8,225,good
+27-SEP-2023,Bench Press,8,225,good
+27-SEP-2023,Incline Dumbbell Press,10,65,good
+27-SEP-2023,Incline Dumbbell Press,10,65,good
+27-SEP-2023,Incline Dumbbell Press,10,65,good
+27-SEP-2023,Machine Pec Flies,10,100,warm-up
+27-SEP-2023,Machine Pec Flies,10,200,good
+27-SEP-2023,Machine Pec Flies,8,200,good
+27-SEP-2023,Machine Pec Flies,8,200,good
+27-SEP-2023,Deadlift,5,135,warm-up
+27-SEP-2023,Deadlift,5,225,warm-up
+27-SEP-2023,Deadlift,5,285,good
+27-SEP-2023,Deadlift,5,285,good
+27-SEP-2023,Deadlift,5,285,good
+27-SEP-2023,Deadlift,5,285,good
+27-SEP-2023,Deadlift,1,285,fun
+27-SEP-2023,Shrugs,10,50,good
+27-SEP-2023,Shrugs,12,50,good
+27-SEP-2023,Shrugs,12,50,good
+27-SEP-2023,Single-Arm Farmer's Carry,60,50,good
+27-SEP-2023,Single-Arm Farmer's Carry,60,50,good
+27-SEP-2023,Single-Arm Farmer's Carry,60,50,good
 25-SEP-2023,Bicep Curl,8,35,bad
 25-SEP-2023,Bicep Curl,12,30,good
 25-SEP-2023,Bicep Curl,12,30,good
