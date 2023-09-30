@@ -1,11 +1,14 @@
+from datetime import date
+from typing import Dict, Optional, Tuple
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
-from typing import Optional
-
 from exercise_log.strength import SetRating, SetType
+from exercise_log.strength.constants import REQUIRES_MACHINE
+from exercise_log.strength.ontology import EXERCISE_INFO
 from exercise_log.dataloader import ColumnName
 from exercise_log.constants import MIN_DAILY_ACTIVE_MINUTES
 from exercise_log.utils import convert_mins_to_hour_mins, convert_pd_to_np, get_padded_dates
@@ -184,27 +187,36 @@ def plot_weight(
 
 
 def plot_strength_over_time(
-    all_workouts: pd.DataFrame,
+    workouts: pd.DataFrame,
     weight_training_sets: pd.DataFrame,
     exercise: str,
+    primary_gyms: Dict[str, Tuple[date, date]],
     export_dir: Optional[str] = None,
     show_plot=True,
 ):
-    final_date = all_workouts[ColumnName.DATE].max()
+    final_date = workouts[ColumnName.DATE].max()
     single_exercise = weight_training_sets[weight_training_sets[ColumnName.EXERCISE] == exercise]
     for set_type in SetType:
         rep_range = set_type.get_rep_range()
         sets = single_exercise[(rep_range[0] <= single_exercise[ColumnName.REPS]) \
           & (single_exercise[ColumnName.REPS] <= rep_range[1])]
 
-        # Filter out sets that should be ignored
+        # Filter out sets with ratings that should be ignored
         sets = sets[sets[ColumnName.RATING] != SetRating.WARMUP]
         sets = sets[~sets[ColumnName.RATING].str.startswith(SetRating.BAD)]
         sets = sets[~sets[ColumnName.RATING].str.startswith(SetRating.FAILURE)]
         sets = sets[sets[ColumnName.RATING] != SetRating.FUN]
         sets = sets[sets[ColumnName.RATING] != SetRating.DELOAD]
 
-        # TODO filter out sets that shouldn't be counted (e.g. Leg Press from Earnscliffe rec center)
+        # Filter out sets using machines in non-primary gyms
+        filtered_workouts = workouts[workouts[ColumnName.LOCATION].isin(primary_gyms)]
+        # TODO also filter out sets that are from a primary gym but *not* in the time period when it was primary
+        sets = sets[
+            sets[ColumnName.DATE].isin(filtered_workouts[ColumnName.DATE])
+            | ~sets[ColumnName.EXERCISE].apply(lambda exercise: EXERCISE_INFO[exercise][REQUIRES_MACHINE])
+        ]
+        sets = sets[sets[ColumnName.DATE].isin(filtered_workouts[ColumnName.DATE])]
+
         # Filter to only the max weight set of this type for that day
         idx = sets.groupby(ColumnName.DATE)[ColumnName.WEIGHT].idxmax()
         sets = sets.loc[idx]
@@ -230,7 +242,7 @@ def plot_strength_over_time(
 
     # Set up axes
     ax = plt.gca()
-    configure_x_axis_by_month(all_workouts)
+    configure_x_axis_by_month(workouts)
     chunk_of_range = (single_exercise[ColumnName.WEIGHT].max() - single_exercise[ColumnName.WEIGHT].min()) / 20
     y_step = max(1, round(chunk_of_range / 10) * 10)
     ax.yaxis.set_major_locator(ticker.MultipleLocator(5 * y_step))

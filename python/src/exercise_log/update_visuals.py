@@ -1,3 +1,5 @@
+from datetime import date
+
 import numpy as np
 
 from exercise_log.dataloader import DataLoader, ColumnName
@@ -11,7 +13,11 @@ ROOT_IMG_DIR = "img"
 EXTRAPOLATE_DAYS = 100
 N_DAYS_TO_AVG = 28
 
-SKIP_EXERCISE_PLOTS = {
+PRIMARY_GYMS = {
+    "Via 6 Gym": (date(year=2022, month=12, day=4), date.today()),
+}
+
+SKIP_EXERCISE_PLOT_EXERCISES = {
     Exercise.FIFTH_POINT_OF_FLIGHT,
     Exercise.BURPEES,
     Exercise.DEFICIT_PUSH_UPS,
@@ -23,6 +29,7 @@ SKIP_EXERCISE_PLOTS = {
     Exercise.PUSH_UPS,
     Exercise.PUSH_UPS_PERFECT_DEVICE,
 }
+
 
 def main():
     # Load data
@@ -46,12 +53,12 @@ def main():
     plot_weight(all_workouts, health_metrics, weight_trendline, EXTRAPOLATE_DAYS, export_dir=ROOT_IMG_DIR, show_plot=False)
 
     for exercise in weight_training_sets[ColumnName.EXERCISE].unique():
-        if exercise in SKIP_EXERCISE_PLOTS:
+        if exercise in SKIP_EXERCISE_PLOT_EXERCISES:
             print(f"Manually skipping {exercise}.")
             continue
         print(f"Plotting {exercise}... ", end="")
         try:
-            plot_strength_over_time(all_workouts, weight_training_sets, exercise, export_dir=ROOT_IMG_DIR, show_plot=False)
+            plot_strength_over_time(weight_training_workouts, weight_training_sets, exercise, PRIMARY_GYMS, export_dir=ROOT_IMG_DIR, show_plot=False)
             print("done.")
         except ValueError as ve:
             TermColour.print_warning(f"SKIPPED: {str(ve)}.")
