@@ -1,8 +1,10 @@
 from enum import Enum
+from typing import Dict, List, Optional
 
 from exercise_log.strength import SetRating
+from exercise_log.strength import Exercise
 from exercise_log.strength.anatomy import MuscleGroup
-from exercise_log.strength.exercise import Exercise, ExerciseInfo
+from exercise_log.strength.ontology import ExerciseInfo
 
 BICEPS = {MuscleGroup.BICEPS}
 TRICEPS = {MuscleGroup.TRICEPS}
@@ -60,10 +62,10 @@ class SkippedResult(Result):
 
 
 class SessionInfo:
-    def __init__(self, focus: List[MuscleGroup], exercise_sets: Dict[List[ExerciseSet]]):
+    def __init__(self, focus: List[MuscleGroup], exercise_sets: Dict[str, List[ExerciseSet]]):
         self.focus = focus
 
-        self.fatigue_score = sum(exercise_set.get_fatigue_score() for exercise_set in exercise_sets)
+        self.fatigue_score = sum(exercise_set.get_fatigue_score() for exercise, exercise_set in exercise_sets.items())
         # TODO this will store/compute info about a Session (volume per muscle/muscle group, fatigue score)
         pass
 
