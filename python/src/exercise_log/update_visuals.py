@@ -28,6 +28,7 @@ SKIP_EXERCISE_PLOT_EXERCISES = {
     Exercise.SIDE_PLANK,
     Exercise.PUSH_UPS,
     Exercise.PUSH_UPS_PERFECT_DEVICE,
+    Exercise.SQUAT_WALKOUT,
 }
 
 

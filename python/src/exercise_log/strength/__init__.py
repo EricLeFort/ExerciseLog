@@ -76,6 +76,7 @@ class Exercise(StrEnum):
     SHRUGS = "Shrugs"
     SKULLCRUSHERS = "Skullcrushers"
     SQUATS = "Squats"
+    SQUAT_WALKOUT = "Squat Walk-Out"
     STRICT_PRESS = "Strict Press"
     TRICEP_PUSHDOWN = "Tricep Pushdown"
     UPWARD_CABLE_PEC_FLIES = "Upward Cable Pec Flies"

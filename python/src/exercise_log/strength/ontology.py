@@ -15,6 +15,7 @@ from exercise_log.utils import StrEnum
 
 
 # Rep ranges for various common groups of exercise type
+NERVOUS_SYSTEM_WEIGHTING = (1, 1)
 EXPLOSIVE_COMPOUND_REP_RANGE = (1, 5)
 COMPLEX_COMPOUND_REP_RANGE = (1, 10)
 SIMPLE_COMPOUND_REP_RANGE = (5, 12)
@@ -1039,6 +1040,26 @@ EXERCISE_INFO = {
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
+        MUSCLE_GROUPS_WORKED: {
+            MuscleGroup.ABS: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.QUADS: None,
+        },
+        MUSCLES_WORKED: {
+            None: None,
+        },
+        ANTAGONIST_MUSCLES: None,
+    },
+    Exercise.SQUAT_WALKOUT: {
+        COUNT_TYPE: CountType.REPS,
+        EXERCISE_TYPE: ExerciseType.WEIGHTED_COMPOUND_ISOMETRIC,
+        REQUIRES_MACHINE: False,
+        TENSILE_FOCUS: TensileFocus.ISOMETRIC,
+        OPTIMAL_REP_RANGE: NERVOUS_SYSTEM_WEIGHTING,
         MUSCLE_GROUPS_WORKED: {
             MuscleGroup.ABS: None,
             MuscleGroup.CALVES: None,
