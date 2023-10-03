@@ -95,6 +95,7 @@ def plot_resting_heart_rate(
 
     # Delineate various resting heart rate levels as horizontal reference lines
     resting_heart_rate_levels = {
+        "Poor": 82,
         "Average": 72,
         "Above Average": 68,
         "Good": 63,
