@@ -223,7 +223,7 @@ def plot_strength_over_time(
 
         if not sets.empty:
             last_weight = sets[ColumnName.WEIGHT].iloc[-1]
-            sets = sets.append({ColumnName.DATE: final_date, ColumnName.WEIGHT: last_weight}, ignore_index=True)
+            sets = pd.concat([sets, pd.DataFrame({ColumnName.DATE: [final_date], ColumnName.WEIGHT: [last_weight]})], ignore_index=True)
             plt.scatter(
                 sets[ColumnName.DATE],
                 sets[ColumnName.WEIGHT],

@@ -17,15 +17,15 @@ LF = b"\n"
 
 
 class StrEnumMeta(EnumMeta):
-    def __getitem__(self, name):
+    def __getitem__(cls, name):
         """
         Allows access to a StrEnum using the instance's value and not just the variable name
 
         Note: if you have an enum named X and another with the value "X", the one with the value will be returned
         """
-        if name in self._value2member_map_:
-            return self._value2member_map_[name]
-        return super().__getitem__(self, name)
+        if name in cls._value2member_map_:
+            return cls._value2member_map_[name]
+        return super().__getitem__(cls, name)
 
 
 class StrEnum(str, Enum, metaclass=StrEnumMeta):
@@ -40,7 +40,6 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
             item (Any): The item to check for membership
         """
         return item in self._value2member_map_
-
 
     def __str__(self):
         return self.value

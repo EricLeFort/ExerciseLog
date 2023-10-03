@@ -50,7 +50,7 @@ class DataLoader:
         df = pd.read_csv(fname)
 
         # Clean the data
-        df[CName.DATE] = pd.to_datetime(df[CName.DATE])
+        df[CName.DATE] = pd.to_datetime(df[CName.DATE], format="%d-%b-%Y")
         df = df.sort_values(CName.DATE, ignore_index=True)
         if CName.DATA_DURATION in df:
             df[CName.DATA_DURATION] = pd.to_timedelta(df[CName.DATA_DURATION])
@@ -83,10 +83,10 @@ class DataLoader:
 
     @staticmethod
     def _validate_exercises(df: pd.DataFrame, fname: str):
-        if df[CName.EXERCISE].isin(Exercise).all():
+        if df[CName.EXERCISE].isin(Exercise._value2member_map_).all():
             return
 
-        first_invalid_idx = df[~df[CName.EXERCISE].isin(Exercise)].index.tolist()[0]
+        first_invalid_idx = df[~df[CName.EXERCISE].isin(Exercise._value2member_map_)].index.tolist()[0]
         first_invalid = df[CName.EXERCISE][first_invalid_idx]
 
         possible_valid = first_invalid[:-1]
@@ -119,10 +119,10 @@ class DataLoader:
         Note: there can be more than one per day or rest days, this smooths that out.
         """
         total_durations = pd.concat([
-            weight_training_workouts.groupby(CName.DATE)[CName.DURATION].agg(sum),
-            cardio_workouts.groupby(CName.DATE)[CName.DURATION].agg(sum),
-            travel_days.groupby(CName.DATE)[CName.DURATION].agg(sum),
-        ]).groupby(CName.DATE).agg(sum)
+            weight_training_workouts.groupby(CName.DATE)[CName.DURATION].agg("sum"),
+            cardio_workouts.groupby(CName.DATE)[CName.DURATION].agg("sum"),
+            travel_days.groupby(CName.DATE)[CName.DURATION].agg("sum"),
+        ]).groupby(CName.DATE).agg("sum")
         total_durations.index = pd.DatetimeIndex(total_durations.index)
         return total_durations.reindex(all_workouts.index, fill_value=0)
 
