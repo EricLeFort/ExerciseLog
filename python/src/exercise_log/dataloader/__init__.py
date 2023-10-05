@@ -83,7 +83,8 @@ class DataLoader:
 
     @staticmethod
     def _validate_exercises(df: pd.DataFrame, fname: str):
-        if df[CName.EXERCISE].isin(Exercise._value2member_map_).all():
+        exercise_map = Exercise._value2member_map_
+        if df[CName.EXERCISE].isin(exercise_map).all():
             return
 
         first_invalid_idx = df[~df[CName.EXERCISE].isin(Exercise._value2member_map_)].index.tolist()[0]
@@ -91,7 +92,7 @@ class DataLoader:
 
         possible_valid = first_invalid[:-1]
         base_msg = f'"{first_invalid}" at row {first_invalid_idx + 2} in {fname} is not an expected exercise'
-        if possible_valid in Exercise:
+        if possible_valid in exercise_map:
             raise ValueError(base_msg + f', did you mean "{possible_valid}"')
         raise ValueError(base_msg)
 
