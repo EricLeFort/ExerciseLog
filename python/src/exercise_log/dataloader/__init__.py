@@ -179,11 +179,17 @@ class DataLoader:
 
     @staticmethod
     def load_walk_workouts(root_data_dir: str):
-        return DataLoader._clean_cardio_workout(f"{root_data_dir}/walks.csv")
+        return DataLoader._load_foot_workouts(root_data_dir, "walks.csv")
 
     @staticmethod
     def load_run_workouts(root_data_dir: str):
-        return DataLoader._clean_cardio_workout(f"{root_data_dir}/runs.csv")
+        return DataLoader._load_foot_workouts(root_data_dir, "runs.csv")
+
+    @staticmethod
+    def _load_foot_workouts(root_data_dir: str, fname: str):
+        workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/{fname}")
+        workouts[CName.STEPS] = workouts[CName.STEPS].astype('Int64')
+        return workouts
 
     @staticmethod
     def load_bike_workouts(root_data_dir: str):
