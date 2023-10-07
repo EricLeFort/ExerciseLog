@@ -139,6 +139,20 @@ EXERCISE_INFO = {
         },
         ANTAGONIST_MUSCLES: None,
     },
+    Exercise.BARBELL_LUNGES: {
+        COUNT_TYPE: CountType.REPS,
+        EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
+        REQUIRES_MACHINE: False,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
+        OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
+        MUSCLE_GROUPS_WORKED: {
+            None: None,
+        },
+        MUSCLES_WORKED: {
+            None: None,
+        },
+        ANTAGONIST_MUSCLES: None,
+    },
     Exercise.BARBELL_OVERHEAD_TRICEP_EXTENSION: {
         COUNT_TYPE: CountType.REPS,
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,

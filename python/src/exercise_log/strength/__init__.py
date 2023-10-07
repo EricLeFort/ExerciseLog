@@ -11,6 +11,7 @@ class Exercise(StrEnum):
     ARNOLD_PRESS = "Arnold Press"
     BARBELL_BICEP_CURL = "Barbell Bicep Curl"
     BARBELL_CALF_RAISE = "Barbell Calf Raise"
+    BARBELL_LUNGES = "Barbell Lunges"
     BARBELL_OVERHEAD_TRICEP_EXTENSION = "Barbell Overhead Tricep Extension"
     BENCH_PRESS = "Bench Press"
     BENT_OVER_LATERAL_LIFT = "Bent-Over Lateral Lift"
