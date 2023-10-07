@@ -222,7 +222,8 @@ def plot_strength_over_time(
         idx = sets.groupby(ColumnName.DATE)[ColumnName.WEIGHT].idxmax()
         sets = sets.loc[idx]
 
-        if not sets.empty:
+        # Only bother with plotting when there's 3+ sets available
+        if len(sets) > 2:
             last_weight = sets[ColumnName.WEIGHT].iloc[-1]
             sets = pd.concat([sets, pd.DataFrame({ColumnName.DATE: [final_date], ColumnName.WEIGHT: [last_weight]})], ignore_index=True)
             plt.scatter(
@@ -237,9 +238,9 @@ def plot_strength_over_time(
                 where="post",
             )
 
-    # It's possible (but not common) to have an exercise that only has failed/bad sets
+    # All of the set types were skipped due to insufficient data, skip this plot entirely
     if not plt.gca().has_data():
-        raise ValueError("missing good sets")
+        raise ValueError("Not enough good sets")
 
     # Set up axes
     ax = plt.gca()

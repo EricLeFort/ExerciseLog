@@ -1,11 +1,13 @@
 # TODO
 
 ### Python
-* Skip plotting exercises with only one or two workouts worth of data
 * Smooth out 1RM logic
 * Define an expiration and/or uncertainty range that crops up when xRM's get several months old
 * Color-code data points in workout frequency graph to correspond to the different types of activity
 * Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
+* Populate Muscle and MuscleGroup in EXERCISE_INFO
+* Populate percentages of Muscle/MuscleGroup in EXERCISE_INFO
+* Ideal weekly volume inspiration: https://www.reddit.com/r/weightroom/comments/6674a4/dr_mike_israetels_training_tips_for_hypertrophy/
 
 ### Site
 * Replicate Python graphing using js so that it can work dynamically (and so I can purge the graph .png's from the repo)
