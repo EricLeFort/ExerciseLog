@@ -43,9 +43,9 @@ date,exercise,reps,weight(lbs),rating
 04-OCT-2023,Shrugs,10,50,good
 04-OCT-2023,Shrugs,10,50,good
 04-OCT-2023,Shrugs,10,50,good
-04-OCT-2023,Leg Raise,10,0,good
-04-OCT-2023,Leg Raise,10,0,good
-04-OCT-2023,Leg Raise,10,0,good
+04-OCT-2023,Parallel Bar Leg Raise,10,0,good
+04-OCT-2023,Parallel Bar Leg Raise,10,0,good
+04-OCT-2023,Parallel Bar Leg Raise,10,0,good
 02-OCT-2023,Bicep Curl,12,30,good
 02-OCT-2023,Bicep Curl,12,30,good
 02-OCT-2023,Bicep Curl,12,30,good
@@ -422,9 +422,9 @@ date,exercise,reps,weight(lbs),rating
 31-AUG-2023,Side-Plank,40,0,good
 31-AUG-2023,Side-Plank,40,0,good
 31-AUG-2023,Side-Plank,40,0,good
-31-AUG-2023,Leg Raise,10,0,good
-31-AUG-2023,Leg Raise,10,0,good
-31-AUG-2023,Leg Raise,10,0,good
+31-AUG-2023,Parallel Bar Leg Raise,10,0,good
+31-AUG-2023,Parallel Bar Leg Raise,10,0,good
+31-AUG-2023,Parallel Bar Leg Raise,10,0,good
 31-AUG-2023,Bench Press,5,135,warm-up
 31-AUG-2023,Bench Press,10,255,good
 31-AUG-2023,Bench Press,10,255,good
@@ -496,8 +496,8 @@ date,exercise,reps,weight(lbs),rating
 25-AUG-2023,Deadlift,10,155,deload
 25-AUG-2023,Single-Arm Farmer's Carry,60,30,deload
 25-AUG-2023,Single-Arm Farmer's Carry,60,30,deload
-25-AUG-2023,Leg Raise,10,0,deload
-25-AUG-2023,Leg Raise,10,0,deload
+25-AUG-2023,Parallel Bar Leg Raise,10,0,deload
+25-AUG-2023,Parallel Bar Leg Raise,10,0,deload
 25-AUG-2023,Jumping Jacks,60,0,good
 25-AUG-2023,Jumping Jacks,50,0,good
 24-AUG-2023,Jumping Jacks,50,0,good
@@ -602,9 +602,9 @@ date,exercise,reps,weight(lbs),rating
 18-AUG-2023,Shrugs,10,50,good
 18-AUG-2023,Shrugs,10,50,good
 18-AUG-2023,Shrugs,10,50,good
-18-AUG-2023,Leg Raise,10,0,good
-18-AUG-2023,Leg Raise,10,0,good
-18-AUG-2023,Leg Raise,10,0,good
+18-AUG-2023,Parallel Bar Leg Raise,10,0,good
+18-AUG-2023,Parallel Bar Leg Raise,10,0,good
+18-AUG-2023,Parallel Bar Leg Raise,10,0,good
 18-AUG-2023,Deficit Push-Ups,5,0,superset
 18-AUG-2023,Deficit Push-Ups,5,0,superset
 18-AUG-2023,Hex-Bar Deadlift,2,235,fun
@@ -637,9 +637,9 @@ date,exercise,reps,weight(lbs),rating
 14-AUG-2023,Single-Leg Leg Extension,10,125,good
 14-AUG-2023,Single-Leg Leg Extension,10,125,good
 14-AUG-2023,Single-Leg Leg Extension,10,125,good
-14-AUG-2023,Leg Raise,10,0,good
-14-AUG-2023,Leg Raise,10,0,good
-14-AUG-2023,Leg Raise,10,0,good
+14-AUG-2023,Parallel Bar Leg Raise,10,0,good
+14-AUG-2023,Parallel Bar Leg Raise,10,0,good
+14-AUG-2023,Parallel Bar Leg Raise,10,0,good
 14-AUG-2023,Machine Hip Abductors,10,100,good
 14-AUG-2023,Machine Hip Abductors,10,100,good
 14-AUG-2023,Machine Hip Abductors,10,100,good
@@ -681,7 +681,7 @@ date,exercise,reps,weight(lbs),rating
 12-AUG-2023,Wide-Grip Pull-Up,5,-90,good
 12-AUG-2023,Good Morning,5,135,warm-up
 12-AUG-2023,Good Morning,5,185,fun
-12-AUG-2023,Leg Raise,10,0,good
+12-AUG-2023,Parallel Bar Leg Raise,10,0,good
 10-AUG-2023,Bench Press,5,135,warm-up
 10-AUG-2023,Bench Press,8,225,good
 10-AUG-2023,Bench Press,10,225,good
@@ -732,7 +732,7 @@ date,exercise,reps,weight(lbs),rating
 08-AUG-2023,Single-Leg Leg Extension,10,125,good
 08-AUG-2023,Single-Leg Leg Extension,10,125,good
 08-AUG-2023,Single-Leg Leg Extension,10,125,good
-07-AUG-2023,Leg Raise,10,0,good
+07-AUG-2023,Parallel Bar Leg Raise,10,0,good
 07-AUG-2023,Neutral-Grip Pull-Up,5,-90,good
 07-AUG-2023,Neutral-Grip Pull-Up,5,-90,good
 06-AUG-2023,Bicep Curl,10,35,good
@@ -3099,9 +3099,9 @@ date,exercise,reps,weight(lbs),rating
 24-JAN-2023,Dumbbell Press,10,45,good
 24-JAN-2023,Dumbbell Press,10,45,good
 24-JAN-2023,Dumbbell Press,12,40,good
-18-JAN-2023,Leg Raise,5,0,bad
-18-JAN-2023,Leg Raise,5,0,bad
-18-JAN-2023,Leg Raise,10,0,bad
+18-JAN-2023,Parallel Bar Leg Raise,5,0,bad
+18-JAN-2023,Parallel Bar Leg Raise,5,0,bad
+18-JAN-2023,Parallel Bar Leg Raise,10,0,bad
 18-JAN-2023,5th Point of Flight,45,0,good
 18-JAN-2023,5th Point of Flight,50,0,good
 18-JAN-2023,5th Point of Flight,45,0,good

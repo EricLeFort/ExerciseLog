@@ -22,7 +22,7 @@ SKIP_EXERCISE_PLOT_EXERCISES = {
     Exercise.BURPEES,
     Exercise.DEFICIT_PUSH_UPS,
     Exercise.JUMPING_JACKS,
-    Exercise.LEG_RAISE,
+    Exercise.PARALLEL_BAR_LEG_RAISE,
     Exercise.LAT_PULLDOWN_HANG,
     Exercise.PLANK,
     Exercise.SIDE_PLANK,

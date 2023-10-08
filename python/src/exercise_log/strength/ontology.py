@@ -90,7 +90,11 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_FLEXORS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.QUADS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -104,7 +108,15 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -118,7 +130,10 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -132,7 +147,7 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.CALVES: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -146,7 +161,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.HIP_FLEXORS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -160,7 +182,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -174,7 +202,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -188,7 +222,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -202,7 +243,15 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -216,7 +265,10 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -230,7 +282,17 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_FLEXORS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -244,7 +306,12 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -258,7 +325,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -272,7 +345,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -286,7 +365,20 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         OPTIMAL_REP_RANGE: EXPLOSIVE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_FLEXORS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -300,7 +392,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -314,7 +413,8 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.FOREARMS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -331,7 +431,20 @@ EXERCISE_INFO = {
             None: None,
         },
         MUSCLES_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         ANTAGONIST_MUSCLES: None,
     },
@@ -342,7 +455,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -356,7 +475,19 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.HIP_FLEXORS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -370,7 +501,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -384,7 +521,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -398,7 +542,7 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.FOREARMS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -412,7 +556,12 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -426,7 +575,9 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: ROTATOR_CUFF_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -440,7 +591,12 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -454,7 +610,10 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -468,7 +627,20 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -482,7 +654,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -496,7 +674,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -510,7 +695,16 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ABDUCTORS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -524,7 +718,7 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.FOREARMS,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -538,7 +732,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -552,7 +753,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -566,20 +774,34 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRICEPS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
         },
         ANTAGONIST_MUSCLES: None,
-    },Exercise.LATERAL_LIFT: {
+    },
+    Exercise.LATERAL_LIFT: {
         COUNT_TYPE: CountType.REPS,
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -593,7 +815,15 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -607,7 +837,10 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.HIP_FLEXORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -621,7 +854,7 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.QUADS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -635,7 +868,12 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ABDUCTORS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.QUADS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -649,21 +887,33 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.QUADS: None,
         },
         MUSCLES_WORKED: {
             None: None,
         },
         ANTAGONIST_MUSCLES: None,
     },
-    Exercise.LEG_RAISE: {
+    Exercise.PARALLEL_BAR_LEG_RAISE: {
         COUNT_TYPE: CountType.REPS,
         EXERCISE_TYPE: ExerciseType.CALISTHENIC,
         REQUIRES_MACHINE: False,
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.HIP_ABDUCTORS: None,
+            MuscleGroup.HIP_FLEXORS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -677,7 +927,20 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -691,7 +954,18 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.HIP_FLEXORS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -705,7 +979,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -719,7 +999,8 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.HIP_ABDUCTORS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -733,7 +1014,8 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.HIP_FLEXORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -747,7 +1029,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -761,7 +1049,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -775,7 +1069,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -789,7 +1090,16 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -803,7 +1113,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.TRICEPS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -817,7 +1133,15 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -831,7 +1155,8 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.FOREARMS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -845,7 +1170,19 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.HIP_FLEXORS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -859,7 +1196,20 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.HIP_FLEXORS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -873,7 +1223,12 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -887,7 +1242,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -901,7 +1263,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -915,7 +1284,11 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -929,7 +1302,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -943,7 +1323,14 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -957,7 +1344,10 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: ROTATOR_CUFF_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -971,7 +1361,12 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.HIP_ABDUCTORS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -985,7 +1380,18 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         OPTIMAL_REP_RANGE: STEP_BASED_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.HIP_FLEXORS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -999,7 +1405,10 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.CALVES: None,
+            MuscleGroup.HAMSTRINGS: None,
+            MuscleGroup.HIP_ADDUCTORS: None,
+            MuscleGroup.HIP_FLEXORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1013,7 +1422,7 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.QUADS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1027,7 +1436,11 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1041,7 +1454,12 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1060,8 +1478,8 @@ EXERCISE_INFO = {
             MuscleGroup.GLUTES: None,
             MuscleGroup.HAMSTRINGS: None,
             MuscleGroup.HIP_ADDUCTORS: None,
-            MuscleGroup.SPINAL_ERECTORS: None,
             MuscleGroup.QUADS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1080,8 +1498,8 @@ EXERCISE_INFO = {
             MuscleGroup.GLUTES: None,
             MuscleGroup.HAMSTRINGS: None,
             MuscleGroup.HIP_ADDUCTORS: None,
-            MuscleGroup.SPINAL_ERECTORS: None,
             MuscleGroup.QUADS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1095,7 +1513,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1109,7 +1533,11 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRICEPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1123,7 +1551,13 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1137,7 +1571,16 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1151,7 +1594,7 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.FOREARMS: None,
         },
         MUSCLES_WORKED: {
             None: None,
@@ -1165,7 +1608,7 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
+            MuscleGroup.FOREARMS: None,
         },
         MUSCLES_WORKED: {
             None: None,
