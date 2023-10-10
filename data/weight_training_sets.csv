@@ -1,4 +1,35 @@
 date,exercise,reps,weight(lbs),rating
+08-OCT-2023,Hammer Curl,15,20,good
+08-OCT-2023,Hammer Curl,20,20,good
+08-OCT-2023,Hammer Curl,15,25,good
+08-OCT-2023,Concentration Curl,12,25,good
+08-OCT-2023,Concentration Curl,12,25,good
+08-OCT-2023,Concentration Curl,12,25,good
+08-OCT-2023,Overhead Tricep Extension,5,20,warm-up
+08-OCT-2023,Overhead Tricep Extension,10,35,good
+08-OCT-2023,Overhead Tricep Extension,10,35,good
+08-OCT-2023,Overhead Tricep Extension,10,35,good
+08-OCT-2023,Tricep Pushdown,10,80,warm-up
+08-OCT-2023,Tricep Pushdown,10,130,good
+08-OCT-2023,Tricep Pushdown,10,130,good
+08-OCT-2023,Tricep Pushdown,10,130,good
+08-OCT-2023,Lawnmowers,8,70,good
+08-OCT-2023,Lawnmowers,8,70,good
+08-OCT-2023,Lawnmowers,8,70,good
+08-OCT-2023,Seated Row,10,85,warm-up
+08-OCT-2023,Seated Row,10,137.5,good
+08-OCT-2023,Seated Row,10,137.5,good
+08-OCT-2023,Seated Row,10,137.5,good
+08-OCT-2023,Lat Pulldown,10,85,warm-up
+08-OCT-2023,Lat Pulldown,10,130,good
+08-OCT-2023,Lat Pulldown,12,130,good
+08-OCT-2023,Lat Pulldown,12,130,good
+08-OCT-2023,Pullovers,10,50,good
+08-OCT-2023,Pullovers,10,50,good
+08-OCT-2023,Pullovers,12,50,good
+08-OCT-2023,Wide-Grip Pull-Up,7,-90,failure
+08-OCT-2023,Wide-Grip Pull-Up,7,-110,good
+08-OCT-2023,Wide-Grip Pull-Up,7,-110,failure
 06-OCT-2023,Lateral Lift,15,20,good
 06-OCT-2023,Lateral Lift,15,20,good
 06-OCT-2023,Lateral Lift,10,25,good
