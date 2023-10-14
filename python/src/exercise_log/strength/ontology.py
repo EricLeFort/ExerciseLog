@@ -490,9 +490,6 @@ EXERCISE_INFO = {
         TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         MUSCLE_GROUPS_WORKED: {
-            None: None,
-        },
-        MUSCLES_WORKED: {
             MuscleGroup.ABS: None,
             MuscleGroup.BICEPS: None,
             MuscleGroup.CALVES: None,
@@ -507,6 +504,9 @@ EXERCISE_INFO = {
             MuscleGroup.ROTATOR_CUFF: None,
             MuscleGroup.SPINAL_ERECTORS: None,
             MuscleGroup.TRAPS: None,
+        },
+        MUSCLES_WORKED: {
+            None: None,
         },
         ANTAGONIST_MUSCLES: None,
     },
