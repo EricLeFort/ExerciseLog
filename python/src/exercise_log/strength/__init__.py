@@ -19,6 +19,7 @@ class Exercise(StrEnum):
     BICEP_CURL = "Bicep Curl"
     BURPEES = "Burpees"
     CABLE_LATERAL_LIFT = "Cable Lateral Lift"
+    CABLE_LYING_HIP_FLEXORS = "Cable Lying Hip Flexors"
     CABLE_PEC_FLIES = "Cable Pec Flies"
     CALF_RAISE = "Calf Raise"
     CLEAN_AND_JERK = "Clean & Jerk"

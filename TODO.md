@@ -1,7 +1,9 @@
 # TODO
 
 ### Python
-* Smooth out 1RM logic
+* Define local and global ideal strength ratios
+* Define an inheritance mechanism for EXERCISE_INFO -- e.g. RES_SEATED_ROW is mostly identical to SEATED_ROW and so should simply inherit all fields unless explicitly overriden
+* Smooth out xRM logic
 * Define an expiration and/or uncertainty range that crops up when xRM's get several months old
 * Color-code data points in workout frequency graph to correspond to the different types of activity
 * Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
