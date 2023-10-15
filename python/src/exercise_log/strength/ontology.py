@@ -30,8 +30,33 @@ ROTATOR_CUFF_REP_RANGE = (10, 25)
 
 
 # Ideal strength ratios:
-# Tricep should be slightly stronger than bicep
-# Hip abductors and adductors should be fairly close in strength
+# Tricep:bicep
+#    * low range: maybe 3:4 (elbow injury study in baseball players pubmed.ncbi.nlm.nih.gov/20231742)
+#    * upper range: not known but let's assume the inverse, 4:3
+#    * ideal: somewhere around 1:1
+# Hamstring:Quads
+#    * low range: 1:2
+#    * upper range: 1:1 (or even higher maybe? Not really mentioned)
+#    * ideal: >= 3:5
+#    * This is a lot more studied than bicep:triceps or hip abd:hip add
+#    * Measurements include rate of motion (i.e. degrees per second) -- faster favours the hamstrings relatively
+# Trunk Flexion:Extension
+#    * low range: 1:2?
+#    * upper range: 7:10?
+#    * ideal: 3:5 www.ncbi.nlm.nih.gov/pmc/articles/PMC5833971/
+# Hip abductors and adductors should be fairly close in strength (note: soccer players tend to have more strength on their dominant leg)
+#    * low range: 4:5, not clear there is one but let's assume the inverse
+#    * upper range: 5:4 seems likely (journals.humankinetics.com/view/journals/jsr/29/1/article-p116.xml + journals.sagepub.com/doi/10.1177/0363546510378081)
+#    * ideal: somewhere around 1:1
+# Hip Flexor:Extensor
+#    * Nominal typical range: 11:20 to 3:4 (www.ncbi.nlm.nih.gov/pmc/articles/PMC7727414/pdf/ijspt-15-967.pdf)
+#    * low range: 1:2?
+#    * upper range: 3:4?
+#    * ideal: 11:20?
+# Hip Internal(medial):External(lateral) Rotation
+#    * low range: 10:11?, not clear there is one but let's assume the inverse
+#    * upper range: 11:10?, more may lead to PFPS injuries (web.archive.org/web/20190308153356id_/http://pdfs.semanticscholar.org/f531/d7163d65c82a5301e505affe72c5c9ca8b7a.pdf)
+#    * ideal: 1:1
 
 
 class ExerciseInfo:
@@ -1697,6 +1722,26 @@ EXERCISE_INFO = {
         ANTAGONIST_MUSCLES: None,
     },
     Exercise.TRICEP_PUSHDOWN: {
+        COUNT_TYPE: CountType.REPS,
+        EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
+        REQUIRES_MACHINE: True,
+        IS_UNILATERAL: False,
+        IS_LIMB_INDEPENDENT: False,
+        TENSILE_FOCUS: TensileFocus.CONCENTRIC,
+        OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
+        MUSCLE_GROUPS_WORKED: {
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRICEPS: None,
+        },
+        MUSCLES_WORKED: {
+            None: None,
+        },
+        ANTAGONIST_MUSCLES: None,
+    },
+    Exercise.TRICEP_PUSHDOWN_V_BAR: {
         COUNT_TYPE: CountType.REPS,
         EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
         REQUIRES_MACHINE: True,

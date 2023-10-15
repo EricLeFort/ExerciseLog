@@ -81,6 +81,7 @@ class Exercise(StrEnum):
     SQUAT_WALKOUT = "Squat Walk-Out"
     STRICT_PRESS = "Strict Press"
     TRICEP_PUSHDOWN = "Tricep Pushdown"
+    TRICEP_PUSHDOWN_V_BAR = "Tricep Pushdown (V-Bar)"
     UPWARD_CABLE_PEC_FLIES = "Upward Cable Pec Flies"
     WIDE_GRIP_PULL_UP = "Wide-Grip Pull-Up"
     WRIST_CURL = "Wrist Curl"
