@@ -2,7 +2,6 @@
 
 ### Python
 * Define local and global ideal strength ratios
-* Populate remaining INHERITS_FROM exercises in EXERCISE_INFO
 * Smooth out xRM logic
 * Define an expiration and/or uncertainty range that crops up when xRM's get several months old
 * Color-code data points in workout frequency graph to correspond to the different types of activity
