@@ -25,7 +25,7 @@ def get_python_files_in_path(path: str) -> List[str]:
     return [f[len(path):] for f in get_files_in_path(path) if f.endswith(PY_EXT)]
 
 
-class PackageTest(unittest.TestCase):
+class TestPackage(unittest.TestCase):
     def test_import_all_local_modules(self):
         """Simply import every python module under src and verify there's no errors."""
         files = get_python_files_in_path(MODULE_PATH)
