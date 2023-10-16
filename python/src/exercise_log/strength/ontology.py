@@ -176,23 +176,9 @@ EXERCISE_INFO = {
         Field.ANTAGONIST_MUSCLES: None,
     },
     Exercise.BARBELL_BICEP_CURL: {
-        Field.COUNT_TYPE: CountType.REPS,
-        Field.EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
-        Field.REQUIRES_MACHINE: False,
+        INHERITS_FROM: Exercise.BICEP_CURL,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
-        Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
-        Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
-        Field.MUSCLE_GROUPS_WORKED: {
-            MuscleGroup.ABS: None,
-            MuscleGroup.BICEPS: None,
-            MuscleGroup.FOREARMS: None,
-            MuscleGroup.SPINAL_ERECTORS: None,
-        },
-        Field.MUSCLES_WORKED: {
-            None: None,
-        },
-        Field.ANTAGONIST_MUSCLES: None,
     },
     Exercise.BARBELL_CALF_RAISE: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1857,8 +1843,10 @@ EXERCISE_INFO = {
 }
 
 # Populate the inheriting exercise infos on load
-for info in EXERCISE_INFO:
+for info in EXERCISE_INFO.values():
     if INHERITS_FROM in info:
         parent_exercise_name = info[INHERITS_FROM]
         parent_info = EXERCISE_INFO[parent_exercise_name]
-        pass
+        for field in Field:
+            if field not in info:
+                info[field] = parent_info[field]
