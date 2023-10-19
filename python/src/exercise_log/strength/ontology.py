@@ -91,6 +91,8 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
     """
     Stores metadata about an Exercise such as which muscles and muscle groups it works, which antagonist muscle is
     worked, and which ExerciseType it is.
+
+    Supports inheritance amongst data in related exercises. E.g. CONCENTRATION_CURL -> PREACHER_CURL -> BICEP_CURL
     """
     def __init__(self, exercise: Exercise):
         """
@@ -98,17 +100,36 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
         """
         info = EXERCISE_INFO[exercise]
 
-        self.count_type = CountType[info[Field.COUNT_TYPE]]
-        self.exercise_type = ExerciseType[info[Field.EXERCISE_TYPE]]
-        self.requires_machine = info[Field.REQUIRES_MACHINE]
-        self.tensile_focus = TensileFocus[info[Field.TENSILE_FOCUS]]
-        self.optimal_rep_range = info[Field.OPTIMAL_REP_RANGE]
+        self.count_type = CountType[ExerciseInfo._get_field(exercise, Field.COUNT_TYPE)]
+        self.exercise_type = ExerciseType[ExerciseInfo._get_field(exercise, Field.EXERCISE_TYPE)]
+        self.requires_machine = ExerciseInfo._get_field(exercise, Field.REQUIRES_MACHINE)
+        self.tensile_focus = TensileFocus[ExerciseInfo._get_field(exercise, Field.TENSILE_FOCUS)]
+        self.optimal_rep_range = ExerciseInfo._get_field(exercise, Field.OPTIMAL_REP_RANGE)
 
-        self.muscles_worked = info[Field.MUSCLES_WORKED]
-        self.muscle_groups_worked = info[Field.MUSCLE_GROUPS_WORKED]
-        self.antagonist_muscles = info[Field.ANTAGONIST_MUSCLES]
+        self.muscles_worked = ExerciseInfo._get_field(exercise, Field.MUSCLES_WORKED)
+        self.muscle_groups_worked = ExerciseInfo._get_field(exercise, Field.MUSCLE_GROUPS_WORKED)
+        self.antagonist_muscles = ExerciseInfo._get_field(exercise, Field.ANTAGONIST_MUSCLES)
 
         self._fatigue_factor = None
+
+
+    @staticmethod
+    def _get_field(exercise: str, field: Field):
+        """
+        Retrieves the field from this exercise's dict if it exists.
+        If it doesn't exist, it works its way up the INHERITS_FROM chain until it finds it.
+
+        Raises:
+            ValueError: If the field is not present in the EXERCISE_INFO dict.
+        """
+        info = EXERCISE_INFO[exercise]
+        result = info.get(field)
+        if result is not None:
+            return result
+        if INHERITS_FROM not in info:
+            raise ValueError(f'Unexpected error: Exercise "{exercise}" is missing field "{field}".')
+
+        return ExerciseInfo._get_field(info[INHERITS_FROM], field)
 
 
     def get_fatigue_factor(self):
@@ -149,7 +170,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.ARNOLD_PRESS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -173,7 +194,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.BARBELL_BICEP_CURL: {
         INHERITS_FROM: Exercise.BICEP_CURL,
@@ -201,7 +222,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.BARBELL_OVERHEAD_TRICEP_EXTENSION: {
         INHERITS_FROM: Exercise.OVERHEAD_TRICEP_EXTENSION,
@@ -228,7 +249,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.BENT_OVER_LATERAL_LIFT: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -251,7 +272,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.BENT_OVER_SINGLE_ARM_BARBELL_ROW: {
         INHERITS_FROM: Exercise.LAWNMOWERS,
@@ -273,7 +294,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.BURPEES: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -299,7 +320,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.CABLE_LATERAL_LIFT: {
         INHERITS_FROM: Exercise.LATERAL_LIFT,
@@ -320,7 +341,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.CABLE_PEC_FLIES: {
         INHERITS_FROM: Exercise.MACH_PEC_FLIES,
@@ -346,7 +367,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.CLEAN_AND_JERK: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -375,7 +396,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.CLOSE_GRIP_LAT_PULLDOWN: {
         INHERITS_FROM: Exercise.LAT_PULLDOWN,
@@ -392,18 +413,10 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
-    Exercise.CONCENTRAION_CURL: {
-        INHERITS_FROM: Exercise.BICEP_CURL,
-        Field.MUSCLE_GROUPS_WORKED: {
-            MuscleGroup.BICEPS: None,
-            MuscleGroup.FOREARMS: None,
-        },
-        Field.MUSCLES_WORKED: {
-            None: None,
-        },
-        Field.ANTAGONIST_MUSCLES: None,
+    Exercise.CONCENTRATION_CURL: {
+        INHERITS_FROM: Exercise.PREACHER_CURL,
     },
     Exercise.DEADLIFT: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -432,7 +445,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.DEC_BENCH_PRESS: {
         INHERITS_FROM: Exercise.BENCH_PRESS,
@@ -448,7 +461,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.DEFICIT_PUSH_UPS: {
         INHERITS_FROM: Exercise.PUSH_UPS,
@@ -470,7 +483,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.DELT_FLIES: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -492,7 +505,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.DUMBBELL_PRESS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -515,7 +528,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.FINGER_CURL: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -531,7 +544,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.FRONT_LIFT: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -552,7 +565,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.FULL_CANS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -570,7 +583,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.GOOD_MORNING: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -591,7 +604,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.HAMMER_CURL: {
         INHERITS_FROM: Exercise.BICEP_CURL,
@@ -604,7 +617,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.HEX_BAR_DEADLIFT: {
         INHERITS_FROM: Exercise.DEADLIFT,
@@ -627,7 +640,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.INC_BENCH_PRESS: {
         INHERITS_FROM: Exercise.BENCH_PRESS,
@@ -643,7 +656,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.INC_DUMBBELL_PRESS: {
         INHERITS_FROM: Exercise.DUMBBELL_PRESS,
@@ -660,7 +673,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.JUMPING_JACKS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -685,7 +698,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.KETTLEBELL_FLIPS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -701,7 +714,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LAT_PULLDOWN: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -724,7 +737,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LAT_PULLDOWN_HANG: {
         INHERITS_FROM: Exercise.LAT_PULLDOWN,
@@ -745,7 +758,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LAT_PUSHDOWN: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -768,7 +781,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LATERAL_LIFT: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -790,7 +803,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LAWNMOWERS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -814,7 +827,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LEG_CURL: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -833,7 +846,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LEG_EXTENSION: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -849,7 +862,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LEG_PRESS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -870,7 +883,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LEG_PRESS_CALF_RAISE: {
         INHERITS_FROM: Exercise.CALF_RAISE,
@@ -897,7 +910,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LONG_HANG_DEADLIFT: {
         INHERITS_FROM: Exercise.DEADLIFT,
@@ -924,7 +937,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.LUNGES: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -951,7 +964,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.MACH_BENCH_PRESS: {
         INHERITS_FROM: Exercise.BENCH_PRESS,
@@ -972,7 +985,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.MACH_HIP_ADDUCTORS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -989,7 +1002,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.MACH_INCLINE_BENCH_PRESS: {
         INHERITS_FROM: Exercise.MACH_BENCH_PRESS,
@@ -1005,7 +1018,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.MACH_PEC_FLIES: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1027,7 +1040,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.MILITARY_PRESS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1050,7 +1063,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.NEUTRAL_GRIP_PULL_UP: {
         INHERITS_FROM: Exercise.WIDE_GRIP_PULL_UP,
@@ -1069,7 +1082,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.OVERHEAD_TRICEP_EXTENSION: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1091,7 +1104,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.PLANK: {
         Field.COUNT_TYPE: CountType.SECONDS,
@@ -1115,7 +1128,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.PREACHER_CURL: {
         INHERITS_FROM: Exercise.BICEP_CURL,
@@ -1126,7 +1139,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.PUSH_UPS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1154,7 +1167,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.PUSH_UPS_PERFECT_DEVICE: {
         INHERITS_FROM: Exercise.PUSH_UPS,
@@ -1178,7 +1191,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.RES_LAT_PULLDOWN: {
         INHERITS_FROM: Exercise.LAT_PULLDOWN,
@@ -1210,7 +1223,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.SEATED_ROW_WIDE_NATURAL: {
         INHERITS_FROM: Exercise.SEATED_ROW,
@@ -1227,7 +1240,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.SIDE_LYING_EXTERNAL_ROTATION: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1246,7 +1259,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.SIDE_PLANK: {
         Field.COUNT_TYPE: CountType.SECONDS,
@@ -1267,7 +1280,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.SINGLE_ARM_FARMERS_CARRY: {
         Field.COUNT_TYPE: CountType.STEPS,
@@ -1294,7 +1307,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.SINGLE_LEG_LEG_CURL: {
         INHERITS_FROM: Exercise.LEG_CURL,
@@ -1324,7 +1337,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.SKULLCRUSHERS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1345,7 +1358,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.SQUATS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1367,7 +1380,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.SQUAT_WALKOUT: {
         INHERITS_FROM: Exercise.SQUATS,
@@ -1386,7 +1399,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.STRICT_PRESS: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1408,7 +1421,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.TRICEP_PUSHDOWN: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1428,7 +1441,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.TRICEP_PUSHDOWN_V_BAR: {
         INHERITS_FROM: Exercise.TRICEP_PUSHDOWN,
@@ -1442,7 +1455,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.UPWARD_CABLE_PEC_FLIES: {
         INHERITS_FROM: Exercise.MACH_PEC_FLIES,
@@ -1459,7 +1472,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.WIDE_GRIP_PULL_UP: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1484,7 +1497,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.WRIST_CURL: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1500,7 +1513,7 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.WRIST_EXTENSION: {
         Field.COUNT_TYPE: CountType.REPS,
@@ -1516,17 +1529,6 @@ EXERCISE_INFO = {
         Field.MUSCLES_WORKED: {
             None: None,
         },
-        Field.ANTAGONIST_MUSCLES: None,
+        Field.ANTAGONIST_MUSCLES: {None},
     },
 }
-
-# Populate the inheriting exercise infos on load
-# TODO chained inheritance would be nice. E.g. BICEP_CURL -> CONCENTRATION_CURL -> PREACHER_CURL
-#    Matters bc C_CURL + P_CURL would share muscle splits while all 3 share the rest of the data
-for info in EXERCISE_INFO.values():
-    if INHERITS_FROM in info:
-        parent_exercise_name = info[INHERITS_FROM]
-        parent_info = EXERCISE_INFO[parent_exercise_name]
-        for field in Field:
-            if field not in info:
-                info[field] = parent_info[field]
