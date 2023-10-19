@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
 from exercise_log.strength import SetRating, SetType
-from exercise_log.strength.ontology import EXERCISE_INFO, Field
+from exercise_log.strength.ontology import ExerciseInfo, Field
 from exercise_log.dataloader import ColumnName
 from exercise_log.constants import MIN_DAILY_ACTIVE_MINUTES
 from exercise_log.utils import convert_mins_to_hour_mins, convert_pd_to_np, get_padded_dates
@@ -213,7 +213,7 @@ def plot_strength_over_time(
         # TODO also filter out sets that are from a primary gym but *not* in the time period when it was primary
         sets = sets[
             sets[ColumnName.DATE].isin(filtered_workouts[ColumnName.DATE])
-            | ~sets[ColumnName.EXERCISE].apply(lambda exercise: EXERCISE_INFO[exercise][Field.REQUIRES_MACHINE])
+            | ~sets[ColumnName.EXERCISE].apply(lambda exercise: ExerciseInfo(exercise).requires_machine)
         ]
         sets = sets[sets[ColumnName.DATE].isin(filtered_workouts[ColumnName.DATE])]
 

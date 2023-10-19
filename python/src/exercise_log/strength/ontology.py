@@ -87,6 +87,7 @@ class ExerciseInfoMeta(type):
         return item in EXERCISE_INFO
 
 
+# TODO this should really be a parameterized singleton
 class ExerciseInfo(metaclass=ExerciseInfoMeta):
     """
     Stores metadata about an Exercise such as which muscles and muscle groups it works, which antagonist muscle is

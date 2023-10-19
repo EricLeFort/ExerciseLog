@@ -1,6 +1,7 @@
 # TODO
 
 ### Python
+* Make ExerciseInfo a parameterized singleton
 * Define local and global ideal strength ratios
 * Smooth out xRM logic
 * Define an expiration and/or uncertainty range that crops up when xRM's get several months old
