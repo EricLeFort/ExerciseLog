@@ -24,7 +24,7 @@ class Exercise(StrEnum):
     CALF_RAISE = "Calf Raise"
     CLEAN_AND_JERK = "Clean & Jerk"
     CLOSE_GRIP_LAT_PULLDOWN = "Close-Grip Lat Pulldown"
-    CONCENTRAION_CURL = "Concentration Curl"
+    CONCENTRATION_CURL = "Concentration Curl"
     DEADLIFT = "Deadlift"
     DEC_BENCH_PRESS = "Decline Bench Press"
     DEFICIT_PUSH_UPS = "Deficit Push-Ups"
