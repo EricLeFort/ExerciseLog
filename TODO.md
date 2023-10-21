@@ -1,6 +1,7 @@
 # TODO
 
 ### Python
+* Add dataloader support for dashes.csv, rate_of_climb.csv, and walk_backwards.csv
 * Make ExerciseInfo a parameterized singleton
 * Define local and global ideal strength ratios
 * Smooth out xRM logic
@@ -70,3 +71,4 @@
     * Detailed Training Frequency Info
         * Percentage + absolute volume/time of {weight training, calisthenics, cardio}
         * A drill-down on compound lifts, isolated lifts, muscle groups, cardio types
+    * Can the entire companion app functionality be hosted on something like an Apple Watch? Would be nice to remove the necessity of having a phone on hand
