@@ -10,6 +10,7 @@
 * Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
 * Populate Muscle in EXERCISE_INFO
 * Populate percentages of Muscle/MuscleGroup in EXERCISE_INFO
+* Work out and implement the fatigue factor logic
 * Ideal weekly volume inspiration: https://www.reddit.com/r/weightroom/comments/6674a4/dr_mike_israetels_training_tips_for_hypertrophy/
 
 ### Site

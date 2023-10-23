@@ -19,6 +19,7 @@ ROTATOR_CUFF_REP_RANGE = (10, 25)
 
 
 # Ideal strength ratios:
+# A gold mine: https://forums.t-nation.com/t/know-your-ratios-destroy-weaknesses/282078
 # Tricep:bicep
 #    * low range: maybe 3:4 (elbow injury study in baseball players pubmed.ncbi.nlm.nih.gov/20231742)
 #    * upper range: not known but let's assume the inverse, 4:3
@@ -46,6 +47,15 @@ ROTATOR_CUFF_REP_RANGE = (10, 25)
 #    * low range: 10:11?, not clear there is one but let's assume the inverse
 #    * upper range: 11:10?, more may lead to PFPS injuries (web.archive.org/web/20190308153356id_/http://pdfs.semanticscholar.org/f531/d7163d65c82a5301e505affe72c5c9ca8b7a.pdf)
 #    * ideal: 1:1
+#
+# TODO figure out something for the following unknowns:
+# Forearm (Grip) -- Doesn't seem like there's any accepted measurements
+#    * Some population averages and percentiles by age and gender: https://www.jospt.org/doi/epdf/10.2519/jospt.2018.7851
+#    * Nothing discussing injury risk though
+# ??? Shoulders vs. Chest
+# ??? Shoulders vs. 
+# ??? Glutes vs. Hamstrings/Quads
+# ??? Calf vs Hamstrings/Quads
 
 
 INHERITS_FROM = "Inherits From"
