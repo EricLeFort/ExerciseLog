@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+23-OCT-2023,run (treadmill),00:41:30,5.44,6286,0,165,176,"5km in 37:31"
 13-SEP-2023,run (outdoor),00:04:06,0.72,,0,165,181,"run to the convenience store on the way to earnscliffe rec center"
 06-SEP-2023,run (outdoor),00:06:22,0.93,970,4,171,183,"run from earnscliffe rec center back home"
 06-SEP-2023,run (outdoor),00:05:20,0.91,877,0,162,179,"run to earnscliffe rec center"
