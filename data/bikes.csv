@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),avg_resistance,max_resistance,avg_cadence(rpm),max_cadence(rpm),avg_wattage,max_wattage,max_speed(km/h),avg_heart_rate,max_heart_rate,notes
+22-OCT-2023,bike (stationary),00:15:00,8.72,0.50,0.60,84,123,214,493,48.1,167,192,""
 15-OCT-2023,bike (stationary),00:20:00,12.41,0.56,0.70,80,123,253,471,47.3,173,189,""
 13-OCT-2023,bike (stationary),00:20:00,10.78,0.47,0.55,81,106,175,388,44.1,167,184,"Internet was cutting out so the class kept pausing to buffer, really screwed up my pacing and possibly the recording of metrics as well; strap also fell off mid-ride and I had to stop to fix"
 09-OCT-2023,bike (stationary),00:15:00,8.93,0.50,0.61,88,132,227,504,48.4,156,178,""
