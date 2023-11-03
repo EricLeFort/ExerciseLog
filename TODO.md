@@ -1,7 +1,8 @@
 # TODO
 
 ### Python
-* Add dataloader support for dashes.csv, rate_of_climb.csv, and walk_backwards.csv
+* Add dataloader support for rows.csv, dashes.csv, rate_of_climb.csv, and walk_backwards.csv
+* Ensure rows are being counted in daily workout durations
 * Make ExerciseInfo a parameterized singleton
 * Define local and global ideal strength ratios
 * Smooth out xRM logic
@@ -15,6 +16,9 @@
 
 ### Site
 * Replicate Python graphing using js so that it can work dynamically (and so I can purge the graph .png's from the repo)
+
+### Database (removes the need to support any data analysis in JS, can also purge visualization support from Python and get clean separation)
+* Create one (performance doesn't matter but flexibility does)
 
 ### UI
 * Design Ideas:
