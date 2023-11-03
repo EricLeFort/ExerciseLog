@@ -1,0 +1,2 @@
+date,workout_type,duration(HH:mm:ss),distance(km),avg_cadence(spm),max_cadence(spm),avg_wattage,max_wattage,avg_heart_rate,max_heart_rate,notes
+02-NOV-2023,row (stationary),00:10:00,2.354,34,,171,,167,183,""
