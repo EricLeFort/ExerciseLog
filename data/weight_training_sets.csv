@@ -1,4 +1,45 @@
 date,exercise,reps,weight(lbs),rating
+01-NOV-2023,Cable Lying Hip Flexors,10,35,warm-up
+01-NOV-2023,Cable Lying Hip Flexors,12,50,good
+01-NOV-2023,Cable Lying Hip Flexors,12,50,good
+01-NOV-2023,Cable Lying Hip Flexors,12,50,good
+01-NOV-2023,Machine Hip Abductors,10,60,warm-up
+01-NOV-2023,Machine Hip Abductors,10,105,good
+01-NOV-2023,Machine Hip Abductors,10,105,good
+01-NOV-2023,Machine Hip Abductors,10,105,good
+01-NOV-2023,Machine Hip Adductors,10,60,warm-up
+01-NOV-2023,Machine Hip Adductors,8,105,good
+01-NOV-2023,Machine Hip Adductors,8,105,good
+01-NOV-2023,Machine Hip Adductors,8,105,good
+01-NOV-2023,Lawnmowers,10,70,good
+01-NOV-2023,Lawnmowers,10,70,good
+01-NOV-2023,Lawnmowers,10,70,good
+01-NOV-2023,Seated Row,10,137.5,good
+01-NOV-2023,Seated Row,10,137.5,good
+01-NOV-2023,Seated Row,10,137.5,good
+01-NOV-2023,Lat Pulldown,8,130,good
+01-NOV-2023,Pullovers,10,50,good
+01-NOV-2023,Pullovers,10,50,good
+01-NOV-2023,Pullovers,10,50,good
+01-NOV-2023,Wide-Grip Pull-Up,10,-100,good
+01-NOV-2023,Wide-Grip Pull-Up,10,-100,good
+01-NOV-2023,Wide-Grip Pull-Up,10,-100,good
+01-NOV-2023,Tricep Pushdown (V-Bar),10,80,warm-up
+01-NOV-2023,Tricep Pushdown (V-Bar),12,140,good
+01-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
+01-NOV-2023,Overhead Tricep Extension,5,20,warm-up
+01-NOV-2023,Overhead Tricep Extension,5,40,good
+01-NOV-2023,Overhead Tricep Extension,10,25,warm-up
+01-NOV-2023,Overhead Tricep Extension,10,35,good
+01-NOV-2023,Overhead Tricep Extension,10,35,good
+01-NOV-2023,Overhead Tricep Extension,10,35,good
+01-NOV-2023,Concentration Curl,12,25,good
+01-NOV-2023,Concentration Curl,12,25,good
+01-NOV-2023,Concentration Curl,12,25,good
+01-NOV-2023,Bicep Curl,15,20,warm-up
+01-NOV-2023,Bicep Curl,12,30,good
+01-NOV-2023,Bicep Curl,12,30,good
+01-NOV-2023,Bicep Curl,12,30,good
 30-OCT-2023,Lateral Lift,12,25,good
 30-OCT-2023,Lateral Lift,12,25,good
 30-OCT-2023,Lateral Lift,12,25,good
@@ -77,9 +118,9 @@ date,exercise,reps,weight(lbs),rating
 26-OCT-2023,Overhead Tricep Extension,10,35,good
 26-OCT-2023,Overhead Tricep Extension,5,40,good
 26-OCT-2023,Overhead Tricep Extension,10,35,good
-26-OCT-2023,Tricep Pushdown,10,140,good
-26-OCT-2023,Tricep Pushdown,12,140,good
-26-OCT-2023,Tricep Pushdown,12,140,good
+26-OCT-2023,Tricep Pushdown (V-Bar),10,140,good
+26-OCT-2023,Tricep Pushdown (V-Bar),12,140,good
+26-OCT-2023,Tricep Pushdown (V-Bar),12,140,good
 26-OCT-2023,Lawnmowers,10,70,good
 26-OCT-2023,Lawnmowers,10,70,good
 26-OCT-2023,Lawnmowers,10,70,good
@@ -347,10 +388,10 @@ date,exercise,reps,weight(lbs),rating
 08-OCT-2023,Overhead Tricep Extension,10,35,good
 08-OCT-2023,Overhead Tricep Extension,10,35,good
 08-OCT-2023,Overhead Tricep Extension,10,35,good
-08-OCT-2023,Tricep Pushdown,10,80,warm-up
-08-OCT-2023,Tricep Pushdown,10,130,good
-08-OCT-2023,Tricep Pushdown,10,130,good
-08-OCT-2023,Tricep Pushdown,10,130,good
+08-OCT-2023,Tricep Pushdown (V-Bar),10,80,warm-up
+08-OCT-2023,Tricep Pushdown (V-Bar),10,130,good
+08-OCT-2023,Tricep Pushdown (V-Bar),10,130,good
+08-OCT-2023,Tricep Pushdown (V-Bar),10,130,good
 08-OCT-2023,Lawnmowers,8,70,good
 08-OCT-2023,Lawnmowers,8,70,good
 08-OCT-2023,Lawnmowers,8,70,good
