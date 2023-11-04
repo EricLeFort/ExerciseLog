@@ -9,7 +9,8 @@ from exercise_log.utils import StrEnum, join_with_comma
 
 
 class ColumnName(StrEnum):
-    AVG_CADENCE = "avg_cadence(rpm)"
+    AVG_CADENCE_BIKE = "avg_cadence(rpm)"
+    AVG_CADENCE_ROW = "avg_cadence(spm)"
     AVG_HEART_RATE = "avg_heart_rate"
     AVG_RES = "avg_resistance"
     AVG_WATT = "avg_wattage"
@@ -20,7 +21,8 @@ class ColumnName(StrEnum):
     ELEVATION = "elevation(m)"
     EXERCISE = "exercise"
     LOCATION = "location"
-    MAX_CADENCE = "max_cadence(rpm)"
+    MAX_CADENCE_BIKE = "max_cadence(rpm)"
+    MAX_CADENCE_ROW = "max_cadence(spm)"
     MAX_HEART_RATE = "max_heart_rate"
     MAX_RES = "max_resistance"
     MAX_SPEED = "max_speed(km/h)"
@@ -161,7 +163,6 @@ class DataLoader:
         """
         return pd.concat([workout[CName.DATE] for workout in workouts])
 
-
     @staticmethod
     def load_health_metrics(root_data_dir: str):
         health_metrics = DataLoader._load_and_clean_data(f"{root_data_dir}/health_metrics.csv")
@@ -193,9 +194,23 @@ class DataLoader:
 
     @staticmethod
     def load_bike_workouts(root_data_dir: str):
-        workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/bikes.csv")
-        workouts[CName.AVG_CADENCE] = workouts[CName.AVG_CADENCE].astype('Int64')
-        workouts[CName.MAX_CADENCE] = workouts[CName.MAX_CADENCE].astype('Int64')
+        return DataLoader._load_spin_workouts(root_data_dir, "bikes.csv")
+
+    @staticmethod
+    def load_row_workouts(root_data_dir: str):
+        return DataLoader._load_spin_workouts(root_data_dir, "rows.csv")
+
+    @staticmethod
+    def _load_spin_workouts(root_data_dir: str, fname: str):
+        workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/{fname}")
+        if CName.AVG_CADENCE_BIKE in workouts:
+            avg_cadence = CName.AVG_CADENCE_BIKE
+            max_cadence = CName.MAX_CADENCE_BIKE
+        else:
+            avg_cadence = CName.AVG_CADENCE_ROW
+            max_cadence = CName.MAX_CADENCE_ROW
+        workouts[avg_cadence] = workouts[avg_cadence].astype('Int64')
+        workouts[max_cadence] = workouts[max_cadence].astype('Int64')
         workouts[CName.AVG_WATT] = workouts[CName.AVG_WATT].astype('Int64')
         workouts[CName.MAX_WATT] = workouts[CName.MAX_WATT].astype('Int64')
         return workouts

@@ -1,8 +1,7 @@
 # TODO
 
 ### Python
-* Add dataloader support for rows.csv, dashes.csv, rate_of_climb.csv, and walk_backwards.csv
-* Ensure rows are being counted in daily workout durations
+* Add dataloader support for dashes.csv, rate_of_climb.csv, and walk_backwards.csv
 * Make ExerciseInfo a parameterized singleton
 * Define local and global ideal strength ratios
 * Smooth out xRM logic
