@@ -1,0 +1,3 @@
+date,workout_type,duration(HH:mm:ss),flights_up,flights_down,pack_weight(lbs),avg_heart_rate,max_heart_rate,location,notes
+13-JUN-2023,stairs (indoor),00:03:06,0,22,0,120,127,Via 6 North Tower Stairs,""
+05-JUN-2023,stairs (indoor),00:17:26,36,36,27.3,150,175,Via 6 North Tower Stairs,""

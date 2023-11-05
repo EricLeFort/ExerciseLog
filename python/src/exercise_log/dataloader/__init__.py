@@ -2,6 +2,7 @@ from typing import List
 
 import csv
 import pandas as pd
+import numpy as np
 
 from exercise_log.constants import DATE as DATE_CONST
 from exercise_log.strength import Exercise
@@ -20,6 +21,8 @@ class ColumnName(StrEnum):
     DISTANCE = "distance(km)"
     ELEVATION = "elevation(m)"
     EXERCISE = "exercise"
+    FLIGHTS_DOWN = "flights_down"
+    FLIGHTS_UP = "flights_up"
     LOCATION = "location"
     MAX_CADENCE_BIKE = "max_cadence(rpm)"
     MAX_CADENCE_ROW = "max_cadence(spm)"
@@ -222,6 +225,14 @@ class DataLoader:
     @staticmethod
     def load_weight_training_sets(root_data_dir: str):
         return DataLoader._load_and_clean_data(f"{root_data_dir}/weight_training_sets.csv")
+
+    @staticmethod
+    def load_stair_workouts(root_data_dir: str):
+        workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/stairs.csv")
+        workouts[CName.FLIGHTS_UP] = workouts[CName.FLIGHTS_UP].astype('Int64')
+        workouts[CName.FLIGHTS_DOWN] = workouts[CName.FLIGHTS_DOWN].astype('Int64')
+        workouts[CName.DISTANCE] = np.nan  # Distance is unknown but I don't want to ruin merging of cardio workouts
+        return workouts
 
     @staticmethod
     def merge_cardio_workouts(workouts: List[pd.DataFrame]) -> pd.DataFrame:

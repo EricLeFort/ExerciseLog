@@ -40,9 +40,16 @@ def main():
     run_workouts = DataLoader.load_run_workouts(ROOT_DATA_DIR)
     bike_workouts = DataLoader.load_bike_workouts(ROOT_DATA_DIR)
     row_workouts = DataLoader.load_row_workouts(ROOT_DATA_DIR)
-    cardio_workouts = DataLoader.merge_cardio_workouts([walk_workouts, run_workouts, bike_workouts, row_workouts])
+    stair_workouts = DataLoader.load_stair_workouts(ROOT_DATA_DIR)
     weight_training_workouts = DataLoader.load_weight_training_workouts(ROOT_DATA_DIR)
     weight_training_sets = DataLoader.load_weight_training_sets(ROOT_DATA_DIR)
+    cardio_workouts = DataLoader.merge_cardio_workouts([
+        walk_workouts,
+        run_workouts,
+        bike_workouts,
+        row_workouts,
+        stair_workouts
+    ])
     all_workouts = DataLoader.load_all_workouts(cardio_workouts, weight_training_workouts, travel_days)
 
     # Fit relevant trendlines and plot data
