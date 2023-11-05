@@ -1,4 +1,6 @@
 date,workout_type,duration(HH:mm:ss),distance(km),avg_resistance,max_resistance,avg_cadence(rpm),max_cadence(rpm),avg_wattage,max_wattage,max_speed(km/h),avg_heart_rate,max_heart_rate,notes
+04-NOV-2023,bike (stationary),00:20:00,11.88,0.52,0.67,82,125,224,637,52.6,160,187,""
+04-NOV-2023,bike (stationary),00:30:00,17.01,0.48,0.62,86,134,200,585,51.0,159,180,"2 brief stops; once to pick up water bottle, another to adjust seat (which slips down during the ride)"
 02-NOV-2023,bike (stationary),00:20:00,11.70,0.51,0.60,83,106,216,471,47.3,166,179,""
 29-OCT-2023,bike (stationary),00:20:00,12.42,0.55,0.71,82,121,254,597,51.5,174,188,""
 22-OCT-2023,bike (stationary),00:15:00,8.72,0.50,0.60,84,123,214,493,48.1,167,192,""
