@@ -1,4 +1,36 @@
 date,exercise,reps,weight(lbs),rating
+05-NOV-2023,Jumping Jacks,50,20,good
+05-NOV-2023,Machine Bench Press,12,245,good
+05-NOV-2023,Lateral Lift,12,25,good
+05-NOV-2023,Lateral Lift,12,25,good
+05-NOV-2023,Lateral Lift,12,25,good
+05-NOV-2023,Military Press,10,100,warm-up
+05-NOV-2023,Military Press,10,190,good
+05-NOV-2023,Military Press,10,190,good
+05-NOV-2023,Military Press,10,190,good
+05-NOV-2023,Strict Press,10,95,warm-up
+05-NOV-2023,Arnold Press,10,55,good
+05-NOV-2023,Arnold Press,10,55,good
+05-NOV-2023,Arnold Press,10,55,good
+05-NOV-2023,Full Cans,20,10,good
+05-NOV-2023,Full Cans,20,10,good
+05-NOV-2023,Full Cans,20,10,good
+05-NOV-2023,Delt Flies,10,60,warm-up
+05-NOV-2023,Delt Flies,10,110,good
+05-NOV-2023,Delt Flies,10,110,good
+05-NOV-2023,Delt Flies,10,110,good
+05-NOV-2023,Barbell Lunges,10,105,good
+05-NOV-2023,Barbell Lunges,10,105,good
+05-NOV-2023,Barbell Lunges,10,110,good
+05-NOV-2023,Barbell Lunges,10,95,good
+05-NOV-2023,Single-Leg Leg Curl,10,80,warm-up
+05-NOV-2023,Single-Leg Leg Curl,10,125,good
+05-NOV-2023,Single-Leg Leg Curl,10,125,good
+05-NOV-2023,Single-Leg Leg Curl,10,125,good
+05-NOV-2023,Single-Leg Leg Extension,10,80,warm-up
+05-NOV-2023,Single-Leg Leg Extension,10,125,good
+05-NOV-2023,Single-Leg Leg Extension,10,125,good
+05-NOV-2023,Single-Leg Leg Extension,10,125,good
 03-NOV-2023,Bench Press,10,135,warm-up
 03-NOV-2023,Bench Press,5,225,good
 03-NOV-2023,Bench Press,5,235,good
