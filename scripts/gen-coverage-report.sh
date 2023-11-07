@@ -1,14 +1,12 @@
-#!/bin/bash                                                                                                                                                                                                                                                
-set -e                                                                                                                                                                                                                                                     
-                                                                                                                                                                                                                                                           
-THIS_SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )                                                                                                                                                                       
-                                                                                                                                                                                                                                                           
-# Move to the test directory and start the test                                                                                                                                                                                                            
-cd "${THIS_SCRIPT_DIR}/../python/src"                                                                                                                                                                                                                      
-export PYTHONPATH=$(pwd)                                                                                                                                                                                                                                   
-cd ../test                                                                                                                                                                                                                                                 
+#!/bin/bash
+set -e
+
+THIS_SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+# Move to the src directory and start the test
+cd "${THIS_SCRIPT_DIR}/../python/src"
 coverage run \
-  --source $PYTHONPATH \
+  --source . \
   --branch \
   -m unittest -v
 coverage report --show-missing
