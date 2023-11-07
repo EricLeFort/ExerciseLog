@@ -11,4 +11,4 @@ coverage run \
   --source $PYTHONPATH \
   --branch \
   -m unittest -v
-coverage report
+coverage report --show-missing
