@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+07-NOV-2023,walk (treadmill),00:10:00,0.90,1108,44,0,132,139,"pre-workout"
 06-NOV-2023,walk (treadmill),01:05:31,5.68,6847,402,0,152,167,""
 02-NOV-2023,walk (treadmill),00:41:00,3.55,4304,245,0,149,157,"Still healing from blisters, had to go slower and end earlier than I wanted"
 31-OCT-2023,walk (treadmill),01:11:00,6.22,7443,436,0,152,178,""
