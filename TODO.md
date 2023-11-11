@@ -48,6 +48,7 @@
         * Cardio Health: 2-week average resting heart rate, V02 Max
         * Major strength metrics: 1RM of the big three + strict press
         * Single total strength imbalance score (0 is perfect, +inf is the upper bound)
+        * Track exercises that count seconds or steps differently than those that count reps (e.g. plank)
         * Push/pull/legs-level aggregate imbalance scores
         * Absolute strength score + bodyweight-relative strength score
         * Highlight-able weaknesses (e.g. any significant outliers such as "weak triceps")
@@ -59,6 +60,7 @@
         * Swimming: 400m freestyle time?, 1000m freestyle time?
     * Weight training overview will include:
         * Include major strength metrics here as well for convenience?
+        * Muscular endurance (AMRAP pushups, pullups, walking lunges with 100lbs, deadlift with 135lbs, bicep curls with 20lbs, strict press with 100lbs)
         * Compound vs isolated lift ratios for each muscle group (highlight ones with particularly low isolated frequencies? and recommend specific exercises to program in?)
         * Minor strength metrics organized by muscle group:
             * Chest: incline dumbbell press

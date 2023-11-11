@@ -22,6 +22,7 @@ class Exercise(StrEnum):
     CABLE_LYING_HIP_FLEXORS = "Cable Lying Hip Flexors"
     CABLE_PEC_FLIES = "Cable Pec Flies"
     CALF_RAISE = "Calf Raise"
+    CHIN_UP = "Chin-Up"
     CLEAN_AND_JERK = "Clean & Jerk"
     CLOSE_GRIP_LAT_PULLDOWN = "Close-Grip Lat Pulldown"
     CONCENTRATION_CURL = "Concentration Curl"
