@@ -20,7 +20,7 @@ class TestOntology(unittest.TestCase):
         self.assertEqual(
             len(Exercise),
             len(ExerciseInfo),
-            "There are {} Exercises but {} ExerciseInfos, these should be equal",
+            f"There are {len(Exercise)} Exercises but {len(ExerciseInfo)} ExerciseInfos, these should be equal",
         )
         for exercise in Exercise:
             self.assertIn(exercise, ExerciseInfo, f'Exercise "{exercise}" doesn\'t have a corresponding ExerciseInfo')
