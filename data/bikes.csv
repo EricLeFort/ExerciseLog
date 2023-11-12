@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),avg_resistance,max_resistance,avg_cadence(rpm),max_cadence(rpm),avg_wattage,max_wattage,max_speed(km/h),avg_heart_rate,max_heart_rate,notes
+11-NOV-2023,bike (stationary),00:20:00,12.01,0.51,0.67,85,114,233,597,51.5,171,186,""
 09-NOV-2023,bike (stationary),00:30:00,17.14,0.50,0.67,83,113,203,420,45.4,171,186,"did a short run before"
 07-NOV-2023,bike (stationary),00:10:00,6.02,0.54,0.66,81,126,245,501,48.3,176,184,"post workout"
 04-NOV-2023,bike (stationary),00:20:00,11.88,0.52,0.67,82,125,224,637,52.6,160,187,""
