@@ -50,7 +50,7 @@ class Trendsetter:
     @staticmethod
     def compute_n_sample_avg(data: pd.DataFrame, field: str, n_days_to_avg: int) -> np.ndarray:
         """Compute an average over the most recent N samples"""
-        return uniform_filter1d(data[field], size=n_days_to_avg)
+        return uniform_filter1d(data[field].astype("float64"), size=n_days_to_avg)
 
     @staticmethod
     def fit_linear(df: pd.DataFrame, field: str) -> np.ndarray:

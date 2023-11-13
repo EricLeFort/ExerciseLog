@@ -23,6 +23,7 @@ class ColumnName(StrEnum):
     EXERCISE = "exercise"
     FLIGHTS_DOWN = "flights_down"
     FLIGHTS_UP = "flights_up"
+    GRADE = "grade(%)"
     LOCATION = "location"
     MAX_CADENCE_BIKE = "max_cadence(rpm)"
     MAX_CADENCE_ROW = "max_cadence(spm)"
@@ -36,6 +37,7 @@ class ColumnName(StrEnum):
     RATING = "rating"
     REPS = "reps"
     RESTING_HEART_RATE = "resting_heart_rate(bpm)"
+    SPEED = "speed(km/h)"
     STEPS = "steps"
     STEP_SIZE = "avg step size (m)"
     WEIGHT = "weight(lbs)"
@@ -44,6 +46,9 @@ class ColumnName(StrEnum):
 
 # This is just for convenience since ColumnName is a long string
 CName = ColumnName
+
+
+LONG = "Int64"
 
 
 class DataLoader:
@@ -59,7 +64,10 @@ class DataLoader:
         df = df.sort_values(CName.DATE, ignore_index=True)
         if CName.DATA_DURATION in df:
             df[CName.DATA_DURATION] = pd.to_timedelta(df[CName.DATA_DURATION])
-            df[CName.DATA_DURATION] = df[CName.DATA_DURATION].apply(lambda x: int(x.total_seconds()))
+            df[CName.DATA_DURATION] = df[CName.DATA_DURATION].apply(
+                lambda x: np.nan if pd.isnull(x) else x.total_seconds()
+            )
+            df[CName.DATA_DURATION] = df[CName.DATA_DURATION].astype(LONG)
             df.rename(columns={CName.DATA_DURATION: CName.DURATION}, inplace=True)
         if CName.NOTES in df:
             df[CName.NOTES] = df[CName.NOTES].fillna("")
@@ -152,8 +160,8 @@ class DataLoader:
     @staticmethod
     def _clean_cardio_workout(fname: str):
         workouts = DataLoader._load_and_clean_data(fname)
-        workouts[CName.AVG_HEART_RATE] = workouts[CName.AVG_HEART_RATE].astype('Int64')
-        workouts[CName.MAX_HEART_RATE] = workouts[CName.MAX_HEART_RATE].astype('Int64')
+        workouts[CName.AVG_HEART_RATE] = workouts[CName.AVG_HEART_RATE].astype(LONG)
+        workouts[CName.MAX_HEART_RATE] = workouts[CName.MAX_HEART_RATE].astype(LONG)
         return workouts
 
     @staticmethod
@@ -192,7 +200,7 @@ class DataLoader:
     @staticmethod
     def _load_foot_workouts(root_data_dir: str, fname: str):
         workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/{fname}")
-        workouts[CName.STEPS] = workouts[CName.STEPS].astype('Int64')
+        workouts[CName.STEPS] = workouts[CName.STEPS].astype(LONG)
         return workouts
 
     @staticmethod
@@ -212,10 +220,10 @@ class DataLoader:
         else:
             avg_cadence = CName.AVG_CADENCE_ROW
             max_cadence = CName.MAX_CADENCE_ROW
-        workouts[avg_cadence] = workouts[avg_cadence].astype('Int64')
-        workouts[max_cadence] = workouts[max_cadence].astype('Int64')
-        workouts[CName.AVG_WATT] = workouts[CName.AVG_WATT].astype('Int64')
-        workouts[CName.MAX_WATT] = workouts[CName.MAX_WATT].astype('Int64')
+        workouts[avg_cadence] = workouts[avg_cadence].astype(LONG)
+        workouts[max_cadence] = workouts[max_cadence].astype(LONG)
+        workouts[CName.AVG_WATT] = workouts[CName.AVG_WATT].astype(LONG)
+        workouts[CName.MAX_WATT] = workouts[CName.MAX_WATT].astype(LONG)
         return workouts
 
     @staticmethod
@@ -233,6 +241,10 @@ class DataLoader:
         workouts[CName.FLIGHTS_DOWN] = workouts[CName.FLIGHTS_DOWN].astype('Int64')
         workouts[CName.DISTANCE] = np.nan  # Distance is unknown but I don't want to ruin merging of cardio workouts
         return workouts
+
+    @staticmethod
+    def load_dashes(root_data_dir: str):
+        return DataLoader._load_and_clean_data(f"{root_data_dir}/dashes.csv")
 
     @staticmethod
     def merge_cardio_workouts(workouts: List[pd.DataFrame]) -> pd.DataFrame:
@@ -286,7 +298,7 @@ class DataLoader:
             # Convert m/s to m/h
             cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.ELEVATION] / cardio_workouts[CName.DURATION]
             cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.RATE_OF_CLIMB] * (60 * 60)
-            cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.RATE_OF_CLIMB].round(0).astype('Int64')
+            cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.RATE_OF_CLIMB].round(0).astype(LONG)
         if CName.STEPS in cardio_workouts:      # Skip this metric for workouts like biking where steps aren't tracked
             # Convert km to m
             cardio_workouts[CName.STEP_SIZE] = cardio_workouts[CName.DISTANCE] / cardio_workouts[CName.STEPS]
