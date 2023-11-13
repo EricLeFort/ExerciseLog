@@ -1,7 +1,6 @@
 # TODO
 
 ### Python
-* Add dataloader support for rate_of_climb.csv, and walk_backwards.csv
 * Make ExerciseInfo a parameterized singleton
 * Define local and global ideal strength ratios
 * Smooth out xRM logic

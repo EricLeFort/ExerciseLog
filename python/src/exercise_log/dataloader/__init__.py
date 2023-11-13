@@ -247,6 +247,14 @@ class DataLoader:
         return DataLoader._load_and_clean_data(f"{root_data_dir}/dashes.csv")
 
     @staticmethod
+    def load_rate_of_climb(root_data_dir: str):
+        return DataLoader._load_and_clean_data(f"{root_data_dir}/rate_of_climb.csv")
+
+    @staticmethod
+    def load_walk_backwards(root_data_dir: str):
+        return DataLoader._load_and_clean_data(f"{root_data_dir}/walk_backwards.csv")
+
+    @staticmethod
     def merge_cardio_workouts(workouts: List[pd.DataFrame]) -> pd.DataFrame:
         all_dates = DataLoader._get_all_dates(workouts)
         cardio_workouts = pd.concat(workouts, join="inner")  # Use inner so we only preserve the common fields
@@ -292,8 +300,9 @@ class DataLoader:
             cardio_workouts (pd.DataFrame): The cardio workouts dataframe to add the columns to
         """
         # Convert km/s to m/s
-        cardio_workouts[CName.PACE] = cardio_workouts[CName.DISTANCE] / cardio_workouts[CName.DURATION]
-        cardio_workouts[CName.PACE] = (cardio_workouts[CName.PACE] * 1000).round(2)
+        if CName.DISTANCE in cardio_workouts and CName.DURATION in cardio_workouts:
+            cardio_workouts[CName.PACE] = cardio_workouts[CName.DISTANCE] / cardio_workouts[CName.DURATION]
+            cardio_workouts[CName.PACE] = (cardio_workouts[CName.PACE] * 1000).round(2)
         if CName.ELEVATION in cardio_workouts:  # Skip this metric for workouts where elevation isn't tracked
             # Convert m/s to m/h
             cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.ELEVATION] / cardio_workouts[CName.DURATION]
