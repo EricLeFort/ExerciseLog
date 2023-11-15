@@ -4,3 +4,5 @@
 python/notebook/.ipynb_checkpoints/
 
 python/src/.coverage
+
+pyenv/
