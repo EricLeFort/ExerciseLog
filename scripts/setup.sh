@@ -3,7 +3,7 @@ git config core.hooksPath .githooks
 
 # Perform some universal python basics
 python3 -m pip install --upgrade pip
-pip3 install virtualenv
+pip3 install virtualenv isort
 
 # Setup a virtual environment for this project
 VENV_NAME=pyenv

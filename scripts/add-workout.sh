@@ -3,6 +3,7 @@ set -e
 
 DATE_FORMAT=[0-9]{2}-[A-Z]{3}-[0-9]{4}
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+VENV_NAME=pyenv
 
 # Read in args
 dryrun=false
@@ -42,8 +43,10 @@ then
 fi
 
 # Update visuals
+source ${VENV_NAME}/bin/activate
 export PYTHONPATH="${SCRIPT_DIR}/../python/src/"
 python3 "${SCRIPT_DIR}/../python/src/exercise_log/update_visuals.py"
+deactivate
 
 # Add the new commit
 if [ ${dryrun} = false ]
