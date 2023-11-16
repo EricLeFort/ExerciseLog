@@ -30,3 +30,8 @@ Tests should automatically run as a pre-commit hook that gets setup as part of t
 ```
 ./scripts/run-tests.sh
 ```
+
+or using `gen-coverage-report.sh` to get test coverage information.
+```
+./scripts/gen-coverage-report.sh
+```
