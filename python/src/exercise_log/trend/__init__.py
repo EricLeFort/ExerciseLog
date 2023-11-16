@@ -1,15 +1,13 @@
 from dataclasses import dataclass
 from datetime import date
+from typing import Callable
 
 import numpy as np
 import pandas as pd
-
-from scipy.optimize import curve_fit
 from scipy.ndimage import uniform_filter1d
-from typing import Callable
+from scipy.optimize import curve_fit
 
 from exercise_log.dataloader import ColumnName
-
 
 EXTRAPOLATE_DAYS = 100
 MIN_DAILY_ACTIVE_MINUTES = 22.5  # Weekly is 150, this is about 150/7

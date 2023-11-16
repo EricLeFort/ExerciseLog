@@ -1,8 +1,8 @@
+import csv
 from typing import List
 
-import csv
-import pandas as pd
 import numpy as np
+import pandas as pd
 
 from exercise_log.constants import DATE as DATE_CONST
 from exercise_log.strength import Exercise

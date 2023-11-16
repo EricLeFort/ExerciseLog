@@ -1,8 +1,7 @@
 from enum import Enum
 from typing import Dict, List, Optional
 
-from exercise_log.strength import SetRating
-from exercise_log.strength import Exercise
+from exercise_log.strength import Exercise, SetRating
 from exercise_log.strength.anatomy import MuscleGroup
 from exercise_log.strength.ontology import ExerciseInfo
 

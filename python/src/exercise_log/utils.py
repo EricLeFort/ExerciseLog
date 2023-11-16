@@ -1,5 +1,4 @@
 import os
-
 from enum import Enum, EnumMeta
 from typing import Any, List, Optional
 
@@ -8,7 +7,6 @@ import pandas as pd
 from pandas.core.generic import NDFrame  # This is the generic type that encompasses Series and DataFrame
 
 from exercise_log.constants import DATE, number
-
 
 UTF8 = "utf-8"
 NEWLINE = "\n"

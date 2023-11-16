@@ -1,0 +1,4 @@
+[tool.isort]
+profile = "black"
+src_paths = ["python/src", "python/test"]
+line_length = 120

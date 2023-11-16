@@ -1,9 +1,7 @@
-from exercise_log.strength import CountType, ExerciseType, TensileFocus
-from exercise_log.strength.anatomy import MuscleGroup, Muscle
+from exercise_log.strength import CountType, Exercise, ExerciseType, TensileFocus
+from exercise_log.strength.anatomy import Muscle, MuscleGroup
 from exercise_log.strength.constants import INHERITS_FROM
-from exercise_log.strength import Exercise
 from exercise_log.utils import StrEnum
-
 
 # Rep ranges for various common groups of exercise type
 NERVOUS_SYSTEM_WEIGHTING = (1, 1)

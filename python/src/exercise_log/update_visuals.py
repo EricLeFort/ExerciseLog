@@ -2,7 +2,7 @@ from datetime import date
 
 import numpy as np
 
-from exercise_log.dataloader import DataLoader, ColumnName
+from exercise_log.dataloader import ColumnName, DataLoader
 from exercise_log.strength import Exercise
 from exercise_log.trend import Trendsetter
 from exercise_log.utils import TermColour

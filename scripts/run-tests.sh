@@ -4,8 +4,14 @@ set -e
 VENV_NAME=pyenv
 THIS_SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-# Move to the test directory and start the test
+# Run linters/formatters
 source ${VENV_NAME}/bin/activate
+isort --check --diff python/
+# TODO black
+# TODO pylint
+# TODO flake8
+
+# Move to the test directory and start the test
 cd "${THIS_SCRIPT_DIR}/../python/src"
 export PYTHONPATH=$(pwd)
 cd ../test

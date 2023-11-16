@@ -1,17 +1,17 @@
 from datetime import date
 from typing import Dict, Optional, Tuple
 
-import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
+import numpy as np
+import pandas as pd
 
+from exercise_log.constants import MIN_DAILY_ACTIVE_MINUTES
+from exercise_log.dataloader import ColumnName
 from exercise_log.strength import SetRating, SetType
 from exercise_log.strength.ontology import ExerciseInfo, Field
-from exercise_log.dataloader import ColumnName
-from exercise_log.constants import MIN_DAILY_ACTIVE_MINUTES
 from exercise_log.utils import convert_mins_to_hour_mins, convert_pd_to_np, get_padded_dates
-from exercise_log.vis.constants import BOTTOM_OFFSET, RIGHT_OF_AXIS_X_COORD, NON_GRAPH_AREA_SCALER
+from exercise_log.vis.constants import BOTTOM_OFFSET, NON_GRAPH_AREA_SCALER, RIGHT_OF_AXIS_X_COORD
 from exercise_log.vis.utils import configure_x_axis_by_month, create_legend_and_title
 
 

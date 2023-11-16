@@ -1,11 +1,12 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
-
 from datetime import timedelta
+
+import matplotlib.dates as mdates
+import matplotlib.pyplot as plt
+import pandas as pd
 
 from exercise_log.constants import DATE
 from exercise_log.vis.constants import ABOVE_TABLE
+
 
 def show_gcf_corners(plot: plt):
     """Shows the corners of the current plot by displaying x's"""

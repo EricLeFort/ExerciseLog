@@ -1,12 +1,12 @@
-import pandas as pd
 import unittest
-
 from datetime import date, datetime, timedelta
 from random import randint, uniform
 from typing import Callable, List, Tuple
 
-from exercise_log.trend import BikeCardioSummary, ExerciseSummary, FootCardioSummary, WeightTrainingSummary
+import pandas as pd
+
 from exercise_log.dataloader import ColumnName as CName
+from exercise_log.trend import BikeCardioSummary, ExerciseSummary, FootCardioSummary, WeightTrainingSummary
 
 
 def _test_four_scenarios(

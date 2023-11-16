@@ -1,7 +1,8 @@
 import unittest
 
 from exercise_log.strength import Exercise
-from exercise_log.strength.ontology import ExerciseInfo, Field, EXERCISE_INFO
+from exercise_log.strength.ontology import EXERCISE_INFO, ExerciseInfo, Field
+
 
 class TestOntology(unittest.TestCase):
     def test_exercise_info_is_complete(self):
