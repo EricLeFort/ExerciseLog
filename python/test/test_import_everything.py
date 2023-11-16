@@ -22,7 +22,7 @@ def get_files_in_path(path: str) -> List[str]:
 
 
 def get_python_files_in_path(path: str) -> List[str]:
-    return [f[len(path):] for f in get_files_in_path(path) if f.endswith(PY_EXT)]
+    return [f[len(path) :] for f in get_files_in_path(path) if f.endswith(PY_EXT)]
 
 
 class TestPackage(unittest.TestCase):
@@ -30,7 +30,7 @@ class TestPackage(unittest.TestCase):
         """Simply import every python module under src and verify there's no errors."""
         files = get_python_files_in_path(MODULE_PATH)
         # Strip the ".py" and convert from file paths to python paths
-        modules = [f[:-len(PY_EXT)].replace(SEP, MOD_SEP) for f in files]
+        modules = [f[: -len(PY_EXT)].replace(SEP, MOD_SEP) for f in files]
         # Get rid of the ".__init__" portions
-        modules = [module[:-len(INIT) - 1] if module.endswith(INIT) else module for module in modules]
+        modules = [module[: -len(INIT) - 1] if module.endswith(INIT) else module for module in modules]
         [import_module(module) for module in modules]

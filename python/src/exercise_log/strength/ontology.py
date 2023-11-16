@@ -51,7 +51,7 @@ ROTATOR_CUFF_REP_RANGE = (10, 25)
 #    * Some population averages and percentiles by age and gender: https://www.jospt.org/doi/epdf/10.2519/jospt.2018.7851
 #    * Nothing discussing injury risk though
 # ??? Shoulders vs. Chest
-# ??? Shoulders vs. 
+# ??? Shoulders vs.
 # ??? Glutes vs. Hamstrings/Quads
 # ??? Calf vs Hamstrings/Quads
 
@@ -75,6 +75,7 @@ class Field(StrEnum):
     MUSCLES_WORKED - A dict from the muscles worked to a % activation of that muscle.
     ANTAGONIST_MUSCLES - A set the antagonist muscles for the movement. Useful for root causing instability issues.
     """
+
     ANTAGONIST_MUSCLES = "Antagonist Muscles"
     COUNT_TYPE = "Count Type"
     EXERCISE_TYPE = "Excercise Type"
@@ -103,6 +104,7 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
 
     Supports inheritance amongst data in related exercises. E.g. CONCENTRATION_CURL -> PREACHER_CURL -> BICEP_CURL
     """
+
     def __init__(self, exercise: Exercise):
         """
         Initializes an ExerciseInfo by looking up the relevant data for the given Exercise.
@@ -120,7 +122,6 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
         self.antagonist_muscles = ExerciseInfo._get_field(exercise, Field.ANTAGONIST_MUSCLES)
 
         self._fatigue_factor = None
-
 
     @staticmethod
     def _get_field(exercise: str, field: Field):
@@ -140,7 +141,6 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
 
         return ExerciseInfo._get_field(info[INHERITS_FROM], field)
 
-
     def get_fatigue_factor(self):
         if self._fatigue_factor is not None:
             return self._fatigue_factor
@@ -155,11 +155,11 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
 
 
 # TODO: come back later and fill in:
-#.        * set of strings of antagonist muscles for each exercise
+#         * set of strings of antagonist muscles for each exercise
 #         * percentages for muscles/groups worked (should be as a percentage of that muscle's effort)
 # TODO: add info about the capacity of a muscle/muscle group (e.g. biceps/triceps can handle more volume than quads)
 
-#This is a large data field containing metadata about the various exercises logged in this repo.
+# This is a large data field containing metadata about the various exercises logged in this repo.
 EXERCISE_INFO = {
     Exercise.FIFTH_POINT_OF_FLIGHT: {
         Field.COUNT_TYPE: CountType.SECONDS,

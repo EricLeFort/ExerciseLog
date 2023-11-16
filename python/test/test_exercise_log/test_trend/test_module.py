@@ -16,7 +16,7 @@ def _test_four_scenarios(
 ):
     num_entries = randint(5, 20)
     num_exclude = randint(1, num_entries // 2 - 1)
-    start, end = 0, num_entries -1
+    start, end = 0, num_entries - 1
     data = f_gen_data(num_entries)
 
     # Scenario 1: include all dates
@@ -59,7 +59,7 @@ def _init_dataframe(num_entries: int) -> pd.DataFrame:
 
 def _assert_foot_cardio_summary(tester: unittest.TestCase, data: pd.DataFrame, idx_range: Tuple[date, date]):
     first_idx, last_idx = idx_range
-    filtered_data = data.iloc[first_idx:last_idx+1]
+    filtered_data = data.iloc[first_idx : last_idx + 1]
     total_dist = round(sum(filtered_data[CName.DISTANCE]), 1)
     total_elevation = sum(filtered_data[CName.ELEVATION])
     expected_str = f"Moving my body by foot across {total_dist} km and up {total_elevation} m."
@@ -68,7 +68,7 @@ def _assert_foot_cardio_summary(tester: unittest.TestCase, data: pd.DataFrame, i
 
 def _assert_bike_cardio_summary(tester: unittest.TestCase, data: pd.DataFrame, idx_range: Tuple[date, date]):
     first_idx, last_idx = idx_range
-    filtered_data = data.iloc[first_idx:last_idx+1]
+    filtered_data = data.iloc[first_idx : last_idx + 1]
     total_dist = round(filtered_data[CName.DISTANCE].sum(), 1)
     total_output = round((filtered_data[CName.DURATION] * filtered_data[CName.AVG_WATT] / 1000).sum())
     expected_str = f"Biking across {total_dist} km with a total output of {total_output} KJ."
@@ -77,7 +77,7 @@ def _assert_bike_cardio_summary(tester: unittest.TestCase, data: pd.DataFrame, i
 
 def _assert_weight_training_summary(tester: unittest.TestCase, data: pd.DataFrame, idx_range: Tuple[date, date]):
     first_idx, last_idx = idx_range
-    filtered_data = data.iloc[first_idx:last_idx+1]
+    filtered_data = data.iloc[first_idx : last_idx + 1]
     weight_moved = int((filtered_data[CName.REPS] * filtered_data[CName.WEIGHT]).sum())
     set_count = filtered_data.shape[0]
     rep_count = filtered_data[CName.REPS].sum()
@@ -90,7 +90,7 @@ def _assert_summary(
     data: pd.DataFrame,
     summary_builder: Callable[[pd.DataFrame, date, date], ExerciseSummary],
     idx_range: Tuple[int, int],
-    expected_str: str
+    expected_str: str,
 ):
     first_idx, last_idx = idx_range
     date_range = [data.iloc[first_idx][CName.DATE], data.iloc[last_idx][CName.DATE]]

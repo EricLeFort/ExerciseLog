@@ -41,7 +41,7 @@ def plot_workout_frequency(
     )
 
     # Delineate the ideal minimum daily exercise threshold as a horizontal reference line
-    plt.axhline(y=MIN_DAILY_ACTIVE_MINUTES, color='r', linestyle='-')
+    plt.axhline(y=MIN_DAILY_ACTIVE_MINUTES, color="r", linestyle="-")
     y_percent_min_daily_active = (MIN_DAILY_ACTIVE_MINUTES / Y_MAX) - WORKOUT_FREQUENCY_BOTTOM_OFFSET
     y_pos = y_percent_min_daily_active + NON_GRAPH_GCF_PERCENT
     plt.gcf().text(RIGHT_OF_AXIS_X_COORD, y_pos, "Target\nMinimum")
@@ -67,6 +67,7 @@ def plot_workout_frequency(
         plt.show()
     plt.clf()
 
+
 def plot_resting_heart_rate(
     all_workouts: pd.DataFrame,
     health_metrics: pd.DataFrame,
@@ -83,13 +84,13 @@ def plot_resting_heart_rate(
         nonnull_heart_rates[ColumnName.DATE].to_numpy(),
         nonnull_heart_rates[ColumnName.RESTING_HEART_RATE].to_numpy(),
         s=5,
-        label="Resting HR"
+        label="Resting HR",
     )
     plt.plot(
         padded_dates.to_numpy(),
         heart_rate_trendline,
         linestyle="--",
-        label="Projected Resting HR"
+        label="Projected Resting HR",
     )
 
     # Delineate various resting heart rate levels as horizontal reference lines
@@ -102,9 +103,9 @@ def plot_resting_heart_rate(
         "Athlete": 50,
     }
     for text, hr in resting_heart_rate_levels.items():
-        plt.axhline(y=hr, color='k', linestyle='--', linewidth="0.75")
+        plt.axhline(y=hr, color="k", linestyle="--", linewidth="0.75")
         y_range = Y_MAX - Y_MIN
-        y_pos = BOTTOM_OFFSET + (hr - Y_MIN) / (NON_GRAPH_AREA_SCALER*y_range)
+        y_pos = BOTTOM_OFFSET + (hr - Y_MIN) / (NON_GRAPH_AREA_SCALER * y_range)
         plt.gcf().text(RIGHT_OF_AXIS_X_COORD, y_pos, text)
 
     # Set up axes
@@ -144,13 +145,13 @@ def plot_weight(
         nonnull_weights[ColumnName.DATE].to_numpy(),
         nonnull_weights[ColumnName.WEIGHT].to_numpy(),
         s=5,
-        label="Weight"
+        label="Weight",
     )
     plt.plot(
         padded_dates.to_numpy(),
         weight_trendline,
         linestyle="--",
-        label="Projected Weight"
+        label="Projected Weight",
     )
 
     # Delineate various resting heart rate levels as horizontal reference lines
@@ -159,9 +160,9 @@ def plot_weight(
         "Target": 200,
     }
     for text, weight in weight_levels.items():
-        plt.axhline(y=weight, color='k', linestyle='--', linewidth="0.75")
+        plt.axhline(y=weight, color="k", linestyle="--", linewidth="0.75")
         y_range = Y_MAX - Y_MIN
-        y_pos = BOTTOM_OFFSET + (weight - Y_MIN) / (NON_GRAPH_AREA_SCALER*y_range)
+        y_pos = BOTTOM_OFFSET + (weight - Y_MIN) / (NON_GRAPH_AREA_SCALER * y_range)
         plt.gcf().text(RIGHT_OF_AXIS_X_COORD, y_pos, text)
 
     # Set up axes
@@ -185,7 +186,6 @@ def plot_weight(
     plt.clf()
 
 
-
 def plot_strength_over_time(
     workouts: pd.DataFrame,
     weight_training_sets: pd.DataFrame,
@@ -198,8 +198,9 @@ def plot_strength_over_time(
     single_exercise = weight_training_sets[weight_training_sets[ColumnName.EXERCISE] == exercise]
     for set_type in SetType:
         rep_range = set_type.get_rep_range()
-        sets = single_exercise[(rep_range[0] <= single_exercise[ColumnName.REPS]) \
-          & (single_exercise[ColumnName.REPS] <= rep_range[1])]
+        sets = single_exercise[
+            rep_range[0] <= single_exercise[ColumnName.REPS] & single_exercise[ColumnName.REPS] <= rep_range[1]
+        ]
 
         # Filter out sets with ratings that should be ignored
         sets = sets[sets[ColumnName.RATING] != SetRating.WARMUP]
@@ -224,7 +225,8 @@ def plot_strength_over_time(
         # Only bother with plotting when there's 3+ sets available
         if len(sets) > 2:
             last_weight = sets[ColumnName.WEIGHT].iloc[-1]
-            sets = pd.concat([sets, pd.DataFrame({ColumnName.DATE: [final_date], ColumnName.WEIGHT: [last_weight]})], ignore_index=True)
+            final_row = pd.DataFrame({ColumnName.DATE: [final_date], ColumnName.WEIGHT: [last_weight]})
+            sets = pd.concat([sets, final_row], ignore_index=True)
             plt.scatter(
                 sets[ColumnName.DATE],
                 sets[ColumnName.WEIGHT],

@@ -75,7 +75,7 @@ class Muscle(StrEnum):
     EXTENSOR_CARPI_ULNARIS = "Extensor Carpi Ulnaris"
     EXTENSOR_CARPI_MINIMI = "Extensor Carpi Minimi"
     EXTENSOR_CARPI_RADIALIS_LONGUS = "Extensor Carpi Radialis Longus"
-    BRACHIORADIALIS= "Brachioradialis"
+    BRACHIORADIALIS = "Brachioradialis"
     SUPINATOR = "Supinator"
     ABDUCTOR_POLLICIS = "Abductor Pollicis"  # Encompasses both the Longus and Brevis muscles since they work in tandem
     EXTENSOR_POLLICIS_LONGUS = "Extensor Pollicis Longus"
@@ -93,9 +93,9 @@ class Muscle(StrEnum):
     SEMITENDINOSUS = "Semitendinosus"
 
     # Hip Abductors
-    TENSOR_FASCIAE_LATAE = "Tensor Fasciae Latae"  # 
+    TENSOR_FASCIAE_LATAE = "Tensor Fasciae Latae"
     PIRIFORMUS = "Piriformis"
-    OBTURATOR = "Obturator" # Encompasses both the Internus and Externus muscles since they work in tandem
+    OBTURATOR = "Obturator"  # Encompasses both the Internus and Externus muscles since they work in tandem
     GEMELLUS = "Gemellus"  # Encompasses Superior and Inferiror muscles since they work in tandem
 
     # Hip Adductors

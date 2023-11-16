@@ -2,3 +2,7 @@
 profile = "black"
 src_paths = ["python/src", "python/test"]
 line_length = 120
+
+[tool.black]
+src-paths = ["python/src", "python/test"]
+line-length = 120

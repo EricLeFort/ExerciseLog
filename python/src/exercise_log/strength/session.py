@@ -11,8 +11,15 @@ ARMS = {MuscleGroup.BICEPS, MuscleGroup.TRICEPS}
 BACK = {MuscleGroup.LATS, MuscleGroup.TRAPS, MuscleGroup.RHOMBOIDS, MuscleGroup.SERRATUS}
 CHEST = {MuscleGroup.PECS}
 CORE = {MuscleGroup.ABS, MuscleGroup.SPINAL_ERECTORS}
-LEGS = {MuscleGroup.CALVES, MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS, MuscleGroup.QUADS,
-    MuscleGroup.HIP_ABDUCTORS, MuscleGroup.HIP_ADDUCTORS, MuscleGroup.HIP_FLEXORS}
+LEGS = {
+    MuscleGroup.CALVES,
+    MuscleGroup.GLUTES,
+    MuscleGroup.HAMSTRINGS,
+    MuscleGroup.QUADS,
+    MuscleGroup.HIP_ABDUCTORS,
+    MuscleGroup.HIP_ADDUCTORS,
+    MuscleGroup.HIP_FLEXORS,
+}
 SHOULDERS = {MuscleGroup.DELTS, MuscleGroup.ROTATOR_CUFF}
 FOREARMS = {MuscleGroup.FOREARMS}
 
@@ -29,10 +36,11 @@ class ExerciseSet:
     """
     Stores info about a single set in a Session
     """
+
     def __init__(self, target_count: int, target_weight: float):
         self.target_count = target_count
         self.target_weight = target_weight
-        
+
         self._fatigue_score = None
 
     def get_fatigue_score():
@@ -46,6 +54,7 @@ class Result:
     """
     Stores info about the result of an ExerciseSet
     """
+
     def __init__(self, count: Optional[int], weight: Optional[float], set_rating: SetRating):
         self.count = count
         self.weight = weight
@@ -56,6 +65,7 @@ class SkippedResult(Result):
     """
     This is just a special case of Result where the rating is SKIPPED and the counts/weight are None
     """
+
     def __init__(self):
         super().__init__(None, None, SetRating.SKIPPED)
 

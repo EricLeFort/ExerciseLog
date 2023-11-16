@@ -7,7 +7,7 @@ THIS_SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && p
 # Run linters/formatters
 source ${VENV_NAME}/bin/activate
 isort --check --diff python/
-# TODO black
+black --check --diff --color python/
 # TODO pylint
 # TODO flake8
 

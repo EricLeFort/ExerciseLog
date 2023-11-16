@@ -43,23 +43,48 @@ def main():
     stair_workouts = DataLoader.load_stair_workouts(ROOT_DATA_DIR)
     weight_training_workouts = DataLoader.load_weight_training_workouts(ROOT_DATA_DIR)
     weight_training_sets = DataLoader.load_weight_training_sets(ROOT_DATA_DIR)
-    cardio_workouts = DataLoader.merge_cardio_workouts([
+    cardio_workouts = [
         walk_workouts,
         run_workouts,
         bike_workouts,
         row_workouts,
-        stair_workouts
-    ])
+        stair_workouts,
+    ]
+    cardio_workouts = DataLoader.merge_cardio_workouts(cardio_workouts)
     all_workouts = DataLoader.load_all_workouts(cardio_workouts, weight_training_workouts, travel_days)
 
     # Fit relevant trendlines and plot data
     # n-day average over a week gives a sense of if I'm keeping above a relatively low baseline of 150 minutes/week
     n_day_avg_workout_duration = Trendsetter.compute_n_sample_avg(all_workouts, ColumnName.DURATION, N_DAYS_TO_AVG)
     weight_trendline = Trendsetter.get_line_of_best_fit(health_metrics, ColumnName.WEIGHT, EXTRAPOLATE_DAYS)
-    heart_rate_trendline = Trendsetter.get_logarithmic_curve_of_best_fit(health_metrics, ColumnName.RESTING_HEART_RATE, EXTRAPOLATE_DAYS)
-    plot_workout_frequency(all_workouts, n_day_avg_workout_duration, N_DAYS_TO_AVG, export_dir=ROOT_IMG_DIR, show_plot=False)
-    plot_resting_heart_rate(all_workouts, health_metrics, heart_rate_trendline, EXTRAPOLATE_DAYS, export_dir=ROOT_IMG_DIR, show_plot=False)
-    plot_weight(all_workouts, health_metrics, weight_trendline, EXTRAPOLATE_DAYS, export_dir=ROOT_IMG_DIR, show_plot=False)
+    heart_rate_trendline = Trendsetter.get_logarithmic_curve_of_best_fit(
+        health_metrics,
+        ColumnName.RESTING_HEART_RATE,
+        EXTRAPOLATE_DAYS,
+    )
+    plot_workout_frequency(
+        all_workouts,
+        n_day_avg_workout_duration,
+        N_DAYS_TO_AVG,
+        export_dir=ROOT_IMG_DIR,
+        show_plot=False,
+    )
+    plot_resting_heart_rate(
+        all_workouts,
+        health_metrics,
+        heart_rate_trendline,
+        EXTRAPOLATE_DAYS,
+        export_dir=ROOT_IMG_DIR,
+        show_plot=False,
+    )
+    plot_weight(
+        all_workouts,
+        health_metrics,
+        weight_trendline,
+        EXTRAPOLATE_DAYS,
+        export_dir=ROOT_IMG_DIR,
+        show_plot=False,
+    )
 
     for exercise in weight_training_sets[ColumnName.EXERCISE].unique():
         if exercise in SKIP_EXERCISE_PLOT_EXERCISES:
@@ -67,7 +92,14 @@ def main():
             continue
         print(f"Plotting {exercise}... ", end="")
         try:
-            plot_strength_over_time(weight_training_workouts, weight_training_sets, exercise, PRIMARY_GYMS, export_dir=ROOT_IMG_DIR, show_plot=False)
+            plot_strength_over_time(
+                weight_training_workouts,
+                weight_training_sets,
+                exercise,
+                PRIMARY_GYMS,
+                export_dir=ROOT_IMG_DIR,
+                show_plot=False,
+            )
             print("done.")
         except ValueError as ve:
             TermColour.print_warning(f"SKIPPED: {str(ve)}.")

@@ -17,7 +17,7 @@ class ColumnName(StrEnum):
     AVG_WATT = "avg_wattage"
     DATE = DATE_CONST
     DATA_DURATION = "duration(HH:mm:ss)"  # This is the human-readable version -- it'll be dropped during processing
-    DURATION = "duration(s)"              # Convert the human-readable durations to seconds for computational simplicity
+    DURATION = "duration(s)"  # Convert the human-readable durations to seconds for computational simplicity
     DISTANCE = "distance(km)"
     ELEVATION = "elevation(m)"
     EXERCISE = "exercise"
@@ -81,7 +81,7 @@ class DataLoader:
 
     @staticmethod
     def _validate_csv(fname: str):
-        with open(fname, 'r') as f:
+        with open(fname, "r") as f:
             reader = csv.reader(f)
 
             try:
@@ -132,11 +132,12 @@ class DataLoader:
 
         Note: there can be more than one per day or rest days, this smooths that out.
         """
-        total_durations = pd.concat([
+        total_durations = [
             weight_training_workouts.groupby(CName.DATE)[CName.DURATION].agg("sum"),
             cardio_workouts.groupby(CName.DATE)[CName.DURATION].agg("sum"),
             travel_days.groupby(CName.DATE)[CName.DURATION].agg("sum"),
-        ]).groupby(CName.DATE).agg("sum")
+        ]
+        total_durations = pd.concat(total_durations).groupby(CName.DATE).agg("sum")
         total_durations.index = pd.DatetimeIndex(total_durations.index)
         return total_durations.reindex(all_workouts.index, fill_value=0)
 
@@ -148,11 +149,12 @@ class DataLoader:
         travel_days: pd.DataFrame,
     ) -> pd.DataFrame:
         """Computes the daily workout type for each day"""
-        workout_types = pd.concat([
+        workout_types = [
             weight_training_workouts.groupby(CName.DATE)[CName.WORKOUT_TYPE].agg(join_with_comma),
             cardio_workouts.groupby(CName.DATE)[CName.WORKOUT_TYPE].agg(join_with_comma),
             travel_days.groupby(CName.DATE)[CName.WORKOUT_TYPE].agg(join_with_comma),
-        ]).groupby(CName.DATE).agg(join_with_comma)
+        ]
+        workout_types = pd.concat(workout_types).groupby(CName.DATE).agg(join_with_comma)
         workout_types = workout_types.apply(DataLoader._det_workout_type)
         workout_types.index = pd.DatetimeIndex(workout_types.index)
         return workout_types.reindex(all_workouts.index, fill_value="Rest Day")
@@ -179,8 +181,9 @@ class DataLoader:
         health_metrics = DataLoader._load_and_clean_data(f"{root_data_dir}/health_metrics.csv")
 
         # Filter out any empty rows from the health metrics
-        return health_metrics[health_metrics[CName.WEIGHT].notnull() \
-          | health_metrics[CName.RESTING_HEART_RATE].notnull()]
+        return health_metrics[
+            health_metrics[CName.WEIGHT].notnull() | health_metrics[CName.RESTING_HEART_RATE].notnull()
+        ]
 
     @staticmethod
     def load_travel_days(root_data_dir: str):
@@ -237,8 +240,8 @@ class DataLoader:
     @staticmethod
     def load_stair_workouts(root_data_dir: str):
         workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/stairs.csv")
-        workouts[CName.FLIGHTS_UP] = workouts[CName.FLIGHTS_UP].astype('Int64')
-        workouts[CName.FLIGHTS_DOWN] = workouts[CName.FLIGHTS_DOWN].astype('Int64')
+        workouts[CName.FLIGHTS_UP] = workouts[CName.FLIGHTS_UP].astype("Int64")
+        workouts[CName.FLIGHTS_DOWN] = workouts[CName.FLIGHTS_DOWN].astype("Int64")
         workouts[CName.DISTANCE] = np.nan  # Distance is unknown but I don't want to ruin merging of cardio workouts
         return workouts
 
@@ -261,7 +264,11 @@ class DataLoader:
         return cardio_workouts.reset_index(drop=True)
 
     @staticmethod
-    def load_all_workouts(cardio_workouts: pd.DataFrame, weight_training_workouts: pd.DataFrame, travel_days: pd.DataFrame):
+    def load_all_workouts(
+        cardio_workouts: pd.DataFrame,
+        weight_training_workouts: pd.DataFrame,
+        travel_days: pd.DataFrame,
+    ):
         # Will be used to pad all datasets to have consistent dates
         all_dates = DataLoader._get_all_dates([cardio_workouts, weight_training_workouts, travel_days])
 
@@ -276,13 +283,13 @@ class DataLoader:
             all_workouts,
             cardio_workouts,
             weight_training_workouts,
-            travel_days
+            travel_days,
         )
         all_workouts[CName.WORKOUT_TYPE.value] = DataLoader._compute_workout_types(
             all_workouts,
             cardio_workouts,
             weight_training_workouts,
-            travel_days
+            travel_days,
         )
         return all_workouts.reset_index()
 
@@ -308,7 +315,7 @@ class DataLoader:
             cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.ELEVATION] / cardio_workouts[CName.DURATION]
             cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.RATE_OF_CLIMB] * (60 * 60)
             cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.RATE_OF_CLIMB].round(0).astype(LONG)
-        if CName.STEPS in cardio_workouts:      # Skip this metric for workouts like biking where steps aren't tracked
+        if CName.STEPS in cardio_workouts:  # Skip this metric for workouts like biking where steps aren't tracked
             # Convert km to m
             cardio_workouts[CName.STEP_SIZE] = cardio_workouts[CName.DISTANCE] / cardio_workouts[CName.STEPS]
             cardio_workouts[CName.STEP_SIZE] = (cardio_workouts[CName.STEP_SIZE] * 1000).round(2)

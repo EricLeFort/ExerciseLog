@@ -7,6 +7,7 @@ class Exercise(StrEnum):
     set of exercises currently present in the data. It helps prevent the addition of noise such as name variations
     (e.g. lateral lift vs. lateral raise, bicep curl vs. bicep curls) or typos.
     """
+
     FIFTH_POINT_OF_FLIGHT = "5th Point of Flight"
     ARNOLD_PRESS = "Arnold Press"
     BARBELL_BICEP_CURL = "Barbell Bicep Curl"
@@ -58,7 +59,7 @@ class Exercise(StrEnum):
     MACH_INCLINE_BENCH_PRESS = "Machine Incline Bench Press"
     MACH_PEC_FLIES = "Machine Pec Flies"
     MILITARY_PRESS = "Military Press"
-    NEUTRAL_GRIP_PULL_UP= "Neutral-Grip Pull-Up"
+    NEUTRAL_GRIP_PULL_UP = "Neutral-Grip Pull-Up"
     OVERHEAD_TRICEP_EXTENSION = "Overhead Tricep Extension"
     PARALLEL_BAR_LEG_RAISE = "Parallel Bar Leg Raise"
     PLANK = "Plank"

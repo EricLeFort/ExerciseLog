@@ -44,15 +44,15 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
 
 
 class TermColour(StrEnum):
-    FAIL = '\033[91m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    OKBLUE = '\033[94m'
-    HEADER = '\033[95m'
-    OKCYAN = '\033[96m'
-    END = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+    FAIL = "\033[91m"
+    OKGREEN = "\033[92m"
+    WARNING = "\033[93m"
+    OKBLUE = "\033[94m"
+    HEADER = "\033[95m"
+    OKCYAN = "\033[96m"
+    END = "\033[0m"
+    BOLD = "\033[1m"
+    UNDERLINE = "\033[4m"
 
     @staticmethod
     def print_warning(msg: str):
@@ -76,7 +76,7 @@ def convert_pd_to_np(obj: NDFrame) -> np.ndarray:
     return np.array(obj)[:, None]
 
 
-def convert_mins_to_hour_mins(mins: number, _ = None) -> str:
+def convert_mins_to_hour_mins(mins: number, _=None) -> str:
     if mins < 60:
         return f"{int(mins)}m"
     hours, mins = int(mins // 60), int(mins % 60)
@@ -87,7 +87,7 @@ def get_padded_dates(df: pd.DataFrame, num_days_to_pad: int) -> pd.DataFrame:
     """Pads the dates in the Dataframe by the specified number of days"""
     first_index = df.index[0]
     periods = df.shape[0] + num_days_to_pad
-    padded_dates = pd.date_range(df.iloc[0][DATE], periods=periods, freq='1d')
+    padded_dates = pd.date_range(df.iloc[0][DATE], periods=periods, freq="1d")
     padded_dates = padded_dates.to_series(name=DATE).reset_index(drop=True)
     padded_dates.index = pd.RangeIndex(start=first_index, stop=first_index + periods)
     return padded_dates
@@ -135,9 +135,9 @@ def invert_csv_rows(
 
             # Work backwards and write a line every time a line break is found
             line = b""
-            while f_in.tell() > 1:               # tell() gives the current position in the file
-                f_in.seek(-2, os.SEEK_CUR)       # Move 2 bytes back to read the previous byte
-                byte = f_in.read(1)              # Read a single byte, moving the pointer forward by one
+            while f_in.tell() > 1:  # tell() gives the current position in the file
+                f_in.seek(-2, os.SEEK_CUR)  # Move 2 bytes back to read the previous byte
+                byte = f_in.read(1)  # Read a single byte, moving the pointer forward by one
                 line = byte + line
                 if byte in line_breaks:
                     # Write the bytes from this line
@@ -152,7 +152,7 @@ def invert_csv_rows(
                         if byte == CR:
                             line_break = byte + line_break
                         else:
-                            f_in.seek(1, 1)      # We still need this byte if it's not CR, reset the pointer
+                            f_in.seek(1, 1)  # We still need this byte if it's not CR, reset the pointer
                     f_out.write(line_break)
 
             # Skip the last line if it's a header since it's already been written
