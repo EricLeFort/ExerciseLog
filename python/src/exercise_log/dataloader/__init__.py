@@ -81,7 +81,7 @@ class DataLoader:
 
     @staticmethod
     def _validate_csv(fname: str):
-        with open(fname, "r") as f:
+        with open(fname, "r", encoding="utf-8") as f:
             reader = csv.reader(f)
 
             try:
@@ -91,16 +91,17 @@ class DataLoader:
                 for row in reader:
                     if len(row) != len(headers):
                         raise ValueError(f'File is ragged at row {reader.line_num}: "{row}"')
-            except StopIteration:
-                raise ValueError(f"CSV at {fname} was empty.")
+            except StopIteration as e:
+                raise ValueError(f"CSV at {fname} was empty.") from e
 
     @staticmethod
     def _validate_exercises(df: pd.DataFrame, fname: str):
-        exercise_map = Exercise._value2member_map_
+        # Disabling pylint, this is needed bc Pandas is fussy; "some_exercise in Exercise" ought to work but doesn't
+        exercise_map = Exercise._value2member_map_  # pylint: disable=protected-access
         if df[CName.EXERCISE].isin(exercise_map).all():
             return
 
-        first_invalid_idx = df[~df[CName.EXERCISE].isin(Exercise._value2member_map_)].index.tolist()[0]
+        first_invalid_idx = df[~df[CName.EXERCISE].isin(exercise_map)].index.tolist()[0]
         first_invalid = df[CName.EXERCISE][first_invalid_idx]
 
         possible_valid = first_invalid[:-1]
@@ -259,7 +260,6 @@ class DataLoader:
 
     @staticmethod
     def merge_cardio_workouts(workouts: List[pd.DataFrame]) -> pd.DataFrame:
-        all_dates = DataLoader._get_all_dates(workouts)
         cardio_workouts = pd.concat(workouts, join="inner")  # Use inner so we only preserve the common fields
         return cardio_workouts.reset_index(drop=True)
 
@@ -272,7 +272,8 @@ class DataLoader:
         # Will be used to pad all datasets to have consistent dates
         all_dates = DataLoader._get_all_dates([cardio_workouts, weight_training_workouts, travel_days])
 
-        # Initialize the dataframe including all dates spanning the range of the data (rest days are missing in the workout data)
+        # Initialize the dataframe including all dates spanning the range of the data
+        # (rest days are missing in the workout data)
         all_workouts = pd.DataFrame()
         all_workouts[CName.DATE] = pd.date_range(all_dates.min(), all_dates.max())
         all_workouts = all_workouts.sort_values(CName.DATE, ignore_index=True)

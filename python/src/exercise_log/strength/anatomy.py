@@ -158,7 +158,7 @@ class Muscle(StrEnum):
     ILIOCOSTALIS_THORACIS = "Iliocostalis Thoracis"
     ILIOCOSTALIS_LUMBORUM = "Iliocostalis Lumborum"
 
-    muscle_group_map = {
+    MUSCLE_GROUP_MAP = {
         OBLIQUES: MuscleGroup.ABS,
         PYRAMIDALIS: MuscleGroup.ABS,
         RECTUS_ABDOMINUS: MuscleGroup.ABS,
@@ -248,4 +248,4 @@ class Muscle(StrEnum):
     }
 
     def get_muscle_group(self):
-        return muscle_group_map[self]
+        return Muscle.MUSCLE_GROUP_MAP[self]

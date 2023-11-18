@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 import unittest
 
 from exercise_log.strength import Exercise
@@ -9,7 +10,7 @@ class TestOntology(unittest.TestCase):
         """Simple check that every field is accessible and not None"""
         for exercise in Exercise:
             try:
-                info = ExerciseInfo(exercise)
+                ExerciseInfo(exercise)
             except ValueError as ve:
                 self.fail(ve)
             for field in Field:

@@ -4,16 +4,22 @@ set -e
 VENV_NAME=pyenv
 THIS_SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-# Run linters/formatters
+# Move to the test directory and start testing
+echo "Activating python environment.."
 source ${VENV_NAME}/bin/activate
-isort --check --diff python/
-black --check --diff --color python/
-# TODO pylint
-# TODO flake8
-
-# Move to the test directory and start the test
 cd "${THIS_SCRIPT_DIR}/../python/src"
 export PYTHONPATH=$(pwd)
-cd ../test
+
+# Run linters/formatters
+cd ../..
+echo "Running linters and formatters.."
+isort --check --diff python/
+black --check --diff --color python/
+pylint python/
+# TODO flake8
+
+# Run the unit tests
+echo "Running unit tests.."
+cd python/test
 python3 -m unittest -v
 deactivate

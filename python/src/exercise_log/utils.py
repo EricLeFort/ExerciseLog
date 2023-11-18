@@ -23,7 +23,7 @@ class StrEnumMeta(EnumMeta):
         """
         if name in cls._value2member_map_:
             return cls._value2member_map_[name]
-        return super().__getitem__(cls, name)
+        return super().__getitem__(name)
 
 
 class StrEnum(str, Enum, metaclass=StrEnumMeta):

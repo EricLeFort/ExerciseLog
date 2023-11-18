@@ -3,7 +3,6 @@ from typing import Dict, List, Optional
 
 from exercise_log.strength import Exercise, SetRating
 from exercise_log.strength.anatomy import MuscleGroup
-from exercise_log.strength.ontology import ExerciseInfo
 
 BICEPS = {MuscleGroup.BICEPS}
 TRICEPS = {MuscleGroup.TRICEPS}
@@ -43,11 +42,11 @@ class ExerciseSet:
 
         self._fatigue_score = None
 
-    def get_fatigue_score():
+    def get_fatigue_score(self):
         if self._fatigue_score is not None:
             return self._fatigue_score
         # TODO compute the fatigue score
-        pass
+        raise NotImplementedError
 
 
 class Result:
@@ -76,7 +75,7 @@ class SessionInfo:
 
         self.fatigue_score = sum(exercise_set.get_fatigue_score() for exercise, exercise_set in exercise_sets.items())
         # TODO this will store/compute info about a Session (volume per muscle/muscle group, fatigue score)
-        pass
+        raise NotImplementedError
 
 
 class Session:
@@ -84,7 +83,7 @@ class Session:
         self.focus = focus
         self.sets = {}
         self.results = {}
-        self._session_info = SessionInfo(self.focus)
+        self._session_info = SessionInfo(self.focus, self.sets)
 
     def get_fatigue_score(self):
         return self._session_info.fatigue_score
@@ -102,5 +101,5 @@ class Session:
             # This re-uses the SkippedResult instance but that's fine; it technically could be a singleton anyway
             # It also assumes the exercise has been added to the results dict (which is handled by add_exercise())
             self.results[exercise] += [SkippedResult()] * (len(sets) - len(self.results[exercise]))
-        # TODO also save the actual fatigue score (e.g. if more/less reps were hit in a set, or if sets were added/skipped)
+        # TODO also save the actual fatigue score (e.g. if more/less reps were hit, or if sets were added/skipped)
         # TODO save these results somewhere, somehow

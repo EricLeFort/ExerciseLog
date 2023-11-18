@@ -1,7 +1,7 @@
 import unittest
 from datetime import date, datetime, timedelta
 from random import randint, uniform
-from typing import Callable, List, Tuple
+from typing import Callable, Tuple
 
 import pandas as pd
 
@@ -33,7 +33,6 @@ def _test_four_scenarios(
 
 
 def _gen_random_foot_cardio_data(num_entries: int):
-    elevation = [0] + [randint(0, 1000) for _ in range(num_entries - 2)] + [0]
     data = _init_dataframe(num_entries)
     data[CName.AVG_WATT] = [randint(100, 1000) for _ in range(num_entries)]
     data[CName.DISTANCE] = [round(uniform(0.1, 100), 2) for _ in range(num_entries)]

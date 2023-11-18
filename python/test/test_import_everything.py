@@ -33,4 +33,5 @@ class TestPackage(unittest.TestCase):
         modules = [f[: -len(PY_EXT)].replace(SEP, MOD_SEP) for f in files]
         # Get rid of the ".__init__" portions
         modules = [module[: -len(INIT) - 1] if module.endswith(INIT) else module for module in modules]
-        [import_module(module) for module in modules]
+        for module in modules:
+            import_module(module)

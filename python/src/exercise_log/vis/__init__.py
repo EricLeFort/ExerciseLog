@@ -2,9 +2,9 @@ from datetime import date
 from typing import Dict, Optional, Tuple
 
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 import numpy as np
 import pandas as pd
+from matplotlib import ticker
 
 from exercise_log.constants import MIN_DAILY_ACTIVE_MINUTES
 from exercise_log.dataloader import ColumnName
@@ -14,6 +14,19 @@ from exercise_log.utils import convert_mins_to_hour_mins, convert_pd_to_np, get_
 from exercise_log.vis.constants import BOTTOM_OFFSET, NON_GRAPH_AREA_SCALER, RIGHT_OF_AXIS_X_COORD
 from exercise_log.vis.utils import configure_x_axis_by_month, create_legend_and_title
 
+WEIGHT_LEVELS = {
+    "Healthy": 250,
+    "Target": 200,
+}
+RESTING_HEART_RATE_LEVELS = {
+    "Poor": 82,
+    "Average": 72,
+    "Above Average": 68,
+    "Good": 63,
+    "Excellent": 58,
+    "Athlete": 50,
+}
+
 
 def plot_workout_frequency(
     all_workouts: pd.DataFrame,
@@ -22,9 +35,9 @@ def plot_workout_frequency(
     export_dir: Optional[str] = None,
     show_plot=True,
 ):
-    NON_GRAPH_GCF_PERCENT = 0.1
-    WORKOUT_FREQUENCY_BOTTOM_OFFSET = 0.03
-    Y_MIN, Y_MAX = 0, 180  # Setting a 3 hour max since there's a few backpacking days that mess up the scale
+    non_graph_gcf_percent = 0.1
+    workout_frequency_bottom_offset = 0.03
+    y_min, y_max = 0, 180  # Setting a 3 hour max since there's a few backpacking days that mess up the scale
 
     # Draw the main graph contents and setup the axes
     workout_durations_mins = all_workouts[ColumnName.DURATION] // 60
@@ -42,8 +55,8 @@ def plot_workout_frequency(
 
     # Delineate the ideal minimum daily exercise threshold as a horizontal reference line
     plt.axhline(y=MIN_DAILY_ACTIVE_MINUTES, color="r", linestyle="-")
-    y_percent_min_daily_active = (MIN_DAILY_ACTIVE_MINUTES / Y_MAX) - WORKOUT_FREQUENCY_BOTTOM_OFFSET
-    y_pos = y_percent_min_daily_active + NON_GRAPH_GCF_PERCENT
+    y_percent_min_daily_active = (MIN_DAILY_ACTIVE_MINUTES / y_max) - workout_frequency_bottom_offset
+    y_pos = y_percent_min_daily_active + non_graph_gcf_percent
     plt.gcf().text(RIGHT_OF_AXIS_X_COORD, y_pos, "Target\nMinimum")
 
     # Set up axes
@@ -51,13 +64,12 @@ def plot_workout_frequency(
     configure_x_axis_by_month(all_workouts)
     ax.yaxis.set_major_formatter(ticker.FuncFormatter(convert_mins_to_hour_mins))
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(5))
-    ax.set_ylim([Y_MIN, Y_MAX])
+    ax.set_ylim([y_min, y_max])
     plt.grid(visible=True)
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
 
     # Scale up the plot
-    fig = plt.gcf()
-    fig.set_size_inches(15, 9)
+    plt.gcf().set_size_inches(15, 9)
 
     # Add in the surrounding information
     create_legend_and_title("Workout Frequency", reverse_labels=True)
@@ -75,8 +87,8 @@ def plot_resting_heart_rate(
     n_days_to_extrapolate: int,
     export_dir: Optional[str] = None,
     show_plot=True,
-):
-    Y_MIN, Y_MAX = 45, 90
+):  # pylint: disable=too-many-arguments
+    y_min, y_max = 45, 90
 
     nonnull_heart_rates = health_metrics[health_metrics[ColumnName.RESTING_HEART_RATE].notnull()]
     padded_dates = get_padded_dates(nonnull_heart_rates, n_days_to_extrapolate)
@@ -94,31 +106,22 @@ def plot_resting_heart_rate(
     )
 
     # Delineate various resting heart rate levels as horizontal reference lines
-    resting_heart_rate_levels = {
-        "Poor": 82,
-        "Average": 72,
-        "Above Average": 68,
-        "Good": 63,
-        "Excellent": 58,
-        "Athlete": 50,
-    }
-    for text, hr in resting_heart_rate_levels.items():
+    for text, hr in RESTING_HEART_RATE_LEVELS.items():
         plt.axhline(y=hr, color="k", linestyle="--", linewidth="0.75")
-        y_range = Y_MAX - Y_MIN
-        y_pos = BOTTOM_OFFSET + (hr - Y_MIN) / (NON_GRAPH_AREA_SCALER * y_range)
+        y_range = y_max - y_min
+        y_pos = BOTTOM_OFFSET + (hr - y_min) / (NON_GRAPH_AREA_SCALER * y_range)
         plt.gcf().text(RIGHT_OF_AXIS_X_COORD, y_pos, text)
 
     # Set up axes
     ax = plt.gca()
     configure_x_axis_by_month(all_workouts, end_padding_days=n_days_to_extrapolate)
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(1))
-    ax.set_ylim([Y_MIN, Y_MAX])
+    ax.set_ylim([y_min, y_max])
     plt.grid(visible=True)
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
 
     # Scale up the plot
-    fig = plt.gcf()
-    fig.set_size_inches(15, 9)
+    plt.gcf().set_size_inches(15, 9)
 
     # Add in the surrounding information
     create_legend_and_title("Resting Heart Rate", reverse_labels=True)
@@ -130,14 +133,13 @@ def plot_resting_heart_rate(
 
 
 def plot_weight(
-    all_workouts: pd.DataFrame,
     health_metrics: pd.DataFrame,
     weight_trendline: np.ndarray,
     n_days_to_extrapolate: int,
     export_dir: Optional[str] = None,
     show_plot=True,
 ):
-    Y_MIN, Y_MAX = 180, 305
+    y_min, y_max = 180, 305
 
     nonnull_weights = health_metrics[health_metrics[ColumnName.WEIGHT].notnull()]
     padded_dates = get_padded_dates(nonnull_weights, n_days_to_extrapolate)
@@ -155,27 +157,22 @@ def plot_weight(
     )
 
     # Delineate various resting heart rate levels as horizontal reference lines
-    weight_levels = {
-        "Healthy": 250,
-        "Target": 200,
-    }
-    for text, weight in weight_levels.items():
+    for text, weight in WEIGHT_LEVELS.items():
         plt.axhline(y=weight, color="k", linestyle="--", linewidth="0.75")
-        y_range = Y_MAX - Y_MIN
-        y_pos = BOTTOM_OFFSET + (weight - Y_MIN) / (NON_GRAPH_AREA_SCALER * y_range)
+        y_range = y_max - y_min
+        y_pos = BOTTOM_OFFSET + (weight - y_min) / (NON_GRAPH_AREA_SCALER * y_range)
         plt.gcf().text(RIGHT_OF_AXIS_X_COORD, y_pos, text)
 
     # Set up axes
     ax = plt.gca()
     configure_x_axis_by_month(nonnull_weights, end_padding_days=n_days_to_extrapolate)
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(5))
-    ax.set_ylim([Y_MIN, Y_MAX])
+    ax.set_ylim([y_min, y_max])
     plt.grid(visible=True)
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
 
     # Scale up the plot
-    fig = plt.gcf()
-    fig.set_size_inches(18.5, 10.5)
+    plt.gcf().set_size_inches(18.5, 10.5)
 
     # Add in the surrounding information
     create_legend_and_title("Weight", reverse_labels=True)
@@ -193,13 +190,12 @@ def plot_strength_over_time(
     primary_gyms: Dict[str, Tuple[date, date]],
     export_dir: Optional[str] = None,
     show_plot=True,
-):
-    final_date = workouts[ColumnName.DATE].max()
+):  # pylint: disable=too-many-arguments
     single_exercise = weight_training_sets[weight_training_sets[ColumnName.EXERCISE] == exercise]
     for set_type in SetType:
         rep_range = set_type.get_rep_range()
         sets = single_exercise[
-            rep_range[0] <= single_exercise[ColumnName.REPS] & single_exercise[ColumnName.REPS] <= rep_range[1]
+            (rep_range[0] <= single_exercise[ColumnName.REPS]) & (single_exercise[ColumnName.REPS] <= rep_range[1])
         ]
 
         # Filter out sets with ratings that should be ignored
@@ -210,13 +206,13 @@ def plot_strength_over_time(
         sets = sets[sets[ColumnName.RATING] != SetRating.DELOAD]
 
         # Filter out sets using machines in non-primary gyms
-        filtered_workouts = workouts[workouts[ColumnName.LOCATION].isin(primary_gyms)]
+        workouts = workouts[workouts[ColumnName.LOCATION].isin(primary_gyms)]
         # TODO also filter out sets that are from a primary gym but *not* in the time period when it was primary
         sets = sets[
-            sets[ColumnName.DATE].isin(filtered_workouts[ColumnName.DATE])
+            sets[ColumnName.DATE].isin(workouts[ColumnName.DATE])
             | ~sets[ColumnName.EXERCISE].apply(lambda exercise: ExerciseInfo(exercise).requires_machine)
         ]
-        sets = sets[sets[ColumnName.DATE].isin(filtered_workouts[ColumnName.DATE])]
+        sets = sets[sets[ColumnName.DATE].isin(workouts[ColumnName.DATE])]
 
         # Filter to only the max weight set of this type for that day
         idx = sets.groupby(ColumnName.DATE)[ColumnName.WEIGHT].idxmax()
@@ -224,8 +220,12 @@ def plot_strength_over_time(
 
         # Only bother with plotting when there's 3+ sets available
         if len(sets) > 2:
-            last_weight = sets[ColumnName.WEIGHT].iloc[-1]
-            final_row = pd.DataFrame({ColumnName.DATE: [final_date], ColumnName.WEIGHT: [last_weight]})
+            final_row = pd.DataFrame(
+                {
+                    ColumnName.DATE: [workouts[ColumnName.DATE].max()],
+                    ColumnName.WEIGHT: [sets[ColumnName.WEIGHT].iloc[-1]],
+                }
+            )
             sets = pd.concat([sets, final_row], ignore_index=True)
             plt.scatter(
                 sets[ColumnName.DATE],

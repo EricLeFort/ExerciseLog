@@ -1,5 +1,6 @@
+# pylint: disable=too-many-lines
 from exercise_log.strength import CountType, Exercise, ExerciseType, TensileFocus
-from exercise_log.strength.anatomy import Muscle, MuscleGroup
+from exercise_log.strength.anatomy import MuscleGroup
 from exercise_log.strength.constants import INHERITS_FROM
 from exercise_log.utils import StrEnum
 
@@ -16,6 +17,7 @@ CALI_PLYO_REP_RANGE = (5, 20)
 ROTATOR_CUFF_REP_RANGE = (10, 25)
 
 
+# pylint: disable=line-too-long
 # Ideal strength ratios:
 # A gold mine: https://forums.t-nation.com/t/know-your-ratios-destroy-weaknesses/282078
 # Tricep:bicep
@@ -54,6 +56,7 @@ ROTATOR_CUFF_REP_RANGE = (10, 25)
 # ??? Shoulders vs.
 # ??? Glutes vs. Hamstrings/Quads
 # ??? Calf vs Hamstrings/Quads
+# pylint: enable=line-too-long
 
 
 INHERITS_FROM = "Inherits From"
@@ -65,8 +68,10 @@ class Field(StrEnum):
 
     COUNT_TYPE - The way to count this exercise. An isometric movement is measured in seconds, a compound lift in reps.
     EXERCISE_TYPE - The type of exercise. E.g. compound weight lifting, calisthenics, etc.
-    IS_UNILATERAL - Whether the exercise uses a single limb at a time. E.g. alternating bicep curls, single-leg leg curls
-    IS_LIMB_INDEPENDENT - Whether the exercise works limbs independently. E.g. cable flies are bilateral + limb independent
+    IS_UNILATERAL - Whether the exercise uses a single limb at a time.
+      e.g. alternating bicep curls, single-leg leg curls
+    IS_LIMB_INDEPENDENT - Whether the exercise works limbs independently.
+      e.g. cable flies are bilateral + limb independent
     REQUIRES_MACHINE - Whether a machine in required. Useful for knowing if an exercise can be compared across gyms.
     TENSILE_FOCUS - The type of muscle contraction happening during the primary portion of the lift.
     OPTIMAL_REP_RANGE - A bound of the ideal count for this exercise. They are just guiding values, not strict rules.
@@ -92,7 +97,7 @@ class ExerciseInfoMeta(type):
     def __len__(cls):
         return len(EXERCISE_INFO)
 
-    def __contains__(self, item):
+    def __contains__(cls, item):
         return item in EXERCISE_INFO
 
 
@@ -109,8 +114,6 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
         """
         Initializes an ExerciseInfo by looking up the relevant data for the given Exercise.
         """
-        info = EXERCISE_INFO[exercise]
-
         self.count_type = CountType[ExerciseInfo._get_field(exercise, Field.COUNT_TYPE)]
         self.exercise_type = ExerciseType[ExerciseInfo._get_field(exercise, Field.EXERCISE_TYPE)]
         self.requires_machine = ExerciseInfo._get_field(exercise, Field.REQUIRES_MACHINE)
@@ -144,14 +147,17 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
     def get_fatigue_factor(self):
         if self._fatigue_factor is not None:
             return self._fatigue_factor
+
+        # pylint: disable=line-too-long
         # TODO write logic to estimate "FATIGUE_FACTOR - The amount of systemic fatigue accumulated by the exercise. Useful for session planning."
-        #      This is basically just a summation for every muscle worked dependant on
-        #         1. muscle size/energy requirement,
-        #         2. % activation of that muscle,
-        #         3. systemic fatigue (e.g. using every single muscle is more fatiguing than just the summation of the individual muscles)
-        #      Slightly higher fatigue for unilateral lifts bc the systemic time under tension is longer
-        #      Sessions/programs should also factor in unilateral percentages since it's the best way to avoid imbalances
-        pass
+        #   This is basically just a summation for every muscle worked dependant on
+        #     1. muscle size/energy requirement,
+        #     2. % activation of that muscle,
+        #     3. systemic fatigue (e.g. using every single muscle is more fatiguing than the summation of the individual muscles)
+        #   Slightly higher fatigue for unilateral lifts bc the systemic time under tension is longer
+        #   Sessions/programs should also factor in unilateral percentages since it's the best way to avoid imbalances
+        # pylint: enable=line-too-long
+        raise NotImplementedError
 
 
 # TODO: come back later and fill in:

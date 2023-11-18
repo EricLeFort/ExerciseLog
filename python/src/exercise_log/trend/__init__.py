@@ -64,8 +64,9 @@ class Trendsetter:
                 m (float): The slope of the line of best fit
                 b (float): The y-intercept of the line of best fit
         """
-        fitted_params, _ = curve_fit(Trendsetter._f_affine, df.index, df[field])
-        return fitted_params
+        # pylint: disable=unbalanced-tuple-unpacking
+        (m, b), _ = curve_fit(Trendsetter._f_affine, df.index, df[field])
+        return m, b
 
     @staticmethod
     def fit_logarithmic(df: pd.DataFrame, field: str) -> np.ndarray:
@@ -78,8 +79,9 @@ class Trendsetter:
         Returns:
             A 3-tuple containing a, b, and, c of the equation: a * log(b * t) + c
         """
-        fitted_params, _ = curve_fit(Trendsetter._f_log_curve, df.index, df[field])
-        return fitted_params
+        # pylint: disable=unbalanced-tuple-unpacking
+        (a, b, c), _ = curve_fit(Trendsetter._f_log_curve, df.index, df[field])
+        return a, b, c
 
     @staticmethod
     def get_line_of_best_fit(df: pd.DataFrame, field: str, extrapolate_days: int) -> np.ndarray:
