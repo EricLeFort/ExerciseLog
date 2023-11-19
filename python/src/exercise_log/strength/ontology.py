@@ -59,9 +59,6 @@ ROTATOR_CUFF_REP_RANGE = (10, 25)
 # pylint: enable=line-too-long
 
 
-INHERITS_FROM = "Inherits From"
-
-
 class Field(StrEnum):
     """
     Enumerates over the fields present in an ExerciseInfo.

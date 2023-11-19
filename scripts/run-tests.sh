@@ -15,8 +15,8 @@ cd ../..
 echo "Running linters and formatters.."
 isort --check --diff python/
 black --check --diff --color python/
+flake8 python/
 pylint python/
-# TODO flake8
 
 # Run the unit tests
 echo "Running unit tests.."

@@ -1,0 +1,9 @@
+[flake8]
+max-line-length = 120
+ignore =
+	# E203 and W503 are not PEP8 compliant, black handles this styling
+	E203,
+	W503,
+per-file-ignores =
+    # TODO this is just for a few long temporary comments, remove once they're gone
+    python/src/exercise_log/strength/ontology.py: E501
