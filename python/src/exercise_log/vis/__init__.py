@@ -37,7 +37,7 @@ def plot_workout_frequency(
 ):
     non_graph_gcf_percent = 0.1
     workout_frequency_bottom_offset = 0.03
-    y_min, y_max = 0, 180  # Setting a 3 hour max since there's a few backpacking days that mess up the scale
+    y_min, y_max = 0, 210  # Setting a 3.5 hour max since there's a few backpacking days that mess up the scale
 
     # Draw the main graph contents and setup the axes
     workout_durations_mins = all_workouts[ColumnName.DURATION] // 60
@@ -63,7 +63,8 @@ def plot_workout_frequency(
     ax = plt.gca()
     configure_x_axis_by_month(all_workouts)
     ax.yaxis.set_major_formatter(ticker.FuncFormatter(convert_mins_to_hour_mins))
-    ax.yaxis.set_minor_locator(ticker.MultipleLocator(5))
+    ax.yaxis.set_major_locator(ticker.MultipleLocator(30))
+    ax.yaxis.set_minor_locator(ticker.MultipleLocator(10))
     ax.set_ylim([y_min, y_max])
     plt.grid(visible=True)
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
