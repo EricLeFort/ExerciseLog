@@ -45,7 +45,7 @@ fi
 # Update visuals
 source ${VENV_NAME}/bin/activate
 export PYTHONPATH="${SCRIPT_DIR}/../python/src/"
-python3 "${SCRIPT_DIR}/../python/src/exercise_log/update_visuals.py"
+python3 "${SCRIPT_DIR}/../python/src/exercise_log/run_updater.py"
 deactivate
 
 # Add the new commit
