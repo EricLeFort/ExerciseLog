@@ -1,4 +1,6 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+24-NOV-2023,walk (treadmill),01:21:00,7.03,8513,484,0,141,150,""
+24-NOV-2023,walk (treadmill),01:10:44,6.80,7924,305,0,150,177,""
 23-NOV-2023,walk (treadmill),00:10:12,1.08,1320,0,0,134,156,"post-workout"
 23-NOV-2023,walk (treadmill),01:01:00,5.39,6525,370,0,150,161,"morning workout while fasted"
 21-NOV-2023,walk (treadmill),01:01:00,5.25,6292,407,0,145,158,"Watch died in the last minute or so, some numbers are a little fuzzy"
