@@ -29,8 +29,7 @@ RESTING_HEART_RATE_LEVELS = {
 
 
 def plot_workout_frequency(
-    all_workouts: pd.DataFrame,
-    n_day_avg_workout_duration: pd.DataFrame,
+    workout_durations: pd.DataFrame,
     n_days_to_avg: int,
     export_dir: Optional[str] = None,
     show_plot=True,
@@ -40,16 +39,16 @@ def plot_workout_frequency(
     y_min, y_max = 0, 210  # Setting a 3.5 hour max since there's a few backpacking days that mess up the scale
 
     # Draw the main graph contents and setup the axes
-    workout_durations_mins = all_workouts[ColumnName.DURATION] // 60
+    workout_durations_mins = workout_durations[ColumnName.DURATION] // 60
     plt.scatter(
-        all_workouts[ColumnName.DATE],
+        workout_durations[ColumnName.DATE],
         workout_durations_mins,
         s=5,
         label="Workout Duration",
     )
     plt.plot(
-        convert_pd_to_np(all_workouts[ColumnName.DATE]),
-        convert_pd_to_np(n_day_avg_workout_duration // 60),
+        convert_pd_to_np(workout_durations[ColumnName.DATE]),
+        convert_pd_to_np(workout_durations[ColumnName.AVG_DURATION] // 60),
         label=f"{n_days_to_avg}-Day Avg Daily Duration",
     )
 
@@ -61,7 +60,7 @@ def plot_workout_frequency(
 
     # Set up axes
     ax = plt.gca()
-    configure_x_axis_by_month(all_workouts)
+    configure_x_axis_by_month(workout_durations)
     ax.yaxis.set_major_formatter(ticker.FuncFormatter(convert_mins_to_hour_mins))
     ax.yaxis.set_major_locator(ticker.MultipleLocator(30))
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(10))
@@ -82,8 +81,7 @@ def plot_workout_frequency(
 
 
 def plot_resting_heart_rate(
-    all_workouts: pd.DataFrame,
-    health_metrics: pd.DataFrame,
+    health_metrics: np.ndarray,
     heart_rate_trendline: np.ndarray,
     n_days_to_extrapolate: int,
     export_dir: Optional[str] = None,
@@ -101,7 +99,7 @@ def plot_resting_heart_rate(
     )
     plt.plot(
         padded_dates.to_numpy(),
-        heart_rate_trendline,
+        heart_rate_trendline[ColumnName.RESTING_HEART_RATE],
         linestyle="--",
         label="Projected Resting HR",
     )
@@ -115,7 +113,7 @@ def plot_resting_heart_rate(
 
     # Set up axes
     ax = plt.gca()
-    configure_x_axis_by_month(all_workouts, end_padding_days=n_days_to_extrapolate)
+    configure_x_axis_by_month(heart_rate_trendline, end_padding_days=n_days_to_extrapolate)
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(1))
     ax.set_ylim([y_min, y_max])
     plt.grid(visible=True)
@@ -152,7 +150,7 @@ def plot_weight(
     )
     plt.plot(
         padded_dates.to_numpy(),
-        weight_trendline,
+        weight_trendline[ColumnName.WEIGHT],
         linestyle="--",
         label="Projected Weight",
     )

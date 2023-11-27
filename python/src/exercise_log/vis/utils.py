@@ -16,15 +16,15 @@ def show_gcf_corners(plot: plt):
     plot.gcf().text(1, 1, "x")
 
 
-def configure_x_axis_by_month(all_workouts: pd.DataFrame, start_padding_days: int = 1, end_padding_days: int = 1):
+def configure_x_axis_by_month(data: pd.DataFrame, start_padding_days: int = 1, end_padding_days: int = 1):
     """Sets the current axes x-axis to major tick by month, minor tick on Sundays, and have MMM-YYYY major labels."""
     ax = plt.gca()
     ax.xaxis.set_major_locator(mdates.MonthLocator(interval=1))
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %Y"))
     ax.xaxis.set_minor_locator(mdates.WeekdayLocator(byweekday=mdates.SU))
     plt.xlim(
-        all_workouts[DATE][0] - timedelta(days=start_padding_days),
-        all_workouts[DATE].tail(1) + timedelta(days=end_padding_days),
+        data[DATE].iloc[0] - timedelta(days=start_padding_days),
+        data[DATE].iloc[-1] + timedelta(days=end_padding_days),
     )
 
 

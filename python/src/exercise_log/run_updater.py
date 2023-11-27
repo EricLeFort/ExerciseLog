@@ -1,4 +1,5 @@
 from datetime import date
+from typing import List
 
 import pandas as pd
 
@@ -40,42 +41,45 @@ class HealthTrends:
         self.all_workouts = all_workouts
         self.health_metrics = health_metrics
 
-        self._avg_workout_duration = None
+        self._workout_durations = None
         self._weight_trendline = None
         self._heart_rate_trendline = None
 
-    def get_avg_workout_duration(self):
+    def get_workout_durations(self):
         """
         Returns the n-day average workout duration, computing it if it hasn't been already.
 
         Note: n-day average gives a sense of whether its keeping above the recommended baseline of 150 mins/week
         """
-        if self._avg_workout_duration is None:
-            self._avg_workout_duration = Trendsetter.compute_n_sample_avg(
-                self.all_workouts,
-                CName.DURATION,
-                N_DAYS_TO_AVG,
-            )
-        return self._avg_workout_duration
+        if self._workout_durations is None:
+            data = Trendsetter.compute_n_sample_avg(self.all_workouts, CName.DURATION, N_DAYS_TO_AVG)
+            self._workout_durations = pd.DataFrame({
+                CName.DATE: self.all_workouts[CName.DATE],
+                CName.AVG_DURATION: data,
+                CName.DURATION: self.all_workouts[CName.DURATION],
+            })
+        return self._workout_durations
 
     def get_weight_trendline(self):
         """Returns the linear trend of weight over time, first computing it if needed."""
         if self._weight_trendline is None:
-            self._weight_trendline = Trendsetter.get_line_of_best_fit(
-                self.health_metrics,
-                CName.WEIGHT,
-                EXTRAPOLATE_DAYS,
-            )
+            cname = CName.WEIGHT
+            data = Trendsetter.get_line_of_best_fit(self.health_metrics, cname, EXTRAPOLATE_DAYS)
+            self._weight_trendline = pd.DataFrame({
+                CName.DATE: self.get_padded_dates(cname),
+                cname: data,
+            })
         return self._weight_trendline
 
     def get_heart_rate_trendline(self):
         """Returns the logarithmic curve of best fit of resting heart rate over time, first computing it if needed."""
         if self._heart_rate_trendline is None:
-            self._heart_rate_trendline = Trendsetter.get_logarithmic_curve_of_best_fit(
-                self.health_metrics,
-                CName.RESTING_HEART_RATE,
-                EXTRAPOLATE_DAYS,
-            )
+            cname = CName.RESTING_HEART_RATE
+            data = Trendsetter.get_logarithmic_curve_of_best_fit(self.health_metrics, cname, EXTRAPOLATE_DAYS)
+            self._heart_rate_trendline = pd.DataFrame({
+                CName.DATE: self.get_padded_dates(cname),
+                cname: data,
+            })
         return self._heart_rate_trendline
 
     def get_padded_dates(self, c_name: ColumnName):
@@ -83,44 +87,29 @@ class HealthTrends:
         return get_padded_dates(nonnulls, EXTRAPOLATE_DAYS)
 
     @staticmethod
-    def _save_data(data: pd.DataFrame, dates: pd.DataFrame, c_name: str, fname: str):
+    def _save_data(data: pd.DataFrame, fname: str):
         """Just a simple wrapper around some repeated functionality"""
         if data is not None:
-            df = pd.DataFrame({CName.DATE: dates, c_name: data})
-            df.to_csv(f"{PREDS_DIR}/{fname}", index=False)
+            data.to_csv(f"{PREDS_DIR}/{fname}", index=False)
+        else:
+            TermColour.print_error(f"Data not saved to: {str(fname)}, it was missing.")
+
 
     def save_predictions(self):
         """Save all available predictions to disk."""
-        HealthTrends._save_data(
-            data=self.get_avg_workout_duration(),
-            dates=self.all_workouts[CName.DATE],
-            c_name=CName.DURATION,
-            fname="avg_workout_durations.csv",
-        )
-        HealthTrends._save_data(
-            data=self.get_heart_rate_trendline(),
-            dates=self.get_padded_dates(CName.RESTING_HEART_RATE),
-            c_name=CName.RESTING_HEART_RATE,
-            fname="resting_heart_rate_trendline.csv",
-        )
-        HealthTrends._save_data(
-            data=self.get_weight_trendline(),
-            dates=self.get_padded_dates(CName.WEIGHT),
-            c_name=CName.WEIGHT,
-            fname="weight_trendline.csv",
-        )
+        HealthTrends._save_data(data=self.get_workout_durations(), fname="avg_workout_durations.csv")
+        HealthTrends._save_data(data=self.get_heart_rate_trendline(), fname="resting_heart_rate_trendline.csv")
+        HealthTrends._save_data(data=self.get_weight_trendline(), fname="weight_trendline.csv")
 
 
 def build_health_visuals(health_trends: HealthTrends):
     plot_workout_frequency(
-        health_trends.all_workouts,
-        health_trends.get_avg_workout_duration(),
+        health_trends.get_workout_durations(),
         N_DAYS_TO_AVG,
         export_dir=ROOT_IMG_DIR,
         show_plot=False,
     )
     plot_resting_heart_rate(
-        health_trends.all_workouts,
         health_trends.health_metrics,
         health_trends.get_heart_rate_trendline(),
         EXTRAPOLATE_DAYS,

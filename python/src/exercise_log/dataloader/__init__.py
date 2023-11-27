@@ -15,6 +15,7 @@ class ColumnName(StrEnum):
     AVG_HEART_RATE = "avg_heart_rate"
     AVG_RES = "avg_resistance"
     AVG_WATT = "avg_wattage"
+    AVG_DURATION = "avg_duration(s)"
     DATE = DATE_CONST
     DATA_DURATION = "duration(HH:mm:ss)"  # This is the human-readable version -- it'll be dropped during processing
     DURATION = "duration(s)"  # Convert the human-readable durations to seconds for computational simplicity
