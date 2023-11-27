@@ -1,5 +1,4 @@
 from datetime import date
-from typing import List
 
 import pandas as pd
 
@@ -53,11 +52,12 @@ class HealthTrends:
         """
         if self._workout_durations is None:
             data = Trendsetter.compute_n_sample_avg(self.all_workouts, CName.DURATION, N_DAYS_TO_AVG)
-            self._workout_durations = pd.DataFrame({
+            column_dict = {
                 CName.DATE: self.all_workouts[CName.DATE],
                 CName.AVG_DURATION: data,
                 CName.DURATION: self.all_workouts[CName.DURATION],
-            })
+            }
+            self._workout_durations = pd.DataFrame(column_dict)
         return self._workout_durations
 
     def get_weight_trendline(self):
@@ -65,10 +65,7 @@ class HealthTrends:
         if self._weight_trendline is None:
             cname = CName.WEIGHT
             data = Trendsetter.get_line_of_best_fit(self.health_metrics, cname, EXTRAPOLATE_DAYS)
-            self._weight_trendline = pd.DataFrame({
-                CName.DATE: self.get_padded_dates(cname),
-                cname: data,
-            })
+            self._weight_trendline = pd.DataFrame({CName.DATE: self.get_padded_dates(cname), cname: data})
         return self._weight_trendline
 
     def get_heart_rate_trendline(self):
@@ -76,10 +73,7 @@ class HealthTrends:
         if self._heart_rate_trendline is None:
             cname = CName.RESTING_HEART_RATE
             data = Trendsetter.get_logarithmic_curve_of_best_fit(self.health_metrics, cname, EXTRAPOLATE_DAYS)
-            self._heart_rate_trendline = pd.DataFrame({
-                CName.DATE: self.get_padded_dates(cname),
-                cname: data,
-            })
+            self._heart_rate_trendline = pd.DataFrame({CName.DATE: self.get_padded_dates(cname), cname: data})
         return self._heart_rate_trendline
 
     def get_padded_dates(self, c_name: ColumnName):
@@ -93,7 +87,6 @@ class HealthTrends:
             data.to_csv(f"{PREDS_DIR}/{fname}", index=False)
         else:
             TermColour.print_error(f"Data not saved to: {str(fname)}, it was missing.")
-
 
     def save_predictions(self):
         """Save all available predictions to disk."""
@@ -112,14 +105,12 @@ def build_health_visuals(health_trends: HealthTrends):
     plot_resting_heart_rate(
         health_trends.health_metrics,
         health_trends.get_heart_rate_trendline(),
-        EXTRAPOLATE_DAYS,
         export_dir=ROOT_IMG_DIR,
         show_plot=False,
     )
     plot_weight(
         health_trends.health_metrics,
         health_trends.get_weight_trendline(),
-        EXTRAPOLATE_DAYS,
         export_dir=ROOT_IMG_DIR,
         show_plot=False,
     )

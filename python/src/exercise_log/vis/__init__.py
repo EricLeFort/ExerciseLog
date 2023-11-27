@@ -10,7 +10,7 @@ from exercise_log.constants import MIN_DAILY_ACTIVE_MINUTES
 from exercise_log.dataloader import ColumnName
 from exercise_log.strength import SetRating, SetType
 from exercise_log.strength.ontology import ExerciseInfo
-from exercise_log.utils import convert_mins_to_hour_mins, convert_pd_to_np, get_padded_dates
+from exercise_log.utils import convert_mins_to_hour_mins, convert_pd_to_np
 from exercise_log.vis.constants import BOTTOM_OFFSET, NON_GRAPH_AREA_SCALER, RIGHT_OF_AXIS_X_COORD
 from exercise_log.vis.utils import configure_x_axis_by_month, create_legend_and_title
 
@@ -83,14 +83,12 @@ def plot_workout_frequency(
 def plot_resting_heart_rate(
     health_metrics: np.ndarray,
     heart_rate_trendline: np.ndarray,
-    n_days_to_extrapolate: int,
     export_dir: Optional[str] = None,
     show_plot=True,
 ):  # pylint: disable=too-many-arguments
     y_min, y_max = 45, 90
 
     nonnull_heart_rates = health_metrics[health_metrics[ColumnName.RESTING_HEART_RATE].notnull()]
-    padded_dates = get_padded_dates(nonnull_heart_rates, n_days_to_extrapolate)
     plt.scatter(
         nonnull_heart_rates[ColumnName.DATE].to_numpy(),
         nonnull_heart_rates[ColumnName.RESTING_HEART_RATE].to_numpy(),
@@ -98,7 +96,7 @@ def plot_resting_heart_rate(
         label="Resting HR",
     )
     plt.plot(
-        padded_dates.to_numpy(),
+        heart_rate_trendline[ColumnName.DATE],
         heart_rate_trendline[ColumnName.RESTING_HEART_RATE],
         linestyle="--",
         label="Projected Resting HR",
@@ -113,7 +111,7 @@ def plot_resting_heart_rate(
 
     # Set up axes
     ax = plt.gca()
-    configure_x_axis_by_month(heart_rate_trendline, end_padding_days=n_days_to_extrapolate)
+    configure_x_axis_by_month(heart_rate_trendline)
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(1))
     ax.set_ylim([y_min, y_max])
     plt.grid(visible=True)
@@ -134,14 +132,12 @@ def plot_resting_heart_rate(
 def plot_weight(
     health_metrics: pd.DataFrame,
     weight_trendline: np.ndarray,
-    n_days_to_extrapolate: int,
     export_dir: Optional[str] = None,
     show_plot=True,
 ):
     y_min, y_max = 180, 305
 
     nonnull_weights = health_metrics[health_metrics[ColumnName.WEIGHT].notnull()]
-    padded_dates = get_padded_dates(nonnull_weights, n_days_to_extrapolate)
     plt.scatter(
         nonnull_weights[ColumnName.DATE].to_numpy(),
         nonnull_weights[ColumnName.WEIGHT].to_numpy(),
@@ -149,7 +145,7 @@ def plot_weight(
         label="Weight",
     )
     plt.plot(
-        padded_dates.to_numpy(),
+        weight_trendline[ColumnName.DATE],
         weight_trendline[ColumnName.WEIGHT],
         linestyle="--",
         label="Projected Weight",
@@ -164,7 +160,7 @@ def plot_weight(
 
     # Set up axes
     ax = plt.gca()
-    configure_x_axis_by_month(nonnull_weights, end_padding_days=n_days_to_extrapolate)
+    configure_x_axis_by_month(weight_trendline)
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(5))
     ax.set_ylim([y_min, y_max])
     plt.grid(visible=True)
