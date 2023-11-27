@@ -7,3 +7,8 @@
 .metric-graph {
 	padding-top: 1%;
 }
+
+svg {
+    display: block;
+    margin: 0 auto;
+}
