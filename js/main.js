@@ -10,9 +10,9 @@ const legendIconHeight = "3.75em";
 
 const lineStrokeWidth = 2;
 
-const weightGraphId = "graph-weight-tmp";
-const workoutFrequencyGraphId = "graph-workout-frequency-tmp";
-const heartRateGraphId = "graph-resting-heartrate-tmp"
+const weightGraphId = "graph-weight";
+const workoutFrequencyGraphId = "graph-workout-frequency";
+const heartRateGraphId = "graph-resting-heartrate"
 
 // TODO make separate dataloading module for this logic
 // TODO also add the rest of the relevant loaders
@@ -187,7 +187,7 @@ function addLinearYAxis(svg, minVal, maxVal, majorStep, minorStep) {
   svg.append("g")
     .attr("transform", `translate(${graphMargin}, 0)`)
     .call(d3.axisLeft(y)
-      .tickValues(d3.range(minVal, maxVal, majorStep)))
+      .tickValues(d3.range(minVal, maxVal + 1, majorStep)))
     .call(g => g.selectAll(".tick line").clone()
       .attr("stroke-opacity", 0.3)
       .attr("x1", contentWidth));
@@ -242,13 +242,13 @@ async function readCSV(path, row) {
   return await d3.csv(path, row);
 }
 
-function plotWeight(data, weightTrendline) {
+function plotWeight(healthMetrics, weightTrendline) {
   const minWeight = 180;
   const maxWeight = 305;
   const nDaysToExtrapolate = 100;
 
-  const firstDate = d3_min(data, "date");
-  const lastDate = d3_max(data, "date").addDays(nDaysToExtrapolate);
+  const firstDate = d3_min(healthMetrics, "date");
+  const lastDate = d3_max(healthMetrics, "date").addDays(nDaysToExtrapolate);
 
   // Create the SVG container
   const svg = d3.create("svg")
@@ -305,7 +305,7 @@ function plotWeight(data, weightTrendline) {
     .attr("stroke", "steelblue")
     .attr("stroke-width", 1.5)
     .selectAll("dot")
-    .data(data)
+    .data(healthMetrics)
     .enter().append("circle")
       .attr("cx", d => x(d["date"]))
       .attr("cy", d => y(d["weight(lbs)"]))
@@ -326,12 +326,12 @@ function plotWeight(data, weightTrendline) {
   return svg;
 }
 
-function plotWorkoutFrequency(data) {
+function plotWorkoutFrequency(workoutFrequencies) {
   const minTime = 0;
   const maxTime = 210;
 
-  const firstDate = d3_min(data, "date");
-  const lastDate = d3_max(data, "date");
+  const firstDate = d3_min(workoutFrequencies, "date");
+  const lastDate = d3_max(workoutFrequencies, "date");
 
   // Create the SVG container
   const svg = d3.create("svg")
@@ -386,7 +386,7 @@ function plotWorkoutFrequency(data) {
     .attr("stroke", "steelblue")
     .attr("stroke-width", 1.5)
     .selectAll("dot")
-    .data(data)
+    .data(workoutFrequencies)
     .enter().append("circle")
       .filter( function (d) { return d["duration"] <= maxTime; })
       .attr("cx", d => x(d["date"]))
@@ -401,15 +401,100 @@ function plotWorkoutFrequency(data) {
     .style("fill", "none")
     .style("stroke", "steelblue")
     .style("stroke-width", lineStrokeWidth)
-    .attr("d", valueLine(data));
+    .attr("d", valueLine(workoutFrequencies));
 
   // Annotate object and append to the page
   svg.attr("id", workoutFrequencyGraphId);
   return svg;
 }
 
-function plotHeartRate(data, heartRateTrendline) {
-  // TODO
+function plotHeartRate(healthMetrics, heartRateTrendline) {
+  const minHR = 45;
+  const maxHR = 85;
+  const nDaysToExtrapolate = 100;
+
+  const firstDate = d3_min(heartRateTrendline, "date");
+  const lastDate = d3_max(heartRateTrendline, "date");
+
+  // Create the SVG container
+  const svg = d3.create("svg")
+    .attr("width", graphWidth)
+    .attr("height", graphHeight);
+
+  // Create the title, axes, and reference lines
+  addTitle(svg, "Resting Heart Rate");
+  addDateXAxis(svg, firstDate, lastDate);
+  addLinearYAxis(svg, minHR, maxHR, 5, 1);
+  addRefLine(svg, "Poor", minHR, maxHR, 82, RefLineType.Marker);
+  addRefLine(svg, "Average", minHR, maxHR, 72, RefLineType.Marker);
+  addRefLine(svg, "Above Average", minHR, maxHR, 68, RefLineType.Marker);
+  addRefLine(svg, "Good", minHR, maxHR, 63, RefLineType.Marker);
+  addRefLine(svg, "Excellent", minHR, maxHR, 58, RefLineType.Marker);
+  addRefLine(svg, "Athlete", minHR, maxHR, 50, RefLineType.Marker);
+
+  // Add the legend
+  svg.append("text")
+    .attr("x", graphWidth / 2 - legendSpacing / 2)
+    .attr("y", legendHeight)
+    .style("text-anchor", "middle")
+    .text("Projected Resting HR")
+    .attr("font-size", "0.8em");
+  svg.append("line")
+    .attr("x1", graphWidth / 2 - legendSpacing)
+    .attr("y1", legendIconHeight)
+    .attr("x2", graphWidth / 2 - 0.85 * legendSpacing)
+    .attr("y2", legendIconHeight)
+    .style("stroke", "steelblue")
+    .style("stroke-width", lineStrokeWidth)
+    .style("stroke-dasharray", ("8, 4"));
+  svg.append("text")
+    .attr("x", graphWidth / 2 + legendSpacing / 2)
+    .attr("y", legendHeight)
+    .style("text-anchor", "middle")
+    .text("Resting HR")
+    .attr("font-size", "0.8em");
+  svg.append("g")
+    .attr("fill", "steelblue")
+    .attr("stroke", "steelblue")
+    .attr("stroke-width", 1.5)
+    .append("circle")
+      .attr("cx", graphWidth / 2 + 0.2 * legendSpacing)
+      .attr("cy", legendIconHeight)
+      .attr("r", 1.5);
+
+  // Plot the data
+  const axisBottom = graphHeight - graphMargin;
+  const x = d3.scaleUtc()
+    .domain([firstDate, lastDate])
+    .range([graphMargin, graphWidth - graphMargin]);
+  const y = d3.scaleLinear()
+    .domain([minHR, maxHR])
+    .range([axisBottom, graphMargin]);
+  svg.append("g")
+    .attr("fill", "steelblue")
+    .attr("stroke", "steelblue")
+    .attr("stroke-width", 1.5)
+    .selectAll("dot")
+    .data(healthMetrics)
+    .enter().append("circle")
+      .attr("cx", d => x(d["date"]))
+      .attr("cy", d => y(d["resting_heart_rate(bpm)"]))
+      .attr("r", 1.5);
+
+  // Plot the trendline
+  valueLine = d3.line()
+    .x(function (d, i) { return x(d["date"]); })
+    .y(function (d, i) { return y(d["resting_heart_rate(bpm)"]); });
+  svg.append("path")
+    .style("fill", "none")
+    .style("stroke", "steelblue")
+    .style("stroke-width", lineStrokeWidth)
+    .style("stroke-dasharray", ("8, 4"))
+    .attr("d", valueLine(heartRateTrendline));
+
+  // Annotate object and append to the page
+  svg.attr("id", heartRateGraphId);
+  return svg;
 }
 
 (async function() {
@@ -430,5 +515,5 @@ function plotHeartRate(data, heartRateTrendline) {
   // Build and display the graphs
   document.body.append(plotWeight(healthMetrics, weightTrendline).node());
   document.body.append(plotWorkoutFrequency(workoutFrequency).node());
-  //document.body.append(plotHeartRate(healthMetrics, heartRateTrendline).node());
+  document.body.append(plotHeartRate(healthMetrics, heartRateTrendline).node());
 })();
