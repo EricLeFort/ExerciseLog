@@ -440,9 +440,9 @@ function plotHeartRate(healthMetrics, heartRateTrendline) {
     .text("Projected Resting HR")
     .attr("font-size", "0.8em");
   svg.append("line")
-    .attr("x1", graphWidth / 2 - legendSpacing)
+    .attr("x1", graphWidth / 2 - 1.05 * legendSpacing)
     .attr("y1", legendIconHeight)
-    .attr("x2", graphWidth / 2 - 0.85 * legendSpacing)
+    .attr("x2", graphWidth / 2 - 0.9 * legendSpacing)
     .attr("y2", legendIconHeight)
     .style("stroke", "steelblue")
     .style("stroke-width", lineStrokeWidth)
