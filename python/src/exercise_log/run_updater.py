@@ -36,9 +36,15 @@ SKIP_EXERCISE_PLOT_EXERCISES = {
 class HealthTrends:
     """Creates relevant trendlines and stores the results"""
 
-    def __init__(self, all_workouts: pd.DataFrame, health_metrics: pd.DataFrame):
+    def __init__(
+        self,
+        all_workouts: pd.DataFrame,
+        health_metrics: pd.DataFrame,
+        extrapolate_days: int = EXTRAPOLATE_DAYS,
+    ):
         self.all_workouts = all_workouts
         self.health_metrics = health_metrics
+        self.extrapolate_days = extrapolate_days
 
         self._workout_durations = None
         self._weight_trendline = None
@@ -64,7 +70,7 @@ class HealthTrends:
         """Returns the linear trend of weight over time, first computing it if needed."""
         if self._weight_trendline is None:
             cname = CName.WEIGHT
-            data = Trendsetter.get_line_of_best_fit(self.health_metrics, cname, EXTRAPOLATE_DAYS)
+            data = Trendsetter.get_line_of_best_fit(self.health_metrics, cname, self.extrapolate_days)
             self._weight_trendline = pd.DataFrame({CName.DATE: self.get_padded_dates(cname), cname: data})
         return self._weight_trendline
 
@@ -72,13 +78,13 @@ class HealthTrends:
         """Returns the logarithmic curve of best fit of resting heart rate over time, first computing it if needed."""
         if self._heart_rate_trendline is None:
             cname = CName.RESTING_HEART_RATE
-            data = Trendsetter.get_logarithmic_curve_of_best_fit(self.health_metrics, cname, EXTRAPOLATE_DAYS)
+            data = Trendsetter.get_logarithmic_curve_of_best_fit(self.health_metrics, cname, self.extrapolate_days)
             self._heart_rate_trendline = pd.DataFrame({CName.DATE: self.get_padded_dates(cname), cname: data})
         return self._heart_rate_trendline
 
     def get_padded_dates(self, c_name: ColumnName):
         nonnulls = self.health_metrics[self.health_metrics[c_name].notnull()]
-        return get_padded_dates(nonnulls, EXTRAPOLATE_DAYS)
+        return get_padded_dates(nonnulls, self.extrapolate_days)
 
     @staticmethod
     def _save_data(data: pd.DataFrame, fname: str):

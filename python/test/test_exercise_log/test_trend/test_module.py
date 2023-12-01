@@ -61,7 +61,7 @@ def _assert_foot_cardio_summary(tester: unittest.TestCase, data: pd.DataFrame, i
     filtered_data = data.iloc[first_idx : last_idx + 1]
     total_dist = round(sum(filtered_data[CName.DISTANCE]), 1)
     total_elevation = sum(filtered_data[CName.ELEVATION])
-    expected_str = f"Moving my body by foot across {total_dist} km and up {total_elevation} m."
+    expected_str = f"Moving my body by foot across {total_dist:,} km and up {total_elevation:,} m."
     _assert_summary(tester, data, FootCardioSummary.build_summary, idx_range, expected_str)
 
 
@@ -70,7 +70,7 @@ def _assert_bike_cardio_summary(tester: unittest.TestCase, data: pd.DataFrame, i
     filtered_data = data.iloc[first_idx : last_idx + 1]
     total_dist = round(filtered_data[CName.DISTANCE].sum(), 1)
     total_output = round((filtered_data[CName.DURATION] * filtered_data[CName.AVG_WATT] / 1000).sum())
-    expected_str = f"Biking across {total_dist} km with a total output of {total_output} KJ."
+    expected_str = f"Biking across {total_dist:,} km with a total output of {total_output:,} KJ."
     _assert_summary(tester, data, BikeCardioSummary.build_summary, idx_range, expected_str)
 
 
@@ -80,7 +80,7 @@ def _assert_weight_training_summary(tester: unittest.TestCase, data: pd.DataFram
     weight_moved = int((filtered_data[CName.REPS] * filtered_data[CName.WEIGHT]).sum())
     set_count = filtered_data.shape[0]
     rep_count = filtered_data[CName.REPS].sum()
-    expected_str = f"Lifting {weight_moved:,} lbs across {set_count} sets and {rep_count} reps."
+    expected_str = f"Lifting {weight_moved:,} lbs across {set_count:,} sets and {rep_count:,} reps."
     _assert_summary(tester, data, WeightTrainingSummary.build_summary, idx_range, expected_str)
 
 

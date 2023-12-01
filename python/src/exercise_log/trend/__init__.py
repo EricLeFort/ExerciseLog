@@ -139,7 +139,7 @@ class WeightTrainingSummary(ExerciseSummary):
         return WeightTrainingSummary(weight_moved, set_count, rep_count)
 
     def __str__(self):
-        return f"Lifting {self.weight_moved:,} lbs across {self.set_count} sets and {self.rep_count} reps."
+        return f"Lifting {self.weight_moved:,} lbs across {self.set_count:,} sets and {self.rep_count:,} reps."
 
 
 @dataclass
@@ -154,7 +154,7 @@ class FootCardioSummary(ExerciseSummary):
         return FootCardioSummary(dist, elv_gain)
 
     def __str__(self):
-        return f"Moving my body by foot across {self.dist} km and up {self.elv_gain} m."
+        return f"Moving my body by foot across {self.dist:,} km and up {self.elv_gain:,} m."
 
 
 @dataclass
@@ -169,4 +169,4 @@ class BikeCardioSummary(ExerciseSummary):
         return BikeCardioSummary(dist, total_output)
 
     def __str__(self):
-        return f"Biking across {self.dist} km with a total output of {self.total_output} KJ."
+        return f"Biking across {self.dist:,} km with a total output of {self.total_output:,} KJ."
