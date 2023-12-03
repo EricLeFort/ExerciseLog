@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+01-DEC-2023,walk (treadmill),01:07:02,5.81,7079,450,0,151,159,""
 29-NOV-2023,walk (treadmill),01:06:00,5.72,6910,439,0,147,160,""
 27-NOV-2023,walk (treadmill),01:12:00,6.98,8063,457,0,159,193,""
 25-NOV-2023,walk (treadmill),01:09:22,6.01,7361,433,0,142,176,"1 year of cardio, 1000km walked! Woohoo!"
