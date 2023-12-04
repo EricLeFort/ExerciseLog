@@ -1,4 +1,22 @@
 date,exercise,reps,weight(lbs),rating
+03-DEC-2023,Lawnmowers,10,70,good
+03-DEC-2023,Lawnmowers,10,70,good
+03-DEC-2023,Lawnmowers,10,70,good
+03-DEC-2023,Lat Pulldown,10,70,warm-up
+03-DEC-2023,Lat Pulldown,12,130,good
+03-DEC-2023,Lat Pulldown,10,130,good
+03-DEC-2023,Lat Pulldown,10,130,good
+03-DEC-2023,Pullovers,10,55,good
+03-DEC-2023,Skullcrushers,10,72,good
+03-DEC-2023,Skullcrushers,10,77,good
+03-DEC-2023,Skullcrushers,8,82,failure
+03-DEC-2023,Overhead Tricep Extension,10,20,warm-up
+03-DEC-2023,Overhead Tricep Extension,10,35,good
+03-DEC-2023,Overhead Tricep Extension,10,35,good
+03-DEC-2023,Overhead Tricep Extension,10,35,good
+03-DEC-2023,Concentration Curl,8,30,good
+03-DEC-2023,Concentration Curl,8,30,good
+03-DEC-2023,Concentration Curl,8,30,good
 02-DEC-2023,Bicep Curl,15,15,warm-up
 02-DEC-2023,Bicep Curl,12,30,good
 02-DEC-2023,Bicep Curl,12,30,good
