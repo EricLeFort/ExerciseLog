@@ -157,7 +157,9 @@ function addDateXAxis(svg, firstDate, lastDate) {
   // Major gridlines (monthly)
   svg.append("g")
     .attr("transform", `translate(0, ${axisBottom})`)
-    .call(d3.axisBottom(x).tickFormat(date_tick))
+    .call(d3.axisBottom(x)
+      .ticks(d3.timeMonth.every(1))
+      .tickFormat(date_tick))
     .call(g => g.selectAll(".tick line").clone()
       .attr("stroke-opacity", 0.3)
       .attr("y1", -axisTop));
