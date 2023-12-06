@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+05-DEC-2023,walk (treadmill),01:01:08,5.47,6789,408,0,153,177,""
 03-DEC-2023,walk (treadmill),01:06:00,5.73,6902,450,0,152,163,""
 01-DEC-2023,walk (treadmill),01:07:02,5.81,7079,450,0,151,159,""
 29-NOV-2023,walk (treadmill),01:06:00,5.72,6910,439,0,147,160,""
