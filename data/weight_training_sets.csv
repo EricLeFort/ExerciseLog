@@ -1,4 +1,33 @@
 date,exercise,reps,weight(lbs),rating
+04-DEC-2023,Deadlift,10,135,warm-up
+04-DEC-2023,Deadlift,10,225,good
+04-DEC-2023,Deadlift,10,225,good
+04-DEC-2023,Deadlift,8,255,good
+04-DEC-2023,Shrugs,10,55,good
+04-DEC-2023,Shrugs,10,55,good
+04-DEC-2023,Shrugs,10,55,good
+04-DEC-2023,Single-Arm Farmer's Carry,50,55,good
+04-DEC-2023,Single-Arm Farmer's Carry,50,55,good
+04-DEC-2023,Single-Arm Farmer's Carry,50,55,good
+04-DEC-2023,Parallel Bar Leg Raise,12,0,good
+04-DEC-2023,Parallel Bar Leg Raise,12,0,good
+04-DEC-2023,Parallel Bar Leg Raise,12,0,good
+04-DEC-2023,Bench Press,10,135,warm-up
+04-DEC-2023,Bench Press,5,225,good
+04-DEC-2023,Bench Press,5,245,good
+04-DEC-2023,Bench Press,5,235,good
+04-DEC-2023,Bench Press,5,235,good
+04-DEC-2023,Bench Press,5,235,good
+04-DEC-2023,Incline Dumbbell Press,12,40,warm-up
+04-DEC-2023,Incline Dumbbell Press,10,70,good
+04-DEC-2023,Incline Dumbbell Press,10,70,good
+04-DEC-2023,Incline Dumbbell Press,10,70,good
+04-DEC-2023,Machine Pec Flies,7,150,warm-up
+04-DEC-2023,Machine Pec Flies,5,245,good
+04-DEC-2023,Machine Pec Flies,5,245,good
+04-DEC-2023,Machine Pec Flies,5,245,bad
+04-DEC-2023,Machine Pec Flies,4,240,failure
+04-DEC-2023,Machine Pec Flies,5,240,good
 03-DEC-2023,Lawnmowers,10,70,good
 03-DEC-2023,Lawnmowers,10,70,good
 03-DEC-2023,Lawnmowers,10,70,good
