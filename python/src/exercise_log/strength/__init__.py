@@ -31,6 +31,7 @@ class Exercise(StrEnum):
     DEC_BENCH_PRESS = "Decline Bench Press"
     DEFICIT_PUSH_UPS = "Deficit Push-Ups"
     DELT_FLIES = "Delt Flies"
+    DIPS = "Dips"
     DUMBBELL_PRESS = "Dumbbell Press"
     FINGER_CURL = "Finger Curl"
     FRONT_LIFT = "Front Lift"
