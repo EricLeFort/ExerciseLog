@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+08-DEC-2023,run (treadmill),00:12:40,1.93,1706,0,163,191,"post-workout HIIT session"
 25-NOV-2023,run (treadmill),00:01:51,0.36,281,0,171,186,"Just a single, celebratory 1-minute 15.0kph sprint post walk workout"
 12-NOV-2023,run (treadmill),00:11:00,1.65,1499,0,163,183,"Post-workout; HIIT-lite style"
 10-NOV-2023,run (treadmill),00:12:00,1.60,1755,2,153,159,"Pre-workout"
