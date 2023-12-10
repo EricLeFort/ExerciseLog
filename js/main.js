@@ -20,8 +20,8 @@ async function loadHealthMetrics() {
   function row(d) {
     return {
       "date": new Date(d.date),
-      "weight(lbs)": +d["weight(lbs)"],
-      "resting_heart_rate(bpm)": +d["resting_heart_rate(bpm)"],
+      "weight(lbs)": d3_int_or_null(d["weight(lbs)"]),
+      "resting_heart_rate(bpm)": d3_int_or_null(d["resting_heart_rate(bpm)"]),
       "notes": d.notes,
     };
   }
@@ -63,6 +63,10 @@ Date.prototype.addDays = function(days) {
     const date = new Date(this.valueOf());
     date.setDate(date.getDate() + days);
     return date;
+}
+
+function d3_int_or_null(val) {
+  return val === "" ? null : +val;
 }
 
 function d3_min(data, c_name) {
@@ -305,10 +309,10 @@ function plotWeight(healthMetrics, weightTrendline) {
   svg.append("g")
     .attr("fill", "steelblue")
     .attr("stroke", "steelblue")
-    .attr("stroke-width", 1.5)
     .selectAll("dot")
     .data(healthMetrics)
     .enter().append("circle")
+      .filter(d => d["weight(lbs)"] !== null)
       .attr("cx", d => x(d["date"]))
       .attr("cy", d => y(d["weight(lbs)"]))
       .attr("r", 1.5);
@@ -386,7 +390,6 @@ function plotWorkoutFrequency(workoutFrequencies) {
   svg.append("g")
     .attr("fill", "steelblue")
     .attr("stroke", "steelblue")
-    .attr("stroke-width", 1.5)
     .selectAll("dot")
     .data(workoutFrequencies)
     .enter().append("circle")
@@ -475,10 +478,10 @@ function plotHeartRate(healthMetrics, heartRateTrendline) {
   svg.append("g")
     .attr("fill", "steelblue")
     .attr("stroke", "steelblue")
-    .attr("stroke-width", 1.5)
     .selectAll("dot")
     .data(healthMetrics)
     .enter().append("circle")
+      .filter(d => d["resting_heart_rate(bpm)"] !== null)
       .attr("cx", d => x(d["date"]))
       .attr("cy", d => y(d["resting_heart_rate(bpm)"]))
       .attr("r", 1.5);
@@ -499,6 +502,56 @@ function plotHeartRate(healthMetrics, heartRateTrendline) {
   return svg;
 }
 
+function plotBasic(data, field, title, minVal, maxVal, minorStep, majorStep) {
+  // First filter out any null entries
+  data = data.filter(d => d[field] !== null);
+
+  const firstDate = d3_min(data, "date");
+  const lastDate = d3_max(data, "date");
+
+  // Create the SVG container
+  const svg = d3.create("svg")
+    .attr("width", graphWidth)
+    .attr("height", graphHeight);
+
+  // Create the title, axes, and reference lines
+  addTitle(svg, title);
+  addDateXAxis(svg, firstDate, lastDate);
+  addLinearYAxis(svg, minVal, maxVal, minorStep, majorStep);
+
+  // Plot each point
+  const axisBottom = graphHeight - graphMargin;
+  const x = d3.scaleUtc()
+    .domain([firstDate, lastDate])
+    .range([graphMargin, graphWidth - graphMargin]);
+  const y = d3.scaleLinear()
+    .domain([minVal, maxVal])
+    .range([axisBottom, graphMargin]);
+  svg.append("g")
+    .attr("fill", "steelblue")
+    .attr("stroke", "steelblue")
+    .selectAll("dot")
+    .data(data)
+    .enter().append("circle")
+      .attr("cx", d => x(d["date"]))
+      .attr("cy", d => y(d[field]))
+      .attr("r", 1.5);
+
+  // Plot the line
+  valueLine = d3.line()
+    .x(function (d, i) { return x(d["date"]); })
+    .y(function (d, i) { return y(d[field]); });
+  svg.append("path")
+    .style("fill", "none")
+    .style("stroke", "steelblue")
+    .style("stroke-width", lineStrokeWidth)
+    .attr("d", valueLine(data));
+
+  // Annotate object and append to the page
+  svg.attr("id", "basic-plot");
+  return svg;
+}
+
 (async function() {
   // Load data
   const healthMetrics = await loadHealthMetrics();
@@ -514,7 +567,7 @@ function plotHeartRate(healthMetrics, heartRateTrendline) {
   const workoutFrequency = await loadWorkoutFrequency();
   const heartRateTrendline = await loadHeartRateTrendline();
 
-  // Build and display the graphs
+  // Build and display the main graphs
   document.body.append(plotWeight(healthMetrics, weightTrendline).node());
   document.body.append(plotWorkoutFrequency(workoutFrequency).node());
   document.body.append(plotHeartRate(healthMetrics, heartRateTrendline).node());
