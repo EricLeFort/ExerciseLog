@@ -28,6 +28,24 @@ async function loadHealthMetrics() {
   return await readCSV(`${base_data_path}/health_metrics.csv`, row);
 }
 
+async function loadWalks() {
+  function row(d) {
+    return {
+      "date": new Date(d.date),
+      "workout_type": d.workout_type,
+      "duration(s)": durationToS(d["duration(HH:mm:ss)"]),
+      "distance(km)": d3NumOrNull(d["distance(km)"]),
+      "steps": d3IntOrNull(d["steps"]),
+      "elevation(m)": d3IntOrNull(d["elevation(m)"]),
+      "weight(lbs)": d3NumOrNull(d["weight(lbs)"]),
+      "avg_heart_rate": d3IntOrNull(d["avg_heart_rate"]),
+      "max_heart_rate": d3IntOrNull(d["max_heart_rate"]),
+      "notes": d.notes,
+    };
+  }
+  return await readCSV(`${base_data_path}/walks.csv`, row);
+}
+
 async function loadWeightTrendline() {
   function row(d) {
     return {
@@ -63,6 +81,17 @@ Date.prototype.addDays = function(days) {
     const date = new Date(this.valueOf());
     date.setDate(date.getDate() + days);
     return date;
+}
+
+function durationToS(val) {
+  const hoursToS = 60 * 60;
+  const minsToS = 60;
+  pieces = val.split(":")
+  return hoursToS * +pieces[0] + minsToS * +pieces[1] + +pieces[2]
+}
+
+function d3NumOrNull(val) {
+  return val === "" ? null : Number(val);
 }
 
 function d3IntOrNull(val) {
@@ -555,7 +584,7 @@ function plotBasic(data, field, title, minVal, maxVal, minorStep, majorStep) {
 (async function() {
   // Load data
   const healthMetrics = await loadHealthMetrics();
-  //const walks = readCSV(`${base_data_path}/walks.csv`);
+  const walks = await loadWalks();
   //const bikes = readCSV(`${base_data_path}/bikes.csv`);
   //const runs = readCSV(`${base_data_path}/runs.csv`);
   //const weight_training_workouts = readCSV(`${base_data_path}/weight_training_workouts.csv`);
