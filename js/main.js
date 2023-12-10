@@ -20,8 +20,8 @@ async function loadHealthMetrics() {
   function row(d) {
     return {
       "date": new Date(d.date),
-      "weight(lbs)": d3_int_or_null(d["weight(lbs)"]),
-      "resting_heart_rate(bpm)": d3_int_or_null(d["resting_heart_rate(bpm)"]),
+      "weight(lbs)": d3IntOrNull(d["weight(lbs)"]),
+      "resting_heart_rate(bpm)": d3IntOrNull(d["resting_heart_rate(bpm)"]),
       "notes": d.notes,
     };
   }
@@ -65,15 +65,15 @@ Date.prototype.addDays = function(days) {
     return date;
 }
 
-function d3_int_or_null(val) {
+function d3IntOrNull(val) {
   return val === "" ? null : +val;
 }
 
-function d3_min(data, c_name) {
+function d3Min(data, c_name) {
   return d3.min(data, function(row) { return row[c_name]; });
 }
 
-function d3_max(data, c_name) {
+function d3Max(data, c_name) {
   return d3.max(data, function(row) { return row[c_name]; });
 }
 
@@ -253,8 +253,8 @@ function plotWeight(healthMetrics, weightTrendline) {
   const maxWeight = 305;
   const nDaysToExtrapolate = 100;
 
-  const firstDate = d3_min(healthMetrics, "date");
-  const lastDate = d3_max(healthMetrics, "date").addDays(nDaysToExtrapolate);
+  const firstDate = d3Min(healthMetrics, "date");
+  const lastDate = d3Max(healthMetrics, "date").addDays(nDaysToExtrapolate);
 
   // Create the SVG container
   const svg = d3.create("svg")
@@ -336,8 +336,8 @@ function plotWorkoutFrequency(workoutFrequencies) {
   const minTime = 0;
   const maxTime = 210;
 
-  const firstDate = d3_min(workoutFrequencies, "date");
-  const lastDate = d3_max(workoutFrequencies, "date");
+  const firstDate = d3Min(workoutFrequencies, "date");
+  const lastDate = d3Max(workoutFrequencies, "date");
 
   // Create the SVG container
   const svg = d3.create("svg")
@@ -418,8 +418,8 @@ function plotHeartRate(healthMetrics, heartRateTrendline) {
   const maxHR = 85;
   const nDaysToExtrapolate = 100;
 
-  const firstDate = d3_min(heartRateTrendline, "date");
-  const lastDate = d3_max(heartRateTrendline, "date");
+  const firstDate = d3Min(heartRateTrendline, "date");
+  const lastDate = d3Max(heartRateTrendline, "date");
 
   // Create the SVG container
   const svg = d3.create("svg")
@@ -506,8 +506,8 @@ function plotBasic(data, field, title, minVal, maxVal, minorStep, majorStep) {
   // First filter out any null entries
   data = data.filter(d => d[field] !== null);
 
-  const firstDate = d3_min(data, "date");
-  const lastDate = d3_max(data, "date");
+  const firstDate = d3Min(data, "date");
+  const lastDate = d3Max(data, "date");
 
   // Create the SVG container
   const svg = d3.create("svg")
