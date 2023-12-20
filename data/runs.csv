@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+19-DEC-2023,run (outdoor),00:04:55,0.92,824,0,170,181,"run to earnscliffe rec center"
 18-DEC-2023,run (outdoor),00:05:40,0.92,931,4,169,191,"run from earnscliffe rec center back home"
 18-DEC-2023,run (outdoor),00:03:50,0.74,680,0,167,186,"run to the convenience store on the way to earnscliffe rec center; step count is approximate"
 08-DEC-2023,run (treadmill),00:12:40,1.93,1706,0,163,191,"post-workout HIIT session"
