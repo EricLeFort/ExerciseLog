@@ -1,4 +1,29 @@
 date,exercise,reps,weight(lbs),rating
+20-DEC-2023,Lateral Lift,12,25,good
+20-DEC-2023,Lateral Lift,8,30,good
+20-DEC-2023,Lateral Lift,8,30,good
+20-DEC-2023,Arnold Press,10,35,warm-up
+20-DEC-2023,Arnold Press,10,60,good
+20-DEC-2023,Arnold Press,10,60,good
+20-DEC-2023,Arnold Press,10,60,bad
+20-DEC-2023,Full Cans,20,10,good
+20-DEC-2023,Full Cans,20,10,good
+20-DEC-2023,Full Cans,20,10,good
+20-DEC-2023,Delt Flies,10,55,warm-up
+20-DEC-2023,Delt Flies,10,100,good
+20-DEC-2023,Delt Flies,10,100,good
+20-DEC-2023,Delt Flies,10,100,good
+20-DEC-2023,Dumbbell Lunges,10,130,good
+20-DEC-2023,Dumbbell Lunges,10,130,bad
+20-DEC-2023,Dumbbell Lunges,10,130,good
+20-DEC-2023,Single-Leg Leg Curl,10,55,warm-up
+20-DEC-2023,Single-Leg Leg Curl,10,90,good
+20-DEC-2023,Single-Leg Leg Curl,10,90,good
+20-DEC-2023,Single-Leg Leg Curl,10,90,good
+20-DEC-2023,Single-Leg Leg Extension,10,60,warm-up
+20-DEC-2023,Single-Leg Leg Extension,10,90,good
+20-DEC-2023,Single-Leg Leg Extension,10,90,good
+20-DEC-2023,Single-Leg Leg Extension,10,90,good
 18-DEC-2023,Bench Press,5,137.5,warm-up
 18-DEC-2023,Bench Press,5,227.5,good
 18-DEC-2023,Bench Press,5,227.5,good
@@ -1194,9 +1219,9 @@ date,exercise,reps,weight(lbs),rating
 30-SEP-2023,Squats,5,225,good
 30-SEP-2023,Squats,5,225,good
 30-SEP-2023,Squat Walk-Out,1,365,good
-30-SEP-2023,Lunges,10,45,good
-30-SEP-2023,Lunges,10,45,good
-30-SEP-2023,Lunges,10,45,good
+30-SEP-2023,Single-Arm Dumbbell Lunges,10,45,good
+30-SEP-2023,Single-Arm Dumbbell Lunges,10,45,good
+30-SEP-2023,Single-Arm Dumbbell Lunges,10,45,good
 30-SEP-2023,Single-Leg Leg Curl,5,80,warm-up
 30-SEP-2023,Single-Leg Leg Curl,10,115,good
 30-SEP-2023,Single-Leg Leg Curl,10,115,good
@@ -1289,9 +1314,9 @@ date,exercise,reps,weight(lbs),rating
 23-SEP-2023,Squats,5,265,good
 23-SEP-2023,Squats,5,265,good
 23-SEP-2023,Squats,5,255,good
-23-SEP-2023,Lunges,10,40,good
-23-SEP-2023,Lunges,10,40,good
-23-SEP-2023,Lunges,10,40,good
+23-SEP-2023,Single-Arm Dumbbell Lunges,10,40,good
+23-SEP-2023,Single-Arm Dumbbell Lunges,10,40,good
+23-SEP-2023,Single-Arm Dumbbell Lunges,10,40,good
 23-SEP-2023,Single-Leg Leg Curl,5,90,warm-up
 23-SEP-2023,Single-Leg Leg Curl,10,115,good
 23-SEP-2023,Single-Leg Leg Curl,10,115,good
@@ -1442,9 +1467,9 @@ date,exercise,reps,weight(lbs),rating
 08-SEP-2023,Squats,5,255,good
 08-SEP-2023,Squats,5,255,good
 08-SEP-2023,Squats,5,255,good
-08-SEP-2023,Lunges,10,35,good
-08-SEP-2023,Lunges,10,35,good
-08-SEP-2023,Lunges,10,35,good
+08-SEP-2023,Single-Arm Dumbbell Lunges,10,35,good
+08-SEP-2023,Single-Arm Dumbbell Lunges,10,35,good
+08-SEP-2023,Single-Arm Dumbbell Lunges,10,35,good
 06-SEP-2023,Bench Press,5,135,warm-up
 06-SEP-2023,Bench Press,8,225,good
 06-SEP-2023,Bench Press,8,225,good
@@ -1508,9 +1533,9 @@ date,exercise,reps,weight(lbs),rating
 01-SEP-2023,Squats,8,255,good
 01-SEP-2023,Squats,8,255,good
 01-SEP-2023,Squats,8,255,good
-01-SEP-2023,Lunges,10,40,good
-01-SEP-2023,Lunges,10,40,good
-01-SEP-2023,Lunges,10,40,good
+01-SEP-2023,Single-Arm Dumbbell Lunges,10,40,good
+01-SEP-2023,Single-Arm Dumbbell Lunges,10,40,good
+01-SEP-2023,Single-Arm Dumbbell Lunges,10,40,good
 01-SEP-2023,Single-Leg Leg Curl,5,90,warm-up
 01-SEP-2023,Single-Leg Leg Curl,10,115,good
 01-SEP-2023,Single-Leg Leg Curl,10,115,good
@@ -1559,8 +1584,8 @@ date,exercise,reps,weight(lbs),rating
 29-AUG-2023,Delt Flies,10,70,deload
 29-AUG-2023,Squats,10,155,deload
 29-AUG-2023,Squats,10,155,deload
-29-AUG-2023,Lunges,10,10,deload
-29-AUG-2023,Lunges,10,10,deload
+29-AUG-2023,Single-Arm Dumbbell Lunges,10,10,deload
+29-AUG-2023,Single-Arm Dumbbell Lunges,10,10,deload
 29-AUG-2023,Leg Curl,10,80,deload
 29-AUG-2023,Leg Curl,10,80,deload
 29-AUG-2023,Leg Extension,10,85,deload
@@ -1637,9 +1662,9 @@ date,exercise,reps,weight(lbs),rating
 22-AUG-2023,Squats,5,275,good
 22-AUG-2023,Squats,5,275,good
 22-AUG-2023,Squats,25,135,good
-22-AUG-2023,Lunges,10,35,good
-22-AUG-2023,Lunges,10,35,good
-22-AUG-2023,Lunges,10,40,good
+22-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
+22-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
+22-AUG-2023,Single-Arm Dumbbell Lunges,10,40,good
 22-AUG-2023,Machine Hip Abductors,10,100,good
 22-AUG-2023,Machine Hip Abductors,10,100,good
 22-AUG-2023,Machine Hip Abductors,10,100,good
@@ -1733,9 +1758,9 @@ date,exercise,reps,weight(lbs),rating
 14-AUG-2023,Squats,10,255,good
 14-AUG-2023,Squats,10,255,good
 14-AUG-2023,Squats,10,255,good
-14-AUG-2023,Lunges,10,35,good
-14-AUG-2023,Lunges,10,35,good
-14-AUG-2023,Lunges,10,35,good
+14-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
+14-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
+14-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
 14-AUG-2023,Single-Leg Leg Curl,5,90,warm-up
 14-AUG-2023,Single-Leg Leg Curl,10,115,good
 14-AUG-2023,Single-Leg Leg Curl,10,115,good
@@ -1828,9 +1853,9 @@ date,exercise,reps,weight(lbs),rating
 08-AUG-2023,Squats,10,245,good
 08-AUG-2023,Squats,10,245,good
 08-AUG-2023,Squats,10,255,good
-08-AUG-2023,Lunges,10,35,good
-08-AUG-2023,Lunges,10,35,good
-08-AUG-2023,Lunges,10,35,good
+08-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
+08-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
+08-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
 08-AUG-2023,Single-Leg Leg Curl,5,90,warm-up
 08-AUG-2023,Single-Leg Leg Curl,10,115,good
 08-AUG-2023,Single-Leg Leg Curl,10,115,good
@@ -1932,9 +1957,9 @@ date,exercise,reps,weight(lbs),rating
 02-AUG-2023,Squats,10,245,good
 02-AUG-2023,Squats,10,245,good
 02-AUG-2023,Squats,10,245,good
-02-AUG-2023,Lunges,10,35,good
-02-AUG-2023,Lunges,10,35,good
-02-AUG-2023,Lunges,10,35,good
+02-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
+02-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
+02-AUG-2023,Single-Arm Dumbbell Lunges,10,35,good
 02-AUG-2023,Single-Leg Leg Curl,5,90,warm-up
 02-AUG-2023,Single-Leg Leg Curl,10,105,good
 02-AUG-2023,Single-Leg Leg Curl,10,115,good
@@ -2037,9 +2062,9 @@ date,exercise,reps,weight(lbs),rating
 26-JUL-2023,Full Cans,20,10,good
 26-JUL-2023,Full Cans,20,10,good
 26-JUL-2023,Full Cans,20,10,good
-26-JUL-2023,Lunges,10,30,good
-26-JUL-2023,Lunges,10,30,good
-26-JUL-2023,Lunges,10,30,good
+26-JUL-2023,Single-Arm Dumbbell Lunges,10,30,good
+26-JUL-2023,Single-Arm Dumbbell Lunges,10,30,good
+26-JUL-2023,Single-Arm Dumbbell Lunges,10,30,good
 26-JUL-2023,Single-Leg Leg Curl,5,70,warm-up
 26-JUL-2023,Single-Leg Leg Curl,10,115,good
 26-JUL-2023,Single-Leg Leg Curl,10,115,good
@@ -2112,9 +2137,9 @@ date,exercise,reps,weight(lbs),rating
 20-JUL-2023,Full Cans,20,10,good
 20-JUL-2023,Full Cans,20,10,good
 20-JUL-2023,Full Cans,20,10,good
-20-JUL-2023,Lunges,10,30,good
-20-JUL-2023,Lunges,10,30,good
-20-JUL-2023,Lunges,10,30,good
+20-JUL-2023,Single-Arm Dumbbell Lunges,10,30,good
+20-JUL-2023,Single-Arm Dumbbell Lunges,10,30,good
+20-JUL-2023,Single-Arm Dumbbell Lunges,10,30,good
 20-JUL-2023,Single-Leg Leg Curl,10,115,good
 20-JUL-2023,Single-Leg Leg Curl,10,115,good
 20-JUL-2023,Single-Leg Leg Curl,10,115,good
@@ -2276,9 +2301,9 @@ date,exercise,reps,weight(lbs),rating
 09-JUL-2023,Arnold Press,10,50,good
 09-JUL-2023,Arnold Press,10,50,good
 09-JUL-2023,Arnold Press,10,50,good
-09-JUL-2023,Lunges,10,30,good
-09-JUL-2023,Lunges,10,30,good
-09-JUL-2023,Lunges,10,30,good
+09-JUL-2023,Single-Arm Dumbbell Lunges,10,30,good
+09-JUL-2023,Single-Arm Dumbbell Lunges,10,30,good
+09-JUL-2023,Single-Arm Dumbbell Lunges,10,30,good
 09-JUL-2023,Single-Leg Leg Curl,10,110,good
 09-JUL-2023,Single-Leg Leg Curl,10,110,good
 09-JUL-2023,Single-Leg Leg Curl,10,110,good
@@ -2413,9 +2438,9 @@ date,exercise,reps,weight(lbs),rating
 20-JUN-2023,Shrugs,10,40,good
 20-JUN-2023,Shrugs,10,40,good
 20-JUN-2023,Shrugs,10,40,good
-20-JUN-2023,Lunges,10,30,good
-20-JUN-2023,Lunges,10,30,good
-20-JUN-2023,Lunges,10,30,good
+20-JUN-2023,Single-Arm Dumbbell Lunges,10,30,good
+20-JUN-2023,Single-Arm Dumbbell Lunges,10,30,good
+20-JUN-2023,Single-Arm Dumbbell Lunges,10,30,good
 19-JUN-2023,Leg Press,20,190,good
 19-JUN-2023,Leg Press,20,190,good
 19-JUN-2023,Leg Press,20,190,good
@@ -2564,9 +2589,9 @@ date,exercise,reps,weight(lbs),rating
 10-JUN-2023,Single-Leg Leg Curl,20,70,good
 10-JUN-2023,Single-Leg Leg Curl,20,70,good
 10-JUN-2023,Single-Leg Leg Curl,20,70,good
-10-JUN-2023,Lunges,10,30,good
-10-JUN-2023,Lunges,10,30,good
-10-JUN-2023,Lunges,10,30,good
+10-JUN-2023,Single-Arm Dumbbell Lunges,10,30,good
+10-JUN-2023,Single-Arm Dumbbell Lunges,10,30,good
+10-JUN-2023,Single-Arm Dumbbell Lunges,10,30,good
 10-JUN-2023,Leg Press,20,190,good
 10-JUN-2023,Leg Press,20,190,good
 10-JUN-2023,Leg Press,20,175,good
@@ -2680,9 +2705,9 @@ date,exercise,reps,weight(lbs),rating
 04-JUN-2023,Single-Leg Leg Curl,5,120,good
 04-JUN-2023,Single-Leg Leg Curl,5,120,good
 04-JUN-2023,Single-Leg Leg Curl,5,115,good
-04-JUN-2023,Lunges,10,30,good
-04-JUN-2023,Lunges,10,30,good
-04-JUN-2023,Lunges,10,30,good
+04-JUN-2023,Single-Arm Dumbbell Lunges,10,30,good
+04-JUN-2023,Single-Arm Dumbbell Lunges,10,30,good
+04-JUN-2023,Single-Arm Dumbbell Lunges,10,30,good
 04-JUN-2023,Full Cans,20,10,good
 04-JUN-2023,Full Cans,20,10,good
 04-JUN-2023,Full Cans,20,10,good
@@ -2793,9 +2818,9 @@ date,exercise,reps,weight(lbs),rating
 29-MAY-2023,Single-Leg Leg Curl,10,105,good
 29-MAY-2023,Single-Leg Leg Curl,10,105,good
 29-MAY-2023,Single-Leg Leg Curl,10,105,good
-29-MAY-2023,Lunges,10,30,good
-29-MAY-2023,Lunges,10,30,good
-29-MAY-2023,Lunges,10,30,good
+29-MAY-2023,Single-Arm Dumbbell Lunges,10,30,good
+29-MAY-2023,Single-Arm Dumbbell Lunges,10,30,good
+29-MAY-2023,Single-Arm Dumbbell Lunges,10,30,good
 27-MAY-2023,Pullovers,12,35,good
 27-MAY-2023,Pullovers,12,35,good
 27-MAY-2023,Pullovers,12,35,good
@@ -2896,9 +2921,9 @@ date,exercise,reps,weight(lbs),rating
 23-MAY-2023,Single-Leg Leg Curl,10,105,good
 23-MAY-2023,Single-Leg Leg Curl,10,105,good
 23-MAY-2023,Single-Leg Leg Curl,12,100,good
-23-MAY-2023,Lunges,10,30,good
-23-MAY-2023,Lunges,10,30,good
-23-MAY-2023,Lunges,10,30,good
+23-MAY-2023,Single-Arm Dumbbell Lunges,10,30,good
+23-MAY-2023,Single-Arm Dumbbell Lunges,10,30,good
+23-MAY-2023,Single-Arm Dumbbell Lunges,10,30,good
 23-MAY-2023,Arnold Press,10,45,good
 23-MAY-2023,Arnold Press,10,45,good
 23-MAY-2023,Arnold Press,10,45,good
@@ -3079,9 +3104,9 @@ date,exercise,reps,weight(lbs),rating
 11-MAY-2023,Single-Leg Leg Curl,12,100,good
 11-MAY-2023,Single-Leg Leg Curl,12,100,good
 11-MAY-2023,Single-Leg Leg Curl,12,100,good
-11-MAY-2023,Lunges,10,25,good
-11-MAY-2023,Lunges,10,25,good
-11-MAY-2023,Lunges,10,25,good
+11-MAY-2023,Single-Arm Dumbbell Lunges,10,25,good
+11-MAY-2023,Single-Arm Dumbbell Lunges,10,25,good
+11-MAY-2023,Single-Arm Dumbbell Lunges,10,25,good
 11-MAY-2023,Arnold Press,10,45,good
 11-MAY-2023,Arnold Press,10,45,good
 11-MAY-2023,Arnold Press,10,45,good
@@ -3162,9 +3187,9 @@ date,exercise,reps,weight(lbs),rating
 05-MAY-2023,Single-Leg Leg Curl,12,100,good
 05-MAY-2023,Single-Leg Leg Curl,12,100,good
 05-MAY-2023,Single-Leg Leg Curl,12,100,good
-05-MAY-2023,Lunges,10,25,good
-05-MAY-2023,Lunges,10,25,good
-05-MAY-2023,Lunges,10,25,good
+05-MAY-2023,Single-Arm Dumbbell Lunges,10,25,good
+05-MAY-2023,Single-Arm Dumbbell Lunges,10,25,good
+05-MAY-2023,Single-Arm Dumbbell Lunges,10,25,good
 05-MAY-2023,Arnold Press,8,45,good
 05-MAY-2023,Arnold Press,8,45,good
 05-MAY-2023,Arnold Press,8,45,good
@@ -3243,9 +3268,9 @@ date,exercise,reps,weight(lbs),rating
 29-APR-2023,Single-Leg Leg Curl,10,100,good
 29-APR-2023,Single-Leg Leg Curl,10,100,good
 29-APR-2023,Single-Leg Leg Curl,10,100,good
-29-APR-2023,Lunges,10,25,good
-29-APR-2023,Lunges,10,25,good
-29-APR-2023,Lunges,10,25,good
+29-APR-2023,Single-Arm Dumbbell Lunges,10,25,good
+29-APR-2023,Single-Arm Dumbbell Lunges,10,25,good
+29-APR-2023,Single-Arm Dumbbell Lunges,10,25,good
 29-APR-2023,Arnold Press,12,40,good
 29-APR-2023,Arnold Press,12,40,good
 29-APR-2023,Arnold Press,12,40,good
@@ -3476,9 +3501,9 @@ date,exercise,reps,weight(lbs),rating
 10-APR-2023,Single-Leg Leg Curl,10,90,good
 10-APR-2023,Single-Leg Leg Curl,10,90,good
 10-APR-2023,Single-Leg Leg Curl,10,90,good
-10-APR-2023,Lunges,10,25,good
-10-APR-2023,Lunges,10,25,good
-10-APR-2023,Lunges,10,20,good
+10-APR-2023,Single-Arm Dumbbell Lunges,10,25,good
+10-APR-2023,Single-Arm Dumbbell Lunges,10,25,good
+10-APR-2023,Single-Arm Dumbbell Lunges,10,20,good
 08-APR-2023,Full Cans,20,5,good
 08-APR-2023,Full Cans,20,5,good
 08-APR-2023,Full Cans,20,5,good
@@ -3621,9 +3646,9 @@ date,exercise,reps,weight(lbs),rating
 29-MAR-2023,Leg Curl,10,185,good
 29-MAR-2023,Leg Curl,10,185,good
 29-MAR-2023,Leg Curl,12,180,good
-29-MAR-2023,Lunges,10,20,good
-29-MAR-2023,Lunges,10,20,good
-29-MAR-2023,Lunges,10,20,good
+29-MAR-2023,Single-Arm Dumbbell Lunges,10,20,good
+29-MAR-2023,Single-Arm Dumbbell Lunges,10,20,good
+29-MAR-2023,Single-Arm Dumbbell Lunges,10,20,good
 29-MAR-2023,Arnold Press,12,35,good
 29-MAR-2023,Arnold Press,12,35,good
 29-MAR-2023,Arnold Press,10,35,good
@@ -3703,9 +3728,9 @@ date,exercise,reps,weight(lbs),rating
 22-MAR-2023,Leg Curl,10,180,good
 22-MAR-2023,Leg Curl,10,180,good
 22-MAR-2023,Leg Curl,10,180,good
-22-MAR-2023,Lunges,10,20,good
-22-MAR-2023,Lunges,10,20,good
-22-MAR-2023,Lunges,10,20,good
+22-MAR-2023,Single-Arm Dumbbell Lunges,10,20,good
+22-MAR-2023,Single-Arm Dumbbell Lunges,10,20,good
+22-MAR-2023,Single-Arm Dumbbell Lunges,10,20,good
 22-MAR-2023,Arnold Press,12,35,good
 22-MAR-2023,Arnold Press,10,35,good
 22-MAR-2023,Arnold Press,10,35,good
@@ -3913,9 +3938,9 @@ date,exercise,reps,weight(lbs),rating
 05-MAR-2023,Leg Curl,10,180,good
 05-MAR-2023,Leg Curl,10,180,good
 05-MAR-2023,Leg Curl,15,170,good
-05-MAR-2023,Lunges,10,20,good
-05-MAR-2023,Lunges,10,20,good
-05-MAR-2023,Lunges,10,0,good
+05-MAR-2023,Single-Arm Dumbbell Lunges,10,20,good
+05-MAR-2023,Single-Arm Dumbbell Lunges,10,20,good
+05-MAR-2023,Single-Arm Dumbbell Lunges,10,0,good
 05-MAR-2023,Leg Press,10,265,good
 05-MAR-2023,Leg Press,10,265,good
 05-MAR-2023,Leg Press,10,265,good
@@ -4061,9 +4086,9 @@ date,exercise,reps,weight(lbs),rating
 13-FEB-2023,Leg Curl,10,170,good
 13-FEB-2023,Leg Curl,10,165,good
 13-FEB-2023,Leg Curl,12,160,good
-13-FEB-2023,Lunges,10,0,good
-13-FEB-2023,Lunges,10,0,good
-13-FEB-2023,Lunges,10,0,good
+13-FEB-2023,Single-Arm Dumbbell Lunges,10,0,good
+13-FEB-2023,Single-Arm Dumbbell Lunges,10,0,good
+13-FEB-2023,Single-Arm Dumbbell Lunges,10,0,good
 13-FEB-2023,Leg Press,10,250,good
 13-FEB-2023,Leg Press,10,250,good
 13-FEB-2023,Leg Press,10,235,good
@@ -4084,9 +4109,9 @@ date,exercise,reps,weight(lbs),rating
 13-FEB-2023,Lateral Lift,10,20,good
 13-FEB-2023,Lateral Lift,10,20,good
 13-FEB-2023,Lateral Lift,10,20,easy
-12-FEB-2023,Lunges,10,0,good
-12-FEB-2023,Lunges,10,0,good
-12-FEB-2023,Lunges,10,0,good
+12-FEB-2023,Single-Arm Dumbbell Lunges,10,0,good
+12-FEB-2023,Single-Arm Dumbbell Lunges,10,0,good
+12-FEB-2023,Single-Arm Dumbbell Lunges,10,0,good
 11-FEB-2023,Lat Pulldown,10,115,good
 11-FEB-2023,Lat Pulldown,10,115,good
 11-FEB-2023,Lat Pulldown,10,115,good
@@ -4310,9 +4335,9 @@ date,exercise,reps,weight(lbs),rating
 29-JAN-2023,Leg Curl,10,160,good
 29-JAN-2023,Leg Curl,10,160,good
 29-JAN-2023,Leg Curl,10,160,good
-29-JAN-2023,Lunges,10,0,good
-29-JAN-2023,Lunges,10,0,good
-29-JAN-2023,Lunges,10,0,good
+29-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
+29-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
+29-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
 29-JAN-2023,Leg Press,10,235,good
 29-JAN-2023,Leg Press,12,235,good
 29-JAN-2023,Leg Press,10,235,good
@@ -4331,9 +4356,9 @@ date,exercise,reps,weight(lbs),rating
 22-JAN-2023,Leg Curl,12,150,good
 22-JAN-2023,Leg Curl,10,150,good
 22-JAN-2023,Leg Curl,10,150,good
-22-JAN-2023,Lunges,10,0,good
-22-JAN-2023,Lunges,10,0,good
-22-JAN-2023,Lunges,10,0,good
+22-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
+22-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
+22-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
 22-JAN-2023,Leg Press,10,235,good
 22-JAN-2023,Leg Press,10,235,good
 22-JAN-2023,Leg Press,10,235,good
@@ -4352,9 +4377,9 @@ date,exercise,reps,weight(lbs),rating
 15-JAN-2023,Leg Curl,12,150,good
 15-JAN-2023,Leg Curl,10,150,good
 15-JAN-2023,Leg Curl,10,140,easy
-15-JAN-2023,Lunges,10,0,good
-15-JAN-2023,Lunges,10,0,good
-15-JAN-2023,Lunges,10,0,good
+15-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
+15-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
+15-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
 15-JAN-2023,Leg Press,10,235,good
 15-JAN-2023,Leg Press,10,235,good
 15-JAN-2023,Leg Press,12,225,good
@@ -4373,9 +4398,9 @@ date,exercise,reps,weight(lbs),rating
 11-JAN-2023,Leg Curl,12,150,good
 11-JAN-2023,Leg Curl,10,150,good
 11-JAN-2023,Leg Curl,10,140,easy
-11-JAN-2023,Lunges,10,0,good
-11-JAN-2023,Lunges,10,0,good
-11-JAN-2023,Lunges,10,0,good
+11-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
+11-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
+11-JAN-2023,Single-Arm Dumbbell Lunges,10,0,good
 11-JAN-2023,Leg Press,10,235,good
 11-JAN-2023,Leg Press,10,235,good
 11-JAN-2023,Leg Press,12,225,good
@@ -4427,7 +4452,7 @@ date,exercise,reps,weight(lbs),rating
 28-DEC-2023,Lateral Lift,10,17.5,bad (L)
 28-DEC-2023,Lateral Lift,10,17.5,good
 28-DEC-2023,Lateral Lift,10,17.5,good
-16-DEC-2022,Lunges,10,0,good
+16-DEC-2022,Single-Arm Dumbbell Lunges,10,0,good
 16-DEC-2022,Leg Extension,10,110,good
 16-DEC-2022,Leg Extension,10,100,good
 16-DEC-2022,Leg Extension,10,100,good

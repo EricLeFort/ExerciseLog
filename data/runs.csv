@@ -1,4 +1,6 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+20-DEC-2023,run (outdoor),00:05:08,0.95,870,0,170,185,"run to earnscliffe rec center"
+20-DEC-2023,run (outdoor),00:05:50,0.94,948,4,160,183,"run from earnscliffe rec center back home"
 19-DEC-2023,run (outdoor),00:04:55,0.92,824,0,170,181,"run to earnscliffe rec center"
 18-DEC-2023,run (outdoor),00:05:40,0.92,931,4,169,191,"run from earnscliffe rec center back home"
 18-DEC-2023,run (outdoor),00:03:50,0.74,680,0,167,186,"run to the convenience store on the way to earnscliffe rec center; step count is approximate"
