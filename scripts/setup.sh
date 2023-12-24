@@ -9,5 +9,6 @@ pip3 install virtualenv isort
 VENV_NAME=pyenv
 virtualenv ${VENV_NAME}
 source ${VENV_NAME}/bin/activate
+python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 deactivate
