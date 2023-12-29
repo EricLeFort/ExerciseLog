@@ -1,4 +1,29 @@
 date,exercise,reps,weight(lbs),rating
+26-DEC-2023,Bench Press,10,137.5,warm-up
+26-DEC-2023,Bench Press,5,227.5,bad
+26-DEC-2023,Bench Press,5,227.5,good
+26-DEC-2023,Bench Press,5,237.5,good
+26-DEC-2023,Bench Press,5,247.5,good
+26-DEC-2023,Bench Press,5,237.5,good
+26-DEC-2023,Bench Press,5,237.5,good
+26-DEC-2023,Incline Dumbbell Press,10,70,good
+26-DEC-2023,Incline Dumbbell Press,10,70,good
+26-DEC-2023,Machine Pec Flies,5,145,warm-up
+26-DEC-2023,Machine Pec Flies,5,235,good
+26-DEC-2023,Machine Pec Flies,5,235,good
+26-DEC-2023,Machine Pec Flies,5,235,failure
+26-DEC-2023,Shrugs,12,55,good
+26-DEC-2023,Shrugs,10,60,good
+26-DEC-2023,Shrugs,10,60,good
+26-DEC-2023,Single-Arm Farmer's Carry,50,55,good
+26-DEC-2023,Single-Arm Farmer's Carry,50,60,good
+26-DEC-2023,Single-Arm Farmer's Carry,50,60,good
+26-DEC-2023,Plank,70,0,good
+26-DEC-2023,Plank,70,0,good
+26-DEC-2023,Plank,70,0,good
+26-DEC-2023,Side-Plank,40,0,good
+26-DEC-2023,Side-Plank,40,0,good
+26-DEC-2023,Side-Plank,40,0,good
 25-DEC-2023,Push-Ups,20,0,good
 25-DEC-2023,Push-Ups,20,0,good
 22-DEC-2023,Bicep Curl,10,15,warm-up
