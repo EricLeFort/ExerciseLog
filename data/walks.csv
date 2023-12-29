@@ -1,4 +1,7 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+28-DEC-2023,walk (outdoor),00:09:44,0.96,1116,5,0,125,132,"walk back from earnscliffe rec center"
+28-DEC-2023,walk (treadmill),01:01:00,5.40,6487,425,0,136,143,""
+27-DEC-2023,walk (outdoor),00:09:57,1.00,1439,3,0,132,158,"walk back from earnscliffe rec center"
 25-DEC-2023,walk (outdoor),02:17:41,14.35,17014,50,0,129,178,""
 24-DEC-2023,walk (outdoor),01:24:42,8.69,9093,26,0,121,135,""
 23-DEC-2023,walk (treadmill),01:01:00,5.40,6655,517,0,144,184,""
