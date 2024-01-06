@@ -1,4 +1,40 @@
 date,exercise,reps,weight(lbs),rating
+05-JAN-2024,Bicep Curl,10,20,warm-up
+05-JAN-2024,Bicep Curl,8,35,good
+05-JAN-2024,Bicep Curl,10,35,bad
+05-JAN-2024,Bicep Curl,8,35,good
+05-JAN-2024,Hammer Curl,12,30,good
+05-JAN-2024,Hammer Curl,12,30,good
+05-JAN-2024,Hammer Curl,12,30,good
+05-JAN-2024,Concentration Curl,8,30,good
+05-JAN-2024,Concentration Curl,8,30,good
+05-JAN-2024,Concentration Curl,8,30,good
+05-JAN-2024,Overhead Tricep Extension,10,20,warm-up
+05-JAN-2024,Overhead Tricep Extension,10,35,good
+05-JAN-2024,Overhead Tricep Extension,10,35,good
+05-JAN-2024,Overhead Tricep Extension,10,35,good
+05-JAN-2024,Tricep Pushdown,10,42.5,warm-up
+05-JAN-2024,Tricep Pushdown,10,52.5,good
+05-JAN-2024,Tricep Pushdown,10,54.5,good
+05-JAN-2024,Tricep Pushdown,10,54.5,good
+05-JAN-2024,Skullcrushers,10,66,good
+05-JAN-2024,Skullcrushers,10,76,failure
+05-JAN-2024,Skullcrushers,10,66,good
+05-JAN-2024,Lawnmowers,10,40,warm-up
+05-JAN-2024,Lawnmowers,10,70,good
+05-JAN-2024,Lawnmowers,10,70,good
+05-JAN-2024,Lawnmowers,10,70,good
+05-JAN-2024,Seated Row,10,70,warm-up
+05-JAN-2024,Seated Row,10,130,good
+05-JAN-2024,Seated Row,10,135,good
+05-JAN-2024,Seated Row,10,135,good
+05-JAN-2024,Lat Pulldown,15,100.5,good
+05-JAN-2024,Lat Pulldown,15,100.5,good
+05-JAN-2024,Lat Pulldown,15,100.5,good
+05-JAN-2024,Pullovers,10,30,warm-up
+05-JAN-2024,Pullovers,10,55,good
+05-JAN-2024,Pullovers,10,55,good
+05-JAN-2024,Pullovers,10,55,good
 03-JAN-2024,Military Press,10,100,warm-up
 03-JAN-2024,Military Press,10,195,good
 03-JAN-2024,Military Press,10,195,good
