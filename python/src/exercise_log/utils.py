@@ -1,3 +1,4 @@
+import json
 import os
 from enum import Enum, EnumMeta
 from typing import Any, List, Optional
@@ -41,6 +42,25 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
 
     def __str__(self):
         return self.value
+
+    @classmethod
+    def create_from_json(cls, f_name: str, enum_name: str):
+        """
+        Dynamically creates a StrEnum with the given name using the provided JSON dict.
+
+        The dict should be of the form:
+        {
+            "COLUMN_NAME": "column_value"
+        }
+
+        Args:
+            f_name (str): The path to the JSON file
+            enum_name (str): The name of the resulting StrEnum
+        """
+        # Dynamically creates the ColumnNames enum using a shared definition
+        with open(f_name, "r", encoding=UTF8) as f:
+            columns_json = json.load(f)
+        return StrEnum(enum_name, columns_json)
 
 
 class TermColour(StrEnum):
