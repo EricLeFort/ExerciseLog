@@ -4,51 +4,16 @@ from typing import List
 import numpy as np
 import pandas as pd
 
-from exercise_log.constants import DATE as DATE_CONST
+from exercise_log.constants import ROOT_ONTOLOGY_DIR
 from exercise_log.strength import Exercise
 from exercise_log.utils import StrEnum, join_with_comma
 
-
-class ColumnName(StrEnum):
-    AVG_CADENCE_BIKE = "avg_cadence(rpm)"
-    AVG_CADENCE_ROW = "avg_cadence(spm)"
-    AVG_HEART_RATE = "avg_heart_rate"
-    AVG_RES = "avg_resistance"
-    AVG_WATT = "avg_wattage"
-    AVG_DURATION = "avg_duration(s)"
-    DATE = DATE_CONST
-    DATA_DURATION = "duration(HH:mm:ss)"  # This is the human-readable version -- it'll be dropped during processing
-    DURATION = "duration(s)"  # Convert the human-readable durations to seconds for computational simplicity
-    DISTANCE = "distance(km)"
-    ELEVATION = "elevation(m)"
-    EXERCISE = "exercise"
-    FLIGHTS_DOWN = "flights_down"
-    FLIGHTS_UP = "flights_up"
-    GRADE = "grade(%)"
-    LOCATION = "location"
-    MAX_CADENCE_BIKE = "max_cadence(rpm)"
-    MAX_CADENCE_ROW = "max_cadence(spm)"
-    MAX_HEART_RATE = "max_heart_rate"
-    MAX_RES = "max_resistance"
-    MAX_SPEED = "max_speed(km/h)"
-    MAX_WATT = "max_wattage"
-    NOTES = "notes"
-    PACE = "pace (m/s)"
-    RATE_OF_CLIMB = "rate of climb (m/h)"
-    RATING = "rating"
-    REPS = "reps"
-    RESTING_HEART_RATE = "resting_heart_rate(bpm)"
-    SPEED = "speed(km/h)"
-    STEPS = "steps"
-    STEP_SIZE = "avg step size (m)"
-    WEIGHT = "weight(lbs)"
-    WORKOUT_TYPE = "workout_type"
+# Dynamically create the ColumnNames enum using a shared definition
+ColumnName = StrEnum.create_from_json(f"{ROOT_ONTOLOGY_DIR}/enum/columns.json", "ColumnName")
 
 
 # This is just for convenience since ColumnName is a long string
 CName = ColumnName
-
-
 LONG = "Int64"
 
 
