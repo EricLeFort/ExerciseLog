@@ -8,8 +8,8 @@ from exercise_log.trend import Trendsetter
 from exercise_log.utils import TermColour, get_padded_dates
 from exercise_log.vis import plot_resting_heart_rate, plot_strength_over_time, plot_weight, plot_workout_frequency
 
-ROOT_DATA_DIR = "data"
-ROOT_IMG_DIR = "img"
+ROOT_DATA_DIR = "../../data"
+ROOT_IMG_DIR = "../../img"
 PREDS_DIR = f"{ROOT_DATA_DIR}/preds"
 EXTRAPOLATE_DAYS = 100
 N_DAYS_TO_AVG = 28

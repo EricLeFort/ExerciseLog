@@ -43,14 +43,17 @@ then
 fi
 
 # Update visuals
+echo "Activating python environment.."
 source ${VENV_NAME}/bin/activate
-export PYTHONPATH="${SCRIPT_DIR}/../python/src/"
-python3 "${SCRIPT_DIR}/../python/src/exercise_log/run_updater.py"
+cd "${SCRIPT_DIR}/../python/src"
+export PYTHONPATH=$(pwd)
+python3 "exercise_log/run_updater.py"
 deactivate
 
 # Add the new commit
 if [ ${dryrun} = false ]
 then
+    cd ../..
     git add data img
     if [ ${amendCommit} = true ]
     then
