@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),avg_resistance,max_resistance,avg_cadence(rpm),max_cadence(rpm),avg_wattage,max_wattage,max_speed(km/h),avg_heart_rate,max_heart_rate,notes
+11-JAN-2024,bike (stationary),01:00:00,31.77,0.42,0.60,95,127,169,443,46.2,158,192,""
 13-DEC-2023,bike (stationary),00:15:00,8.67,0.48,0.61,89,103,208,475,47.5,158,187,""
 09-DEC-2023,bike (stationary),00:30:00,17.28,0.51,0.66,82,116,203,564,50.4,163,186,""
 01-DEC-2023,bike (stationary),00:30:00,18.30,0.52,0.70,87,128,241,543,49.7,170,191,""
