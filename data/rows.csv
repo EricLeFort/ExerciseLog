@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),avg_cadence(spm),max_cadence(spm),avg_wattage,max_wattage,avg_heart_rate,max_heart_rate,notes
+13-JAN-2024,row (stationary),00:07:38,2.005,,,236,,172,182,""
 28-DEC-2023,row (stationary),00:02:00,0.521,,,,,,,""
 09-DEC-2023,row (stationary),00:10:00,2.566,33,,220,,170,187,"Didn't start the workout on my watch so avg heart rate is just an estimate"
 04-NOV-2023,row (stationary),00:10:00,2.446,33,,191,,165,181,""
