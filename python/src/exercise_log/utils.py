@@ -44,7 +44,7 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
         return self.value
 
     @classmethod
-    def create_from_json(cls, f_name: str, enum_name: str):
+    def create_from_json(cls, f_name: str):
         """
         Dynamically creates a StrEnum with the given name using the provided JSON dict.
 
@@ -55,12 +55,18 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
 
         Args:
             f_name (str): The path to the JSON file
-            enum_name (str): The name of the resulting StrEnum
         """
+        # pylint: disable=attribute-defined-outside-init
         # Dynamically creates the ColumnNames enum using a shared definition
         with open(f_name, "r", encoding=UTF8) as f:
-            columns_json = json.load(f)
-        return StrEnum(enum_name, columns_json)
+            data_json = json.load(f)
+            enum_name = data_json["name"]
+            enum_data = data_json.get("enum", data_json)
+            description = data_json.get("description", "No description available")
+
+        gen_enum = StrEnum(enum_name, enum_data)
+        gen_enum.__doc__ = description
+        return gen_enum
 
 
 class TermColour(StrEnum):

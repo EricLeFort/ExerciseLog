@@ -9,7 +9,7 @@ from exercise_log.strength import Exercise
 from exercise_log.utils import StrEnum, join_with_comma
 
 # Dynamically create the ColumnNames enum using a shared definition
-ColumnName = StrEnum.create_from_json(f"{ROOT_ONTOLOGY_DIR}/enum/columns.json", "ColumnName")
+ColumnName = StrEnum.create_from_json(f"{ROOT_ONTOLOGY_DIR}/enum/columns.json")
 
 
 # This is just for convenience since ColumnName is a long string

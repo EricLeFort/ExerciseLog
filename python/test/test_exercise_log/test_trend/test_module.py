@@ -97,7 +97,7 @@ def _assert_summary(
     tester.assertEqual(expected_str, str(summary))
 
 
-class TestOntology(unittest.TestCase):
+class TestExerciseSummary(unittest.TestCase):
     def test_bike_cardio_summary_pretty_print(self):
         _test_four_scenarios(self, _gen_random_foot_cardio_data, _assert_bike_cardio_summary)
 

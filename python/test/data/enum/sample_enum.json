@@ -1,0 +1,9 @@
+{
+    "name": "TestEnum",
+    "description": "Simple enum meant for testing.",
+    "enum": {
+        "A": "a",
+        "B": "b",
+        "C": "c"
+    }
+}
