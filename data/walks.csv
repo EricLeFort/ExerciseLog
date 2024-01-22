@@ -1,4 +1,6 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+18-JAN-2024,walk (treadmill),00:10:32,0.91,1273,60,0,135,145,"post-workout"
+18-JAN-2024,walk (treadmill),00:10:25,0.90,1087,60,0,132,141,"pre-workout"
 17-JAN-2024,walk (treadmill),00:31:00,2.70,3247,182,0,132,139,"deload"
 16-JAN-2024,walk (treadmill),00:12:23,1.05,1259,60,0,133,147,"pre-workout"
 15-JAN-2024,walk (treadmill),01:02:04,5.39,6448,529,0,155,186,""
