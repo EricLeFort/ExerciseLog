@@ -1,4 +1,46 @@
 date,exercise,reps,weight(lbs),rating
+24-JAN-2024,Bicep Curl,10,20,warm-up
+24-JAN-2024,Bicep Curl,10,35,bad
+24-JAN-2024,Bicep Curl,8,35,good
+24-JAN-2024,Bicep Curl,10,35,good
+24-JAN-2024,Hammer Curl,10,30,good
+24-JAN-2024,Hammer Curl,10,30,bad
+24-JAN-2024,Hammer Curl,10,30,bad
+24-JAN-2024,Concentration Curl,10,30,good
+24-JAN-2024,Concentration Curl,8,30,good
+24-JAN-2024,Concentration Curl,8,30,good
+24-JAN-2024,Concentration Curl,8,30,good
+24-JAN-2024,Overhead Tricep Extension,10,20,warm-up
+24-JAN-2024,Overhead Tricep Extension,10,35,good
+24-JAN-2024,Overhead Tricep Extension,8,35,bad
+24-JAN-2024,Overhead Tricep Extension,10,35,bad
+24-JAN-2024,Tricep Pushdown (V-Bar),10,90,warm-up
+24-JAN-2024,Tricep Pushdown (V-Bar),10,160,good
+24-JAN-2024,Tricep Pushdown (V-Bar),10,160,good
+24-JAN-2024,Tricep Pushdown (V-Bar),12,150,good
+24-JAN-2024,Skullcrushers,10,52,warm-up
+24-JAN-2024,Skullcrushers,10,72,good
+24-JAN-2024,Skullcrushers,8,82,bad
+24-JAN-2024,Skullcrushers,10,72,good
+24-JAN-2024,Lawnmowers,10,70,good
+24-JAN-2024,Lawnmowers,10,70,good
+24-JAN-2024,Lawnmowers,10,70,good
+24-JAN-2024,Seated Row,10,77.5,warm-up
+24-JAN-2024,Seated Row,12,137.5,good
+24-JAN-2024,Seated Row,12,137.5,good
+24-JAN-2024,Seated Row,12,137.5,good
+24-JAN-2024,Lat Pulldown,10,77.5,warm-up
+24-JAN-2024,Lat Pulldown,10,137.5,good
+24-JAN-2024,Lat Pulldown,10,137.5,bad
+24-JAN-2024,Lat Pulldown,10,137.5,bad
+24-JAN-2024,Pullovers,10,30,warm-up
+24-JAN-2024,Pullovers,10,55,good
+24-JAN-2024,Pullovers,10,55,good
+24-JAN-2024,Pullovers,10,55,good
+24-JAN-2024,Wide-Grip Pull-Up,10,-130,warm-up
+24-JAN-2024,Wide-Grip Pull-Up,8,-90,good
+24-JAN-2024,Wide-Grip Pull-Up,8,-100,good
+24-JAN-2024,Wide-Grip Pull-Up,8,-100,good
 22-JAN-2024,Lateral Lift,10,15,deload
 22-JAN-2024,Lateral Lift,10,15,deload
 22-JAN-2024,Lateral Lift,10,15,deload
