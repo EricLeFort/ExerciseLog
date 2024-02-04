@@ -56,7 +56,7 @@ class DataLoader:
                 # Ensure the data is not ragged
                 for row in reader:
                     if len(row) != len(headers):
-                        raise ValueError(f'File is ragged at row {reader.line_num}: "{row}"')
+                        raise ValueError(f'File {fname} is ragged at row {reader.line_num}: "{row}"')
             except StopIteration as e:
                 raise ValueError(f"CSV at {fname} was empty.") from e
 
@@ -282,6 +282,11 @@ class DataLoader:
             cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.ELEVATION] / cardio_workouts[CName.DURATION]
             cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.RATE_OF_CLIMB] * (60 * 60)
             cardio_workouts[CName.RATE_OF_CLIMB] = cardio_workouts[CName.RATE_OF_CLIMB].round(0).astype(LONG)
+            if CName.DISTANCE in cardio_workouts:
+                # Scale down from km, then round to the nearest 5%
+                cardio_workouts[CName.AVG_GRADE] = cardio_workouts[CName.ELEVATION] / cardio_workouts[CName.DISTANCE]
+                cardio_workouts[CName.AVG_GRADE] = cardio_workouts[CName.AVG_GRADE] / 1000
+                cardio_workouts[CName.AVG_GRADE] = (cardio_workouts[CName.AVG_GRADE] * 20).round(1) * 0.05
         if CName.STEPS in cardio_workouts:  # Skip this metric for workouts like biking where steps aren't tracked
             # Convert km to m
             cardio_workouts[CName.STEP_SIZE] = cardio_workouts[CName.DISTANCE] / cardio_workouts[CName.STEPS]
