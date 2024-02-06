@@ -15,6 +15,7 @@ LOWER_ISOLATED_REP_RANGE = (8, 20)
 ISOMETRIC_REP_RANGE = (30, 120)
 CALI_PLYO_REP_RANGE = (5, 20)
 ROTATOR_CUFF_REP_RANGE = (10, 25)
+ENDURANCE_COMPOUND_REP_RANGE = (15, 50)
 
 
 # pylint: disable=line-too-long
@@ -1201,6 +1202,26 @@ EXERCISE_INFO = {
         },
         Field.ANTAGONIST_MUSCLES: {None},
     },
+    Exercise.PUSH_PRESS: {
+        INHERITS_FROM: Exercise.STRICT_PRESS,
+        Field.TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
+        Field.OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
+        Field.MUSCLE_GROUPS_WORKED: {
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.GLUTES: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.QUADS: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.TRICEPS: None,
+        },
+        Field.MUSCLES_WORKED: {
+            None: None,
+        },
+        Field.ANTAGONIST_MUSCLES: {None},
+    },
     Exercise.PUSH_UPS: {
         Field.COUNT_TYPE: CountType.REPS,
         Field.EXERCISE_TYPE: ExerciseType.CALISTHENIC,
@@ -1261,6 +1282,22 @@ EXERCISE_INFO = {
     },
     Exercise.RES_TRICEP_PUSHDOWN: {
         INHERITS_FROM: Exercise.TRICEP_PUSHDOWN,
+    },
+    Exercise.SANDBAG_OVER_SHOULDER: {
+        Field.COUNT_TYPE: CountType.REPS,
+        Field.EXERCISE_TYPE: ExerciseType.COMPOUND_LIFT,
+        Field.REQUIRES_MACHINE: False,
+        Field.IS_UNILATERAL: False,
+        Field.IS_LIMB_INDEPENDENT: False,
+        Field.TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
+        Field.OPTIMAL_REP_RANGE: ENDURANCE_COMPOUND_REP_RANGE,
+        Field.MUSCLE_GROUPS_WORKED: {
+            None: None,
+        },
+        Field.MUSCLES_WORKED: {
+            None: None,
+        },
+        Field.ANTAGONIST_MUSCLES: {None},
     },
     Exercise.SEATED_ROW: {
         Field.COUNT_TYPE: CountType.REPS,
