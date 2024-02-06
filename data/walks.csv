@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+04-FEB-2024,walk (treadmill),01:03:17,5.70,6891,450,0,144,154,""
 01-FEB-2024,walk (treadmill),01:04:30,5.70,6772,450,0,145,156,""
 29-JAN-2024,walk (treadmill),01:06:00,5.72,6816,450,0,139,151,""
 27-JAN-2024,walk (treadmill),01:01:05,5.31,6405,467,0,150,164,""
