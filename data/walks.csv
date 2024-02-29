@@ -1,4 +1,6 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+24-FEB-2024,walk (treadmill),01:01:13,5.51,6591,377,0,145,152,""
+24-FEB-2024,walk (treadmill),01:10:58,7.21,8032,377,0,153,194,""
 21-FEB-2024,walk (treadmill),01:13:00,7.54,8736,434,0,153,198,""
 14-FEB-2024,walk (treadmill),01:05:17,5.66,6812,436,0,146,157,""
 12-FEB-2024,walk (treadmill),01:00:30,5.09,6427,151,60,144,151,"20lb weight vest + 40lb pack"
