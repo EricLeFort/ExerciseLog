@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),avg_resistance,max_resistance,avg_cadence(rpm),max_cadence(rpm),avg_wattage,max_wattage,max_speed(km/h),avg_heart_rate,max_heart_rate,notes
+26-FEB-2024,bike (stationary),00:20:00,11.52,0.48,0.66,89,118,209,550,34.6,169,184,""
 18-FEB-2024,bike (outdoor),00:53:02,11.42,,,,,,,35.2,158,185,"Biking around Stanley Park"
 18-FEB-2024,bike (outdoor),00:23:27,6.60,,,,,,,44.1,166,187,"Biking around downtown Vancouver"
 11-FEB-2024,bike (stationary),00:10:00,6.41,0.49,0.54,100,116,272,409,44.9,174,189,"pre-workout"
