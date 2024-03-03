@@ -10,37 +10,68 @@ const legendIconHeight = "3.75em";
 
 const lineStrokeWidth = 2;
 
+const extraChartDropdownId = "extra-chart-dropdown";
 const weightGraphId = "graph-weight";
 const workoutFrequencyGraphId = "graph-workout-frequency";
-const heartRateGraphId = "graph-resting-heartrate"
+const heartRateGraphId = "graph-resting-heartrate";
+
+function computeWalkScore(row, durationInS) {
+  const durationInH = durationInS / 3600;
+  const pace = row["distance(km)"] / durationInH;
+  const rateOfClimb = row["elevation(m)"] / durationInH;
+
+  // These are some base values 
+  if (row["distance(km)"] < 0.1) {
+    return 0;
+  }
+  if (pace <= 3 && rateOfClimb <= 150) {
+    return 1;
+  }
+
+  // paceFactor gives about 3->1, 4->2, 5->4, 6->7, 7->15, 8->25
+  // climbFactor gives about 150->1, 200->2, 250->4, 300->6, 350->8, 400->11, 450->14, 500->19, 550->24, 600->31
+  const pace2 = pace ** 2;
+  const pace4 = pace2 ** 2;
+  const pace6 = pace2 ** 3;
+  const climb2 = rateOfClimb ** 2;
+  const climb4 = climb2 ** 2;
+
+  const paceFactor = 0.1 * pace2 + 0.001 * pace4 + 0.00005 * pace6;
+  const climbFactor = 0.00005 * climb2 + 0.0000000001 * climb4;
+  const timeFactor = durationInH;
+
+  return timeFactor * (paceFactor + paceFactor * climbFactor);
+}
 
 // TODO make separate dataloading module for this logic
 // TODO also add the rest of the relevant loaders
 async function loadHealthMetrics() {
-  function row(d) {
+  function row(r) {
     return {
-      "date": new Date(d.date),
-      "weight(lbs)": d3IntOrNull(d["weight(lbs)"]),
-      "resting_heart_rate(bpm)": d3IntOrNull(d["resting_heart_rate(bpm)"]),
-      "notes": d.notes,
+      "date": new Date(r.date),
+      "weight(lbs)": d3IntOrNull(r["weight(lbs)"]),
+      "resting_heart_rate(bpm)": d3IntOrNull(r["resting_heart_rate(bpm)"]),
+      "notes": r.notes,
     };
   }
   return await readCSV(`${base_data_path}/health_metrics.csv`, row);
 }
 
 async function loadWalks() {
-  function row(d) {
+  function row(r) {
+    const durationInS = durationToS(r["duration(HH:mm:ss)"]);
     return {
-      "date": new Date(d.date),
-      "workout_type": d.workout_type,
-      "duration(s)": durationToS(d["duration(HH:mm:ss)"]),
-      "distance(km)": d3NumOrNull(d["distance(km)"]),
-      "steps": d3IntOrNull(d["steps"]),
-      "elevation(m)": d3IntOrNull(d["elevation(m)"]),
-      "weight(lbs)": d3NumOrNull(d["weight(lbs)"]),
-      "avg_heart_rate": d3IntOrNull(d["avg_heart_rate"]),
-      "max_heart_rate": d3IntOrNull(d["max_heart_rate"]),
-      "notes": d.notes,
+      "date": new Date(r.date),
+      "workout_type": r.workout_type,
+      "duration(s)": durationInS,
+      "distance(km)": d3NumOrNull(r["distance(km)"]),
+      "steps": d3IntOrNull(r["steps"]),
+      "elevation(m)": d3IntOrNull(r["elevation(m)"]),
+      "weight(lbs)": d3NumOrNull(r["weight(lbs)"]),
+      "avg_heart_rate": d3IntOrNull(r["avg_heart_rate"]),
+      "max_heart_rate": d3IntOrNull(r["max_heart_rate"]),
+      "score": computeWalkScore(r, durationInS),
+      "notes": r.notes,
     };
   }
   return await readCSV(`${base_data_path}/walks.csv`, row);
@@ -88,6 +119,10 @@ function durationToS(val) {
   const minsToS = 60;
   pieces = val.split(":")
   return hoursToS * +pieces[0] + minsToS * +pieces[1] + +pieces[2]
+}
+
+function containsCaseless (a, b) {
+  return a.toLowerCase().includes(b.toLowerCase());
 }
 
 function d3NumOrNull(val) {
@@ -531,7 +566,7 @@ function plotHeartRate(healthMetrics, heartRateTrendline) {
   return svg;
 }
 
-function plotBasic(data, field, title, minVal, maxVal, minorStep, majorStep) {
+function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, majorStep) {
   // First filter out any null entries
   data = data.filter(d => d[field] !== null);
 
@@ -577,7 +612,7 @@ function plotBasic(data, field, title, minVal, maxVal, minorStep, majorStep) {
     .attr("d", valueLine(data));
 
   // Annotate object and append to the page
-  svg.attr("id", "basic-plot");
+  svg.attr("id", graphId);
   return svg;
 }
 
@@ -596,8 +631,39 @@ function plotBasic(data, field, title, minVal, maxVal, minorStep, majorStep) {
   const workoutFrequency = await loadWorkoutFrequency();
   const heartRateTrendline = await loadHeartRateTrendline();
 
-  // Build and display the main graphs
-  document.body.append(plotWeight(healthMetrics, weightTrendline).node());
+  // Build and display the main graphs; update width of entire document to fit
+  var weightGraph = plotWeight(healthMetrics, weightTrendline).node();
+  document.body.append(weightGraph);
   document.body.append(plotWorkoutFrequency(workoutFrequency).node());
   document.body.append(plotHeartRate(healthMetrics, heartRateTrendline).node());
+  var docWidth = Math.max(weightGraph.width.baseVal.value, document.body.clientWidth);
+  document.documentElement.style.width = `${docWidth}px`;
+
+  // Position the secondary metrics dropbox selector appropriately
+  //$(".dropdown").css("top", $(document).height());
+  var dropdown = $(`#${extraChartDropdownId}`);
+  $("body").append(dropdown);
+  dropdown.css("display", "block");
+
+  // TODO Build out more secondary metric graphs
+  // TODO Include the strength over time metric graphs
+
+  // Experiment with new graphs (defaults to hidden)
+  const filteredWalks = walks
+      .filter(d => d["workout_type"] == "walk (treadmill)")
+      .filter(d => d["duration(s)"] >= 1200)
+      .filter(d => !containsCaseless(d["notes"], "pre-workout"))
+      .filter(d => !containsCaseless(d["notes"], "warm-up"))
+      .filter(d => !containsCaseless(d["notes"], "post-workout"));
+  const field = "score";
+  const title = "Walk Scores";
+  const walkScoresGraphId = "walk-scores-chart";
+  expGraph = plotBasic(filteredWalks, field, title, walkScoresGraphId, 0, 200, 20, 5);
+  document.body.append(expGraph.node());
+
+  // Append the copyright now that the main graphs have been added
+  var copyright = $("body").find("#copyright");
+  copyright.css("width", `${weightGraph.getBoundingClientRect().width}px`);
+  copyright.css("display", "block");
+  $("body").append(copyright);
 })();
