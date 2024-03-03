@@ -10,7 +10,6 @@ const legendIconHeight = "3.75em";
 
 const lineStrokeWidth = 2;
 
-const extraChartDropdownId = "extra-chart-dropdown";
 const weightGraphId = "graph-weight";
 const workoutFrequencyGraphId = "graph-workout-frequency";
 const heartRateGraphId = "graph-resting-heartrate";
@@ -644,6 +643,11 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
   var dropdown = $(`#${extraChartDropdownId}`);
   $("body").append(dropdown);
   dropdown.css("display", "block");
+
+  // Add the container that'll hold the secondary metric charts
+  var extraChartContainer = $(document.createElement("div"));
+  extraChartContainer.attr("id", extraChartContainerId);
+  $("body").append(extraChartContainer);
 
   // TODO Build out more secondary metric graphs
   // TODO Include the strength over time metric graphs

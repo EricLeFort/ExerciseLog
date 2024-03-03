@@ -3,9 +3,13 @@
  * This entire class assumes there's a single dropdown on the page. It should be extended to handle multiple.
  */
 
+const extraChartDropdownId = "extra-chart-dropdown";
+const extraChartContainerId = "extra-chart-container";
+
 const baseImgPath = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/img"
 const dropdownClassName = "dropdown";
 const dropdownMenuClassName = "dropdown-menu";
+
 const extraChartsMenuData = [
     {
         "name": "Experimental...",
@@ -163,14 +167,11 @@ function setActiveExtraChart(oldChartName, newChartName) {
 function loadStrengthChart(chartName, chartId) {
     var img = $(document.createElement("img"));
     img.attr("id", chartId);
-    img.css("width", "1600px");
-    img.css("height", "900px");
     img.css("display", "block");
     img.css("margin", "0 auto");
     img.attr("src", `${baseImgPath}/strength/${chartName}.png`);
     img.attr("alt", chartName);
-    img.addClass("svg");
-    $("body").append(img);
+    $(`#${extraChartContainerId}`).append(img);
 }
 
 /**
