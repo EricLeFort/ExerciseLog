@@ -1,6 +1,10 @@
 # TODO
 
 ### Python
+* Migrate linters/formatters to Ruff (MUCH faster, identical functionality)
+* Extract shared structural information into separate, language-agnostic files so they can be shared with JS
+    - Ontological information (e.g. the EXERCISE_INFO dict in ontology.py, heart rate thresholds, etc.)
+    - Metadata (e.g. ColumnName values)
 * Populate Muscle in EXERCISE_INFO
 * Populate percentages of Muscle/MuscleGroup in EXERCISE_INFO
 * Define local and global ideal strength ratios
@@ -9,11 +13,14 @@
 * Color-code data points in workout frequency graph to correspond to the different types of activity
 * Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
 * Work out and implement the fatigue factor logic
-* Ideal weekly volume inspiration: https://www.reddit.com/r/weightroom/comments/6674a4/dr_mike_israetels_training_tips_for_hypertrophy/
+* Ideal weekly volume inspiration: https://www.reddit.com/r/weightroom/comments/6674a4/dr_mike_israetels_training_tips_for_hypertrophy
 * Make ExerciseInfo a parameterized singleton
 
 ### Site
 * Add a graph selector after the three main graphs so I can experiment with and showcase a wider array of visualizations without too much clutter
+* Plot a combined metric using rate_of_climb + pace (+ duration?)
+    - Experiment with adding duration into the equation (maybe also something like a strive score using avg, max + duration?)
+* Use the data in the ontological files (see Python section above) for thresholds
 
 ### Database (removes the need to support any data analysis in JS, can also purge visualization support from Python and get clean separation)
 * Create one (performance doesn't matter but flexibility does)
