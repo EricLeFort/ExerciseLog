@@ -3,9 +3,10 @@
  * This entire class assumes there's a single dropdown on the page. It should be extended to handle multiple.
  */
 
-var dropdownClassName = "dropdown";
-var dropdownMenuClassName = "dropdown-menu";
-var extraChartsMenuData = [
+const baseImgPath = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/img"
+const dropdownClassName = "dropdown";
+const dropdownMenuClassName = "dropdown-menu";
+const extraChartsMenuData = [
     {
         "name": "Experimental...",
         "submenu": [
@@ -29,13 +30,71 @@ var extraChartsMenuData = [
             {"name": "Bench Press"},
             {"name": "Bicep Curl"},
             {"name": "Cable Lying Hip Flexors"},
+            {"name": "Arnold Press"},
+            {"name": "Barbell Lunges"},
+            {"name": "Bench Press"},
+            {"name": "Bicep Curl"},
+            {"name": "Cable Lying Hip Flexors"},
+            {"name": "Concentration Curl"},
+            {"name": "Deadlift"},
+            {"name": "Delt Flies"},
+            {"name": "Hammer Curl"},
+            {"name": "Incline Dumbbell Bench Press"},
+            {"name": "Lat Pulldown"},
+            {"name": "Lateral Lift"},
+            {"name": "Lawnmowers"},
+            {"name": "Machine Hip Abductors"},
+            {"name": "Machine Hip Adductors"},
+            {"name": "Machine Pec Flies"},
+            {"name": "Military Press"},
+            {"name": "Overhead Tricep Extension"},
+            {"name": "Pullovers"},
+            {"name": "Seated Row"},
+            {"name": "Shrugs"},
+            {"name": "Single-Arm Farmer's Carry"},
+            {"name": "Single-Leg Leg Curl"},
+            {"name": "Skullcrushers"},
+            {"name": "Squats"},
+            {"name": "Strict Press"},
+            {"name": "Tricep Pushdown"},
+            {"name": "Tricep Pushdown (V-Bar)"},
+            {"name": "Wide-Grip Pull-Up"},
         ],
     },
 ];
 
-// TODO finish populating this
-var extraChartsIdMap = {
+const extraChartsIdMap = {
     "Walk Scores": "walk-scores-chart",
+    "Arnold Press": "arnold-press-chart",
+    "Barbell Lunges": "barbell-lunges-chart",
+    "Bench Press": "bench-press-chart",
+    "Bicep Curl": "bicep-curl-chart",
+    "Cable Lying Hip Flexors": "cable-lying-hip-flexors-chart",
+    "Concentration Curl": "concentration-curl",
+    "Deadlift": "deadlift-chart",
+    "Delt Flies": "delt-flies-chart",
+    "Hammer Curl": "hammer-curl-chart",
+    "Incline Dumbbell Bench Press": "incline-dumbbell-bench-press-chart",
+    "Lat Pulldown": "lat-pulldown-chart",
+    "Lateral Lift": "lateral-lift-chart",
+    "Lawnmowers": "lawnmowers-chart",
+    "Machine Hip Abductors": "machine-hip-abductors-chart",
+    "Machine Hip Adductors": "machine-hip-abductors-chart",
+    "Machine Pec Flies": "machine-pec-flies-chart",
+    "Military Press": "military-press-chart",
+    "Overhead Tricep Extension": "overhead-tricep-extension-chart",
+    "Pullovers": "pullovers-chart",
+    "Seated Row": "seated-row-chart",
+    "Shrugs": "shrugs-chart",
+    "Single-Arm Farmer's Carry": "single-arm-farmers-carry-chart",
+    "Single-Leg Leg Curl": "single-leg-leg-curl-chart",
+    "Single-Leg Leg Extension": "single-leg-leg-extension-chart",
+    "Skullcrushers": "skullcrushers-chart",
+    "Squats": "squats-chart",
+    "Strict Press": "strict-press-chart",
+    "Tricep Pushdown": "tricep-pushdown-chart",
+    "Tricep Pushdown (V-Bar)": "tricep-pushdown-v-bar-chart",
+    "Wide-Grip Pull-Up": "wide-grip-pull-up-chart",
 };
 
 /* Runtime set-on-load globals */
@@ -80,16 +139,38 @@ function attachListeners() {
     });
 }
 
-function setActiveExtraChart(oldVal, newVal) {
-    var oldChartId = extraChartsIdMap[oldVal];
-    var newChartId = extraChartsIdMap[newVal];
+/**
+ * Sets the secondary metric chart that should be made visible
+ */
+function setActiveExtraChart(oldChartName, newChartName) {
+    var oldChartId = extraChartsIdMap[oldChartName];
+    var newChartId = extraChartsIdMap[newChartName];
 
     if (oldChartId) {
         var oldChart = $(document).find(`#${oldChartId}`);
         oldChart.css("display", "none");
     }
     var newChart = $(document).find(`#${newChartId}`);
+    // Haven't loaded this chart yet, download it
+    if (newChart.length === 0) {
+        // TODO this assumes every unloaded chart is a strenght chart but that won't always be true;
+        // improve the design of this chunk
+        loadStrengthChart(newChartName, newChartId);
+    }
     newChart.css("display", "block");
+}
+
+function loadStrengthChart(chartName, chartId) {
+    var img = $(document.createElement("img"));
+    img.attr("id", chartId);
+    img.css("width", "1600px");
+    img.css("height", "900px");
+    img.css("display", "block");
+    img.css("margin", "0 auto");
+    img.attr("src", `${baseImgPath}/strength/${chartName}.png`);
+    img.attr("alt", chartName);
+    img.addClass("svg");
+    $("body").append(img);
 }
 
 /**
