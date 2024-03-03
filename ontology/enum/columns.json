@@ -4,6 +4,7 @@
     "enum": {
         "AVG_CADENCE_BIKE": "avg_cadence(rpm)",
         "AVG_CADENCE_ROW": "avg_cadence(spm)",
+        "AVG_GRADE": "avg_grade(%)",
         "AVG_HEART_RATE": "avg_heart_rate",
         "AVG_RES": "avg_resistance",
         "AVG_WATT": "avg_wattage",
