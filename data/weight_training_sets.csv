@@ -1,4 +1,27 @@
 date,exercise,reps,weight(lbs),rating
+01-MAR-2024,Bench Press,5,135,warm-up
+01-MAR-2024,Bench Press,5,225,good
+01-MAR-2024,Bench Press,5,255,good
+01-MAR-2024,Bench Press,3,250,bad
+01-MAR-2024,Bench Press,5,135,warm-up
+01-MAR-2024,Bench Press,5,225,good
+01-MAR-2024,Bench Press,5,225,good
+01-MAR-2024,Bench Press,5,225,good
+01-MAR-2024,Bench Press,15,135,good
+01-MAR-2024,Incline Dumbbell Press,10,40,warm-up
+01-MAR-2024,Incline Dumbbell Press,10,75,good
+01-MAR-2024,Incline Dumbbell Press,10,75,good
+01-MAR-2024,Incline Dumbbell Press,10,75,good
+01-MAR-2024,Machine Pec Flies,8,160,warm-up
+01-MAR-2024,Machine Pec Flies,5,245,good
+01-MAR-2024,Machine Pec Flies,5,245,good
+01-MAR-2024,Plank,70,0,good
+01-MAR-2024,Plank,70,0,good
+01-MAR-2024,Plank,70,0,good
+01-MAR-2024,Side-Plank,45,0,good
+01-MAR-2024,Side-Plank,45,0,good
+01-MAR-2024,Side-Plank,45,0,good
+01-MAR-2024,Deadlift,5,225,warm-up
 28-FEB-2024,Lawnmowers,10,45,warm-up
 28-FEB-2024,Lawnmowers,10,70,good
 28-FEB-2024,Lawnmowers,10,70,good
@@ -65,6 +88,16 @@ date,exercise,reps,weight(lbs),rating
 25-FEB-2024,Single-Leg Leg Extension,10,135,bad
 25-FEB-2024,Single-Leg Leg Extension,10,135,good
 25-FEB-2024,Single-Leg Leg Extension,10,135,good
+24-FEB-2024,Machine Hip Abductors,12,110,good
+24-FEB-2024,Machine Hip Abductors,12,110,good
+24-FEB-2024,Machine Hip Abductors,12,110,good
+24-FEB-2024,Machine Hip Adductors,12,110,good
+24-FEB-2024,Machine Hip Adductors,12,110,good
+24-FEB-2024,Machine Hip Adductors,12,110,good
+24-FEB-2024,Cable Lying Hip Flexors,10,30,warm-up
+24-FEB-2024,Cable Lying Hip Flexors,12,60,good
+24-FEB-2024,Cable Lying Hip Flexors,12,60,good
+24-FEB-2024,Cable Lying Hip Flexors,10,70,good
 22-FEB-2024,Shrugs,10,65,good
 22-FEB-2024,Shrugs,10,65,good
 22-FEB-2024,Shrugs,10,65,good
