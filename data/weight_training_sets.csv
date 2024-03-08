@@ -1,4 +1,70 @@
 date,exercise,reps,weight(lbs),rating
+05-MAR-2024,Bicep Curl,10,20,warm-up
+05-MAR-2024,Bicep Curl,10,35,good
+05-MAR-2024,Bicep Curl,10,35,good
+05-MAR-2024,Bicep Curl,10,35,good
+05-MAR-2024,Hammer Curl,10,35,good
+05-MAR-2024,Hammer Curl,10,35,bad
+05-MAR-2024,Hammer Curl,10,35,bad
+05-MAR-2024,Concentration Curl,10,30,good
+05-MAR-2024,Concentration Curl,10,30,good
+05-MAR-2024,Concentration Curl,10,30,good
+05-MAR-2024,Overhead Tricep Extension,10,10,warm-up
+05-MAR-2024,Overhead Tricep Extension,10,35,good
+05-MAR-2024,Overhead Tricep Extension,10,35,good
+05-MAR-2024,Overhead Tricep Extension,10,35,good
+05-MAR-2024,Tricep Pushdown (V-Bar),10,90,warm-up
+05-MAR-2024,Tricep Pushdown (V-Bar),10,160,good
+05-MAR-2024,Tricep Pushdown (V-Bar),10,160,good
+05-MAR-2024,Tricep Pushdown (V-Bar),10,160,good
+05-MAR-2024,Skullcrushers,10,42,warm-up
+05-MAR-2024,Skullcrushers,10,72,good
+05-MAR-2024,Skullcrushers,8,77,good
+05-MAR-2024,Skullcrushers,10,77,good
+05-MAR-2024,Lawnmowers,10,45,warm-up
+05-MAR-2024,Lawnmowers,10,70,good
+05-MAR-2024,Lawnmowers,10,70,good
+05-MAR-2024,Lawnmowers,10,70,good
+05-MAR-2024,Seated Row,10,77.5,warm-up
+05-MAR-2024,Seated Row,10,145,good
+05-MAR-2024,Seated Row,8,145,good
+05-MAR-2024,Seated Row,10,145,good
+05-MAR-2024,Wide-Grip Pull-Up,10,-130,warm-up
+05-MAR-2024,Wide-Grip Pull-Up,10,-80,good
+05-MAR-2024,Wide-Grip Pull-Up,10,-80,good
+05-MAR-2024,Wide-Grip Pull-Up,10,-80,failure
+03-MAR-2024,Lateral Lift,10,15,warm-up
+03-MAR-2024,Lateral Lift,10,30,good
+03-MAR-2024,Lateral Lift,10,30,good
+03-MAR-2024,Lateral Lift,8,30,good
+03-MAR-2024,Military Press,5,150,warm-up
+03-MAR-2024,Military Press,5,240,good
+03-MAR-2024,Military Press,5,240,good
+03-MAR-2024,Military Press,6,240,good
+03-MAR-2024,Military Press,5,245,good
+03-MAR-2024,Military Press,6,245,good
+03-MAR-2024,Full Cans,20,10,good
+03-MAR-2024,Full Cans,20,10,good
+03-MAR-2024,Full Cans,20,10,good
+03-MAR-2024,Delt Flies,10,70,warm-up
+03-MAR-2024,Delt Flies,10,120,good
+03-MAR-2024,Delt Flies,10,120,good
+03-MAR-2024,Delt Flies,10,120,good
+03-MAR-2024,Barbell Lunges,10,95,warm-up
+03-MAR-2024,Barbell Lunges,10,125,good
+03-MAR-2024,Barbell Lunges,10,135,good
+03-MAR-2024,Barbell Lunges,10,145,good
+03-MAR-2024,Single-Leg Leg Curl,10,80,warm-up
+03-MAR-2024,Single-Leg Leg Curl,10,135,good
+03-MAR-2024,Single-Leg Leg Curl,10,135,good
+03-MAR-2024,Single-Leg Leg Curl,10,135,good
+03-MAR-2024,Single-Leg Leg Extension,10,80,warm-up
+03-MAR-2024,Single-Leg Leg Extension,10,135,good
+03-MAR-2024,Single-Leg Leg Extension,10,135,good
+03-MAR-2024,Single-Leg Leg Extension,10,135,good
+03-MAR-2024,Parallel Bar Leg Raise,12,0,good
+03-MAR-2024,Parallel Bar Leg Raise,12,0,good
+03-MAR-2024,Parallel Bar Leg Raise,12,0,good
 01-MAR-2024,Bench Press,5,135,warm-up
 01-MAR-2024,Bench Press,5,225,good
 01-MAR-2024,Bench Press,5,255,good
