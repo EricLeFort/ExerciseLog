@@ -5,10 +5,10 @@ from exercise_log.utils import StrEnum
 
 
 class TestStrEnum(unittest.TestCase):
-    def test_create_from_json(self):
+    def test_create_from_json(self) -> None:
         """Tests that a StrEnum can be created from a JSON as expected."""
         # pylint: disable=invalid-name
-        TestEnum = StrEnum.create_from_json("../test/data/enum/sample_enum.json")
+        TestEnum = StrEnum.create_from_json("../test/data/enum/sample_enum.json")  # noqa: N806
 
         try:
             a = TestEnum.A
