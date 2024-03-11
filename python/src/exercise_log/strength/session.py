@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Dict, List, Optional
+from typing import Optional
 
 from exercise_log.strength import Exercise, SetRating
 from exercise_log.strength.anatomy import MuscleGroup
@@ -32,11 +32,9 @@ class SessionFocus(Enum):
 
 
 class ExerciseSet:
-    """
-    Stores info about a single set in a Session
-    """
+    """Stores info about a single set in a Session"""
 
-    def __init__(self, target_count: int, target_weight: float):
+    def __init__(self, target_count: int, target_weight: float) -> None:
         self.target_count = target_count
         self.target_weight = target_weight
 
@@ -50,9 +48,7 @@ class ExerciseSet:
 
 
 class Result:
-    """
-    Stores info about the result of an ExerciseSet
-    """
+    """Stores info about the result of an ExerciseSet"""
 
     def __init__(self, count: Optional[int], weight: Optional[float], set_rating: SetRating):
         self.count = count
@@ -61,25 +57,23 @@ class Result:
 
 
 class SkippedResult(Result):
-    """
-    This is just a special case of Result where the rating is SKIPPED and the counts/weight are None
-    """
+    """A special case of Result where the rating is SKIPPED and the counts/weight are None"""
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__(None, None, SetRating.SKIPPED)
 
 
 class SessionInfo:
-    def __init__(self, focus: List[MuscleGroup], exercise_sets: Dict[str, List[ExerciseSet]]):
+    def __init__(self, focus: list[MuscleGroup], exercise_sets: dict[str, list[ExerciseSet]]) -> None:
         self.focus = focus
 
         self.fatigue_score = sum(exercise_set.get_fatigue_score() for exercise, exercise_set in exercise_sets.items())
-        # TODO this will store/compute info about a Session (volume per muscle/muscle group, fatigue score)
+        # TODO(eric): this will store/compute info about a Session (volume per muscle/muscle group, fatigue score)
         raise NotImplementedError
 
 
 class Session:
-    def __init__(self, focus: SessionFocus):
+    def __init__(self, focus: SessionFocus) -> None:
         self.focus = focus
         self.sets = {}
         self.results = {}
@@ -101,5 +95,5 @@ class Session:
             # This re-uses the SkippedResult instance but that's fine; it technically could be a singleton anyway
             # It also assumes the exercise has been added to the results dict (which is handled by add_exercise())
             self.results[exercise] += [SkippedResult()] * (len(sets) - len(self.results[exercise]))
-        # TODO also save the actual fatigue score (e.g. if more/less reps were hit, or if sets were added/skipped)
-        # TODO save these results somewhere, somehow
+        # TODO(eric): save the actual fatigue score (e.g. if more/less reps were hit, or if sets were added/skipped)
+        # TODO(eric): save these results somewhere, somehow

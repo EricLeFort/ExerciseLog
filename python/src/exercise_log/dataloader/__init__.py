@@ -148,9 +148,7 @@ class DataLoader:
         health_metrics = DataLoader._load_and_clean_data(f"{root_data_dir}/health_metrics.csv")
 
         # Filter out any empty rows from the health metrics
-        return health_metrics[
-            health_metrics[CName.WEIGHT].notnull() | health_metrics[CName.RESTING_HEART_RATE].notnull()
-        ]
+        return health_metrics[health_metrics[CName.WEIGHT].notna() | health_metrics[CName.RESTING_HEART_RATE].notna()]
 
     @staticmethod
     def load_travel_days(root_data_dir: str):

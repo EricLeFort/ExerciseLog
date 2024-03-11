@@ -17,13 +17,13 @@ N_DAYS_TO_AVG = 8
 
 class Trendsetter:
     @staticmethod
-    def _f_log_curve(t, a, b, c):
-        """This is a logaritmic function that Scipy's curve_fit will fit (using the variables given)"""
+    def _f_log_curve(t, a, b, c):  # noqa: ANN001
+        """A logaritmic function that Scipy's curve_fit will fit (using the variables given)."""
         return a * np.log(b * t) + c
 
     @staticmethod
-    def _f_affine(t, a, b):
-        """This is a linear function that Scipy's curve_fit will fit (using the variables given)"""
+    def _f_affine(t, a, b):  # noqa: ANN001
+        """A linear function that Scipy's curve_fit will fit (using the variables given)."""
         return a * t + b
 
     @staticmethod
@@ -33,7 +33,7 @@ class Trendsetter:
         fitted_params: tuple,
         num_days_to_extrapolate: int,
     ) -> np.ndarray:
-        """Fits a trendline using the given functionm for the column specified by key in the given DataFrame"""
+        """Fits a trendline using the given functionm for the column specified by key in the given DataFrame."""
         padded_dates = get_padded_dates(df, num_days_to_extrapolate)
         return f_to_fit(padded_dates.index, *fitted_params).to_numpy()
 
@@ -77,8 +77,7 @@ class Trendsetter:
     @staticmethod
     def get_line_of_best_fit(df: pd.DataFrame, field: str, extrapolate_days: int) -> np.ndarray:
         """
-        Fits a linear trendline to the given field in the data. Returns the line of best fit from the start of the data
-        until the end of the data plus the number of extrapolated days.
+        Fit a linear trendline to the given field including padding for the number of extrapolated days.
 
         Args:
             data (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
@@ -87,15 +86,14 @@ class Trendsetter:
         Returns:
             An np.ndarray of values that belong to the trendline
         """
-        nonnulls = df[df[field].notnull()]
+        nonnulls = df[df[field].notna()]
         fitted_params = Trendsetter.fit_linear(nonnulls, field)
         return Trendsetter._get_curve_of_best_fit(nonnulls, Trendsetter._f_affine, fitted_params, extrapolate_days)
 
     @staticmethod
     def get_logarithmic_curve_of_best_fit(df: pd.DataFrame, field: str, extrapolate_days: int) -> np.ndarray:
         """
-        Fits a logarithmic trendline of the given field. Returns the line of best fit from the start of the data
-        until the end of the data plus the number of extrapolated days.
+        Fit a logarithmic trendline to the given field including padding for the number of extrapolated days.
 
         Args:
             data (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
@@ -104,7 +102,7 @@ class Trendsetter:
         Returns:
             An np.ndarray of values that belong to the trendline
         """
-        nonnulls = df[df[field].notnull()]
+        nonnulls = df[df[field].notna()]
         fitted_params = Trendsetter.fit_logarithmic(nonnulls, field)
         return Trendsetter._get_curve_of_best_fit(nonnulls, Trendsetter._f_log_curve, fitted_params, extrapolate_days)
 
@@ -121,7 +119,7 @@ class ExerciseSummary:
     def _build(data: pd.DataFrame) -> "ExerciseSummary":
         raise NotImplementedError
 
-    def __str__(self):
+    def __str__(self) -> str:
         raise NotImplementedError
 
 
@@ -138,7 +136,7 @@ class WeightTrainingSummary(ExerciseSummary):
         rep_count = data[ColumnName.REPS].sum()
         return WeightTrainingSummary(weight_moved, set_count, rep_count)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Lifting {self.weight_moved:,} lbs across {self.set_count:,} sets and {self.rep_count:,} reps."
 
 
@@ -153,7 +151,7 @@ class FootCardioSummary(ExerciseSummary):
         elv_gain = data[ColumnName.ELEVATION].sum()
         return FootCardioSummary(dist, elv_gain)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Moving my body by foot across {self.dist:,} km and up {self.elv_gain:,} m."
 
 
@@ -168,5 +166,5 @@ class BikeCardioSummary(ExerciseSummary):
         total_output = round((data[ColumnName.DURATION] * data[ColumnName.AVG_WATT] / 1000).sum())
         return BikeCardioSummary(dist, total_output)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Biking across {self.dist:,} km with a total output of {self.total_output:,} KJ."

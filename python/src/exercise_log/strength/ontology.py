@@ -49,7 +49,7 @@ ENDURANCE_COMPOUND_REP_RANGE = (15, 50)
 #    * upper range: 11:10?, more may lead to PFPS injuries (web.archive.org/web/20190308153356id_/http://pdfs.semanticscholar.org/f531/d7163d65c82a5301e505affe72c5c9ca8b7a.pdf)
 #    * ideal: 1:1
 #
-# TODO figure out something for the following unknowns:
+# TODO(eric): figure out something for the following unknowns:
 # Forearm (Grip) -- Doesn't seem like there's any accepted measurements
 #    * Some population averages and percentiles by age and gender: https://www.jospt.org/doi/epdf/10.2519/jospt.2018.7851
 #    * Nothing discussing injury risk though
@@ -99,7 +99,7 @@ class ExerciseInfoMeta(type):
         return item in EXERCISE_INFO
 
 
-# TODO this should really be a parameterized singleton
+# TODO(eric): this should really be a parameterized singleton
 class ExerciseInfo(metaclass=ExerciseInfoMeta):
     """
     Stores metadata about an Exercise such as which muscles and muscle groups it works, which antagonist muscle is
@@ -158,10 +158,12 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
         raise NotImplementedError
 
 
-# TODO: come back later and fill in:
+# pylint: disable=line-too-long
+# TODO(eric): come back later and fill in:
 #         * set of strings of antagonist muscles for each exercise
 #         * percentages for muscles/groups worked (should be as a percentage of that muscle's effort)
-# TODO: add info about the capacity of a muscle/muscle group (e.g. biceps/triceps can handle more volume than quads)
+# TODO(eric): add info about the capacity of a muscle/muscle group (e.g. biceps/triceps can handle more volume than quads)
+# pylint: enable=line-too-long
 
 # This is a large data field containing metadata about the various exercises logged in this repo.
 EXERCISE_INFO = {

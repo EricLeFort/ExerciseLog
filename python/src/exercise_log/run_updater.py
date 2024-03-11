@@ -6,7 +6,13 @@ from exercise_log.dataloader import CName, ColumnName, DataLoader
 from exercise_log.strength import Exercise
 from exercise_log.trend import Trendsetter
 from exercise_log.utils import TermColour, get_padded_dates
-from exercise_log.vis import plot_resting_heart_rate, plot_strength_over_time, plot_weight, plot_workout_frequency
+from exercise_log.vis import (
+    PlotOptions,
+    plot_resting_heart_rate,
+    plot_strength_over_time,
+    plot_weight,
+    plot_workout_frequency,
+)
 
 ROOT_DATA_DIR = "../../data"
 ROOT_IMG_DIR = "../../img"
@@ -83,7 +89,7 @@ class HealthTrends:
         return self._heart_rate_trendline
 
     def get_padded_dates(self, c_name: ColumnName):
-        nonnulls = self.health_metrics[self.health_metrics[c_name].notnull()]
+        nonnulls = self.health_metrics[self.health_metrics[c_name].notna()]
         return get_padded_dates(nonnulls, self.extrapolate_days)
 
     @staticmethod
@@ -102,24 +108,10 @@ class HealthTrends:
 
 
 def build_health_visuals(health_trends: HealthTrends):
-    plot_workout_frequency(
-        health_trends.get_workout_durations(),
-        N_DAYS_TO_AVG,
-        export_dir=ROOT_IMG_DIR,
-        show_plot=False,
-    )
-    plot_resting_heart_rate(
-        health_trends.health_metrics,
-        health_trends.get_heart_rate_trendline(),
-        export_dir=ROOT_IMG_DIR,
-        show_plot=False,
-    )
-    plot_weight(
-        health_trends.health_metrics,
-        health_trends.get_weight_trendline(),
-        export_dir=ROOT_IMG_DIR,
-        show_plot=False,
-    )
+    options = PlotOptions(export_dir=ROOT_IMG_DIR, show_plot=False)
+    plot_workout_frequency(health_trends.get_workout_durations(), N_DAYS_TO_AVG, options)
+    plot_resting_heart_rate(health_trends.health_metrics, health_trends.get_heart_rate_trendline(), options)
+    plot_weight(health_trends.health_metrics, health_trends.get_weight_trendline(), options)
 
 
 def build_strength_visuals(weight_training_workouts: pd.DataFrame, weight_training_sets: pd.DataFrame):
@@ -130,13 +122,13 @@ def build_strength_visuals(weight_training_workouts: pd.DataFrame, weight_traini
             continue
         print(f"Plotting {exercise}... ", end="")
         try:
+            options = PlotOptions(export_dir=ROOT_IMG_DIR, show_plot=False)
             plot_strength_over_time(
                 weight_training_workouts,
                 weight_training_sets,
                 exercise,
                 PRIMARY_GYMS,
-                export_dir=ROOT_IMG_DIR,
-                show_plot=False,
+                options,
             )
             print("done.")
         except ValueError as ve:
