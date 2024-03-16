@@ -148,7 +148,7 @@ class SetType(StrEnum):
         return SET_TYPE_TO_REP_RANGE[self]
 
 
-# TODO ONE_RM should be 1 and there should instead be logic to rectify results at the scope of an entire workout
+# TODO(eric): ONE_RM should be 1 and there should instead be logic to rectify results at the scope of an entire workout
 SET_TYPE_TO_REP_RANGE = {
     SetType.ONE_RM: (1, 2),  # Include the 2-rep for when you hit 2 at a lower weight and then fail at the next weight
     SetType.STRENGTH: (3, 7),

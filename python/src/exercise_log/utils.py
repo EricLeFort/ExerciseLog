@@ -3,13 +3,15 @@ from __future__ import annotations
 import json
 import os
 from enum import Enum, EnumMeta
-from typing import Any, Optional
+from typing import TYPE_CHECKING, Any, Optional
 
 import numpy as np
 import pandas as pd
-from pandas.core.generic import NDFrame  # This is the generic type that encompasses Series and DataFrame
 
 from exercise_log.constants import DATE, number
+
+if TYPE_CHECKING:
+    from pandas.core.generic import NDFrame  # This is the generic type that encompasses Series and DataFrame
 
 UTF8 = "utf-8"
 NEWLINE = "\n"
@@ -47,7 +49,7 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
         return str(self.value)
 
     @classmethod
-    def create_from_json(cls, f_name: str):
+    def create_from_json(cls, f_name: str) -> StrEnum:
         """
         Dynamically creates a StrEnum with the given name using the provided JSON dict.
 
@@ -109,7 +111,7 @@ def convert_pd_to_np(obj: NDFrame) -> np.ndarray:
 
 
 def convert_mins_to_hour_mins(mins: number, _: None = None) -> str:
-    """Helper function used only to be passed in to the method computing the ticks on graphs."""
+    """Compute the ticks on graphs. E.g. 90m becomes 1h 30m."""
     num_mins = 60
     if mins < num_mins:
         return f"{int(mins)}m"

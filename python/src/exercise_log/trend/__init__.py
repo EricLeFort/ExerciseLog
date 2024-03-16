@@ -1,6 +1,6 @@
+from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import date
-from typing import Callable
 
 import numpy as np
 import pandas as pd
@@ -17,13 +17,13 @@ N_DAYS_TO_AVG = 8
 
 class Trendsetter:
     @staticmethod
-    def _f_log_curve(t, a, b, c):  # noqa: ANN001
-        """A logaritmic function that Scipy's curve_fit will fit (using the variables given)."""
+    def _f_log_curve(t, a, b, c) -> float:
+        """Define a logaritmic function to be fit using Scipy's curve_fit (using the variables given)."""
         return a * np.log(b * t) + c
 
     @staticmethod
-    def _f_affine(t, a, b):  # noqa: ANN001
-        """A linear function that Scipy's curve_fit will fit (using the variables given)."""
+    def _f_affine(t, a, b) -> float:
+        """Define a linear function to be fit using Scipy's curve_fit (using the variables given)."""
         return a * t + b
 
     @staticmethod
@@ -33,19 +33,19 @@ class Trendsetter:
         fitted_params: tuple,
         num_days_to_extrapolate: int,
     ) -> np.ndarray:
-        """Fits a trendline using the given functionm for the column specified by key in the given DataFrame."""
+        """Fit a trendline using the given functionm for the column specified by key in the given DataFrame."""
         padded_dates = get_padded_dates(df, num_days_to_extrapolate)
         return f_to_fit(padded_dates.index, *fitted_params).to_numpy()
 
     @staticmethod
     def compute_n_sample_avg(data: pd.DataFrame, field: str, n_days_to_avg: int) -> np.ndarray:
-        """Compute an average over the most recent N samples"""
+        """Compute an average over the most recent N samples."""
         return uniform_filter1d(data[field].astype("float64"), size=n_days_to_avg)
 
     @staticmethod
     def fit_linear(df: pd.DataFrame, field: str) -> np.ndarray:
         """
-        Computes the line of best fit for the given field.
+        Compute the line of best fit for the given field.
 
         Args:
             data (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
@@ -62,7 +62,7 @@ class Trendsetter:
     @staticmethod
     def fit_logarithmic(df: pd.DataFrame, field: str) -> np.ndarray:
         """
-        Computes the logarithmic curve of best fit for the given field.
+        Compute the logarithmic curve of best fit for the given field.
 
         Args:
             data (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.

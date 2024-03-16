@@ -32,7 +32,7 @@ class SessionFocus(Enum):
 
 
 class ExerciseSet:
-    """Stores info about a single set in a Session"""
+    """Stores info about a single set in a Session."""
 
     def __init__(self, target_count: int, target_weight: float) -> None:
         self.target_count = target_count
@@ -43,12 +43,12 @@ class ExerciseSet:
     def get_fatigue_score(self):
         if self._fatigue_score is not None:
             return self._fatigue_score
-        # TODO compute the fatigue score
+        # TODO(eric): compute the fatigue score
         raise NotImplementedError
 
 
 class Result:
-    """Stores info about the result of an ExerciseSet"""
+    """Stores info about the result of an ExerciseSet."""
 
     def __init__(self, count: Optional[int], weight: Optional[float], set_rating: SetRating):
         self.count = count
@@ -57,7 +57,7 @@ class Result:
 
 
 class SkippedResult(Result):
-    """A special case of Result where the rating is SKIPPED and the counts/weight are None"""
+    """A special case of Result where the rating is SKIPPED and the counts/weight are None."""
 
     def __init__(self) -> None:
         super().__init__(None, None, SetRating.SKIPPED)
@@ -83,12 +83,12 @@ class Session:
         return self._session_info.fatigue_score
 
     def add_set(self, exercise_set: ExerciseSet):
-        self.sets[exercise_set.exercise] = self.sets.get(exercise_set.exercise, []) + [exercise_set]
+        self.sets[exercise_set.exercise] = [*self.sets.get(exercise_set.exercise, []), exercise_set]
         self.results[exercise_set.exercise] = []
         self._session_info = SessionInfo(self.focus, self.sets)
 
     def add_result(self, exercise: Exercise, result: Result):
-        self.results[exercise] = self.results.get(exercise, []) + [result]
+        self.results[exercise] = [*self.results.get(exercise, []), result]
 
     def complete_session(self):
         for exercise, sets in self.sets.items():

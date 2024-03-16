@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from exercise_log.utils import StrEnum
 
 
@@ -158,7 +160,7 @@ class Muscle(StrEnum):
     ILIOCOSTALIS_THORACIS = "Iliocostalis Thoracis"
     ILIOCOSTALIS_LUMBORUM = "Iliocostalis Lumborum"
 
-    MUSCLE_GROUP_MAP = {
+    MUSCLE_GROUP_MAP: ClassVar[dict[str, MuscleGroup]] = {
         OBLIQUES: MuscleGroup.ABS,
         PYRAMIDALIS: MuscleGroup.ABS,
         RECTUS_ABDOMINUS: MuscleGroup.ABS,

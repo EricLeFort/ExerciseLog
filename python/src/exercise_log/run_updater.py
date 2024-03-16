@@ -1,4 +1,4 @@
-from datetime import date
+import datetime
 
 import pandas as pd
 
@@ -21,7 +21,7 @@ EXTRAPOLATE_DAYS = 100
 N_DAYS_TO_AVG = 28
 
 PRIMARY_GYMS = {
-    "Via 6 Gym": (date(year=2022, month=12, day=4), date.today()),
+    "Via 6 Gym": (datetime.date(year=2022, month=12, day=4), datetime.datetime.now(tz=datetime.UTC).date()),
 }
 
 SKIP_EXERCISE_PLOT_EXERCISES = {
@@ -40,7 +40,7 @@ SKIP_EXERCISE_PLOT_EXERCISES = {
 
 
 class HealthTrends:
-    """Creates relevant trendlines and stores the results"""
+    """Creates relevant trendlines and stores the results."""
 
     def __init__(
         self,
@@ -58,7 +58,7 @@ class HealthTrends:
 
     def get_workout_durations(self):
         """
-        Returns the n-day average workout duration, computing it if it hasn't been already.
+        Access the n-day average workout duration, computing it if it hasn't been already.
 
         Note: n-day average gives a sense of whether its keeping above the recommended baseline of 150 mins/week
         """
@@ -73,7 +73,7 @@ class HealthTrends:
         return self._workout_durations
 
     def get_weight_trendline(self):
-        """Returns the linear trend of weight over time, first computing it if needed."""
+        """Access the linear trend of weight over time, first computing it if needed."""
         if self._weight_trendline is None:
             cname = CName.WEIGHT
             data = Trendsetter.get_line_of_best_fit(self.health_metrics, cname, self.extrapolate_days)
@@ -81,7 +81,7 @@ class HealthTrends:
         return self._weight_trendline
 
     def get_heart_rate_trendline(self):
-        """Returns the logarithmic curve of best fit of resting heart rate over time, first computing it if needed."""
+        """Access the logarithmic curve of best fit of resting heart rate over time, first computing it if needed."""
         if self._heart_rate_trendline is None:
             cname = CName.RESTING_HEART_RATE
             data = Trendsetter.get_logarithmic_curve_of_best_fit(self.health_metrics, cname, self.extrapolate_days)
@@ -93,12 +93,12 @@ class HealthTrends:
         return get_padded_dates(nonnulls, self.extrapolate_days)
 
     @staticmethod
-    def _save_data(data: pd.DataFrame, fname: str):
-        """Just a simple wrapper around some repeated functionality"""
+    def _save_data(data: pd.DataFrame, fname: str) -> None:
+        """Save the given data, print an error if it fails."""
         if data is not None:
             data.to_csv(f"{PREDS_DIR}/{fname}", index=False)
         else:
-            TermColour.print_error(f"Data not saved to: {str(fname)}, it was missing.")
+            TermColour.print_error(f"Data not saved to: {fname}, it was missing.")
 
     def save_predictions(self):
         """Save all available predictions to disk."""
@@ -132,7 +132,7 @@ def build_strength_visuals(weight_training_workouts: pd.DataFrame, weight_traini
             )
             print("done.")
         except ValueError as ve:
-            TermColour.print_warning(f"SKIPPED: {str(ve)}.")
+            TermColour.print_warning(f"SKIPPED: {ve}.")
 
 
 def main():

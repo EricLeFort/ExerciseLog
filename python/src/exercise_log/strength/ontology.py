@@ -1,4 +1,6 @@
 # pylint: disable=too-many-lines
+from typing import Any
+
 from exercise_log.strength import CountType, Exercise, ExerciseType, TensileFocus
 from exercise_log.strength.anatomy import MuscleGroup
 from exercise_log.strength.constants import INHERITS_FROM
@@ -35,9 +37,9 @@ ENDURANCE_COMPOUND_REP_RANGE = (15, 50)
 #    * low range: 1:2?
 #    * upper range: 7:10?
 #    * ideal: 3:5 www.ncbi.nlm.nih.gov/pmc/articles/PMC5833971/
-# Hip abductors and adductors should be fairly close in strength (note: soccer players tend to have more strength on their dominant leg)
+# Hip abductors and adductors should be fairly close in strength (note: soccer players tend to have more strength on their dominant leg)  # noqa: E501
 #    * low range: 4:5, not clear there is one but let's assume the inverse
-#    * upper range: 5:4 seems likely (journals.humankinetics.com/view/journals/jsr/29/1/article-p116.xml + journals.sagepub.com/doi/10.1177/0363546510378081)
+#    * upper range: 5:4 seems likely (journals.humankinetics.com/view/journals/jsr/29/1/article-p116.xml + journals.sagepub.com/doi/10.1177/0363546510378081)  # noqa: E501
 #    * ideal: somewhere around 1:1
 # Hip Flexor:Extensor
 #    * Nominal typical range: 11:20 to 3:4 (www.ncbi.nlm.nih.gov/pmc/articles/PMC7727414/pdf/ijspt-15-967.pdf)
@@ -46,7 +48,7 @@ ENDURANCE_COMPOUND_REP_RANGE = (15, 50)
 #    * ideal: 11:20?
 # Hip Internal(medial):External(lateral) Rotation
 #    * low range: 10:11?, not clear there is one but let's assume the inverse
-#    * upper range: 11:10?, more may lead to PFPS injuries (web.archive.org/web/20190308153356id_/http://pdfs.semanticscholar.org/f531/d7163d65c82a5301e505affe72c5c9ca8b7a.pdf)
+#    * upper range: 11:10?, more may lead to PFPS injuries (web.archive.org/web/20190308153356id_/http://pdfs.semanticscholar.org/f531/d7163d65c82a5301e505affe72c5c9ca8b7a.pdf)  # noqa: E501
 #    * ideal: 1:1
 #
 # TODO(eric): figure out something for the following unknowns:
@@ -109,9 +111,7 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
     """
 
     def __init__(self, exercise: Exercise):
-        """
-        Initializes an ExerciseInfo by looking up the relevant data for the given Exercise.
-        """
+        """Initialize an ExerciseInfo by looking up the relevant data for the given Exercise."""
         self.count_type = CountType[ExerciseInfo._get_field(exercise, Field.COUNT_TYPE)]
         self.exercise_type = ExerciseType[ExerciseInfo._get_field(exercise, Field.EXERCISE_TYPE)]
         self.requires_machine = ExerciseInfo._get_field(exercise, Field.REQUIRES_MACHINE)
@@ -125,9 +125,9 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
         self._fatigue_factor = None
 
     @staticmethod
-    def _get_field(exercise: str, field: Field):
+    def _get_field(exercise: str, field: Field) -> Any:  # noqa: ANN401
         """
-        Retrieves the field from this exercise's dict if it exists.
+        Retrieve the field from this exercise's dict if it exists.
         If it doesn't exist, it works its way up the INHERITS_FROM chain until it finds it.
 
         Raises:
@@ -138,7 +138,8 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
         if result is not None:
             return result
         if INHERITS_FROM not in info:
-            raise ValueError(f'Unexpected error: Exercise "{exercise}" is missing field "{field}".')
+            msg = f'Unexpected error: Exercise "{exercise}" is missing field "{field}".'
+            raise ValueError(msg)
 
         return ExerciseInfo._get_field(info[INHERITS_FROM], field)
 
@@ -146,24 +147,20 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
         if self._fatigue_factor is not None:
             return self._fatigue_factor
 
-        # pylint: disable=line-too-long
-        # TODO write logic to estimate "FATIGUE_FACTOR - The amount of systemic fatigue accumulated by the exercise. Useful for session planning."
+        # TODO(eric): write logic to estimate "FATIGUE_FACTOR - The amount of systemic fatigue accumulated by the exercise. Useful for session planning."  # noqa: E501
         #   This is basically just a summation for every muscle worked dependant on
         #     1. muscle size/energy requirement,
         #     2. % activation of that muscle,
-        #     3. systemic fatigue (e.g. using every single muscle is more fatiguing than the summation of the individual muscles)
+        #     3. systemic fatigue (e.g. using every single muscle is more fatiguing than the summation of the individual muscles)  # noqa: E501
         #   Slightly higher fatigue for unilateral lifts bc the systemic time under tension is longer
         #   Sessions/programs should also factor in unilateral percentages since it's the best way to avoid imbalances
-        # pylint: enable=line-too-long
         raise NotImplementedError
 
 
-# pylint: disable=line-too-long
 # TODO(eric): come back later and fill in:
 #         * set of strings of antagonist muscles for each exercise
 #         * percentages for muscles/groups worked (should be as a percentage of that muscle's effort)
-# TODO(eric): add info about the capacity of a muscle/muscle group (e.g. biceps/triceps can handle more volume than quads)
-# pylint: enable=line-too-long
+# TODO(eric): add info about the capacity of a muscle/muscle group (e.g. biceps/triceps can handle more volume than quads)  # noqa: E501
 
 # This is a large data field containing metadata about the various exercises logged in this repo.
 EXERCISE_INFO = {

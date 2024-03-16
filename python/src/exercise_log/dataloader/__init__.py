@@ -1,5 +1,4 @@
 import csv
-from typing import List
 
 import numpy as np
 import pandas as pd
@@ -20,9 +19,7 @@ LONG = "Int64"
 class DataLoader:
     @staticmethod
     def _load_and_clean_data(fname: str) -> pd.DataFrame:
-        """
-        Loads the CSV at the given fname and cleans up the data (convert date/times to proper types, NA -> "", etc.)
-        """
+        """Load the CSV and cleans up the data (convert date/times to proper types, NA -> "", etc)."""
         df = pd.read_csv(fname)
 
         # Clean the data
@@ -31,10 +28,10 @@ class DataLoader:
         if CName.DATA_DURATION in df:
             df[CName.DATA_DURATION] = pd.to_timedelta(df[CName.DATA_DURATION])
             df[CName.DATA_DURATION] = df[CName.DATA_DURATION].apply(
-                lambda x: np.nan if pd.isnull(x) else x.total_seconds()
+                lambda x: np.nan if pd.isna(x) else x.total_seconds(),
             )
             df[CName.DATA_DURATION] = df[CName.DATA_DURATION].astype(LONG)
-            df.rename(columns={CName.DATA_DURATION: CName.DURATION}, inplace=True)
+            df = df.rename(columns={CName.DATA_DURATION: CName.DURATION})
         if CName.NOTES in df:
             df[CName.NOTES] = df[CName.NOTES].fillna("")
 
@@ -46,8 +43,8 @@ class DataLoader:
         return df
 
     @staticmethod
-    def _validate_csv(fname: str):
-        with open(fname, "r", encoding="utf-8") as f:
+    def _validate_csv(fname: str) -> None:
+        with open(fname, encoding="utf-8") as f:
             reader = csv.reader(f)
 
             try:
@@ -56,14 +53,16 @@ class DataLoader:
                 # Ensure the data is not ragged
                 for row in reader:
                     if len(row) != len(headers):
-                        raise ValueError(f'File {fname} is ragged at row {reader.line_num}: "{row}"')
+                        msg = f'File {fname} is ragged at row {reader.line_num}: "{row}"'
+                        raise ValueError(msg)
             except StopIteration as e:
-                raise ValueError(f"CSV at {fname} was empty.") from e
+                msg = f"CSV at {fname} was empty."
+                raise ValueError(msg) from e
 
     @staticmethod
-    def _validate_exercises(df: pd.DataFrame, fname: str):
+    def _validate_exercises(df: pd.DataFrame, fname: str) -> None:
         # Disabling pylint, this is needed bc Pandas is fussy; "some_exercise in Exercise" ought to work but doesn't
-        exercise_map = Exercise._value2member_map_  # pylint: disable=protected-access
+        exercise_map = Exercise._value2member_map_  # noqa: SLF001
         if df[CName.EXERCISE].isin(exercise_map).all():
             return
 
@@ -77,8 +76,8 @@ class DataLoader:
         raise ValueError(base_msg)
 
     @staticmethod
-    def _det_workout_type(joined_workout_types: str):
-        """Determines the workout type given all of the comma-joined workout types for a given day."""
+    def _det_workout_type(joined_workout_types: str) -> str:
+        """Determine the workout type given all of the comma-joined workout types for a given day."""
         result = ""
         for w_type in joined_workout_types.split(","):
             if not result:
@@ -95,7 +94,7 @@ class DataLoader:
         travel_days: pd.DataFrame,
     ) -> pd.DataFrame:
         """
-        Computes the total daily workout duration for each day.
+        Compute the total daily workout duration for each day.
 
         Note: there can be more than one per day or rest days, this smooths that out.
         """
@@ -115,7 +114,7 @@ class DataLoader:
         weight_training_workouts: pd.DataFrame,
         travel_days: pd.DataFrame,
     ) -> pd.DataFrame:
-        """Computes the daily workout type for each day"""
+        """Compute the daily workout type for each day."""
         workout_types = [
             weight_training_workouts.groupby(CName.DATE)[CName.WORKOUT_TYPE].agg(join_with_comma),
             cardio_workouts.groupby(CName.DATE)[CName.WORKOUT_TYPE].agg(join_with_comma),
@@ -127,16 +126,16 @@ class DataLoader:
         return workout_types.reindex(all_workouts.index, fill_value="Rest Day")
 
     @staticmethod
-    def _clean_cardio_workout(fname: str):
+    def _clean_cardio_workout(fname: str) -> pd.DataFrame:
         workouts = DataLoader._load_and_clean_data(fname)
         workouts[CName.AVG_HEART_RATE] = workouts[CName.AVG_HEART_RATE].astype(LONG)
         workouts[CName.MAX_HEART_RATE] = workouts[CName.MAX_HEART_RATE].astype(LONG)
         return workouts
 
     @staticmethod
-    def _get_all_dates(workouts: List[pd.DataFrame]) -> pd.DataFrame:
+    def _get_all_dates(workouts: list[pd.DataFrame]) -> pd.DataFrame:
         """
-        Builds a pd.DataFrame with all of the dates in the given DataFrames
+        Build a pd.DataFrame with all of the dates in the given DataFrames.
 
         Returns:
             The new pd.DataFrame
@@ -144,43 +143,43 @@ class DataLoader:
         return pd.concat([workout[CName.DATE] for workout in workouts])
 
     @staticmethod
-    def load_health_metrics(root_data_dir: str):
+    def load_health_metrics(root_data_dir: str) -> pd.DataFrame:
         health_metrics = DataLoader._load_and_clean_data(f"{root_data_dir}/health_metrics.csv")
 
         # Filter out any empty rows from the health metrics
         return health_metrics[health_metrics[CName.WEIGHT].notna() | health_metrics[CName.RESTING_HEART_RATE].notna()]
 
     @staticmethod
-    def load_travel_days(root_data_dir: str):
+    def load_travel_days(root_data_dir: str) -> pd.DataFrame:
         travel_days = DataLoader._load_and_clean_data(f"{root_data_dir}/travel_days.csv")
         # Filling in an explicit workout type since its implicit for travel days
         travel_days[CName.WORKOUT_TYPE] = "Travel"
         return travel_days
 
     @staticmethod
-    def load_walk_workouts(root_data_dir: str):
+    def load_walk_workouts(root_data_dir: str) -> pd.DataFrame:
         return DataLoader._load_foot_workouts(root_data_dir, "walks.csv")
 
     @staticmethod
-    def load_run_workouts(root_data_dir: str):
+    def load_run_workouts(root_data_dir: str) -> pd.DataFrame:
         return DataLoader._load_foot_workouts(root_data_dir, "runs.csv")
 
     @staticmethod
-    def _load_foot_workouts(root_data_dir: str, fname: str):
+    def _load_foot_workouts(root_data_dir: str, fname: str) -> pd.DataFrame:
         workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/{fname}")
         workouts[CName.STEPS] = workouts[CName.STEPS].astype(LONG)
         return workouts
 
     @staticmethod
-    def load_bike_workouts(root_data_dir: str):
+    def load_bike_workouts(root_data_dir: str) -> pd.DataFrame:
         return DataLoader._load_spin_workouts(root_data_dir, "bikes.csv")
 
     @staticmethod
-    def load_row_workouts(root_data_dir: str):
+    def load_row_workouts(root_data_dir: str) -> pd.DataFrame:
         return DataLoader._load_spin_workouts(root_data_dir, "rows.csv")
 
     @staticmethod
-    def _load_spin_workouts(root_data_dir: str, fname: str):
+    def _load_spin_workouts(root_data_dir: str, fname: str) -> pd.DataFrame:
         workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/{fname}")
         if CName.AVG_CADENCE_BIKE in workouts:
             avg_cadence = CName.AVG_CADENCE_BIKE
@@ -195,15 +194,15 @@ class DataLoader:
         return workouts
 
     @staticmethod
-    def load_weight_training_workouts(root_data_dir: str):
+    def load_weight_training_workouts(root_data_dir: str) -> pd.DataFrame:
         return DataLoader._load_and_clean_data(f"{root_data_dir}/weight_training_workouts.csv")
 
     @staticmethod
-    def load_weight_training_sets(root_data_dir: str):
+    def load_weight_training_sets(root_data_dir: str) -> pd.DataFrame:
         return DataLoader._load_and_clean_data(f"{root_data_dir}/weight_training_sets.csv")
 
     @staticmethod
-    def load_stair_workouts(root_data_dir: str):
+    def load_stair_workouts(root_data_dir: str) -> pd.DataFrame:
         workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/stairs.csv")
         workouts[CName.FLIGHTS_UP] = workouts[CName.FLIGHTS_UP].astype("Int64")
         workouts[CName.FLIGHTS_DOWN] = workouts[CName.FLIGHTS_DOWN].astype("Int64")
@@ -211,19 +210,19 @@ class DataLoader:
         return workouts
 
     @staticmethod
-    def load_dashes(root_data_dir: str):
+    def load_dashes(root_data_dir: str) -> pd.DataFrame:
         return DataLoader._load_and_clean_data(f"{root_data_dir}/dashes.csv")
 
     @staticmethod
-    def load_rate_of_climb(root_data_dir: str):
+    def load_rate_of_climb(root_data_dir: str) -> pd.DataFrame:
         return DataLoader._load_and_clean_data(f"{root_data_dir}/rate_of_climb.csv")
 
     @staticmethod
-    def load_walk_backwards(root_data_dir: str):
+    def load_walk_backwards(root_data_dir: str) -> pd.DataFrame:
         return DataLoader._load_and_clean_data(f"{root_data_dir}/walk_backwards.csv")
 
     @staticmethod
-    def merge_cardio_workouts(workouts: List[pd.DataFrame]) -> pd.DataFrame:
+    def merge_cardio_workouts(workouts: list[pd.DataFrame]) -> pd.DataFrame:
         cardio_workouts = pd.concat(workouts, join="inner")  # Use inner so we only preserve the common fields
         return cardio_workouts.reset_index(drop=True)
 
@@ -232,7 +231,7 @@ class DataLoader:
         cardio_workouts: pd.DataFrame,
         weight_training_workouts: pd.DataFrame,
         travel_days: pd.DataFrame,
-    ):
+    ) -> pd.DataFrame:
         # Will be used to pad all datasets to have consistent dates
         all_dates = DataLoader._get_all_dates([cardio_workouts, weight_training_workouts, travel_days])
 
@@ -261,7 +260,7 @@ class DataLoader:
     @staticmethod
     def add_computed_cardio_metrics(cardio_workouts: pd.DataFrame) -> None:
         """
-        Adds computed metrics to the cardio workouts DataFrame.
+        Add computed metrics to the cardio workouts DataFrame.
 
         Added metrics include:
             * pace (m/s)
