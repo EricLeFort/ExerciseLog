@@ -9,11 +9,64 @@ line-length = 120
 
 [tool.pylint]
 max-line-length = 120
-max-attributes=10
+max-attributes = 10
 disable = """
-	fixme,
-	missing-class-docstring,
+    fixme,
+    missing-class-docstring,
     missing-function-docstring,
     missing-module-docstring,
     too-few-public-methods,
 """
+
+[tool.ruff]
+src = ["python/src", "python/test"]
+target-version = "py311"
+lint.select = ["ALL"]
+lint.ignore = [
+    "D212",
+    "D400",
+    "D407",
+    "D406",  # I like the colon after a DocString section title
+    "D203",  # I don't like this style, D211 is the alternate
+    "D205",  # For now, the DocStrings only have a description, no single-line summary
+    "D413",  # Blank line at the end of a DocString is a silly style
+    "UP007",  # Optional[X] is a valid type specification
+    "ANN101",  # "self" doesn't need a type annotation
+    "PT009",  # regular asserts are fine in some cases but not in others, using x.assert*() is beter for consistency
+    "FIX002",  # TODO's are ok to have
+    "TD003",  # Issue links aren't a thing in this project, we don't need them after TODOs
+    "PTH123",  # I think Path.open and open are both fine
+    "ERA001",  # This rule is fine but it has a lot of false positives e.g. "Forearms (Anterior)" triggers it
+    "PD901",  # I'm a fan of generic names for generic functionality
+
+    # Ruff recommends ignoring these
+    "COM812",
+    "ISC001",
+
+    # TODO(eric): Should be implemented but I'm lazy so I'll do it bit-by-bit retroactively :)
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D107",
+    "D417",
+    "ANN001",
+    "ANN102",
+    "ANN201",
+    "ANN204",
+]
+line-length = 120
+
+[tool.ruff.lint.pylint]
+max-args = 10
+
+[tool.ruff.lint.per-file-ignores]
+"python/test/*" = [
+    "S311",  # Ignore cryptographic warnings in test files -- they don't need to be crypographically secure
+    "SLF001"  # Tests are allowed to access private members
+]
+"python/src/exercise_log/run_updater.py" = [
+    "T201",  # The updater is a CLI, it's meant to print to console
+]

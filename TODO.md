@@ -1,7 +1,6 @@
 # TODO
 
 ### Python
-* Migrate linters/formatters to Ruff (MUCH faster, identical functionality)
 * Extract shared structural information into separate, language-agnostic files so they can be shared with JS
     - Ontological information (e.g. the EXERCISE_INFO dict in ontology.py, heart rate thresholds, etc.)
     - Metadata (e.g. ColumnName values)
