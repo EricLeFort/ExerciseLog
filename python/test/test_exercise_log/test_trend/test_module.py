@@ -60,7 +60,7 @@ def _init_dataframe(num_entries: int) -> pd.DataFrame:
 def _assert_foot_cardio_summary(tester: unittest.TestCase, data: pd.DataFrame, idx_range: tuple[date, date]) -> None:
     first_idx, last_idx = idx_range
     filtered_data = data.iloc[first_idx : last_idx + 1]
-    total_dist = round(sum(filtered_data[CName.DISTANCE]), 1)
+    total_dist = round((filtered_data[CName.DISTANCE].sum()), 1)
     total_elevation = sum(filtered_data[CName.ELEVATION])
     expected_str = f"Moving my body by foot across {total_dist:,} km and up {total_elevation:,} m."
     _assert_summary(tester, data, FootCardioSummary.build_summary, idx_range, expected_str)
