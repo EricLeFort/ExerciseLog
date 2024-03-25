@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+24-MAR-2024,walk (treadmill),01:02:10,5.54,6754,443,0,140,153,""
 23-MAR-2024,walk (treadmill),01:10:15,6.09,7442,450,0,151,168,"morning workout while fasted"
 19-MAR-2024,walk (treadmill),01:06:06,5.78,6916,560,0,159,176,""
 18-MAR-2024,walk (treadmill),00:11:04,1.00,1503,66,0,130,140,"pre-workout"
