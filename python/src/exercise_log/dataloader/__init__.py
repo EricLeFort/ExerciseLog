@@ -98,10 +98,11 @@ class DataLoader:
 
         Note: there can be more than one per day or rest days, this smooths that out.
         """
+        agg_dict = {CName.DURATION: ["sum"]}
         total_durations = [
-            weight_training_workouts.groupby(CName.DATE)[CName.DURATION].agg("sum"),
-            cardio_workouts.groupby(CName.DATE)[CName.DURATION].agg("sum"),
-            travel_days.groupby(CName.DATE)[CName.DURATION].agg("sum"),
+            weight_training_workouts.groupby(CName.DATE).agg(agg_dict),
+            cardio_workouts.groupby(CName.DATE).agg(agg_dict),
+            travel_days.groupby(CName.DATE).agg(agg_dict),
         ]
         total_durations = pd.concat(total_durations).groupby(CName.DATE).agg("sum")
         total_durations.index = pd.DatetimeIndex(total_durations.index)
