@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+05-APR-2024,walk (treadmill),01:05:20,5.66,6920,481,0,158,171,""
 01-APR-2024,walk (treadmill),01:20:08,6.95,,614,0,154,163,"watch died in the last few minutes, don't know accurate steps and last bit of HR data is missing."
 30-MAR-2024,walk (treadmill),01:06:32,6.07,7486,527,0,156,170,""
 28-MAR-2024,walk (treadmill),01:08:01,6.41,7463,423,0,147,173,""
