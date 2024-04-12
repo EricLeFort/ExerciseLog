@@ -1,4 +1,7 @@
 import datetime
+import os
+from functools import partial
+from multiprocessing import Pool
 
 import pandas as pd
 
@@ -114,25 +117,31 @@ def build_health_visuals(health_trends: HealthTrends):
     plot_weight(health_trends.health_metrics, health_trends.get_weight_trendline(), options)
 
 
-def build_strength_visuals(weight_training_workouts: pd.DataFrame, weight_training_sets: pd.DataFrame):
-    weight_training_sets = DataLoader.load_weight_training_sets(ROOT_DATA_DIR)
-    for exercise in weight_training_sets[CName.EXERCISE].unique():
-        if exercise in SKIP_EXERCISE_PLOT_EXERCISES:
-            print(f"Manually skipping {exercise}.")
-            continue
-        print(f"Plotting {exercise}... ", end="")
-        try:
-            options = PlotOptions(export_dir=ROOT_IMG_DIR, show_plot=False)
-            plot_strength_over_time(
-                weight_training_workouts,
-                weight_training_sets,
-                exercise,
-                PRIMARY_GYMS,
-                options,
-            )
-            print("done.")
-        except ValueError as ve:
-            TermColour.print_warning(f"SKIPPED: {ve}.")
+def build_strength_visuals(workouts: pd.DataFrame, sets: pd.DataFrame):
+    num_workers = 2 * os.cpu_count()  # Should be a little faster if hyperthreading is enabled
+    with Pool(num_workers) as p:
+        partial_plot_strength = partial(plot_single_strength_visual, workouts=workouts, sets=sets)
+        p.map(partial_plot_strength, sets[CName.EXERCISE].unique())
+
+
+def plot_single_strength_visual(exercise: str, workouts: pd.DataFrame, sets: pd.DataFrame):
+    if exercise in SKIP_EXERCISE_PLOT_EXERCISES:
+        print(f"Manually skipping {exercise}.")
+        return
+
+    print(f"Plotting {exercise}... ", end="")
+    try:
+        options = PlotOptions(export_dir=ROOT_IMG_DIR, show_plot=False)
+        plot_strength_over_time(
+            workouts,
+            sets,
+            exercise,
+            PRIMARY_GYMS,
+            options,
+        )
+        print("done.")
+    except ValueError as ve:
+        TermColour.print_warning(f"SKIPPED: {ve}.")
 
 
 def main():

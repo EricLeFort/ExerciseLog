@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from datetime import date
 from typing import Optional
 
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -30,11 +31,13 @@ RESTING_HEART_RATE_LEVELS = {
 
 MIN_SETS_TO_PLOT = 3
 
+# Set matplotlib to use a non-interactive backend, avoids the rocket icon showing up on the dock
+matplotlib.use('Agg')
 
 @dataclass
 class PlotOptions:
-    export_dir: Optional[str]
-    show_plot: Optional[bool]
+    export_dir: Optional[str] = None
+    show_plot: Optional[bool] = None
 
     def execute(self, f_name: str) -> None:
         """Execute (save and/or show then clear figure) this plot according to the options provided."""
@@ -251,6 +254,9 @@ def plot_strength_over_time(
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(y_step))
     plt.grid(visible=True)
     plt.grid(visible=True, which="minor", linestyle="--", linewidth="0.25")
+
+    # Scale up the plot
+    plt.gcf().set_size_inches(18.5, 10.5)
 
     # Add in the surrounding information
     create_legend_and_title(exercise, reverse_labels=True)
