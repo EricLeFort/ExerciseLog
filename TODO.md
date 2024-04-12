@@ -1,9 +1,12 @@
 # TODO
 
 ### Python
+* Extend health trends to allow for regions of different trend matching -- e.g. weight should be linear Dec 2022 - Jan 2024, constant until Mar 2024, then linear after that
+* Enable the disabled linting/formatting rules
 * Extract shared structural information into separate, language-agnostic files so they can be shared with JS
     - Ontological information (e.g. the EXERCISE_INFO dict in ontology.py, heart rate thresholds, etc.)
     - Metadata (e.g. ColumnName values)
+* Support multiple users
 * Populate Muscle in EXERCISE_INFO
 * Populate percentages of Muscle/MuscleGroup in EXERCISE_INFO
 * Define local and global ideal strength ratios
@@ -16,7 +19,8 @@
 * Make ExerciseInfo a parameterized singleton
 
 ### Site
-* Add a graph selector after the three main graphs so I can experiment with and showcase a wider array of visualizations without too much clutter
+* Add a linter/formatter
+* Migrate to TypeScript
 * Plot a combined metric using rate_of_climb + pace (+ duration?)
     - Experiment with adding duration into the equation (maybe also something like a strive score using avg, max + duration?)
 * Use the data in the ontological files (see Python section above) for thresholds
