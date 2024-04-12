@@ -48,18 +48,36 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
         """Return the string representation of this StrEnum's value."""
         return str(self.value)
 
+    def __ne__(self, other: StrEnum) -> bool:
+        """Compare this StrEnum to the other. Returns True if their names are not equal."""
+        if issubclass(type(other), type(StrEnum)):
+            return self.value != other.value
+        if isinstance(other, str):
+            return self.value != other
+        return False
+
+    def __reduce__(self) -> tuple[type, tuple[str]]:
+        """Return a tuple representing the state of this enum when pickled."""
+        return (self.__class__, (self.name,))
+
     @classmethod
-    def create_from_json(cls, f_name: str) -> StrEnum:
+    def create_from_json(cls, f_name: str, module_name: str) -> StrEnum:
         """
         Dynamically creates a StrEnum with the given name using the provided JSON dict.
 
         The dict should be of the form:
         {
-            "COLUMN_NAME": "column_value"
+            "name": "<EnumName>",
+            "description": "<Some description for your enum>",  # This entry is optional
+            "enum": {
+                "<NAME_1>": "<value_1>",
+                ...,
+            {
         }
 
         Args:
             f_name (str): The path to the JSON file
+            module_name (str): The module the generated StrEnum should belong to (probably __name__)
         """
         # pylint: disable=attribute-defined-outside-init
         # Dynamically creates the ColumnNames enum using a shared definition
@@ -70,7 +88,9 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
             description = data_json.get("description", "No description available")
 
         gen_enum = StrEnum(enum_name, enum_data)
+        gen_enum.__module__ = module_name
         gen_enum.__doc__ = description
+
         return gen_enum
 
 
