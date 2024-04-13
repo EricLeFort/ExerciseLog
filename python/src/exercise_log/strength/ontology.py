@@ -1591,6 +1591,15 @@ EXERCISE_INFO = {
         },
         Field.ANTAGONIST_MUSCLES: {None},
     },
+    Exercise.UPWARD_DUMBBELL_PEC_FLIES: {
+        INHERITS_FROM: Exercise.MACH_PEC_FLIES,
+        Field.IS_LIMB_INDEPENDENT: True,
+        Field.IS_UNILATERAL: True,
+        Field.REQUIRES_MACHINE: False,
+        Field.MUSCLES_WORKED: {
+            None: None,
+        },
+    },
     Exercise.WIDE_GRIP_PULL_UP: {
         INHERITS_FROM: Exercise.CHIN_UP,
         Field.MUSCLE_GROUPS_WORKED: {

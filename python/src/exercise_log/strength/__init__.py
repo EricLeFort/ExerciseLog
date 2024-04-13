@@ -89,6 +89,7 @@ class Exercise(StrEnum):
     TRICEP_PUSHDOWN = "Tricep Pushdown"
     TRICEP_PUSHDOWN_V_BAR = "Tricep Pushdown (V-Bar)"
     UPWARD_CABLE_PEC_FLIES = "Upward Cable Pec Flies"
+    UPWARD_DUMBBELL_PEC_FLIES = "Upward Dumbbell Pec Flies"
     WIDE_GRIP_PULL_UP = "Wide-Grip Pull-Up"
     WRIST_CURL = "Wrist Curl"
     WRIST_EXTENSION = "Wrist Extension"
