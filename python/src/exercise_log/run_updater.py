@@ -118,7 +118,7 @@ def build_health_visuals(health_trends: HealthTrends):
 
 
 def build_strength_visuals(workouts: pd.DataFrame, sets: pd.DataFrame):
-    num_workers = 2 * os.cpu_count()  # Should be a little faster if hyperthreading is enabled
+    num_workers = 5 * os.cpu_count()  # Should be a little faster if hyperthreading is enabled
     with Pool(num_workers) as p:
         partial_plot_strength = partial(plot_single_strength_visual, workouts=workouts, sets=sets)
         p.map(partial_plot_strength, sets[CName.EXERCISE].unique())

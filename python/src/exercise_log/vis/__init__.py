@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from datetime import date
 from typing import Optional
 
-import matplotlib
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -32,7 +32,8 @@ RESTING_HEART_RATE_LEVELS = {
 MIN_SETS_TO_PLOT = 3
 
 # Set matplotlib to use a non-interactive backend, avoids the rocket icon showing up on the dock
-matplotlib.use('Agg')
+mpl.use("Agg")
+
 
 @dataclass
 class PlotOptions:
