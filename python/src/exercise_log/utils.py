@@ -83,14 +83,18 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
         # Dynamically creates the ColumnNames enum using a shared definition
         with open(f_name, encoding=UTF8) as f:
             data_json = json.load(f)
-            enum_name = data_json["name"]
-            enum_data = data_json.get("enum", data_json)
-            description = data_json.get("description", "No description available")
+
+        enum_name = data_json["name"]
+        enum_data = data_json.get("enum", data_json)
+        description = data_json.get("description", "No description available")
+
+        # Clean the comments from the enum_data if they exist
+        str_comment = "__comment"
+        enum_data.pop(str_comment, None)
 
         gen_enum = StrEnum(enum_name, enum_data)
         gen_enum.__module__ = module_name
         gen_enum.__doc__ = description
-
         return gen_enum
 
 
