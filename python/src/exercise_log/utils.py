@@ -79,7 +79,6 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
             f_name (str): The path to the JSON file
             module_name (str): The module the generated StrEnum should belong to (probably __name__)
         """
-        # pylint: disable=attribute-defined-outside-init
         # Dynamically creates the ColumnNames enum using a shared definition
         with open(f_name, encoding=UTF8) as f:
             data_json = json.load(f)

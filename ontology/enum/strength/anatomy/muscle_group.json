@@ -1,0 +1,29 @@
+{
+    "name": "MuscleGroup",
+    "description": "An enum of all of the major skeletal muscle groups of the human body.",
+    "enum": {
+        "__comment": "Major",
+        "ABS": "Abs",
+        "BICEPS": "Biceps",
+        "CALVES": "Calves",
+        "DELTS": "Deltoids",
+        "FOREARMS": "Forearms",
+        "GLUTES": "Gluteus",
+        "HAMSTRINGS": "Hamstrings",
+        "LATS": "Latissimus Dorsi",
+        "PECS": "Pectorals",
+        "QUADS": "Quadriceps",
+        "TRAPS": "Trapezius",
+        "TRICEPS": "Triceps",
+
+        "__comment": "Minor",
+        "HIP_ABDUCTORS": "Hip Abductors",
+        "HIP_ADDUCTORS": "Hip Adductors",
+        "HIP_FLEXORS": "Hip Flexors",
+        "NECK": "Neck",
+        "RHOMBOIDS": "Rhomboids",
+        "ROTATOR_CUFF": "Rotator Cuff",
+        "SERRATUS": "Serratus",
+        "SPINAL_ERECTORS": "Spinal Erectors"
+    }
+}

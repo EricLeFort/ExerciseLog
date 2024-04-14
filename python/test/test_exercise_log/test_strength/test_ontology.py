@@ -1,4 +1,3 @@
-# pylint: disable=protected-access
 import unittest
 
 from exercise_log.strength import Exercise
