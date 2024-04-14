@@ -1,6 +1,7 @@
 # pylint: disable=too-many-lines
 from typing import Any
 
+from exercise_log.constants import ROOT_ONTOLOGY_DIR
 from exercise_log.strength import CountType, Exercise, ExerciseType, TensileFocus
 from exercise_log.strength.anatomy import MuscleGroup
 from exercise_log.strength.constants import INHERITS_FROM
@@ -61,36 +62,8 @@ ENDURANCE_COMPOUND_REP_RANGE = (15, 50)
 # ??? Calf vs Hamstrings/Quads
 # pylint: enable=line-too-long
 
-
-class Field(StrEnum):
-    """
-    Enumerates over the fields present in an ExerciseInfo.
-
-    COUNT_TYPE - The way to count this exercise. An isometric movement is measured in seconds, a compound lift in reps.
-    EXERCISE_TYPE - The type of exercise. E.g. compound weight lifting, calisthenics, etc.
-    IS_UNILATERAL - Whether the exercise uses a single limb at a time.
-      e.g. alternating bicep curls, single-leg leg curls
-    IS_LIMB_INDEPENDENT - Whether the exercise works limbs independently.
-      e.g. cable flies are bilateral + limb independent
-    REQUIRES_MACHINE - Whether a machine in required. Useful for knowing if an exercise can be compared across gyms.
-    TENSILE_FOCUS - The type of muscle contraction happening during the primary portion of the lift.
-    OPTIMAL_REP_RANGE - A bound of the ideal count for this exercise. They are just guiding values, not strict rules.
-    MUSCLE_GROUPS_WORKED - A dict from the major muscle groups worked to a % activation of that muscle group.
-      e.g. biceps are involved in pec flies but their activation percentage is much lower than that of the pecs
-    MUSCLES_WORKED - A dict from the muscles worked to a % activation of that muscle.
-    ANTAGONIST_MUSCLES - A set the antagonist muscles for the movement. Useful for root causing instability issues.
-    """
-
-    ANTAGONIST_MUSCLES = "Antagonist Muscles"
-    COUNT_TYPE = "Count Type"
-    EXERCISE_TYPE = "Excercise Type"
-    IS_LIMB_INDEPENDENT = "Is Limb Independent"
-    IS_UNILATERAL = "Is Unilateral"
-    MUSCLE_GROUPS_WORKED = "Muscle Groups Worked"
-    MUSCLES_WORKED = "Muscles Worked"
-    OPTIMAL_REP_RANGE = "Optimal Rep Range"
-    REQUIRES_MACHINE = "Requires Machine"
-    TENSILE_FOCUS = "Tensile Focus"
+# Dynamically create the Field enum using a shared definition
+Field = StrEnum.create_from_json(f"{ROOT_ONTOLOGY_DIR}/enum/strength/ontology/field.json", __name__)
 
 
 class ExerciseInfoMeta(type):

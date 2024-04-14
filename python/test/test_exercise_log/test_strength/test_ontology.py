@@ -4,8 +4,15 @@ import unittest
 from exercise_log.strength import Exercise
 from exercise_log.strength.ontology import EXERCISE_INFO, ExerciseInfo, Field
 
+EXPECTED_FIELD_COUNT = 10
+
 
 class TestOntology(unittest.TestCase):
+    def test_enums_are_complete(self) -> None:
+        """Simple check that the expected number of values are present in the enums used by this module."""
+        msg = f'Expected "{EXPECTED_FIELD_COUNT}" values in the Field enum but was "{len(Field)}".'
+        self.assertEqual(EXPECTED_FIELD_COUNT, len(Field), msg)
+
     def test_exercise_info_is_complete(self) -> None:
         """Simple check that every field is accessible and not None."""
         for exercise in Exercise:

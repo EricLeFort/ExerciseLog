@@ -1,0 +1,16 @@
+{
+    "name": "Field",
+    "description": "Enumerates over the fields present in an ExerciseInfo.\n\nCOUNT_TYPE - The way to count this exercise. An isometric movement is measured in seconds, a compound lift in reps.\nEXERCISE_TYPE - The type of exercise. E.g. compound weight lifting, calisthenics, etc.\nIS_UNILATERAL - Whether the exercise uses a single limb at a time.\n  e.g. alternating bicep curls, single-leg leg curls\nIS_LIMB_INDEPENDENT - Whether the exercise works limbs independently.\n  e.g. cable flies are bilateral + limb independent\nREQUIRES_MACHINE - Whether a machine in required. Useful for knowing if an exercise can be compared across gyms.\nTENSILE_FOCUS - The type of muscle contraction happening during the primary portion of the lift.\nOPTIMAL_REP_RANGE - A bound of the ideal count for this exercise. They are just guiding values, not strict rules.\nMUSCLE_GROUPS_WORKED - A dict from the major muscle groups worked to a % activation of that muscle group.\n  e.g. biceps are involved in pec flies but their activation percentage is much lower than that of the pecs\nMUSCLES_WORKED - A dict from the muscles worked to a % activation of that muscle.\nANTAGONIST_MUSCLES - A set the antagonist muscles for the movement. Useful for root causing instability issues.",
+    "enum": {
+        "ANTAGONIST_MUSCLES": "Antagonist Muscles",
+        "COUNT_TYPE": "Count Type",
+        "EXERCISE_TYPE": "Excercise Type",
+        "IS_LIMB_INDEPENDENT": "Is Limb Independent",
+        "IS_UNILATERAL": "Is Unilateral",
+        "MUSCLE_GROUPS_WORKED": "Muscle Groups Worked",
+        "MUSCLES_WORKED": "Muscles Worked",
+        "OPTIMAL_REP_RANGE": "Optimal Rep Range",
+        "REQUIRES_MACHINE": "Requires Machine",
+        "TENSILE_FOCUS": "Tensile Focus"
+    }
+}

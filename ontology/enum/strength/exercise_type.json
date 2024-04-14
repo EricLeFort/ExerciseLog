@@ -1,0 +1,13 @@
+{
+    "name": "ExerciseType",
+    "description": "An Enum of the classifications of different types of strength exercise.",
+    "enum": {
+        "CALISTHENIC": "Calisthenic",
+        "CARDIO": "Cardio",
+        "COMPOUND_LIFT": "Compound Lift",
+        "HIIT": "HIIT",
+        "ISOLATED_LIFT": "Isolated Lift",
+        "PLYOMETRIC": "Plyometric",
+        "WEIGHTED_COMPOUND_ISOMETRIC": "Weighted Compound Isometric"
+    }
+}

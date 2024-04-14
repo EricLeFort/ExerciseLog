@@ -1,0 +1,10 @@
+{
+    "name": "SetType",
+    "description": "An enum of the types of muscular adaptation focus of a given set of reps.",
+    "enum": {
+        "ONE_RM": "one_rm",
+        "STRENGTH": "strength",
+        "HYPERTROPHY": "hypertrophy",
+        "ENDURANCE": "endurance"
+    }
+}

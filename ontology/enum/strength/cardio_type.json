@@ -1,0 +1,10 @@
+{
+    "name": "CardioType",
+    "description": "An Enum of the classifications of different modes of cardio exercise.",
+    "enum": {
+        "BIKE_STATIONARY": "bike (stationary)",
+        "RUN_TREADMILL": "run (treadmill)",
+        "WALK_TREADMILL": "walk (treadmill)",
+        "WALK_OUTDOOR": "walk (outdoor)"
+    }
+}

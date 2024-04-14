@@ -1,0 +1,10 @@
+{
+    "name": "TensileFocus",
+    "description": "An enum of the different types of tensile focus of a given exercise.",
+    "enum": {
+        "CONCENTRIC": "Concentric",
+        "EXPLOSIVE": "Explosive",
+        "ECCENTRIC": "Eccentric",
+        "ISOMETRIC": "Isometric"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "SetRating",
+    "description": "An enum of the possible ratings for an exercise set of reps.",
+    "enum": {
+        "BAD": "bad",
+        "BAD_LEFT": "bad (L)",
+        "BAD_RIGHT": "bad (R)",
+        "DELOAD": "deload",
+        "FAILURE": "failure",
+        "FAILURE_LEFT": "failure (L)",
+        "FAILURE_RIGHT": "failure (R)",
+        "FUN": "fun",
+        "GOOD": "good",
+        "WARMUP": "warm-up",
+        "SKIPPED": "skipped"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "CountType",
+    "description": "An enum of the different ways to count an exercise.",
+    "enum": {
+        "REPS": "Reps",
+        "STEPS": "Steps",
+        "SECONDS": "Seconds"
+    }
+}
