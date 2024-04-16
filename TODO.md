@@ -3,6 +3,8 @@
 ### Python
 * Extend health trends to allow for regions of different trend matching -- e.g. weight should be linear Dec 2022 - Jan 2024, constant until Mar 2024, then linear after that
 * Enable the disabled linting/formatting rules
+* Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
+* Make a visualization for volume (e.g. distance, HR zones, total watts for cardio + num sets by type, weight moved for strength)
 * Extract shared structural information into separate, language-agnostic files so they can be shared with JS
     - Ontological information (e.g. the EXERCISE_INFO dict in ontology.py, heart rate thresholds, etc.)
     - Metadata (e.g. ColumnName values)
@@ -13,7 +15,6 @@
 * Smooth out xRM logic
 * Define an expiration and/or uncertainty range that crops up when xRM's get several months old
 * Color-code data points in workout frequency graph to correspond to the different types of activity
-* Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
 * Work out and implement the fatigue factor logic
 * Ideal weekly volume inspiration: https://www.reddit.com/r/weightroom/comments/6674a4/dr_mike_israetels_training_tips_for_hypertrophy
 * Make ExerciseInfo a parameterized singleton
@@ -87,3 +88,4 @@
         * Percentage + absolute volume/time of {weight training, calisthenics, cardio}
         * A drill-down on compound lifts, isolated lifts, muscle groups, cardio types
     * Can the entire companion app functionality be hosted on something like an Apple Watch? Would be nice to remove the necessity of having a phone on hand
+    * Build out a prompt to gauge max values at some irregular interval (e.g. "test your max pushups + pullups" one day, "test your 1RM bench press" another -- 1RMs need at least a one week buildup though)
