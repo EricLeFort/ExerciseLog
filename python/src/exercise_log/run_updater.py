@@ -59,7 +59,7 @@ class HealthTrends:
         self._weight_trendline = None
         self._heart_rate_trendline = None
 
-    def get_workout_durations(self):
+    def get_workout_durations(self) -> pd.DataFrame:
         """
         Access the n-day average workout duration, computing it if it hasn't been already.
 
@@ -75,7 +75,7 @@ class HealthTrends:
             self._workout_durations = pd.DataFrame(column_dict)
         return self._workout_durations
 
-    def get_weight_trendline(self):
+    def get_weight_trendline(self) -> pd.DataFrame:
         """Access the linear trend of weight over time, first computing it if needed."""
         if self._weight_trendline is None:
             cname = CName.WEIGHT
@@ -83,7 +83,7 @@ class HealthTrends:
             self._weight_trendline = pd.DataFrame({CName.DATE: self.get_padded_dates(cname), cname: data})
         return self._weight_trendline
 
-    def get_heart_rate_trendline(self):
+    def get_heart_rate_trendline(self) -> pd.DataFrame:
         """Access the logarithmic curve of best fit of resting heart rate over time, first computing it if needed."""
         if self._heart_rate_trendline is None:
             cname = CName.RESTING_HEART_RATE
@@ -91,7 +91,7 @@ class HealthTrends:
             self._heart_rate_trendline = pd.DataFrame({CName.DATE: self.get_padded_dates(cname), cname: data})
         return self._heart_rate_trendline
 
-    def get_padded_dates(self, c_name: ColumnName):
+    def get_padded_dates(self, c_name: ColumnName) -> pd.DataFrame:
         nonnulls = self.health_metrics[self.health_metrics[c_name].notna()]
         return get_padded_dates(nonnulls, self.extrapolate_days)
 
@@ -103,28 +103,28 @@ class HealthTrends:
         else:
             TermColour.print_error(f"Data not saved to: {fname}, it was missing.")
 
-    def save_predictions(self):
+    def save_predictions(self) -> None:
         """Save all available predictions to disk."""
         HealthTrends._save_data(data=self.get_workout_durations(), fname="avg_workout_durations.csv")
         HealthTrends._save_data(data=self.get_heart_rate_trendline(), fname="resting_heart_rate_trendline.csv")
         HealthTrends._save_data(data=self.get_weight_trendline(), fname="weight_trendline.csv")
 
 
-def build_health_visuals(health_trends: HealthTrends):
+def build_health_visuals(health_trends: HealthTrends) -> None:
     options = PlotOptions(export_dir=ROOT_IMG_DIR, show_plot=False)
     plot_workout_frequency(health_trends.get_workout_durations(), N_DAYS_TO_AVG, options)
     plot_resting_heart_rate(health_trends.health_metrics, health_trends.get_heart_rate_trendline(), options)
     plot_weight(health_trends.health_metrics, health_trends.get_weight_trendline(), options)
 
 
-def build_strength_visuals(workouts: pd.DataFrame, sets: pd.DataFrame):
+def build_strength_visuals(workouts: pd.DataFrame, sets: pd.DataFrame) -> None:
     num_workers = 5 * os.cpu_count()  # Should be a little faster if hyperthreading is enabled
     with Pool(num_workers) as p:
         partial_plot_strength = partial(plot_single_strength_visual, workouts=workouts, sets=sets)
         p.map(partial_plot_strength, sets[CName.EXERCISE].unique())
 
 
-def plot_single_strength_visual(exercise: str, workouts: pd.DataFrame, sets: pd.DataFrame):
+def plot_single_strength_visual(exercise: str, workouts: pd.DataFrame, sets: pd.DataFrame) -> None:
     if exercise in SKIP_EXERCISE_PLOT_EXERCISES:
         print(f"Manually skipping {exercise}.")
         return
@@ -144,7 +144,7 @@ def plot_single_strength_visual(exercise: str, workouts: pd.DataFrame, sets: pd.
         TermColour.print_warning(f"SKIPPED: {ve}.")
 
 
-def main():
+def main() -> None:
     # Load data
     health_metrics = DataLoader.load_health_metrics(ROOT_DATA_DIR)
     travel_days = DataLoader.load_travel_days(ROOT_DATA_DIR)

@@ -32,6 +32,7 @@ lint.ignore = [
     "D413",  # Blank line at the end of a DocString is a silly style
     "UP007",  # Optional[X] is a valid type specification
     "ANN101",  # "self" doesn't need a type annotation
+    "ANN102",  # "cls" doesn't need a type annotation
     "PT009",  # regular asserts are fine in some cases but not in others, using x.assert*() is beter for consistency
     "FIX002",  # TODO's are ok to have
     "TD003",  # Issue links aren't a thing in this project, we don't need them after TODOs
@@ -52,8 +53,6 @@ lint.ignore = [
     "D105",
     "D107",
     "D417",
-    "ANN102",
-    "ANN201",
     "ANN204",
 ]
 line-length = 120

@@ -1,6 +1,7 @@
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import date
+from typing import Self
 
 import numpy as np
 import pandas as pd
@@ -107,7 +108,7 @@ class Trendsetter:
 
 class ExerciseSummary:
     @classmethod
-    def build_summary(cls, data: pd.DataFrame, start_date: date, end_date: date) -> "ExerciseSummary":
+    def build_summary(cls, data: pd.DataFrame, start_date: date, end_date: date) -> Self:
         start_date, end_date = np.datetime64(start_date, "ns"), np.datetime64(end_date, "ns")
         data = data[start_date <= data[ColumnName.DATE]]
         data = data[data[ColumnName.DATE] <= end_date]

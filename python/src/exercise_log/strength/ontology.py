@@ -113,7 +113,7 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
 
         return ExerciseInfo._get_field(info[INHERITS_FROM], field)
 
-    def get_fatigue_factor(self):
+    def get_fatigue_factor(self) -> float:
         if self._fatigue_factor is not None:
             return self._fatigue_factor
 

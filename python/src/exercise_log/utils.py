@@ -124,7 +124,7 @@ class TermColour(StrEnum):
         print(f"{TermColour.OKGREEN}{msg}{TermColour.END}")  # noqa: T201
 
 
-def join_with_comma(items: list[str]):
+def join_with_comma(items: list[str]) -> str:
     """Join a list of strs with commas (simple wrapper function)."""
     return ",".join(items)
 

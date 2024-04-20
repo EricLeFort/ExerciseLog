@@ -22,6 +22,7 @@
 ### Site
 * Add a linter/formatter
 * Migrate to TypeScript
+* Migrate to React
 * Plot a combined metric using rate_of_climb + pace (+ duration?)
     - Experiment with adding duration into the equation (maybe also something like a strive score using avg, max + duration?)
 * Use the data in the ontological files (see Python section above) for thresholds
