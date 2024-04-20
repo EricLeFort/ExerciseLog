@@ -49,7 +49,7 @@ class Trendsetter:
         Compute the line of best fit for the given field.
 
         Args:
-            data (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
+            df (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
             field (str): The column name to fit
         Returns:
             A 2-tuple containing:
@@ -65,7 +65,7 @@ class Trendsetter:
         Compute the logarithmic curve of best fit for the given field.
 
         Args:
-            data (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
+            df (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
             field (str): The column name to fit
         Returns:
             A 3-tuple containing a, b, and, c of the equation: a * log(b * t) + c
@@ -79,7 +79,7 @@ class Trendsetter:
         Fit a linear trendline to the given field including padding for the number of extrapolated days.
 
         Args:
-            data (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
+            df (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
             field (str): The column name to fit
             extrapolate_days (int): The number of days to extrapolate the trend until
         Returns:
@@ -95,7 +95,7 @@ class Trendsetter:
         Fit a logarithmic trendline to the given field including padding for the number of extrapolated days.
 
         Args:
-            data (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
+            df (pd.DataFrame): The data to fit. It must contain a column with the name of the given field.
             field (str): The column name to fit
             extrapolate_days (int): The number of days to extrapolate the trend until
         Returns:

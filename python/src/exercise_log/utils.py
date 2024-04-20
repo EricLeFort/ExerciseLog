@@ -165,10 +165,10 @@ def invert_csv_rows(
     is then written to a new file. By default "x" or "x.csv" -> "x_inverted.csv".
 
     Args:
-        path (str): The path to the csv file to invert
+        fname (str): The path to the csv file to invert
         has_header_row (Optional[str]): Whether the csv has a header row that should be maintained by this function.
         output_fname (Optional[str]): The new path to write the inverted csv to
-
+        encoding (str): The encoding to use when reading the file (only supports UTF-8 currently)
     """
     # Note: working backwards from the input file rather than injecting into the first row of the output file even
     #       though it's messier bc I assume it's faster for data allocation reasons. I didn't validate this though.

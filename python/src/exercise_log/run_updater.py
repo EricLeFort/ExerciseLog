@@ -51,6 +51,7 @@ class HealthTrends:
         health_metrics: pd.DataFrame,
         extrapolate_days: int = EXTRAPOLATE_DAYS,
     ) -> None:
+        """Initialize this HealthTrends using the given data. The actual trends are computed lazily."""
         self.all_workouts = all_workouts
         self.health_metrics = health_metrics
         self.extrapolate_days = extrapolate_days

@@ -35,6 +35,7 @@ class ExerciseSet:
     """Stores info about a single set in a Session."""
 
     def __init__(self, target_count: int, target_weight: float) -> None:
+        """Initialize this ExerciseSet. The fatigue score is computed lazily."""
         self.target_count = target_count
         self.target_weight = target_weight
 
@@ -51,6 +52,7 @@ class Result:
     """Stores info about the result of an ExerciseSet."""
 
     def __init__(self, count: Optional[int], weight: Optional[float], set_rating: SetRating) -> None:
+        """Initialize this Result."""
         self.count = count
         self.weight = weight
         self.set_rating = set_rating
@@ -60,11 +62,13 @@ class SkippedResult(Result):
     """A special case of Result where the rating is SKIPPED and the counts/weight are None."""
 
     def __init__(self) -> None:
+        """Initialize this SkippedResult."""
         super().__init__(None, None, SetRating.SKIPPED)
 
 
 class SessionInfo:
     def __init__(self, focus: list[MuscleGroup], exercise_sets: dict[str, list[ExerciseSet]]) -> None:
+        """Initialize this SessionInfo."""
         self.focus = focus
 
         self.fatigue_score = sum(exercise_set.get_fatigue_score() for exercise, exercise_set in exercise_sets.items())
@@ -74,6 +78,7 @@ class SessionInfo:
 
 class Session:
     def __init__(self, focus: SessionFocus) -> None:
+        """Initialize this Session."""
         self.focus = focus
         self.sets = {}
         self.results = {}
