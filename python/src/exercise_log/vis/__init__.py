@@ -101,7 +101,7 @@ def plot_resting_heart_rate(
     health_metrics: np.ndarray,
     heart_rate_trendline: np.ndarray,
     options: Optional[PlotOptions] = None,
-) -> None:  # pylint: disable=too-many-arguments
+) -> None:
     y_min, y_max = 45, 90
 
     nonnull_heart_rates = health_metrics[health_metrics[ColumnName.RESTING_HEART_RATE].notna()]

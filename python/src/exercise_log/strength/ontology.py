@@ -1,4 +1,3 @@
-# pylint: disable=too-many-lines
 from typing import Any
 
 from exercise_log.constants import ROOT_ONTOLOGY_DIR
@@ -21,7 +20,6 @@ ROTATOR_CUFF_REP_RANGE = (10, 25)
 ENDURANCE_COMPOUND_REP_RANGE = (15, 50)
 
 
-# pylint: disable=line-too-long
 # Ideal strength ratios:
 # A gold mine: https://forums.t-nation.com/t/know-your-ratios-destroy-weaknesses/282078
 # Tricep:bicep
@@ -60,7 +58,6 @@ ENDURANCE_COMPOUND_REP_RANGE = (15, 50)
 # ??? Shoulders vs.
 # ??? Glutes vs. Hamstrings/Quads
 # ??? Calf vs Hamstrings/Quads
-# pylint: enable=line-too-long
 
 # Dynamically create the Field enum using a shared definition
 Field = StrEnum.create_from_json(f"{ROOT_ONTOLOGY_DIR}/enum/strength/ontology/field.json", __name__)
@@ -70,7 +67,7 @@ class ExerciseInfoMeta(type):
     def __len__(cls):
         return len(EXERCISE_INFO)
 
-    def __contains__(cls, item):
+    def __contains__(cls, item: Any):  # noqa: ANN401
         return item in EXERCISE_INFO
 
 

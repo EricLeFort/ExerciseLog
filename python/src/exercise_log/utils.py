@@ -20,7 +20,7 @@ LF = b"\n"
 
 
 class StrEnumMeta(EnumMeta):
-    def __getitem__(cls, name) -> StrEnum:  # noqa: N805
+    def __getitem__(cls, name: str) -> StrEnum:  # noqa: N805
         """
         Allow access to a StrEnum using the instance's value and not just the variable name.
 

@@ -17,12 +17,12 @@ N_DAYS_TO_AVG = 8
 
 class Trendsetter:
     @staticmethod
-    def _f_log_curve(t, a, b, c) -> float:
+    def _f_log_curve(t: float, a: float, b: float, c: float) -> float:
         """Define a logaritmic function to be fit using Scipy's curve_fit (using the variables given)."""
         return a * np.log(b * t) + c
 
     @staticmethod
-    def _f_affine(t, a, b) -> float:
+    def _f_affine(t: float, a: float, b: float) -> float:
         """Define a linear function to be fit using Scipy's curve_fit (using the variables given)."""
         return a * t + b
 
@@ -55,7 +55,6 @@ class Trendsetter:
                 m (float): The slope of the line of best fit
                 b (float): The y-intercept of the line of best fit
         """
-        # pylint: disable=unbalanced-tuple-unpacking
         (m, b), _ = curve_fit(Trendsetter._f_affine, df.index, df[field])
         return m, b
 
@@ -70,7 +69,6 @@ class Trendsetter:
         Returns:
             A 3-tuple containing a, b, and, c of the equation: a * log(b * t) + c
         """
-        # pylint: disable=unbalanced-tuple-unpacking
         (a, b, c), _ = curve_fit(Trendsetter._f_log_curve, df.index, df[field])
         return a, b, c
 

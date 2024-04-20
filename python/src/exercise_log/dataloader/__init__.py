@@ -61,7 +61,7 @@ class DataLoader:
 
     @staticmethod
     def _validate_exercises(df: pd.DataFrame, fname: str) -> None:
-        # Disabling pylint, this is needed bc Pandas is fussy; "some_exercise in Exercise" ought to work but doesn't
+        # Disabling linting, this is needed bc Pandas is fussy; "some_exercise in Exercise" ought to work but doesn't
         exercise_map = Exercise._value2member_map_  # noqa: SLF001
         if df[CName.EXERCISE].isin(exercise_map).all():
             return

@@ -1,4 +1,3 @@
-# pylint: disable=protected-access
 import pickle
 import unittest
 
