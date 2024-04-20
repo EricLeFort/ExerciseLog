@@ -64,10 +64,10 @@ Field = StrEnum.create_from_json(f"{ROOT_ONTOLOGY_DIR}/enum/strength/ontology/fi
 
 
 class ExerciseInfoMeta(type):
-    def __len__(cls):
+    def __len__(cls) -> int:
         return len(EXERCISE_INFO)
 
-    def __contains__(cls, item: Any):  # noqa: ANN401
+    def __contains__(cls, item: Any) -> bool:  # noqa: ANN401
         return item in EXERCISE_INFO
 
 
@@ -80,7 +80,7 @@ class ExerciseInfo(metaclass=ExerciseInfoMeta):
     Supports inheritance amongst data in related exercises. E.g. CONCENTRATION_CURL -> PREACHER_CURL -> BICEP_CURL
     """
 
-    def __init__(self, exercise: Exercise):
+    def __init__(self, exercise: Exercise) -> None:
         """Initialize an ExerciseInfo by looking up the relevant data for the given Exercise."""
         self.count_type = CountType[ExerciseInfo._get_field(exercise, Field.COUNT_TYPE)]
         self.exercise_type = ExerciseType[ExerciseInfo._get_field(exercise, Field.EXERCISE_TYPE)]

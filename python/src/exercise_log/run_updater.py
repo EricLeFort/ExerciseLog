@@ -50,7 +50,7 @@ class HealthTrends:
         all_workouts: pd.DataFrame,
         health_metrics: pd.DataFrame,
         extrapolate_days: int = EXTRAPOLATE_DAYS,
-    ):
+    ) -> None:
         self.all_workouts = all_workouts
         self.health_metrics = health_metrics
         self.extrapolate_days = extrapolate_days

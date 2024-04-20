@@ -50,7 +50,7 @@ class ExerciseSet:
 class Result:
     """Stores info about the result of an ExerciseSet."""
 
-    def __init__(self, count: Optional[int], weight: Optional[float], set_rating: SetRating):
+    def __init__(self, count: Optional[int], weight: Optional[float], set_rating: SetRating) -> None:
         self.count = count
         self.weight = weight
         self.set_rating = set_rating
