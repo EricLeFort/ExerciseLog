@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+17-APR-2024,walk (treadmill),00:37:54,3.86,4216,207,0,143,184,""
 15-APR-2024,walk (treadmill),00:31:00,2.70,3260,208,0,144,153,""
 13-APR-2024,walk (treadmill),01:00:47,5.31,6089,418,0,151,164,"Started out fatigued from a day of travel"
 11-APR-2024,walk (treadmill),01:00:42,5.28,6793,468,0,149,161,""
