@@ -5,7 +5,7 @@ from multiprocessing import Pool
 
 import pandas as pd
 
-from exercise_log.dataloader import CName, ColumnName, DataLoader
+from exercise_log.dataloader import CName, ColumnName, DataBox
 from exercise_log.strength import Exercise
 from exercise_log.trend import Trendsetter
 from exercise_log.utils import TermColour, get_padded_dates
@@ -113,16 +113,22 @@ class HealthTrends:
 
 def build_health_visuals(health_trends: HealthTrends) -> None:
     options = PlotOptions(export_dir=ROOT_IMG_DIR, show_plot=False)
+    print("Plotting workout frequency..")
     plot_workout_frequency(health_trends.get_workout_durations(), N_DAYS_TO_AVG, options)
+    print("Plotting resting heart rate..")
     plot_resting_heart_rate(health_trends.health_metrics, health_trends.get_heart_rate_trendline(), options)
+    print("Plotting weight..")
     plot_weight(health_trends.health_metrics, health_trends.get_weight_trendline(), options)
+    print("Done plotting health metrics.")
 
 
 def build_strength_visuals(workouts: pd.DataFrame, sets: pd.DataFrame) -> None:
     num_workers = 5 * os.cpu_count()  # Should be a little faster if hyperthreading is enabled
     with Pool(num_workers) as p:
         partial_plot_strength = partial(plot_single_strength_visual, workouts=workouts, sets=sets)
+        print("Loading strength sets data..")
         p.map(partial_plot_strength, sets[CName.EXERCISE].unique())
+    print("Done plotting strength metrics.")
 
 
 def plot_single_strength_visual(exercise: str, workouts: pd.DataFrame, sets: pd.DataFrame) -> None:
@@ -146,30 +152,11 @@ def plot_single_strength_visual(exercise: str, workouts: pd.DataFrame, sets: pd.
 
 
 def main() -> None:
-    # Load data
-    health_metrics = DataLoader.load_health_metrics(ROOT_DATA_DIR)
-    travel_days = DataLoader.load_travel_days(ROOT_DATA_DIR)
-    walk_workouts = DataLoader.load_walk_workouts(ROOT_DATA_DIR)
-    run_workouts = DataLoader.load_run_workouts(ROOT_DATA_DIR)
-    bike_workouts = DataLoader.load_bike_workouts(ROOT_DATA_DIR)
-    row_workouts = DataLoader.load_row_workouts(ROOT_DATA_DIR)
-    stair_workouts = DataLoader.load_stair_workouts(ROOT_DATA_DIR)
-    cardio_workouts = [
-        walk_workouts,
-        run_workouts,
-        bike_workouts,
-        row_workouts,
-        stair_workouts,
-    ]
-    weight_training_workouts = DataLoader.load_weight_training_workouts(ROOT_DATA_DIR)
-    weight_training_sets = DataLoader.load_weight_training_sets(ROOT_DATA_DIR)
-    cardio_workouts = DataLoader.merge_cardio_workouts(cardio_workouts)
-    all_workouts = DataLoader.load_all_workouts(cardio_workouts, weight_training_workouts, travel_days)
-
-    # Build the graphs, save the predictions
-    health_trends = HealthTrends(all_workouts, health_metrics)
+    # Load data, build graphs, make predictions, save results
+    databox = DataBox(ROOT_DATA_DIR)
+    health_trends = HealthTrends(databox.get_all_workouts(), databox.get_health_metrics())
     build_health_visuals(health_trends)
-    build_strength_visuals(weight_training_workouts, weight_training_sets)
+    build_strength_visuals(databox.get_weight_training_workouts(), databox.get_weight_training_sets())
     health_trends.save_predictions()
 
 

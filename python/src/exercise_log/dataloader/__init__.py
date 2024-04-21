@@ -16,6 +16,104 @@ CName = ColumnName
 LONG = "Int64"
 
 
+class DataBox:
+    def __init__(self, root_data_dir: str) -> None:
+        """Initialize this DataBox. The contained data is all computed lazily."""
+        self.root_data_dir = root_data_dir
+
+        # Base datasets
+        self._health_metrics = None
+        self._travel_days = None
+        self._walk_workouts = None
+        self._run_workouts = None
+        self._bike_workouts = None
+        self._row_workouts = None
+        self._stair_workouts = None
+        self._weight_training_workouts = None
+        self._weight_training_sets = None
+
+        # Aggregate datasets
+        self._cardio_workouts = None
+        self._all_workouts = None
+
+    def get_health_metrics(self) -> pd.DataFrame:
+        """Access the health metrics dataset and loads it if it hasn't been yet."""
+        if self._health_metrics is None:
+            self._health_metrics = DataLoader.load_health_metrics(self.root_data_dir)
+        return self._health_metrics
+
+    def get_travel_days(self) -> pd.DataFrame:
+        """Access the travel days dataset, loading it if necessary."""
+        if self._travel_days is None:
+            self._travel_days = DataLoader.load_travel_days(self.root_data_dir)
+        return self._travel_days
+
+    def get_walk_workouts(self) -> pd.DataFrame:
+        """Access the walk workouts dataset, loading it if necessary."""
+        if self._walk_workouts is None:
+            self._walk_workouts = DataLoader.load_walk_workouts(self.root_data_dir)
+        return self._walk_workouts
+
+    def get_run_workouts(self) -> pd.DataFrame:
+        """Access the run workouts dataset, loading it if necessary."""
+        if self._run_workouts is None:
+            self._run_workouts = DataLoader.load_run_workouts(self.root_data_dir)
+        return self._run_workouts
+
+    def get_bike_workouts(self) -> pd.DataFrame:
+        """Access the bike workouts dataset, loading it if necessary."""
+        if self._bike_workouts is None:
+            self._bike_workouts = DataLoader.load_bike_workouts(self.root_data_dir)
+        return self._bike_workouts
+
+    def get_row_workouts(self) -> pd.DataFrame:
+        """Access the row workouts dataset, loading it if necessary."""
+        if self._row_workouts is None:
+            self._row_workouts = DataLoader.load_row_workouts(self.root_data_dir)
+        return self._row_workouts
+
+    def get_stair_workouts(self) -> pd.DataFrame:
+        """Access the stair workouts dataset, loading it if necessary."""
+        if self._stair_workouts is None:
+            self._stair_workouts = DataLoader.load_stair_workouts(self.root_data_dir)
+        return self._stair_workouts
+
+    def get_weight_training_workouts(self) -> pd.DataFrame:
+        """Access the weight training workouts dataset, loading it if necessary."""
+        if self._weight_training_workouts is None:
+            self._weight_training_workouts = DataLoader.load_weight_training_workouts(self.root_data_dir)
+        return self._weight_training_workouts
+
+    def get_weight_training_sets(self) -> pd.DataFrame:
+        """Access the weight training sets dataset, loading it if necessary."""
+        if self._weight_training_sets is None:
+            self._weight_training_sets = DataLoader.load_weight_training_sets(self.root_data_dir)
+        return self._weight_training_sets
+
+    def get_cardio_workouts(self) -> pd.DataFrame:
+        """Access the cardio workouts dataset (an aggregate of other datasets), loading them if necessary."""
+        if self._cardio_workouts is None:
+            workouts = [
+                self.get_walk_workouts(),
+                self.get_run_workouts(),
+                self.get_bike_workouts(),
+                self.get_row_workouts(),
+                self.get_stair_workouts(),
+            ]
+            self._cardio_workouts = DataLoader.merge_cardio_workouts(workouts)
+        return self._cardio_workouts
+
+    def get_all_workouts(self) -> pd.DataFrame:
+        """Access the all workouts dataset (an aggregate of other datasets), loading them if necessary."""
+        if self._all_workouts is None:
+            self._all_workouts = DataLoader.load_all_workouts(
+                self.get_cardio_workouts(),
+                self.get_weight_training_workouts(),
+                self.get_travel_days(),
+            )
+        return self._all_workouts
+
+
 class DataLoader:
     @staticmethod
     def _load_and_clean_data(fname: str) -> pd.DataFrame:
