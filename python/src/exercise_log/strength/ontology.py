@@ -1348,6 +1348,24 @@ EXERCISE_INFO = {
         },
         Field.ANTAGONIST_MUSCLES: {None},
     },
+    Exercise.SINGLE_ARM_DELT_FLIES: {
+        INHERITS_FROM: Exercise.DELT_FLIES,
+        Field.IS_UNILATERAL: True,
+        Field.IS_LIMB_INDEPENDENT: True,
+        Field.MUSCLE_GROUPS_WORKED: {
+            MuscleGroup.ABS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRAPS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+        },
+        Field.MUSCLES_WORKED: {
+            None: None,
+        },
+        Field.ANTAGONIST_MUSCLES: {None},
+    },
     Exercise.SINGLE_ARM_FARMERS_CARRY: {
         Field.COUNT_TYPE: CountType.STEPS,
         Field.EXERCISE_TYPE: ExerciseType.WEIGHTED_COMPOUND_ISOMETRIC,
