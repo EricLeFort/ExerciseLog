@@ -7,7 +7,12 @@ from random import randint, uniform
 import pandas as pd
 
 from exercise_log.dataloader import ColumnName as CName
-from exercise_log.trend import BikeCardioSummary, ExerciseSummary, FootCardioSummary, WeightTrainingSummary
+from exercise_log.trend.exercise_summary import (
+    BikeCardioSummary,
+    ExerciseSummary,
+    FootCardioSummary,
+    WeightTrainingSummary,
+)
 
 
 def _test_four_scenarios(
