@@ -1,4 +1,6 @@
+from abc import ABC, abstractmethod
 from collections.abc import Callable
+from datetime import UTC, date, datetime, timedelta
 
 import numpy as np
 import pandas as pd
@@ -71,7 +73,7 @@ class Trendsetter:
         return a, b, c
 
     @staticmethod
-    def get_line_of_best_fit(df: pd.DataFrame, field: str, extrapolate_days: int) -> np.ndarray:
+    def get_line_of_best_fit(df: pd.DataFrame, field: str, extrapolate_days: int = 0) -> np.ndarray:
         """
         Fit a linear trendline to the given field including padding for the number of extrapolated days.
 
@@ -87,7 +89,7 @@ class Trendsetter:
         return Trendsetter._get_curve_of_best_fit(nonnulls, Trendsetter._f_affine, fitted_params, extrapolate_days)
 
     @staticmethod
-    def get_logarithmic_curve_of_best_fit(df: pd.DataFrame, field: str, extrapolate_days: int) -> np.ndarray:
+    def get_logarithmic_curve_of_best_fit(df: pd.DataFrame, field: str, extrapolate_days: int = 0) -> np.ndarray:
         """
         Fit a logarithmic trendline to the given field including padding for the number of extrapolated days.
 
@@ -101,6 +103,89 @@ class Trendsetter:
         nonnulls = df[df[field].notna()]
         fitted_params = Trendsetter.fit_logarithmic(nonnulls, field)
         return Trendsetter._get_curve_of_best_fit(nonnulls, Trendsetter._f_log_curve, fitted_params, extrapolate_days)
+
+
+class Trend(ABC):
+    def __init__(self, datespans: list[tuple[date]], health_metrics: pd.DataFrame, extrapolate_days: int) -> None:
+        """Initialize this Trend with the relevant data. The trendline itself is computed lazily."""
+        self.datespans = [(pd.to_datetime(start), pd.to_datetime(end)) for start, end in datespans]
+        self.health_metrics = health_metrics
+        self.extrapolate_days = extrapolate_days
+
+        self._trendline = None
+
+    @abstractmethod
+    def get_trendline(self) -> pd.DataFrame:
+        raise NotImplementedError
+
+
+class WeightTrend(Trend):
+    def __init__(self, datespans: list[tuple[date]], health_metrics: pd.DataFrame, extrapolate_days: int) -> None:
+        """Initialize this WeightTrend. Removes any null rows from the health_metrics."""
+        nonnulls = health_metrics[health_metrics[CName.WEIGHT].notna()]
+        super().__init__(datespans, nonnulls, extrapolate_days)
+
+    def get_trendline(self) -> pd.DataFrame:
+        if self._trendline is None:
+            cname = CName.WEIGHT
+            lookback_days = 20
+
+            # First section doesn't need a lookback
+            metrics_slice = self.health_metrics[self.health_metrics[CName.DATE].between(*self.datespans[0])]
+            y = [Trendsetter.get_line_of_best_fit(metrics_slice, cname)]
+            for span in self.datespans[1:-1]:
+                start_date = span[0] - timedelta(days=lookback_days)
+                end_date = span[1] + timedelta(days=lookback_days)
+                metrics_slice = self.health_metrics[self.health_metrics[CName.DATE].between(start_date, end_date)]
+                line_of_fit = Trendsetter.get_line_of_best_fit(metrics_slice, cname)
+                y.append(line_of_fit[lookback_days:-lookback_days])
+
+            # The last section extrapolates a trend
+            (start_date, end_date) = self.datespans[-1]
+            start_date -= timedelta(days=lookback_days)
+            metrics_slice = self.health_metrics[self.health_metrics[CName.DATE].between(start_date, end_date)]
+            line_of_fit = Trendsetter.get_line_of_best_fit(metrics_slice, cname, self.extrapolate_days)
+            y.append(line_of_fit[lookback_days:])
+
+            # Combine all pieces into a single prediction
+            y = np.concatenate(y)
+            padded_dates = get_padded_dates(self.health_metrics, self.extrapolate_days)
+            self._trendline = pd.DataFrame({CName.DATE: padded_dates, cname: y})
+        return self._trendline
+
+
+class HeartRateTrend(Trend):
+    def __init__(self, datespans: list[tuple[date]], health_metrics: pd.DataFrame, extrapolate_days: int) -> None:
+        """Initialize this HeartRateTrend. Removes any null rows from the health_metrics."""
+        nonnulls = health_metrics[health_metrics[CName.RESTING_HEART_RATE].notna()]
+        super().__init__(datespans, nonnulls, extrapolate_days)
+
+    def get_trendline(self) -> pd.DataFrame:
+        """
+        Retrieve the heart rate trendline, compute it if necessary.
+
+        First projects a log curve while going from untrained to trained, then projects linearly onward from there.
+
+        There's better ways to fit the process of slowly becoming detrained or of becoming incrementally more trained
+        but this can be improved in the future.
+        """
+        if self._trendline is None:
+            cname = CName.RESTING_HEART_RATE
+            lookback_days = 100
+            first_slice = self.health_metrics[self.health_metrics[CName.DATE].between(*self.datespans[0])]
+            untrained_to_trained = Trendsetter.get_logarithmic_curve_of_best_fit(first_slice, cname)
+
+            # Start fitting this section from a little before it starts so that it fits more cleanly.
+            span = (self.datespans[1][0] - timedelta(days=lookback_days), self.datespans[1][1])
+            second_slice = self.health_metrics[self.health_metrics[CName.DATE].between(*span)]
+            training = Trendsetter.get_line_of_best_fit(second_slice, cname, self.extrapolate_days)
+            training = training[lookback_days:]
+
+            # Combine both pieces into a single prediction
+            y = np.concatenate([untrained_to_trained, training])
+            padded_dates = get_padded_dates(self.health_metrics, self.extrapolate_days)
+            self._trendline = pd.DataFrame({CName.DATE: padded_dates, cname: y})
+        return self._trendline
 
 
 class HealthTrends:
@@ -119,9 +204,31 @@ class HealthTrends:
         self.extrapolate_days = extrapolate_days
         self.preds_dir = preds_dir
 
+        fmt = "%Y-%m-%d"
+        first_weight_loss_end_date = datetime.strptime("2024-01-06", fmt).astimezone(UTC).date()
+        first_weight_maintenance_end_date = datetime.strptime("2024-03-05", fmt).astimezone(UTC).date()
+
+        nonnulls = self.health_metrics[self.health_metrics[CName.WEIGHT].notna()]
+        first_date = nonnulls[CName.DATE].min()
+        last_date = nonnulls[CName.DATE].max()
+        datespans = [
+            (first_date, first_weight_loss_end_date),
+            (first_weight_loss_end_date, first_weight_maintenance_end_date),
+            (first_weight_maintenance_end_date, last_date),
+        ]
+        self._weight_trend = WeightTrend(datespans, self.health_metrics, self.extrapolate_days)
+
+        nonnulls = self.health_metrics[self.health_metrics[CName.RESTING_HEART_RATE].notna()]
+        first_date = nonnulls[CName.DATE].min()
+        last_date = nonnulls[CName.DATE].max()
+        trained_date = datetime.strptime("2024-01-01", fmt).astimezone(UTC).date()
+        datespans = [
+            (first_date, trained_date),
+            (trained_date, last_date),
+        ]
+        self._heart_rate_trend = HeartRateTrend(datespans, self.health_metrics, self.extrapolate_days)
+
         self._workout_durations = None
-        self._weight_trendline = None
-        self._heart_rate_trendline = None
 
     def get_workout_durations(self) -> pd.DataFrame:
         """
@@ -141,19 +248,11 @@ class HealthTrends:
 
     def get_weight_trendline(self) -> pd.DataFrame:
         """Access the linear trend of weight over time, first computing it if needed."""
-        if self._weight_trendline is None:
-            cname = CName.WEIGHT
-            data = Trendsetter.get_line_of_best_fit(self.health_metrics, cname, self.extrapolate_days)
-            self._weight_trendline = pd.DataFrame({CName.DATE: self.get_padded_dates(cname), cname: data})
-        return self._weight_trendline
+        return self._weight_trend.get_trendline()
 
     def get_heart_rate_trendline(self) -> pd.DataFrame:
         """Access the logarithmic curve of best fit of resting heart rate over time, first computing it if needed."""
-        if self._heart_rate_trendline is None:
-            cname = CName.RESTING_HEART_RATE
-            data = Trendsetter.get_logarithmic_curve_of_best_fit(self.health_metrics, cname, self.extrapolate_days)
-            self._heart_rate_trendline = pd.DataFrame({CName.DATE: self.get_padded_dates(cname), cname: data})
-        return self._heart_rate_trendline
+        return self._heart_rate_trend.get_trendline()
 
     def get_padded_dates(self, c_name: CName) -> pd.DataFrame:
         nonnulls = self.health_metrics[self.health_metrics[c_name].notna()]
