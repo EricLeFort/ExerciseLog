@@ -205,6 +205,7 @@ function addRefLine(svg, label, yMin, yMax, yRef, refLineType) {
     .style("stroke", strokeColour)
     .style("stroke-width", 2)
     .style("stroke-dasharray", dashArray)
+    .style("fill", "none")
     .attr("x1", graphMargin)
     .attr("y1", pos)
     .attr("x2", refLineRight)
@@ -345,7 +346,8 @@ function plotWeight(healthMetrics, weightTrendline) {
     .attr("y2", legendIconHeight)
     .style("stroke", "steelblue")
     .style("stroke-width", lineStrokeWidth)
-    .style("stroke-dasharray", ("8, 4"));
+    .style("stroke-dasharray", ("8, 4"))
+    .style("fill", "none");
   svg.append("text")
     .attr("x", graphWidth / 2 + legendSpacing / 2)
     .attr("y", legendHeight)
@@ -388,6 +390,7 @@ function plotWeight(healthMetrics, weightTrendline) {
     .style("stroke", "steelblue")
     .style("stroke-width", lineStrokeWidth)
     .style("stroke-dasharray", ("8, 4"))
+    .style("fill", "none")
     .attr("d", valueLine(weightTrendline));
 
   // Annotate object and append to the page
@@ -514,7 +517,8 @@ function plotHeartRate(healthMetrics, heartRateTrendline) {
     .attr("y2", legendIconHeight)
     .style("stroke", "steelblue")
     .style("stroke-width", lineStrokeWidth)
-    .style("stroke-dasharray", ("8, 4"));
+    .style("stroke-dasharray", ("8, 4"))
+    .style("fill", "none");
   svg.append("text")
     .attr("x", graphWidth / 2 + legendSpacing / 2)
     .attr("y", legendHeight)
@@ -558,6 +562,7 @@ function plotHeartRate(healthMetrics, heartRateTrendline) {
     .style("stroke", "steelblue")
     .style("stroke-width", lineStrokeWidth)
     .style("stroke-dasharray", ("8, 4"))
+    .style("fill", "none")
     .attr("d", valueLine(heartRateTrendline));
 
   // Annotate object and append to the page

@@ -1,7 +1,6 @@
 # TODO
 
 ### Python
-* Extend health trends to allow for regions of different trend matching -- e.g. weight should be linear Dec 2022 - Jan 2024, constant until Mar 2024, then linear after that
 * Enable the disabled linting/formatting rules
 * Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
 * Make a visualization for volume (e.g. distance, HR zones, total watts for cardio + num sets by type, weight moved for strength)
