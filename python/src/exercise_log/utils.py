@@ -1,3 +1,5 @@
+"""A collection of generic, reusable utilities that are not even necessarily specific to the ExerciseLog project."""
+
 from __future__ import annotations
 
 import json

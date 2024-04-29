@@ -1,3 +1,5 @@
+"""Defines project-level constants for ExerciseLog."""
+
 from typing import Union
 
 # I'm treating this like "int" not like "Int" so I don't agree with the linter here

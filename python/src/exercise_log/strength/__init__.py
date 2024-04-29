@@ -1,3 +1,10 @@
+"""
+Contains logic related to three major domains:
+    1. Loading ontological data relating to strength (e.g. anatomical data, information about exercises, etc.)
+    2. Providing a framework to structure strength-training workouts.
+    3. Providing a framework to analyze strength progression over time.
+"""
+
 from exercise_log.constants import ROOT_ONTOLOGY_DIR
 from exercise_log.utils import StrEnum
 

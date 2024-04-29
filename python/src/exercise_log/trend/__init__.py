@@ -1,3 +1,5 @@
+"""Contains logic relating to projecting simple trends."""
+
 from abc import ABC, abstractmethod
 from collections.abc import Callable
 from datetime import UTC, date, datetime, timedelta

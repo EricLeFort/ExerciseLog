@@ -1,3 +1,5 @@
+"""Orchestrates the process of adding a workout."""
+
 import datetime
 import os
 from functools import partial

@@ -1,3 +1,5 @@
+"""A collection of dataclasses that store and pretty-print workout volume metrics of various forms of exercise."""
+
 from dataclasses import dataclass
 from datetime import date
 from typing import Self

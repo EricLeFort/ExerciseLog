@@ -1,3 +1,5 @@
+"""Defines ontological data relating to strength-training exercises."""
+
 from typing import Any
 
 from exercise_log.constants import ROOT_ONTOLOGY_DIR

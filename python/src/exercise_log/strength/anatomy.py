@@ -1,3 +1,5 @@
+"""Enumerates the major skeletal muscular anatomy of the human body and groups those muscles into muscle groups."""
+
 from typing import ClassVar
 
 from exercise_log.constants import ROOT_ONTOLOGY_DIR

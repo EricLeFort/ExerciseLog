@@ -1,3 +1,5 @@
+"""A collection of visualization-related utilites."""
+
 from datetime import timedelta
 
 import matplotlib.dates as mdates

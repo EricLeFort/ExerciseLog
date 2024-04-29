@@ -1,3 +1,5 @@
+"""Contains logic related to the Session-level grouping of a workout regime including planning and record-keeping."""
+
 from enum import Enum
 from typing import Optional
 

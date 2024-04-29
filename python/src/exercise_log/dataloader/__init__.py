@@ -1,3 +1,5 @@
+"""Contains logic relating to the loading and transformation of ExerciseLog data."""
+
 import csv
 
 import numpy as np

@@ -1,3 +1,5 @@
+"""Contains utilities for visualizing fitness data such as strength over time, weight, and resting heart rate."""
+
 from dataclasses import dataclass
 from datetime import date
 from typing import Optional
