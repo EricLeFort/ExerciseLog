@@ -22,6 +22,8 @@ LF = b"\n"
 
 
 class StrEnumMeta(EnumMeta):
+    """Metaclass of the StrEnum class."""
+
     def __getitem__(cls, name: str) -> StrEnum:  # noqa: N805
         """
         Allow access to a StrEnum using the instance's value and not just the variable name.
@@ -34,6 +36,8 @@ class StrEnumMeta(EnumMeta):
 
 
 class StrEnum(str, Enum, metaclass=StrEnumMeta):
+    """A convenient Enum that can be used similiarly to a str."""
+
     def __contains__(self, item: Any) -> bool:  # noqa: ANN401
         """
         Check if the given item is a member of this enum.
@@ -100,6 +104,8 @@ class StrEnum(str, Enum, metaclass=StrEnumMeta):
 
 
 class TermColour(StrEnum):
+    """A StrEnum that contains possible terminal output colours and convenience functions to print using them."""
+
     FAIL = "\033[91m"
     OKGREEN = "\033[92m"
     WARNING = "\033[93m"

@@ -39,6 +39,8 @@ mpl.use("Agg")
 
 @dataclass
 class PlotOptions:
+    """A simple dataclass that wraps options relevant to plotting."""
+
     export_dir: Optional[str] = None
     show_plot: Optional[bool] = None
 

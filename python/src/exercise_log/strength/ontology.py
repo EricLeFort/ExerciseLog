@@ -66,6 +66,8 @@ Field = StrEnum.create_from_json(f"{ROOT_ONTOLOGY_DIR}/enum/strength/ontology/fi
 
 
 class ExerciseInfoMeta(type):
+    """Metaclass of the ExerciseInfo class."""
+
     def __len__(cls) -> int:
         return len(EXERCISE_INFO)
 

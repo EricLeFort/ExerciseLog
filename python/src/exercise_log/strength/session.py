@@ -26,6 +26,8 @@ FOREARMS = {MuscleGroup.FOREARMS}
 
 
 class SessionFocus(Enum):
+    """An enum that groups MuscleGroups together into logical focuses for a single session."""
+
     PUSH = TRICEPS.union(CHEST).union(SHOULDERS)
     PULL = BICEPS.union(BACK).union(FOREARMS)
     UPPER = ARMS.union(BACK).union(CHEST).union(CORE).union(SHOULDERS)
@@ -69,6 +71,8 @@ class SkippedResult(Result):
 
 
 class SessionInfo:
+    """Stores metadata about a session such as total fatigue score and volume."""
+
     def __init__(self, focus: list[MuscleGroup], exercise_sets: dict[str, list[ExerciseSet]]) -> None:
         """Initialize this SessionInfo."""
         self.focus = focus
@@ -79,6 +83,8 @@ class SessionInfo:
 
 
 class Session:
+    """Stores session data including planned sets, set results, and other metadata about the session as a whole."""
+
     def __init__(self, focus: SessionFocus) -> None:
         """Initialize this Session."""
         self.focus = focus

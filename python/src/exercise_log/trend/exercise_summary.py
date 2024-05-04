@@ -11,6 +11,8 @@ from exercise_log.dataloader import CName
 
 
 class ExerciseSummary:
+    """An abstract class that holds and pretty-prints a specific summary for a given dataset over a date range."""
+
     @classmethod
     def build_summary(cls, data: pd.DataFrame, start_date: date, end_date: date) -> Self:
         start_date, end_date = np.datetime64(start_date, "ns"), np.datetime64(end_date, "ns")
@@ -28,6 +30,8 @@ class ExerciseSummary:
 
 @dataclass
 class WeightTrainingSummary(ExerciseSummary):
+    """Prepares a summary of the weight-training workouts over a date range."""
+
     weight_moved: int
     set_count: int
     rep_count: int
@@ -45,6 +49,8 @@ class WeightTrainingSummary(ExerciseSummary):
 
 @dataclass
 class FootCardioSummary(ExerciseSummary):
+    """Prepares a summary of the foot cardio (walking, running) workouts over a date range."""
+
     dist: float
     elv_gain: int
 
@@ -60,6 +66,8 @@ class FootCardioSummary(ExerciseSummary):
 
 @dataclass
 class BikeCardioSummary(ExerciseSummary):
+    """Prepares a summary of the biking cardio workouts over a date range."""
+
     dist: float
     total_output: int
 

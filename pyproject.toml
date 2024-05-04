@@ -45,7 +45,6 @@ lint.ignore = [
     "ISC001",
 
     # TODO(eric): Should be implemented but I'm lazy so I'll do it bit-by-bit retroactively :)
-    "D101",
     "D102",
     "D103",
     "D105",
@@ -59,8 +58,9 @@ max-args = 10
 "python/test/*" = [
     "S311",  # Ignore cryptographic warnings in test files -- they don't need to be crypographically secure
     "SLF001",  # Tests are allowed to access private members
-    "D100",  # Don't bother with module/package level DocStrings for tests
-    "D104"
+    "D100",  # Don't bother with DocString requirements for test modules/packages
+    "D101",
+    "D104",
 ]
 "python/src/exercise_log/run_updater.py" = [
     "T201",  # The updater is a CLI, it's meant to print to console

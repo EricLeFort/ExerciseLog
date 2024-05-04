@@ -18,6 +18,8 @@ N_DAYS_TO_AVG = 8
 
 
 class Trendsetter:
+    """A static object containing logic for simple trend-fitting using curves-of-best-fit."""
+
     @staticmethod
     def _f_log_curve(t: float, a: float, b: float, c: float) -> float:
         """Define a logaritmic function to be fit using Scipy's curve_fit (using the variables given)."""
@@ -108,6 +110,8 @@ class Trendsetter:
 
 
 class Trend(ABC):
+    """An abstract class that uses datespans, a dataset, and a number of days to extrapolate to fit a trend."""
+
     def __init__(self, datespans: list[tuple[date]], health_metrics: pd.DataFrame, extrapolate_days: int) -> None:
         """Initialize this Trend with the relevant data. The trendline itself is computed lazily."""
         self.datespans = [(pd.to_datetime(start), pd.to_datetime(end)) for start, end in datespans]
@@ -122,6 +126,8 @@ class Trend(ABC):
 
 
 class WeightTrend(Trend):
+    """A Trend that predicts weight over time. Assumes each datespan contains a linear pattern of weight change."""
+
     def __init__(self, datespans: list[tuple[date]], health_metrics: pd.DataFrame, extrapolate_days: int) -> None:
         """Initialize this WeightTrend. Removes any null rows from the health_metrics."""
         nonnulls = health_metrics[health_metrics[CName.WEIGHT].notna()]
@@ -157,6 +163,13 @@ class WeightTrend(Trend):
 
 
 class HeartRateTrend(Trend):
+    """
+    A Trend that predicts resting heart rate (RHR) over time.
+
+    Assumes the first datespan covers a logarithmic decrease in RHR and subsequent datespans are linear patterns of
+    change. The first datespan is meant to capture the period of going from untrained to trained.
+    """
+
     def __init__(self, datespans: list[tuple[date]], health_metrics: pd.DataFrame, extrapolate_days: int) -> None:
         """Initialize this HeartRateTrend. Removes any null rows from the health_metrics."""
         nonnulls = health_metrics[health_metrics[CName.RESTING_HEART_RATE].notna()]

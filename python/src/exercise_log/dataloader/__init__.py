@@ -19,6 +19,8 @@ LONG = "Int64"
 
 
 class DataBox:
+    """A manager for gathering and logically grouping relevant data being loaded."""
+
     def __init__(self, root_data_dir: str) -> None:
         """Initialize this DataBox. The contained data is all computed lazily."""
         self.root_data_dir = root_data_dir
@@ -117,6 +119,8 @@ class DataBox:
 
 
 class DataLoader:
+    """Responsible for loading small datasets that fit in memory."""
+
     @staticmethod
     def _load_and_clean_data(fname: str) -> pd.DataFrame:
         """Load the CSV and cleans up the data (convert date/times to proper types, NA -> "", etc)."""
