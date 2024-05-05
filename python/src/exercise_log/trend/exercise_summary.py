@@ -25,6 +25,7 @@ class ExerciseSummary:
         raise NotImplementedError
 
     def __str__(self) -> str:
+        """Override the __str__method to provide a str summary of the relevant form of exercise."""
         raise NotImplementedError
 
 
@@ -44,6 +45,11 @@ class WeightTrainingSummary(ExerciseSummary):
         return WeightTrainingSummary(weight_moved, set_count, rep_count)
 
     def __str__(self) -> str:
+        """
+        Override the __str__method to provide a str summary of the WeightTraining metrics.
+
+        The resulting str will contain the total weight moved as well as the total number of sets and reps.
+        """
         return f"Lifting {self.weight_moved:,} lbs across {self.set_count:,} sets and {self.rep_count:,} reps."
 
 
@@ -61,6 +67,11 @@ class FootCardioSummary(ExerciseSummary):
         return FootCardioSummary(dist, elv_gain)
 
     def __str__(self) -> str:
+        """
+        Override the __str__method to provide a str summary of the FootCardio metrics.
+
+        The resulting str will contain the total distance moved and elevation gain.
+        """
         return f"Moving my body by foot across {self.dist:,} km and up {self.elv_gain:,} m."
 
 
@@ -78,4 +89,9 @@ class BikeCardioSummary(ExerciseSummary):
         return BikeCardioSummary(dist, total_output)
 
     def __str__(self) -> str:
+        """
+        Override the __str__method to provide a str summary of the FootCardio metrics.
+
+        The resulting str will contain the total distance moved and wattage produced.
+        """
         return f"Biking across {self.dist:,} km with a total output of {self.total_output:,} KJ."

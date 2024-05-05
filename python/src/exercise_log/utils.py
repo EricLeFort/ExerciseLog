@@ -138,6 +138,7 @@ def join_with_comma(items: list[str]) -> str:
 
 
 def convert_pd_to_np(obj: NDFrame) -> np.ndarray:
+    """Convert a Pandas NDFrame into a Numpy array."""
     return np.array(obj)[:, None]
 
 

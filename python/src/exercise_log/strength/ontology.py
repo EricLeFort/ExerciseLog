@@ -69,9 +69,11 @@ class ExerciseInfoMeta(type):
     """Metaclass of the ExerciseInfo class."""
 
     def __len__(cls) -> int:
+        """Get the length of the ExerciseInfo enum. It's the length of the EXERCISE_INFO dict."""
         return len(EXERCISE_INFO)
 
     def __contains__(cls, item: Any) -> bool:  # noqa: ANN401
+        """Check if the item exists in the EXERCISE_INFO dict. If it does, it's a valid ExerciseInfo."""
         return item in EXERCISE_INFO
 
 

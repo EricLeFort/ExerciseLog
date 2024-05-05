@@ -46,8 +46,6 @@ lint.ignore = [
 
     # TODO(eric): Should be implemented but I'm lazy so I'll do it bit-by-bit retroactively :)
     "D102",
-    "D103",
-    "D105",
 ]
 line-length = 120
 

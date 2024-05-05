@@ -45,6 +45,7 @@ SKIP_EXERCISE_PLOT_EXERCISES = {
 
 
 def build_health_visuals(health_trends: HealthTrends) -> None:
+    """Build and save health metric visuals including workout frequency, resting heart rate, and weight."""
     options = PlotOptions(export_dir=ROOT_IMG_DIR, show_plot=False)
     print("Plotting workout frequency..")
     plot_workout_frequency(health_trends.get_workout_durations(), N_DAYS_TO_AVG, options)
@@ -56,6 +57,7 @@ def build_health_visuals(health_trends: HealthTrends) -> None:
 
 
 def build_strength_visuals(workouts: pd.DataFrame, sets: pd.DataFrame) -> None:
+    """Build and save the strength metric visuals for each individual exercise. Runs them in parallel."""
     num_workers = 5 * os.cpu_count()  # Should be a little faster if hyperthreading is enabled
     with Pool(num_workers) as p:
         partial_plot_strength = partial(plot_single_strength_visual, workouts=workouts, sets=sets)
@@ -65,6 +67,7 @@ def build_strength_visuals(workouts: pd.DataFrame, sets: pd.DataFrame) -> None:
 
 
 def plot_single_strength_visual(exercise: str, workouts: pd.DataFrame, sets: pd.DataFrame) -> None:
+    """Plot the strength metric visual for the given exercise."""
     if exercise in SKIP_EXERCISE_PLOT_EXERCISES:
         print(f"Manually skipping {exercise}.")
         return
@@ -85,6 +88,7 @@ def plot_single_strength_visual(exercise: str, workouts: pd.DataFrame, sets: pd.
 
 
 def main() -> None:
+    """Execute the data loading to metric visualization pipeline."""
     # Load data, build graphs, make predictions, save results
     databox = DataBox(ROOT_DATA_DIR)
     health_trends = HealthTrends(databox.get_all_workouts(), databox.get_health_metrics(), PREDS_DIR)

@@ -58,6 +58,7 @@ def plot_workout_frequency(
     n_days_to_avg: int,
     options: Optional[PlotOptions] = None,
 ) -> None:
+    """Plot a graph of workout frequency over time."""
     non_graph_gcf_percent = 0.1
     workout_frequency_bottom_offset = 0.03
     y_min, y_max = 0, 210  # Setting a 3.5 hour max since there's a few backpacking days that mess up the scale
@@ -106,6 +107,7 @@ def plot_resting_heart_rate(
     heart_rate_trendline: np.ndarray,
     options: Optional[PlotOptions] = None,
 ) -> None:
+    """Plot a graph of resting heart rate over time."""
     y_min, y_max = 45, 90
 
     nonnull_heart_rates = health_metrics[health_metrics[ColumnName.RESTING_HEART_RATE].notna()]
@@ -151,6 +153,7 @@ def plot_weight(
     weight_trendline: np.ndarray,
     options: Optional[PlotOptions] = None,
 ) -> None:
+    """Plot a graph of weight over time."""
     y_min, y_max = 180, 305
 
     nonnull_weights = health_metrics[health_metrics[ColumnName.WEIGHT].notna()]
@@ -198,6 +201,7 @@ def plot_strength_over_time(
     primary_gyms: dict[str, tuple[date, date]],
     options: Optional[PlotOptions] = None,
 ) -> None:
+    """Plot a graph of strength of a single exercise over time."""
     single_exercise = weight_training_sets[weight_training_sets[ColumnName.EXERCISE] == exercise]
     for set_type in SetType:
         rep_range = set_type.get_rep_range()
