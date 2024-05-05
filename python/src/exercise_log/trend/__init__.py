@@ -122,6 +122,7 @@ class Trend(ABC):
 
     @abstractmethod
     def get_trendline(self) -> pd.DataFrame:
+        """Retrieve this Trend's trendline, computing it if necessary. Must be implemented by child classes."""
         raise NotImplementedError
 
 
@@ -134,6 +135,7 @@ class WeightTrend(Trend):
         super().__init__(datespans, nonnulls, extrapolate_days)
 
     def get_trendline(self) -> pd.DataFrame:
+        """Retrieve this WeightTrend's trendline, computing it if necessary."""
         if self._trendline is None:
             cname = CName.WEIGHT
             lookback_days = 20
@@ -177,7 +179,7 @@ class HeartRateTrend(Trend):
 
     def get_trendline(self) -> pd.DataFrame:
         """
-        Retrieve the heart rate trendline, compute it if necessary.
+        Retrieve the heart rate trendline, computing it if necessary.
 
         First projects a log curve while going from untrained to trained, then projects linearly onward from there.
 
@@ -268,10 +270,6 @@ class HealthTrends:
     def get_heart_rate_trendline(self) -> pd.DataFrame:
         """Access the logarithmic curve of best fit of resting heart rate over time, first computing it if needed."""
         return self._heart_rate_trend.get_trendline()
-
-    def get_padded_dates(self, c_name: CName) -> pd.DataFrame:
-        nonnulls = self.health_metrics[self.health_metrics[c_name].notna()]
-        return get_padded_dates(nonnulls, self.extrapolate_days)
 
     def _save_data(self, data: pd.DataFrame, fname: str) -> None:
         """Save the given data, print an error if it fails."""

@@ -15,6 +15,7 @@ class ExerciseSummary:
 
     @classmethod
     def build_summary(cls, data: pd.DataFrame, start_date: date, end_date: date) -> Self:
+        """Build and return an ExerciseSummary using the data and date range provided."""
         start_date, end_date = np.datetime64(start_date, "ns"), np.datetime64(end_date, "ns")
         data = data[start_date <= data[CName.DATE]]
         data = data[data[CName.DATE] <= end_date]

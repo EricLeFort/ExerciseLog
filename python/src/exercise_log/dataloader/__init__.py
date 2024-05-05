@@ -104,7 +104,7 @@ class DataBox:
                 self.get_row_workouts(),
                 self.get_stair_workouts(),
             ]
-            self._cardio_workouts = DataLoader.merge_cardio_workouts(workouts)
+            self._cardio_workouts = DataLoader.merge_on_common_columns(workouts)
         return self._cardio_workouts
 
     def get_all_workouts(self) -> pd.DataFrame:
@@ -249,6 +249,7 @@ class DataLoader:
 
     @staticmethod
     def load_health_metrics(root_data_dir: str) -> pd.DataFrame:
+        """Load the health metrics dataset, filtering out days where both weight and resting heart rate are missing."""
         health_metrics = DataLoader._load_and_clean_data(f"{root_data_dir}/health_metrics.csv")
 
         # Filter out any empty rows from the health metrics
@@ -256,6 +257,7 @@ class DataLoader:
 
     @staticmethod
     def load_travel_days(root_data_dir: str) -> pd.DataFrame:
+        """Load the travel days dataset."""
         travel_days = DataLoader._load_and_clean_data(f"{root_data_dir}/travel_days.csv")
         # Filling in an explicit workout type since its implicit for travel days
         travel_days[CName.WORKOUT_TYPE] = "Travel"
@@ -263,10 +265,12 @@ class DataLoader:
 
     @staticmethod
     def load_walk_workouts(root_data_dir: str) -> pd.DataFrame:
+        """Load the walk workouts dataset."""
         return DataLoader._load_foot_workouts(root_data_dir, "walks.csv")
 
     @staticmethod
     def load_run_workouts(root_data_dir: str) -> pd.DataFrame:
+        """Load the run workouts dataset."""
         return DataLoader._load_foot_workouts(root_data_dir, "runs.csv")
 
     @staticmethod
@@ -277,10 +281,12 @@ class DataLoader:
 
     @staticmethod
     def load_bike_workouts(root_data_dir: str) -> pd.DataFrame:
+        """Load the bike workouts dataset."""
         return DataLoader._load_spin_workouts(root_data_dir, "bikes.csv")
 
     @staticmethod
     def load_row_workouts(root_data_dir: str) -> pd.DataFrame:
+        """Load the row workouts dataset."""
         return DataLoader._load_spin_workouts(root_data_dir, "rows.csv")
 
     @staticmethod
@@ -300,14 +306,17 @@ class DataLoader:
 
     @staticmethod
     def load_weight_training_workouts(root_data_dir: str) -> pd.DataFrame:
+        """Load the weight training workouts dataset."""
         return DataLoader._load_and_clean_data(f"{root_data_dir}/weight_training_workouts.csv")
 
     @staticmethod
     def load_weight_training_sets(root_data_dir: str) -> pd.DataFrame:
+        """Load the weight training sets dataset."""
         return DataLoader._load_and_clean_data(f"{root_data_dir}/weight_training_sets.csv")
 
     @staticmethod
     def load_stair_workouts(root_data_dir: str) -> pd.DataFrame:
+        """Load the stair workouts dataset."""
         workouts = DataLoader._clean_cardio_workout(f"{root_data_dir}/stairs.csv")
         workouts[CName.FLIGHTS_UP] = workouts[CName.FLIGHTS_UP].astype("Int64")
         workouts[CName.FLIGHTS_DOWN] = workouts[CName.FLIGHTS_DOWN].astype("Int64")
@@ -316,20 +325,24 @@ class DataLoader:
 
     @staticmethod
     def load_dashes(root_data_dir: str) -> pd.DataFrame:
+        """Load the dashes dataset."""
         return DataLoader._load_and_clean_data(f"{root_data_dir}/dashes.csv")
 
     @staticmethod
     def load_rate_of_climb(root_data_dir: str) -> pd.DataFrame:
+        """Load the rate of climb dataset."""
         return DataLoader._load_and_clean_data(f"{root_data_dir}/rate_of_climb.csv")
 
     @staticmethod
     def load_walk_backwards(root_data_dir: str) -> pd.DataFrame:
+        """Load the walk backwards dataset."""
         return DataLoader._load_and_clean_data(f"{root_data_dir}/walk_backwards.csv")
 
     @staticmethod
-    def merge_cardio_workouts(workouts: list[pd.DataFrame]) -> pd.DataFrame:
-        cardio_workouts = pd.concat(workouts, join="inner")  # Use inner so we only preserve the common fields
-        return cardio_workouts.reset_index(drop=True)
+    def merge_on_common_columns(workouts: list[pd.DataFrame]) -> pd.DataFrame:
+        """Merge all of the given pd.DataFrames, only keeping common fields."""
+        workouts = pd.concat(workouts, join="inner")  # Use inner so we only preserve the common fields
+        return workouts.reset_index(drop=True)
 
     @staticmethod
     def load_all_workouts(
@@ -337,6 +350,7 @@ class DataLoader:
         weight_training_workouts: pd.DataFrame,
         travel_days: pd.DataFrame,
     ) -> pd.DataFrame:
+        """Load all of the workouts datasets and merges them into a single dataset."""
         # Will be used to pad all datasets to have consistent dates
         all_dates = DataLoader._get_all_dates([cardio_workouts, weight_training_workouts, travel_days])
 

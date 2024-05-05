@@ -46,6 +46,7 @@ class ExerciseSet:
         self._fatigue_score = None
 
     def get_fatigue_score(self) -> float:
+        """Retrieve the fatigue score for this set, computing it if necessary."""
         if self._fatigue_score is not None:
             return self._fatigue_score
         # TODO(eric): compute the fatigue score
@@ -93,17 +94,21 @@ class Session:
         self._session_info = SessionInfo(self.focus, self.sets)
 
     def get_fatigue_score(self) -> float:
+        """Retrieve this Session's total fatigue score."""
         return self._session_info.fatigue_score
 
     def add_set(self, exercise_set: ExerciseSet) -> None:
+        """Append an ExerciseSet to this Session."""
         self.sets[exercise_set.exercise] = [*self.sets.get(exercise_set.exercise, []), exercise_set]
         self.results[exercise_set.exercise] = []
         self._session_info = SessionInfo(self.focus, self.sets)
 
     def add_result(self, exercise: Exercise, result: Result) -> None:
+        """Append a Result to this Session."""
         self.results[exercise] = [*self.results.get(exercise, []), result]
 
     def complete_session(self) -> None:
+        """Mark this Session as complete then compute and store the Session-level results."""
         for exercise, sets in self.sets.items():
             # This re-uses the SkippedResult instance but that's fine; it technically could be a singleton anyway
             # It also assumes the exercise has been added to the results dict (which is handled by add_exercise())

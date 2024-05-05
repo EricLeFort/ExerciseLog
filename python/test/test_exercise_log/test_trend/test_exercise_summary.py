@@ -109,10 +109,13 @@ def _assert_summary(
 
 class TestExerciseSummary(unittest.TestCase):
     def test_bike_cardio_summary_pretty_print(self) -> None:
+        """Test that BikeCardioSummary pretty-prints as expected using some random data."""
         _test_four_scenarios(self, _gen_random_foot_cardio_data, _assert_bike_cardio_summary)
 
     def test_foot_cardio_summary_pretty_print__include_all(self) -> None:
+        """Test that FootCardioSummary pretty-prints as expected using some random data."""
         _test_four_scenarios(self, _gen_random_foot_cardio_data, _assert_foot_cardio_summary)
 
     def test_weight_training_summary_pretty_print(self) -> None:
+        """Test that WeightTrainingSummary pretty-prints as expected using some random data."""
         _test_four_scenarios(self, _gen_random_weight_training_data, _assert_weight_training_summary)

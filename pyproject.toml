@@ -43,9 +43,6 @@ lint.ignore = [
     # Ruff recommends ignoring these
     "COM812",
     "ISC001",
-
-    # TODO(eric): Should be implemented but I'm lazy so I'll do it bit-by-bit retroactively :)
-    "D102",
 ]
 line-length = 120
 
