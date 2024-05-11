@@ -1,7 +1,6 @@
 # TODO
 
 ### Python
-* Enable the disabled linting/formatting rules
 * Make a visualization for volume (e.g. distance, HR zones, total watts for cardio + num sets by type, weight moved for strength)
 * Extract shared structural information into separate, language-agnostic files so they can be shared with JS
     - Ontological information (e.g. the EXERCISE_INFO dict in ontology.py, heart rate thresholds, etc.)

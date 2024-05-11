@@ -4,6 +4,7 @@
     "enum": {
         "FIFTH_POINT_OF_FLIGHT": "5th Point of Flight",
         "ARNOLD_PRESS": "Arnold Press",
+        "AXLE_CLEAN_AND_PRESS": "Axle Clean & Press",
         "BARBELL_BICEP_CURL": "Barbell Bicep Curl",
         "BARBELL_CALF_RAISE": "Barbell Calf Raise",
         "BARBELL_LUNGES": "Barbell Lunges",
