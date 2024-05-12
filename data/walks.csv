@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+11-MAY-2024,walk (treadmill),01:09:19,6.04,7274,504,0,156,171,""
 08-MAY-2024,walk (treadmill),01:07:55,5.89,7036,500,0,149,159,""
 04-MAY-2024,walk (treadmill),01:07:02,5.82,,513,0,153,166,""
 01-MAY-2024,walk (treadmill),01:06:04,5.95,6909,538,0,152,163,"emergency stop was triggered accidentally, numbers are rough"
