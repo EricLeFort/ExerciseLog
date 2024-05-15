@@ -1148,6 +1148,25 @@ EXERCISE_INFO = {
         },
         Field.ANTAGONIST_MUSCLES: {None},
     },
+    Exercise.NEUTRAL_GRIP_CHIN_UP: {
+        INHERITS_FROM: Exercise.CHIN_UP,
+        Field.MUSCLE_GROUPS_WORKED: {
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SERRATUS: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
+        },
+        Field.MUSCLES_WORKED: {
+            None: None,
+        },
+        Field.ANTAGONIST_MUSCLES: {None},
+    },
     Exercise.OVERHEAD_TRICEP_EXTENSION: {
         Field.COUNT_TYPE: CountType.REPS,
         Field.EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
