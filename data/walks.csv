@@ -1,4 +1,6 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+14-MAY-2024,walk (outdoor),00:27:12,1.93,,32,10,93,125,"Walk into Discovery Park"
+14-MAY-2024,walk (treadmill),00:10:42,1.03,1410,50,0,143,149,"post-workout"
 12-MAY-2024,walk (treadmill),00:11:11,1.39,1484,20,0,156,182,"post-workout"
 11-MAY-2024,walk (treadmill),01:09:19,6.04,7274,504,0,156,171,""
 08-MAY-2024,walk (treadmill),01:07:55,5.89,7036,500,0,149,159,""
