@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+18-MAY-2024,walk (treadmill),01:00:01,5.30,6312,422,0,160,173,"Morning cardio, mostly fasted (80 calorie drink + 180 calorie protein bar during the workout)"
 15-MAY-2024,walk (treadmill),01:09:00,6.00,7170,511,0,153,167,""
 14-MAY-2024,walk (outdoor),00:27:12,1.93,,32,10,93,125,"Walk into Discovery Park"
 14-MAY-2024,walk (treadmill),00:10:42,1.03,1410,50,0,143,149,"post-workout"
