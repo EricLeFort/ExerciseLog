@@ -10,7 +10,7 @@ from scipy.ndimage import uniform_filter1d
 from scipy.optimize import curve_fit
 
 from exercise_log.dataloader import CName
-from exercise_log.utils import TermColour, get_padded_dates
+from exercise_log.utils import TermColour, get_padded_dates, pairwise
 
 EXTRAPOLATE_DAYS = 100
 MIN_DAILY_ACTIVE_MINUTES = 22.5  # Weekly is 150, this is about 150/7
@@ -112,9 +112,9 @@ class Trendsetter:
 class Trend(ABC):
     """An abstract class that uses datespans, a dataset, and a number of days to extrapolate to fit a trend."""
 
-    def __init__(self, datespans: list[tuple[date]], health_metrics: pd.DataFrame, extrapolate_days: int) -> None:
+    def __init__(self, datespans: list[date], health_metrics: pd.DataFrame, extrapolate_days: int) -> None:
         """Initialize this Trend with the relevant data. The trendline itself is computed lazily."""
-        self.datespans = [(pd.to_datetime(start), pd.to_datetime(end)) for start, end in datespans]
+        self.datespans = [pd.to_datetime(d) for d in datespans]
         self.health_metrics = health_metrics
         self.extrapolate_days = extrapolate_days
 
@@ -138,20 +138,20 @@ class WeightTrend(Trend):
         """Retrieve this WeightTrend's trendline, computing it if necessary."""
         if self._trendline is None:
             cname = CName.WEIGHT
-            lookback_days = 20
+            lookback_days = 10
 
             # First section doesn't need a lookback
-            metrics_slice = self.health_metrics[self.health_metrics[CName.DATE].between(*self.datespans[0])]
+            metrics_slice = self.health_metrics[self.health_metrics[CName.DATE].between(*self.datespans[0:2])]
             y = [Trendsetter.get_line_of_best_fit(metrics_slice, cname)]
-            for span in self.datespans[1:-1]:
-                start_date = span[0] - timedelta(days=lookback_days)
-                end_date = span[1] + timedelta(days=lookback_days)
+            for start, end in pairwise(self.datespans[1:-1]):
+                start_date = start - timedelta(days=lookback_days)
+                end_date = end + timedelta(days=lookback_days)
                 metrics_slice = self.health_metrics[self.health_metrics[CName.DATE].between(start_date, end_date)]
                 line_of_fit = Trendsetter.get_line_of_best_fit(metrics_slice, cname)
                 y.append(line_of_fit[lookback_days:-lookback_days])
 
             # The last section extrapolates a trend
-            (start_date, end_date) = self.datespans[-1]
+            (start_date, end_date) = self.datespans[-2:]
             start_date -= timedelta(days=lookback_days)
             metrics_slice = self.health_metrics[self.health_metrics[CName.DATE].between(start_date, end_date)]
             line_of_fit = Trendsetter.get_line_of_best_fit(metrics_slice, cname, self.extrapolate_days)
@@ -189,11 +189,11 @@ class HeartRateTrend(Trend):
         if self._trendline is None:
             cname = CName.RESTING_HEART_RATE
             lookback_days = 100
-            first_slice = self.health_metrics[self.health_metrics[CName.DATE].between(*self.datespans[0])]
+            first_slice = self.health_metrics[self.health_metrics[CName.DATE].between(*self.datespans[0:2])]
             untrained_to_trained = Trendsetter.get_logarithmic_curve_of_best_fit(first_slice, cname)
 
             # Start fitting this section from a little before it starts so that it fits more cleanly.
-            span = (self.datespans[1][0] - timedelta(days=lookback_days), self.datespans[1][1])
+            span = (self.datespans[1] - timedelta(days=lookback_days), self.datespans[2])
             second_slice = self.health_metrics[self.health_metrics[CName.DATE].between(*span)]
             training = Trendsetter.get_line_of_best_fit(second_slice, cname, self.extrapolate_days)
             training = training[lookback_days:]
@@ -224,24 +224,30 @@ class HealthTrends:
         fmt = "%Y-%m-%d"
         first_weight_loss_end_date = datetime.strptime("2024-01-06", fmt).astimezone(UTC).date()
         first_weight_maintenance_end_date = datetime.strptime("2024-03-05", fmt).astimezone(UTC).date()
+        second_weight_loss_end_date = datetime.strptime("2024-04-30", fmt).astimezone(UTC).date()
 
+        # Init the weight trend
         nonnulls = self.health_metrics[self.health_metrics[CName.WEIGHT].notna()]
         first_date = nonnulls[CName.DATE].min()
         last_date = nonnulls[CName.DATE].max()
         datespans = [
-            (first_date, first_weight_loss_end_date),
-            (first_weight_loss_end_date, first_weight_maintenance_end_date),
-            (first_weight_maintenance_end_date, last_date),
+            first_date,
+            first_weight_loss_end_date,
+            first_weight_maintenance_end_date,
+            second_weight_loss_end_date,
+            last_date,
         ]
         self._weight_trend = WeightTrend(datespans, self.health_metrics, self.extrapolate_days)
 
+        # Init the resting heart rate trend
         nonnulls = self.health_metrics[self.health_metrics[CName.RESTING_HEART_RATE].notna()]
         first_date = nonnulls[CName.DATE].min()
         last_date = nonnulls[CName.DATE].max()
         trained_date = datetime.strptime("2024-01-01", fmt).astimezone(UTC).date()
         datespans = [
-            (first_date, trained_date),
-            (trained_date, last_date),
+            first_date,
+            trained_date,
+            last_date,
         ]
         self._heart_rate_trend = HeartRateTrend(datespans, self.health_metrics, self.extrapolate_days)
 
