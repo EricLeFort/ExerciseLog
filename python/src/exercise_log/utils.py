@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import itertools
 import json
 import os
 from enum import Enum, EnumMeta
@@ -13,6 +14,8 @@ import pandas as pd
 from exercise_log.constants import DATE, number
 
 if TYPE_CHECKING:
+    from collections.abc import Iterable
+
     from pandas.core.generic import NDFrame  # This is the generic type that encompasses Series and DataFrame
 
 UTF8 = "utf-8"
@@ -228,3 +231,19 @@ def invert_csv_rows(
         # Skip the last line if it's a header since it's already been written
         if not has_header_row:
             f_out.write(line)
+
+
+def pairwise(iterable: Iterable) -> Iterable:
+    """
+    Iterate through the iterable object in groups of 2.
+
+    E.g. list(pairwise([1,2,3,4])) --> [[1,2], [2,3], [3,4]]
+
+    Args:
+        iterable (iterable): The iterable object to iterate pairwise over
+    Returns:
+        A zip object that iterates as described above
+    """
+    a, b = itertools.tee(iterable)
+    next(b, None)
+    return zip(a, b)  # noqa: B905
