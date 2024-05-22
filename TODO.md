@@ -1,7 +1,6 @@
 # TODO
 
 ### Python
-* Add an "axially loading" boolean to Exercise
 * Make a visualization for bpm
     - (beats per metre) for elevation gain
     - (beats per metre/km) for distance travelled

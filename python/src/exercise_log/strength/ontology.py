@@ -149,6 +149,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         Field.OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -170,6 +171,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -195,6 +197,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         Field.OPTIMAL_REP_RANGE: EXPLOSIVE_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -254,6 +257,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -277,6 +281,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -304,6 +309,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -324,6 +330,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         Field.OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -355,6 +362,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -377,6 +385,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -400,6 +409,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -426,6 +436,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         Field.OPTIMAL_REP_RANGE: EXPLOSIVE_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -476,6 +487,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -544,6 +556,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -567,6 +580,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -593,6 +607,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -621,6 +636,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -645,6 +661,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -662,6 +679,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -684,6 +702,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: ROTATOR_CUFF_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -703,6 +722,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -794,6 +814,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         Field.OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -820,6 +841,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -837,6 +859,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -882,6 +905,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -906,6 +930,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -929,6 +954,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -954,6 +980,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -974,6 +1001,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -991,6 +1019,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1016,6 +1045,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1072,6 +1102,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1090,6 +1121,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: LOWER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1124,6 +1156,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1147,6 +1180,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1209,6 +1243,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1232,6 +1267,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         Field.OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1288,6 +1324,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: CALI_PLYO_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1320,6 +1357,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1351,6 +1389,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.EXPLOSIVE,
         Field.OPTIMAL_REP_RANGE: ENDURANCE_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1368,6 +1407,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: SIMPLE_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1409,6 +1449,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: ROTATOR_CUFF_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1429,6 +1470,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         Field.OPTIMAL_REP_RANGE: ISOMETRIC_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1487,6 +1529,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.ISOMETRIC,
         Field.OPTIMAL_REP_RANGE: STEP_BASED_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1525,6 +1568,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1567,6 +1611,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1589,6 +1634,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: True,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1631,6 +1677,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: True,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: COMPLEX_COMPOUND_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1654,6 +1701,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: False,
         Field.IS_LIMB_INDEPENDENT: False,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1734,6 +1782,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
@@ -1751,6 +1800,7 @@ EXERCISE_INFO = {
         Field.INCLUDES_BODYWEIGHT: False,
         Field.IS_UNILATERAL: True,
         Field.IS_LIMB_INDEPENDENT: True,
+        Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
         Field.MUSCLE_GROUPS_WORKED: {
