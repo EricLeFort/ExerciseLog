@@ -1,13 +1,17 @@
 # TODO
 
 ### Python
+* Add an "axially loading" boolean to Exercise
 * Make a visualization for bpm
     - (beats per metre) for elevation gain
     - (beats per metre/km) for distance travelled
-* Make a visualization for volume (e.g. distance, HR zones, total watts for cardio + num sets by type, weight moved for strength)
 * Extract shared structural information into separate, language-agnostic files so they can be shared with JS
     - Ontological information (e.g. the EXERCISE_INFO dict in ontology.py, heart rate thresholds, etc.)
     - Metadata (e.g. ColumnName values)
+* Make Volume a first-class citizen for all domains
+    - Make a visualization for volume (e.g. distance, HR zones, total watts for cardio + num sets by type, weight moved for strength)
+    - Ideal weekly volume inspiration: https://www.reddit.com/r/weightroom/comments/6674a4/dr_mike_israetels_training_tips_for_hypertrophy
+    - Research something like Dr. Mike's weekly volume recommendations but for individual and combined cardio modalities (and all training?)
 * Support multiple users
 * Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
 * Populate Muscle in EXERCISE_INFO
@@ -17,7 +21,6 @@
 * Define an expiration and/or uncertainty range that crops up when xRM's get several months old
 * Color-code data points in workout frequency graph to correspond to the different types of activity
 * Work out and implement the fatigue factor logic
-* Ideal weekly volume inspiration: https://www.reddit.com/r/weightroom/comments/6674a4/dr_mike_israetels_training_tips_for_hypertrophy
 * Make ExerciseInfo a parameterized singleton
 
 ### Site

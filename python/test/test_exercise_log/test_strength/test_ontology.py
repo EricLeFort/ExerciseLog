@@ -3,7 +3,7 @@ import unittest
 from exercise_log.strength import Exercise
 from exercise_log.strength.ontology import EXERCISE_INFO, ExerciseInfo, Field
 
-EXPECTED_FIELD_COUNT = 10
+EXPECTED_FIELD_COUNT = 11
 
 
 class TestOntology(unittest.TestCase):
