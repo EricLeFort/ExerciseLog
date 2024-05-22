@@ -1401,6 +1401,24 @@ EXERCISE_INFO = {
         },
         Field.ANTAGONIST_MUSCLES: {None},
     },
+    Exercise.SINGLE_ARM_BENT_OVER_ROW: {
+        INHERITS_FROM: Exercise.LAWNMOWERS,
+        Field.MUSCLE_GROUPS_WORKED: {
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.SPINAL_ERECTORS: None,
+            MuscleGroup.TRAPS: None,
+        },
+        Field.MUSCLES_WORKED: {
+            None: None,
+        },
+        Field.ANTAGONIST_MUSCLES: {None},
+    },
     Exercise.SINGLE_ARM_DELT_FLIES: {
         INHERITS_FROM: Exercise.DELT_FLIES,
         Field.IS_UNILATERAL: True,
