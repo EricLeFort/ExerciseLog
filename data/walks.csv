@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+25-MAY-2024,walk (treadmill),01:25:00,7.39,8905,558,0,150,161,""
 23-MAY-2024,walk (treadmill),01:02:30,5.50,6548,425,0,149,161,""
 21-MAY-2024,walk (outdoor),00:14:22,1.37,,33,10,120,151,"Starbucks Reserve to Home"
 21-MAY-2024,walk (outdoor),00:35:03,3.51,,52,10,150,176,"Paggliaci to Starbucks Reserve"
