@@ -1,5 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),avg_resistance,max_resistance,avg_cadence(rpm),max_cadence(rpm),avg_wattage,max_wattage,max_speed(km/h),avg_heart_rate,max_heart_rate,notes
-11-JUN-2024,bike (stationary),01:00:00,33.84,0.47,0.65,89,157,195,520,48.9,166,190,""
+11-JUN-2024,bike (stationary),01:00:00,33.84,0.47,0.65,89,157,195,520,48.9,166,190,"after a 10-min warm-up run while I waited for the bike"
 02-JUN-2024,bike (stationary),01:00:00,35.21,0.51,0.59,83,109,214,363,43.0,171,186,""
 04-MAY-2024,bike (stationary),00:20:00,9.99,0.42,,81,,125,,,,,"bike wasn't signed into profile for some reason, couldn't access all metrics; I think it's also miscalibrated because this ride was tough but the numbers are very low"
 21-APR-2024,bike (stationary),00:20:00,11.89,0.52,0.73,83,119,226,692,54.2,176,188,""
