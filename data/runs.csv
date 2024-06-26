@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),avg_heart_rate,max_heart_rate,notes
+25-JUN-2024,run (treadmill),00:17:41,,2467,1,162,183,"post-workout; emergency stop triggered in the middle, not all data available"
 16-JUN-2024,run (treadmill),01:01:00,9.14,8883,11,169,191,"5km in 29:30; 9.05km in 1hr; second half was HIIT sprints; maxed out treadmill at 20.1kph"
 11-JUN-2024,run (treadmill),00:13:29,2.00,1938,8,156,175,""
 25-APR-2024,run (treadmill),01:02:00,8.68,8702,100,162,186,"8.50km in 1hr"
