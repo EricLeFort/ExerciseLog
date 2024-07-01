@@ -111,6 +111,6 @@ svg {
 }
 
 /* Secondary Graphs Styling */
-#walk-scores-chart {
+.secondary-chart {
   display: none;
 }

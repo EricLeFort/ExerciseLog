@@ -14,6 +14,9 @@ const weightGraphId = "graph-weight";
 const workoutFrequencyGraphId = "graph-workout-frequency";
 const heartRateGraphId = "graph-resting-heartrate";
 
+const secondaryGraphClassName = "secondary-chart";
+const bpmClimbField = "bpm(beats_per_metre_climbed)";
+
 function computeWalkScore(row, durationInS) {
   const durationInH = durationInS / 3600;
   const pace = row["distance(km)"] / durationInH;
@@ -40,6 +43,15 @@ function computeWalkScore(row, durationInS) {
   const timeFactor = durationInH;
 
   return timeFactor * (paceFactor + paceFactor * climbFactor);
+}
+
+function computeBeatsPerMetre(row, durationInS) {
+  const numMetres = row["elevation(m)"];
+  if (numMetres <= 10) {
+      return 0;
+  }
+  const numBeats = row["avg_heart_rate"] * (durationInS / 60);
+  return numBeats / numMetres;
 }
 
 // TODO make separate dataloading module for this logic
@@ -70,6 +82,7 @@ async function loadWalks() {
       "avg_heart_rate": d3IntOrNull(r["avg_heart_rate"]),
       "max_heart_rate": d3IntOrNull(r["max_heart_rate"]),
       "score": computeWalkScore(r, durationInS),
+      [bpmClimbField]: computeBeatsPerMetre(r, durationInS),
       "notes": r.notes,
     };
   }
@@ -658,16 +671,29 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
   // TODO Include the strength over time metric graphs
 
   // Experiment with new graphs (defaults to hidden)
+  // Experiment: Walk scores
+  // TODO refine the formula
   const filteredWalks = walks
       .filter(d => d["workout_type"] == "walk (treadmill)")
       .filter(d => d["duration(s)"] >= 1200)
       .filter(d => !containsCaseless(d["notes"], "pre-workout"))
       .filter(d => !containsCaseless(d["notes"], "warm-up"))
       .filter(d => !containsCaseless(d["notes"], "post-workout"));
-  const field = "score";
-  const title = "Walk Scores";
-  const walkScoresGraphId = "walk-scores-chart";
+  var field = "score";
+  var title = "Walk Scores";
+  var walkScoresGraphId = "walk-scores-chart";
   expGraph = plotBasic(filteredWalks, field, title, walkScoresGraphId, 0, 200, 20, 5);
+  expGraph.node().classList.add(secondaryGraphClassName);
+  document.body.append(expGraph.node());
+
+  // Experiment: Heartbeats required to climb a metre
+  title = "BPMC (Beats Per Metre Climbed)";
+  bpmcGraphId = "bpmc-climbed-chart";
+  const bpmFilteredWalks = filteredWalks
+      .filter(d => d[bpmClimbField] > 0)
+      .filter(d => d["workout_type"] == "walk (treadmill)");
+  expGraph = plotBasic(bpmFilteredWalks, bpmClimbField, title, bpmcGraphId, 0, 300, 100, 25);
+  expGraph.node().classList.add(secondaryGraphClassName);
   document.body.append(expGraph.node());
 
   // Append the copyright now that the main graphs have been added
