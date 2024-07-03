@@ -16,6 +16,7 @@ const extraChartsMenuData = [
         "submenu": [
             {"name": "Walk Scores"},
             {"name": "BPMC (Beats Per Metre Climbed)"},
+            {"name": "BPMM (Beats Per Metre Moved)"},
         ]
     }, {
         "name": "Health...",
@@ -70,7 +71,8 @@ const extraChartsMenuData = [
 
 const extraChartsIdMap = {
     "Walk Scores": "walk-scores-chart",
-    "BPMC (Beats Per Metre Climbed)": "bpmc-climbed-chart",
+    "BPMC (Beats Per Metre Climbed)": "bpmc-chart",
+    "BPMM (Beats Per Metre Moved)": "bpmm-chart",
     "Arnold Press": "arnold-press-chart",
     "Barbell Lunges": "barbell-lunges-chart",
     "Bench Press": "bench-press-chart",

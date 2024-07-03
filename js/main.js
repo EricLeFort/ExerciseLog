@@ -15,7 +15,8 @@ const workoutFrequencyGraphId = "graph-workout-frequency";
 const heartRateGraphId = "graph-resting-heartrate";
 
 const secondaryGraphClassName = "secondary-chart";
-const bpmClimbField = "bpm(beats_per_metre_climbed)";
+const bpmcField = "bpmc(beats_per_metre_climbed)";
+const bpmmField = "bpmm(beats_per_metre_moved)";
 
 function computeWalkScore(row, durationInS) {
   const durationInH = durationInS / 3600;
@@ -45,13 +46,24 @@ function computeWalkScore(row, durationInS) {
   return timeFactor * (paceFactor + paceFactor * climbFactor);
 }
 
-function computeBeatsPerMetre(row, durationInS) {
+function computeBeatsPerMetreClimbed(row, durationInS) {
   const numMetres = row["elevation(m)"];
   if (numMetres <= 10) {
-      return 0;
+    return -1;
   }
-  const numBeats = row["avg_heart_rate"] * (durationInS / 60);
-  return numBeats / numMetres;
+  return getNumBeats(row, durationInS) / numMetres;
+}
+
+function computeBeatsPerMetreMoved(row, durationInS) {
+  const numMetres = row["distance(km)"] * 1000;
+  if (numMetres <= 500) {
+    return -1;
+  }
+  return getNumBeats(row, durationInS) / numMetres;
+}
+
+function getNumBeats(row, durationInS) {
+    return row["avg_heart_rate"] * (durationInS / 60);
 }
 
 // TODO make separate dataloading module for this logic
@@ -81,12 +93,31 @@ async function loadWalks() {
       "weight(lbs)": d3NumOrNull(r["weight(lbs)"]),
       "avg_heart_rate": d3IntOrNull(r["avg_heart_rate"]),
       "max_heart_rate": d3IntOrNull(r["max_heart_rate"]),
-      "score": computeWalkScore(r, durationInS),
-      [bpmClimbField]: computeBeatsPerMetre(r, durationInS),
       "notes": r.notes,
+      "score": computeWalkScore(r, durationInS),
+      [bpmcField]: computeBeatsPerMetreClimbed(r, durationInS),
     };
   }
   return await readCSV(`${base_data_path}/walks.csv`, row);
+}
+
+async function loadRuns() {
+  function row(r) {
+    const durationInS = durationToS(r["duration(HH:mm:ss)"]);
+    return {
+      "date": new Date(r.date),
+      "workout_type": r.workout_type,
+      "duration(s)": durationInS,
+      "distance(km)": d3NumOrNull(r["distance(km)"]),
+      "steps": d3IntOrNull(r["steps"]),
+      "elevation(m)": d3IntOrNull(r["elevation(m)"]),
+      "avg_heart_rate": d3IntOrNull(r["avg_heart_rate"]),
+      "max_heart_rate": d3IntOrNull(r["max_heart_rate"]),
+      "notes": r.notes,
+      [bpmmField]: computeBeatsPerMetreMoved(r, durationInS),
+    };
+  }
+  return await readCSV(`${base_data_path}/runs.csv`, row);
 }
 
 async function loadWeightTrendline() {
@@ -637,8 +668,8 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
   // Load data
   const healthMetrics = await loadHealthMetrics();
   const walks = await loadWalks();
+  const runs = await loadRuns();
   //const bikes = readCSV(`${base_data_path}/bikes.csv`);
-  //const runs = readCSV(`${base_data_path}/runs.csv`);
   //const weight_training_workouts = readCSV(`${base_data_path}/weight_training_workouts.csv`);
   //const weight_training_sets = readCSV(`${base_data_path}/weight_training_sets.csv`);
   //const travel_days = readCSV(`${base_data_path}/travel_days.csv`);
@@ -672,7 +703,7 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
 
   // Experiment with new graphs (defaults to hidden)
   // Experiment: Walk scores
-  // TODO refine the formula
+  // TODO refine this formula
   const filteredWalks = walks
       .filter(d => d["workout_type"] == "walk (treadmill)")
       .filter(d => d["duration(s)"] >= 1200)
@@ -687,12 +718,24 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
   document.body.append(expGraph.node());
 
   // Experiment: Heartbeats required to climb a metre
+  // Note: Only considers walking since that's more efficient for elevation gain
   title = "BPMC (Beats Per Metre Climbed)";
-  bpmcGraphId = "bpmc-climbed-chart";
-  const bpmFilteredWalks = filteredWalks
-      .filter(d => d[bpmClimbField] > 0)
+  bpmcGraphId = "bpmc-chart";
+  const bpmcFilteredWalks = filteredWalks
+      .filter(d => d[bpmcField] > 0)
       .filter(d => d["workout_type"] == "walk (treadmill)");
-  expGraph = plotBasic(bpmFilteredWalks, bpmClimbField, title, bpmcGraphId, 0, 300, 100, 25);
+  expGraph = plotBasic(bpmcFilteredWalks, bpmcField, title, bpmcGraphId, 0, 300, 100, 25);
+  expGraph.node().classList.add(secondaryGraphClassName);
+  document.body.append(expGraph.node());
+
+  // Experiment: Heartbeats required to run a metre
+  // Note: Only considers running since that's more efficient for covering horizontal distance
+  title = "BPMM (Beats Per Metre Moved)";
+  bpmmGraphId = "bpmm-chart";
+  const bpmmFilteredRuns = runs
+      .filter(d => d[bpmmField] > 0);
+      //.filter(d => d["workout_type"] == "run (treadmill)");
+  expGraph = plotBasic(bpmmFilteredRuns, bpmmField, title, bpmmGraphId, 0, 2, 1, 0.1);
   expGraph.node().classList.add(secondaryGraphClassName);
   document.body.append(expGraph.node());
 

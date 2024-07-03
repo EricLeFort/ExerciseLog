@@ -1,9 +1,14 @@
 # TODO
 
+## Low-Hanging Fruit
+* Extract shared structural information
+
+## Most Important
+* Fatigue scores
+* Support multiple users
+
 ### Python
-* Make a visualization for bpm
-    - (beats per metre) for elevation gain
-    - (beats per metre/km) for distance travelled
+* Make a visualization for Watt/Kg for biking
 * Extract shared structural information into separate, language-agnostic files so they can be shared with JS
     - Ontological information (e.g. the EXERCISE_INFO dict in ontology.py, heart rate thresholds, etc.)
     - Metadata (e.g. ColumnName values)
@@ -11,6 +16,10 @@
     - Make a visualization for volume (e.g. distance, HR zones, total watts for cardio + num sets by type, weight moved for strength)
     - Ideal weekly volume inspiration: https://www.reddit.com/r/weightroom/comments/6674a4/dr_mike_israetels_training_tips_for_hypertrophy
     - Research something like Dr. Mike's weekly volume recommendations but for individual and combined cardio modalities (and all training?)
+* Unit testing framework for randomization + performance
+    - Performance -- run N times, take top 10% as performance mark, assert M (<< 10%) tests beat that threshold
+    - Randomization -- use seeds, any seeds that fail should be recorded, if there's any failed seeds -- run those first, on success -- clear failed seeds
+    - For now, just write to the repo under some path in the test file tree
 * Support multiple users
 * Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
 * Populate Muscle in EXERCISE_INFO
@@ -24,11 +33,19 @@
 
 ### Site
 * Add a linter/formatter
+* Extract constants
+* Break up main.js into better sub-components/sub-files
 * Migrate to TypeScript
 * Migrate to React
 * Plot a combined metric using rate_of_climb + pace (+ duration?)
     - Experiment with adding duration into the equation (maybe also something like a strive score using avg, max + duration?)
 * Use the data in the ontological files (see Python section above) for thresholds
+* When I extend to multi-user, start by making template users for continuous manual UX testing:
+    - brand new user with no data
+    - single entry in weight training OR cardio
+    - some entries in only weight training OR cardio
+    - user with some entries in weight training OR cardio AND a single entry in the other (and vice versa)
+    - user with some entries in both categories
 
 ### Database (removes the need to support any data analysis in JS, can also purge visualization support from Python and get clean separation)
 * Create one (performance doesn't matter but flexibility does) (DynamoDB on AWS is fine for now)
