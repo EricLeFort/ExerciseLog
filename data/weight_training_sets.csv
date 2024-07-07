@@ -1,4 +1,26 @@
 date,exercise,reps,weight(lbs),rating
+05-JUL-2024,Lateral Lift,10,15,warm-up
+05-JUL-2024,Lateral Lift,10,30,good
+05-JUL-2024,Lateral Lift,10,30,bad
+05-JUL-2024,Lateral Lift,10,30,bad
+05-JUL-2024,Full Cans,20,10,good
+05-JUL-2024,Full Cans,20,10,good
+05-JUL-2024,Full Cans,20,10,good
+05-JUL-2024,Strict Press,10,95,warm-up
+05-JUL-2024,Strict Press,8,135,good
+05-JUL-2024,Strict Press,8,135,good
+05-JUL-2024,Strict Press,8,135,good
+05-JUL-2024,Single-Arm Delt Flies,10,45,warm-up
+05-JUL-2024,Single-Arm Delt Flies,10,75,good
+05-JUL-2024,Single-Arm Delt Flies,10,75,good
+05-JUL-2024,Single-Arm Delt Flies,10,75,good
+05-JUL-2024,Single-Leg Leg Extension,10,80,warm-up
+05-JUL-2024,Single-Leg Leg Extension,15,100,good
+05-JUL-2024,Single-Leg Leg Extension,15,100,good
+05-JUL-2024,Single-Leg Leg Extension,15,100,good
+05-JUL-2024,Good Morning,10,105,good
+05-JUL-2024,Good Morning,10,105,good
+05-JUL-2024,Good Morning,10,105,good
 03-JUL-2024,Bench Press,10,155,warm-up
 03-JUL-2024,Bench Press,10,205,good
 03-JUL-2024,Bench Press,8,225,good
@@ -141,10 +163,10 @@ date,exercise,reps,weight(lbs),rating
 23-JUN-2024,Strict Press,8,135,good
 23-JUN-2024,Strict Press,8,135,good
 23-JUN-2024,Strict Press,8,135,good
-23-JUN-2024,Delt Flies,10,45,warm-up
-23-JUN-2024,Delt Flies,10,75,good
-23-JUN-2024,Delt Flies,10,75,good
-23-JUN-2024,Delt Flies,10,75,good
+23-JUN-2024,Single-Arm Delt Flies,10,45,warm-up
+23-JUN-2024,Single-Arm Delt Flies,10,75,good
+23-JUN-2024,Single-Arm Delt Flies,10,75,good
+23-JUN-2024,Single-Arm Delt Flies,10,75,good
 23-JUN-2024,Leg Press,5,160,warm-up
 23-JUN-2024,Leg Press,5,265,good
 23-JUN-2024,Leg Press,5,265,good
@@ -159,7 +181,7 @@ date,exercise,reps,weight(lbs),rating
 23-JUN-2024,Good Morning,10,95,good
 23-JUN-2024,Good Morning,10,95,good
 23-JUN-2024,Good Morning,10,95,good
-23-JUN-2024,Barbell Bicep Curl,20,20,good
+23-JUN-2024,Barbell Bicep Curl,20,40,good
 20-JUN-2024,Bench Press,10,135,warm-up
 20-JUN-2024,Bench Press,10,205,good
 20-JUN-2024,Bench Press,10,225,good
@@ -190,7 +212,7 @@ date,exercise,reps,weight(lbs),rating
 20-JUN-2024,Parallel Bar Leg Raise,15,0,good
 20-JUN-2024,Parallel Bar Leg Raise,15,0,good
 20-JUN-2024,Parallel Bar Leg Raise,15,0,bad
-19-JUN-2024,Barbell Bicep Curl,20,20,good
+19-JUN-2024,Barbell Bicep Curl,20,40,good
 17-JUN-2024,Concentration Curl,10,30,good
 17-JUN-2024,Concentration Curl,10,30,good
 17-JUN-2024,Concentration Curl,8,35,good
@@ -254,7 +276,7 @@ date,exercise,reps,weight(lbs),rating
 12-JUN-2024,Parallel Bar Leg Raise,15,0,good
 12-JUN-2024,Parallel Bar Leg Raise,15,0,bad
 12-JUN-2024,Parallel Bar Leg Raise,12,0,good
-11-JUN-2024,Barbell Bicep Curl,20,20,good
+11-JUN-2024,Barbell Bicep Curl,20,40,good
 10-JUN-2024,Bicep Curl,10,35,good
 10-JUN-2024,Bicep Curl,10,35,good
 10-JUN-2024,Bicep Curl,10,35,good
