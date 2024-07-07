@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+06-JUL-2024,walk (treadmill),01:11:22,6.25,7594,462,0,146,163,"Was experimenting with estimated wattage from the treadmill readout so the effort was all over the place for the first 20 mins or so."
 02-JUL-2024,walk (treadmill),01:01:59,5.38,6465,604,0,171,193,""
 30-JUN-2024,walk (treadmill),01:05:22,5.62,6841,418,0,143,153,""
 28-JUN-2024,walk (treadmill),01:05:05,5.75,6760,423,0,142,152,""
