@@ -32,6 +32,17 @@
 * Make ExerciseInfo a parameterized singleton
 
 ### Site
+* Add a "most recent day's workout" summary to the top of the page
+    - E.g.
+<Name>'s last recorded workout was on July 8th:
+• A <weight training focus> workout for <HH:MM>
+    He moved <X,XXX> lbs across <XX> sets
+• A <type of walking cardio> workout for <HH:MM> with an average HR of <XXX>
+    He covered <X.X>km and climbed <XXX>m.
+    He hit a max heart rate of <XXX> .
+• A <type of biking/rowing cardio> workout for <HH:MM> with an average HR of <XXX>
+    He had an average wattage of <XXX>W and covered <X.X>km.
+    He hit a max heart rate of <XXX>.
 * Add a linter/formatter
 * Extract constants
 * Break up main.js into better sub-components/sub-files
@@ -111,3 +122,4 @@
         * A drill-down on compound lifts, isolated lifts, muscle groups, cardio types
     * Can the entire companion app functionality be hosted on something like an Apple Watch? Would be nice to remove the necessity of having a phone on hand
     * Build out a prompt to gauge max values at some irregular interval (e.g. "test your max pushups + pullups" one day, "test your 1RM bench press" another -- 1RMs need at least a one week buildup though)
+    * Health trackers don't do a great job of accounting for the caloric cost of weight training IMO, maybe there's a better rule of thumb to be applied given we know the exact sets being performed?
