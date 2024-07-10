@@ -25,6 +25,8 @@ lint.select = ["ALL"]
 lint.ignore = [
     "D212",
     "D400",
+    "D410",  # This extra space (and D411) aren't worthwhile
+    "D411",
     "D407",
     "D406",  # I like the colon after a DocString section title
     "D203",  # I don't like this style, D211 is the alternate

@@ -274,6 +274,11 @@ EXERCISE_INFO = {
         },
         Field.ANTAGONIST_MUSCLES: {None},
     },
+    Exercise.BENT_OVER_BARBELL_ROW: {
+        INHERITS_FROM: Exercise.LAWNMOWERS,
+        Field.IS_UNILATERAL: False,
+        Field.IS_LIMB_INDEPENDENT: False,
+    },
     Exercise.BENT_OVER_LATERAL_LIFT: {
         Field.COUNT_TYPE: CountType.REPS,
         Field.EXERCISE_TYPE: ExerciseType.ISOLATED_LIFT,
