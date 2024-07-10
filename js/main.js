@@ -18,6 +18,8 @@ const secondaryGraphClassName = "secondary-chart";
 const bpmcField = "bpmc(beats_per_metre_climbed)";
 const bpmmField = "bpmm(beats_per_metre_moved)";
 
+const bullet = "\u2022";
+
 function computeWalkScore(row, durationInS) {
   const durationInH = durationInS / 3600;
   const pace = row["distance(km)"] / durationInH;
@@ -120,6 +122,43 @@ async function loadRuns() {
   return await readCSV(`${base_data_path}/runs.csv`, row);
 }
 
+async function loadBikes() {
+  function row(r) {
+    const durationInS = durationToS(r["duration(HH:mm:ss)"]);
+    return {
+      "date": new Date(r.date),
+      "workout_type": r.workout_type,
+      "duration(s)": durationInS,
+      "distance(km)": d3NumOrNull(r["distance(km)"]),
+      "avg_resistance": d3NumOrNull(r["avg_resistance"]),
+      "max_resistance": d3NumOrNull(r["max_resistance"]),
+      "avg_cadence(rpm)": d3IntOrNull(r["avg_cadence(rpm)"]),
+      "max_cadence(rpm)": d3IntOrNull(r["max_cadence(rpm)"]),
+      "avg_wattage": d3IntOrNull(r["avg_wattage"]),
+      "max_wattage": d3IntOrNull(r["max_wattage"]),
+      "max_speed(km/h)": d3NumOrNull(r["max_speed(km/h)"]),
+      "avg_heart_rate": d3IntOrNull(r["avg_heart_rate"]),
+      "max_heart_rate": d3IntOrNull(r["max_heart_rate"]),
+      "notes": r.notes,
+    };
+  }
+  return await readCSV(`${base_data_path}/bikes.csv`, row);
+}
+
+async function loadWeightTrainingWorkouts() {
+  function row(r) {
+    const durationInS = durationToS(r["duration(HH:mm:ss)"]);
+    return {
+      "date": new Date(r.date),
+      "workout_type": r.workout_type,
+      "duration(s)": durationInS,
+      "location": r.location,
+      "notes": r.notes,
+    };
+  }
+  return await readCSV(`${base_data_path}/weight_training_workouts.csv`, row);
+}
+
 async function loadWeightTrendline() {
   function row(d) {
     return {
@@ -182,6 +221,10 @@ function d3Min(data, c_name) {
 
 function d3Max(data, c_name) {
   return d3.max(data, function(row) { return row[c_name]; });
+}
+
+function d3Sum(data, c_name) {
+  return d3.sum(data, function(row) { return row[c_name]; });
 }
 
 function date_tick(d) {
@@ -664,13 +707,146 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
   return svg;
 }
 
+function nth(day) {
+  day = day.getDate();
+  if (day > 3 && day < 21) {
+    return "th";
+  }
+  switch (day % 10) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+};
+
+function month_day_nth(day) {
+    const month = day.toLocaleString("default", {month: "long"});
+    return `${month} ${day.getDate()}${nth(day)}`;
+}
+
+function computeSingleDaySummary(walks, runs, bikes, weightTrainingWorkouts, day = null) {
+  const summaryTextboxName = "single-day-summary-textbox";
+
+  // These should be user-specific when that part gets built out
+  const name = "Eric";
+
+  // If a date isn't provided, use the most recent across all workout types
+  if (day === null) {
+      day = d3Max(walks, "date");
+      day = new Date(Math.max(day, d3Max(runs, "date")));
+      day = new Date(Math.max(day, d3Max(bikes, "date")));
+      day = new Date(Math.max(day, d3Max(weightTrainingWorkouts, "date")));
+  }
+
+  // Build up the daily workout summary text by each workout modality
+  var lines = [`${name}'s most recent workout was ${month_day_nth(day)}\n`];
+  lines.push(...buildDailyWalkingSummary(walks, day));
+  lines.push(...buildDailyRunningSummary(runs, day));
+  lines.push(...buildDailyBikingSummary(bikes, day));
+  lines.push(...buildDailyLiftingSummary(weightTrainingWorkouts, day));
+
+  // No matching workouts, instead display a default message
+  if (lines.length <= 1) {
+      lines = ["No workouts recorded yet, get out there!\n "];
+  }
+
+  // Add the generated summary text to the textbox
+  $("body").find(`#${summaryTextboxName}`).html(lines.join("\n") +  "\n ");
+}
+
+function secondsToHHMM(durationInS){
+  var durationInH = Math.floor(durationInS / 3600, 0);
+  var durationInM = `${Math.floor((durationInS % 3600) / 60)}`.padStart(2, "0");
+  var durationInS = `${Math.floor((durationInS % 3600) % 60)}`.padStart(2, "0");
+  return `${durationInH}:${durationInM}:${durationInS}`;
+}
+
+function buildDailyWalkingSummary(walks, day) {
+    const day_as_time = day.getTime();
+    walks = walks
+      .filter(d => d["date"].getTime() == day_as_time);
+    if (walks.length == 0) {
+      return [];
+    }
+
+    var durationInS = d3Sum(walks, "duration(s)");
+    var dist = d3Sum(walks, "distance(km)").toFixed(1);
+    var elv = d3Sum(walks, "elevation(m)");
+    var avgHR = d3Sum(walks, "avg_heart_rate") / walks.length;
+    return [
+      `${bullet} He walked for ${secondsToHHMM(durationInS)}`,
+      `  Covering ${dist}km and climbing ${elv}m`,
+      `  With an average heart rate of ${avgHR}bpm\n`,
+    ];
+}
+
+function buildDailyRunningSummary(runs, day) {
+  const day_as_time = day.getTime();
+  runs = runs
+    .filter(d => d["date"].getTime() == day_as_time);
+  if (runs.length == 0) {
+    return [];
+  }
+
+  var durationInS = d3Sum(runs, "duration(s)");
+  var dist = d3Sum(runs, "distance(km)").toFixed(1);
+  var elv = d3Sum(runs, "elevation(m)");
+  var avgHR = d3Sum(runs, "avg_heart_rate") / runs.length;
+  return [
+    `${bullet} He ran for ${secondsToHHMM(durationInS)}`,
+    `  Covering ${dist}km and climbing ${elv}m`,
+    `  With an average heart rate of ${avgHR}bpm\n`,
+  ];
+}
+
+function buildDailyBikingSummary(bikes, day) {
+  const day_as_time = day.getTime();
+  bikes = bikes
+    .filter(d => d["date"].getTime() == day_as_time);
+  if (bikes.length == 0) {
+    return [];
+  }
+
+  var durationInS = d3Sum(bikes, "duration(s)");
+  var dist = d3Sum(bikes, "distance(km)").toFixed(1);
+  var kj = d3.sum(d3.map(bikes, (row) => row["avg_wattage"] * row["duration(s)"]));
+  kj = 0.001 * kj;  // This is just the conversion factor from Watt to KJ/s
+  var avgHR = d3Sum(bikes, "avg_heart_rate") / bikes.length;
+  return [
+    `${bullet} He biked for ${secondsToHHMM(durationInS)}`,
+    `  Covering ${dist}km with an output of ${kj}KJ`,
+    `  And an average heart rate of ${avgHR}bpm\n`,
+  ];
+}
+
+function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
+  const day_as_time = day.getTime();
+  weightTrainingWorkouts = weightTrainingWorkouts
+    .filter(d => d["date"].getTime() == day_as_time);
+
+  var lines = [];
+  for (const workout of weightTrainingWorkouts) {
+    var workoutType = workout["workout_type"];
+    var durationInS = workout["duration(s)"];
+    lines.push(`${bullet} He trained ${workoutType} for ${secondsToHHMM(durationInS)}`);
+    // TODO Need to publish meta metrics with this from Python, I don't want to load set data in browser
+    // lines.push(`He moved ${totalWeight}lbs across ${numSets} sets\n`);
+  }
+  return lines;
+}
+
 (async function() {
   // Load data
   const healthMetrics = await loadHealthMetrics();
   const walks = await loadWalks();
   const runs = await loadRuns();
-  //const bikes = readCSV(`${base_data_path}/bikes.csv`);
-  //const weight_training_workouts = readCSV(`${base_data_path}/weight_training_workouts.csv`);
+  const bikes = await loadBikes();
+  const weight_training_workouts = await loadWeightTrainingWorkouts();
   //const weight_training_sets = readCSV(`${base_data_path}/weight_training_sets.csv`);
   //const travel_days = readCSV(`${base_data_path}/travel_days.csv`);
 
@@ -678,6 +854,14 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
   const weightTrendline = await loadWeightTrendline();
   const workoutFrequency = await loadWorkoutFrequency();
   const heartRateTrendline = await loadHeartRateTrendline();
+
+  // Populate the default contents of the single-day summary
+  computeSingleDaySummary(
+      walks,
+      runs,
+      bikes,
+      weight_training_workouts,
+  );
 
   // Build and display the main graphs; update width of entire document to fit
   var weightGraph = plotWeight(healthMetrics, weightTrendline).node();

@@ -114,3 +114,17 @@ svg {
 .secondary-chart {
   display: none;
 }
+
+#single-day-summary-textbox {
+  white-space: pre-wrap;
+  width: 100%;
+  text-align: left;
+  margin-top: 1%;
+  margin-left: 0;
+  margin-right: 0;
+
+  font-family: "Chalkduster", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2em;
+}
