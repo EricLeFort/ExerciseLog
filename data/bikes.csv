@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),avg_resistance,max_resistance,avg_cadence(rpm),max_cadence(rpm),avg_wattage,max_wattage,max_speed(km/h),avg_heart_rate,max_heart_rate,notes
+07-JUL-2024,bike (stationary),01:00:00,36.56,0.51,0.73,89,127,240,652,53.1,164,189,""
 30-JUN-2024,bike (stationary),00:30:00,18.22,0.54,0.76,81,107,238,645,53.0,166,186,"Directly after a 1hr incline walk"
 26-JUN-2024,bike (stationary),00:10:00,5.99,0.51,0.61,86,116,230,443,46.2,175,190,"cool-down ride after a 5km run"
 24-JUN-2024,bike (stationary),00:30:00,18.83,0.53,0.66,86,117,259,545,49.7,169,191,""
