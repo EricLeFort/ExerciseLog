@@ -20,6 +20,7 @@ const bpmmField = "bpmm(beats_per_metre_moved)";
 
 const bullet = "\u2022";
 
+// Data loading computed metrics
 function computeWalkScore(row, durationInS) {
   const durationInH = durationInS / 3600;
   const pace = row["distance(km)"] / durationInH;
@@ -68,6 +69,7 @@ function getNumBeats(row, durationInS) {
     return row["avg_heart_rate"] * (durationInS / 60);
 }
 
+// Data loading
 // TODO make separate dataloading module for this logic
 // TODO also add the rest of the relevant loaders
 async function loadHealthMetrics() {
@@ -190,6 +192,29 @@ async function loadHeartRateTrendline() {
   return await readCSV(`${pred_data_path}/resting_heart_rate_trendline.csv`, row);
 }
 
+// Utilities
+function nth(day) {
+  day = day.getDate();
+  if (day > 3 && day < 21) {
+    return "th";
+  }
+  switch (day % 10) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+};
+
+function month_day_nth(day) {
+    const month = day.toLocaleString("default", {month: "long"});
+    return `${month} ${day.getDate()}${nth(day)}`;
+}
+
 Date.prototype.addDays = function(days) {
     const date = new Date(this.valueOf());
     date.setDate(date.getDate() + days);
@@ -207,6 +232,7 @@ function containsCaseless (a, b) {
   return a.toLowerCase().includes(b.toLowerCase());
 }
 
+// D3 utilities
 function d3NumOrNull(val) {
   return val === "" ? null : Number(val);
 }
@@ -227,6 +253,11 @@ function d3Sum(data, c_name) {
   return d3.sum(data, function(row) { return row[c_name]; });
 }
 
+async function readCSV(path, row) {
+  return await d3.csv(path, row);
+}
+
+// Plotting
 function date_tick(d) {
   const year = d.getYear() + 1900;  // Accommodating for library's weird year offset
   const month = d.toDateString().substring(4, 7);
@@ -393,10 +424,6 @@ function addLinearTimeYAxis(svg, minTime, maxTime, majorStep, minorStep) {
     .call(g => g.selectAll(".tick line").clone()
       .attr("stroke-opacity", 0.1)
       .attr("x1", contentWidth));
-}
-
-async function readCSV(path, row) {
-  return await d3.csv(path, row);
 }
 
 function plotWeight(healthMetrics, weightTrendline) {
@@ -707,28 +734,7 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
   return svg;
 }
 
-function nth(day) {
-  day = day.getDate();
-  if (day > 3 && day < 21) {
-    return "th";
-  }
-  switch (day % 10) {
-    case 1:
-      return "st";
-    case 2:
-      return "nd";
-    case 3:
-      return "rd";
-    default:
-      return "th";
-  }
-};
-
-function month_day_nth(day) {
-    const month = day.toLocaleString("default", {month: "long"});
-    return `${month} ${day.getDate()}${nth(day)}`;
-}
-
+// Single-Day Summary
 function computeSingleDaySummary(walks, runs, bikes, weightTrainingWorkouts, day = null) {
   const summaryTextboxName = "single-day-summary-textbox";
 
@@ -756,7 +762,10 @@ function computeSingleDaySummary(walks, runs, bikes, weightTrainingWorkouts, day
   }
 
   // Add the generated summary text to the textbox
-  $("body").find(`#${summaryTextboxName}`).html(lines.join("\n") +  "\n ");
+  var textBox = $(`#${summaryTextboxName}`);
+  console.log(textBox.text());
+  textBox.text(lines.join("\n") +  "\n ");
+  textBox.css("display", "flex");
 }
 
 function secondsToHHMM(durationInS){
@@ -872,7 +881,6 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
   document.documentElement.style.width = `${docWidth}px`;
 
   // Position the secondary metrics dropbox selector appropriately
-  //$(".dropdown").css("top", $(document).height());
   var dropdown = $(`#${extraChartDropdownId}`);
   $("body").append(dropdown);
   dropdown.css("display", "block");

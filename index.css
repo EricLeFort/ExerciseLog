@@ -116,6 +116,7 @@ svg {
 }
 
 #single-day-summary-textbox {
+  display: none;
   white-space: pre-wrap;
   width: 100%;
   text-align: left;
