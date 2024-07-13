@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),avg_cadence(spm),max_cadence(spm),avg_wattage,max_wattage,avg_heart_rate,max_heart_rate,notes
+12-JUL-2024,row (stationary),00:14:50,1.262,38,,353,,144,181,"4x250m sprints + 1 250m warm-up; 0.257/238/01:57, 0.251/434/01:32, 0.250/394/01:36, 0.254/341/01:40, 0.250/356/01:39 were the distances/500m paces/avg wattage for each (in order)"
 04-FEB-2024,row (stationary),00:08:15,2.005,31,,187,,167,178,"post-run"
 13-JAN-2024,row (stationary),00:07:38,2.005,,,236,,172,182,""
 28-DEC-2023,row (stationary),00:02:00,0.521,,,,,,,""
