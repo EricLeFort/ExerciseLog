@@ -146,6 +146,27 @@ async function loadBikes() {
   }
   return await readCSV(`${base_data_path}/bikes.csv`, row);
 }
+async function loadRows() {
+  function row(r) {
+    const durationInS = durationToS(r["duration(HH:mm:ss)"]);
+    return {
+      "date": new Date(r.date),
+      "workout_type": r.workout_type,
+      "duration(s)": durationInS,
+      "distance(km)": d3NumOrNull(r["distance(km)"]),
+      "avg_resistance": d3NumOrNull(r["avg_resistance"]),
+      "max_resistance": d3NumOrNull(r["max_resistance"]),
+      "avg_cadence(rpm)": d3IntOrNull(r["avg_cadence(rpm)"]),
+      "max_cadence(rpm)": d3IntOrNull(r["max_cadence(rpm)"]),
+      "avg_wattage": d3IntOrNull(r["avg_wattage"]),
+      "max_wattage": d3IntOrNull(r["max_wattage"]),
+      "avg_heart_rate": d3IntOrNull(r["avg_heart_rate"]),
+      "max_heart_rate": d3IntOrNull(r["max_heart_rate"]),
+      "notes": r.notes,
+    };
+  }
+  return await readCSV(`${base_data_path}/rows.csv`, row);
+}
 
 async function loadWeightTrainingWorkouts() {
   function row(r) {
@@ -735,7 +756,7 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
 }
 
 // Single-Day Summary
-function computeSingleDaySummary(walks, runs, bikes, weightTrainingWorkouts, day = null) {
+function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkouts, day = null) {
   const summaryTextboxName = "single-day-summary-textbox";
 
   // These should be user-specific when that part gets built out
@@ -746,6 +767,7 @@ function computeSingleDaySummary(walks, runs, bikes, weightTrainingWorkouts, day
       day = d3Max(walks, "date");
       day = new Date(Math.max(day, d3Max(runs, "date")));
       day = new Date(Math.max(day, d3Max(bikes, "date")));
+      day = new Date(Math.max(day, d3Max(rows, "date")));
       day = new Date(Math.max(day, d3Max(weightTrainingWorkouts, "date")));
   }
 
@@ -754,6 +776,7 @@ function computeSingleDaySummary(walks, runs, bikes, weightTrainingWorkouts, day
   lines.push(...buildDailyWalkingSummary(walks, day));
   lines.push(...buildDailyRunningSummary(runs, day));
   lines.push(...buildDailyBikingSummary(bikes, day));
+  lines.push(...buildDailyRowingSummary(rows, day));
   lines.push(...buildDailyLiftingSummary(weightTrainingWorkouts, day));
 
   // No matching workouts, instead display a default message
@@ -763,7 +786,6 @@ function computeSingleDaySummary(walks, runs, bikes, weightTrainingWorkouts, day
 
   // Add the generated summary text to the textbox
   var textBox = $(`#${summaryTextboxName}`);
-  console.log(textBox.text());
   textBox.text(lines.join("\n") +  "\n ");
   textBox.css("display", "flex");
 }
@@ -833,6 +855,27 @@ function buildDailyBikingSummary(bikes, day) {
   ];
 }
 
+function buildDailyRowingSummary(rows, day) {
+  const day_as_time = day.getTime();
+  rows = rows
+    .filter(d => d["date"].getTime() == day_as_time);
+  if (rows.length == 0) {
+    return [];
+  }
+
+  var durationInS = d3Sum(rows, "duration(s)");
+  var dist = d3Sum(rows, "distance(km)").toFixed(1);
+  var kj = d3.sum(d3.map(rows, (row) => row["avg_wattage"] * row["duration(s)"]));
+  kj = 0.001 * kj;  // This is just the conversion factor from Watt to KJ/s
+  kj = Math.floor(kj);
+  var avgHR = d3Sum(rows, "avg_heart_rate") / rows.length;
+  return [
+    `${bullet} He rowed for ${secondsToHHMM(durationInS)}`,
+    `  Covering ${dist}km with an output of ${kj}KJ`,
+    `  And an average heart rate of ${avgHR}bpm\n`,
+  ];
+}
+
 function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
   const day_as_time = day.getTime();
   weightTrainingWorkouts = weightTrainingWorkouts
@@ -855,6 +898,7 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
   const walks = await loadWalks();
   const runs = await loadRuns();
   const bikes = await loadBikes();
+  const rows = await loadRows();
   const weight_training_workouts = await loadWeightTrainingWorkouts();
   //const weight_training_sets = readCSV(`${base_data_path}/weight_training_sets.csv`);
   //const travel_days = readCSV(`${base_data_path}/travel_days.csv`);
@@ -869,6 +913,7 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
       walks,
       runs,
       bikes,
+      rows,
       weight_training_workouts,
   );
 

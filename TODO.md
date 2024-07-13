@@ -22,8 +22,9 @@
     - For now, just write to the repo under some path in the test file tree
 * Support multiple users
 * Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
-* Populate Muscle in EXERCISE_INFO
-* Populate percentages of Muscle/MuscleGroup in EXERCISE_INFO
+* Extend EXERCISE_INFO
+    - Populate Muscle in EXERCISE_INFO
+    - Populate percentages of Muscle/MuscleGroup in EXERCISE_INFO
 * Define local and global ideal strength ratios
 * Smooth out xRM logic
 * Define an expiration and/or uncertainty range that crops up when xRM's get several months old
