@@ -182,7 +182,6 @@ function loadStrengthChart(chartName, chartId) {
  * Hides all the nested ul's and li's in the dropdown
  */
 function hideAll() {
-    var dropdown = $(document).find(".dropdown");
     var ddMenu = $(document).find(".dropdown .dropdown-menu");
     ddMenu.css("display", "none");
     ddMenu.find("ul").css("display", "none");

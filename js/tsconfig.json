@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./built",
+    "allowJs": true,
+    "target": "es2017",
+    "removeComments": true,
+    "baseUrl": "./",
+
+    // TODO (ericlefort): uncomment the rest of these (and apply necessary fixes)
+    // Strict Checks
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+    //"noImplicitAny": true,
+    //"strictNullChecks": true,
+
+    // Linter Checks
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+  },
+  "include": [
+    "./src/**/*"
+  ],
+}

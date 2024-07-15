@@ -6,3 +6,6 @@ python/notebook/.ipynb_checkpoints/
 python/src/.coverage
 
 pyenv/
+
+# JS/TS/Node
+node_modules

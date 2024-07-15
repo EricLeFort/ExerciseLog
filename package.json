@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/jquery": "^3.5.30"
+  }
+}

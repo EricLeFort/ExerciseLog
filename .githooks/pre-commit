@@ -16,7 +16,6 @@ tsc
 
 # Check for any staged ts changes
 MODIFIED_TS=()
-git diff --cached --name-status |
 while read LINE
 do
     if [ ${LINE:(-3)} = ".ts" ]; then
@@ -25,7 +24,7 @@ do
         FNAME=${FNAME/\.ts/\.js}
         MODIFIED_TS+=($FNAME)
     fi
-done
+done < <(git diff --cached --name-status)
 
 # Add the generated js files for any staged ts changes
 for FNAME in "${MODIFIED_TS[@]}"

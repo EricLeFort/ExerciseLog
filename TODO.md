@@ -36,7 +36,6 @@
 * Add a linter/formatter
 * Extract constants
 * Break up main.js into better sub-components/sub-files
-* Migrate to TypeScript
 * Migrate to React
 * Plot a combined metric using rate_of_climb + pace (+ duration?)
     - Experiment with adding duration into the equation (maybe also something like a strive score using avg, max + duration?)

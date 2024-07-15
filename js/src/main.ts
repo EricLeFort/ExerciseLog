@@ -1,24 +1,24 @@
-const base_data_path = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/data"
-const pred_data_path = `${base_data_path}/preds`
-const graphMargin = 100;
-const graphWidth = 1600;
-const graphHeight = 900;
+const base_data_path: string = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/data"
+const pred_data_path: string = `${base_data_path}/preds`
+const graphMargin: number = 100;
+const graphWidth: number = 1600;
+const graphHeight: number = 900;
 
-const legendSpacing = 150;
-const legendHeight = "5em";
-const legendIconHeight = "3.75em";
+const legendSpacing: number = 150;
+const legendHeight: string = "5em";
+const legendIconHeight: string = "3.75em";
 
-const lineStrokeWidth = 2;
+const lineStrokeWidth: number = 2;
 
-const weightGraphId = "graph-weight";
-const workoutFrequencyGraphId = "graph-workout-frequency";
-const heartRateGraphId = "graph-resting-heartrate";
+const weightGraphId: string = "graph-weight";
+const workoutFrequencyGraphId: string = "graph-workout-frequency";
+const heartRateGraphId: string = "graph-resting-heartrate";
 
-const secondaryGraphClassName = "secondary-chart";
-const bpmcField = "bpmc(beats_per_metre_climbed)";
-const bpmmField = "bpmm(beats_per_metre_moved)";
+const secondaryGraphClassName: string = "secondary-chart";
+const bpmcField: string = "bpmc(beats_per_metre_climbed)";
+const bpmmField: string = "bpmm(beats_per_metre_moved)";
 
-const bullet = "\u2022";
+const bullet: string = "\u2022";
 
 // Data loading computed metrics
 function computeWalkScore(row, durationInS) {
@@ -236,6 +236,11 @@ function month_day_nth(day) {
     return `${month} ${day.getDate()}${nth(day)}`;
 }
 
+
+interface Date {
+    addDays(number): Date;
+}
+
 Date.prototype.addDays = function(days) {
     const date = new Date(this.valueOf());
     date.setDate(date.getDate() + days);
@@ -245,7 +250,7 @@ Date.prototype.addDays = function(days) {
 function durationToS(val) {
   const hoursToS = 60 * 60;
   const minsToS = 60;
-  pieces = val.split(":")
+  const pieces: string[] = val.split(":")
   return hoursToS * +pieces[0] + minsToS * +pieces[1] + +pieces[2]
 }
 
@@ -304,6 +309,10 @@ function addTitle(svg, title) {
     .text(title);
 }
 
+interface RefLineType {
+  name: string;
+}
+
 class RefLineType {
   static Marker = new RefLineType("marker")
   static Threshold = new RefLineType("threshold")
@@ -325,13 +334,13 @@ function addRefLine(svg, label, yMin, yMax, yRef, refLineType) {
   const refLineRight = width - graphMargin;
   const labelPosition = refLineRight + 5;
 
-  var strokeColour = null;
-  var dashArray = null;
+  var strokeColour: string = null;
+  var dashArray: string = null;
   if (refLineType === RefLineType.Marker) {
-    var strokeColour = "black";
-    var dashArray = ("3, 2");
+    strokeColour = "black";
+    dashArray = "3, 2";
   } else if (refLineType === RefLineType.Threshold) {
-    var strokeColour = "red";
+    strokeColour = "red";
   }
 
   svg.append("text")
@@ -351,7 +360,7 @@ function addRefLine(svg, label, yMin, yMax, yRef, refLineType) {
     .attr("y2", pos);
 }
 
-function addDateXAxis(svg, firstDate, lastDate) {
+function addDateXAxis(svg, firstDate: Date, lastDate: Date) {
   const width = svg.node().width.animVal.value;
   const height = svg.node().height.animVal.value;
   const axisBottom = height - graphMargin;
@@ -452,8 +461,8 @@ function plotWeight(healthMetrics, weightTrendline) {
   const maxWeight = 305;
   const nDaysToExtrapolate = 100;
 
-  const firstDate = d3Min(healthMetrics, "date");
-  const lastDate = d3Max(healthMetrics, "date").addDays(nDaysToExtrapolate);
+  const firstDate: Date = new Date(d3Min(healthMetrics, "date"));
+  const lastDate: Date = new Date(d3Max(healthMetrics, "date")).addDays(nDaysToExtrapolate);
 
   // Create the SVG container
   const svg = d3.create("svg")
@@ -518,9 +527,9 @@ function plotWeight(healthMetrics, weightTrendline) {
       .attr("r", 1.5);
 
   // Plot the trendline
-  valueLine = d3.line()
-    .x(function (d, i) { return x(d["date"]); })
-    .y(function (d, i) { return y(d["weight(lbs)"]); });
+  let valueLine = d3.line()
+    .x(function (d, _) { return x(d["date"]); })
+    .y(function (d, _) { return y(d["weight(lbs)"]); });
   svg.append("path")
     .style("stroke", "steelblue")
     .style("stroke-width", lineStrokeWidth)
@@ -537,8 +546,8 @@ function plotWorkoutFrequency(workoutFrequencies) {
   const minTime = 0;
   const maxTime = 210;
 
-  const firstDate = d3Min(workoutFrequencies, "date");
-  const lastDate = d3Max(workoutFrequencies, "date");
+  const firstDate: Date = new Date(d3Min(workoutFrequencies, "date"));
+  const lastDate: Date = new Date(d3Max(workoutFrequencies, "date"));
 
   // Create the SVG container
   const svg = d3.create("svg")
@@ -600,9 +609,9 @@ function plotWorkoutFrequency(workoutFrequencies) {
       .attr("r", 1.5);
 
   // Plot the trendline
-  valueLine = d3.line()
-    .x(function (d, i) { return x(d["date"]); })
-    .y(function (d, i) { return y(d["avg_duration"]); });
+  let valueLine = d3.line()
+    .x(function (d, _) { return x(d["date"]); })
+    .y(function (d, _) { return y(d["avg_duration"]); });
   svg.append("path")
     .style("fill", "none")
     .style("stroke", "steelblue")
@@ -615,12 +624,11 @@ function plotWorkoutFrequency(workoutFrequencies) {
 }
 
 function plotHeartRate(healthMetrics, heartRateTrendline) {
-  const minHR = 45;
-  const maxHR = 85;
-  const nDaysToExtrapolate = 100;
+  const minHR: number = 45;
+  const maxHR: number = 85;
 
-  const firstDate = d3Min(heartRateTrendline, "date");
-  const lastDate = d3Max(heartRateTrendline, "date");
+  const firstDate: Date = new Date(d3Min(heartRateTrendline, "date"));
+  const lastDate: Date = new Date(d3Max(heartRateTrendline, "date"));
 
   // Create the SVG container
   const svg = d3.create("svg")
@@ -689,9 +697,9 @@ function plotHeartRate(healthMetrics, heartRateTrendline) {
       .attr("r", 1.5);
 
   // Plot the trendline
-  valueLine = d3.line()
-    .x(function (d, i) { return x(d["date"]); })
-    .y(function (d, i) { return y(d["resting_heart_rate(bpm)"]); });
+  let valueLine = d3.line()
+    .x(function (d, _) { return x(d["date"]); })
+    .y(function (d, _) { return y(d["resting_heart_rate(bpm)"]); });
   svg.append("path")
     .style("fill", "none")
     .style("stroke", "steelblue")
@@ -709,8 +717,8 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
   // First filter out any null entries
   data = data.filter(d => d[field] !== null);
 
-  const firstDate = d3Min(data, "date");
-  const lastDate = d3Max(data, "date");
+  const firstDate: Date = new Date(d3Min(data, "date"));
+  const lastDate: Date = new Date(d3Max(data, "date"));
 
   // Create the SVG container
   const svg = d3.create("svg")
@@ -741,9 +749,9 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
       .attr("r", 1.5);
 
   // Plot the line
-  valueLine = d3.line()
-    .x(function (d, i) { return x(d["date"]); })
-    .y(function (d, i) { return y(d[field]); });
+  let valueLine = d3.line()
+    .x(function (d, _) { return x(d["date"]); })
+    .y(function (d, _) { return y(d[field]); });
   svg.append("path")
     .style("fill", "none")
     .style("stroke", "steelblue")
@@ -756,7 +764,7 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
 }
 
 // Single-Day Summary
-function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkouts, day = null) {
+function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkouts, day: Date = null) {
   const summaryTextboxName = "single-day-summary-textbox";
 
   // These should be user-specific when that part gets built out
@@ -764,11 +772,12 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
 
   // If a date isn't provided, use the most recent across all workout types
   if (day === null) {
-      day = d3Max(walks, "date");
-      day = new Date(Math.max(day, d3Max(runs, "date")));
-      day = new Date(Math.max(day, d3Max(bikes, "date")));
-      day = new Date(Math.max(day, d3Max(rows, "date")));
-      day = new Date(Math.max(day, d3Max(weightTrainingWorkouts, "date")));
+      let day_time: number = new Date(d3Max(walks, "date")).getTime();
+      day_time = Math.max(day_time, new Date(d3Max(runs, "date")).getTime());
+      day_time = Math.max(day_time, new Date(d3Max(bikes, "date")).getTime());
+      day_time = Math.max(day_time, new Date(d3Max(rows, "date")).getTime());
+      day_time = Math.max(day_time, new Date(d3Max(weightTrainingWorkouts, "date")).getTime());
+      day = new Date(day_time);
   }
 
   // Build up the daily workout summary text by each workout modality
@@ -791,9 +800,9 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
 }
 
 function secondsToHHMM(durationInS){
-  var durationInH = Math.floor(durationInS / 3600, 0);
+  var durationInH = Math.floor(durationInS / 3600);
   var durationInM = `${Math.floor((durationInS % 3600) / 60)}`.padStart(2, "0");
-  var durationInS = `${Math.floor((durationInS % 3600) % 60)}`.padStart(2, "0");
+  durationInS = `${Math.floor((durationInS % 3600) % 60)}`.padStart(2, "0");
   return `${durationInH}:${durationInM}:${durationInS}`;
 }
 
@@ -943,13 +952,14 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
   // TODO refine this formula
   const filteredWalks = walks
       .filter(d => d["workout_type"] == "walk (treadmill)")
-      .filter(d => d["duration(s)"] >= 1200)
+      .filter(d => Number(d["duration(s)"]) >= 1200)
       .filter(d => !containsCaseless(d["notes"], "pre-workout"))
       .filter(d => !containsCaseless(d["notes"], "warm-up"))
       .filter(d => !containsCaseless(d["notes"], "post-workout"));
-  var field = "score";
-  var title = "Walk Scores";
-  var walkScoresGraphId = "walk-scores-chart";
+  let field: string = "score";
+  let title: string = "Walk Scores";
+  let walkScoresGraphId: string = "walk-scores-chart";
+  let expGraph: d3.Selection<SVGElement, unknown, HTMLElement, any>;
   expGraph = plotBasic(filteredWalks, field, title, walkScoresGraphId, 0, 200, 20, 5);
   expGraph.node().classList.add(secondaryGraphClassName);
   document.body.append(expGraph.node());
@@ -957,9 +967,9 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
   // Experiment: Heartbeats required to climb a metre
   // Note: Only considers walking since that's more efficient for elevation gain
   title = "BPMC (Beats Per Metre Climbed)";
-  bpmcGraphId = "bpmc-chart";
+  let bpmcGraphId: string = "bpmc-chart";
   const bpmcFilteredWalks = filteredWalks
-      .filter(d => d[bpmcField] > 0)
+      .filter(d => Number(d[bpmcField]) > 0)
       .filter(d => d["workout_type"] == "walk (treadmill)");
   expGraph = plotBasic(bpmcFilteredWalks, bpmcField, title, bpmcGraphId, 0, 300, 100, 25);
   expGraph.node().classList.add(secondaryGraphClassName);
@@ -968,10 +978,9 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
   // Experiment: Heartbeats required to run a metre
   // Note: Only considers running since that's more efficient for covering horizontal distance
   title = "BPMM (Beats Per Metre Moved)";
-  bpmmGraphId = "bpmm-chart";
+  let bpmmGraphId: string = "bpmm-chart";
   const bpmmFilteredRuns = runs
-      .filter(d => d[bpmmField] > 0);
-      //.filter(d => d["workout_type"] == "run (treadmill)");
+      .filter(d => Number(d[bpmmField]) > 0);
   expGraph = plotBasic(bpmmFilteredRuns, bpmmField, title, bpmmGraphId, 0, 2, 1, 0.1);
   expGraph.node().classList.add(secondaryGraphClassName);
   document.body.append(expGraph.node());
