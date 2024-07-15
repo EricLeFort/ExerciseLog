@@ -1,7 +1,35 @@
 #!/bin/bash
 set -e
 
+# Run the test kickoff script
 THIS_SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 if ! ${THIS_SCRIPT_DIR}/../scripts/run-tests.sh; then
     exit 1
 fi
+
+
+### TypeScript
+cd ${THIS_SCRIPT_DIR}/../js
+
+# Always make sure they compile. This might be annoying but it's for a good cause.
+tsc
+
+# Check for any staged ts changes
+MODIFIED_TS=()
+git diff --cached --name-status |
+while read LINE
+do
+    if [ ${LINE:(-3)} = ".ts" ]; then
+        FNAME=$(echo $LINE | rev | cut -w -f1 | rev)
+        FNAME=$(echo $FNAME | rev | cut -d'/' -f1 | rev)
+        FNAME=${FNAME/\.ts/\.js}
+        MODIFIED_TS+=($FNAME)
+    fi
+done
+
+# Add the generated js files for any staged ts changes
+for FNAME in "${MODIFIED_TS[@]}"
+do
+    git add built/${FNAME}
+done
+cd -
