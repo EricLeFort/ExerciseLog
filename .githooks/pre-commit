@@ -18,7 +18,7 @@ tsc
 MODIFIED_TS=()
 while read LINE
 do
-    if [ ${LINE:(-3)} = ".ts" ]; then
+    if [ ${LINE:(-3)} = ".ts" ] || [ ${LINE:(-3)} = ".tsx" ]; then
         FNAME=$(echo $LINE | rev | cut -w -f1 | rev)
         FNAME=$(echo $FNAME | rev | cut -d'/' -f1 | rev)
         FNAME=${FNAME/\.ts/\.js}
