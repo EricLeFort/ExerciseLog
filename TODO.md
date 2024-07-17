@@ -34,6 +34,7 @@
 
 ### Site
 * Add a linter/formatter
+* Add testing framework and some simple wide-coverage, simple validation tests
 * Extract constants
 * Break up main.js into better sub-components/sub-files
 * Migrate to React

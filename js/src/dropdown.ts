@@ -131,7 +131,7 @@ function attachListeners() {
             dropdown.find("span").text($(this).children("x").text());
             var ddInput = dropdown.find("input")
             setActiveExtraChart(ddInput.attr("value"), $(this).attr("id"));
-            ddInput.attr("value", $(this).attr("id"));
+            ddInput.attr("value", $(this).attr("id")!);
             dropdown.addClass("closing");
             hideAll();
         }
@@ -201,10 +201,10 @@ function closeDropdown() {
  * Gets the first submenu of every dropdown on the page
  */
 function initFirstSubMenus() {
-    var dropdowns = document.getElementsByClassName(dropdownClassName);
+    var dropdowns: HTMLCollection = document.getElementsByClassName(dropdownClassName);
     firstSubMenus = new Array(dropdowns.length);
     for (var i = 0; i < dropdowns.length; i++) {
-        var candidate = dropdowns[i].getElementsByClassName(dropdownMenuClassName);
+        var candidate = dropdowns[i]!.getElementsByClassName(dropdownMenuClassName);
         if (candidate.length !== 1) {
             throw new Error("Detected invalid dropdown structure.");
         }
