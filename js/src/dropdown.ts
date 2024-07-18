@@ -3,73 +3,91 @@
  * This entire class assumes there's a single dropdown on the page. It should be extended to handle multiple.
  */
 
-const extraChartDropdownId = "extra-chart-dropdown";
-const extraChartContainerId = "extra-chart-container";
+const extraChartDropdownId: string = "extra-chart-dropdown";
+const extraChartContainerId: string = "extra-chart-container";
 
-const baseImgPath = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/img"
-const dropdownClassName = "dropdown";
-const dropdownMenuClassName = "dropdown-menu";
+const baseImgPath: string = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/img"
+const dropdownClassName: string = "dropdown";
+const dropdownMenuClassName: string = "dropdown-menu";
 
-const extraChartsMenuData = [
-    {
-        "name": "Experimental...",
-        "submenu": [
-            {"name": "Walk Scores"},
-            {"name": "BPMC (Beats Per Metre Climbed)"},
-            {"name": "BPMM (Beats Per Metre Moved)"},
-        ]
-    }, {
-        "name": "Health...",
-        "submenu": [
-            {"name": "TK"},
-        ],
-    }, {
-        "name": "Endurance...",
-        "submenu": [
-            {"name": "TK"},
-        ],
-    }, {
-        "name": "Strength...",
-        "submenu": [
-            {"name": "Arnold Press"},
-            {"name": "Barbell Lunges"},
-            {"name": "Bench Press"},
-            {"name": "Bicep Curl"},
-            {"name": "Cable Lying Hip Flexors"},
-            {"name": "Arnold Press"},
-            {"name": "Barbell Lunges"},
-            {"name": "Bench Press"},
-            {"name": "Bicep Curl"},
-            {"name": "Cable Lying Hip Flexors"},
-            {"name": "Concentration Curl"},
-            {"name": "Deadlift"},
-            {"name": "Delt Flies"},
-            {"name": "Hammer Curl"},
-            {"name": "Incline Dumbbell Bench Press"},
-            {"name": "Lat Pulldown"},
-            {"name": "Lateral Lift"},
-            {"name": "Lawnmowers"},
-            {"name": "Machine Hip Abductors"},
-            {"name": "Machine Hip Adductors"},
-            {"name": "Machine Pec Flies"},
-            {"name": "Military Press"},
-            {"name": "Overhead Tricep Extension"},
-            {"name": "Pullovers"},
-            {"name": "Seated Row"},
-            {"name": "Shrugs"},
-            {"name": "Single-Arm Farmer's Carry"},
-            {"name": "Single-Leg Leg Curl"},
-            {"name": "Skullcrushers"},
-            {"name": "Squats"},
-            {"name": "Strict Press"},
-            {"name": "Tricep Pushdown"},
-            {"name": "Tricep Pushdown (V-Bar)"},
-            {"name": "Wide-Grip Pull-Up"},
-        ],
-    },
-];
+class MenuData {
+    name: string;
+    submenus: (MenuData | string)[];
 
-const extraChartsIdMap = {
+    constructor(name: string, submenus: (MenuData | string)[]) {
+        this.name = name;
+        this.submenus = submenus;
+    }
+}
+
+// Defines the dropdown menu data for the extra charts
+const experimentalSubmenuData = new MenuData(
+    "Experimental...",
+    [
+        "Walk Scores",
+        "BPMC (Beats Per Metre Climbed)",
+        "BPMM (Beats Per Metre Moved)",
+    ],
+);
+const healthSubmenuData = new MenuData(
+    "Health...",
+    ["TK"]
+);
+const enduranceSubmenuData = new MenuData(
+    "Endurance...",
+    ["TK"]
+);
+const strengthSubmenuData = new MenuData(
+    "Strength...",
+    [
+        "Arnold Press",
+        "Barbell Lunges",
+        "Bench Press",
+        "Bicep Curl",
+        "Cable Lying Hip Flexors",
+        "Arnold Press",
+        "Barbell Lunges",
+        "Bench Press",
+        "Bicep Curl",
+        "Cable Lying Hip Flexors",
+        "Concentration Curl",
+        "Deadlift",
+        "Delt Flies",
+        "Hammer Curl",
+        "Incline Dumbbell Bench Press",
+        "Lat Pulldown",
+        "Lateral Lift",
+        "Lawnmowers",
+        "Machine Hip Abductors",
+        "Machine Hip Adductors",
+        "Machine Pec Flies",
+        "Military Press",
+        "Overhead Tricep Extension",
+        "Pullovers",
+        "Seated Row",
+        "Shrugs",
+        "Single-Arm Farmer's Carry",
+        "Single-Leg Leg Curl",
+        "Skullcrushers",
+        "Squats",
+        "Strict Press",
+        "Tricep Pushdown",
+        "Tricep Pushdown (V-Bar)",
+        "Wide-Grip Pull-Up",
+    ],
+);
+const extraChartsMenuData = new MenuData(
+    "",
+    [
+        experimentalSubmenuData,
+        healthSubmenuData,
+        enduranceSubmenuData,
+        strengthSubmenuData,
+    ],
+);
+
+const extraChartsIdMap: Record<string, string> = {
+    "": "",
     "Walk Scores": "walk-scores-chart",
     "BPMC (Beats Per Metre Climbed)": "bpmc-chart",
     "BPMM (Beats Per Metre Moved)": "bpmm-chart",
@@ -106,7 +124,7 @@ const extraChartsIdMap = {
 };
 
 /* Runtime set-on-load globals */
-var firstSubMenus;
+let submenuRoots: Element[];
 
 /**
  *  Attaches listeners to the dropdown menu
@@ -119,7 +137,7 @@ function attachListeners() {
         } else if (!$(this).hasClass("active")) {
             $(this).attr("tabindex", 1).focus();
             $(this).toggleClass("active");
-            var ddMenu = $(this).find(".dropdown-menu");
+            let ddMenu = $(this).find(".dropdown-menu");
             ddMenu.slideToggle(100);
             ddMenu.css("display", "block");
             ddMenu.children("li").css("display", "block");
@@ -127,10 +145,10 @@ function attachListeners() {
     });
     $(".dropdown .dropdown-menu li").on("click", function () {
         if ($(this).hasClass("dropdown-leaf")) {
-            var dropdown = $(this).parents(".dropdown");
+            let dropdown = $(this).parents(".dropdown");
             dropdown.find("span").text($(this).children("x").text());
-            var ddInput = dropdown.find("input")
-            setActiveExtraChart(ddInput.attr("value"), $(this).attr("id"));
+            let ddInput = dropdown.find("input");
+            setActiveExtraChart(ddInput.attr("value")!, $(this).attr("id")!);
             ddInput.attr("value", $(this).attr("id")!);
             dropdown.addClass("closing");
             hideAll();
@@ -150,15 +168,20 @@ function attachListeners() {
 /**
  * Sets the secondary metric chart that should be made visible
  */
-function setActiveExtraChart(oldChartName, newChartName) {
-    var oldChartId = extraChartsIdMap[oldChartName];
-    var newChartId = extraChartsIdMap[newChartName];
+function setActiveExtraChart(oldChartName: string, newChartName: string): void {
+    if (!(oldChartName in extraChartsIdMap)) {
+        throw new Error(`Unrecognized old chart name: ${oldChartName}`);
+    } else if (!(newChartName in extraChartsIdMap)) {
+        throw new Error(`Unrecognized new chart name: ${newChartName}`);
+    }
+    let oldChartId: string = extraChartsIdMap[oldChartName]!;
+    let newChartId: string = extraChartsIdMap[newChartName]!;
 
     if (oldChartId) {
-        var oldChart = $(document).find(`#${oldChartId}`);
+        let oldChart = $(document).find(`#${oldChartId}`);
         oldChart.css("display", "none");
     }
-    var newChart = $(document).find(`#${newChartId}`);
+    let newChart = $(document).find(`#${newChartId}`);
     // Haven't loaded this chart yet, download it
     if (newChart.length === 0) {
         // TODO this assumes every unloaded chart is a strenght chart but that won't always be true;
@@ -168,8 +191,8 @@ function setActiveExtraChart(oldChartName, newChartName) {
     newChart.css("display", "block");
 }
 
-function loadStrengthChart(chartName, chartId) {
-    var img = $(document.createElement("img"));
+function loadStrengthChart(chartName: string, chartId: string): void {
+    let img = $(document.createElement("img"));
     img.attr("id", chartId);
     img.css("display", "block");
     img.css("margin", "0 auto");
@@ -181,8 +204,8 @@ function loadStrengthChart(chartName, chartId) {
 /**
  * Hides all the nested ul's and li's in the dropdown
  */
-function hideAll() {
-    var ddMenu = $(document).find(".dropdown .dropdown-menu");
+function hideAll(): void {
+    let ddMenu = $(document).find(".dropdown .dropdown-menu");
     ddMenu.css("display", "none");
     ddMenu.find("ul").css("display", "none");
     ddMenu.find("li").css("display", "none");
@@ -192,7 +215,7 @@ function hideAll() {
 /**
  * Updates the dropdown's state
  */
-function closeDropdown() {
+function closeDropdown(): void {
     $(document).find(".dropdown .dropdown-menu").slideUp(100);
     $(document).find(".dropdown").removeClass("active");
 }
@@ -200,48 +223,48 @@ function closeDropdown() {
 /**
  * Gets the first submenu of every dropdown on the page
  */
-function initFirstSubMenus() {
-    var dropdowns: HTMLCollection = document.getElementsByClassName(dropdownClassName);
-    firstSubMenus = new Array(dropdowns.length);
-    for (var i = 0; i < dropdowns.length; i++) {
-        var candidate = dropdowns[i]!.getElementsByClassName(dropdownMenuClassName);
+function initsubmenuRoots(): void {
+    let dropdowns: HTMLCollection = document.getElementsByClassName(dropdownClassName);
+    submenuRoots = [];
+    for (const dropdown of dropdowns) {
+        let candidate = dropdown.getElementsByClassName(dropdownMenuClassName);
         if (candidate.length !== 1) {
             throw new Error("Detected invalid dropdown structure.");
         }
-        firstSubMenus[i] = candidate[0];
+        submenuRoots.push(candidate[0]!);
     }
 }
 
 /**
  * Parses the dropdown menu
  */
-function parseMenu() {
-    for (var i = 0; i < firstSubMenus.length; i++) {
-        parseSubMenu(
-           firstSubMenus[i],
-           extraChartsMenuData,
-        );
+function parseMenu(): void {
+    for (const submenuRoot of submenuRoots) {
+        parseSubMenu(submenuRoot, extraChartsMenuData);
     }
 }
 
 /**
  * Parses this layer of the menu and recursively parses any nested layers
  */
-function parseSubMenu(listElement, data) {
-    for (var i = 0; i < data.length; i++) {
-        var nestedli = document.createElement("li");
+function parseSubMenu(listElement: Element, menuData: MenuData): void {
+    for (const submenuData of menuData.submenus) {
+        let isLeaf: boolean = typeof submenuData === "string" || submenuData instanceof String;
+        let name: string = isLeaf ? submenuData as string : (submenuData as MenuData).name;
+        let className: string = isLeaf ? "dropdown-leaf" : "dropdown-branch";
+
+        let nestedli: Element = document.createElement("li");
         nestedli.setAttribute("style", "display: none;");
-        nestedli.setAttribute("id", data[i].name);
-        var link = document.createElement("x");
-        link.appendChild(document.createTextNode(data[i].name));
+        nestedli.setAttribute("id", name);
+        nestedli.setAttribute("class", className);
+        let link: Element = document.createElement("x");
+        link.appendChild(document.createTextNode(name));
         nestedli.appendChild(link);
-        if (data[i].submenu != null) {
-            nestedli.setAttribute("class", "dropdown-branch");
-            var subListElement = document.createElement("ul");
+
+        if (!isLeaf) {
+            let subListElement: Element = document.createElement("ul");
             nestedli.appendChild(subListElement);
-            parseSubMenu(subListElement, data[i].submenu);
-        } else {
-            nestedli.setAttribute("class", "dropdown-leaf");
+            parseSubMenu(subListElement, submenuData as MenuData);
         }
         listElement.appendChild(nestedli);
     }
@@ -250,7 +273,7 @@ function parseSubMenu(listElement, data) {
 /**
  * Shows the next level of the dropdown menu
  */
-function showNodes(element) {
+function showNodes(element: HTMLElement): void {
     $(element).find("ul").css("display", "block");
     $(element).find("li").css("display", "block");
 }
@@ -258,7 +281,7 @@ function showNodes(element) {
 /**
  * Hides the last level of the dropdown menu
  */
-function hideNodes(element) {
+function hideNodes(element: HTMLElement): void {
     $(element).find("ul").css("display", "none");
     $(element).find("li").css("display", "none");
 }
@@ -267,7 +290,7 @@ function hideNodes(element) {
  * Initialize the menu on window load
  */
 window.onload=function() {
-    initFirstSubMenus();
+    initsubmenuRoots();
     parseMenu();
     attachListeners();
 };

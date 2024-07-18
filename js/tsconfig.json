@@ -10,7 +10,7 @@
     // Strict Checks
     "alwaysStrict": true,
     "allowUnreachableCode": false,
-    //"noImplicitAny": true,
+    "noImplicitAny": true,
     "strictNullChecks": true,
 
     // Linter Checks

@@ -1,5 +1,7 @@
 type D3Graph = d3.Selection<SVGSVGElement, undefined, HTMLElement | null, any>;
 type D3Row = Record<string, any>;
+type D3DataFrame = D3Row[];
+type D3RowAccessor = (row: D3Row) => any;
 
 const base_data_path: string = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/data"
 const pred_data_path: string = `${base_data_path}/preds`
@@ -24,7 +26,7 @@ const bpmmField: string = "bpmm(beats_per_metre_moved)";
 const bullet: string = "\u2022";
 
 // Data loading computed metrics
-function computeWalkScore(row, durationInS): number {
+function computeWalkScore(row: D3Row, durationInS: number): number {
   const durationInH = durationInS / 3600;
   const pace = row["distance(km)"] / durationInH;
   const rateOfClimb = row["elevation(m)"] / durationInH;
@@ -52,7 +54,7 @@ function computeWalkScore(row, durationInS): number {
   return timeFactor * (paceFactor + paceFactor * climbFactor);
 }
 
-function computeBeatsPerMetreClimbed(row, durationInS): number {
+function computeBeatsPerMetreClimbed(row: D3Row, durationInS: number): number {
   const numMetres = row["elevation(m)"];
   if (numMetres <= 10) {
     return -1;
@@ -60,7 +62,7 @@ function computeBeatsPerMetreClimbed(row, durationInS): number {
   return getNumBeats(row, durationInS) / numMetres;
 }
 
-function computeBeatsPerMetreMoved(row, durationInS): number {
+function computeBeatsPerMetreMoved(row: D3Row, durationInS: number): number {
   const numMetres = row["distance(km)"] * 1000;
   if (numMetres <= 500) {
     return -1;
@@ -68,15 +70,15 @@ function computeBeatsPerMetreMoved(row, durationInS): number {
   return getNumBeats(row, durationInS) / numMetres;
 }
 
-function getNumBeats(row, durationInS): number {
+function getNumBeats(row: D3Row, durationInS: number): number {
     return row["avg_heart_rate"] * (durationInS / 60);
 }
 
 // Data loading
 // TODO make separate dataloading module for this logic
 // TODO also add the rest of the relevant loaders
-async function loadHealthMetrics() {
-  function rowAccessor(r) {
+async function loadHealthMetrics(): Promise<D3DataFrame> {
+  function rowAccessor(r: D3Row) {
     return {
       "date": new Date(r.date),
       "weight(lbs)": d3IntOrNull(r["weight(lbs)"]),
@@ -87,8 +89,8 @@ async function loadHealthMetrics() {
   return await readCSV(`${base_data_path}/health_metrics.csv`, rowAccessor);
 }
 
-async function loadWalks() {
-  function rowAccessor(r) {
+async function loadWalks(): Promise<D3DataFrame> {
+  function rowAccessor(r: D3Row) {
     const durationInS = durationToS(r["duration(HH:mm:ss)"]);
     return {
       "date": new Date(r.date),
@@ -108,8 +110,8 @@ async function loadWalks() {
   return await readCSV(`${base_data_path}/walks.csv`, rowAccessor);
 }
 
-async function loadRuns() {
-  function rowAccessor(r) {
+async function loadRuns(): Promise<D3DataFrame> {
+  function rowAccessor(r: D3Row) {
     const durationInS = durationToS(r["duration(HH:mm:ss)"]);
     return {
       "date": new Date(r.date),
@@ -127,8 +129,8 @@ async function loadRuns() {
   return await readCSV(`${base_data_path}/runs.csv`, rowAccessor);
 }
 
-async function loadBikes() {
-  function rowAccessor(r) {
+async function loadBikes(): Promise<D3DataFrame> {
+  function rowAccessor(r: D3Row) {
     const durationInS = durationToS(r["duration(HH:mm:ss)"]);
     return {
       "date": new Date(r.date),
@@ -150,8 +152,8 @@ async function loadBikes() {
   return await readCSV(`${base_data_path}/bikes.csv`, rowAccessor);
 }
 
-async function loadRows() {
-  function rowAccessor(r) {
+async function loadRows(): Promise<D3DataFrame> {
+  function rowAccessor(r: D3Row) {
     const durationInS = durationToS(r["duration(HH:mm:ss)"]);
     return {
       "date": new Date(r.date),
@@ -172,7 +174,7 @@ async function loadRows() {
   return await readCSV(`${base_data_path}/rows.csv`, rowAccessor);
 }
 
-async function loadWeightTrainingWorkouts() {
+async function loadWeightTrainingWorkouts(): Promise<D3DataFrame> {
   function rowAccessor(row: D3Row) {
     const durationInS = durationToS(row["duration(HH:mm:ss)"]);
     return {
@@ -186,7 +188,7 @@ async function loadWeightTrainingWorkouts() {
   return await readCSV(`${base_data_path}/weight_training_workouts.csv`, rowAccessor);
 }
 
-async function loadWeightTrendline() {
+async function loadWeightTrendline(): Promise<D3DataFrame> {
   function rowAccessor(row: D3Row) {
     return {
       "date": new Date(row.date),
@@ -196,7 +198,7 @@ async function loadWeightTrendline() {
   return await readCSV(`${pred_data_path}/weight_trendline.csv`, rowAccessor);
 }
 
-async function loadWorkoutFrequency() {
+async function loadWorkoutFrequency(): Promise<D3DataFrame> {
   function rowAccessor(row: D3Row) {
     return {
       "date": new Date(row.date),
@@ -207,7 +209,7 @@ async function loadWorkoutFrequency() {
   return await readCSV(`${pred_data_path}/avg_workout_durations.csv`, rowAccessor);
 }
 
-async function loadHeartRateTrendline() {
+async function loadHeartRateTrendline(): Promise<D3DataFrame> {
   function rowAccessor(row: D3Row) {
     return {
       "date": new Date(row.date),
@@ -218,12 +220,12 @@ async function loadHeartRateTrendline() {
 }
 
 // Utilities
-function nth(day): string {
-  day = day.getDate();
-  if (day > 3 && day < 21) {
+function nth(day: Date): string {
+  let day_num = day.getDate();
+  if (day_num > 3 && day_num < 21) {
     return "th";
   }
-  switch (day % 10) {
+  switch (day_num % 10) {
     case 1:
       return "st";
     case 2:
@@ -235,19 +237,18 @@ function nth(day): string {
   }
 };
 
-function month_day_nth(day): string {
+function month_day_nth(day: Date): string {
     const month = day.toLocaleString("default", {month: "long"});
     return `${month} ${day.getDate()}${nth(day)}`;
 }
 
-
 interface Date {
-    addDays(number): Date;
+    addDays(num_days: number): Date;
 }
 
-Date.prototype.addDays = function(days) {
+Date.prototype.addDays = function(num_days: number) {
     const date = new Date(this.valueOf());
-    date.setDate(date.getDate() + days);
+    date.setDate(date.getDate() + num_days);
     return date;
 }
 
@@ -262,43 +263,43 @@ function durationToS(durationStr: string): number {
   return hoursToS * Number(pieces[0]) + minsToS * Number(pieces[1]) + Number(pieces[2]);
 }
 
-function containsCaseless (a, b): boolean {
+function containsCaseless (a: string, b: string): boolean {
   return a.toLowerCase().includes(b.toLowerCase());
 }
 
 // D3 utilities
-function d3NumOrNull(val): number | null {
+function d3NumOrNull(val: string): number | null {
   return val === "" ? null : Number(val);
 }
 
-function d3IntOrNull(val): number | null {
+function d3IntOrNull(val: string): number | null {
   return val === "" ? null : +val;
 }
 
-function d3Min(data, c_name): any {
+function d3Min(data: D3DataFrame, c_name: string): any {
   return d3.min(data, function(row: D3Row) { return row[c_name]; });
 }
 
-function d3Max(data, c_name): any {
+function d3Max(data: D3DataFrame, c_name: string): any {
   return d3.max(data, function(row: D3Row) { return row[c_name]; });
 }
 
-function d3Sum(data, c_name): number {
+function d3Sum(data: D3DataFrame, c_name: string): number {
   return d3.sum(data, function(row: D3Row) { return row[c_name]; });
 }
 
-async function readCSV(path, rowAccessor) {
+async function readCSV(path: string, rowAccessor: D3RowAccessor): Promise<D3DataFrame> {
   return await d3.csv(path, rowAccessor);
 }
 
 // Plotting
-function date_tick(d): string {
-  const year = d.getYear() + 1900;  // Accommodating for library's weird year offset
-  const month = d.toDateString().substring(4, 7);
+function date_tick(d: Date): string {
+  const year: number = d.getFullYear();
+  const month: string = d.toDateString().substring(4, 7);
   return `${month} ${year}`;
 }
 
-function time_tick(t): string {
+function time_tick(t: number): string {
   const mins = t % 60;
   const hours = (t - mins) / 60;
   if (hours > 0) {
@@ -307,8 +308,8 @@ function time_tick(t): string {
   return `${mins}m`;
 }
 
-function addTitle(svg, title): void {
-  const width = svg.node().width.animVal.value;
+function addTitle(svg: D3Graph, title: string): void {
+  const width = svg.node()!.width.animVal.value;
   svg.append("text")
     .attr("x", width / 2)
     .attr("y", "1em")
@@ -325,14 +326,23 @@ class RefLineType {
   static Marker = new RefLineType("marker")
   static Threshold = new RefLineType("threshold")
 
-  constructor(name) {
+  constructor(name: string) {
     this.name = name
   }
 }
 
-function addRefLine(svg, label, yMin, yMax, yRef, refLineType): void {
-  const width = svg.node().width.animVal.value;
-  const height = svg.node().height.animVal.value;
+function addRefLine(
+  svg: D3Graph,
+  label: string,
+  yMin: number,
+  yMax: number,
+  yRef: number,
+  refLineType: RefLineType
+): void {
+  const node: SVGSVGElement = svg.node()!;
+
+  const width = node.width.animVal.value;
+  const height = node.height.animVal.value;
   const contentHeight = height - graphMargin - graphMargin;
   const axisBottom = height - graphMargin;
   const yRange = yMax - yMin;
@@ -343,12 +353,13 @@ function addRefLine(svg, label, yMin, yMax, yRef, refLineType): void {
   const labelPosition = refLineRight + 5;
 
   let strokeColour: string;
-  let dashArray: string | null = null;
+  let dashArray: string;
   if (refLineType === RefLineType.Marker) {
     strokeColour = "black";
     dashArray = "3, 2";
   } else if (refLineType === RefLineType.Threshold) {
     strokeColour = "red";
+    dashArray = "";
   } else {
     throw new TypeError(`Unexpected RefLineType: ${refLineType}`);
   }
@@ -370,9 +381,11 @@ function addRefLine(svg, label, yMin, yMax, yRef, refLineType): void {
     .attr("y2", pos);
 }
 
-function addDateXAxis(svg, firstDate: Date, lastDate: Date): void {
-  const width = svg.node().width.animVal.value;
-  const height = svg.node().height.animVal.value;
+function addDateXAxis(svg: D3Graph, firstDate: Date, lastDate: Date): void {
+  const node: SVGSVGElement = svg.node()!;
+
+  const width = node.width.animVal.value;
+  const height = node.height.animVal.value;
   const axisBottom = height - graphMargin;
   const axisTop = height - graphMargin - graphMargin;
 
@@ -402,9 +415,11 @@ function addDateXAxis(svg, firstDate: Date, lastDate: Date): void {
       .attr("y1", -axisTop));
 }
 
-function addLinearYAxis(svg, minVal, maxVal, majorStep, minorStep): void {
-  const width = svg.node().width.animVal.value;
-  const height = svg.node().height.animVal.value;
+function addLinearYAxis(svg: D3Graph, minVal: number, maxVal: number, majorStep: number, minorStep: number): void {
+  const node: SVGSVGElement = svg.node()!;
+
+  const width = node.width.animVal.value;
+  const height = node.height.animVal.value;
   const axisBottom = height - graphMargin;
   const contentWidth = width - graphMargin - graphMargin;
   const y = d3.scaleLinear()
@@ -434,9 +449,11 @@ function addLinearYAxis(svg, minVal, maxVal, majorStep, minorStep): void {
   }
 }
 
-function addLinearTimeYAxis(svg, minTime, maxTime, majorStep, minorStep): void {
-  const width = svg.node().width.animVal.value;
-  const height = svg.node().height.animVal.value;
+function addLinearTimeYAxis(svg: D3Graph, minTime: number, maxTime: number, majorStep: number, minorStep: number): void {
+  const node: SVGSVGElement = svg.node()!;
+
+  const width = node.width.animVal.value;
+  const height = node.height.animVal.value;
   const axisBottom = height - graphMargin;
   const contentWidth = width - graphMargin - graphMargin;
 
@@ -466,7 +483,7 @@ function addLinearTimeYAxis(svg, minTime, maxTime, majorStep, minorStep): void {
       .attr("x1", contentWidth));
 }
 
-function plotWeight(healthMetrics, weightTrendline): D3Graph {
+function plotWeight(healthMetrics: D3DataFrame, weightTrendline: D3DataFrame): D3Graph {
   const minWeight = 180;
   const maxWeight = 305;
   const nDaysToExtrapolate = 100;
@@ -537,7 +554,7 @@ function plotWeight(healthMetrics, weightTrendline): D3Graph {
       .attr("r", 1.5);
 
   // Plot the trendline
-  let valueLine = d3.line()
+  let valueLine = d3.line<D3Row>()
     .x(function (row: D3Row, _) { return x(row["date"]); })
     .y(function (row: D3Row, _) { return y(row["weight(lbs)"]); });
   svg.append("path")
@@ -552,7 +569,7 @@ function plotWeight(healthMetrics, weightTrendline): D3Graph {
   return svg;
 }
 
-function plotWorkoutFrequency(workoutFrequencies): D3Graph {
+function plotWorkoutFrequency(workoutFrequencies: D3DataFrame): D3Graph {
   const minTime = 0;
   const maxTime = 210;
 
@@ -619,7 +636,7 @@ function plotWorkoutFrequency(workoutFrequencies): D3Graph {
       .attr("r", 1.5);
 
   // Plot the trendline
-  let valueLine = d3.line()
+  let valueLine = d3.line<D3Row>()
     .x(function (row: D3Row, _) { return x(row["date"]); })
     .y(function (row: D3Row, _) { return y(row["avg_duration"]); });
   svg.append("path")
@@ -633,7 +650,7 @@ function plotWorkoutFrequency(workoutFrequencies): D3Graph {
   return svg;
 }
 
-function plotHeartRate(healthMetrics, heartRateTrendline): D3Graph {
+function plotHeartRate(healthMetrics: D3DataFrame, heartRateTrendline: D3DataFrame): D3Graph {
   const minHR: number = 45;
   const maxHR: number = 85;
 
@@ -707,7 +724,7 @@ function plotHeartRate(healthMetrics, heartRateTrendline): D3Graph {
       .attr("r", 1.5);
 
   // Plot the trendline
-  let valueLine = d3.line()
+  let valueLine = d3.line<D3Row>()
     .x(function (row: D3Row, _) { return x(row["date"]); })
     .y(function (row: D3Row, _) { return y(row["resting_heart_rate(bpm)"]); });
   svg.append("path")
@@ -723,7 +740,16 @@ function plotHeartRate(healthMetrics, heartRateTrendline): D3Graph {
   return svg;
 }
 
-function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, majorStep): D3Graph {
+function plotBasic(
+  data: D3DataFrame,
+  field: string,
+  title: string,
+  graphId: string,
+  minVal: number,
+  maxVal: number,
+  minorStep: number,
+  majorStep: number,
+): D3Graph {
   // First filter out any null entries
   data = data.filter((row: D3Row) => row[field] !== null);
 
@@ -759,9 +785,9 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
       .attr("r", 1.5);
 
   // Plot the line
-  let valueLine = d3.line()
-    .x(function (d, _) { return x(d["date"]); })
-    .y(function (d, _) { return y(d[field]!); });
+  let valueLine = d3.line<D3Row>()
+    .x(function (row: D3Row, _) { return x(row["date"]); })
+    .y(function (row: D3Row, _) { return y(row[field]!); });
   svg.append("path")
     .style("fill", "none")
     .style("stroke", "steelblue")
@@ -774,7 +800,14 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
 }
 
 // Single-Day Summary
-function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkouts, day: Date | null = null): void {
+function computeSingleDaySummary(
+  walks: D3DataFrame,
+  runs: D3DataFrame,
+  bikes: D3DataFrame,
+  rows: D3DataFrame,
+  weightTrainingWorkouts: D3DataFrame,
+  day: Date | null = null
+): void {
   const summaryTextboxName = "single-day-summary-textbox";
 
   // These should be user-specific when that part gets built out
@@ -809,14 +842,14 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
   textBox.css("display", "flex");
 }
 
-function secondsToHHMM(durationInS): string {
-  let durationInH = Math.floor(durationInS / 3600);
-  let durationInM = `${Math.floor((durationInS % 3600) / 60)}`.padStart(2, "0");
-  durationInS = `${Math.floor((durationInS % 3600) % 60)}`.padStart(2, "0");
-  return `${durationInH}:${durationInM}:${durationInS}`;
+function secondsToHHMM(durationInS: number): string {
+  let durationInH: number = Math.floor(durationInS / 3600);
+  let durationInMStr: string = `${Math.floor((durationInS % 3600) / 60)}`.padStart(2, "0");
+  let durationInSStr: string = `${Math.floor((durationInS % 3600) % 60)}`.padStart(2, "0");
+  return `${durationInH}:${durationInMStr}:${durationInSStr}`;
 }
 
-function buildDailyWalkingSummary(walks, day): string[] {
+function buildDailyWalkingSummary(walks: D3DataFrame, day: Date): string[] {
     let day_as_time = day.getTime();
     walks = walks
       .filter((row: D3Row) => row["date"].getTime() == day_as_time);
@@ -835,7 +868,7 @@ function buildDailyWalkingSummary(walks, day): string[] {
     ];
 }
 
-function buildDailyRunningSummary(runs, day): string[] {
+function buildDailyRunningSummary(runs: D3DataFrame, day: Date): string[] {
   let day_as_time = day.getTime();
   runs = runs
     .filter((row: D3Row) => row["date"].getTime() == day_as_time);
@@ -854,7 +887,7 @@ function buildDailyRunningSummary(runs, day): string[] {
   ];
 }
 
-function buildDailyBikingSummary(bikes, day): string[] {
+function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
   let day_as_time = day.getTime();
   bikes = bikes
     .filter((row: D3Row) => row["date"].getTime() == day_as_time);
@@ -874,7 +907,7 @@ function buildDailyBikingSummary(bikes, day): string[] {
   ];
 }
 
-function buildDailyRowingSummary(rows, day): string[] {
+function buildDailyRowingSummary(rows: D3DataFrame, day: Date): string[] {
   let day_as_time: number = day.getTime();
   rows = rows
     .filter((row: D3Row) => row["date"].getTime() == day_as_time);
@@ -895,7 +928,7 @@ function buildDailyRowingSummary(rows, day): string[] {
   ];
 }
 
-function buildDailyLiftingSummary(weightTrainingWorkouts, day): string[] {
+function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date): string[] {
   const day_as_time = day.getTime();
   weightTrainingWorkouts = weightTrainingWorkouts
     .filter((row: D3Row) => row["date"].getTime() == day_as_time);
@@ -913,19 +946,19 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day): string[] {
 
 (async function() {
   // Load data
-  const healthMetrics = await loadHealthMetrics();
-  const walks = await loadWalks();
-  const runs = await loadRuns();
-  const bikes = await loadBikes();
-  const rows = await loadRows();
-  const weight_training_workouts = await loadWeightTrainingWorkouts();
+  const healthMetrics: D3DataFrame = await loadHealthMetrics();
+  const walks: D3DataFrame = await loadWalks();
+  const runs: D3DataFrame = await loadRuns();
+  const bikes: D3DataFrame = await loadBikes();
+  const rows: D3DataFrame = await loadRows();
+  const weight_training_workouts: D3DataFrame = await loadWeightTrainingWorkouts();
   //const weight_training_sets = readCSV(`${base_data_path}/weight_training_sets.csv`);
   //const travel_days = readCSV(`${base_data_path}/travel_days.csv`);
 
   // Load predictions
-  const weightTrendline = await loadWeightTrendline();
-  const workoutFrequency = await loadWorkoutFrequency();
-  const heartRateTrendline = await loadHeartRateTrendline();
+  const weightTrendline: D3DataFrame = await loadWeightTrendline();
+  const workoutFrequency: D3DataFrame = await loadWorkoutFrequency();
+  const heartRateTrendline: D3DataFrame = await loadHeartRateTrendline();
 
   // Populate the default contents of the single-day summary
   computeSingleDaySummary(

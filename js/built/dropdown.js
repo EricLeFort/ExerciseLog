@@ -4,65 +4,63 @@ const extraChartContainerId = "extra-chart-container";
 const baseImgPath = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/img";
 const dropdownClassName = "dropdown";
 const dropdownMenuClassName = "dropdown-menu";
-const extraChartsMenuData = [
-    {
-        "name": "Experimental...",
-        "submenu": [
-            { "name": "Walk Scores" },
-            { "name": "BPMC (Beats Per Metre Climbed)" },
-            { "name": "BPMM (Beats Per Metre Moved)" },
-        ]
-    }, {
-        "name": "Health...",
-        "submenu": [
-            { "name": "TK" },
-        ],
-    }, {
-        "name": "Endurance...",
-        "submenu": [
-            { "name": "TK" },
-        ],
-    }, {
-        "name": "Strength...",
-        "submenu": [
-            { "name": "Arnold Press" },
-            { "name": "Barbell Lunges" },
-            { "name": "Bench Press" },
-            { "name": "Bicep Curl" },
-            { "name": "Cable Lying Hip Flexors" },
-            { "name": "Arnold Press" },
-            { "name": "Barbell Lunges" },
-            { "name": "Bench Press" },
-            { "name": "Bicep Curl" },
-            { "name": "Cable Lying Hip Flexors" },
-            { "name": "Concentration Curl" },
-            { "name": "Deadlift" },
-            { "name": "Delt Flies" },
-            { "name": "Hammer Curl" },
-            { "name": "Incline Dumbbell Bench Press" },
-            { "name": "Lat Pulldown" },
-            { "name": "Lateral Lift" },
-            { "name": "Lawnmowers" },
-            { "name": "Machine Hip Abductors" },
-            { "name": "Machine Hip Adductors" },
-            { "name": "Machine Pec Flies" },
-            { "name": "Military Press" },
-            { "name": "Overhead Tricep Extension" },
-            { "name": "Pullovers" },
-            { "name": "Seated Row" },
-            { "name": "Shrugs" },
-            { "name": "Single-Arm Farmer's Carry" },
-            { "name": "Single-Leg Leg Curl" },
-            { "name": "Skullcrushers" },
-            { "name": "Squats" },
-            { "name": "Strict Press" },
-            { "name": "Tricep Pushdown" },
-            { "name": "Tricep Pushdown (V-Bar)" },
-            { "name": "Wide-Grip Pull-Up" },
-        ],
-    },
-];
+class MenuData {
+    constructor(name, submenus) {
+        this.name = name;
+        this.submenus = submenus;
+    }
+}
+const experimentalSubmenuData = new MenuData("Experimental...", [
+    "Walk Scores",
+    "BPMC (Beats Per Metre Climbed)",
+    "BPMM (Beats Per Metre Moved)",
+]);
+const healthSubmenuData = new MenuData("Health...", ["TK"]);
+const enduranceSubmenuData = new MenuData("Endurance...", ["TK"]);
+const strengthSubmenuData = new MenuData("Strength...", [
+    "Arnold Press",
+    "Barbell Lunges",
+    "Bench Press",
+    "Bicep Curl",
+    "Cable Lying Hip Flexors",
+    "Arnold Press",
+    "Barbell Lunges",
+    "Bench Press",
+    "Bicep Curl",
+    "Cable Lying Hip Flexors",
+    "Concentration Curl",
+    "Deadlift",
+    "Delt Flies",
+    "Hammer Curl",
+    "Incline Dumbbell Bench Press",
+    "Lat Pulldown",
+    "Lateral Lift",
+    "Lawnmowers",
+    "Machine Hip Abductors",
+    "Machine Hip Adductors",
+    "Machine Pec Flies",
+    "Military Press",
+    "Overhead Tricep Extension",
+    "Pullovers",
+    "Seated Row",
+    "Shrugs",
+    "Single-Arm Farmer's Carry",
+    "Single-Leg Leg Curl",
+    "Skullcrushers",
+    "Squats",
+    "Strict Press",
+    "Tricep Pushdown",
+    "Tricep Pushdown (V-Bar)",
+    "Wide-Grip Pull-Up",
+]);
+const extraChartsMenuData = new MenuData("", [
+    experimentalSubmenuData,
+    healthSubmenuData,
+    enduranceSubmenuData,
+    strengthSubmenuData,
+]);
 const extraChartsIdMap = {
+    "": "",
     "Walk Scores": "walk-scores-chart",
     "BPMC (Beats Per Metre Climbed)": "bpmc-chart",
     "BPMM (Beats Per Metre Moved)": "bpmm-chart",
@@ -97,7 +95,7 @@ const extraChartsIdMap = {
     "Tricep Pushdown (V-Bar)": "tricep-pushdown-v-bar-chart",
     "Wide-Grip Pull-Up": "wide-grip-pull-up-chart",
 };
-var firstSubMenus;
+let submenuRoots;
 function attachListeners() {
     $(".dropdown").on("click", function () {
         if ($(this).hasClass("closing")) {
@@ -106,7 +104,7 @@ function attachListeners() {
         else if (!$(this).hasClass("active")) {
             $(this).attr("tabindex", 1).focus();
             $(this).toggleClass("active");
-            var ddMenu = $(this).find(".dropdown-menu");
+            let ddMenu = $(this).find(".dropdown-menu");
             ddMenu.slideToggle(100);
             ddMenu.css("display", "block");
             ddMenu.children("li").css("display", "block");
@@ -114,9 +112,9 @@ function attachListeners() {
     });
     $(".dropdown .dropdown-menu li").on("click", function () {
         if ($(this).hasClass("dropdown-leaf")) {
-            var dropdown = $(this).parents(".dropdown");
+            let dropdown = $(this).parents(".dropdown");
             dropdown.find("span").text($(this).children("x").text());
-            var ddInput = dropdown.find("input");
+            let ddInput = dropdown.find("input");
             setActiveExtraChart(ddInput.attr("value"), $(this).attr("id"));
             ddInput.attr("value", $(this).attr("id"));
             dropdown.addClass("closing");
@@ -134,20 +132,26 @@ function attachListeners() {
     });
 }
 function setActiveExtraChart(oldChartName, newChartName) {
-    var oldChartId = extraChartsIdMap[oldChartName];
-    var newChartId = extraChartsIdMap[newChartName];
+    if (!(oldChartName in extraChartsIdMap)) {
+        throw new Error(`Unrecognized old chart name: ${oldChartName}`);
+    }
+    else if (!(newChartName in extraChartsIdMap)) {
+        throw new Error(`Unrecognized new chart name: ${newChartName}`);
+    }
+    let oldChartId = extraChartsIdMap[oldChartName];
+    let newChartId = extraChartsIdMap[newChartName];
     if (oldChartId) {
-        var oldChart = $(document).find(`#${oldChartId}`);
+        let oldChart = $(document).find(`#${oldChartId}`);
         oldChart.css("display", "none");
     }
-    var newChart = $(document).find(`#${newChartId}`);
+    let newChart = $(document).find(`#${newChartId}`);
     if (newChart.length === 0) {
         loadStrengthChart(newChartName, newChartId);
     }
     newChart.css("display", "block");
 }
 function loadStrengthChart(chartName, chartId) {
-    var img = $(document.createElement("img"));
+    let img = $(document.createElement("img"));
     img.attr("id", chartId);
     img.css("display", "block");
     img.css("margin", "0 auto");
@@ -156,7 +160,7 @@ function loadStrengthChart(chartName, chartId) {
     $(`#${extraChartContainerId}`).append(img);
 }
 function hideAll() {
-    var ddMenu = $(document).find(".dropdown .dropdown-menu");
+    let ddMenu = $(document).find(".dropdown .dropdown-menu");
     ddMenu.css("display", "none");
     ddMenu.find("ul").css("display", "none");
     ddMenu.find("li").css("display", "none");
@@ -166,38 +170,38 @@ function closeDropdown() {
     $(document).find(".dropdown .dropdown-menu").slideUp(100);
     $(document).find(".dropdown").removeClass("active");
 }
-function initFirstSubMenus() {
-    var dropdowns = document.getElementsByClassName(dropdownClassName);
-    firstSubMenus = new Array(dropdowns.length);
-    for (var i = 0; i < dropdowns.length; i++) {
-        var candidate = dropdowns[i].getElementsByClassName(dropdownMenuClassName);
+function initsubmenuRoots() {
+    let dropdowns = document.getElementsByClassName(dropdownClassName);
+    submenuRoots = [];
+    for (const dropdown of dropdowns) {
+        let candidate = dropdown.getElementsByClassName(dropdownMenuClassName);
         if (candidate.length !== 1) {
             throw new Error("Detected invalid dropdown structure.");
         }
-        firstSubMenus[i] = candidate[0];
+        submenuRoots.push(candidate[0]);
     }
 }
 function parseMenu() {
-    for (var i = 0; i < firstSubMenus.length; i++) {
-        parseSubMenu(firstSubMenus[i], extraChartsMenuData);
+    for (const submenuRoot of submenuRoots) {
+        parseSubMenu(submenuRoot, extraChartsMenuData);
     }
 }
-function parseSubMenu(listElement, data) {
-    for (var i = 0; i < data.length; i++) {
-        var nestedli = document.createElement("li");
+function parseSubMenu(listElement, menuData) {
+    for (const submenuData of menuData.submenus) {
+        let isLeaf = typeof submenuData === "string" || submenuData instanceof String;
+        let name = isLeaf ? submenuData : submenuData.name;
+        let className = isLeaf ? "dropdown-leaf" : "dropdown-branch";
+        let nestedli = document.createElement("li");
         nestedli.setAttribute("style", "display: none;");
-        nestedli.setAttribute("id", data[i].name);
-        var link = document.createElement("x");
-        link.appendChild(document.createTextNode(data[i].name));
+        nestedli.setAttribute("id", name);
+        nestedli.setAttribute("class", className);
+        let link = document.createElement("x");
+        link.appendChild(document.createTextNode(name));
         nestedli.appendChild(link);
-        if (data[i].submenu != null) {
-            nestedli.setAttribute("class", "dropdown-branch");
-            var subListElement = document.createElement("ul");
+        if (!isLeaf) {
+            let subListElement = document.createElement("ul");
             nestedli.appendChild(subListElement);
-            parseSubMenu(subListElement, data[i].submenu);
-        }
-        else {
-            nestedli.setAttribute("class", "dropdown-leaf");
+            parseSubMenu(subListElement, submenuData);
         }
         listElement.appendChild(nestedli);
     }
@@ -211,7 +215,7 @@ function hideNodes(element) {
     $(element).find("li").css("display", "none");
 }
 window.onload = function () {
-    initFirstSubMenus();
+    initsubmenuRoots();
     parseMenu();
     attachListeners();
 };

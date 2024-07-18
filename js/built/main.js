@@ -186,11 +186,11 @@ async function loadHeartRateTrendline() {
     return await readCSV(`${pred_data_path}/resting_heart_rate_trendline.csv`, rowAccessor);
 }
 function nth(day) {
-    day = day.getDate();
-    if (day > 3 && day < 21) {
+    let day_num = day.getDate();
+    if (day_num > 3 && day_num < 21) {
         return "th";
     }
-    switch (day % 10) {
+    switch (day_num % 10) {
         case 1:
             return "st";
         case 2:
@@ -206,9 +206,9 @@ function month_day_nth(day) {
     const month = day.toLocaleString("default", { month: "long" });
     return `${month} ${day.getDate()}${nth(day)}`;
 }
-Date.prototype.addDays = function (days) {
+Date.prototype.addDays = function (num_days) {
     const date = new Date(this.valueOf());
-    date.setDate(date.getDate() + days);
+    date.setDate(date.getDate() + num_days);
     return date;
 };
 function durationToS(durationStr) {
@@ -242,7 +242,7 @@ async function readCSV(path, rowAccessor) {
     return await d3.csv(path, rowAccessor);
 }
 function date_tick(d) {
-    const year = d.getYear() + 1900;
+    const year = d.getFullYear();
     const month = d.toDateString().substring(4, 7);
     return `${month} ${year}`;
 }
@@ -271,8 +271,9 @@ class RefLineType {
 RefLineType.Marker = new RefLineType("marker");
 RefLineType.Threshold = new RefLineType("threshold");
 function addRefLine(svg, label, yMin, yMax, yRef, refLineType) {
-    const width = svg.node().width.animVal.value;
-    const height = svg.node().height.animVal.value;
+    const node = svg.node();
+    const width = node.width.animVal.value;
+    const height = node.height.animVal.value;
     const contentHeight = height - graphMargin - graphMargin;
     const axisBottom = height - graphMargin;
     const yRange = yMax - yMin;
@@ -281,13 +282,14 @@ function addRefLine(svg, label, yMin, yMax, yRef, refLineType) {
     const refLineRight = width - graphMargin;
     const labelPosition = refLineRight + 5;
     let strokeColour;
-    let dashArray = null;
+    let dashArray;
     if (refLineType === RefLineType.Marker) {
         strokeColour = "black";
         dashArray = "3, 2";
     }
     else if (refLineType === RefLineType.Threshold) {
         strokeColour = "red";
+        dashArray = "";
     }
     else {
         throw new TypeError(`Unexpected RefLineType: ${refLineType}`);
@@ -309,8 +311,9 @@ function addRefLine(svg, label, yMin, yMax, yRef, refLineType) {
         .attr("y2", pos);
 }
 function addDateXAxis(svg, firstDate, lastDate) {
-    const width = svg.node().width.animVal.value;
-    const height = svg.node().height.animVal.value;
+    const node = svg.node();
+    const width = node.width.animVal.value;
+    const height = node.height.animVal.value;
     const axisBottom = height - graphMargin;
     const axisTop = height - graphMargin - graphMargin;
     const x = d3.scaleUtc()
@@ -335,8 +338,9 @@ function addDateXAxis(svg, firstDate, lastDate) {
         .attr("y1", -axisTop));
 }
 function addLinearYAxis(svg, minVal, maxVal, majorStep, minorStep) {
-    const width = svg.node().width.animVal.value;
-    const height = svg.node().height.animVal.value;
+    const node = svg.node();
+    const width = node.width.animVal.value;
+    const height = node.height.animVal.value;
     const axisBottom = height - graphMargin;
     const contentWidth = width - graphMargin - graphMargin;
     const y = d3.scaleLinear()
@@ -362,8 +366,9 @@ function addLinearYAxis(svg, minVal, maxVal, majorStep, minorStep) {
     }
 }
 function addLinearTimeYAxis(svg, minTime, maxTime, majorStep, minorStep) {
-    const width = svg.node().width.animVal.value;
-    const height = svg.node().height.animVal.value;
+    const node = svg.node();
+    const width = node.width.animVal.value;
+    const height = node.height.animVal.value;
     const axisBottom = height - graphMargin;
     const contentWidth = width - graphMargin - graphMargin;
     const y = d3.scaleLinear()
@@ -629,8 +634,8 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
         .attr("cy", (row) => y(row[field]))
         .attr("r", 1.5);
     let valueLine = d3.line()
-        .x(function (d, _) { return x(d["date"]); })
-        .y(function (d, _) { return y(d[field]); });
+        .x(function (row, _) { return x(row["date"]); })
+        .y(function (row, _) { return y(row[field]); });
     svg.append("path")
         .style("fill", "none")
         .style("stroke", "steelblue")
@@ -665,9 +670,9 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
 }
 function secondsToHHMM(durationInS) {
     let durationInH = Math.floor(durationInS / 3600);
-    let durationInM = `${Math.floor((durationInS % 3600) / 60)}`.padStart(2, "0");
-    durationInS = `${Math.floor((durationInS % 3600) % 60)}`.padStart(2, "0");
-    return `${durationInH}:${durationInM}:${durationInS}`;
+    let durationInMStr = `${Math.floor((durationInS % 3600) / 60)}`.padStart(2, "0");
+    let durationInSStr = `${Math.floor((durationInS % 3600) % 60)}`.padStart(2, "0");
+    return `${durationInH}:${durationInMStr}:${durationInSStr}`;
 }
 function buildDailyWalkingSummary(walks, day) {
     let day_as_time = day.getTime();
