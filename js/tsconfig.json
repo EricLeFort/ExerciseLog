@@ -6,7 +6,6 @@
     "removeComments": true,
     "baseUrl": "./",
 
-    // TODO (ericlefort): uncomment the rest of these (and apply necessary fixes)
     // Strict Checks
     "alwaysStrict": true,
     "allowUnreachableCode": false,

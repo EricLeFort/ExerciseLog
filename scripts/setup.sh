@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Setup the git config for this projct
 git config core.hooksPath .githooks
 
@@ -14,11 +16,25 @@ python3 -m pip install -r requirements.txt
 deactivate
 
 # Node.js setup
-curl -fsSL https://fnm.vercel.app/install | bash
-fnm use --install-if-missing 20
+if ! command -v node &> /dev/null; then
+    curl -fsSL https://fnm.vercel.app/install | bash
+    fnm use --install-if-missing 20
+else
+    echo "Node already installed."
+fi
+
+# Open source is great but goddamn this output adds so much damn clutter
+npm config set fund false
 
 # Install relevant node packages
-npm install -g npm
-npm install -g typescript
-npm install --save @types/d3
-npm install --save @types/jquery
+declare -a NODE_PACKAGES=(
+    "npm"
+    "typescript"
+    "eslint@8.56.x"
+    "typescript-eslint"
+    "@eslint/js"
+    "@types/d3"
+    "@types/jquery"
+    "@types/eslint__js"
+)
+npm install "${NODE_PACKAGES[@]}"

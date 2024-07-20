@@ -1,6 +1,7 @@
 # TODO
 
 ## Low-Hanging Fruit
+* Move language-specific configs into the proper subdirectory (e.g. requirements.txt should be in python/, package.json should be in js/)
 * Extract shared structural information
 
 ## Most Important
