@@ -13,7 +13,7 @@ cd ${THIS_SCRIPT_DIR}/../js
 
 # Always make sure they compile. This might be annoying but it's for a good cause.
 tsc
-# npx eslint .
+npx eslint src
 
 # Check for any staged ts changes
 MODIFIED_TS=()

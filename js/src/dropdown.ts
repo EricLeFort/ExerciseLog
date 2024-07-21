@@ -2,13 +2,13 @@
  * TODO (low priority)
  * This entire class assumes there's a single dropdown on the page. It should be extended to handle multiple.
  */
+const extraChartContainerId = "extra-chart-container";
 
-const extraChartDropdownId: string = "extra-chart-dropdown";
-const extraChartContainerId: string = "extra-chart-container";
+const baseImgPath = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/img"
+const dropdownClassName = "dropdown";
+const dropdownMenuClassName = "dropdown-menu";
 
-const baseImgPath: string = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/img"
-const dropdownClassName: string = "dropdown";
-const dropdownMenuClassName: string = "dropdown-menu";
+const notFoundStr = "not-a-node";
 
 class MenuData {
     name: string;
@@ -77,7 +77,7 @@ const strengthSubmenuData = new MenuData(
     ],
 );
 const extraChartsMenuData = new MenuData(
-    "",
+    notFoundStr,
     [
         experimentalSubmenuData,
         healthSubmenuData,
@@ -87,7 +87,7 @@ const extraChartsMenuData = new MenuData(
 );
 
 const extraChartsIdMap: Record<string, string> = {
-    "": "",
+    [notFoundStr]: notFoundStr,
     "Walk Scores": "walk-scores-chart",
     "BPMC (Beats Per Metre Climbed)": "bpmc-chart",
     "BPMM (Beats Per Metre Moved)": "bpmm-chart",
@@ -137,7 +137,7 @@ function attachListeners() {
         } else if (!$(this).hasClass("active")) {
             $(this).attr("tabindex", 1).focus();
             $(this).toggleClass("active");
-            let ddMenu = $(this).find(".dropdown-menu");
+            const ddMenu = $(this).find(".dropdown-menu");
             ddMenu.slideToggle(100);
             ddMenu.css("display", "block");
             ddMenu.children("li").css("display", "block");
@@ -145,11 +145,11 @@ function attachListeners() {
     });
     $(".dropdown .dropdown-menu li").on("click", function () {
         if ($(this).hasClass("dropdown-leaf")) {
-            let dropdown = $(this).parents(".dropdown");
+            const dropdown = $(this).parents(".dropdown");
             dropdown.find("span").text($(this).children("x").text());
-            let ddInput = dropdown.find("input");
-            setActiveExtraChart(ddInput.attr("value")!, $(this).attr("id")!);
-            ddInput.attr("value", $(this).attr("id")!);
+            const ddInput = dropdown.find("input");
+            setActiveExtraChart(ddInput.attr("value") || notFoundStr, $(this).attr("id") || notFoundStr);
+            ddInput.attr("value", $(this).attr("id") || notFoundStr);
             dropdown.addClass("closing");
             hideAll();
         }
@@ -174,14 +174,14 @@ function setActiveExtraChart(oldChartName: string, newChartName: string): void {
     } else if (!(newChartName in extraChartsIdMap)) {
         throw new Error(`Unrecognized new chart name: ${newChartName}`);
     }
-    let oldChartId: string = extraChartsIdMap[oldChartName]!;
-    let newChartId: string = extraChartsIdMap[newChartName]!;
+    const oldChartId: string = extraChartsIdMap[oldChartName] || notFoundStr;
+    const newChartId: string = extraChartsIdMap[newChartName] || notFoundStr;
 
     if (oldChartId) {
-        let oldChart = $(document).find(`#${oldChartId}`);
+        const oldChart = $(document).find(`#${oldChartId}`);
         oldChart.css("display", "none");
     }
-    let newChart = $(document).find(`#${newChartId}`);
+    const newChart = $(document).find(`#${newChartId}`);
     // Haven't loaded this chart yet, download it
     if (newChart.length === 0) {
         // TODO this assumes every unloaded chart is a strenght chart but that won't always be true;
@@ -192,7 +192,7 @@ function setActiveExtraChart(oldChartName: string, newChartName: string): void {
 }
 
 function loadStrengthChart(chartName: string, chartId: string): void {
-    let img = $(document.createElement("img"));
+    const img = $(document.createElement("img"));
     img.attr("id", chartId);
     img.css("display", "block");
     img.css("margin", "0 auto");
@@ -205,7 +205,7 @@ function loadStrengthChart(chartName: string, chartId: string): void {
  * Hides all the nested ul's and li's in the dropdown
  */
 function hideAll(): void {
-    let ddMenu = $(document).find(".dropdown .dropdown-menu");
+    const ddMenu = $(document).find(".dropdown .dropdown-menu");
     ddMenu.css("display", "none");
     ddMenu.find("ul").css("display", "none");
     ddMenu.find("li").css("display", "none");
@@ -224,14 +224,14 @@ function closeDropdown(): void {
  * Gets the first submenu of every dropdown on the page
  */
 function initsubmenuRoots(): void {
-    let dropdowns: HTMLCollection = document.getElementsByClassName(dropdownClassName);
+    const dropdowns: HTMLCollection = document.getElementsByClassName(dropdownClassName);
     submenuRoots = [];
     for (const dropdown of dropdowns) {
-        let candidate = dropdown.getElementsByClassName(dropdownMenuClassName);
-        if (candidate.length !== 1) {
+        const candidate = dropdown.getElementsByClassName(dropdownMenuClassName);
+        if (!candidate[0]) {
             throw new Error("Detected invalid dropdown structure.");
         }
-        submenuRoots.push(candidate[0]!);
+        submenuRoots.push(candidate[0]);
     }
 }
 
@@ -249,20 +249,20 @@ function parseMenu(): void {
  */
 function parseSubMenu(listElement: Element, menuData: MenuData): void {
     for (const submenuData of menuData.submenus) {
-        let isLeaf: boolean = typeof submenuData === "string" || submenuData instanceof String;
-        let name: string = isLeaf ? submenuData as string : (submenuData as MenuData).name;
-        let className: string = isLeaf ? "dropdown-leaf" : "dropdown-branch";
+        const isLeaf: boolean = typeof submenuData === "string" || submenuData instanceof String;
+        const name: string = isLeaf ? submenuData as string : (submenuData as MenuData).name;
+        const className: string = isLeaf ? "dropdown-leaf" : "dropdown-branch";
 
-        let nestedli: Element = document.createElement("li");
+        const nestedli: Element = document.createElement("li");
         nestedli.setAttribute("style", "display: none;");
         nestedli.setAttribute("id", name);
         nestedli.setAttribute("class", className);
-        let link: Element = document.createElement("x");
+        const link: Element = document.createElement("x");
         link.appendChild(document.createTextNode(name));
         nestedli.appendChild(link);
 
         if (!isLeaf) {
-            let subListElement: Element = document.createElement("ul");
+            const subListElement: Element = document.createElement("ul");
             nestedli.appendChild(subListElement);
             parseSubMenu(subListElement, submenuData as MenuData);
         }

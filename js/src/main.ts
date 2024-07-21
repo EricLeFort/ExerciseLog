@@ -1,29 +1,33 @@
-type D3Graph = d3.Selection<SVGSVGElement, undefined, HTMLElement | null, any>;
+// TODO (ericlefort): remove this
+/* eslint-disable @typescript-eslint/no-explicit-any */
+type D3Graph = d3.Selection<SVGSVGElement, undefined, null, any>;
 type D3Row = Record<string, any>;
 type D3DataFrame = D3Row[];
 type D3RowAccessor = (row: D3Row) => any;
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
-const base_data_path: string = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/data"
-const pred_data_path: string = `${base_data_path}/preds`
-const graphMargin: number = 100;
-const graphWidth: number = 1600;
-const graphHeight: number = 900;
+const base_data_path = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/data"
+const pred_data_path = `${base_data_path}/preds`
+const graphMargin = 100;
+const graphWidth = 1600;
+const graphHeight = 900;
 
-const legendSpacing: number = 150;
-const legendHeight: string = "5em";
-const legendIconHeight: string = "3.75em";
+const legendSpacing = 150;
+const legendHeight = "5em";
+const legendIconHeight = "3.75em";
 
-const lineStrokeWidth: number = 2;
+const lineStrokeWidth = 2;
 
-const weightGraphId: string = "graph-weight";
-const workoutFrequencyGraphId: string = "graph-workout-frequency";
-const heartRateGraphId: string = "graph-resting-heartrate";
+const extraChartDropdownId = "extra-chart-dropdown";
+const weightGraphId = "graph-weight";
+const workoutFrequencyGraphId = "graph-workout-frequency";
+const heartRateGraphId = "graph-resting-heartrate";
 
-const secondaryGraphClassName: string = "secondary-chart";
-const bpmcField: string = "bpmc(beats_per_metre_climbed)";
-const bpmmField: string = "bpmm(beats_per_metre_moved)";
+const secondaryGraphClassName = "secondary-chart";
+const bpmcField = "bpmc(beats_per_metre_climbed)";
+const bpmmField = "bpmm(beats_per_metre_moved)";
 
-const bullet: string = "\u2022";
+const bullet = "\u2022";
 
 // Data loading computed metrics
 function computeWalkScore(row: D3Row, durationInS: number): number {
@@ -77,6 +81,7 @@ function getNumBeats(row: D3Row, durationInS: number): number {
 // Data loading
 // TODO make separate dataloading module for this logic
 // TODO also add the rest of the relevant loaders
+// TODO also add specific types for each dataset to avoid using "any"
 async function loadHealthMetrics(): Promise<D3DataFrame> {
   function rowAccessor(r: D3Row) {
     return {
@@ -221,7 +226,7 @@ async function loadHeartRateTrendline(): Promise<D3DataFrame> {
 
 // Utilities
 function nth(day: Date): string {
-  let day_num = day.getDate();
+  const day_num = day.getDate();
   if (day_num > 3 && day_num < 21) {
     return "th";
   }
@@ -253,8 +258,8 @@ Date.prototype.addDays = function(num_days: number) {
 }
 
 function durationToS(durationStr: string): number {
-  const hoursToS: number = 60 * 60;
-  const minsToS: number = 60;
+  const hoursToS = 60 * 60;
+  const minsToS = 60;
   const pieces: string[] = durationStr.split(":")
   if (pieces.length != 3) {
     // TODO (ericlefort): No ValueError or InvalidArgumentError? Really JS? Gotta add my own..
@@ -276,6 +281,8 @@ function d3IntOrNull(val: string): number | null {
   return val === "" ? null : +val;
 }
 
+// TODO (ericlefort): remove this
+/* eslint-disable @typescript-eslint/no-explicit-any */
 function d3Min(data: D3DataFrame, c_name: string): any {
   return d3.min(data, function(row: D3Row) { return row[c_name]; });
 }
@@ -283,6 +290,7 @@ function d3Min(data: D3DataFrame, c_name: string): any {
 function d3Max(data: D3DataFrame, c_name: string): any {
   return d3.max(data, function(row: D3Row) { return row[c_name]; });
 }
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
 function d3Sum(data: D3DataFrame, c_name: string): number {
   return d3.sum(data, function(row: D3Row) { return row[c_name]; });
@@ -309,7 +317,11 @@ function time_tick(t: number): string {
 }
 
 function addTitle(svg: D3Graph, title: string): void {
-  const width = svg.node()!.width.animVal.value;
+  const node: SVGSVGElement | null = svg.node();
+  if (node == null) {
+    throw new Error("Encountered null SVG node when adding title.");
+  }
+  const width = node.width.animVal.value;
   svg.append("text")
     .attr("x", width / 2)
     .attr("y", "1em")
@@ -318,13 +330,10 @@ function addTitle(svg: D3Graph, title: string): void {
     .text(title);
 }
 
-interface RefLineType {
-  name: string;
-}
-
 class RefLineType {
   static Marker = new RefLineType("marker")
   static Threshold = new RefLineType("threshold")
+  name: string;
 
   constructor(name: string) {
     this.name = name
@@ -339,7 +348,10 @@ function addRefLine(
   yRef: number,
   refLineType: RefLineType
 ): void {
-  const node: SVGSVGElement = svg.node()!;
+  const node: SVGSVGElement | null = svg.node();
+  if (node == null) {
+    throw new Error("Encountered null SVG node when adding reference line.");
+  }
 
   const width = node.width.animVal.value;
   const height = node.height.animVal.value;
@@ -382,7 +394,10 @@ function addRefLine(
 }
 
 function addDateXAxis(svg: D3Graph, firstDate: Date, lastDate: Date): void {
-  const node: SVGSVGElement = svg.node()!;
+  const node: SVGSVGElement | null = svg.node();
+  if (node == null) {
+    throw new Error("Encountered null SVG node when adding date-based x-axis.");
+  }
 
   const width = node.width.animVal.value;
   const height = node.height.animVal.value;
@@ -416,7 +431,10 @@ function addDateXAxis(svg: D3Graph, firstDate: Date, lastDate: Date): void {
 }
 
 function addLinearYAxis(svg: D3Graph, minVal: number, maxVal: number, majorStep: number, minorStep: number): void {
-  const node: SVGSVGElement = svg.node()!;
+  const node: SVGSVGElement | null = svg.node();
+  if (node == null) {
+    throw new Error("Encountered null SVG node when adding linear y-axis.");
+  }
 
   const width = node.width.animVal.value;
   const height = node.height.animVal.value;
@@ -450,7 +468,10 @@ function addLinearYAxis(svg: D3Graph, minVal: number, maxVal: number, majorStep:
 }
 
 function addLinearTimeYAxis(svg: D3Graph, minTime: number, maxTime: number, majorStep: number, minorStep: number): void {
-  const node: SVGSVGElement = svg.node()!;
+  const node: SVGSVGElement | null = svg.node();
+  if (node == null) {
+    throw new Error("Encountered null SVG node when adding time-based y-axis.");
+  }
 
   const width = node.width.animVal.value;
   const height = node.height.animVal.value;
@@ -554,7 +575,7 @@ function plotWeight(healthMetrics: D3DataFrame, weightTrendline: D3DataFrame): D
       .attr("r", 1.5);
 
   // Plot the trendline
-  let valueLine = d3.line<D3Row>()
+  const valueLine = d3.line<D3Row>()
     .x(function (row: D3Row, _) { return x(row["date"]); })
     .y(function (row: D3Row, _) { return y(row["weight(lbs)"]); });
   svg.append("path")
@@ -636,7 +657,7 @@ function plotWorkoutFrequency(workoutFrequencies: D3DataFrame): D3Graph {
       .attr("r", 1.5);
 
   // Plot the trendline
-  let valueLine = d3.line<D3Row>()
+  const valueLine = d3.line<D3Row>()
     .x(function (row: D3Row, _) { return x(row["date"]); })
     .y(function (row: D3Row, _) { return y(row["avg_duration"]); });
   svg.append("path")
@@ -651,8 +672,8 @@ function plotWorkoutFrequency(workoutFrequencies: D3DataFrame): D3Graph {
 }
 
 function plotHeartRate(healthMetrics: D3DataFrame, heartRateTrendline: D3DataFrame): D3Graph {
-  const minHR: number = 45;
-  const maxHR: number = 85;
+  const minHR = 45;
+  const maxHR = 85;
 
   const firstDate: Date = new Date(d3Min(heartRateTrendline, "date"));
   const lastDate: Date = new Date(d3Max(heartRateTrendline, "date"));
@@ -724,7 +745,7 @@ function plotHeartRate(healthMetrics: D3DataFrame, heartRateTrendline: D3DataFra
       .attr("r", 1.5);
 
   // Plot the trendline
-  let valueLine = d3.line<D3Row>()
+  const valueLine = d3.line<D3Row>()
     .x(function (row: D3Row, _) { return x(row["date"]); })
     .y(function (row: D3Row, _) { return y(row["resting_heart_rate(bpm)"]); });
   svg.append("path")
@@ -785,9 +806,9 @@ function plotBasic(
       .attr("r", 1.5);
 
   // Plot the line
-  let valueLine = d3.line<D3Row>()
+  const valueLine = d3.line<D3Row>()
     .x(function (row: D3Row, _) { return x(row["date"]); })
-    .y(function (row: D3Row, _) { return y(row[field]!); });
+    .y(function (row: D3Row, _) { return y(row[field]); });
   svg.append("path")
     .style("fill", "none")
     .style("stroke", "steelblue")
@@ -837,30 +858,30 @@ function computeSingleDaySummary(
   }
 
   // Add the generated summary text to the textbox
-  let textBox = $(`#${summaryTextboxName}`);
+  const textBox = $(`#${summaryTextboxName}`);
   textBox.text(lines.join("\n") +  "\n ");
   textBox.css("display", "flex");
 }
 
 function secondsToHHMM(durationInS: number): string {
-  let durationInH: number = Math.floor(durationInS / 3600);
-  let durationInMStr: string = `${Math.floor((durationInS % 3600) / 60)}`.padStart(2, "0");
-  let durationInSStr: string = `${Math.floor((durationInS % 3600) % 60)}`.padStart(2, "0");
+  const durationInH: number = Math.floor(durationInS / 3600);
+  const durationInMStr: string = `${Math.floor((durationInS % 3600) / 60)}`.padStart(2, "0");
+  const durationInSStr: string = `${Math.floor((durationInS % 3600) % 60)}`.padStart(2, "0");
   return `${durationInH}:${durationInMStr}:${durationInSStr}`;
 }
 
 function buildDailyWalkingSummary(walks: D3DataFrame, day: Date): string[] {
-    let day_as_time = day.getTime();
+    const day_as_time = day.getTime();
     walks = walks
       .filter((row: D3Row) => row["date"].getTime() == day_as_time);
     if (walks.length == 0) {
       return [];
     }
 
-    let durationInS = d3Sum(walks, "duration(s)");
-    let dist = d3Sum(walks, "distance(km)").toFixed(1);
-    let elv = d3Sum(walks, "elevation(m)");
-    let avgHR = d3Sum(walks, "avg_heart_rate") / walks.length;
+    const durationInS = d3Sum(walks, "duration(s)");
+    const dist = d3Sum(walks, "distance(km)").toFixed(1);
+    const elv = d3Sum(walks, "elevation(m)");
+    const avgHR = d3Sum(walks, "avg_heart_rate") / walks.length;
     return [
       `${bullet} He walked for ${secondsToHHMM(durationInS)}`,
       `  Covering ${dist}km and climbing ${elv}m`,
@@ -869,17 +890,17 @@ function buildDailyWalkingSummary(walks: D3DataFrame, day: Date): string[] {
 }
 
 function buildDailyRunningSummary(runs: D3DataFrame, day: Date): string[] {
-  let day_as_time = day.getTime();
+  const day_as_time = day.getTime();
   runs = runs
     .filter((row: D3Row) => row["date"].getTime() == day_as_time);
   if (runs.length == 0) {
     return [];
   }
 
-  let durationInS = d3Sum(runs, "duration(s)");
-  let dist = d3Sum(runs, "distance(km)").toFixed(1);
-  let elv = d3Sum(runs, "elevation(m)");
-  let avgHR = d3Sum(runs, "avg_heart_rate") / runs.length;
+  const durationInS = d3Sum(runs, "duration(s)");
+  const dist = d3Sum(runs, "distance(km)").toFixed(1);
+  const elv = d3Sum(runs, "elevation(m)");
+  const avgHR = d3Sum(runs, "avg_heart_rate") / runs.length;
   return [
     `${bullet} He ran for ${secondsToHHMM(durationInS)}`,
     `  Covering ${dist}km and climbing ${elv}m`,
@@ -888,18 +909,18 @@ function buildDailyRunningSummary(runs: D3DataFrame, day: Date): string[] {
 }
 
 function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
-  let day_as_time = day.getTime();
+  const day_as_time = day.getTime();
   bikes = bikes
     .filter((row: D3Row) => row["date"].getTime() == day_as_time);
   if (bikes.length == 0) {
     return [];
   }
 
-  let durationInS = d3Sum(bikes, "duration(s)");
-  let dist = d3Sum(bikes, "distance(km)").toFixed(1);
+  const durationInS = d3Sum(bikes, "duration(s)");
+  const dist = d3Sum(bikes, "distance(km)").toFixed(1);
+  const avgHR = d3Sum(bikes, "avg_heart_rate") / bikes.length;
   let kj = d3.sum(d3.map(bikes, (row: D3Row) => row["avg_wattage"] * row["duration(s)"]));
   kj = 0.001 * kj;  // This is just the conversion factor from Watt to KJ/s
-  let avgHR = d3Sum(bikes, "avg_heart_rate") / bikes.length;
   return [
     `${bullet} He biked for ${secondsToHHMM(durationInS)}`,
     `  Covering ${dist}km with an output of ${kj}KJ`,
@@ -908,19 +929,19 @@ function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
 }
 
 function buildDailyRowingSummary(rows: D3DataFrame, day: Date): string[] {
-  let day_as_time: number = day.getTime();
+  const day_as_time: number = day.getTime();
   rows = rows
     .filter((row: D3Row) => row["date"].getTime() == day_as_time);
   if (rows.length == 0) {
     return [];
   }
 
-  let durationInS = d3Sum(rows, "duration(s)");
-  let dist = d3Sum(rows, "distance(km)").toFixed(1);
+  const durationInS = d3Sum(rows, "duration(s)");
+  const dist = d3Sum(rows, "distance(km)").toFixed(1);
+  const avgHR = d3Sum(rows, "avg_heart_rate") / rows.length;
   let kj = d3.sum(d3.map(rows, (row: D3Row) => row["avg_wattage"] * row["duration(s)"]));
   kj = 0.001 * kj;  // This is just the conversion factor from Watt to KJ/s
   kj = Math.floor(kj);
-  let avgHR = d3Sum(rows, "avg_heart_rate") / rows.length;
   return [
     `${bullet} He rowed for ${secondsToHHMM(durationInS)}`,
     `  Covering ${dist}km with an output of ${kj}KJ`,
@@ -933,10 +954,10 @@ function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date
   weightTrainingWorkouts = weightTrainingWorkouts
     .filter((row: D3Row) => row["date"].getTime() == day_as_time);
 
-  let lines: string[] = [];
+  const lines: string[] = [];
   for (const workout of weightTrainingWorkouts) {
-    let workoutType: number = workout["workout_type"];
-    let durationInS: number = workout["duration(s)"];
+    const workoutType: number = workout["workout_type"];
+    const durationInS: number = workout["duration(s)"];
     lines.push(`${bullet} He trained ${workoutType} for ${secondsToHHMM(durationInS)}`);
     // TODO Need to publish meta metrics with this from Python, I don't want to load set data in browser
     // lines.push(`He moved ${totalWeight}lbs across ${numSets} sets\n`);
@@ -970,20 +991,25 @@ function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date
   );
 
   // Build and display the main graphs; update width of entire document to fit
-  let weightGraph: SVGSVGElement = plotWeight(healthMetrics, weightTrendline).node()!;
+  const weightGraph: SVGSVGElement | null = plotWeight(healthMetrics, weightTrendline).node();
+  const workoutFrequencyGraph: SVGSVGElement | null = plotWorkoutFrequency(workoutFrequency).node();
+  const heartRateGraph: SVGSVGElement | null = plotHeartRate(healthMetrics, heartRateTrendline).node();
+  if (weightGraph === null || workoutFrequencyGraph === null || heartRateGraph === null) {
+    throw new Error("Issue building one of the main graphs.");
+  }
   document.body.append(weightGraph);
-  document.body.append(plotWorkoutFrequency(workoutFrequency).node()!);
-  document.body.append(plotHeartRate(healthMetrics, heartRateTrendline).node()!);
-  let docWidth = Math.max(weightGraph.width.baseVal.value, document.body.clientWidth);
+  document.body.append(workoutFrequencyGraph);
+  document.body.append(heartRateGraph);
+  const docWidth = Math.max(weightGraph.width.baseVal.value, document.body.clientWidth);
   document.documentElement.style.width = `${docWidth}px`;
 
   // Position the secondary metrics dropbox selector appropriately
-  let dropdown = $(`#${extraChartDropdownId}`);
+  const dropdown = $(`#${extraChartDropdownId}`);
   $("body").append(dropdown);
   dropdown.css("display", "block");
 
   // Add the container that'll hold the secondary metric charts
-  let extraChartContainer = $(document.createElement("div"));
+  const extraChartContainer = $(document.createElement("div"));
   extraChartContainer.attr("id", extraChartContainerId);
   $("body").append(extraChartContainer);
 
@@ -999,41 +1025,48 @@ function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date
       .filter((row: D3Row) => !containsCaseless(row["notes"], "pre-workout"))
       .filter((row: D3Row) => !containsCaseless(row["notes"], "warm-up"))
       .filter((row: D3Row) => !containsCaseless(row["notes"], "post-workout"));
-  let field: string = "score";
-  let title: string = "Walk Scores";
-  let walkScoresGraphId: string = "walk-scores-chart";
-  let expGraph: D3Graph;
-  let expNode: SVGSVGElement;
-  expGraph = plotBasic(filteredWalks, field, title, walkScoresGraphId, 0, 200, 20, 5);
-  expNode = expGraph.node()!;
-  expNode.classList.add(secondaryGraphClassName);
-  document.body.append(expNode);
+  let title = "Walk Scores";
+  const field = "score";
+  const walkScoresGraphId = "walk-scores-chart";
+  let expGraph: D3Graph = plotBasic(filteredWalks, field, title, walkScoresGraphId, 0, 200, 20, 5);
+  let node: SVGSVGElement | null = expGraph.node();
+  if (node == null) {
+    throw new Error("Issue building walk scores chart.");
+  }
+  node.classList.add(secondaryGraphClassName);
+  document.body.append(node);
 
   // Experiment: Heartbeats required to climb a metre
   // Note: Only considers walking since that's more efficient for elevation gain
   title = "BPMC (Beats Per Metre Climbed)";
-  let bpmcGraphId: string = "bpmc-chart";
+  const bpmcGraphId = "bpmc-chart";
   const bpmcFilteredWalks = filteredWalks
       .filter((row: D3Row) => Number(row[bpmcField]) > 0)
       .filter((row: D3Row) => row["workout_type"] == "walk (treadmill)");
   expGraph = plotBasic(bpmcFilteredWalks, bpmcField, title, bpmcGraphId, 0, 300, 100, 25);
-  expNode = expGraph.node()!;
-  expNode.classList.add(secondaryGraphClassName);
-  document.body.append(expNode);
+  node = expGraph.node();
+  if (node === null) {
+    throw new Error("Issue building the BPMM graph");
+  }
+  node.classList.add(secondaryGraphClassName);
+  document.body.append(node);
 
   // Experiment: Heartbeats required to run a metre
   // Note: Only considers running since that's more efficient for covering horizontal distance
   title = "BPMM (Beats Per Metre Moved)";
-  let bpmmGraphId: string = "bpmm-chart";
+  const bpmmGraphId = "bpmm-chart";
   const bpmmFilteredRuns = runs
       .filter((row: D3Row) => Number(row[bpmmField]) > 0);
   expGraph = plotBasic(bpmmFilteredRuns, bpmmField, title, bpmmGraphId, 0, 2, 1, 0.1);
-  expNode = expGraph.node()!;
-  expNode.classList.add(secondaryGraphClassName);
-  document.body.append(expNode);
+  node = expGraph.node();
+  if (node === null) {
+    throw new Error("Issue building the BPMM graph");
+  }
+  node.classList.add(secondaryGraphClassName);
+  document.body.append(node);
 
   // Append the copyright now that the main graphs have been added
-  let copyright = $("body").find("#copyright");
+  const copyright = $("body").find("#copyright");
   copyright.css("width", `${weightGraph.getBoundingClientRect().width}px`);
   copyright.css("display", "block");
   $("body").append(copyright);
