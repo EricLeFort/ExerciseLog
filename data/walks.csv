@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+20-JUL-2024,walk (treadmill),01:10:10,6.20,7285,470,0,138,152,""
 16-JUL-2024,walk (treadmill),01:05:42,5.74,6899,617,0,162,174,""
 14-JUL-2024,walk (treadmill),01:04:25,5.57,,516,0,152,161,"e-stop triggered, some numbers are a lil fuzz; also forgot to record end steps.."
 12-JUL-2024,walk (treadmill),01:04:35,6.07,7298,412,0,155,183,""
