@@ -30,8 +30,9 @@ npm config set fund false
 declare -a NODE_PACKAGES=(
     "npm"
     "typescript"
-    "eslint@8.56.x"
+    "eslint@8.x"
     "typescript-eslint"
+    "prettier"
     "@eslint/js"
     "@types/d3"
     "@types/jquery"
