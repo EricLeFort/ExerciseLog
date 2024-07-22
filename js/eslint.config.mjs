@@ -1,9 +1,14 @@
 // @ts-check
 
-import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import eslint from "@eslint/js";
+import tseslint from "typescript-eslint";
 
 export default [
+  {
+    "ignores": [
+      "built"
+    ]
+  },
   eslint.configs.recommended,
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
@@ -21,6 +26,11 @@ export default [
           "caughtErrorsIgnorePattern": "^_"
         }
       ]
+    },
+    "settings": {
+      "typescript": {
+        project: ["tsconfig.json"]
+      }
     }
   }
 ];
