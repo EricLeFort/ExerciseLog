@@ -30,12 +30,14 @@ npm config set fund false
 declare -a NODE_PACKAGES=(
     "npm"
     "typescript"
+)
+declare -a NODE_DEV_PACKAGES=(
     "eslint@8.x"
     "typescript-eslint"
-    "prettier"
     "@eslint/js"
     "@types/d3"
     "@types/jquery"
     "@types/eslint__js"
 )
 npm install "${NODE_PACKAGES[@]}"
+npm install --save-dev "${NODE_DEV_PACKAGES[@]}"

@@ -832,8 +832,7 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
     document.body.append(node);
     title = "BPMM (Beats Per Metre Moved)";
     const bpmmGraphId = "bpmm-chart";
-    const bpmmFilteredRuns = runs
-        .filter((row) => Number(row[bpmmField]) > 0);
+    const bpmmFilteredRuns = runs.filter((row) => Number(row[bpmmField]) > 0);
     expGraph = plotBasic(bpmmFilteredRuns, bpmmField, title, bpmmGraphId, 0, 2, 1, 0.1);
     node = expGraph.node();
     if (node === null) {
@@ -846,3 +845,4 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
     copyright.css("display", "block");
     $("body").append(copyright);
 })();
+//# sourceMappingURL=main.js.map

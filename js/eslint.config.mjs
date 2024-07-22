@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 export default [
   {
     "ignores": [
-      "built"
+      "built",
     ]
   },
   eslint.configs.recommended,
@@ -23,13 +23,14 @@ export default [
           "args": "all",
           "argsIgnorePattern": "^_",
           "varsIgnorePattern": "^_",
-          "caughtErrorsIgnorePattern": "^_"
+          "caughtErrorsIgnorePattern": "^_",
         }
-      ]
+      ],
+      "@typescript-eslint/indent": ["error", 2],
     },
     "settings": {
       "typescript": {
-        project: ["tsconfig.json"]
+        project: ["tsconfig.json"],
       }
     }
   }

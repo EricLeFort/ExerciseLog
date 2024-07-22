@@ -219,3 +219,4 @@ window.onload = function () {
     parseMenu();
     attachListeners();
 };
+//# sourceMappingURL=dropdown.js.map

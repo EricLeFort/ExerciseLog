@@ -6,8 +6,8 @@ type D3DataFrame = D3Row[];
 type D3RowAccessor = (row: D3Row) => any;
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
-const base_data_path = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/data"
-const pred_data_path = `${base_data_path}/preds`
+const base_data_path = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/data";
+const pred_data_path = `${base_data_path}/preds`;
 const graphMargin = 100;
 const graphWidth = 1600;
 const graphHeight = 900;
@@ -35,7 +35,7 @@ function computeWalkScore(row: D3Row, durationInS: number): number {
   const pace = row["distance(km)"] / durationInH;
   const rateOfClimb = row["elevation(m)"] / durationInH;
 
-  // These are some base values 
+  // These are some base values
   if (row["distance(km)"] < 0.1) {
     return 0;
   }
@@ -75,7 +75,7 @@ function computeBeatsPerMetreMoved(row: D3Row, durationInS: number): number {
 }
 
 function getNumBeats(row: D3Row, durationInS: number): number {
-    return row["avg_heart_rate"] * (durationInS / 60);
+  return row["avg_heart_rate"] * (durationInS / 60);
 }
 
 // Data loading
@@ -243,18 +243,18 @@ function nth(day: Date): string {
 };
 
 function month_day_nth(day: Date): string {
-    const month = day.toLocaleString("default", {month: "long"});
-    return `${month} ${day.getDate()}${nth(day)}`;
+  const month = day.toLocaleString("default", {month: "long"});
+  return `${month} ${day.getDate()}${nth(day)}`;
 }
 
 interface Date {
-    addDays(num_days: number): Date;
+  addDays(num_days: number): Date;
 }
 
 Date.prototype.addDays = function(num_days: number) {
-    const date = new Date(this.valueOf());
-    date.setDate(date.getDate() + num_days);
-    return date;
+  const date = new Date(this.valueOf());
+  date.setDate(date.getDate() + num_days);
+  return date;
 }
 
 function durationToS(durationStr: string): number {
@@ -496,9 +496,9 @@ function addLinearTimeYAxis(svg: D3Graph, minTime: number, maxTime: number, majo
   svg.append("g")
     .attr("transform", `translate(${graphMargin}, 0)`)
     .call(d3.axisLeft(y)
-        .tickValues(d3.range(minTime, maxTime, minorStep))
-        .tickFormat((_) => "")
-        .tickSize(0))
+      .tickValues(d3.range(minTime, maxTime, minorStep))
+      .tickFormat((_) => "")
+      .tickSize(0))
     .call(g => g.selectAll(".tick line").clone()
       .attr("stroke-opacity", 0.1)
       .attr("x1", contentWidth));
@@ -551,9 +551,9 @@ function plotWeight(healthMetrics: D3DataFrame, weightTrendline: D3DataFrame): D
     .attr("stroke", "steelblue")
     .attr("stroke-width", 1.5)
     .append("circle")
-      .attr("cx", graphWidth / 2 + 0.2 * legendSpacing)
-      .attr("cy", legendIconHeight)
-      .attr("r", 1.5);
+    .attr("cx", graphWidth / 2 + 0.2 * legendSpacing)
+    .attr("cy", legendIconHeight)
+    .attr("r", 1.5);
 
   // Plot the data
   const axisBottom = graphHeight - graphMargin;
@@ -569,10 +569,10 @@ function plotWeight(healthMetrics: D3DataFrame, weightTrendline: D3DataFrame): D
     .selectAll("dot")
     .data(healthMetrics)
     .enter().append("circle")
-      .filter((row: D3Row) => row["weight(lbs)"] !== null)
-      .attr("cx", (row: D3Row) => x(row["date"]))
-      .attr("cy", (row: D3Row) => y(row["weight(lbs)"]))
-      .attr("r", 1.5);
+    .filter((row: D3Row) => row["weight(lbs)"] !== null)
+    .attr("cx", (row: D3Row) => x(row["date"]))
+    .attr("cy", (row: D3Row) => y(row["weight(lbs)"]))
+    .attr("r", 1.5);
 
   // Plot the trendline
   const valueLine = d3.line<D3Row>()
@@ -633,9 +633,9 @@ function plotWorkoutFrequency(workoutFrequencies: D3DataFrame): D3Graph {
     .attr("stroke", "steelblue")
     .attr("stroke-width", 1.5)
     .append("circle")
-      .attr("cx", graphWidth / 2 + 0.1 * legendSpacing)
-      .attr("cy", legendIconHeight)
-      .attr("r", 1.5);
+    .attr("cx", graphWidth / 2 + 0.1 * legendSpacing)
+    .attr("cy", legendIconHeight)
+    .attr("r", 1.5);
 
   // Plot the data
   const axisBottom = graphHeight - graphMargin;
@@ -651,10 +651,10 @@ function plotWorkoutFrequency(workoutFrequencies: D3DataFrame): D3Graph {
     .selectAll("dot")
     .data(workoutFrequencies)
     .enter().append("circle")
-      .filter(function (row: D3Row) { return row["duration"] <= maxTime; })
-      .attr("cx", (row: D3Row) => x(row["date"]))
-      .attr("cy", (row: D3Row) => y(row["duration"]))
-      .attr("r", 1.5);
+    .filter(function (row: D3Row) { return row["duration"] <= maxTime; })
+    .attr("cx", (row: D3Row) => x(row["date"]))
+    .attr("cy", (row: D3Row) => y(row["duration"]))
+    .attr("r", 1.5);
 
   // Plot the trendline
   const valueLine = d3.line<D3Row>()
@@ -721,9 +721,9 @@ function plotHeartRate(healthMetrics: D3DataFrame, heartRateTrendline: D3DataFra
     .attr("stroke", "steelblue")
     .attr("stroke-width", 1.5)
     .append("circle")
-      .attr("cx", graphWidth / 2 + 0.2 * legendSpacing)
-      .attr("cy", legendIconHeight)
-      .attr("r", 1.5);
+    .attr("cx", graphWidth / 2 + 0.2 * legendSpacing)
+    .attr("cy", legendIconHeight)
+    .attr("r", 1.5);
 
   // Plot the data
   const axisBottom = graphHeight - graphMargin;
@@ -739,10 +739,10 @@ function plotHeartRate(healthMetrics: D3DataFrame, heartRateTrendline: D3DataFra
     .selectAll("dot")
     .data(healthMetrics)
     .enter().append("circle")
-      .filter((row: D3Row) => row["resting_heart_rate(bpm)"] !== null)
-      .attr("cx", (row: D3Row) => x(row["date"]))
-      .attr("cy", (row: D3Row) => y(row["resting_heart_rate(bpm)"]))
-      .attr("r", 1.5);
+    .filter((row: D3Row) => row["resting_heart_rate(bpm)"] !== null)
+    .attr("cx", (row: D3Row) => x(row["date"]))
+    .attr("cy", (row: D3Row) => y(row["resting_heart_rate(bpm)"]))
+    .attr("r", 1.5);
 
   // Plot the trendline
   const valueLine = d3.line<D3Row>()
@@ -801,9 +801,9 @@ function plotBasic(
     .selectAll("dot")
     .data(data)
     .enter().append("circle")
-      .attr("cx", (row: D3Row) => x(row["date"]))
-      .attr("cy", (row: D3Row) => y(row[field]))
-      .attr("r", 1.5);
+    .attr("cx", (row: D3Row) => x(row["date"]))
+    .attr("cy", (row: D3Row) => y(row[field]))
+    .attr("r", 1.5);
 
   // Plot the line
   const valueLine = d3.line<D3Row>()
@@ -836,12 +836,12 @@ function computeSingleDaySummary(
 
   // If a date isn't provided, use the most recent across all workout types
   if (day === null) {
-      let day_time: number = new Date(d3Max(walks, "date")).getTime();
-      day_time = Math.max(day_time, new Date(d3Max(runs, "date")).getTime());
-      day_time = Math.max(day_time, new Date(d3Max(bikes, "date")).getTime());
-      day_time = Math.max(day_time, new Date(d3Max(rows, "date")).getTime());
-      day_time = Math.max(day_time, new Date(d3Max(weightTrainingWorkouts, "date")).getTime());
-      day = new Date(day_time);
+    let day_time: number = new Date(d3Max(walks, "date")).getTime();
+    day_time = Math.max(day_time, new Date(d3Max(runs, "date")).getTime());
+    day_time = Math.max(day_time, new Date(d3Max(bikes, "date")).getTime());
+    day_time = Math.max(day_time, new Date(d3Max(rows, "date")).getTime());
+    day_time = Math.max(day_time, new Date(d3Max(weightTrainingWorkouts, "date")).getTime());
+    day = new Date(day_time);
   }
 
   // Build up the daily workout summary text by each workout modality
@@ -854,7 +854,7 @@ function computeSingleDaySummary(
 
   // No matching workouts, instead display a default message
   if (lines.length <= 1) {
-      lines = ["No workouts recorded yet, get out there!\n "];
+    lines = ["No workouts recorded yet, get out there!\n "];
   }
 
   // Add the generated summary text to the textbox
@@ -871,22 +871,22 @@ function secondsToHHMM(durationInS: number): string {
 }
 
 function buildDailyWalkingSummary(walks: D3DataFrame, day: Date): string[] {
-    const day_as_time = day.getTime();
-    walks = walks
-      .filter((row: D3Row) => row["date"].getTime() == day_as_time);
-    if (walks.length == 0) {
-      return [];
-    }
+  const day_as_time = day.getTime();
+  walks = walks
+    .filter((row: D3Row) => row["date"].getTime() == day_as_time);
+  if (walks.length == 0) {
+    return [];
+  }
 
-    const durationInS = d3Sum(walks, "duration(s)");
-    const dist = d3Sum(walks, "distance(km)").toFixed(1);
-    const elv = d3Sum(walks, "elevation(m)");
-    const avgHR = d3Sum(walks, "avg_heart_rate") / walks.length;
-    return [
-      `${bullet} He walked for ${secondsToHHMM(durationInS)}`,
-      `  Covering ${dist}km and climbing ${elv}m`,
-      `  With an average heart rate of ${avgHR}bpm\n`,
-    ];
+  const durationInS = d3Sum(walks, "duration(s)");
+  const dist = d3Sum(walks, "distance(km)").toFixed(1);
+  const elv = d3Sum(walks, "elevation(m)");
+  const avgHR = d3Sum(walks, "avg_heart_rate") / walks.length;
+  return [
+    `${bullet} He walked for ${secondsToHHMM(durationInS)}`,
+    `  Covering ${dist}km and climbing ${elv}m`,
+    `  With an average heart rate of ${avgHR}bpm\n`,
+  ];
 }
 
 function buildDailyRunningSummary(runs: D3DataFrame, day: Date): string[] {
@@ -920,7 +920,7 @@ function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
   const dist = d3Sum(bikes, "distance(km)").toFixed(1);
   const avgHR = d3Sum(bikes, "avg_heart_rate") / bikes.length;
   let kj = d3.sum(d3.map(bikes, (row: D3Row) => row["avg_wattage"] * row["duration(s)"]));
-  kj = 0.001 * kj;  // This is just the conversion factor from Watt to KJ/s
+  kj = 0.001 * kj; // This is just the conversion factor from Watt to KJ/s
   return [
     `${bullet} He biked for ${secondsToHHMM(durationInS)}`,
     `  Covering ${dist}km with an output of ${kj}KJ`,
@@ -982,13 +982,7 @@ function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date
   const heartRateTrendline: D3DataFrame = await loadHeartRateTrendline();
 
   // Populate the default contents of the single-day summary
-  computeSingleDaySummary(
-      walks,
-      runs,
-      bikes,
-      rows,
-      weight_training_workouts,
-  );
+  computeSingleDaySummary(walks, runs, bikes, rows, weight_training_workouts);
 
   // Build and display the main graphs; update width of entire document to fit
   const weightGraph: SVGSVGElement | null = plotWeight(healthMetrics, weightTrendline).node();
@@ -1020,11 +1014,11 @@ function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date
   // Experiment: Walk scores
   // TODO refine this formula
   const filteredWalks = walks
-      .filter((row: D3Row) => row["workout_type"] == "walk (treadmill)")
-      .filter((row: D3Row) => Number(row["duration(s)"]) >= 1200)
-      .filter((row: D3Row) => !containsCaseless(row["notes"], "pre-workout"))
-      .filter((row: D3Row) => !containsCaseless(row["notes"], "warm-up"))
-      .filter((row: D3Row) => !containsCaseless(row["notes"], "post-workout"));
+    .filter((row: D3Row) => row["workout_type"] == "walk (treadmill)")
+    .filter((row: D3Row) => Number(row["duration(s)"]) >= 1200)
+    .filter((row: D3Row) => !containsCaseless(row["notes"], "pre-workout"))
+    .filter((row: D3Row) => !containsCaseless(row["notes"], "warm-up"))
+    .filter((row: D3Row) => !containsCaseless(row["notes"], "post-workout"));
   let title = "Walk Scores";
   const field = "score";
   const walkScoresGraphId = "walk-scores-chart";
@@ -1041,8 +1035,8 @@ function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date
   title = "BPMC (Beats Per Metre Climbed)";
   const bpmcGraphId = "bpmc-chart";
   const bpmcFilteredWalks = filteredWalks
-      .filter((row: D3Row) => Number(row[bpmcField]) > 0)
-      .filter((row: D3Row) => row["workout_type"] == "walk (treadmill)");
+    .filter((row: D3Row) => Number(row[bpmcField]) > 0)
+    .filter((row: D3Row) => row["workout_type"] == "walk (treadmill)");
   expGraph = plotBasic(bpmcFilteredWalks, bpmcField, title, bpmcGraphId, 0, 300, 100, 25);
   node = expGraph.node();
   if (node === null) {
@@ -1055,8 +1049,7 @@ function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date
   // Note: Only considers running since that's more efficient for covering horizontal distance
   title = "BPMM (Beats Per Metre Moved)";
   const bpmmGraphId = "bpmm-chart";
-  const bpmmFilteredRuns = runs
-      .filter((row: D3Row) => Number(row[bpmmField]) > 0);
+  const bpmmFilteredRuns = runs.filter((row: D3Row) => Number(row[bpmmField]) > 0);
   expGraph = plotBasic(bpmmFilteredRuns, bpmmField, title, bpmmGraphId, 0, 2, 1, 0.1);
   node = expGraph.node();
   if (node === null) {
