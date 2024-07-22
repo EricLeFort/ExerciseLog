@@ -532,6 +532,18 @@ EXERCISE_INFO = {
         },
         Field.ANTAGONIST_MUSCLES: {None},
     },
+    Exercise.DEC_BICEP_CURL: {
+        INHERITS_FROM: Exercise.BICEP_CURL,
+        Field.MUSCLE_GROUPS_WORKED: {
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.FOREARMS: None,
+        },
+        Field.MUSCLES_WORKED: {
+            None: None,
+        },
+        Field.ANTAGONIST_MUSCLES: {None},
+    },
     Exercise.DEFICIT_PUSH_UPS: {
         INHERITS_FROM: Exercise.PUSH_UPS,
         Field.MUSCLE_GROUPS_WORKED: {
