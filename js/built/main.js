@@ -207,11 +207,11 @@ function month_day_nth(day) {
     const month = day.toLocaleString("default", { month: "long" });
     return `${month} ${day.getDate()}${nth(day)}`;
 }
-Date.prototype.addDays = function (num_days) {
-    const date = new Date(this.valueOf());
-    date.setDate(date.getDate() + num_days);
+function addDays(day, numDays) {
+    const date = new Date(day.valueOf());
+    date.setDate(date.getDate() + numDays);
     return date;
-};
+}
 function durationToS(durationStr) {
     const hoursToS = 60 * 60;
     const minsToS = 60;
@@ -414,7 +414,7 @@ function plotWeight(healthMetrics, weightTrendline) {
     const maxWeight = 305;
     const nDaysToExtrapolate = 100;
     const firstDate = new Date(d3Min(healthMetrics, "date"));
-    const lastDate = new Date(d3Max(healthMetrics, "date")).addDays(nDaysToExtrapolate);
+    const lastDate = addDays(new Date(d3Max(healthMetrics, "date")), nDaysToExtrapolate);
     const svg = d3.create("svg")
         .attr("width", graphWidth)
         .attr("height", graphHeight);

@@ -247,13 +247,9 @@ function month_day_nth(day: Date): string {
   return `${month} ${day.getDate()}${nth(day)}`;
 }
 
-interface Date {
-  addDays(num_days: number): Date;
-}
-
-Date.prototype.addDays = function(num_days: number) {
-  const date = new Date(this.valueOf());
-  date.setDate(date.getDate() + num_days);
+function addDays(day: Date, numDays: number): Date {
+  const date = new Date(day.valueOf());
+  date.setDate(date.getDate() + numDays);
   return date;
 }
 
@@ -510,7 +506,7 @@ function plotWeight(healthMetrics: D3DataFrame, weightTrendline: D3DataFrame): D
   const nDaysToExtrapolate = 100;
 
   const firstDate: Date = new Date(d3Min(healthMetrics, "date"));
-  const lastDate: Date = new Date(d3Max(healthMetrics, "date")).addDays(nDaysToExtrapolate);
+  const lastDate: Date = addDays(new Date(d3Max(healthMetrics, "date")), nDaysToExtrapolate);
 
   // Create the SVG container
   const svg = d3.create("svg")

@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./built",
-    "allowJs": true,
     "target": "es2017",
     "removeComments": true,
-    "baseUrl": "./",
 
     // Strict Checks
     //"strict": true,
     "alwaysStrict": true,
-    "allowUnreachableCode": false,
-    "noImplicitAny": true,
     "strictNullChecks": true,
 
     // Linter Checks
+    "allowJs": true,
+    "allowUnreachableCode": false,
+    "noImplicitAny": true,
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
