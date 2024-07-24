@@ -128,7 +128,7 @@ function d3NumOrNull(val: string): number | null {
 }
 
 function d3IntOrNull(val: string): number | null {
-  return val === "" ? null : +val;
+  return val === "" ? null : Number(val);
 }
 
 // TODO (ericlefort): remove this
@@ -314,7 +314,7 @@ function time_tick(t: number): string {
 
 function addTitle(svg: D3Graph, title: string): void {
   const node: SVGSVGElement | null = svg.node();
-  if (node == null) {
+  if (node === null) {
     throw new Error("Encountered null SVG node when adding title.");
   }
   const width = node.width.animVal.value;
@@ -345,7 +345,7 @@ function addRefLine(
   refLineType: RefLineType
 ): void {
   const node: SVGSVGElement | null = svg.node();
-  if (node == null) {
+  if (node === null) {
     throw new Error("Encountered null SVG node when adding reference line.");
   }
 
@@ -391,7 +391,7 @@ function addRefLine(
 
 function addDateXAxis(svg: D3Graph, firstDate: Date, lastDate: Date): void {
   const node: SVGSVGElement | null = svg.node();
-  if (node == null) {
+  if (node === null) {
     throw new Error("Encountered null SVG node when adding date-based x-axis.");
   }
 
@@ -428,7 +428,7 @@ function addDateXAxis(svg: D3Graph, firstDate: Date, lastDate: Date): void {
 
 function addLinearYAxis(svg: D3Graph, minVal: number, maxVal: number, majorStep: number, minorStep: number): void {
   const node: SVGSVGElement | null = svg.node();
-  if (node == null) {
+  if (node === null) {
     throw new Error("Encountered null SVG node when adding linear y-axis.");
   }
 
@@ -465,7 +465,7 @@ function addLinearYAxis(svg: D3Graph, minVal: number, maxVal: number, majorStep:
 
 function addLinearTimeYAxis(svg: D3Graph, minTime: number, maxTime: number, majorStep: number, minorStep: number): void {
   const node: SVGSVGElement | null = svg.node();
-  if (node == null) {
+  if (node === null) {
     throw new Error("Encountered null SVG node when adding time-based y-axis.");
   }
 
@@ -874,7 +874,7 @@ function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
   const dist = d3Sum(bikes, "distance(km)").toFixed(1);
   const avgHR = d3Sum(bikes, "avg_heart_rate") / bikes.length;
   let kj = d3.sum(d3.map(bikes, (row: D3Row) => row["avg_wattage"] * row["duration(s)"]));
-  kj = 0.001 * kj; // This is just the conversion factor from Watt to KJ/s
+  kj *= 0.001; // This is just the conversion factor from Watt to KJ/s
   return [
     `${bullet} He biked for ${secondsToHHMM(durationInS)}`,
     `  Covering ${dist}km with an output of ${kj}KJ`,
@@ -894,7 +894,7 @@ function buildDailyRowingSummary(rows: D3DataFrame, day: Date): string[] {
   const dist = d3Sum(rows, "distance(km)").toFixed(1);
   const avgHR = d3Sum(rows, "avg_heart_rate") / rows.length;
   let kj = d3.sum(d3.map(rows, (row: D3Row) => row["avg_wattage"] * row["duration(s)"]));
-  kj = 0.001 * kj;  // This is just the conversion factor from Watt to KJ/s
+  kj *= 0.001;  // This is just the conversion factor from Watt to KJ/s
   kj = Math.floor(kj);
   return [
     `${bullet} He rowed for ${secondsToHHMM(durationInS)}`,
@@ -957,7 +957,7 @@ function computeSingleDaySummary(
 
   // Add the generated summary text to the textbox
   const textBox = $(`#${summaryTextboxName}`);
-  textBox.text(lines.join("\n") +  "\n ");
+  textBox.text(`${lines.join("\n")}\n `);
   textBox.css("display", "flex");
 }
 
@@ -1020,7 +1020,7 @@ function computeSingleDaySummary(
   const walkScoresGraphId = "walk-scores-chart";
   let expGraph: D3Graph = plotBasic(filteredWalks, field, title, walkScoresGraphId, 0, 200, 20, 5);
   let node: SVGSVGElement | null = expGraph.node();
-  if (node == null) {
+  if (node === null) {
     throw new Error("Issue building walk scores chart.");
   }
   node.classList.add(secondaryGraphClassName);

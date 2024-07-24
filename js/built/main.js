@@ -95,7 +95,7 @@ function d3NumOrNull(val) {
     return val === "" ? null : Number(val);
 }
 function d3IntOrNull(val) {
-    return val === "" ? null : +val;
+    return val === "" ? null : Number(val);
 }
 function d3Min(data, c_name) {
     return d3.min(data, function (row) { return row[c_name]; });
@@ -257,7 +257,7 @@ function time_tick(t) {
 }
 function addTitle(svg, title) {
     const node = svg.node();
-    if (node == null) {
+    if (node === null) {
         throw new Error("Encountered null SVG node when adding title.");
     }
     const width = node.width.animVal.value;
@@ -277,7 +277,7 @@ RefLineType.Marker = new RefLineType("marker");
 RefLineType.Threshold = new RefLineType("threshold");
 function addRefLine(svg, label, yMin, yMax, yRef, refLineType) {
     const node = svg.node();
-    if (node == null) {
+    if (node === null) {
         throw new Error("Encountered null SVG node when adding reference line.");
     }
     const width = node.width.animVal.value;
@@ -320,7 +320,7 @@ function addRefLine(svg, label, yMin, yMax, yRef, refLineType) {
 }
 function addDateXAxis(svg, firstDate, lastDate) {
     const node = svg.node();
-    if (node == null) {
+    if (node === null) {
         throw new Error("Encountered null SVG node when adding date-based x-axis.");
     }
     const width = node.width.animVal.value;
@@ -350,7 +350,7 @@ function addDateXAxis(svg, firstDate, lastDate) {
 }
 function addLinearYAxis(svg, minVal, maxVal, majorStep, minorStep) {
     const node = svg.node();
-    if (node == null) {
+    if (node === null) {
         throw new Error("Encountered null SVG node when adding linear y-axis.");
     }
     const width = node.width.animVal.value;
@@ -381,7 +381,7 @@ function addLinearYAxis(svg, minVal, maxVal, majorStep, minorStep) {
 }
 function addLinearTimeYAxis(svg, minTime, maxTime, majorStep, minorStep) {
     const node = svg.node();
-    if (node == null) {
+    if (node === null) {
         throw new Error("Encountered null SVG node when adding time-based y-axis.");
     }
     const width = node.width.animVal.value;
@@ -712,7 +712,7 @@ function buildDailyBikingSummary(bikes, day) {
     const dist = d3Sum(bikes, "distance(km)").toFixed(1);
     const avgHR = d3Sum(bikes, "avg_heart_rate") / bikes.length;
     let kj = d3.sum(d3.map(bikes, (row) => row["avg_wattage"] * row["duration(s)"]));
-    kj = 0.001 * kj;
+    kj *= 0.001;
     return [
         `${bullet} He biked for ${secondsToHHMM(durationInS)}`,
         `  Covering ${dist}km with an output of ${kj}KJ`,
@@ -730,7 +730,7 @@ function buildDailyRowingSummary(rows, day) {
     const dist = d3Sum(rows, "distance(km)").toFixed(1);
     const avgHR = d3Sum(rows, "avg_heart_rate") / rows.length;
     let kj = d3.sum(d3.map(rows, (row) => row["avg_wattage"] * row["duration(s)"]));
-    kj = 0.001 * kj;
+    kj *= 0.001;
     kj = Math.floor(kj);
     return [
         `${bullet} He rowed for ${secondsToHHMM(durationInS)}`,
@@ -771,7 +771,7 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
         lines = ["No workouts recorded yet, get out there!\n "];
     }
     const textBox = $(`#${summaryTextboxName}`);
-    textBox.text(lines.join("\n") + "\n ");
+    textBox.text(`${lines.join("\n")}\n `);
     textBox.css("display", "flex");
 }
 (async function () {
@@ -813,7 +813,7 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
     const walkScoresGraphId = "walk-scores-chart";
     let expGraph = plotBasic(filteredWalks, field, title, walkScoresGraphId, 0, 200, 20, 5);
     let node = expGraph.node();
-    if (node == null) {
+    if (node === null) {
         throw new Error("Issue building walk scores chart.");
     }
     node.classList.add(secondaryGraphClassName);
