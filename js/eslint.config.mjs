@@ -98,7 +98,7 @@ export default [
       "default-case": error,
       "default-case-last": error,
       "default-param-last": error,
-      //"eqeqeq": error,
+      "eqeqeq": error,
       "func-name-matching": error,
       "guard-for-in": error,
 
@@ -180,7 +180,6 @@ export default [
       "no-void": error,
       "no-with": error,
       "object-shorthand": error,
-      //"one-var": error,
       "operator-assignment": error,
       //"prefer-arrow-callback": error,  // Still undecided on this one, check if it's standard in the community and adopt if so
       "prefer-const": error,

@@ -4,7 +4,7 @@
  */
 const extraChartContainerId = "extra-chart-container";
 
-const baseImgPath = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/img"
+const baseImgPath = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/img";
 const dropdownClassName = "dropdown";
 const dropdownMenuClassName = "dropdown-menu";
 

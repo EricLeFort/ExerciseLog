@@ -111,7 +111,7 @@ function durationToS(durationStr: string): number {
   const hoursToS = 60 * 60;
   const minsToS = 60;
   const pieces: string[] = durationStr.split(":")
-  if (pieces.length != 3) {
+  if (pieces.length !== 3) {
     // TODO (ericlefort): No ValueError or InvalidArgumentError? Really JS? Gotta add my own..
     throw new Error(`Improperly formatted date: ${durationStr}`);
   }
@@ -827,8 +827,8 @@ function secondsToHHMM(durationInS: number): string {
 function buildDailyWalkingSummary(walks: D3DataFrame, day: Date): string[] {
   const day_as_time = day.getTime();
   walks = walks
-    .filter((row: D3Row) => row["date"].getTime() == day_as_time);
-  if (walks.length == 0) {
+    .filter((row: D3Row) => row["date"].getTime() === day_as_time);
+  if (walks.length === 0) {
     return [];
   }
 
@@ -846,8 +846,8 @@ function buildDailyWalkingSummary(walks: D3DataFrame, day: Date): string[] {
 function buildDailyRunningSummary(runs: D3DataFrame, day: Date): string[] {
   const day_as_time = day.getTime();
   runs = runs
-    .filter((row: D3Row) => row["date"].getTime() == day_as_time);
-  if (runs.length == 0) {
+    .filter((row: D3Row) => row["date"].getTime() === day_as_time);
+  if (runs.length === 0) {
     return [];
   }
 
@@ -865,8 +865,8 @@ function buildDailyRunningSummary(runs: D3DataFrame, day: Date): string[] {
 function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
   const day_as_time = day.getTime();
   bikes = bikes
-    .filter((row: D3Row) => row["date"].getTime() == day_as_time);
-  if (bikes.length == 0) {
+    .filter((row: D3Row) => row["date"].getTime() === day_as_time);
+  if (bikes.length === 0) {
     return [];
   }
 
@@ -885,8 +885,8 @@ function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
 function buildDailyRowingSummary(rows: D3DataFrame, day: Date): string[] {
   const day_as_time: number = day.getTime();
   rows = rows
-    .filter((row: D3Row) => row["date"].getTime() == day_as_time);
-  if (rows.length == 0) {
+    .filter((row: D3Row) => row["date"].getTime() === day_as_time);
+  if (rows.length === 0) {
     return [];
   }
 
@@ -906,7 +906,7 @@ function buildDailyRowingSummary(rows: D3DataFrame, day: Date): string[] {
 function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date): string[] {
   const day_as_time = day.getTime();
   weightTrainingWorkouts = weightTrainingWorkouts
-    .filter((row: D3Row) => row["date"].getTime() == day_as_time);
+    .filter((row: D3Row) => row["date"].getTime() === day_as_time);
 
   const lines: string[] = [];
   for (const workout of weightTrainingWorkouts) {
@@ -1010,7 +1010,7 @@ function computeSingleDaySummary(
   // Experiment: Walk scores
   // TODO refine this formula
   const filteredWalks = walks
-    .filter((row: D3Row) => row["workout_type"] == "walk (treadmill)")
+    .filter((row: D3Row) => row["workout_type"] === "walk (treadmill)")
     .filter((row: D3Row) => Number(row["duration(s)"]) >= 1200)
     .filter((row: D3Row) => !containsCaseless(row["notes"], "pre-workout"))
     .filter((row: D3Row) => !containsCaseless(row["notes"], "warm-up"))
@@ -1032,7 +1032,7 @@ function computeSingleDaySummary(
   const bpmcGraphId = "bpmc-chart";
   const bpmcFilteredWalks = filteredWalks
     .filter((row: D3Row) => Number(row[bpmcField]) > 0)
-    .filter((row: D3Row) => row["workout_type"] == "walk (treadmill)");
+    .filter((row: D3Row) => row["workout_type"] === "walk (treadmill)");
   expGraph = plotBasic(bpmcFilteredWalks, bpmcField, title, bpmcGraphId, 0, 300, 100, 25);
   node = expGraph.node();
   if (node === null) {

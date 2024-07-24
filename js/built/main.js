@@ -83,7 +83,7 @@ function durationToS(durationStr) {
     const hoursToS = 60 * 60;
     const minsToS = 60;
     const pieces = durationStr.split(":");
-    if (pieces.length != 3) {
+    if (pieces.length !== 3) {
         throw new Error(`Improperly formatted date: ${durationStr}`);
     }
     return hoursToS * Number(pieces[0]) + minsToS * Number(pieces[1]) + Number(pieces[2]);
@@ -670,8 +670,8 @@ function secondsToHHMM(durationInS) {
 function buildDailyWalkingSummary(walks, day) {
     const day_as_time = day.getTime();
     walks = walks
-        .filter((row) => row["date"].getTime() == day_as_time);
-    if (walks.length == 0) {
+        .filter((row) => row["date"].getTime() === day_as_time);
+    if (walks.length === 0) {
         return [];
     }
     const durationInS = d3Sum(walks, "duration(s)");
@@ -687,8 +687,8 @@ function buildDailyWalkingSummary(walks, day) {
 function buildDailyRunningSummary(runs, day) {
     const day_as_time = day.getTime();
     runs = runs
-        .filter((row) => row["date"].getTime() == day_as_time);
-    if (runs.length == 0) {
+        .filter((row) => row["date"].getTime() === day_as_time);
+    if (runs.length === 0) {
         return [];
     }
     const durationInS = d3Sum(runs, "duration(s)");
@@ -704,8 +704,8 @@ function buildDailyRunningSummary(runs, day) {
 function buildDailyBikingSummary(bikes, day) {
     const day_as_time = day.getTime();
     bikes = bikes
-        .filter((row) => row["date"].getTime() == day_as_time);
-    if (bikes.length == 0) {
+        .filter((row) => row["date"].getTime() === day_as_time);
+    if (bikes.length === 0) {
         return [];
     }
     const durationInS = d3Sum(bikes, "duration(s)");
@@ -722,8 +722,8 @@ function buildDailyBikingSummary(bikes, day) {
 function buildDailyRowingSummary(rows, day) {
     const day_as_time = day.getTime();
     rows = rows
-        .filter((row) => row["date"].getTime() == day_as_time);
-    if (rows.length == 0) {
+        .filter((row) => row["date"].getTime() === day_as_time);
+    if (rows.length === 0) {
         return [];
     }
     const durationInS = d3Sum(rows, "duration(s)");
@@ -741,7 +741,7 @@ function buildDailyRowingSummary(rows, day) {
 function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
     const day_as_time = day.getTime();
     weightTrainingWorkouts = weightTrainingWorkouts
-        .filter((row) => row["date"].getTime() == day_as_time);
+        .filter((row) => row["date"].getTime() === day_as_time);
     const lines = [];
     for (const workout of weightTrainingWorkouts) {
         const workoutType = workout["workout_type"];
@@ -803,7 +803,7 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
     extraChartContainer.attr("id", extraChartContainerId);
     $("body").append(extraChartContainer);
     const filteredWalks = walks
-        .filter((row) => row["workout_type"] == "walk (treadmill)")
+        .filter((row) => row["workout_type"] === "walk (treadmill)")
         .filter((row) => Number(row["duration(s)"]) >= 1200)
         .filter((row) => !containsCaseless(row["notes"], "pre-workout"))
         .filter((row) => !containsCaseless(row["notes"], "warm-up"))
@@ -822,7 +822,7 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
     const bpmcGraphId = "bpmc-chart";
     const bpmcFilteredWalks = filteredWalks
         .filter((row) => Number(row[bpmcField]) > 0)
-        .filter((row) => row["workout_type"] == "walk (treadmill)");
+        .filter((row) => row["workout_type"] === "walk (treadmill)");
     expGraph = plotBasic(bpmcFilteredWalks, bpmcField, title, bpmcGraphId, 0, 300, 100, 25);
     node = expGraph.node();
     if (node === null) {
