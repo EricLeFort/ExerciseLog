@@ -105,7 +105,7 @@ export default [
       // Code cleanliness + misc
       "consistent-this": error,
       "curly": error,
-      //"dot-notation": error,
+      "dot-notation": error,
       "func-style": [error, "declaration"],
       //"max-params": [error, 7],
       //"max-statements": [error, 25],
@@ -181,7 +181,6 @@ export default [
       "no-with": error,
       "object-shorthand": error,
       "operator-assignment": error,
-      //"prefer-arrow-callback": error,  // Still undecided on this one, check if it's standard in the community and adopt if so
       "prefer-const": error,
       "prefer-destructuring": error,
       "prefer-exponentiation-operator": error,

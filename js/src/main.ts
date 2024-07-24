@@ -59,7 +59,7 @@ function computeWalkScore(row: D3Row, durationInS: number): number {
 }
 
 function getNumBeats(row: D3Row, durationInS: number): number {
-  return row["avg_heart_rate"] * (durationInS / 60);
+  return row.avg_heart_rate * (durationInS / 60);
 }
 
 function computeBeatsPerMetreClimbed(row: D3Row, durationInS: number): number {
@@ -174,11 +174,11 @@ async function loadWalks(): Promise<D3DataFrame> {
       "workout_type": r.workout_type,
       "duration(s)": durationInS,
       "distance(km)": d3NumOrNull(r["distance(km)"]),
-      "steps": d3IntOrNull(r["steps"]),
+      "steps": d3IntOrNull(r.steps),
       "elevation(m)": d3IntOrNull(r["elevation(m)"]),
       "weight(lbs)": d3NumOrNull(r["weight(lbs)"]),
-      "avg_heart_rate": d3IntOrNull(r["avg_heart_rate"]),
-      "max_heart_rate": d3IntOrNull(r["max_heart_rate"]),
+      "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
+      "max_heart_rate": d3IntOrNull(r.max_heart_rate),
       "notes": r.notes,
       "score": computeWalkScore(r, durationInS),
       [bpmcField]: computeBeatsPerMetreClimbed(r, durationInS),
@@ -195,10 +195,10 @@ async function loadRuns(): Promise<D3DataFrame> {
       "workout_type": r.workout_type,
       "duration(s)": durationInS,
       "distance(km)": d3NumOrNull(r["distance(km)"]),
-      "steps": d3IntOrNull(r["steps"]),
+      "steps": d3IntOrNull(r.steps),
       "elevation(m)": d3IntOrNull(r["elevation(m)"]),
-      "avg_heart_rate": d3IntOrNull(r["avg_heart_rate"]),
-      "max_heart_rate": d3IntOrNull(r["max_heart_rate"]),
+      "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
+      "max_heart_rate": d3IntOrNull(r.max_heart_rate),
       "notes": r.notes,
       [bpmmField]: computeBeatsPerMetreMoved(r, durationInS),
     };
@@ -214,15 +214,15 @@ async function loadBikes(): Promise<D3DataFrame> {
       "workout_type": r.workout_type,
       "duration(s)": durationInS,
       "distance(km)": d3NumOrNull(r["distance(km)"]),
-      "avg_resistance": d3NumOrNull(r["avg_resistance"]),
-      "max_resistance": d3NumOrNull(r["max_resistance"]),
+      "avg_resistance": d3NumOrNull(r.avg_resistance),
+      "max_resistance": d3NumOrNull(r.max_resistance),
       "avg_cadence(rpm)": d3IntOrNull(r["avg_cadence(rpm)"]),
       "max_cadence(rpm)": d3IntOrNull(r["max_cadence(rpm)"]),
-      "avg_wattage": d3IntOrNull(r["avg_wattage"]),
-      "max_wattage": d3IntOrNull(r["max_wattage"]),
+      "avg_wattage": d3IntOrNull(r.avg_wattage),
+      "max_wattage": d3IntOrNull(r.max_wattage),
       "max_speed(km/h)": d3NumOrNull(r["max_speed(km/h)"]),
-      "avg_heart_rate": d3IntOrNull(r["avg_heart_rate"]),
-      "max_heart_rate": d3IntOrNull(r["max_heart_rate"]),
+      "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
+      "max_heart_rate": d3IntOrNull(r.max_heart_rate),
       "notes": r.notes,
     };
   }
@@ -237,14 +237,14 @@ async function loadRows(): Promise<D3DataFrame> {
       "workout_type": r.workout_type,
       "duration(s)": durationInS,
       "distance(km)": d3NumOrNull(r["distance(km)"]),
-      "avg_resistance": d3NumOrNull(r["avg_resistance"]),
-      "max_resistance": d3NumOrNull(r["max_resistance"]),
+      "avg_resistance": d3NumOrNull(r.avg_resistance),
+      "max_resistance": d3NumOrNull(r.max_resistance),
       "avg_cadence(rpm)": d3IntOrNull(r["avg_cadence(rpm)"]),
       "max_cadence(rpm)": d3IntOrNull(r["max_cadence(rpm)"]),
-      "avg_wattage": d3IntOrNull(r["avg_wattage"]),
-      "max_wattage": d3IntOrNull(r["max_wattage"]),
-      "avg_heart_rate": d3IntOrNull(r["avg_heart_rate"]),
-      "max_heart_rate": d3IntOrNull(r["max_heart_rate"]),
+      "avg_wattage": d3IntOrNull(r.avg_wattage),
+      "max_wattage": d3IntOrNull(r.max_wattage),
+      "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
+      "max_heart_rate": d3IntOrNull(r.max_heart_rate),
       "notes": r.notes,
     };
   }
@@ -566,13 +566,13 @@ function plotWeight(healthMetrics: D3DataFrame, weightTrendline: D3DataFrame): D
     .data(healthMetrics)
     .enter().append("circle")
     .filter((row: D3Row) => row["weight(lbs)"] !== null)
-    .attr("cx", (row: D3Row) => x(row["date"]))
+    .attr("cx", (row: D3Row) => x(row.date))
     .attr("cy", (row: D3Row) => y(row["weight(lbs)"]))
     .attr("r", 1.5);
 
   // Plot the trendline
   const valueLine = d3.line<D3Row>()
-    .x(function (row: D3Row, _) { return x(row["date"]); })
+    .x(function (row: D3Row, _) { return x(row.date); })
     .y(function (row: D3Row, _) { return y(row["weight(lbs)"]); });
   svg.append("path")
     .style("stroke", "steelblue")
@@ -647,15 +647,15 @@ function plotWorkoutFrequency(workoutFrequencies: D3DataFrame): D3Graph {
     .selectAll("dot")
     .data(workoutFrequencies)
     .enter().append("circle")
-    .filter(function (row: D3Row) { return row["duration"] <= maxTime; })
-    .attr("cx", (row: D3Row) => x(row["date"]))
-    .attr("cy", (row: D3Row) => y(row["duration"]))
+    .filter(function (row: D3Row) { return row.duration <= maxTime; })
+    .attr("cx", (row: D3Row) => x(row.date))
+    .attr("cy", (row: D3Row) => y(row.duration))
     .attr("r", 1.5);
 
   // Plot the trendline
   const valueLine = d3.line<D3Row>()
-    .x(function (row: D3Row, _) { return x(row["date"]); })
-    .y(function (row: D3Row, _) { return y(row["avg_duration"]); });
+    .x(function (row: D3Row, _) { return x(row.date); })
+    .y(function (row: D3Row, _) { return y(row.avg_duration); });
   svg.append("path")
     .style("fill", "none")
     .style("stroke", "steelblue")
@@ -736,13 +736,13 @@ function plotHeartRate(healthMetrics: D3DataFrame, heartRateTrendline: D3DataFra
     .data(healthMetrics)
     .enter().append("circle")
     .filter((row: D3Row) => row["resting_heart_rate(bpm)"] !== null)
-    .attr("cx", (row: D3Row) => x(row["date"]))
+    .attr("cx", (row: D3Row) => x(row.date))
     .attr("cy", (row: D3Row) => y(row["resting_heart_rate(bpm)"]))
     .attr("r", 1.5);
 
   // Plot the trendline
   const valueLine = d3.line<D3Row>()
-    .x(function (row: D3Row, _) { return x(row["date"]); })
+    .x(function (row: D3Row, _) { return x(row.date); })
     .y(function (row: D3Row, _) { return y(row["resting_heart_rate(bpm)"]); });
   svg.append("path")
     .style("fill", "none")
@@ -797,13 +797,13 @@ function plotBasic(
     .selectAll("dot")
     .data(data)
     .enter().append("circle")
-    .attr("cx", (row: D3Row) => x(row["date"]))
+    .attr("cx", (row: D3Row) => x(row.date))
     .attr("cy", (row: D3Row) => y(row[field]))
     .attr("r", 1.5);
 
   // Plot the line
   const valueLine = d3.line<D3Row>()
-    .x(function (row: D3Row, _) { return x(row["date"]); })
+    .x(function (row: D3Row, _) { return x(row.date); })
     .y(function (row: D3Row, _) { return y(row[field]); });
   svg.append("path")
     .style("fill", "none")
@@ -827,7 +827,7 @@ function secondsToHHMM(durationInS: number): string {
 function buildDailyWalkingSummary(walks: D3DataFrame, day: Date): string[] {
   const dayTime = day.getTime();
   walks = walks
-    .filter((row: D3Row) => row["date"].getTime() === dayTime);
+    .filter((row: D3Row) => row.date.getTime() === dayTime);
   if (walks.length === 0) {
     return [];
   }
@@ -846,7 +846,7 @@ function buildDailyWalkingSummary(walks: D3DataFrame, day: Date): string[] {
 function buildDailyRunningSummary(runs: D3DataFrame, day: Date): string[] {
   const dayTime = day.getTime();
   runs = runs
-    .filter((row: D3Row) => row["date"].getTime() === dayTime);
+    .filter((row: D3Row) => row.date.getTime() === dayTime);
   if (runs.length === 0) {
     return [];
   }
@@ -865,7 +865,7 @@ function buildDailyRunningSummary(runs: D3DataFrame, day: Date): string[] {
 function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
   const dayTime = day.getTime();
   bikes = bikes
-    .filter((row: D3Row) => row["date"].getTime() === dayTime);
+    .filter((row: D3Row) => row.date.getTime() === dayTime);
   if (bikes.length === 0) {
     return [];
   }
@@ -873,7 +873,7 @@ function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
   const durationInS = d3Sum(bikes, "duration(s)");
   const dist = d3Sum(bikes, "distance(km)").toFixed(1);
   const avgHR = d3Sum(bikes, "avg_heart_rate") / bikes.length;
-  let kj = d3.sum(d3.map(bikes, (row: D3Row) => row["avg_wattage"] * row["duration(s)"]));
+  let kj = d3.sum(d3.map(bikes, (row: D3Row) => row.avg_wattage * row["duration(s)"]));
   kj *= 0.001; // This is just the conversion factor from Watt to KJ/s
   return [
     `${bullet} He biked for ${secondsToHHMM(durationInS)}`,
@@ -885,7 +885,7 @@ function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
 function buildDailyRowingSummary(rows: D3DataFrame, day: Date): string[] {
   const dayTime: number = day.getTime();
   rows = rows
-    .filter((row: D3Row) => row["date"].getTime() === dayTime);
+    .filter((row: D3Row) => row.date.getTime() === dayTime);
   if (rows.length === 0) {
     return [];
   }
@@ -893,7 +893,7 @@ function buildDailyRowingSummary(rows: D3DataFrame, day: Date): string[] {
   const durationInS = d3Sum(rows, "duration(s)");
   const dist = d3Sum(rows, "distance(km)").toFixed(1);
   const avgHR = d3Sum(rows, "avg_heart_rate") / rows.length;
-  let kj = d3.sum(d3.map(rows, (row: D3Row) => row["avg_wattage"] * row["duration(s)"]));
+  let kj = d3.sum(d3.map(rows, (row: D3Row) => row.avg_wattage * row["duration(s)"]));
   kj *= 0.001;  // This is just the conversion factor from Watt to KJ/s
   kj = Math.floor(kj);
   return [
@@ -906,11 +906,11 @@ function buildDailyRowingSummary(rows: D3DataFrame, day: Date): string[] {
 function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date): string[] {
   const dayTime = day.getTime();
   weightTrainingWorkouts = weightTrainingWorkouts
-    .filter((row: D3Row) => row["date"].getTime() === dayTime);
+    .filter((row: D3Row) => row.date.getTime() === dayTime);
 
   const lines: string[] = [];
   for (const workout of weightTrainingWorkouts) {
-    const workoutType: number = workout["workout_type"];
+    const workoutType: number = workout.workout_type;
     const durationInS: number = workout["duration(s)"];
     lines.push(`${bullet} He trained ${workoutType} for ${secondsToHHMM(durationInS)}`);
     // TODO Need to publish meta metrics with this from Python, I don't want to load set data in browser
@@ -1010,11 +1010,11 @@ function computeSingleDaySummary(
   // Experiment: Walk scores
   // TODO refine this formula
   const filteredWalks = walks
-    .filter((row: D3Row) => row["workout_type"] === "walk (treadmill)")
+    .filter((row: D3Row) => row.workout_type === "walk (treadmill)")
     .filter((row: D3Row) => Number(row["duration(s)"]) >= 1200)
-    .filter((row: D3Row) => !containsCaseless(row["notes"], "pre-workout"))
-    .filter((row: D3Row) => !containsCaseless(row["notes"], "warm-up"))
-    .filter((row: D3Row) => !containsCaseless(row["notes"], "post-workout"));
+    .filter((row: D3Row) => !containsCaseless(row.notes, "pre-workout"))
+    .filter((row: D3Row) => !containsCaseless(row.notes, "warm-up"))
+    .filter((row: D3Row) => !containsCaseless(row.notes, "post-workout"));
   let title = "Walk Scores";
   const field = "score";
   const walkScoresGraphId = "walk-scores-chart";
@@ -1032,7 +1032,7 @@ function computeSingleDaySummary(
   const bpmcGraphId = "bpmc-chart";
   const bpmcFilteredWalks = filteredWalks
     .filter((row: D3Row) => Number(row[bpmcField]) > 0)
-    .filter((row: D3Row) => row["workout_type"] === "walk (treadmill)");
+    .filter((row: D3Row) => row.workout_type === "walk (treadmill)");
   expGraph = plotBasic(bpmcFilteredWalks, bpmcField, title, bpmcGraphId, 0, 300, 100, 25);
   node = expGraph.node();
   if (node === null) {
