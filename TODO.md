@@ -34,11 +34,14 @@
 * Make ExerciseInfo a parameterized singleton
 
 ### Site
-* Add a linter/formatter
 * Add testing framework and some simple wide-coverage, simple validation tests
 * Extract constants
 * Break up main.js into better sub-components/sub-files
 * Migrate to React
+* Make domain (date ranges) selectable for any given graph
+    - Create the selectable domain functionality
+    - Auto-determine the range (min/max, major step, minor step) given the values
+    - Add a "back to full" button
 * Plot a combined metric using rate_of_climb + pace (+ duration?)
     - Experiment with adding duration into the equation (maybe also something like a strive score using avg, max + duration?)
 * Use the data in the ontological files (see Python section above) for thresholds
