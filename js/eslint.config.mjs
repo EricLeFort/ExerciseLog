@@ -31,7 +31,7 @@ export default [
       // Formatting
       "@typescript-eslint/indent": [error, 2],
       "id-length": [error, {"min": 1, "max": 30}],
-      //"camelcase": error,
+      "camelcase": error,
 
       // Possible Problems (Basic)
       "array-callback-return": error,
