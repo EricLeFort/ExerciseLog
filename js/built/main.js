@@ -36,6 +36,9 @@ function computeWalkScore(row, durationInS) {
     const timeFactor = durationInH;
     return timeFactor * (paceFactor + paceFactor * climbFactor);
 }
+function getNumBeats(row, durationInS) {
+    return row["avg_heart_rate"] * (durationInS / 60);
+}
 function computeBeatsPerMetreClimbed(row, durationInS) {
     const numMetres = row["elevation(m)"];
     if (numMetres <= 10) {
@@ -50,8 +53,61 @@ function computeBeatsPerMetreMoved(row, durationInS) {
     }
     return getNumBeats(row, durationInS) / numMetres;
 }
-function getNumBeats(row, durationInS) {
-    return row["avg_heart_rate"] * (durationInS / 60);
+function nth(day) {
+    const day_num = day.getDate();
+    if (day_num > 3 && day_num < 21) {
+        return "th";
+    }
+    switch (day_num % 10) {
+        case 1:
+            return "st";
+        case 2:
+            return "nd";
+        case 3:
+            return "rd";
+        default:
+            return "th";
+    }
+}
+;
+function month_day_nth(day) {
+    const month = day.toLocaleString("default", { month: "long" });
+    return `${month} ${day.getDate()}${nth(day)}`;
+}
+function addDays(day, numDays) {
+    const date = new Date(day.valueOf());
+    date.setDate(date.getDate() + numDays);
+    return date;
+}
+function durationToS(durationStr) {
+    const hoursToS = 60 * 60;
+    const minsToS = 60;
+    const pieces = durationStr.split(":");
+    if (pieces.length != 3) {
+        throw new Error(`Improperly formatted date: ${durationStr}`);
+    }
+    return hoursToS * Number(pieces[0]) + minsToS * Number(pieces[1]) + Number(pieces[2]);
+}
+function containsCaseless(a, b) {
+    return a.toLowerCase().includes(b.toLowerCase());
+}
+function d3NumOrNull(val) {
+    return val === "" ? null : Number(val);
+}
+function d3IntOrNull(val) {
+    return val === "" ? null : +val;
+}
+function d3Min(data, c_name) {
+    return d3.min(data, function (row) { return row[c_name]; });
+}
+function d3Max(data, c_name) {
+    return d3.max(data, function (row) { return row[c_name]; });
+}
+function d3Sum(data, c_name) {
+    return d3.sum(data, function (row) { return row[c_name]; });
+}
+async function readCSV(path, rowAccessor) {
+    return await d3.csv(path, rowAccessor);
 }
 async function loadHealthMetrics() {
     function rowAccessor(r) {
@@ -185,62 +241,6 @@ async function loadHeartRateTrendline() {
         };
     }
     return await readCSV(`${pred_data_path}/resting_heart_rate_trendline.csv`, rowAccessor);
-}
-function nth(day) {
-    const day_num = day.getDate();
-    if (day_num > 3 && day_num < 21) {
-        return "th";
-    }
-    switch (day_num % 10) {
-        case 1:
-            return "st";
-        case 2:
-            return "nd";
-        case 3:
-            return "rd";
-        default:
-            return "th";
-    }
-}
-;
-function month_day_nth(day) {
-    const month = day.toLocaleString("default", { month: "long" });
-    return `${month} ${day.getDate()}${nth(day)}`;
-}
-function addDays(day, numDays) {
-    const date = new Date(day.valueOf());
-    date.setDate(date.getDate() + numDays);
-    return date;
-}
-function durationToS(durationStr) {
-    const hoursToS = 60 * 60;
-    const minsToS = 60;
-    const pieces = durationStr.split(":");
-    if (pieces.length != 3) {
-        throw new Error(`Improperly formatted date: ${durationStr}`);
-    }
-    return hoursToS * Number(pieces[0]) + minsToS * Number(pieces[1]) + Number(pieces[2]);
-}
-function containsCaseless(a, b) {
-    return a.toLowerCase().includes(b.toLowerCase());
-}
-function d3NumOrNull(val) {
-    return val === "" ? null : Number(val);
-}
-function d3IntOrNull(val) {
-    return val === "" ? null : +val;
-}
-function d3Min(data, c_name) {
-    return d3.min(data, function (row) { return row[c_name]; });
-}
-function d3Max(data, c_name) {
-    return d3.max(data, function (row) { return row[c_name]; });
-}
-function d3Sum(data, c_name) {
-    return d3.sum(data, function (row) { return row[c_name]; });
-}
-async function readCSV(path, rowAccessor) {
-    return await d3.csv(path, rowAccessor);
 }
 function date_tick(d) {
     const year = d.getFullYear();
@@ -661,30 +661,6 @@ function plotBasic(data, field, title, graphId, minVal, maxVal, minorStep, major
     svg.attr("id", graphId);
     return svg;
 }
-function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkouts, day = null) {
-    const summaryTextboxName = "single-day-summary-textbox";
-    const name = "Eric";
-    if (day === null) {
-        let day_time = new Date(d3Max(walks, "date")).getTime();
-        day_time = Math.max(day_time, new Date(d3Max(runs, "date")).getTime());
-        day_time = Math.max(day_time, new Date(d3Max(bikes, "date")).getTime());
-        day_time = Math.max(day_time, new Date(d3Max(rows, "date")).getTime());
-        day_time = Math.max(day_time, new Date(d3Max(weightTrainingWorkouts, "date")).getTime());
-        day = new Date(day_time);
-    }
-    let lines = [`${name}'s most recent workout was ${month_day_nth(day)}\n`];
-    lines.push(...buildDailyWalkingSummary(walks, day));
-    lines.push(...buildDailyRunningSummary(runs, day));
-    lines.push(...buildDailyBikingSummary(bikes, day));
-    lines.push(...buildDailyRowingSummary(rows, day));
-    lines.push(...buildDailyLiftingSummary(weightTrainingWorkouts, day));
-    if (lines.length <= 1) {
-        lines = ["No workouts recorded yet, get out there!\n "];
-    }
-    const textBox = $(`#${summaryTextboxName}`);
-    textBox.text(lines.join("\n") + "\n ");
-    textBox.css("display", "flex");
-}
 function secondsToHHMM(durationInS) {
     const durationInH = Math.floor(durationInS / 3600);
     const durationInMStr = `${Math.floor((durationInS % 3600) / 60)}`.padStart(2, "0");
@@ -773,6 +749,30 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
         lines.push(`${bullet} He trained ${workoutType} for ${secondsToHHMM(durationInS)}`);
     }
     return lines;
+}
+function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkouts, day = null) {
+    const summaryTextboxName = "single-day-summary-textbox";
+    const name = "Eric";
+    if (day === null) {
+        let day_time = new Date(d3Max(walks, "date")).getTime();
+        day_time = Math.max(day_time, new Date(d3Max(runs, "date")).getTime());
+        day_time = Math.max(day_time, new Date(d3Max(bikes, "date")).getTime());
+        day_time = Math.max(day_time, new Date(d3Max(rows, "date")).getTime());
+        day_time = Math.max(day_time, new Date(d3Max(weightTrainingWorkouts, "date")).getTime());
+        day = new Date(day_time);
+    }
+    let lines = [`${name}'s most recent workout was ${month_day_nth(day)}\n`];
+    lines.push(...buildDailyWalkingSummary(walks, day));
+    lines.push(...buildDailyRunningSummary(runs, day));
+    lines.push(...buildDailyBikingSummary(bikes, day));
+    lines.push(...buildDailyRowingSummary(rows, day));
+    lines.push(...buildDailyLiftingSummary(weightTrainingWorkouts, day));
+    if (lines.length <= 1) {
+        lines = ["No workouts recorded yet, get out there!\n "];
+    }
+    const textBox = $(`#${summaryTextboxName}`);
+    textBox.text(lines.join("\n") + "\n ");
+    textBox.css("display", "flex");
 }
 (async function () {
     const healthMetrics = await loadHealthMetrics();

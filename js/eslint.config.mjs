@@ -20,8 +20,7 @@ export default [
       // Note: disable the base rule as it can report incorrect errors
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": [
-        error,
-        {
+        error, {
           "args": "all",
           "argsIgnorePattern": "^_",
           "varsIgnorePattern": "^_",
@@ -86,7 +85,7 @@ export default [
       "no-unsafe-negation": error,
       "no-unsafe-optional-chaining": error,
       "no-unused-private-class-members": error,
-      //"no-use-before-define": error,
+      "no-use-before-define": error,
       "no-useless-backreference": error,
       "require-atomic-updates": error,
       "use-isnan": error,

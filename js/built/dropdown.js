@@ -96,6 +96,53 @@ const extraChartsIdMap = {
     "Wide-Grip Pull-Up": "wide-grip-pull-up-chart",
 };
 let submenuRoots;
+function showNodes(element) {
+    $(element).find("ul").css("display", "block");
+    $(element).find("li").css("display", "block");
+}
+function hideNodes(element) {
+    $(element).find("ul").css("display", "none");
+    $(element).find("li").css("display", "none");
+}
+function closeDropdown() {
+    $(document).find(".dropdown .dropdown-menu").slideUp(100);
+    $(document).find(".dropdown").removeClass("active");
+}
+function hideAll() {
+    const ddMenu = $(document).find(".dropdown .dropdown-menu");
+    ddMenu.css("display", "none");
+    ddMenu.find("ul").css("display", "none");
+    ddMenu.find("li").css("display", "none");
+    closeDropdown();
+}
+function loadStrengthChart(chartName, chartId) {
+    const img = $(document.createElement("img"));
+    img.attr("id", chartId);
+    img.css("display", "block");
+    img.css("margin", "0 auto");
+    img.attr("src", `${baseImgPath}/strength/${chartName}.png`);
+    img.attr("alt", chartName);
+    $(`#${extraChartContainerId}`).append(img);
+}
+function setActiveExtraChart(oldChartName, newChartName) {
+    if (!(oldChartName in extraChartsIdMap)) {
+        throw new Error(`Unrecognized old chart name: ${oldChartName}`);
+    }
+    else if (!(newChartName in extraChartsIdMap)) {
+        throw new Error(`Unrecognized new chart name: ${newChartName}`);
+    }
+    const oldChartId = extraChartsIdMap[oldChartName] || notFoundStr;
+    const newChartId = extraChartsIdMap[newChartName] || notFoundStr;
+    if (oldChartId) {
+        const oldChart = $(document).find(`#${oldChartId}`);
+        oldChart.css("display", "none");
+    }
+    const newChart = $(document).find(`#${newChartId}`);
+    if (newChart.length === 0) {
+        loadStrengthChart(newChartName, newChartId);
+    }
+    newChart.css("display", "block");
+}
 function attachListeners() {
     $(".dropdown").on("click", function () {
         if ($(this).hasClass("closing")) {
@@ -131,45 +178,6 @@ function attachListeners() {
         hideNodes(this);
     });
 }
-function setActiveExtraChart(oldChartName, newChartName) {
-    if (!(oldChartName in extraChartsIdMap)) {
-        throw new Error(`Unrecognized old chart name: ${oldChartName}`);
-    }
-    else if (!(newChartName in extraChartsIdMap)) {
-        throw new Error(`Unrecognized new chart name: ${newChartName}`);
-    }
-    const oldChartId = extraChartsIdMap[oldChartName] || notFoundStr;
-    const newChartId = extraChartsIdMap[newChartName] || notFoundStr;
-    if (oldChartId) {
-        const oldChart = $(document).find(`#${oldChartId}`);
-        oldChart.css("display", "none");
-    }
-    const newChart = $(document).find(`#${newChartId}`);
-    if (newChart.length === 0) {
-        loadStrengthChart(newChartName, newChartId);
-    }
-    newChart.css("display", "block");
-}
-function loadStrengthChart(chartName, chartId) {
-    const img = $(document.createElement("img"));
-    img.attr("id", chartId);
-    img.css("display", "block");
-    img.css("margin", "0 auto");
-    img.attr("src", `${baseImgPath}/strength/${chartName}.png`);
-    img.attr("alt", chartName);
-    $(`#${extraChartContainerId}`).append(img);
-}
-function hideAll() {
-    const ddMenu = $(document).find(".dropdown .dropdown-menu");
-    ddMenu.css("display", "none");
-    ddMenu.find("ul").css("display", "none");
-    ddMenu.find("li").css("display", "none");
-    closeDropdown();
-}
-function closeDropdown() {
-    $(document).find(".dropdown .dropdown-menu").slideUp(100);
-    $(document).find(".dropdown").removeClass("active");
-}
 function initsubmenuRoots() {
     const dropdowns = document.getElementsByClassName(dropdownClassName);
     submenuRoots = [];
@@ -179,11 +187,6 @@ function initsubmenuRoots() {
             throw new Error("Detected invalid dropdown structure.");
         }
         submenuRoots.push(candidate[0]);
-    }
-}
-function parseMenu() {
-    for (const submenuRoot of submenuRoots) {
-        parseSubMenu(submenuRoot, extraChartsMenuData);
     }
 }
 function parseSubMenu(listElement, menuData) {
@@ -206,13 +209,10 @@ function parseSubMenu(listElement, menuData) {
         listElement.appendChild(nestedli);
     }
 }
-function showNodes(element) {
-    $(element).find("ul").css("display", "block");
-    $(element).find("li").css("display", "block");
-}
-function hideNodes(element) {
-    $(element).find("ul").css("display", "none");
-    $(element).find("li").css("display", "none");
+function parseMenu() {
+    for (const submenuRoot of submenuRoots) {
+        parseSubMenu(submenuRoot, extraChartsMenuData);
+    }
 }
 window.onload = function () {
     initsubmenuRoots();

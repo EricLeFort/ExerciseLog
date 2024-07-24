@@ -58,6 +58,10 @@ function computeWalkScore(row: D3Row, durationInS: number): number {
   return timeFactor * (paceFactor + paceFactor * climbFactor);
 }
 
+function getNumBeats(row: D3Row, durationInS: number): number {
+  return row["avg_heart_rate"] * (durationInS / 60);
+}
+
 function computeBeatsPerMetreClimbed(row: D3Row, durationInS: number): number {
   const numMetres = row["elevation(m)"];
   if (numMetres <= 10) {
@@ -74,8 +78,76 @@ function computeBeatsPerMetreMoved(row: D3Row, durationInS: number): number {
   return getNumBeats(row, durationInS) / numMetres;
 }
 
-function getNumBeats(row: D3Row, durationInS: number): number {
-  return row["avg_heart_rate"] * (durationInS / 60);
+// Utilities
+function nth(day: Date): string {
+  const day_num = day.getDate();
+  if (day_num > 3 && day_num < 21) {
+    return "th";
+  }
+  switch (day_num % 10) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+};
+
+function month_day_nth(day: Date): string {
+  const month = day.toLocaleString("default", {month: "long"});
+  return `${month} ${day.getDate()}${nth(day)}`;
+}
+
+function addDays(day: Date, numDays: number): Date {
+  const date = new Date(day.valueOf());
+  date.setDate(date.getDate() + numDays);
+  return date;
+}
+
+function durationToS(durationStr: string): number {
+  const hoursToS = 60 * 60;
+  const minsToS = 60;
+  const pieces: string[] = durationStr.split(":")
+  if (pieces.length != 3) {
+    // TODO (ericlefort): No ValueError or InvalidArgumentError? Really JS? Gotta add my own..
+    throw new Error(`Improperly formatted date: ${durationStr}`);
+  }
+  return hoursToS * Number(pieces[0]) + minsToS * Number(pieces[1]) + Number(pieces[2]);
+}
+
+function containsCaseless (a: string, b: string): boolean {
+  return a.toLowerCase().includes(b.toLowerCase());
+}
+
+// D3 utilities
+function d3NumOrNull(val: string): number | null {
+  return val === "" ? null : Number(val);
+}
+
+function d3IntOrNull(val: string): number | null {
+  return val === "" ? null : +val;
+}
+
+// TODO (ericlefort): remove this
+/* eslint-disable @typescript-eslint/no-explicit-any */
+function d3Min(data: D3DataFrame, c_name: string): any {
+  return d3.min(data, function(row: D3Row) { return row[c_name]; });
+}
+
+function d3Max(data: D3DataFrame, c_name: string): any {
+  return d3.max(data, function(row: D3Row) { return row[c_name]; });
+}
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
+function d3Sum(data: D3DataFrame, c_name: string): number {
+  return d3.sum(data, function(row: D3Row) { return row[c_name]; });
+}
+
+async function readCSV(path: string, rowAccessor: D3RowAccessor): Promise<D3DataFrame> {
+  return await d3.csv(path, rowAccessor);
 }
 
 // Data loading
@@ -222,78 +294,6 @@ async function loadHeartRateTrendline(): Promise<D3DataFrame> {
     };
   }
   return await readCSV(`${pred_data_path}/resting_heart_rate_trendline.csv`, rowAccessor);
-}
-
-// Utilities
-function nth(day: Date): string {
-  const day_num = day.getDate();
-  if (day_num > 3 && day_num < 21) {
-    return "th";
-  }
-  switch (day_num % 10) {
-    case 1:
-      return "st";
-    case 2:
-      return "nd";
-    case 3:
-      return "rd";
-    default:
-      return "th";
-  }
-};
-
-function month_day_nth(day: Date): string {
-  const month = day.toLocaleString("default", {month: "long"});
-  return `${month} ${day.getDate()}${nth(day)}`;
-}
-
-function addDays(day: Date, numDays: number): Date {
-  const date = new Date(day.valueOf());
-  date.setDate(date.getDate() + numDays);
-  return date;
-}
-
-function durationToS(durationStr: string): number {
-  const hoursToS = 60 * 60;
-  const minsToS = 60;
-  const pieces: string[] = durationStr.split(":")
-  if (pieces.length != 3) {
-    // TODO (ericlefort): No ValueError or InvalidArgumentError? Really JS? Gotta add my own..
-    throw new Error(`Improperly formatted date: ${durationStr}`);
-  }
-  return hoursToS * Number(pieces[0]) + minsToS * Number(pieces[1]) + Number(pieces[2]);
-}
-
-function containsCaseless (a: string, b: string): boolean {
-  return a.toLowerCase().includes(b.toLowerCase());
-}
-
-// D3 utilities
-function d3NumOrNull(val: string): number | null {
-  return val === "" ? null : Number(val);
-}
-
-function d3IntOrNull(val: string): number | null {
-  return val === "" ? null : +val;
-}
-
-// TODO (ericlefort): remove this
-/* eslint-disable @typescript-eslint/no-explicit-any */
-function d3Min(data: D3DataFrame, c_name: string): any {
-  return d3.min(data, function(row: D3Row) { return row[c_name]; });
-}
-
-function d3Max(data: D3DataFrame, c_name: string): any {
-  return d3.max(data, function(row: D3Row) { return row[c_name]; });
-}
-/* eslint-enable @typescript-eslint/no-explicit-any */
-
-function d3Sum(data: D3DataFrame, c_name: string): number {
-  return d3.sum(data, function(row: D3Row) { return row[c_name]; });
-}
-
-async function readCSV(path: string, rowAccessor: D3RowAccessor): Promise<D3DataFrame> {
-  return await d3.csv(path, rowAccessor);
 }
 
 // Plotting
@@ -817,48 +817,6 @@ function plotBasic(
 }
 
 // Single-Day Summary
-function computeSingleDaySummary(
-  walks: D3DataFrame,
-  runs: D3DataFrame,
-  bikes: D3DataFrame,
-  rows: D3DataFrame,
-  weightTrainingWorkouts: D3DataFrame,
-  day: Date | null = null
-): void {
-  const summaryTextboxName = "single-day-summary-textbox";
-
-  // These should be user-specific when that part gets built out
-  const name = "Eric";
-
-  // If a date isn't provided, use the most recent across all workout types
-  if (day === null) {
-    let day_time: number = new Date(d3Max(walks, "date")).getTime();
-    day_time = Math.max(day_time, new Date(d3Max(runs, "date")).getTime());
-    day_time = Math.max(day_time, new Date(d3Max(bikes, "date")).getTime());
-    day_time = Math.max(day_time, new Date(d3Max(rows, "date")).getTime());
-    day_time = Math.max(day_time, new Date(d3Max(weightTrainingWorkouts, "date")).getTime());
-    day = new Date(day_time);
-  }
-
-  // Build up the daily workout summary text by each workout modality
-  let lines = [`${name}'s most recent workout was ${month_day_nth(day)}\n`];
-  lines.push(...buildDailyWalkingSummary(walks, day));
-  lines.push(...buildDailyRunningSummary(runs, day));
-  lines.push(...buildDailyBikingSummary(bikes, day));
-  lines.push(...buildDailyRowingSummary(rows, day));
-  lines.push(...buildDailyLiftingSummary(weightTrainingWorkouts, day));
-
-  // No matching workouts, instead display a default message
-  if (lines.length <= 1) {
-    lines = ["No workouts recorded yet, get out there!\n "];
-  }
-
-  // Add the generated summary text to the textbox
-  const textBox = $(`#${summaryTextboxName}`);
-  textBox.text(lines.join("\n") +  "\n ");
-  textBox.css("display", "flex");
-}
-
 function secondsToHHMM(durationInS: number): string {
   const durationInH: number = Math.floor(durationInS / 3600);
   const durationInMStr: string = `${Math.floor((durationInS % 3600) / 60)}`.padStart(2, "0");
@@ -959,6 +917,48 @@ function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date
     // lines.push(`He moved ${totalWeight}lbs across ${numSets} sets\n`);
   }
   return lines;
+}
+
+function computeSingleDaySummary(
+  walks: D3DataFrame,
+  runs: D3DataFrame,
+  bikes: D3DataFrame,
+  rows: D3DataFrame,
+  weightTrainingWorkouts: D3DataFrame,
+  day: Date | null = null
+): void {
+  const summaryTextboxName = "single-day-summary-textbox";
+
+  // These should be user-specific when that part gets built out
+  const name = "Eric";
+
+  // If a date isn't provided, use the most recent across all workout types
+  if (day === null) {
+    let day_time: number = new Date(d3Max(walks, "date")).getTime();
+    day_time = Math.max(day_time, new Date(d3Max(runs, "date")).getTime());
+    day_time = Math.max(day_time, new Date(d3Max(bikes, "date")).getTime());
+    day_time = Math.max(day_time, new Date(d3Max(rows, "date")).getTime());
+    day_time = Math.max(day_time, new Date(d3Max(weightTrainingWorkouts, "date")).getTime());
+    day = new Date(day_time);
+  }
+
+  // Build up the daily workout summary text by each workout modality
+  let lines = [`${name}'s most recent workout was ${month_day_nth(day)}\n`];
+  lines.push(...buildDailyWalkingSummary(walks, day));
+  lines.push(...buildDailyRunningSummary(runs, day));
+  lines.push(...buildDailyBikingSummary(bikes, day));
+  lines.push(...buildDailyRowingSummary(rows, day));
+  lines.push(...buildDailyLiftingSummary(weightTrainingWorkouts, day));
+
+  // No matching workouts, instead display a default message
+  if (lines.length <= 1) {
+    lines = ["No workouts recorded yet, get out there!\n "];
+  }
+
+  // Add the generated summary text to the textbox
+  const textBox = $(`#${summaryTextboxName}`);
+  textBox.text(lines.join("\n") +  "\n ");
+  textBox.css("display", "flex");
 }
 
 (async function() {

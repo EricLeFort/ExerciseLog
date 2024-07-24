@@ -12,7 +12,9 @@ const notFoundStr = "not-a-node";
 
 class MenuData {
   name: string;
+  /* eslint-disable no-use-before-define */  // This is valid, linter just isn't aware of recursive type defs
   submenus: (MenuData | string)[];
+  /* eslint-enable no-use-before-define */
 
   constructor(name: string, submenus: (MenuData | string)[]) {
     this.name = name;
@@ -126,6 +128,79 @@ const extraChartsIdMap: Record<string, string> = {
 /* Runtime set-on-load globals */
 let submenuRoots: Element[];
 
+
+
+/**
+ * Shows the next level of the dropdown menu
+ */
+function showNodes(element: HTMLElement): void {
+  $(element).find("ul").css("display", "block");
+  $(element).find("li").css("display", "block");
+}
+
+/**
+ * Hides the last level of the dropdown menu
+ */
+function hideNodes(element: HTMLElement): void {
+  $(element).find("ul").css("display", "none");
+  $(element).find("li").css("display", "none");
+}
+
+/**
+ * Updates the dropdown's state
+ */
+function closeDropdown(): void {
+  $(document).find(".dropdown .dropdown-menu").slideUp(100);
+  $(document).find(".dropdown").removeClass("active");
+}
+
+/**
+ * Hides all the nested ul's and li's in the dropdown
+ */
+function hideAll(): void {
+  const ddMenu = $(document).find(".dropdown .dropdown-menu");
+  ddMenu.css("display", "none");
+  ddMenu.find("ul").css("display", "none");
+  ddMenu.find("li").css("display", "none");
+  closeDropdown();
+}
+
+function loadStrengthChart(chartName: string, chartId: string): void {
+  const img = $(document.createElement("img"));
+  img.attr("id", chartId);
+  img.css("display", "block");
+  img.css("margin", "0 auto");
+  img.attr("src", `${baseImgPath}/strength/${chartName}.png`);
+  img.attr("alt", chartName);
+  $(`#${extraChartContainerId}`).append(img);
+}
+
+/**
+ * Sets the secondary metric chart that should be made visible
+ */
+function setActiveExtraChart(oldChartName: string, newChartName: string): void {
+  if (!(oldChartName in extraChartsIdMap)) {
+    throw new Error(`Unrecognized old chart name: ${oldChartName}`);
+  } else if (!(newChartName in extraChartsIdMap)) {
+    throw new Error(`Unrecognized new chart name: ${newChartName}`);
+  }
+  const oldChartId: string = extraChartsIdMap[oldChartName] || notFoundStr;
+  const newChartId: string = extraChartsIdMap[newChartName] || notFoundStr;
+
+  if (oldChartId) {
+    const oldChart = $(document).find(`#${oldChartId}`);
+    oldChart.css("display", "none");
+  }
+  const newChart = $(document).find(`#${newChartId}`);
+  // Haven't loaded this chart yet, download it
+  if (newChart.length === 0) {
+    // TODO this assumes every unloaded chart is a strenght chart but that won't always be true;
+    // improve the design of this chunk
+    loadStrengthChart(newChartName, newChartId);
+  }
+  newChart.css("display", "block");
+}
+
 /**
  *  Attaches listeners to the dropdown menu
  */
@@ -166,61 +241,6 @@ function attachListeners() {
 }
 
 /**
- * Sets the secondary metric chart that should be made visible
- */
-function setActiveExtraChart(oldChartName: string, newChartName: string): void {
-  if (!(oldChartName in extraChartsIdMap)) {
-    throw new Error(`Unrecognized old chart name: ${oldChartName}`);
-  } else if (!(newChartName in extraChartsIdMap)) {
-    throw new Error(`Unrecognized new chart name: ${newChartName}`);
-  }
-  const oldChartId: string = extraChartsIdMap[oldChartName] || notFoundStr;
-  const newChartId: string = extraChartsIdMap[newChartName] || notFoundStr;
-
-  if (oldChartId) {
-    const oldChart = $(document).find(`#${oldChartId}`);
-    oldChart.css("display", "none");
-  }
-  const newChart = $(document).find(`#${newChartId}`);
-  // Haven't loaded this chart yet, download it
-  if (newChart.length === 0) {
-    // TODO this assumes every unloaded chart is a strenght chart but that won't always be true;
-    // improve the design of this chunk
-    loadStrengthChart(newChartName, newChartId);
-  }
-  newChart.css("display", "block");
-}
-
-function loadStrengthChart(chartName: string, chartId: string): void {
-  const img = $(document.createElement("img"));
-  img.attr("id", chartId);
-  img.css("display", "block");
-  img.css("margin", "0 auto");
-  img.attr("src", `${baseImgPath}/strength/${chartName}.png`);
-  img.attr("alt", chartName);
-  $(`#${extraChartContainerId}`).append(img);
-}
-
-/**
- * Hides all the nested ul's and li's in the dropdown
- */
-function hideAll(): void {
-  const ddMenu = $(document).find(".dropdown .dropdown-menu");
-  ddMenu.css("display", "none");
-  ddMenu.find("ul").css("display", "none");
-  ddMenu.find("li").css("display", "none");
-  closeDropdown();
-}
-
-/**
- * Updates the dropdown's state
- */
-function closeDropdown(): void {
-  $(document).find(".dropdown .dropdown-menu").slideUp(100);
-  $(document).find(".dropdown").removeClass("active");
-}
-
-/**
  * Gets the first submenu of every dropdown on the page
  */
 function initsubmenuRoots(): void {
@@ -232,15 +252,6 @@ function initsubmenuRoots(): void {
       throw new Error("Detected invalid dropdown structure.");
     }
     submenuRoots.push(candidate[0]);
-  }
-}
-
-/**
- * Parses the dropdown menu
- */
-function parseMenu(): void {
-  for (const submenuRoot of submenuRoots) {
-    parseSubMenu(submenuRoot, extraChartsMenuData);
   }
 }
 
@@ -271,19 +282,12 @@ function parseSubMenu(listElement: Element, menuData: MenuData): void {
 }
 
 /**
- * Shows the next level of the dropdown menu
+ * Parses the dropdown menu
  */
-function showNodes(element: HTMLElement): void {
-  $(element).find("ul").css("display", "block");
-  $(element).find("li").css("display", "block");
-}
-
-/**
- * Hides the last level of the dropdown menu
- */
-function hideNodes(element: HTMLElement): void {
-  $(element).find("ul").css("display", "none");
-  $(element).find("li").css("display", "none");
+function parseMenu(): void {
+  for (const submenuRoot of submenuRoots) {
+    parseSubMenu(submenuRoot, extraChartsMenuData);
+  }
 }
 
 /**
