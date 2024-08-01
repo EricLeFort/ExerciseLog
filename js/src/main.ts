@@ -7,7 +7,6 @@ type D3RowAccessor = (row: D3Row) => any;
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
 const baseDataPath = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/data";
-const predDataPath = `${baseDataPath}/preds`;
 const graphMargin = 100;
 const graphWidth = 1600;
 const graphHeight = 900;
@@ -122,6 +121,82 @@ function containsCaseless (a: string, b: string): boolean {
   return a.toLowerCase().includes(b.toLowerCase());
 }
 
+// Mutex
+// TODO this should be its own module
+type ReleaseFunction = () => void;
+
+/**
+ * A lock for synchronizing async operations.
+ * Use this to protect a critical section from getting modified by multiple async ops at the same time.
+ */
+class Mutex {
+  /**
+   * When multiple ops attempt to acquire the lock, this queue remembers the order of them.
+   */
+  #queue: {
+    resolve: (release: ReleaseFunction) => void;
+  }[] = [];
+  #isLocked = false;
+
+  /**
+   * Wait until the lock is acquired.
+   *
+   * @returns A function that releases the acquired lock.
+   */
+  acquire() {
+    return new Promise<ReleaseFunction>((resolve) => {
+      this.#queue.push({resolve});
+      this.#dispatch();
+    });
+  }
+
+  /**
+   * Enqueue a function to be run serially.
+   *
+   * This ensures no other functions will start running until `callback` finishes running.
+   *
+   * @param callback Function to be run exclusively.
+   * @returns The return value of `callback`.
+   */
+  async runExclusive<T>(callback: () => Promise<T>) {
+    const release = await this.acquire();
+    try {
+      return await callback();
+    } finally {
+      release();
+    }
+  }
+
+  /**
+   * Check the availability of the resource and provide access to the next operation in the queue.
+   *
+   * _dispatch is called whenever availability changes, such as after lock acquire request or lock release.
+   */
+  #dispatch() {
+    if (this.#isLocked) {
+      // Resource is locked, wait for now.
+      return;
+    }
+    const nextEntry = this.#queue.shift();
+    if (!nextEntry) {
+      // Nothing in the queue, wait until next dispatch.
+      return;
+    }
+    this.#isLocked = true;
+    nextEntry.resolve(this.#buildRelease()); // Give access to the next op in the queue.
+  }
+
+  /**
+   * Releases the lock after an op finishes.
+   */
+  #buildRelease(): ReleaseFunction {
+    return () => {
+      this.#isLocked = false;
+      this.#dispatch();
+    };
+  }
+}
+
 // D3 utilities
 function d3NumOrNull(val: string): number | null {
   return val === "" ? null : Number(val);
@@ -154,146 +229,267 @@ async function readCSV(path: string, rowAccessor: D3RowAccessor): Promise<D3Data
 // TODO make separate dataloading module for this logic
 // TODO also add the rest of the relevant loaders
 // TODO also add specific types for each dataset to avoid using "any"
-async function loadHealthMetrics(): Promise<D3DataFrame> {
-  function rowAccessor(r: D3Row) {
-    return {
-      "date": new Date(r.date),
-      "weight(lbs)": d3IntOrNull(r["weight(lbs)"]),
-      "resting_heart_rate(bpm)": d3IntOrNull(r["resting_heart_rate(bpm)"]),
-      "notes": r.notes,
-    };
+class SingleLoader {
+  path: string;
+  rowAccessor: D3RowAccessor;
+
+  #pData: Promise<D3DataFrame>;
+  #data: D3DataFrame;
+  #lock: Mutex;
+
+  constructor(path: string, rowAccessor: D3RowAccessor) {
+    this.path = `${baseDataPath}/${path}`;
+    this.rowAccessor = rowAccessor;
+
+    this.#lock = new Mutex();
   }
-  return await readCSV(`${baseDataPath}/health_metrics.csv`, rowAccessor);
+
+  async load(): Promise<D3DataFrame> {
+    if (this.#pData !== null) {
+      // Note: this await waits to acquire the lock but not for the internal readCSV call
+      await this.#lock.runExclusive(async() => {
+        this.#pData = readCSV(this.path, this.rowAccessor);
+      });
+    }
+    return this.#pData;
+  }
+
+  async loadAndWait(): Promise<D3DataFrame> {
+    if (this.#data === null) {
+      this.#data = await this.load();
+    }
+    return this.#data;
+  }
 }
 
-async function loadWalks(): Promise<D3DataFrame> {
-  function rowAccessor(r: D3Row) {
-    const durationInS = durationToS(r["duration(HH:mm:ss)"]);
-    return {
-      "date": new Date(r.date),
-      "workout_type": r.workout_type,
-      "duration(s)": durationInS,
-      "distance(km)": d3NumOrNull(r["distance(km)"]),
-      "steps": d3IntOrNull(r.steps),
-      "elevation(m)": d3IntOrNull(r["elevation(m)"]),
-      "weight(lbs)": d3NumOrNull(r["weight(lbs)"]),
-      "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
-      "max_heart_rate": d3IntOrNull(r.max_heart_rate),
-      "notes": r.notes,
-      "score": computeWalkScore(r, durationInS),
-      [bpmcField]: computeBeatsPerMetreClimbed(r, durationInS),
-    };
-  }
-  return await readCSV(`${baseDataPath}/walks.csv`, rowAccessor);
-}
+class DataLoader {
+  static #walkLoader: SingleLoader = new SingleLoader(
+    "walks.csv",
+    (r: D3Row) => {
+      const durationInS = durationToS(r["duration(HH:mm:ss)"]);
+      return {
+        "date": new Date(r.date),
+        "workout_type": r.workout_type,
+        "duration(s)": durationInS,
+        "distance(km)": d3NumOrNull(r["distance(km)"]),
+        "steps": d3IntOrNull(r.steps),
+        "elevation(m)": d3IntOrNull(r["elevation(m)"]),
+        "weight(lbs)": d3NumOrNull(r["weight(lbs)"]),
+        "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
+        "max_heart_rate": d3IntOrNull(r.max_heart_rate),
+        "notes": r.notes,
+        "score": computeWalkScore(r, durationInS),
+        [bpmcField]: computeBeatsPerMetreClimbed(r, durationInS),
+      };
+    }
+  );
+  static #runLoader: SingleLoader = new SingleLoader(
+    "runs.csv",
+    (r: D3Row) => {
+      const durationInS = durationToS(r["duration(HH:mm:ss)"]);
+      return {
+        "date": new Date(r.date),
+        "workout_type": r.workout_type,
+        "duration(s)": durationInS,
+        "distance(km)": d3NumOrNull(r["distance(km)"]),
+        "steps": d3IntOrNull(r.steps),
+        "elevation(m)": d3IntOrNull(r["elevation(m)"]),
+        "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
+        "max_heart_rate": d3IntOrNull(r.max_heart_rate),
+        "notes": r.notes,
+        [bpmmField]: computeBeatsPerMetreMoved(r, durationInS),
+      };
+    }
+  );
+  static #bikeLoader: SingleLoader = new SingleLoader(
+    "bikes.csv",
+    (r: D3Row) => {
+      const durationInS = durationToS(r["duration(HH:mm:ss)"]);
+      return {
+        "date": new Date(r.date),
+        "workout_type": r.workout_type,
+        "duration(s)": durationInS,
+        "distance(km)": d3NumOrNull(r["distance(km)"]),
+        "avg_resistance": d3NumOrNull(r.avg_resistance),
+        "max_resistance": d3NumOrNull(r.max_resistance),
+        "avg_cadence(rpm)": d3IntOrNull(r["avg_cadence(rpm)"]),
+        "max_cadence(rpm)": d3IntOrNull(r["max_cadence(rpm)"]),
+        "avg_wattage": d3IntOrNull(r.avg_wattage),
+        "max_wattage": d3IntOrNull(r.max_wattage),
+        "max_speed(km/h)": d3NumOrNull(r["max_speed(km/h)"]),
+        "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
+        "max_heart_rate": d3IntOrNull(r.max_heart_rate),
+        "notes": r.notes,
+      };
+    }
+  );
+  static #rowLoader: SingleLoader = new SingleLoader(
+    "rows.csv",
+    (r: D3Row) => {
+      const durationInS = durationToS(r["duration(HH:mm:ss)"]);
+      return {
+        "date": new Date(r.date),
+        "workout_type": r.workout_type,
+        "duration(s)": durationInS,
+        "distance(km)": d3NumOrNull(r["distance(km)"]),
+        "avg_resistance": d3NumOrNull(r.avg_resistance),
+        "max_resistance": d3NumOrNull(r.max_resistance),
+        "avg_cadence(rpm)": d3IntOrNull(r["avg_cadence(rpm)"]),
+        "max_cadence(rpm)": d3IntOrNull(r["max_cadence(rpm)"]),
+        "avg_wattage": d3IntOrNull(r.avg_wattage),
+        "max_wattage": d3IntOrNull(r.max_wattage),
+        "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
+        "max_heart_rate": d3IntOrNull(r.max_heart_rate),
+        "notes": r.notes,
+      };
+    }
+  );
+  static #weightTrainingWorkoutLoader: SingleLoader = new SingleLoader(
+    "weight_training_workouts.csv",
+    (row: D3Row) => {
+      const durationInS = durationToS(row["duration(HH:mm:ss)"]);
+      return {
+        "date": new Date(row.date),
+        "workout_type": row.workout_type,
+        "duration(s)": durationInS,
+        "location": row.location,
+        "notes": row.notes,
+      };
+    }
+  );
+  static #healthMetricLoader: SingleLoader = new SingleLoader(
+    "health_metrics.csv",
+    (r: D3Row) => {
+      return {
+        "date": new Date(r.date),
+        "weight(lbs)": d3IntOrNull(r["weight(lbs)"]),
+        "resting_heart_rate(bpm)": d3IntOrNull(r["resting_heart_rate(bpm)"]),
+        "notes": r.notes,
+      };
+    }
+  );
+  static #weightTrendlineLoader: SingleLoader = new SingleLoader(
+    "preds/weight_trendline.csv",
+    (row: D3Row) => {
+      return {
+        "date": new Date(row.date),
+        "weight(lbs)": Number(row["weight(lbs)"]),
+      };
+    }
+  );
+  static #workoutFrequencyLoader: SingleLoader = new SingleLoader(
+    "preds/avg_workout_durations.csv",
+    (row: D3Row) => {
+      return {
+        "date": new Date(row.date),
+        "duration": Number(row["duration(s)"]) / 60,
+        "avg_duration": Number(row["avg_duration(s)"]) / 60,
+      };
+    }
+  );
+  static #heartRateTrendlineLoader: SingleLoader = new SingleLoader(
+    "preds/resting_heart_rate_trendline.csv",
+    (row: D3Row) => {
+      return {
+        "date": new Date(row.date),
+        "resting_heart_rate(bpm)": Number(row["resting_heart_rate(bpm)"]),
+      };
+    }
+  );
 
-async function loadRuns(): Promise<D3DataFrame> {
-  function rowAccessor(r: D3Row) {
-    const durationInS = durationToS(r["duration(HH:mm:ss)"]);
-    return {
-      "date": new Date(r.date),
-      "workout_type": r.workout_type,
-      "duration(s)": durationInS,
-      "distance(km)": d3NumOrNull(r["distance(km)"]),
-      "steps": d3IntOrNull(r.steps),
-      "elevation(m)": d3IntOrNull(r["elevation(m)"]),
-      "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
-      "max_heart_rate": d3IntOrNull(r.max_heart_rate),
-      "notes": r.notes,
-      [bpmmField]: computeBeatsPerMetreMoved(r, durationInS),
-    };
-  }
-  return await readCSV(`${baseDataPath}/runs.csv`, rowAccessor);
-}
+  //const weight_training_sets = readCSV(`${baseDataPath}/weight_training_sets.csv`);
+  //const travel_days = readCSV(`${baseDataPath}/travel_days.csv`);
 
-async function loadBikes(): Promise<D3DataFrame> {
-  function rowAccessor(r: D3Row) {
-    const durationInS = durationToS(r["duration(HH:mm:ss)"]);
-    return {
-      "date": new Date(r.date),
-      "workout_type": r.workout_type,
-      "duration(s)": durationInS,
-      "distance(km)": d3NumOrNull(r["distance(km)"]),
-      "avg_resistance": d3NumOrNull(r.avg_resistance),
-      "max_resistance": d3NumOrNull(r.max_resistance),
-      "avg_cadence(rpm)": d3IntOrNull(r["avg_cadence(rpm)"]),
-      "max_cadence(rpm)": d3IntOrNull(r["max_cadence(rpm)"]),
-      "avg_wattage": d3IntOrNull(r.avg_wattage),
-      "max_wattage": d3IntOrNull(r.max_wattage),
-      "max_speed(km/h)": d3NumOrNull(r["max_speed(km/h)"]),
-      "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
-      "max_heart_rate": d3IntOrNull(r.max_heart_rate),
-      "notes": r.notes,
-    };
-  }
-  return await readCSV(`${baseDataPath}/bikes.csv`, rowAccessor);
-}
+  static async loadInitialSet() {
+    // These first since the first element on the page is a workout summary
+    DataLoader.loadWalks();
+    DataLoader.loadRuns();
+    DataLoader.loadBikes();
+    DataLoader.loadRows();
+    DataLoader.loadWeightTrainingWorkouts();
 
-async function loadRows(): Promise<D3DataFrame> {
-  function rowAccessor(r: D3Row) {
-    const durationInS = durationToS(r["duration(HH:mm:ss)"]);
-    return {
-      "date": new Date(r.date),
-      "workout_type": r.workout_type,
-      "duration(s)": durationInS,
-      "distance(km)": d3NumOrNull(r["distance(km)"]),
-      "avg_resistance": d3NumOrNull(r.avg_resistance),
-      "max_resistance": d3NumOrNull(r.max_resistance),
-      "avg_cadence(rpm)": d3IntOrNull(r["avg_cadence(rpm)"]),
-      "max_cadence(rpm)": d3IntOrNull(r["max_cadence(rpm)"]),
-      "avg_wattage": d3IntOrNull(r.avg_wattage),
-      "max_wattage": d3IntOrNull(r.max_wattage),
-      "avg_heart_rate": d3IntOrNull(r.avg_heart_rate),
-      "max_heart_rate": d3IntOrNull(r.max_heart_rate),
-      "notes": r.notes,
-    };
-  }
-  return await readCSV(`${baseDataPath}/rows.csv`, rowAccessor);
-}
+    // Then load these since they're used for the main three graphs
+    DataLoader.loadHealthMetrics();
+    DataLoader.loadWeightTrendline();
+    DataLoader.loadWorkoutFrequency();
+    DataLoader.loadHeartRateTrendline();
 
-async function loadWeightTrainingWorkouts(): Promise<D3DataFrame> {
-  function rowAccessor(row: D3Row) {
-    const durationInS = durationToS(row["duration(HH:mm:ss)"]);
-    return {
-      "date": new Date(row.date),
-      "workout_type": row.workout_type,
-      "duration(s)": durationInS,
-      "location": row.location,
-      "notes": row.notes,
-    };
+    // This may be added in the future and may not even be needed in initial set
+    //DataLoader.loadWeightTrainingSets();
+    //DataLoader.loadTravelDays();
   }
-  return await readCSV(`${baseDataPath}/weight_training_workouts.csv`, rowAccessor);
-}
 
-async function loadWeightTrendline(): Promise<D3DataFrame> {
-  function rowAccessor(row: D3Row) {
-    return {
-      "date": new Date(row.date),
-      "weight(lbs)": Number(row["weight(lbs)"]),
-    };
+  static async loadAndWaitWalks(): Promise<D3DataFrame> {
+    return await DataLoader.#walkLoader.loadAndWait();
   }
-  return await readCSV(`${predDataPath}/weight_trendline.csv`, rowAccessor);
-}
 
-async function loadWorkoutFrequency(): Promise<D3DataFrame> {
-  function rowAccessor(row: D3Row) {
-    return {
-      "date": new Date(row.date),
-      "duration": Number(row["duration(s)"]) / 60,
-      "avg_duration": Number(row["avg_duration(s)"]) / 60,
-    };
+  static async loadAndWaitRuns(): Promise<D3DataFrame> {
+    return await DataLoader.#runLoader.loadAndWait();
   }
-  return await readCSV(`${predDataPath}/avg_workout_durations.csv`, rowAccessor);
-}
 
-async function loadHeartRateTrendline(): Promise<D3DataFrame> {
-  function rowAccessor(row: D3Row) {
-    return {
-      "date": new Date(row.date),
-      "resting_heart_rate(bpm)": Number(row["resting_heart_rate(bpm)"]),
-    };
+  static async loadAndWaitBikes(): Promise<D3DataFrame> {
+    return await DataLoader.#bikeLoader.loadAndWait();
   }
-  return await readCSV(`${predDataPath}/resting_heart_rate_trendline.csv`, rowAccessor);
+
+  static async loadAndWaitRows(): Promise<D3DataFrame> {
+    return await DataLoader.#rowLoader.loadAndWait();
+  }
+
+  static async loadAndWaitWeightTrainingWorkouts(): Promise<D3DataFrame> {
+    return await DataLoader.#weightTrainingWorkoutLoader.loadAndWait();
+  }
+
+  static async loadAndWaitHealthMetrics(): Promise<D3DataFrame> {
+    return await DataLoader.#healthMetricLoader.loadAndWait();
+  }
+
+  static async loadAndWaitWeightTrendline(): Promise<D3DataFrame> {
+    return await DataLoader.#weightTrendlineLoader.loadAndWait();
+  }
+
+  static async loadAndWaitWorkoutFrequency(): Promise<D3DataFrame> {
+    return await DataLoader.#workoutFrequencyLoader.loadAndWait();
+  }
+
+  static async loadAndWaitHeartRateTrendline(): Promise<D3DataFrame> {
+    return await DataLoader.#heartRateTrendlineLoader.loadAndWait();
+  }
+
+  static async loadWalks(): Promise<D3DataFrame> {
+    return DataLoader.#walkLoader.load();
+  }
+
+  static async loadRuns(): Promise<D3DataFrame> {
+    return DataLoader.#runLoader.load();
+  }
+
+  static async loadBikes(): Promise<D3DataFrame> {
+    return DataLoader.#bikeLoader.load();
+  }
+
+  static async loadRows(): Promise<D3DataFrame> {
+    return DataLoader.#rowLoader.load();
+  }
+
+  static async loadWeightTrainingWorkouts(): Promise<D3DataFrame> {
+    return DataLoader.#weightTrainingWorkoutLoader.load();
+  }
+
+  static async loadHealthMetrics(): Promise<D3DataFrame> {
+    return DataLoader.#healthMetricLoader.load(); 
+  }
+
+  static async loadWeightTrendline(): Promise<D3DataFrame> {
+    return DataLoader.#weightTrendlineLoader.load();
+  }
+
+  static async loadWorkoutFrequency(): Promise<D3DataFrame> {
+    return DataLoader.#workoutFrequencyLoader.load();
+  }
+
+  static async loadHeartRateTrendline(): Promise<D3DataFrame> {
+    return DataLoader.#heartRateTrendlineLoader.load();
+  }
 }
 
 // Plotting
@@ -500,10 +696,13 @@ function addLinearTimeYAxis(svg: D3Graph, minTime: number, maxTime: number, majo
       .attr("x1", contentWidth));
 }
 
-function plotWeight(healthMetrics: D3DataFrame, weightTrendline: D3DataFrame): D3Graph {
+async function plotWeight(): Promise<D3Graph> {
   const minWeight = 180;
   const maxWeight = 305;
   const nDaysToExtrapolate = 100;
+
+  const healthMetrics = await DataLoader.loadAndWaitHealthMetrics();
+  const weightTrendline = await DataLoader.loadAndWaitWeightTrendline();
 
   const firstDate: Date = new Date(d3Min(healthMetrics, "date"));
   const lastDate: Date = addDays(new Date(d3Max(healthMetrics, "date")), nDaysToExtrapolate);
@@ -586,9 +785,11 @@ function plotWeight(healthMetrics: D3DataFrame, weightTrendline: D3DataFrame): D
   return svg;
 }
 
-function plotWorkoutFrequency(workoutFrequencies: D3DataFrame): D3Graph {
+async function plotWorkoutFrequency(): Promise<D3Graph> {
   const minTime = 0;
   const maxTime = 210;
+
+  const workoutFrequencies = await DataLoader.loadAndWaitWorkoutFrequency();
 
   const firstDate: Date = new Date(d3Min(workoutFrequencies, "date"));
   const lastDate: Date = new Date(d3Max(workoutFrequencies, "date"));
@@ -667,9 +868,12 @@ function plotWorkoutFrequency(workoutFrequencies: D3DataFrame): D3Graph {
   return svg;
 }
 
-function plotHeartRate(healthMetrics: D3DataFrame, heartRateTrendline: D3DataFrame): D3Graph {
+async function plotHeartRate(): Promise<D3Graph> {
   const minHR = 45;
   const maxHR = 85;
+
+  const heartRateTrendline = await DataLoader.loadAndWaitHeartRateTrendline();
+  const healthMetrics = await DataLoader.loadAndWaitHealthMetrics();
 
   const firstDate: Date = new Date(d3Min(heartRateTrendline, "date"));
   const lastDate: Date = new Date(d3Max(heartRateTrendline, "date"));
@@ -824,8 +1028,9 @@ function secondsToHHMM(durationInS: number): string {
   return `${durationInH}:${durationInMStr}:${durationInSStr}`;
 }
 
-function buildDailyWalkingSummary(walks: D3DataFrame, day: Date): string[] {
+async function buildDailyWalkingSummary(day: Date): Promise<string[]> {
   const dayTime = day.getTime();
+  let walks = await DataLoader.loadAndWaitWalks();
   walks = walks
     .filter((row: D3Row) => row.date.getTime() === dayTime);
   if (walks.length === 0) {
@@ -843,8 +1048,9 @@ function buildDailyWalkingSummary(walks: D3DataFrame, day: Date): string[] {
   ];
 }
 
-function buildDailyRunningSummary(runs: D3DataFrame, day: Date): string[] {
+async function buildDailyRunningSummary(day: Date): Promise<string[]> {
   const dayTime = day.getTime();
+  let runs = await DataLoader.loadAndWaitRuns();
   runs = runs
     .filter((row: D3Row) => row.date.getTime() === dayTime);
   if (runs.length === 0) {
@@ -862,8 +1068,9 @@ function buildDailyRunningSummary(runs: D3DataFrame, day: Date): string[] {
   ];
 }
 
-function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
+async function buildDailyBikingSummary(day: Date): Promise<string[]> {
   const dayTime = day.getTime();
+  let bikes = await DataLoader.loadAndWaitBikes();
   bikes = bikes
     .filter((row: D3Row) => row.date.getTime() === dayTime);
   if (bikes.length === 0) {
@@ -882,8 +1089,9 @@ function buildDailyBikingSummary(bikes: D3DataFrame, day: Date): string[] {
   ];
 }
 
-function buildDailyRowingSummary(rows: D3DataFrame, day: Date): string[] {
+async function buildDailyRowingSummary(day: Date): Promise<string[]> {
   const dayTime: number = day.getTime();
+  let rows = await DataLoader.loadAndWaitRows();
   rows = rows
     .filter((row: D3Row) => row.date.getTime() === dayTime);
   if (rows.length === 0) {
@@ -903,8 +1111,9 @@ function buildDailyRowingSummary(rows: D3DataFrame, day: Date): string[] {
   ];
 }
 
-function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date): string[] {
+async function buildDailyLiftingSummary(day: Date): Promise<string[]> {
   const dayTime = day.getTime();
+  let weightTrainingWorkouts = await DataLoader.loadAndWaitWeightTrainingWorkouts();
   weightTrainingWorkouts = weightTrainingWorkouts
     .filter((row: D3Row) => row.date.getTime() === dayTime);
 
@@ -919,18 +1128,17 @@ function buildDailyLiftingSummary(weightTrainingWorkouts: D3DataFrame, day: Date
   return lines;
 }
 
-function computeSingleDaySummary(
-  walks: D3DataFrame,
-  runs: D3DataFrame,
-  bikes: D3DataFrame,
-  rows: D3DataFrame,
-  weightTrainingWorkouts: D3DataFrame,
-  day: Date | null = null
-): void {
+async function computeSingleDaySummary(day: Date | null = null): Promise<void> {
+  // This should be user-specific when that part gets built out
+  const name = "Eric";
   const summaryTextboxName = "single-day-summary-textbox";
 
-  // These should be user-specific when that part gets built out
-  const name = "Eric";
+  // Prepare the data
+  const walks = await DataLoader.loadAndWaitWalks();
+  const runs = await DataLoader.loadAndWaitRuns();
+  const bikes = await DataLoader.loadAndWaitBikes();
+  const rows = await DataLoader.loadAndWaitRows();
+  const weightTrainingWorkouts = await DataLoader.loadAndWaitWeightTrainingWorkouts();
 
   // If a date isn't provided, use the most recent across all workout types
   if (day === null) {
@@ -944,11 +1152,11 @@ function computeSingleDaySummary(
 
   // Build up the daily workout summary text by each workout modality
   let lines = [`${name}'s most recent workout was ${monthDayNth(day)}\n`];
-  lines.push(...buildDailyWalkingSummary(walks, day));
-  lines.push(...buildDailyRunningSummary(runs, day));
-  lines.push(...buildDailyBikingSummary(bikes, day));
-  lines.push(...buildDailyRowingSummary(rows, day));
-  lines.push(...buildDailyLiftingSummary(weightTrainingWorkouts, day));
+  lines.push(...await buildDailyWalkingSummary(day));
+  lines.push(...await buildDailyRunningSummary(day));
+  lines.push(...await buildDailyBikingSummary(day));
+  lines.push(...await buildDailyRowingSummary(day));
+  lines.push(...await buildDailyLiftingSummary(day));
 
   // No matching workouts, instead display a default message
   if (lines.length <= 1) {
@@ -961,29 +1169,17 @@ function computeSingleDaySummary(
   textBox.css("display", "flex");
 }
 
-(async function() {
-  // Load data
-  const healthMetrics: D3DataFrame = await loadHealthMetrics();
-  const walks: D3DataFrame = await loadWalks();
-  const runs: D3DataFrame = await loadRuns();
-  const bikes: D3DataFrame = await loadBikes();
-  const rows: D3DataFrame = await loadRows();
-  const weightTrainingWorkouts: D3DataFrame = await loadWeightTrainingWorkouts();
-  //const weight_training_sets = readCSV(`${baseDataPath}/weight_training_sets.csv`);
-  //const travel_days = readCSV(`${baseDataPath}/travel_days.csv`);
-
-  // Load predictions
-  const weightTrendline: D3DataFrame = await loadWeightTrendline();
-  const workoutFrequency: D3DataFrame = await loadWorkoutFrequency();
-  const heartRateTrendline: D3DataFrame = await loadHeartRateTrendline();
+(async () => {
+  // Kick off the data loading now to give it a headstart
+  DataLoader.loadInitialSet();
 
   // Populate the default contents of the single-day summary
-  computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkouts);
+  computeSingleDaySummary();
 
   // Build and display the main graphs; update width of entire document to fit
-  const weightGraph: SVGSVGElement | null = plotWeight(healthMetrics, weightTrendline).node();
-  const workoutFrequencyGraph: SVGSVGElement | null = plotWorkoutFrequency(workoutFrequency).node();
-  const heartRateGraph: SVGSVGElement | null = plotHeartRate(healthMetrics, heartRateTrendline).node();
+  const weightGraph: SVGSVGElement | null = (await plotWeight()).node();
+  const workoutFrequencyGraph: SVGSVGElement | null = (await plotWorkoutFrequency()).node();
+  const heartRateGraph: SVGSVGElement | null = (await plotHeartRate()).node();
   if (weightGraph === null || workoutFrequencyGraph === null || heartRateGraph === null) {
     throw new Error("Issue building one of the main graphs.");
   }
@@ -1009,6 +1205,7 @@ function computeSingleDaySummary(
   // Experiment with new graphs (defaults to hidden)
   // Experiment: Walk scores
   // TODO refine this formula
+  const walks: D3DataFrame = await DataLoader.loadAndWaitWalks();
   const filteredWalks = walks
     .filter((row: D3Row) => row.workout_type === "walk (treadmill)")
     .filter((row: D3Row) => Number(row["duration(s)"]) >= 1200)
@@ -1043,6 +1240,7 @@ function computeSingleDaySummary(
 
   // Experiment: Heartbeats required to run a metre
   // Note: Only considers running since that's more efficient for covering horizontal distance
+  const runs = await DataLoader.loadAndWaitRuns();
   title = "BPMM (Beats Per Metre Moved)";
   const bpmmGraphId = "bpmm-chart";
   const bpmmFilteredRuns = runs.filter((row: D3Row) => Number(row[bpmmField]) > 0);
@@ -1059,4 +1257,9 @@ function computeSingleDaySummary(
   copyright.css("width", `${weightGraph.getBoundingClientRect().width}px`);
   copyright.css("display", "block");
   $("body").append(copyright);
+
+  /* eslint-disable no-console */
+  const loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
+  console.log(`Page loaded in ${loadTime / 1000}s`);
+  /* eslint-enable no-console */
 })();

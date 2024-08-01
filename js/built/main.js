@@ -1,6 +1,17 @@
 "use strict";
+var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var _Mutex_instances, _Mutex_queue, _Mutex_isLocked, _Mutex_dispatch, _Mutex_buildRelease, _SingleLoader_pData, _SingleLoader_data, _SingleLoader_lock, _a, _DataLoader_walkLoader, _DataLoader_runLoader, _DataLoader_bikeLoader, _DataLoader_rowLoader, _DataLoader_weightTrainingWorkoutLoader, _DataLoader_healthMetricLoader, _DataLoader_weightTrendlineLoader, _DataLoader_workoutFrequencyLoader, _DataLoader_heartRateTrendlineLoader;
 const baseDataPath = "https://raw.githubusercontent.com/ericlefort/exerciselog/main/data";
-const predDataPath = `${baseDataPath}/preds`;
 const graphMargin = 100;
 const graphWidth = 1600;
 const graphHeight = 900;
@@ -91,6 +102,44 @@ function durationToS(durationStr) {
 function containsCaseless(a, b) {
     return a.toLowerCase().includes(b.toLowerCase());
 }
+class Mutex {
+    constructor() {
+        _Mutex_instances.add(this);
+        _Mutex_queue.set(this, []);
+        _Mutex_isLocked.set(this, false);
+    }
+    acquire() {
+        return new Promise((resolve) => {
+            __classPrivateFieldGet(this, _Mutex_queue, "f").push({ resolve });
+            __classPrivateFieldGet(this, _Mutex_instances, "m", _Mutex_dispatch).call(this);
+        });
+    }
+    async runExclusive(callback) {
+        const release = await this.acquire();
+        try {
+            return await callback();
+        }
+        finally {
+            release();
+        }
+    }
+}
+_Mutex_queue = new WeakMap(), _Mutex_isLocked = new WeakMap(), _Mutex_instances = new WeakSet(), _Mutex_dispatch = function _Mutex_dispatch() {
+    if (__classPrivateFieldGet(this, _Mutex_isLocked, "f")) {
+        return;
+    }
+    const nextEntry = __classPrivateFieldGet(this, _Mutex_queue, "f").shift();
+    if (!nextEntry) {
+        return;
+    }
+    __classPrivateFieldSet(this, _Mutex_isLocked, true, "f");
+    nextEntry.resolve(__classPrivateFieldGet(this, _Mutex_instances, "m", _Mutex_buildRelease).call(this));
+}, _Mutex_buildRelease = function _Mutex_buildRelease() {
+    return () => {
+        __classPrivateFieldSet(this, _Mutex_isLocked, false, "f");
+        __classPrivateFieldGet(this, _Mutex_instances, "m", _Mutex_dispatch).call(this);
+    };
+};
 function d3NumOrNull(val) {
     return val === "" ? null : Number(val);
 }
@@ -109,19 +158,100 @@ function d3Sum(data, cName) {
 async function readCSV(path, rowAccessor) {
     return await d3.csv(path, rowAccessor);
 }
-async function loadHealthMetrics() {
-    function rowAccessor(r) {
-        return {
-            "date": new Date(r.date),
-            "weight(lbs)": d3IntOrNull(r["weight(lbs)"]),
-            "resting_heart_rate(bpm)": d3IntOrNull(r["resting_heart_rate(bpm)"]),
-            "notes": r.notes,
-        };
+class SingleLoader {
+    constructor(path, rowAccessor) {
+        _SingleLoader_pData.set(this, void 0);
+        _SingleLoader_data.set(this, void 0);
+        _SingleLoader_lock.set(this, void 0);
+        this.path = `${baseDataPath}/${path}`;
+        this.rowAccessor = rowAccessor;
+        __classPrivateFieldSet(this, _SingleLoader_lock, new Mutex(), "f");
     }
-    return await readCSV(`${baseDataPath}/health_metrics.csv`, rowAccessor);
+    async load() {
+        if (__classPrivateFieldGet(this, _SingleLoader_pData, "f") !== null) {
+            await __classPrivateFieldGet(this, _SingleLoader_lock, "f").runExclusive(async () => {
+                __classPrivateFieldSet(this, _SingleLoader_pData, readCSV(this.path, this.rowAccessor), "f");
+            });
+        }
+        return __classPrivateFieldGet(this, _SingleLoader_pData, "f");
+    }
+    async loadAndWait() {
+        if (__classPrivateFieldGet(this, _SingleLoader_data, "f") === null) {
+            __classPrivateFieldSet(this, _SingleLoader_data, await this.load(), "f");
+        }
+        return __classPrivateFieldGet(this, _SingleLoader_data, "f");
+    }
 }
-async function loadWalks() {
-    function rowAccessor(r) {
+_SingleLoader_pData = new WeakMap(), _SingleLoader_data = new WeakMap(), _SingleLoader_lock = new WeakMap();
+class DataLoader {
+    static async loadInitialSet() {
+        _a.loadWalks();
+        _a.loadRuns();
+        _a.loadBikes();
+        _a.loadRows();
+        _a.loadWeightTrainingWorkouts();
+        _a.loadHealthMetrics();
+        _a.loadWeightTrendline();
+        _a.loadWorkoutFrequency();
+        _a.loadHeartRateTrendline();
+    }
+    static async loadAndWaitWalks() {
+        return await __classPrivateFieldGet(_a, _a, "f", _DataLoader_walkLoader).loadAndWait();
+    }
+    static async loadAndWaitRuns() {
+        return await __classPrivateFieldGet(_a, _a, "f", _DataLoader_runLoader).loadAndWait();
+    }
+    static async loadAndWaitBikes() {
+        return await __classPrivateFieldGet(_a, _a, "f", _DataLoader_bikeLoader).loadAndWait();
+    }
+    static async loadAndWaitRows() {
+        return await __classPrivateFieldGet(_a, _a, "f", _DataLoader_rowLoader).loadAndWait();
+    }
+    static async loadAndWaitWeightTrainingWorkouts() {
+        return await __classPrivateFieldGet(_a, _a, "f", _DataLoader_weightTrainingWorkoutLoader).loadAndWait();
+    }
+    static async loadAndWaitHealthMetrics() {
+        return await __classPrivateFieldGet(_a, _a, "f", _DataLoader_healthMetricLoader).loadAndWait();
+    }
+    static async loadAndWaitWeightTrendline() {
+        return await __classPrivateFieldGet(_a, _a, "f", _DataLoader_weightTrendlineLoader).loadAndWait();
+    }
+    static async loadAndWaitWorkoutFrequency() {
+        return await __classPrivateFieldGet(_a, _a, "f", _DataLoader_workoutFrequencyLoader).loadAndWait();
+    }
+    static async loadAndWaitHeartRateTrendline() {
+        return await __classPrivateFieldGet(_a, _a, "f", _DataLoader_heartRateTrendlineLoader).loadAndWait();
+    }
+    static async loadWalks() {
+        return __classPrivateFieldGet(_a, _a, "f", _DataLoader_walkLoader).load();
+    }
+    static async loadRuns() {
+        return __classPrivateFieldGet(_a, _a, "f", _DataLoader_runLoader).load();
+    }
+    static async loadBikes() {
+        return __classPrivateFieldGet(_a, _a, "f", _DataLoader_bikeLoader).load();
+    }
+    static async loadRows() {
+        return __classPrivateFieldGet(_a, _a, "f", _DataLoader_rowLoader).load();
+    }
+    static async loadWeightTrainingWorkouts() {
+        return __classPrivateFieldGet(_a, _a, "f", _DataLoader_weightTrainingWorkoutLoader).load();
+    }
+    static async loadHealthMetrics() {
+        return __classPrivateFieldGet(_a, _a, "f", _DataLoader_healthMetricLoader).load();
+    }
+    static async loadWeightTrendline() {
+        return __classPrivateFieldGet(_a, _a, "f", _DataLoader_weightTrendlineLoader).load();
+    }
+    static async loadWorkoutFrequency() {
+        return __classPrivateFieldGet(_a, _a, "f", _DataLoader_workoutFrequencyLoader).load();
+    }
+    static async loadHeartRateTrendline() {
+        return __classPrivateFieldGet(_a, _a, "f", _DataLoader_heartRateTrendlineLoader).load();
+    }
+}
+_a = DataLoader;
+_DataLoader_walkLoader = { value: new SingleLoader("walks.csv", (r) => {
         const durationInS = durationToS(r["duration(HH:mm:ss)"]);
         return {
             "date": new Date(r.date),
@@ -137,11 +267,8 @@ async function loadWalks() {
             "score": computeWalkScore(r, durationInS),
             [bpmcField]: computeBeatsPerMetreClimbed(r, durationInS),
         };
-    }
-    return await readCSV(`${baseDataPath}/walks.csv`, rowAccessor);
-}
-async function loadRuns() {
-    function rowAccessor(r) {
+    }) };
+_DataLoader_runLoader = { value: new SingleLoader("runs.csv", (r) => {
         const durationInS = durationToS(r["duration(HH:mm:ss)"]);
         return {
             "date": new Date(r.date),
@@ -155,11 +282,8 @@ async function loadRuns() {
             "notes": r.notes,
             [bpmmField]: computeBeatsPerMetreMoved(r, durationInS),
         };
-    }
-    return await readCSV(`${baseDataPath}/runs.csv`, rowAccessor);
-}
-async function loadBikes() {
-    function rowAccessor(r) {
+    }) };
+_DataLoader_bikeLoader = { value: new SingleLoader("bikes.csv", (r) => {
         const durationInS = durationToS(r["duration(HH:mm:ss)"]);
         return {
             "date": new Date(r.date),
@@ -177,11 +301,8 @@ async function loadBikes() {
             "max_heart_rate": d3IntOrNull(r.max_heart_rate),
             "notes": r.notes,
         };
-    }
-    return await readCSV(`${baseDataPath}/bikes.csv`, rowAccessor);
-}
-async function loadRows() {
-    function rowAccessor(r) {
+    }) };
+_DataLoader_rowLoader = { value: new SingleLoader("rows.csv", (r) => {
         const durationInS = durationToS(r["duration(HH:mm:ss)"]);
         return {
             "date": new Date(r.date),
@@ -198,11 +319,8 @@ async function loadRows() {
             "max_heart_rate": d3IntOrNull(r.max_heart_rate),
             "notes": r.notes,
         };
-    }
-    return await readCSV(`${baseDataPath}/rows.csv`, rowAccessor);
-}
-async function loadWeightTrainingWorkouts() {
-    function rowAccessor(row) {
+    }) };
+_DataLoader_weightTrainingWorkoutLoader = { value: new SingleLoader("weight_training_workouts.csv", (row) => {
         const durationInS = durationToS(row["duration(HH:mm:ss)"]);
         return {
             "date": new Date(row.date),
@@ -211,37 +329,34 @@ async function loadWeightTrainingWorkouts() {
             "location": row.location,
             "notes": row.notes,
         };
-    }
-    return await readCSV(`${baseDataPath}/weight_training_workouts.csv`, rowAccessor);
-}
-async function loadWeightTrendline() {
-    function rowAccessor(row) {
+    }) };
+_DataLoader_healthMetricLoader = { value: new SingleLoader("health_metrics.csv", (r) => {
+        return {
+            "date": new Date(r.date),
+            "weight(lbs)": d3IntOrNull(r["weight(lbs)"]),
+            "resting_heart_rate(bpm)": d3IntOrNull(r["resting_heart_rate(bpm)"]),
+            "notes": r.notes,
+        };
+    }) };
+_DataLoader_weightTrendlineLoader = { value: new SingleLoader("preds/weight_trendline.csv", (row) => {
         return {
             "date": new Date(row.date),
             "weight(lbs)": Number(row["weight(lbs)"]),
         };
-    }
-    return await readCSV(`${predDataPath}/weight_trendline.csv`, rowAccessor);
-}
-async function loadWorkoutFrequency() {
-    function rowAccessor(row) {
+    }) };
+_DataLoader_workoutFrequencyLoader = { value: new SingleLoader("preds/avg_workout_durations.csv", (row) => {
         return {
             "date": new Date(row.date),
             "duration": Number(row["duration(s)"]) / 60,
             "avg_duration": Number(row["avg_duration(s)"]) / 60,
         };
-    }
-    return await readCSV(`${predDataPath}/avg_workout_durations.csv`, rowAccessor);
-}
-async function loadHeartRateTrendline() {
-    function rowAccessor(row) {
+    }) };
+_DataLoader_heartRateTrendlineLoader = { value: new SingleLoader("preds/resting_heart_rate_trendline.csv", (row) => {
         return {
             "date": new Date(row.date),
             "resting_heart_rate(bpm)": Number(row["resting_heart_rate(bpm)"]),
         };
-    }
-    return await readCSV(`${predDataPath}/resting_heart_rate_trendline.csv`, rowAccessor);
-}
+    }) };
 function dateTick(d) {
     const year = d.getFullYear();
     const month = d.toDateString().substring(4, 7);
@@ -409,10 +524,12 @@ function addLinearTimeYAxis(svg, minTime, maxTime, majorStep, minorStep) {
         .attr("stroke-opacity", 0.1)
         .attr("x1", contentWidth));
 }
-function plotWeight(healthMetrics, weightTrendline) {
+async function plotWeight() {
     const minWeight = 180;
     const maxWeight = 305;
     const nDaysToExtrapolate = 100;
+    const healthMetrics = await DataLoader.loadAndWaitHealthMetrics();
+    const weightTrendline = await DataLoader.loadAndWaitWeightTrendline();
     const firstDate = new Date(d3Min(healthMetrics, "date"));
     const lastDate = addDays(new Date(d3Max(healthMetrics, "date")), nDaysToExtrapolate);
     const svg = d3.create("svg")
@@ -481,9 +598,10 @@ function plotWeight(healthMetrics, weightTrendline) {
     svg.attr("id", weightGraphId);
     return svg;
 }
-function plotWorkoutFrequency(workoutFrequencies) {
+async function plotWorkoutFrequency() {
     const minTime = 0;
     const maxTime = 210;
+    const workoutFrequencies = await DataLoader.loadAndWaitWorkoutFrequency();
     const firstDate = new Date(d3Min(workoutFrequencies, "date"));
     const lastDate = new Date(d3Max(workoutFrequencies, "date"));
     const svg = d3.create("svg")
@@ -548,9 +666,11 @@ function plotWorkoutFrequency(workoutFrequencies) {
     svg.attr("id", workoutFrequencyGraphId);
     return svg;
 }
-function plotHeartRate(healthMetrics, heartRateTrendline) {
+async function plotHeartRate() {
     const minHR = 45;
     const maxHR = 85;
+    const heartRateTrendline = await DataLoader.loadAndWaitHeartRateTrendline();
+    const healthMetrics = await DataLoader.loadAndWaitHealthMetrics();
     const firstDate = new Date(d3Min(heartRateTrendline, "date"));
     const lastDate = new Date(d3Max(heartRateTrendline, "date"));
     const svg = d3.create("svg")
@@ -667,8 +787,9 @@ function secondsToHHMM(durationInS) {
     const durationInSStr = `${Math.floor((durationInS % 3600) % 60)}`.padStart(2, "0");
     return `${durationInH}:${durationInMStr}:${durationInSStr}`;
 }
-function buildDailyWalkingSummary(walks, day) {
+async function buildDailyWalkingSummary(day) {
     const dayTime = day.getTime();
+    let walks = await DataLoader.loadAndWaitWalks();
     walks = walks
         .filter((row) => row.date.getTime() === dayTime);
     if (walks.length === 0) {
@@ -684,8 +805,9 @@ function buildDailyWalkingSummary(walks, day) {
         `  With an average heart rate of ${avgHR}bpm\n`,
     ];
 }
-function buildDailyRunningSummary(runs, day) {
+async function buildDailyRunningSummary(day) {
     const dayTime = day.getTime();
+    let runs = await DataLoader.loadAndWaitRuns();
     runs = runs
         .filter((row) => row.date.getTime() === dayTime);
     if (runs.length === 0) {
@@ -701,8 +823,9 @@ function buildDailyRunningSummary(runs, day) {
         `  With an average heart rate of ${avgHR}bpm\n`,
     ];
 }
-function buildDailyBikingSummary(bikes, day) {
+async function buildDailyBikingSummary(day) {
     const dayTime = day.getTime();
+    let bikes = await DataLoader.loadAndWaitBikes();
     bikes = bikes
         .filter((row) => row.date.getTime() === dayTime);
     if (bikes.length === 0) {
@@ -719,8 +842,9 @@ function buildDailyBikingSummary(bikes, day) {
         `  And an average heart rate of ${avgHR}bpm\n`,
     ];
 }
-function buildDailyRowingSummary(rows, day) {
+async function buildDailyRowingSummary(day) {
     const dayTime = day.getTime();
+    let rows = await DataLoader.loadAndWaitRows();
     rows = rows
         .filter((row) => row.date.getTime() === dayTime);
     if (rows.length === 0) {
@@ -738,8 +862,9 @@ function buildDailyRowingSummary(rows, day) {
         `  And an average heart rate of ${avgHR}bpm\n`,
     ];
 }
-function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
+async function buildDailyLiftingSummary(day) {
     const dayTime = day.getTime();
+    let weightTrainingWorkouts = await DataLoader.loadAndWaitWeightTrainingWorkouts();
     weightTrainingWorkouts = weightTrainingWorkouts
         .filter((row) => row.date.getTime() === dayTime);
     const lines = [];
@@ -750,9 +875,14 @@ function buildDailyLiftingSummary(weightTrainingWorkouts, day) {
     }
     return lines;
 }
-function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkouts, day = null) {
-    const summaryTextboxName = "single-day-summary-textbox";
+async function computeSingleDaySummary(day = null) {
     const name = "Eric";
+    const summaryTextboxName = "single-day-summary-textbox";
+    const walks = await DataLoader.loadAndWaitWalks();
+    const runs = await DataLoader.loadAndWaitRuns();
+    const bikes = await DataLoader.loadAndWaitBikes();
+    const rows = await DataLoader.loadAndWaitRows();
+    const weightTrainingWorkouts = await DataLoader.loadAndWaitWeightTrainingWorkouts();
     if (day === null) {
         let dayTime = new Date(d3Max(walks, "date")).getTime();
         dayTime = Math.max(dayTime, new Date(d3Max(runs, "date")).getTime());
@@ -762,11 +892,11 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
         day = new Date(dayTime);
     }
     let lines = [`${name}'s most recent workout was ${monthDayNth(day)}\n`];
-    lines.push(...buildDailyWalkingSummary(walks, day));
-    lines.push(...buildDailyRunningSummary(runs, day));
-    lines.push(...buildDailyBikingSummary(bikes, day));
-    lines.push(...buildDailyRowingSummary(rows, day));
-    lines.push(...buildDailyLiftingSummary(weightTrainingWorkouts, day));
+    lines.push(...await buildDailyWalkingSummary(day));
+    lines.push(...await buildDailyRunningSummary(day));
+    lines.push(...await buildDailyBikingSummary(day));
+    lines.push(...await buildDailyRowingSummary(day));
+    lines.push(...await buildDailyLiftingSummary(day));
     if (lines.length <= 1) {
         lines = ["No workouts recorded yet, get out there!\n "];
     }
@@ -774,20 +904,12 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
     textBox.text(`${lines.join("\n")}\n `);
     textBox.css("display", "flex");
 }
-(async function () {
-    const healthMetrics = await loadHealthMetrics();
-    const walks = await loadWalks();
-    const runs = await loadRuns();
-    const bikes = await loadBikes();
-    const rows = await loadRows();
-    const weightTrainingWorkouts = await loadWeightTrainingWorkouts();
-    const weightTrendline = await loadWeightTrendline();
-    const workoutFrequency = await loadWorkoutFrequency();
-    const heartRateTrendline = await loadHeartRateTrendline();
-    computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkouts);
-    const weightGraph = plotWeight(healthMetrics, weightTrendline).node();
-    const workoutFrequencyGraph = plotWorkoutFrequency(workoutFrequency).node();
-    const heartRateGraph = plotHeartRate(healthMetrics, heartRateTrendline).node();
+(async () => {
+    DataLoader.loadInitialSet();
+    computeSingleDaySummary();
+    const weightGraph = (await plotWeight()).node();
+    const workoutFrequencyGraph = (await plotWorkoutFrequency()).node();
+    const heartRateGraph = (await plotHeartRate()).node();
     if (weightGraph === null || workoutFrequencyGraph === null || heartRateGraph === null) {
         throw new Error("Issue building one of the main graphs.");
     }
@@ -802,6 +924,7 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
     const extraChartContainer = $(document.createElement("div"));
     extraChartContainer.attr("id", extraChartContainerId);
     $("body").append(extraChartContainer);
+    const walks = await DataLoader.loadAndWaitWalks();
     const filteredWalks = walks
         .filter((row) => row.workout_type === "walk (treadmill)")
         .filter((row) => Number(row["duration(s)"]) >= 1200)
@@ -830,6 +953,7 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
     }
     node.classList.add(secondaryGraphClassName);
     document.body.append(node);
+    const runs = await DataLoader.loadAndWaitRuns();
     title = "BPMM (Beats Per Metre Moved)";
     const bpmmGraphId = "bpmm-chart";
     const bpmmFilteredRuns = runs.filter((row) => Number(row[bpmmField]) > 0);
@@ -844,5 +968,7 @@ function computeSingleDaySummary(walks, runs, bikes, rows, weightTrainingWorkout
     copyright.css("width", `${weightGraph.getBoundingClientRect().width}px`);
     copyright.css("display", "block");
     $("body").append(copyright);
+    const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+    console.log(`Page loaded in ${loadTime / 1000}s`);
 })();
 //# sourceMappingURL=main.js.map

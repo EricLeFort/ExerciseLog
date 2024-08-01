@@ -28,9 +28,12 @@ export default [
         },
       ],
 
+      // These aren't necessarily bad (IMO)
+      "@typescript-eslint/no-extraneous-class": "off",
+
       // Formatting
       "@typescript-eslint/indent": [error, 2],
-      "id-length": [error, {"min": 1, "max": 30}],
+      "id-length": [error, {"min": 1, "max": 35}],
       "camelcase": error,
 
       // Possible Problems (Basic)
@@ -137,7 +140,6 @@ export default [
       "no-lone-blocks": error,
       "no-lonely-if": error,
       "no-loop-func": error,
-      //"no-magic-numbers": error,  // I'm undecided as to whether I care to enable this rule
       "no-multi-assign": error,
       "no-multi-str": error,
       "no-negated-condition": error,
@@ -194,7 +196,6 @@ export default [
       "prefer-spread": error,
       "prefer-template": error,
       "radix": error,
-      "require-await": error,
       "require-unicode-regexp": error,
       "require-yield": error,
       "sort-imports": error,

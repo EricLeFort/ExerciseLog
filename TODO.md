@@ -8,8 +8,12 @@
 * Fatigue scores
 * Support multiple users
 
-### Python
+### Visualization
 * Make a visualization for Watt/Kg for biking
+* Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
+* Color-code data points in workout frequency graph to correspond to the different types of activity
+
+### Python
 * Extract shared structural information into separate, language-agnostic files so they can be shared with JS
     - Ontological information (e.g. the EXERCISE_INFO dict in ontology.py, heart rate thresholds, etc.)
     - Metadata (e.g. ColumnName values)
@@ -22,22 +26,22 @@
     - Randomization -- use seeds, any seeds that fail should be recorded, if there's any failed seeds -- run those first, on success -- clear failed seeds
     - For now, just write to the repo under some path in the test file tree
 * Support multiple users
-* Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
 * Extend EXERCISE_INFO
     - Populate Muscle in EXERCISE_INFO
     - Populate percentages of Muscle/MuscleGroup in EXERCISE_INFO
 * Define local and global ideal strength ratios
 * Smooth out xRM logic
 * Define an expiration and/or uncertainty range that crops up when xRM's get several months old
-* Color-code data points in workout frequency graph to correspond to the different types of activity
 * Work out and implement the fatigue factor logic
 * Make ExerciseInfo a parameterized singleton
 
 ### Site
+* Make the non-main charts lazy-load
 * Add testing framework and some simple wide-coverage, simple validation tests
 * Extract constants
 * Break up main.js into better sub-components/sub-files
 * Migrate to React
+* Bug: dropdown doesn't work well with long text -- let cell height expand for multi-line? Or modify its width and/or shorten the text itself.
 * Make domain (date ranges) selectable for any given graph
     - Create the selectable domain functionality
     - Auto-determine the range (min/max, major step, minor step) given the values
