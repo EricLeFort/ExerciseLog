@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+02-AUG-2024,walk (treadmill),01:26:01,8.36,9587,565,0,161,176,""
 31-JUL-2024,walk (treadmill),01:01:11,5.41,6461,700,0,172,192,""
 29-JUL-2024,walk (treadmill),01:15:06,6.71,7955,625,0,153,184,""
 25-JUL-2024,walk (treadmill),01:01:55,5.37,6474,416,0,143,153,"started tired, couple hours after a long run"
