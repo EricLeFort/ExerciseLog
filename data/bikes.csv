@@ -1,4 +1,5 @@
 date,workout_type,duration(HH:mm:ss),distance(km),avg_resistance,max_resistance,avg_cadence(rpm),max_cadence(rpm),avg_wattage,max_wattage,max_speed(km/h),avg_heart_rate,max_heart_rate,notes
+05-AUG-2024,bike (stationary),00:30:00,16.95,0.48,0.62,87,125,200,493,48.1,176,195,""
 22-JUL-2024,bike (stationary),00:30:00,16.64,0.46,0.53,87,120,185,300,40.1,162,179,"second workout of the day"
 18-JUL-2024,bike (stationary),01:00:00,32.70,0.45,0.59,89,124,177,415,45.2,169,189,"shortly after a deadlifting session, started fatigued."
 13-JUL-2024,bike (stationary),00:10:00,5.94,0.53,0.73,79,111,227,494,48.1,173,188,"post-workout"
