@@ -168,7 +168,7 @@ class SingleLoader {
         __classPrivateFieldSet(this, _SingleLoader_lock, new Mutex(), "f");
     }
     async load() {
-        if (__classPrivateFieldGet(this, _SingleLoader_pData, "f") !== null) {
+        if (!__classPrivateFieldGet(this, _SingleLoader_pData, "f")) {
             await __classPrivateFieldGet(this, _SingleLoader_lock, "f").runExclusive(async () => {
                 __classPrivateFieldSet(this, _SingleLoader_pData, readCSV(this.path, this.rowAccessor), "f");
             });
@@ -176,7 +176,7 @@ class SingleLoader {
         return __classPrivateFieldGet(this, _SingleLoader_pData, "f");
     }
     async loadAndWait() {
-        if (__classPrivateFieldGet(this, _SingleLoader_data, "f") === null) {
+        if (!__classPrivateFieldGet(this, _SingleLoader_data, "f")) {
             __classPrivateFieldSet(this, _SingleLoader_data, await this.load(), "f");
         }
         return __classPrivateFieldGet(this, _SingleLoader_data, "f");

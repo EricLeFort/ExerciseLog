@@ -245,7 +245,7 @@ class SingleLoader {
   }
 
   async load(): Promise<D3DataFrame> {
-    if (this.#pData !== null) {
+    if (!this.#pData) {
       // Note: this await waits to acquire the lock but not for the internal readCSV call
       await this.#lock.runExclusive(async() => {
         this.#pData = readCSV(this.path, this.rowAccessor);
@@ -255,7 +255,7 @@ class SingleLoader {
   }
 
   async loadAndWait(): Promise<D3DataFrame> {
-    if (this.#data === null) {
+    if (!this.#data) {
       this.#data = await this.load();
     }
     return this.#data;
