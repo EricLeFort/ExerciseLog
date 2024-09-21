@@ -1,4 +1,11 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+20-SEP-2024,walk (treadmill),01:00:54,5.24,6394,412,0,154,165,""
+13-SEP-2024,walk (treadmill),00:32:02,2.75,3660,261,0,163,190,""
+05-SEP-2024,walk (treadmill),01:06:08,5.81,6848,426,0,145,159,""
+03-SEP-2024,walk (treadmill),01:05:04,5.75,6789,424,0,142,152,""
+29-AUG-2024,walk (treadmill),01:05:53,5.82,6951,428,0,146,156,""
+10-AUG-2024,walk (treadmill),01:12:22,7.35,8561,422,0,162,193,""
+06-AUG-2024,walk (treadmill),01:06:02,5.83,6898,477,0,148,158,""
 02-AUG-2024,walk (treadmill),01:26:01,8.36,9587,565,0,161,176,""
 31-JUL-2024,walk (treadmill),01:01:11,5.41,6461,700,0,172,192,""
 29-JUL-2024,walk (treadmill),01:15:06,6.71,7955,625,0,153,184,""
