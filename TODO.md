@@ -12,6 +12,7 @@
 * Make a visualization for Watt/Kg for biking
 * Make separate frequency graph view for each level in the hierarchy (e.g. all workouts, cardio vs. weights, specific type of cardio, etc.)
 * Color-code data points in workout frequency graph to correspond to the different types of activity
+* Graphs with selectable date range + a dynamic y-axis
 
 ### Python
 * Extract shared structural information into separate, language-agnostic files so they can be shared with JS
@@ -80,7 +81,7 @@
         * Data Views for each level of granularity
             * Top-level view: All workout types
             * Second-level views: Cardio + Weight Training + Calisthenics
-            * Third-level views: Walking + Running + Biking + Swimming ++ Muscle Group
+            * Third-level views: Walking + Running + Biking + Swimming ++ Muscle Group (do I care about *time* for muscle training?)
             * Fourth-level views: Hiking + Treadmill walking + Outdoor walking ++ - ++ Stationary biking + Outdoor biking +++ Individual muscle
     * Muscle heat-maps (high-level visual view, clickable to view an in-depth hierarchical view)
     * Setup automated testing for the UI
