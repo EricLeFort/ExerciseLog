@@ -1,4 +1,31 @@
 date,exercise,reps,weight(lbs),rating
+19-OCT-2024,Cable Lateral Lift,10,25,warm-up
+19-OCT-2024,Cable Lateral Lift,10,35,good
+19-OCT-2024,Cable Lateral Lift,10,40,good
+19-OCT-2024,Cable Lateral Lift,10,35,good
+19-OCT-2024,Full Cans,20,10,good
+19-OCT-2024,Full Cans,20,10,good
+19-OCT-2024,Full Cans,20,10,good
+19-OCT-2024,Arnold Press,10,45,warm-up
+19-OCT-2024,Arnold Press,10,55,good
+19-OCT-2024,Arnold Press,8,60,good
+19-OCT-2024,Arnold Press,8,60,good
+19-OCT-2024,Single-Arm Delt Flies,10,50,warm-up
+19-OCT-2024,Single-Arm Delt Flies,10,65,good
+19-OCT-2024,Single-Arm Delt Flies,10,80,good
+19-OCT-2024,Single-Arm Delt Flies,10,80,good
+19-OCT-2024,Seated Row,10,85,warm-up
+19-OCT-2024,Seated Row,10,130,good
+19-OCT-2024,Seated Row,10,152.5,good
+19-OCT-2024,Seated Row,10,152.5,failure
+19-OCT-2024,Lat Pulldown,10,85,warm-up
+19-OCT-2024,Lat Pulldown,10,130,good
+19-OCT-2024,Lat Pulldown,8,152.5,good
+19-OCT-2024,Lat Pulldown,10,137.5,good
+19-OCT-2024,Pullovers,10,45,warm-up
+19-OCT-2024,Pullovers,10,55,good
+19-OCT-2024,Pullovers,10,65,good
+19-OCT-2024,Pullovers,8,65,good
 22-SEP-2024,Bench Press,10,135,warm-up
 22-SEP-2024,Bench Press,10,205,good
 22-SEP-2024,Bench Press,6,225,good
@@ -72,9 +99,9 @@ date,exercise,reps,weight(lbs),rating
 12-SEP-2024,Wide-Grip Pull-Up,10,-70,good
 12-SEP-2024,Wide-Grip Pull-Up,10,-60,good
 12-SEP-2024,Wide-Grip Pull-Up,10,-60,good
-12-SEP-2024,Delt Flies,10,50,warm-up
-12-SEP-2024,Delt Flies,10,80,good
-12-SEP-2024,Delt Flies,10,80,good
+12-SEP-2024,Single-Arm Delt Flies,10,50,warm-up
+12-SEP-2024,Single-Arm Delt Flies,10,80,good
+12-SEP-2024,Single-Arm Delt Flies,10,80,good
 11-SEP-2024,Shrugs,10,70,good
 11-SEP-2024,Shrugs,10,70,good
 11-SEP-2024,Shrugs,10,70,good
