@@ -1,4 +1,7 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+24-OCT-2024,walk (treadmill),01:00:21,5.27,6295,418,0,143,153,"Stopped workout on watch about a minute early since it died right after that"
+22-OCT-2024,walk (treadmill),01:01:06,5.30,6380,422,0,152,166,""
+20-OCT-2024,walk (treadmill),01:01:02,5.37,6455,421,0,158,189,"First back after a while off"
 20-SEP-2024,walk (treadmill),01:00:54,5.24,6394,412,0,154,165,""
 13-SEP-2024,walk (treadmill),00:32:02,2.75,3660,261,0,163,190,""
 05-SEP-2024,walk (treadmill),01:06:08,5.81,6848,426,0,145,159,""
