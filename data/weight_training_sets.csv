@@ -1,4 +1,299 @@
 date,exercise,reps,weight(lbs),rating
+02-JAN-2025,Full Cans,20,10,good
+02-JAN-2025,Strict Press,10,117.5,warm-up
+02-JAN-2025,Strict Press,10,137.5,good
+02-JAN-2025,Strict Press,8,137.5,good
+02-JAN-2025,Strict Press,10,127.5,good
+02-JAN-2025,Strict Press,10,127.5,good
+02-JAN-2025,Single-Arm Delt Flies,10,55,warm-up
+02-JAN-2025,Single-Arm Delt Flies,10,85,good
+02-JAN-2025,Seated Row,10,85,warm-up
+02-JAN-2025,Seated Row,12,145,good
+02-JAN-2025,Seated Row,10,160,good
+02-JAN-2025,Seated Row,10,160,good
+02-JAN-2025,Seated Row,12,145,good
+02-JAN-2025,Lat Pulldown,10,42.5,warm-up
+02-JAN-2025,Lat Pulldown,10,52.5,good
+02-JAN-2025,Lat Pulldown,10,54,good
+02-JAN-2025,Lat Pulldown,10,57.5,good
+27-DEC-2024,Bench Press,10,137.5,warm-up
+27-DEC-2024,Bench Press,10,207.5,good
+27-DEC-2024,Bench Press,10,207.5,good
+27-DEC-2024,Bench Press,10,207.5,good
+27-DEC-2024,Bench Press,10,197.5,good
+27-DEC-2024,Bench Press,10,197.5,good
+27-DEC-2024,Upward Dumbbell Pec Flies,10,25,good
+27-DEC-2024,Upward Dumbbell Pec Flies,10,25,good
+27-DEC-2024,Upward Dumbbell Pec Flies,10,25,good
+27-DEC-2024,Shrugs,10,70,good
+27-DEC-2024,Shrugs,10,70,good
+27-DEC-2024,Shrugs,10,70,good
+23-DEC-2024,Single-Leg Leg Curl,15,70,good
+23-DEC-2024,Single-Leg Leg Curl,15,70,good
+23-DEC-2024,Single-Leg Leg Curl,15,70,good
+23-DEC-2024,Single-Leg Leg Extension,15,25,warm-up
+23-DEC-2024,Single-Leg Leg Extension,15,65,good
+23-DEC-2024,Good Morning,10,117.5,good
+23-DEC-2024,Good Morning,10,147.5,good
+23-DEC-2024,Good Morning,10,147.5,good
+23-DEC-2024,Decline Bicep Curl,12,25,good
+23-DEC-2024,Decline Bicep Curl,12,25,good
+23-DEC-2024,Decline Bicep Curl,12,25,good
+23-DEC-2024,Hammer Curl,10,20,warm-up
+23-DEC-2024,Hammer Curl,10,40,good
+23-DEC-2024,Hammer Curl,10,40,good
+23-DEC-2024,Hammer Curl,10,40,good
+23-DEC-2024,Overhead Tricep Extension,10,20,warm-up
+23-DEC-2024,Overhead Tricep Extension,10,40,bad
+23-DEC-2024,Overhead Tricep Extension,10,35,good
+23-DEC-2024,Overhead Tricep Extension,10,35,good
+19-DEC-2024,Single-Arm Delt Flies,10,60,good
+19-DEC-2024,Single-Arm Delt Flies,10,60,good
+19-DEC-2024,Strict Press,10,117.5,easy
+19-DEC-2024,Strict Press,8,137.5,good
+19-DEC-2024,Strict Press,8,137.5,good
+19-DEC-2024,Strict Press,10,127.5,good
+19-DEC-2024,Strict Press,10,117.5,good
+19-DEC-2024,Full Cans,20,10,good
+19-DEC-2024,Full Cans,20,10,good
+19-DEC-2024,Full Cans,20,10,good
+19-DEC-2024,Cable Lateral Lift,10,12.5,easy
+19-DEC-2024,Cable Lateral Lift,10,17.5,good
+19-DEC-2024,Cable Lateral Lift,10,17.5,good
+19-DEC-2024,Single-Arm Lat Pulldown,10,42.5,warm-up
+19-DEC-2024,Single-Arm Lat Pulldown,10,57.5,good
+19-DEC-2024,Single-Arm Lat Pulldown,10,57.5,good
+19-DEC-2024,Single-Arm Lat Pulldown,10,57.5,good
+19-DEC-2024,Seated Row,10,85,warm-up
+19-DEC-2024,Seated Row,10,130,easy
+19-DEC-2024,Seated Row,10,145,good
+19-DEC-2024,Seated Row,10,145,good
+19-DEC-2024,Seated Row,10,160,good
+16-DEC-2024,Bench Press,10,137.5,warm-up
+16-DEC-2024,Bench Press,10,207.5,good
+16-DEC-2024,Bench Press,10,207.5,good
+16-DEC-2024,Bench Press,10,207.5,good
+16-DEC-2024,Bench Press,10,187.5,good
+16-DEC-2024,Shrugs,10,70,good
+16-DEC-2024,Shrugs,10,70,good
+16-DEC-2024,Shrugs,10,70,good
+13-DEC-2024,Single-Leg Leg Curl,15,70,good
+13-DEC-2024,Single-Leg Leg Curl,15,70,good
+13-DEC-2024,Single-Leg Leg Curl,15,70,good
+13-DEC-2024,Single-Leg Leg Extension,15,25,warm-up
+13-DEC-2024,Single-Leg Leg Extension,15,65,good
+13-DEC-2024,Single-Leg Leg Extension,15,65,good
+13-DEC-2024,Single-Leg Leg Extension,15,65,good
+13-DEC-2024,Good Morning,10,117.5,good
+13-DEC-2024,Good Morning,10,137.5,good
+13-DEC-2024,Good Morning,10,147.5,good
+13-DEC-2024,Decline Bicep Curl,12,25,good
+13-DEC-2024,Decline Bicep Curl,8,30,good
+13-DEC-2024,Decline Bicep Curl,10,30,good
+13-DEC-2024,Hammer Curl,10,20,warm-up
+13-DEC-2024,Hammer Curl,10,40,good
+13-DEC-2024,Hammer Curl,10,40,good
+13-DEC-2024,Hammer Curl,10,40,good
+13-DEC-2024,Tricep Pushdown (Straight-Bar),10,47.5,warm-up
+13-DEC-2024,Tricep Pushdown (Straight-Bar),10,72.5,good
+13-DEC-2024,Tricep Pushdown (Straight-Bar),10,77.5,good
+13-DEC-2024,Tricep Pushdown (Straight-Bar),10,77.5,good
+10-DEC-2024,Seated Row,10,85,warm-up
+10-DEC-2024,Seated Row,10,130,easy
+10-DEC-2024,Seated Row,12,130,good
+10-DEC-2024,Seated Row,12,130,good
+10-DEC-2024,Single-Arm Lat Pulldown,10,42.5,good
+10-DEC-2024,Single-Arm Lat Pulldown,10,52.5,good
+10-DEC-2024,Single-Arm Lat Pulldown,10,52.5,good
+10-DEC-2024,Pullovers,10,45,warm-up
+10-DEC-2024,Pullovers,10,65,good
+10-DEC-2024,Pullovers,10,65,good
+10-DEC-2024,Pullovers,10,65,good
+10-DEC-2024,Single-Arm Delt Flies,10,80,good
+10-DEC-2024,Single-Arm Delt Flies,10,80,failure
+10-DEC-2024,Single-Arm Delt Flies,10,80,good
+10-DEC-2024,Strict Press,10,117.5,easy
+10-DEC-2024,Strict Press,10,137.5,good
+10-DEC-2024,Strict Press,10,127.5,good
+10-DEC-2024,Strict Press,10,117.5,good
+10-DEC-2024,Full Cans,20,10,good
+10-DEC-2024,Full Cans,20,10,good
+10-DEC-2024,Full Cans,20,10,good
+10-DEC-2024,Cable Lateral Lift,10,12.5,easy
+10-DEC-2024,Cable Lateral Lift,10,17.5,good
+10-DEC-2024,Cable Lateral Lift,10,17.5,good
+06-DEC-2024,Bench Press,12,137.5,warm-up
+06-DEC-2024,Bench Press,10,207.5,good
+06-DEC-2024,Bench Press,8,207.5,good
+06-DEC-2024,Bench Press,10,187.5,good
+06-DEC-2024,Bench Press,10,187.5,good
+06-DEC-2024,Bench Press,8,177.5,good
+06-DEC-2024,Upward Dumbbell Pec Flies,10,20,good
+06-DEC-2024,Upward Dumbbell Pec Flies,10,25,good
+06-DEC-2024,Upward Dumbbell Pec Flies,10,25,good
+06-DEC-2024,Plank,70,0,good
+06-DEC-2024,Plank,70,0,good
+06-DEC-2024,Plank,70,0,good
+06-DEC-2024,Side-Plank,45,0,good
+06-DEC-2024,Side-Plank,45,0,good
+06-DEC-2024,Side-Plank,45,0,good
+06-DEC-2024,Shrugs,10,70,good
+06-DEC-2024,Shrugs,10,70,good
+06-DEC-2024,Shrugs,10,70,good
+04-DEC-2024,Single-Leg Leg Curl,15,60,good
+04-DEC-2024,Single-Leg Leg Curl,15,60,good
+04-DEC-2024,Single-Leg Leg Curl,15,60,good
+04-DEC-2024,Single-Leg Leg Extension,12,70,good
+04-DEC-2024,Single-Leg Leg Extension,15,60,good
+04-DEC-2024,Single-Leg Leg Extension,15,60,good
+04-DEC-2024,Good Morning,10,117.5,good
+04-DEC-2024,Good Morning,10,137.5,good
+04-DEC-2024,Good Morning,10,137.5,good
+04-DEC-2024,Decline Bicep Curl,10,20,good
+04-DEC-2024,Decline Bicep Curl,12,25,good
+04-DEC-2024,Decline Bicep Curl,13,25,good
+04-DEC-2024,Hammer Curl,10,20,warm-up
+04-DEC-2024,Hammer Curl,10,40,good
+04-DEC-2024,Hammer Curl,10,40,good
+04-DEC-2024,Hammer Curl,10,40,good
+04-DEC-2024,Tricep Pushdown (Straight-Bar),10,62.5,good
+04-DEC-2024,Tricep Pushdown (Straight-Bar),10,72.5,good
+04-DEC-2024,Tricep Pushdown (Straight-Bar),10,72.5,good
+02-DEC-2024,Cable Lateral Lift,10,12.5,good
+02-DEC-2024,Cable Lateral Lift,10,14,good
+02-DEC-2024,Cable Lateral Lift,10,17.5,good
+02-DEC-2024,Full Cans,20,10,good
+02-DEC-2024,Full Cans,20,10,good
+02-DEC-2024,Full Cans,20,10,good
+02-DEC-2024,Strict Press,10,117.5,good
+02-DEC-2024,Strict Press,8,137.5,good
+02-DEC-2024,Strict Press,8,137.5,good
+02-DEC-2024,Single-Arm Delt Flies,10,50,warm-up
+02-DEC-2024,Single-Arm Delt Flies,10,80,good
+02-DEC-2024,Single-Arm Delt Flies,10,80,good
+02-DEC-2024,Single-Arm Delt Flies,10,80,good
+02-DEC-2024,Seated Row,10,85,warm-up
+02-DEC-2024,Seated Row,10,130,good
+02-DEC-2024,Seated Row,10,130,good
+02-DEC-2024,Seated Row,10,130,good
+02-DEC-2024,Single-Arm Lat Pulldown,10,42.5,good
+02-DEC-2024,Single-Arm Lat Pulldown,10,52.5,good
+02-DEC-2024,Single-Arm Lat Pulldown,10,57.5,good
+24-NOV-2024,Bench Press,10,135,warm-up
+24-NOV-2024,Bench Press,10,205,good
+24-NOV-2024,Bench Press,10,205,bad
+24-NOV-2024,Bench Press,10,185,good
+24-NOV-2024,Bench Press,10,185,good
+24-NOV-2024,Bench Press,10,165,good
+24-NOV-2024,Upward Dumbbell Pec Flies,10,25,good
+24-NOV-2024,Upward Dumbbell Pec Flies,10,25,good
+24-NOV-2024,Upward Dumbbell Pec Flies,10,25,good
+24-NOV-2024,Shrugs,10,70,good
+24-NOV-2024,Shrugs,10,70,good
+24-NOV-2024,Shrugs,10,70,good
+24-NOV-2024,Parallel Bar Leg Raise,15,0,good
+24-NOV-2024,Parallel Bar Leg Raise,15,0,good
+24-NOV-2024,Parallel Bar Leg Raise,15,0,good
+24-NOV-2024,Decline Bicep Curl,10,25,good
+24-NOV-2024,Decline Bicep Curl,12,25,good
+24-NOV-2024,Decline Bicep Curl,12,25,good
+22-NOV-2024,Decline Bicep Curl,10,20,good
+22-NOV-2024,Decline Bicep Curl,10,25,good
+22-NOV-2024,Decline Bicep Curl,10,25,good
+22-NOV-2024,Hammer Curl,10,20,warm-up
+22-NOV-2024,Hammer Curl,10,35,good
+22-NOV-2024,Hammer Curl,10,40,good
+22-NOV-2024,Hammer Curl,10,40,good
+22-NOV-2024,Tricep Pushdown (V-Bar),10,100,warm-up
+22-NOV-2024,Tricep Pushdown (V-Bar),10,170,good
+22-NOV-2024,Tricep Pushdown (V-Bar),10,170,good
+22-NOV-2024,Tricep Pushdown (V-Bar),10,180,good
+22-NOV-2024,Single-Leg Leg Extension,15,70,warm-up
+22-NOV-2024,Single-Leg Leg Extension,15,110,good
+22-NOV-2024,Single-Leg Leg Extension,15,110,good
+22-NOV-2024,Single-Leg Leg Extension,15,110,good
+22-NOV-2024,Good Morning,10,115,easy
+22-NOV-2024,Good Morning,10,135,good
+22-NOV-2024,Good Morning,10,135,good
+20-NOV-2024,Cable Lateral Lift,10,25,warm-up
+20-NOV-2024,Cable Lateral Lift,10,40,good
+20-NOV-2024,Cable Lateral Lift,10,40,good
+20-NOV-2024,Cable Lateral Lift,10,40,good
+20-NOV-2024,Strict Press,10,115,good
+20-NOV-2024,Strict Press,10,135,good
+20-NOV-2024,Strict Press,10,135,good
+20-NOV-2024,Single-Arm Delt Flies,10,50,warm-up
+20-NOV-2024,Single-Arm Delt Flies,10,80,good
+20-NOV-2024,Single-Arm Delt Flies,10,80,good
+20-NOV-2024,Single-Arm Delt Flies,10,80,good
+20-NOV-2024,Seated Row,10,77.5,warm-up
+20-NOV-2024,Seated Row,10,152.5,good
+20-NOV-2024,Seated Row,10,160,good
+20-NOV-2024,Seated Row,10,160,good
+20-NOV-2024,Pullovers,10,45,warm-up
+20-NOV-2024,Pullovers,10,65,good
+20-NOV-2024,Pullovers,10,65,good
+20-NOV-2024,Pullovers,10,65,good
+20-NOV-2024,Wide-Grip Pull-Up,10,-120,warm-up
+20-NOV-2024,Wide-Grip Pull-Up,8,-70,good
+20-NOV-2024,Wide-Grip Pull-Up,8,-70,good
+18-NOV-2024,Bench Press,10,135,warm-up
+18-NOV-2024,Bench Press,10,205,good
+18-NOV-2024,Bench Press,6,225,good
+18-NOV-2024,Bench Press,10,185,good
+18-NOV-2024,Bench Press,10,185,good
+18-NOV-2024,Bench Press,10,165,good
+18-NOV-2024,Upward Dumbbell Pec Flies,10,25,good
+18-NOV-2024,Upward Dumbbell Pec Flies,10,25,good
+18-NOV-2024,Upward Dumbbell Pec Flies,10,20,good
+18-NOV-2024,Shrugs,10,70,good
+18-NOV-2024,Shrugs,10,70,good
+18-NOV-2024,Shrugs,10,70,good
+18-NOV-2024,Parallel Bar Leg Raise,15,0,good
+18-NOV-2024,Parallel Bar Leg Raise,15,0,good
+18-NOV-2024,Parallel Bar Leg Raise,12,0,good
+14-NOV-2024,Leg Press,10,167.5,warm-up
+14-NOV-2024,Leg Press,10,250,good
+14-NOV-2024,Leg Press,10,265,good
+14-NOV-2024,Leg Press,10,280,good
+14-NOV-2024,Single-Leg Leg Extension,15,70,warm-up
+14-NOV-2024,Single-Leg Leg Extension,15,105,good
+14-NOV-2024,Single-Leg Leg Extension,15,105,good
+14-NOV-2024,Single-Leg Leg Extension,15,105,good
+14-NOV-2024,Good Morning,10,115,easy
+14-NOV-2024,Good Morning,10,135,good
+14-NOV-2024,Good Morning,10,135,good
+14-NOV-2024,Decline Bicep Curl,10,20,good
+14-NOV-2024,Decline Bicep Curl,10,25,good
+14-NOV-2024,Decline Bicep Curl,10,25,good
+14-NOV-2024,Hammer Curl,10,20,warm-up
+14-NOV-2024,Hammer Curl,10,35,good
+14-NOV-2024,Hammer Curl,10,40,good
+14-NOV-2024,Hammer Curl,10,35,good
+03-NOV-2024,Seated Row,10,100,warm-up
+03-NOV-2024,Seated Row,10,160,good
+03-NOV-2024,Seated Row,10,160,good
+03-NOV-2024,Seated Row,10,160,good
+03-NOV-2024,Pullovers,10,45,warm-up
+03-NOV-2024,Pullovers,10,65,good
+03-NOV-2024,Pullovers,10,65,good
+03-NOV-2024,Pullovers,10,65,good
+03-NOV-2024,Wide-Grip Pull-Up,10,-110,warm-up
+03-NOV-2024,Wide-Grip Pull-Up,10,-60,failure
+03-NOV-2024,Wide-Grip Pull-Up,10,-70,failure
+03-NOV-2024,Wide-Grip Pull-Up,8,-70,good
+03-NOV-2024,Cable Lateral Lift,10,25,warm-up
+03-NOV-2024,Cable Lateral Lift,10,40,good
+03-NOV-2024,Cable Lateral Lift,10,40,good
+03-NOV-2024,Cable Lateral Lift,10,40,good
+03-NOV-2024,Strict Press,10,115,good
+03-NOV-2024,Strict Press,10,135,good
+03-NOV-2024,Strict Press,10,135,good
+03-NOV-2024,Single-Arm Delt Flies,10,50,warm-up
+03-NOV-2024,Single-Arm Delt Flies,10,80,good
+03-NOV-2024,Single-Arm Delt Flies,10,80,good
+03-NOV-2024,Single-Arm Delt Flies,10,80,good
+17-NOV-2024,Push-Ups,20,0,good
 31-OCT-2024,Bench Press,10,135,warm-up
 31-OCT-2024,Bench Press,10,205,good
 31-OCT-2024,Bench Press,10,185,good
