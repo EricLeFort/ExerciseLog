@@ -482,6 +482,23 @@ EXERCISE_INFO = {
         },
         Field.ANTAGONIST_MUSCLES: {None},
     },
+    Exercise.SINGLE_ARM_LAT_PULLDOWN: {
+        INHERITS_FROM: Exercise.LAT_PULLDOWN,
+        Field.MUSCLE_GROUPS_WORKED: {
+            MuscleGroup.ABS: None,
+            MuscleGroup.BICEPS: None,
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.LATS: None,
+            MuscleGroup.RHOMBOIDS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRAPS: None,
+        },
+        Field.MUSCLES_WORKED: {
+            None: None,
+        },
+        Field.ANTAGONIST_MUSCLES: {None},
+    },
     Exercise.CONCENTRATION_CURL: {
         INHERITS_FROM: Exercise.PREACHER_CURL,
     },
@@ -1721,6 +1738,20 @@ EXERCISE_INFO = {
         Field.AXIALLY_LOADING: False,
         Field.TENSILE_FOCUS: TensileFocus.CONCENTRIC,
         Field.OPTIMAL_REP_RANGE: UPPER_ISOLATED_REP_RANGE,
+        Field.MUSCLE_GROUPS_WORKED: {
+            MuscleGroup.DELTS: None,
+            MuscleGroup.FOREARMS: None,
+            MuscleGroup.PECS: None,
+            MuscleGroup.ROTATOR_CUFF: None,
+            MuscleGroup.TRICEPS: None,
+        },
+        Field.MUSCLES_WORKED: {
+            None: None,
+        },
+        Field.ANTAGONIST_MUSCLES: {None},
+    },
+    Exercise.TRICEP_PUSHDOWN_STRAIGHT_BAR: {
+        INHERITS_FROM: Exercise.TRICEP_PUSHDOWN,
         Field.MUSCLE_GROUPS_WORKED: {
             MuscleGroup.DELTS: None,
             MuscleGroup.FOREARMS: None,

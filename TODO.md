@@ -6,6 +6,10 @@
 
 ## Most Important
 * Fatigue scores
+    - Multiplier based on exercise type (complex compound -> 1.5, simple compound -> 1.3, isolation -> 1, easy accessory lift (e.g. full cans) -> 0.7)
+    - Score-based multiplier based on muscle group size (forearms -> 1, biceps/triceps -> 2, abs -> 3, back/chest -> 4, quads/hamstrings/glutes -> 4, abductors/adductors -> 2, shoulders -> 2, spinal erectors -> 1)
+    - Multiplier for axially loading exercises (1.1?)
+    - Multiplier for RIR (need a way to estimate RIR)
 * Support multiple users
 
 ### Visualization
