@@ -59,6 +59,6 @@ then
     then
         git commit --amend --no-edit
     else
-        git commit -m "Added $date workout"
+        git commit -m "Added workouts up to $date"
     fi
 fi
