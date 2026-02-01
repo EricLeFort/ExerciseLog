@@ -1,6 +1,11 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+08-MAR-2024,walk (treadmill),00:53:00,4.59,5583,367,0,161,181,"PF gym again"
+05-MAR-2024,walk (treadmill),01:02:45,5.42,6516,436,0,172,201,"PF gym again"
+01-MAR-2024,walk (treadmill),01:02:00,5.37,6585,364,0,152,163,"PF gym again"
+26-FEB-2024,walk (treadmill),01:03:06,5.58,6740,364,0,172,193,"PF gym again"
+18-FEB-2024,walk (treadmill),01:01:00,5.29,6380,364,0,159,168,"PF gym doesn't have elevation readout, this is an estimate"
 03-JAN-2024,walk (treadmill),01:17:45,6.91,,605,0,159,172,""
-31-DEC-2024,walk (treadmill),01:01:00,5.40,6474,479,0,165,178,""
+30-DEC-2024,walk (treadmill),01:01:00,5.40,6474,479,0,165,178,""
 18-DEC-2024,walk (treadmill),00:31:00,2.73,3319,264,0,170,179,"Forced to stop early -- my shoe was blistering my heel really bad"
 15-DEC-2024,walk (treadmill),00:52:19,4.81,5528,401,0,152,160,"Forced to stop early -- gym was closing"
 12-DEC-2024,walk (treadmill),01:01:30,5.46,6584,487,0,151,165,""
