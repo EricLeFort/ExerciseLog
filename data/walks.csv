@@ -1,4 +1,18 @@
 date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs),avg_heart_rate,max_heart_rate,notes
+26-JAN-2026,walk (treadmill),00:34:59,3.03,3859,131,0,164,178,""
+25-JAN-2026,walk (treadmill),00:35:00,3.03,3666,132,0,161,176,""
+21-JAN-2026,walk (treadmill),00:33:00,2.86,3505,135,0,167,182,""
+19-JAN-2026,walk (treadmill),00:35:00,3.02,3804,113,0,166,178,""
+20-APR-2025,hike (outdoor),04:43:07,11.35,,256,0,117,172,"Long session with 10kph dash"
+17-APR-2025,walk (treadmill),01:02:00,5.37,,312,0,158,170,
+15-APR-2025,walk (treadmill),01:00:00,5.20,,312,0,161,170,"Also did an outdoor hike"
+13-MAR-2025,hike (outdoor),02:24:46,5.47,,111,0,116,150,""
+11-APR-2025,walk (treadmill),00:52:00,4.50,,282,0,159,192,"Intervals: 6%, 8%, 10%, 11%, 12%"
+06-APR-2025,walk (treadmill),01:30:00,7.88,,414,0,164,188,"Long session with 10kph dash"
+19-MAR-2025,walk (treadmill),01:00:00,5.20,,364,0,161,178,""
+17-MAR-2025,walk (treadmill),01:00:00,5.19,,444,0,164,198,"High grade start (15% for 5 mins)"
+14-APR-2025,walk (treadmill),01:01:30,5.61,,364,0,162,183,""
+11-MAR-2025,walk (treadmill),01:00:00,5.20,,416,0,163,180,""
 08-MAR-2024,walk (treadmill),00:53:00,4.59,5583,367,0,161,181,"PF gym again"
 05-MAR-2024,walk (treadmill),01:02:45,5.42,6516,436,0,172,201,"PF gym again"
 01-MAR-2024,walk (treadmill),01:02:00,5.37,6585,364,0,152,163,"PF gym again"
