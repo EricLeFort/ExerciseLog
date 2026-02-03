@@ -1,4 +1,204 @@
 date,exercise,reps,weight(lbs),rating
+04-OCT-2025,Incline Dumbbell Press,10,60,good
+04-OCT-2025,Incline Dumbbell Press,10,60,good
+04-OCT-2025,Incline Dumbbell Press,10,60,good
+04-OCT-2025,Lateral Lift,10,15,good
+04-OCT-2025,Lateral Lift,10,15,good
+04-OCT-2025,Lateral Lift,10,20,good
+04-OCT-2025,Pullovers,10,40,good
+04-OCT-2025,Pullovers,10,45,good
+04-OCT-2025,Pullovers,10,45,good
+04-OCT-2025,Bicep Curl,10,25,good
+04-OCT-2025,Bicep Curl,10,25,good
+04-OCT-2025,Bicep Curl,10,25,good
+04-OCT-2025,Overhead Tricep Extension,
+17-JUL-2025,Dumbbell Press,10,60,good
+17-JUL-2025,Dumbbell Press,10,60,good
+17-JUL-2025,Dumbbell Press,10,60,good
+17-JUL-2025,Lawnmowers,10,65,good
+17-JUL-2025,Lawnmowers,10,65,good
+17-JUL-2025,Lawnmowers,10,65,good
+02-JUN-2025,Pendulum Squat,10,180,good
+02-JUN-2025,Pendulum Squat,10,180,good
+02-JUN-2025,Pendulum Squat,10,180,good
+02-JUN-2025,Single-Leg Lying Leg Curl,10,50,good
+02-JUN-2025,Single-Leg Lying Leg Curl,10,50,good
+02-JUN-2025,Single-Leg Lying Leg Curl,10,50,good
+02-JUN-2025,Military Press,10,95,warm-up
+02-JUN-2025,Military Press,10,135,good
+02-JUN-2025,Military Press,8,135,good
+02-JUN-2025,Military Press,8,135,good
+02-JUN-2025,Decline Bicep Curl,10,20,good
+02-JUN-2025,Decline Bicep Curl,10,20,good
+02-JUN-2025,Overhead Tricep Extension,10,25,warm-up
+02-JUN-2025,Overhead Tricep Extension,8,40,good
+20-MAY-2025,Bicep Curl,25,20,good
+11-MAY-2025,Dumbbell Lunges,4,60,warm-up
+11-MAY-2025,Dumbbell Lunges,10,120,good
+11-MAY-2025,Dumbbell Lunges,10,100,bad
+11-MAY-2025,Dumbbell Lunges,10,80,good
+11-MAY-2025,Standing Arnold Press,10,60,good
+11-MAY-2025,Standing Arnold Press,10,60,good
+11-MAY-2025,Standing Arnold Press,10,60,good
+10-MAY-2025,Lawnmowers,10,60,failure
+08-MAY-2025,Bicep Curl,10,20,good
+28-APR-2025,Seated Row,10,85,warm-up
+28-APR-2025,Seated Row,10,160,good
+28-APR-2025,Seated Row,10,165,good
+28-APR-2025,Seated Row,10,160,good
+28-APR-2025,Single-Arm Delt Flies,10,55,warm-up
+28-APR-2025,Single-Arm Delt Flies,10,85,good
+28-APR-2025,Single-Arm Delt Flies,10,85,good
+28-APR-2025,Single-Arm Delt Flies,10,85,good
+28-APR-2025,Military Press,10,60,warm-up
+28-APR-2025,Military Press,10,110,good
+28-APR-2025,Military Press,10,105,good
+28-APR-2025,Military Press,10,100,good
+28-APR-2025,Full Cans,20,10,good
+28-APR-2025,Full Cans,20,10,good
+28-APR-2025,Full Cans,20,10,good
+28-APR-2025,Cable Lateral Lift,10,15,good
+28-APR-2025,Cable Lateral Lift,10,15,good
+28-APR-2025,Cable Lateral Lift,10,15,good
+18-APR-2025,Overhead Tricep Extension,10,20,warm-up
+18-APR-2025,Overhead Tricep Extension,10,40,good
+18-APR-2025,Overhead Tricep Extension,10,35,good
+18-APR-2025,Overhead Tricep Extension,10,35,good
+18-APR-2025,Decline Bicep Curl,10,20,warm-up
+18-APR-2025,Decline Bicep Curl,10,25,good
+18-APR-2025,Decline Bicep Curl,10,25,good
+18-APR-2025,Decline Bicep Curl,10,25,good
+18-APR-2025,Single-Leg Leg Curl,15,55,good
+18-APR-2025,Single-Leg Leg Curl,15,65,good
+18-APR-2025,Single-Leg Leg Curl,15,65,good
+18-APR-2025,Single-Leg Leg Extension,15,55,warm-up
+18-APR-2025,Single-Leg Leg Extension,15,70,good
+18-APR-2025,Single-Leg Leg Extension,15,70,good
+18-APR-2025,Single-Leg Leg Extension,15,75,good
+16-APR-2025,Lat Pulldown,10,85,warm-up
+16-APR-2025,Lat Pulldown,10,160,good
+16-APR-2025,Lat Pulldown,10,150,good
+16-APR-2025,Lat Pulldown,10,140,good
+16-APR-2025,Seated Row,10,85,warm-up
+16-APR-2025,Seated Row,10,160,good
+16-APR-2025,Seated Row,8,180,bad
+16-APR-2025,Seated Row,10,170,good
+16-APR-2025,Single-Arm Delt Flies,10,55,warm-up
+16-APR-2025,Single-Arm Delt Flies,10,85,good
+16-APR-2025,Single-Arm Delt Flies,10,85,good
+16-APR-2025,Single-Arm Delt Flies,10,85,good
+16-APR-2025,Military Press,10,70,warm-up
+16-APR-2025,Military Press,10,100,good
+16-APR-2025,Military Press,10,110,good
+16-APR-2025,Military Press,10,105,good
+16-APR-2025,Full Cans,20,10,good
+16-APR-2025,Full Cans,20,10,good
+16-APR-2025,Full Cans,20,10,good
+14-APR-2025,Upright Dumbbell Flies,10,22.5,good
+14-APR-2025,Upright Dumbbell Flies,10,22.5,good
+14-APR-2025,Bench Press (Smith),10,115,warm-up
+14-APR-2025,Bench Press (Smith),15,155,good
+14-APR-2025,Bench Press (Smith),15,145,good
+14-APR-2025,Bench Press (Smith),15,135,good
+14-APR-2025,Bench Press (Smith),15,135,good
+14-APR-2025,Bench Press (Smith),15,135,good
+12-APR-2025,Single-Leg Leg Extension,15,55,good
+12-APR-2025,Single-Leg Leg Extension,15,70,good
+12-APR-2025,Single-Leg Leg Extension,15,70,good
+12-APR-2025,Single-Leg Leg Curl,15,55,good
+12-APR-2025,Single-Leg Leg Curl,15,55,good
+12-APR-2025,Single-Leg Leg Curl,15,55,good
+12-APR-2025,Hammer Curl,10,20,warm-up
+12-APR-2025,Hammer Curl,10,40,good
+12-APR-2025,Hammer Curl,10,35,good
+12-APR-2025,Hammer Curl,10,35,good
+12-APR-2025,Overhead Tricep Extension,10,20,warm-up
+12-APR-2025,Overhead Tricep Extension,10,40,good
+12-APR-2025,Overhead Tricep Extension,10,35,good
+12-APR-2025,Overhead Tricep Extension,10,35,good
+10-APR-2025,Seated Row,10,85,warm-up
+10-APR-2025,Seated Row,10,160,good
+10-APR-2025,Seated Row,10,160,good
+10-APR-2025,Seated Row,10,160,good
+10-APR-2025,Single-Arm Delt Flies,10,55,warm-up
+10-APR-2025,Single-Arm Delt Flies,10,70,good
+10-APR-2025,Single-Arm Delt Flies,10,70,good
+10-APR-2025,Single-Arm Delt Flies,10,85,good
+10-APR-2025,Military Press,10,55,warm-up
+10-APR-2025,Military Press,10,100,good
+10-APR-2025,Military Press,10,100,good
+10-APR-2025,Military Press,10,100,good
+10-APR-2025,Full Cans,20,10,good
+10-APR-2025,Full Cans,20,10,good
+10-APR-2025,Full Cans,20,10,good
+10-APR-2025,Cable Lateral Lift,10,15,good
+10-APR-2025,Cable Lateral Lift,10,15,good
+10-APR-2025,Cable Lateral Lift,10,15,good
+02-APR-2025,Bench Press (Smith),10,115,warm-up
+02-APR-2025,Bench Press (Smith),10,165,good
+02-APR-2025,Bench Press (Smith),10,165,good
+02-APR-2025,Bench Press (Smith),12,145,good
+02-APR-2025,Incline Dumbbell Press,10,45,warm-up
+02-APR-2025,Incline Dumbbell Press,10,70,good
+02-APR-2025,Incline Dumbbell Press,10,75,good
+02-APR-2025,Incline Dumbbell Press,10,75,good
+18-MAR-2025,Single-Leg Leg Extension,15,55,good
+18-MAR-2025,Single-Leg Leg Extension,15,70,good
+18-MAR-2025,Single-Leg Leg Extension,15,70,good
+18-MAR-2025,Single-Leg Leg Curl,15,55,good
+18-MAR-2025,Single-Leg Leg Curl,15,55,good
+18-MAR-2025,Single-Leg Leg Curl,15,55,good
+18-MAR-2025,Hammer Curl,10,20,warm-up
+18-MAR-2025,Hammer Curl,10,35,good
+18-MAR-2025,Hammer Curl,10,35,good
+18-MAR-2025,Hammer Curl,8,40,good
+18-MAR-2025,Tricep Pushdown (Angled Bar),10,70,good
+18-MAR-2025,Tricep Pushdown (Angled Bar),10,70,good
+18-MAR-2025,Tricep Pushdown (Angled Bar),10,75,good
+16-MAR-2025,Lat Pulldown,10,85,warm-up
+16-MAR-2025,Lat Pulldown,10,150,good
+16-MAR-2025,Lat Pulldown,10,150,good
+16-MAR-2025,Lat Pulldown,10,140,good
+16-MAR-2025,Seated Row,10,85,warm-up
+16-MAR-2025,Seated Row,10,160,good
+16-MAR-2025,Seated Row,10,160,good
+16-MAR-2025,Seated Row,10,160,good
+16-MAR-2025,Single-Arm Delt Flies,10,70,good
+16-MAR-2025,Single-Arm Delt Flies,10,70,good
+16-MAR-2025,Single-Arm Delt Flies,10,70,good
+16-MAR-2025,Military Press,10,70,warm-up
+16-MAR-2025,Military Press,10,100,good
+16-MAR-2025,Military Press,10,100,good
+16-MAR-2025,Military Press,10,100,good
+16-MAR-2025,Full Cans,20,10,good
+16-MAR-2025,Full Cans,20,10,good
+16-MAR-2025,Full Cans,20,10,good
+16-MAR-2025,Cable Lateral Lift,10,10,good
+16-MAR-2025,Cable Lateral Lift,10,10,good
+16-MAR-2025,Cable Lateral Lift,10,10,good
+12-MAR-2025,Bench Press (Smith),10,135,warm-up
+12-MAR-2025,Bench Press (Smith),10,205,good
+12-MAR-2025,Bench Press (Smith),10,225,good
+12-MAR-2025,Bench Press (Smith),10,205,good
+12-MAR-2025,Bench Press (Smith),10,185,good
+12-MAR-2025,Bench Press (Smith),10,185,good
+12-MAR-2025,Single-Arm Farmer's Carry,50,70,good
+12-MAR-2025,Single-Arm Farmer's Carry,50,70,good
+12-MAR-2025,Single-Arm Farmer's Carry,50,70,good
+09-MAR-2025,Hammer Curl,10,20,warm-up
+09-MAR-2025,Hammer Curl,10,40,good
+09-MAR-2025,Hammer Curl,10,35,good
+09-MAR-2025,Hammer Curl,10,35,good
+09-MAR-2025,Overhead Tricep Extension,10,20,warm-up
+09-MAR-2025,Overhead Tricep Extension,10,40,good
+09-MAR-2025,Overhead Tricep Extension,10,35,good
+09-MAR-2025,Overhead Tricep Extension,10,35,good
+09-MAR-2025,Single-Leg Leg Curl,15,50,good
+09-MAR-2025,Single-Leg Leg Curl,15,70,good
+09-MAR-2025,Single-Leg Leg Curl,15,55,good
+09-MAR-2025,Single-Leg Leg Extension,15,50,good
+09-MAR-2025,Single-Leg Leg Extension,15,70,good
+09-MAR-2025,Single-Leg Leg Extension,15,70,good
 07-MAR-2025,Seated Row,10,80,warm-up
 07-MAR-2025,Seated Row,10,180,good
 07-MAR-2025,Seated Row,10,180,good
