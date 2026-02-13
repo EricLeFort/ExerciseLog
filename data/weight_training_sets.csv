@@ -11,7 +11,9 @@ date,exercise,reps,weight(lbs),rating
 04-OCT-2025,Bicep Curl,10,25,good
 04-OCT-2025,Bicep Curl,10,25,good
 04-OCT-2025,Bicep Curl,10,25,good
-04-OCT-2025,Overhead Tricep Extension,
+04-OCT-2025,Single-Arm Overhead Tricep Extension,10,25,good
+04-OCT-2025,Single-Arm Overhead Tricep Extension,10,25,good
+04-OCT-2025,Single-Arm Overhead Tricep Extension,10,35,bad (L)
 17-JUL-2025,Dumbbell Press,10,60,good
 17-JUL-2025,Dumbbell Press,10,60,good
 17-JUL-2025,Dumbbell Press,10,60,good
@@ -28,10 +30,10 @@ date,exercise,reps,weight(lbs),rating
 02-JUN-2025,Military Press,10,135,good
 02-JUN-2025,Military Press,8,135,good
 02-JUN-2025,Military Press,8,135,good
-02-JUN-2025,Decline Bicep Curl,10,20,good
-02-JUN-2025,Decline Bicep Curl,10,20,good
-02-JUN-2025,Overhead Tricep Extension,10,25,warm-up
-02-JUN-2025,Overhead Tricep Extension,8,40,good
+02-JUN-2025,Incline Bicep Curl,10,20,good
+02-JUN-2025,Incline Bicep Curl,10,20,good
+02-JUN-2025,Single-Arm Overhead Tricep Extension,10,25,warm-up
+02-JUN-2025,Single-Arm Overhead Tricep Extension,8,40,good
 20-MAY-2025,Bicep Curl,25,20,good
 11-MAY-2025,Dumbbell Lunges,4,60,warm-up
 11-MAY-2025,Dumbbell Lunges,10,120,good
@@ -60,14 +62,14 @@ date,exercise,reps,weight(lbs),rating
 28-APR-2025,Cable Lateral Lift,10,15,good
 28-APR-2025,Cable Lateral Lift,10,15,good
 28-APR-2025,Cable Lateral Lift,10,15,good
-18-APR-2025,Overhead Tricep Extension,10,20,warm-up
-18-APR-2025,Overhead Tricep Extension,10,40,good
-18-APR-2025,Overhead Tricep Extension,10,35,good
-18-APR-2025,Overhead Tricep Extension,10,35,good
-18-APR-2025,Decline Bicep Curl,10,20,warm-up
-18-APR-2025,Decline Bicep Curl,10,25,good
-18-APR-2025,Decline Bicep Curl,10,25,good
-18-APR-2025,Decline Bicep Curl,10,25,good
+18-APR-2025,Single-Arm Overhead Tricep Extension,10,20,warm-up
+18-APR-2025,Single-Arm Overhead Tricep Extension,10,40,good
+18-APR-2025,Single-Arm Overhead Tricep Extension,10,35,good
+18-APR-2025,Single-Arm Overhead Tricep Extension,10,35,good
+18-APR-2025,Incline Bicep Curl,10,20,warm-up
+18-APR-2025,Incline Bicep Curl,10,25,good
+18-APR-2025,Incline Bicep Curl,10,25,good
+18-APR-2025,Incline Bicep Curl,10,25,good
 18-APR-2025,Single-Leg Leg Curl,15,55,good
 18-APR-2025,Single-Leg Leg Curl,15,65,good
 18-APR-2025,Single-Leg Leg Curl,15,65,good
@@ -112,10 +114,10 @@ date,exercise,reps,weight(lbs),rating
 12-APR-2025,Hammer Curl,10,40,good
 12-APR-2025,Hammer Curl,10,35,good
 12-APR-2025,Hammer Curl,10,35,good
-12-APR-2025,Overhead Tricep Extension,10,20,warm-up
-12-APR-2025,Overhead Tricep Extension,10,40,good
-12-APR-2025,Overhead Tricep Extension,10,35,good
-12-APR-2025,Overhead Tricep Extension,10,35,good
+12-APR-2025,Single-Arm Overhead Tricep Extension,10,20,warm-up
+12-APR-2025,Single-Arm Overhead Tricep Extension,10,40,good
+12-APR-2025,Single-Arm Overhead Tricep Extension,10,35,good
+12-APR-2025,Single-Arm Overhead Tricep Extension,10,35,good
 10-APR-2025,Seated Row,10,85,warm-up
 10-APR-2025,Seated Row,10,160,good
 10-APR-2025,Seated Row,10,160,good
@@ -189,10 +191,10 @@ date,exercise,reps,weight(lbs),rating
 09-MAR-2025,Hammer Curl,10,40,good
 09-MAR-2025,Hammer Curl,10,35,good
 09-MAR-2025,Hammer Curl,10,35,good
-09-MAR-2025,Overhead Tricep Extension,10,20,warm-up
-09-MAR-2025,Overhead Tricep Extension,10,40,good
-09-MAR-2025,Overhead Tricep Extension,10,35,good
-09-MAR-2025,Overhead Tricep Extension,10,35,good
+09-MAR-2025,Single-Arm Overhead Tricep Extension,10,20,warm-up
+09-MAR-2025,Single-Arm Overhead Tricep Extension,10,40,good
+09-MAR-2025,Single-Arm Overhead Tricep Extension,10,35,good
+09-MAR-2025,Single-Arm Overhead Tricep Extension,10,35,good
 09-MAR-2025,Single-Leg Leg Curl,15,50,good
 09-MAR-2025,Single-Leg Leg Curl,15,70,good
 09-MAR-2025,Single-Leg Leg Curl,15,55,good
@@ -236,7 +238,7 @@ date,exercise,reps,weight(lbs),rating
 27-FEB-2025,Single-Arm Farmer's Carry,50,70,good
 27-FEB-2025,Single-Arm Farmer's Carry,50,70,good
 27-FEB-2025,Single-Arm Farmer's Carry,50,70,good
-07-MAR-2025,Decline Bicep Curl,12,20,fun
+07-MAR-2025,Incline Bicep Curl,12,20,fun
 23-FEB-2025,Single-Leg Leg Curl,15,55,good
 23-FEB-2025,Single-Leg Leg Curl,15,70,good
 23-FEB-2025,Single-Leg Leg Curl,15,70,good
@@ -251,16 +253,16 @@ date,exercise,reps,weight(lbs),rating
 23-FEB-2025,Seated Row,10,160,good
 23-FEB-2025,Seated Row,10,160,good
 23-FEB-2025,Seated Row,10,160,good
-23-FEB-2025,Decline Bicep Curl,12,20,good
-23-FEB-2025,Decline Bicep Curl,10,25,good
-23-FEB-2025,Decline Bicep Curl,10,25,good
+23-FEB-2025,Incline Bicep Curl,12,20,good
+23-FEB-2025,Incline Bicep Curl,10,25,good
+23-FEB-2025,Incline Bicep Curl,10,25,good
 17-FEB-2025,Bench Press (Smith),10,135,warm-up
 17-FEB-2025,Bench Press (Smith),10,165,good
 17-FEB-2025,Bench Press (Smith),10,185,good
 17-FEB-2025,Bench Press (Smith),10,205,good
-17-FEB-2025,Decline Bicep Curl,12,20,good
-17-FEB-2025,Decline Bicep Curl,10,25,good
-17-FEB-2025,Decline Bicep Curl,10,25,good
+17-FEB-2025,Incline Bicep Curl,12,20,good
+17-FEB-2025,Incline Bicep Curl,10,25,good
+17-FEB-2025,Incline Bicep Curl,10,25,good
 17-FEB-2025,Seated Row,10,90,warm-up
 17-FEB-2025,Seated Row,10,145,good
 17-FEB-2025,Seated Row,10,160,good
@@ -269,15 +271,15 @@ date,exercise,reps,weight(lbs),rating
 17-FEB-2025,Lat Pulldown,10,140,good
 17-FEB-2025,Lat Pulldown,10,160,good
 17-FEB-2025,Lat Pulldown,10,160,good
-04-JAN-2025,Decline Bicep Curl,10,15,warm-up
-04-JAN-2025,Decline Bicep Curl,10,25,good
-04-JAN-2025,Decline Bicep Curl,12,25,good
-04-JAN-2025,Decline Bicep Curl,12,25,good
-04-JAN-2025,Decline Bicep Curl,17,20,good
-04-JAN-2025,Overhead Tricep Extension,10,20,warm-up
-04-JAN-2025,Overhead Tricep Extension,10,40,good
-04-JAN-2025,Overhead Tricep Extension,10,35,good
-04-JAN-2025,Overhead Tricep Extension,10,35,good
+04-JAN-2025,Incline Bicep Curl,10,15,warm-up
+04-JAN-2025,Incline Bicep Curl,10,25,good
+04-JAN-2025,Incline Bicep Curl,12,25,good
+04-JAN-2025,Incline Bicep Curl,12,25,good
+04-JAN-2025,Incline Bicep Curl,17,20,good
+04-JAN-2025,Single-Arm Overhead Tricep Extension,10,20,warm-up
+04-JAN-2025,Single-Arm Overhead Tricep Extension,10,40,good
+04-JAN-2025,Single-Arm Overhead Tricep Extension,10,35,good
+04-JAN-2025,Single-Arm Overhead Tricep Extension,10,35,good
 04-JAN-2025,Single-Leg Leg Curl,15,60,good
 04-JAN-2025,Single-Leg Leg Curl,15,70,good
 04-JAN-2025,Single-Leg Leg Curl,15,75,good
@@ -318,17 +320,17 @@ date,exercise,reps,weight(lbs),rating
 23-DEC-2024,Good Morning,10,117.5,good
 23-DEC-2024,Good Morning,10,147.5,good
 23-DEC-2024,Good Morning,10,147.5,good
-23-DEC-2024,Decline Bicep Curl,12,25,good
-23-DEC-2024,Decline Bicep Curl,12,25,good
-23-DEC-2024,Decline Bicep Curl,12,25,good
+23-DEC-2024,Incline Bicep Curl,12,25,good
+23-DEC-2024,Incline Bicep Curl,12,25,good
+23-DEC-2024,Incline Bicep Curl,12,25,good
 23-DEC-2024,Hammer Curl,10,20,warm-up
 23-DEC-2024,Hammer Curl,10,40,good
 23-DEC-2024,Hammer Curl,10,40,good
 23-DEC-2024,Hammer Curl,10,40,good
-23-DEC-2024,Overhead Tricep Extension,10,20,warm-up
-23-DEC-2024,Overhead Tricep Extension,10,40,bad
-23-DEC-2024,Overhead Tricep Extension,10,35,good
-23-DEC-2024,Overhead Tricep Extension,10,35,good
+23-DEC-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+23-DEC-2024,Single-Arm Overhead Tricep Extension,10,40,bad
+23-DEC-2024,Single-Arm Overhead Tricep Extension,10,35,good
+23-DEC-2024,Single-Arm Overhead Tricep Extension,10,35,good
 19-DEC-2024,Single-Arm Delt Flies,10,60,good
 19-DEC-2024,Single-Arm Delt Flies,10,60,good
 19-DEC-2024,Strict Press,10,117.5,easy
@@ -369,9 +371,9 @@ date,exercise,reps,weight(lbs),rating
 13-DEC-2024,Good Morning,10,117.5,good
 13-DEC-2024,Good Morning,10,137.5,good
 13-DEC-2024,Good Morning,10,147.5,good
-13-DEC-2024,Decline Bicep Curl,12,25,good
-13-DEC-2024,Decline Bicep Curl,8,30,good
-13-DEC-2024,Decline Bicep Curl,10,30,good
+13-DEC-2024,Incline Bicep Curl,12,25,good
+13-DEC-2024,Incline Bicep Curl,8,30,good
+13-DEC-2024,Incline Bicep Curl,10,30,good
 13-DEC-2024,Hammer Curl,10,20,warm-up
 13-DEC-2024,Hammer Curl,10,40,good
 13-DEC-2024,Hammer Curl,10,40,good
@@ -431,9 +433,9 @@ date,exercise,reps,weight(lbs),rating
 04-DEC-2024,Good Morning,10,117.5,good
 04-DEC-2024,Good Morning,10,137.5,good
 04-DEC-2024,Good Morning,10,137.5,good
-04-DEC-2024,Decline Bicep Curl,10,20,good
-04-DEC-2024,Decline Bicep Curl,12,25,good
-04-DEC-2024,Decline Bicep Curl,13,25,good
+04-DEC-2024,Incline Bicep Curl,10,20,good
+04-DEC-2024,Incline Bicep Curl,12,25,good
+04-DEC-2024,Incline Bicep Curl,13,25,good
 04-DEC-2024,Hammer Curl,10,20,warm-up
 04-DEC-2024,Hammer Curl,10,40,good
 04-DEC-2024,Hammer Curl,10,40,good
@@ -476,12 +478,12 @@ date,exercise,reps,weight(lbs),rating
 24-NOV-2024,Parallel Bar Leg Raise,15,0,good
 24-NOV-2024,Parallel Bar Leg Raise,15,0,good
 24-NOV-2024,Parallel Bar Leg Raise,15,0,good
-24-NOV-2024,Decline Bicep Curl,10,25,good
-24-NOV-2024,Decline Bicep Curl,12,25,good
-24-NOV-2024,Decline Bicep Curl,12,25,good
-22-NOV-2024,Decline Bicep Curl,10,20,good
-22-NOV-2024,Decline Bicep Curl,10,25,good
-22-NOV-2024,Decline Bicep Curl,10,25,good
+24-NOV-2024,Incline Bicep Curl,10,25,good
+24-NOV-2024,Incline Bicep Curl,12,25,good
+24-NOV-2024,Incline Bicep Curl,12,25,good
+22-NOV-2024,Incline Bicep Curl,10,20,good
+22-NOV-2024,Incline Bicep Curl,10,25,good
+22-NOV-2024,Incline Bicep Curl,10,25,good
 22-NOV-2024,Hammer Curl,10,20,warm-up
 22-NOV-2024,Hammer Curl,10,35,good
 22-NOV-2024,Hammer Curl,10,40,good
@@ -545,9 +547,9 @@ date,exercise,reps,weight(lbs),rating
 14-NOV-2024,Good Morning,10,115,easy
 14-NOV-2024,Good Morning,10,135,good
 14-NOV-2024,Good Morning,10,135,good
-14-NOV-2024,Decline Bicep Curl,10,20,good
-14-NOV-2024,Decline Bicep Curl,10,25,good
-14-NOV-2024,Decline Bicep Curl,10,25,good
+14-NOV-2024,Incline Bicep Curl,10,20,good
+14-NOV-2024,Incline Bicep Curl,10,25,good
+14-NOV-2024,Incline Bicep Curl,10,25,good
 14-NOV-2024,Hammer Curl,10,20,warm-up
 14-NOV-2024,Hammer Curl,10,35,good
 14-NOV-2024,Hammer Curl,10,40,good
@@ -602,9 +604,9 @@ date,exercise,reps,weight(lbs),rating
 29-OCT-2024,Good Morning,10,115,easy
 29-OCT-2024,Good Morning,10,125,good
 29-OCT-2024,Good Morning,10,135,good
-29-OCT-2024,Decline Bicep Curl,10,20,good
-29-OCT-2024,Decline Bicep Curl,10,25,good
-29-OCT-2024,Decline Bicep Curl,10,25,good
+29-OCT-2024,Incline Bicep Curl,10,20,good
+29-OCT-2024,Incline Bicep Curl,10,25,good
+29-OCT-2024,Incline Bicep Curl,10,25,good
 29-OCT-2024,Hammer Curl,10,20,warm-up
 29-OCT-2024,Hammer Curl,10,35,good
 29-OCT-2024,Hammer Curl,10,35,good
@@ -707,17 +709,17 @@ date,exercise,reps,weight(lbs),rating
 22-SEP-2024,Parallel Bar Leg Raise,12,0,good
 22-SEP-2024,Parallel Bar Leg Raise,12,0,good
 22-SEP-2024,Parallel Bar Leg Raise,12,0,good
-18-SEP-2024,Decline Bicep Curl,10,20,good
-18-SEP-2024,Decline Bicep Curl,10,25,good
-18-SEP-2024,Decline Bicep Curl,10,25,good
+18-SEP-2024,Incline Bicep Curl,10,20,good
+18-SEP-2024,Incline Bicep Curl,10,25,good
+18-SEP-2024,Incline Bicep Curl,10,25,good
 18-SEP-2024,Hammer Curl,10,20,warm-up
 18-SEP-2024,Hammer Curl,10,40,good
 18-SEP-2024,Hammer Curl,10,40,good
 18-SEP-2024,Hammer Curl,10,40,good
-18-SEP-2024,Overhead Tricep Extension,10,20,warm-up
-18-SEP-2024,Overhead Tricep Extension,10,40,good
-18-SEP-2024,Overhead Tricep Extension,10,40,good
-18-SEP-2024,Overhead Tricep Extension,10,40,good
+18-SEP-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+18-SEP-2024,Single-Arm Overhead Tricep Extension,10,40,good
+18-SEP-2024,Single-Arm Overhead Tricep Extension,10,40,good
+18-SEP-2024,Single-Arm Overhead Tricep Extension,10,40,good
 18-SEP-2024,Tricep Pushdown (V-Bar),10,100,warm-up
 18-SEP-2024,Tricep Pushdown (V-Bar),10,170,good
 18-SEP-2024,Tricep Pushdown (V-Bar),10,180,good
@@ -825,9 +827,9 @@ date,exercise,reps,weight(lbs),rating
 31-AUG-2024,Bench Press,5,225,good
 31-AUG-2024,Bench Press,5,225,good
 28-AUG-2024,Bicep Curl,10,20,warm-up
-28-AUG-2024,Decline Bicep Curl,10,20,good
-28-AUG-2024,Decline Bicep Curl,10,25,good
-28-AUG-2024,Decline Bicep Curl,10,25,good
+28-AUG-2024,Incline Bicep Curl,10,20,good
+28-AUG-2024,Incline Bicep Curl,10,25,good
+28-AUG-2024,Incline Bicep Curl,10,25,good
 28-AUG-2024,Hammer Curl,10,40,good
 28-AUG-2024,Hammer Curl,10,40,good
 28-AUG-2024,Hammer Curl,10,40,good
@@ -848,16 +850,16 @@ date,exercise,reps,weight(lbs),rating
 28-AUG-2024,Good Morning,10,125,good
 28-AUG-2024,Good Morning,10,125,good
 18-AUG-2024,Bicep Curl,10,20,warm-up
-18-AUG-2024,Decline Bicep Curl,10,20,good
-18-AUG-2024,Decline Bicep Curl,15,20,good
-18-AUG-2024,Decline Bicep Curl,10,25,good
+18-AUG-2024,Incline Bicep Curl,10,20,good
+18-AUG-2024,Incline Bicep Curl,15,20,good
+18-AUG-2024,Incline Bicep Curl,10,25,good
 18-AUG-2024,Lawnmowers,15,50,good
 18-AUG-2024,Lawnmowers,15,50,good
 18-AUG-2024,Lawnmowers,15,50,good
-18-AUG-2024,Overhead Tricep Extension,10,20,warm-up
-18-AUG-2024,Overhead Tricep Extension,10,40,good
-18-AUG-2024,Overhead Tricep Extension,10,40,good
-18-AUG-2024,Overhead Tricep Extension,10,40,good
+18-AUG-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+18-AUG-2024,Single-Arm Overhead Tricep Extension,10,40,good
+18-AUG-2024,Single-Arm Overhead Tricep Extension,10,40,good
+18-AUG-2024,Single-Arm Overhead Tricep Extension,10,40,good
 18-AUG-2024,Lateral Lift,10,15,warm-up
 18-AUG-2024,Lateral Lift,9,30,good
 18-AUG-2024,Lateral Lift,9,30,good
@@ -894,10 +896,10 @@ date,exercise,reps,weight(lbs),rating
 07-AUG-2024,Good Morning,10,115,good
 07-AUG-2024,Good Morning,10,115,good
 07-AUG-2024,Good Morning,10,115,good
-07-AUG-2024,Neutral-Grip Chin-Up,3,0,good
+07-AUG-2024,Neutral-Grip Pull-Up,3,0,good
 07-AUG-2024,Wide-Grip Pull-Up,1,0,good
-07-AUG-2024,Decline Bicep Curl,10,20,good
-07-AUG-2024,Overhead Tricep Extension,10,35,fun
+07-AUG-2024,Incline Bicep Curl,10,20,good
+07-AUG-2024,Single-Arm Overhead Tricep Extension,10,35,fun
 07-AUG-2024,Bicep Curl,15,30,good
 05-AUG-2024,Bench Press,10,135,warm-up
 05-AUG-2024,Bench Press,10,205,good
@@ -926,10 +928,10 @@ date,exercise,reps,weight(lbs),rating
 05-AUG-2024,Cable Lying Hip Flexors,10,80,good
 05-AUG-2024,Cable Lying Hip Flexors,10,80,good
 05-AUG-2024,Cable Lying Hip Flexors,10,80,good
-03-AUG-2024,Decline Bicep Curl,10,20,good
-03-AUG-2024,Decline Bicep Curl,10,20,good
-03-AUG-2024,Decline Bicep Curl,10,20,good
-03-AUG-2024,Decline Bicep Curl,10,20,good
+03-AUG-2024,Incline Bicep Curl,10,20,good
+03-AUG-2024,Incline Bicep Curl,10,20,good
+03-AUG-2024,Incline Bicep Curl,10,20,good
+03-AUG-2024,Incline Bicep Curl,10,20,good
 03-AUG-2024,Hammer Curl,10,20,warm-up
 03-AUG-2024,Hammer Curl,10,40,good
 03-AUG-2024,Hammer Curl,10,40,good
@@ -1035,9 +1037,9 @@ date,exercise,reps,weight(lbs),rating
 28-JUL-2024,Bent-Over Barbell Row,10,105,good
 28-JUL-2024,Bent-Over Barbell Row,10,115,good
 28-JUL-2024,Bent-Over Barbell Row,10,95,good
-28-JUL-2024,Decline Bicep Curl,10,20,good
-28-JUL-2024,Decline Bicep Curl,10,20,good
-28-JUL-2024,Decline Bicep Curl,10,20,good
+28-JUL-2024,Incline Bicep Curl,10,20,good
+28-JUL-2024,Incline Bicep Curl,10,20,good
+28-JUL-2024,Incline Bicep Curl,10,20,good
 26-JUL-2024,Full Cans,20,10,good
 26-JUL-2024,Full Cans,20,10,good
 26-JUL-2024,Full Cans,20,10,good
@@ -1090,7 +1092,7 @@ date,exercise,reps,weight(lbs),rating
 22-JUL-2024,Hammer Curl,10,20,warm-up
 22-JUL-2024,Hammer Curl,8,30,good
 22-JUL-2024,Hammer Curl,10,30,good
-21-JUL-2024,Decline Bicep Curl,10,20,good
+21-JUL-2024,Incline Bicep Curl,10,20,good
 21-JUL-2024,Bicep Curl,10,20,warm-up
 21-JUL-2024,Bicep Curl,10,35,good
 21-JUL-2024,Bicep Curl,10,35,good
@@ -1098,10 +1100,10 @@ date,exercise,reps,weight(lbs),rating
 21-JUL-2024,Concentration Curl,8,35,good
 21-JUL-2024,Concentration Curl,8,35,good
 21-JUL-2024,Concentration Curl,10,30,good
-21-JUL-2024,Overhead Tricep Extension,10,20,warm-up
-21-JUL-2024,Overhead Tricep Extension,10,40,good
-21-JUL-2024,Overhead Tricep Extension,10,40,good
-21-JUL-2024,Overhead Tricep Extension,10,40,good
+21-JUL-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+21-JUL-2024,Single-Arm Overhead Tricep Extension,10,40,good
+21-JUL-2024,Single-Arm Overhead Tricep Extension,10,40,good
+21-JUL-2024,Single-Arm Overhead Tricep Extension,10,40,good
 21-JUL-2024,Tricep Pushdown (V-Bar),10,100,warm-up
 21-JUL-2024,Tricep Pushdown (V-Bar),10,180,good
 21-JUL-2024,Tricep Pushdown (V-Bar),10,180,good
@@ -1194,10 +1196,10 @@ date,exercise,reps,weight(lbs),rating
 13-JUL-2024,Hammer Curl,10,40,good
 13-JUL-2024,Hammer Curl,10,40,good
 13-JUL-2024,Hammer Curl,10,40,bad
-13-JUL-2024,Overhead Tricep Extension,10,20,warm-up
-13-JUL-2024,Overhead Tricep Extension,10,40,good
-13-JUL-2024,Overhead Tricep Extension,10,40,good
-13-JUL-2024,Overhead Tricep Extension,10,40,good
+13-JUL-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+13-JUL-2024,Single-Arm Overhead Tricep Extension,10,40,good
+13-JUL-2024,Single-Arm Overhead Tricep Extension,10,40,good
+13-JUL-2024,Single-Arm Overhead Tricep Extension,10,40,good
 13-JUL-2024,Tricep Pushdown (V-Bar),10,100,warm-up
 13-JUL-2024,Tricep Pushdown (V-Bar),10,180,good
 13-JUL-2024,Tricep Pushdown (V-Bar),10,180,good
@@ -1281,9 +1283,9 @@ date,exercise,reps,weight(lbs),rating
 07-JUL-2024,Hammer Curl,10,20,deload
 07-JUL-2024,Hammer Curl,10,20,deload
 07-JUL-2024,Hammer Curl,10,20,deload
-07-JUL-2024,Overhead Tricep Extension,10,20,deload
-07-JUL-2024,Overhead Tricep Extension,10,20,deload
-07-JUL-2024,Overhead Tricep Extension,10,20,deload
+07-JUL-2024,Single-Arm Overhead Tricep Extension,10,20,deload
+07-JUL-2024,Single-Arm Overhead Tricep Extension,10,20,deload
+07-JUL-2024,Single-Arm Overhead Tricep Extension,10,20,deload
 07-JUL-2024,Tricep Pushdown (V-Bar),10,110,deload
 07-JUL-2024,Tricep Pushdown (V-Bar),10,110,deload
 07-JUL-2024,Tricep Pushdown (V-Bar),10,110,deload
@@ -1347,10 +1349,10 @@ date,exercise,reps,weight(lbs),rating
 01-JUL-2024,Hammer Curl,10,40,good
 01-JUL-2024,Hammer Curl,10,40,good
 01-JUL-2024,Hammer Curl,10,40,good
-01-JUL-2024,Overhead Tricep Extension,10,25,warm-up
-01-JUL-2024,Overhead Tricep Extension,10,40,good
-01-JUL-2024,Overhead Tricep Extension,10,40,good
-01-JUL-2024,Overhead Tricep Extension,10,40,good
+01-JUL-2024,Single-Arm Overhead Tricep Extension,10,25,warm-up
+01-JUL-2024,Single-Arm Overhead Tricep Extension,10,40,good
+01-JUL-2024,Single-Arm Overhead Tricep Extension,10,40,good
+01-JUL-2024,Single-Arm Overhead Tricep Extension,10,40,good
 01-JUL-2024,Skullcrushers,10,52,warm-up
 01-JUL-2024,Skullcrushers,10,82,good
 01-JUL-2024,Skullcrushers,10,82,good
@@ -1428,10 +1430,10 @@ date,exercise,reps,weight(lbs),rating
 25-JUN-2024,Hammer Curl,10,40,good
 25-JUN-2024,Hammer Curl,10,40,good
 25-JUN-2024,Hammer Curl,10,40,good
-25-JUN-2024,Overhead Tricep Extension,10,20,warm-up
-25-JUN-2024,Overhead Tricep Extension,8,40,good
-25-JUN-2024,Overhead Tricep Extension,8,40,good
-25-JUN-2024,Overhead Tricep Extension,8,40,good
+25-JUN-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+25-JUN-2024,Single-Arm Overhead Tricep Extension,8,40,good
+25-JUN-2024,Single-Arm Overhead Tricep Extension,8,40,good
+25-JUN-2024,Single-Arm Overhead Tricep Extension,8,40,good
 25-JUN-2024,Skullcrushers,10,52,warm-up
 25-JUN-2024,Skullcrushers,10,82,good
 25-JUN-2024,Skullcrushers,10,82,good
@@ -1527,10 +1529,10 @@ date,exercise,reps,weight(lbs),rating
 17-JUN-2024,Hammer Curl,10,40,good
 17-JUN-2024,Hammer Curl,10,40,good
 17-JUN-2024,Hammer Curl,10,40,good
-17-JUN-2024,Overhead Tricep Extension,10,20,warm-up
-17-JUN-2024,Overhead Tricep Extension,8,40,good
-17-JUN-2024,Overhead Tricep Extension,10,40,good
-17-JUN-2024,Overhead Tricep Extension,8,40,good
+17-JUN-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+17-JUN-2024,Single-Arm Overhead Tricep Extension,8,40,good
+17-JUN-2024,Single-Arm Overhead Tricep Extension,10,40,good
+17-JUN-2024,Single-Arm Overhead Tricep Extension,8,40,good
 17-JUN-2024,Tricep Pushdown (V-Bar),10,100,warm-up
 17-JUN-2024,Tricep Pushdown (V-Bar),10,180,good
 17-JUN-2024,Tricep Pushdown (V-Bar),10,180,good
@@ -1539,10 +1541,10 @@ date,exercise,reps,weight(lbs),rating
 17-JUN-2024,Seated Row,10,152.5,good
 17-JUN-2024,Seated Row,10,152.5,good
 17-JUN-2024,Lawnmowers,10,45,warm-up
-17-JUN-2024,Neutral-Grip Chin-Up,10,-100,warm-up
-17-JUN-2024,Neutral-Grip Chin-Up,8,-50,good
-17-JUN-2024,Neutral-Grip Chin-Up,8,-70,good
-17-JUN-2024,Neutral-Grip Chin-Up,8,-70,good
+17-JUN-2024,Neutral-Grip Pull-Up,10,-100,warm-up
+17-JUN-2024,Neutral-Grip Pull-Up,8,-50,good
+17-JUN-2024,Neutral-Grip Pull-Up,8,-70,good
+17-JUN-2024,Neutral-Grip Pull-Up,8,-70,good
 14-JUN-2024,Cable Lateral Lift,10,40,good
 14-JUN-2024,Cable Lateral Lift,10,40,good
 14-JUN-2024,Cable Lateral Lift,10,40,good
@@ -1611,9 +1613,9 @@ date,exercise,reps,weight(lbs),rating
 10-JUN-2024,Pullovers,10,65,good
 10-JUN-2024,Pullovers,10,65,good
 10-JUN-2024,Pullovers,10,65,good
-10-JUN-2024,Neutral-Grip Chin-Up,1,0,fun
-10-JUN-2024,Neutral-Grip Chin-Up,1,0,fun
-10-JUN-2024,Neutral-Grip Chin-Up,1,0,fun
+10-JUN-2024,Neutral-Grip Pull-Up,1,0,fun
+10-JUN-2024,Neutral-Grip Pull-Up,1,0,fun
+10-JUN-2024,Neutral-Grip Pull-Up,1,0,fun
 07-JUN-2024,Cable Lateral Lift,10,40,good
 07-JUN-2024,Cable Lateral Lift,10,40,good
 07-JUN-2024,Cable Lateral Lift,10,40,good
@@ -1664,10 +1666,10 @@ date,exercise,reps,weight(lbs),rating
 03-JUN-2024,Hammer Curl,12,35,good
 03-JUN-2024,Hammer Curl,8,40,good
 03-JUN-2024,Hammer Curl,10,40,bad
-03-JUN-2024,Overhead Tricep Extension,10,20,warm-up
-03-JUN-2024,Overhead Tricep Extension,12,35,good
-03-JUN-2024,Overhead Tricep Extension,8,40,good
-03-JUN-2024,Overhead Tricep Extension,8,40,good
+03-JUN-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+03-JUN-2024,Single-Arm Overhead Tricep Extension,12,35,good
+03-JUN-2024,Single-Arm Overhead Tricep Extension,8,40,good
+03-JUN-2024,Single-Arm Overhead Tricep Extension,8,40,good
 03-JUN-2024,Tricep Pushdown (V-Bar),10,100,warm-up
 03-JUN-2024,Tricep Pushdown (V-Bar),10,180,good
 03-JUN-2024,Tricep Pushdown (V-Bar),10,180,good
@@ -1740,10 +1742,10 @@ date,exercise,reps,weight(lbs),rating
 26-MAY-2024,Hammer Curl,10,35,good
 26-MAY-2024,Hammer Curl,12,35,good
 26-MAY-2024,Hammer Curl,10,40,good
-26-MAY-2024,Overhead Tricep Extension,10,25,warm-up
-26-MAY-2024,Overhead Tricep Extension,12,35,good
-26-MAY-2024,Overhead Tricep Extension,12,35,good
-26-MAY-2024,Overhead Tricep Extension,12,35,good
+26-MAY-2024,Single-Arm Overhead Tricep Extension,10,25,warm-up
+26-MAY-2024,Single-Arm Overhead Tricep Extension,12,35,good
+26-MAY-2024,Single-Arm Overhead Tricep Extension,12,35,good
+26-MAY-2024,Single-Arm Overhead Tricep Extension,12,35,good
 26-MAY-2024,Tricep Pushdown (V-Bar),10,100,warm-up
 26-MAY-2024,Tricep Pushdown (V-Bar),10,170,good
 26-MAY-2024,Tricep Pushdown (V-Bar),10,170,good
@@ -1764,7 +1766,7 @@ date,exercise,reps,weight(lbs),rating
 26-MAY-2024,Pullovers,10,65,good
 26-MAY-2024,Pullovers,10,65,good
 26-MAY-2024,Pullovers,10,65,good
-22-MAY-2024,Neutral-Grip Chin-Up,2,0,fun
+22-MAY-2024,Neutral-Grip Pull-Up,2,0,fun
 24-MAY-2024,Full Cans,20,10,good
 24-MAY-2024,Full Cans,20,10,good
 24-MAY-2024,Full Cans,20,10,good
@@ -1822,7 +1824,7 @@ date,exercise,reps,weight(lbs),rating
 19-MAY-2024,Parallel Bar Leg Raise,12,0,good
 19-MAY-2024,Hammer Curl,5,45,bad
 19-MAY-2024,Hammer Curl,5,40,good
-19-MAY-2024,Neutral-Grip Chin-Up,1,0,fun
+19-MAY-2024,Neutral-Grip Pull-Up,1,0,fun
 16-MAY-2024,Bicep Curl,10,20,warm-up
 16-MAY-2024,Bicep Curl,10,35,good
 16-MAY-2024,Bicep Curl,10,35,good
@@ -1831,10 +1833,10 @@ date,exercise,reps,weight(lbs),rating
 16-MAY-2024,Hammer Curl,10,35,good
 16-MAY-2024,Hammer Curl,10,35,good
 16-MAY-2024,Hammer Curl,10,35,good
-16-MAY-2024,Overhead Tricep Extension,10,20,warm-up
-16-MAY-2024,Overhead Tricep Extension,10,35,good
-16-MAY-2024,Overhead Tricep Extension,11,35,good
-16-MAY-2024,Overhead Tricep Extension,11,35,good
+16-MAY-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+16-MAY-2024,Single-Arm Overhead Tricep Extension,10,35,good
+16-MAY-2024,Single-Arm Overhead Tricep Extension,11,35,good
+16-MAY-2024,Single-Arm Overhead Tricep Extension,11,35,good
 16-MAY-2024,Tricep Pushdown (V-Bar),10,100,warm-up
 16-MAY-2024,Tricep Pushdown (V-Bar),10,170,good
 16-MAY-2024,Tricep Pushdown (V-Bar),10,170,good
@@ -1858,8 +1860,8 @@ date,exercise,reps,weight(lbs),rating
 14-MAY-2024,Upward Dumbbell Pec Flies,10,20,good
 14-MAY-2024,Upward Dumbbell Pec Flies,10,20,good
 14-MAY-2024,Upward Dumbbell Pec Flies,10,20,good
-14-MAY-2024,Neutral-Grip Chin-Up,2,0,good
-14-MAY-2024,Neutral-Grip Chin-Up,2,0,good
+14-MAY-2024,Neutral-Grip Pull-Up,2,0,good
+14-MAY-2024,Neutral-Grip Pull-Up,2,0,good
 14-MAY-2024,Chin-Up,1,0,good
 14-MAY-2024,Cable Lying Hip Flexors,10,35,warm-up
 14-MAY-2024,Cable Lying Hip Flexors,10,70,good
@@ -1947,10 +1949,10 @@ date,exercise,reps,weight(lbs),rating
 07-MAY-2024,Bicep Curl,10,35,good
 07-MAY-2024,Bicep Curl,10,35,good
 07-MAY-2024,Bicep Curl,10,35,good
-07-MAY-2024,Overhead Tricep Extension,10,20,warm-up
-07-MAY-2024,Overhead Tricep Extension,11,35,good
-07-MAY-2024,Overhead Tricep Extension,11,35,good
-07-MAY-2024,Overhead Tricep Extension,11,35,good
+07-MAY-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+07-MAY-2024,Single-Arm Overhead Tricep Extension,11,35,good
+07-MAY-2024,Single-Arm Overhead Tricep Extension,11,35,good
+07-MAY-2024,Single-Arm Overhead Tricep Extension,11,35,good
 05-MAY-2024,Axle Clean & Press,1,160,fun
 05-MAY-2024,Lateral Lift,10,15,warm-up
 05-MAY-2024,Lateral Lift,8,30,good
@@ -2021,10 +2023,10 @@ date,exercise,reps,weight(lbs),rating
 30-APR-2024,Hammer Curl,10,35,good
 30-APR-2024,Hammer Curl,10,35,good
 30-APR-2024,Hammer Curl,10,35,good
-30-APR-2024,Overhead Tricep Extension,10,20,warm-up
-30-APR-2024,Overhead Tricep Extension,8,35,good
-30-APR-2024,Overhead Tricep Extension,10,35,good
-30-APR-2024,Overhead Tricep Extension,10,35,good
+30-APR-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+30-APR-2024,Single-Arm Overhead Tricep Extension,8,35,good
+30-APR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+30-APR-2024,Single-Arm Overhead Tricep Extension,10,35,good
 30-APR-2024,Skullcrushers,10,52,warm-up
 30-APR-2024,Skullcrushers,10,72,good
 30-APR-2024,Skullcrushers,10,82,good
@@ -2095,10 +2097,10 @@ date,exercise,reps,weight(lbs),rating
 22-APR-2024,Hammer Curl,10,35,good
 22-APR-2024,Hammer Curl,10,35,good
 22-APR-2024,Hammer Curl,10,35,good
-22-APR-2024,Overhead Tricep Extension,10,20,warm-up
-22-APR-2024,Overhead Tricep Extension,10,35,good
-22-APR-2024,Overhead Tricep Extension,10,35,good
-22-APR-2024,Overhead Tricep Extension,10,35,good
+22-APR-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+22-APR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+22-APR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+22-APR-2024,Single-Arm Overhead Tricep Extension,10,35,good
 22-APR-2024,Skullcrushers,10,52,warm-up
 22-APR-2024,Skullcrushers,10,82,good
 22-APR-2024,Skullcrushers,8,82,good
@@ -2165,9 +2167,9 @@ date,exercise,reps,weight(lbs),rating
 16-APR-2024,Hammer Curl,10,20,deload
 16-APR-2024,Hammer Curl,10,20,deload
 16-APR-2024,Hammer Curl,10,20,deload
-16-APR-2024,Overhead Tricep Extension,10,20,deload
-16-APR-2024,Overhead Tricep Extension,10,20,deload
-16-APR-2024,Overhead Tricep Extension,10,20,deload
+16-APR-2024,Single-Arm Overhead Tricep Extension,10,20,deload
+16-APR-2024,Single-Arm Overhead Tricep Extension,10,20,deload
+16-APR-2024,Single-Arm Overhead Tricep Extension,10,20,deload
 16-APR-2024,Tricep Pushdown (V-Bar),10,100,deload
 16-APR-2024,Tricep Pushdown (V-Bar),10,100,deload
 16-APR-2024,Tricep Pushdown (V-Bar),10,100,deload
@@ -2236,10 +2238,10 @@ date,exercise,reps,weight(lbs),rating
 10-APR-2024,Bicep Curl,12,35,good
 10-APR-2024,Bicep Curl,10,35,good
 10-APR-2024,Bicep Curl,10,35,good
-10-APR-2024,Overhead Tricep Extension,20,15,warm-up
-10-APR-2024,Overhead Tricep Extension,12,35,good
-10-APR-2024,Overhead Tricep Extension,12,35,good
-10-APR-2024,Overhead Tricep Extension,12,35,good
+10-APR-2024,Single-Arm Overhead Tricep Extension,20,15,warm-up
+10-APR-2024,Single-Arm Overhead Tricep Extension,12,35,good
+10-APR-2024,Single-Arm Overhead Tricep Extension,12,35,good
+10-APR-2024,Single-Arm Overhead Tricep Extension,12,35,good
 10-APR-2024,Tricep Pushdown (V-Bar),10,100,warm-up
 10-APR-2024,Tricep Pushdown (V-Bar),10,160,good
 10-APR-2024,Tricep Pushdown (V-Bar),10,160,good
@@ -2329,10 +2331,10 @@ date,exercise,reps,weight(lbs),rating
 31-MAR-2024,Hammer Curl,10,35,good
 31-MAR-2024,Hammer Curl,10,35,good
 31-MAR-2024,Hammer Curl,10,35,good
-31-MAR-2024,Overhead Tricep Extension,10,20,warm-up
-31-MAR-2024,Overhead Tricep Extension,10,35,good
-31-MAR-2024,Overhead Tricep Extension,11,35,good
-31-MAR-2024,Overhead Tricep Extension,11,35,good
+31-MAR-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+31-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+31-MAR-2024,Single-Arm Overhead Tricep Extension,11,35,good
+31-MAR-2024,Single-Arm Overhead Tricep Extension,11,35,good
 31-MAR-2024,Tricep Pushdown (V-Bar),10,100,warm-up
 31-MAR-2024,Tricep Pushdown (V-Bar),12,160,good
 31-MAR-2024,Tricep Pushdown (V-Bar),10,160,good
@@ -2424,10 +2426,10 @@ date,exercise,reps,weight(lbs),rating
 25-MAR-2024,Hammer Curl,10,35,good
 25-MAR-2024,Hammer Curl,10,35,good
 25-MAR-2024,Hammer Curl,10,35,good
-25-MAR-2024,Overhead Tricep Extension,10,20,warm-up
-25-MAR-2024,Overhead Tricep Extension,10,35,good
-25-MAR-2024,Overhead Tricep Extension,10,35,good
-25-MAR-2024,Overhead Tricep Extension,10,35,good
+25-MAR-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+25-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+25-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+25-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
 25-MAR-2024,Tricep Pushdown (V-Bar),10,100,warm-up
 25-MAR-2024,Tricep Pushdown (V-Bar),10,160,good
 25-MAR-2024,Tricep Pushdown (V-Bar),12,160,good
@@ -2493,10 +2495,10 @@ date,exercise,reps,weight(lbs),rating
 18-MAR-2024,Hammer Curl,10,35,bad
 18-MAR-2024,Hammer Curl,10,35,bad
 18-MAR-2024,Hammer Curl,10,35,good
-18-MAR-2024,Overhead Tricep Extension,10,20,warm-up
-18-MAR-2024,Overhead Tricep Extension,10,35,good
-18-MAR-2024,Overhead Tricep Extension,10,35,good
-18-MAR-2024,Overhead Tricep Extension,10,35,good
+18-MAR-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+18-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+18-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+18-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
 18-MAR-2024,Skullcrushers,10,42,warm-up
 18-MAR-2024,Skullcrushers,10,72,easy
 18-MAR-2024,Skullcrushers,8,82,good
@@ -2593,10 +2595,10 @@ date,exercise,reps,weight(lbs),rating
 12-MAR-2024,Preacher Curl,8,62,good
 12-MAR-2024,Preacher Curl,8,62,good
 12-MAR-2024,Preacher Curl,10,52,good
-12-MAR-2024,Overhead Tricep Extension,10,20,warm-up
-12-MAR-2024,Overhead Tricep Extension,10,35,good
-12-MAR-2024,Overhead Tricep Extension,10,35,good
-12-MAR-2024,Overhead Tricep Extension,8,40,good
+12-MAR-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+12-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+12-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+12-MAR-2024,Single-Arm Overhead Tricep Extension,8,40,good
 12-MAR-2024,Tricep Pushdown (V-Bar),10,90,warm-up
 12-MAR-2024,Tricep Pushdown (V-Bar),10,160,good
 12-MAR-2024,Tricep Pushdown (V-Bar),10,160,good
@@ -2689,10 +2691,10 @@ date,exercise,reps,weight(lbs),rating
 05-MAR-2024,Concentration Curl,10,30,good
 05-MAR-2024,Concentration Curl,10,30,good
 05-MAR-2024,Concentration Curl,10,30,good
-05-MAR-2024,Overhead Tricep Extension,10,10,warm-up
-05-MAR-2024,Overhead Tricep Extension,10,35,good
-05-MAR-2024,Overhead Tricep Extension,10,35,good
-05-MAR-2024,Overhead Tricep Extension,10,35,good
+05-MAR-2024,Single-Arm Overhead Tricep Extension,10,10,warm-up
+05-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+05-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
+05-MAR-2024,Single-Arm Overhead Tricep Extension,10,35,good
 05-MAR-2024,Tricep Pushdown (V-Bar),10,90,warm-up
 05-MAR-2024,Tricep Pushdown (V-Bar),10,160,good
 05-MAR-2024,Tricep Pushdown (V-Bar),10,160,good
@@ -2898,10 +2900,10 @@ date,exercise,reps,weight(lbs),rating
 18-FEB-2024,Hammer Curl,10,35,good
 18-FEB-2024,Hammer Curl,10,35,good
 18-FEB-2024,Hammer Curl,10,35,good
-18-FEB-2024,Overhead Tricep Extension,10,20,warm-up
-18-FEB-2024,Overhead Tricep Extension,10,35,good
-18-FEB-2024,Overhead Tricep Extension,10,35,good
-18-FEB-2024,Overhead Tricep Extension,10,35,good
+18-FEB-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+18-FEB-2024,Single-Arm Overhead Tricep Extension,10,35,good
+18-FEB-2024,Single-Arm Overhead Tricep Extension,10,35,good
+18-FEB-2024,Single-Arm Overhead Tricep Extension,10,35,good
 18-FEB-2024,Skullcrushers,10,35,warm-up
 18-FEB-2024,Skullcrushers,10,65,good
 18-FEB-2024,Skullcrushers,8,75,good
@@ -2970,10 +2972,10 @@ date,exercise,reps,weight(lbs),rating
 11-FEB-2024,Concentration Curl,8,30,good
 11-FEB-2024,Concentration Curl,10,30,good
 11-FEB-2024,Concentration Curl,10,30,good
-11-FEB-2024,Overhead Tricep Extension,10,20,warm-up
-11-FEB-2024,Overhead Tricep Extension,10,35,good
-11-FEB-2024,Overhead Tricep Extension,10,35,good
-11-FEB-2024,Overhead Tricep Extension,10,35,good
+11-FEB-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+11-FEB-2024,Single-Arm Overhead Tricep Extension,10,35,good
+11-FEB-2024,Single-Arm Overhead Tricep Extension,10,35,good
+11-FEB-2024,Single-Arm Overhead Tricep Extension,10,35,good
 11-FEB-2024,Tricep Pushdown (V-Bar),10,90,warm-up
 11-FEB-2024,Tricep Pushdown (V-Bar),10,160,good
 11-FEB-2024,Tricep Pushdown (V-Bar),10,160,good
@@ -3110,10 +3112,10 @@ date,exercise,reps,weight(lbs),rating
 30-JAN-2024,Hammer Curl,12,30,good
 30-JAN-2024,Hammer Curl,12,30,good
 30-JAN-2024,Hammer Curl,12,30,good
-30-JAN-2024,Overhead Tricep Extension,10,20,warm-up
-30-JAN-2024,Overhead Tricep Extension,10,35,good
-30-JAN-2024,Overhead Tricep Extension,10,35,good
-30-JAN-2024,Overhead Tricep Extension,10,35,good
+30-JAN-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+30-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,good
+30-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,good
+30-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,good
 30-JAN-2024,Tricep Pushdown (V-Bar),10,90,warm-up
 30-JAN-2024,Tricep Pushdown (V-Bar),10,160,good
 30-JAN-2024,Tricep Pushdown (V-Bar),10,160,good
@@ -3204,10 +3206,10 @@ date,exercise,reps,weight(lbs),rating
 24-JAN-2024,Concentration Curl,8,30,good
 24-JAN-2024,Concentration Curl,8,30,good
 24-JAN-2024,Concentration Curl,8,30,good
-24-JAN-2024,Overhead Tricep Extension,10,20,warm-up
-24-JAN-2024,Overhead Tricep Extension,10,35,good
-24-JAN-2024,Overhead Tricep Extension,8,35,bad
-24-JAN-2024,Overhead Tricep Extension,10,35,bad
+24-JAN-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+24-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,good
+24-JAN-2024,Single-Arm Overhead Tricep Extension,8,35,bad
+24-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,bad
 24-JAN-2024,Tricep Pushdown (V-Bar),10,90,warm-up
 24-JAN-2024,Tricep Pushdown (V-Bar),10,160,good
 24-JAN-2024,Tricep Pushdown (V-Bar),10,160,good
@@ -3289,9 +3291,9 @@ date,exercise,reps,weight(lbs),rating
 18-JAN-2024,Hammer Curl,10,20,deload
 18-JAN-2024,Hammer Curl,10,20,deload
 18-JAN-2024,Hammer Curl,10,20,deload
-18-JAN-2024,Overhead Tricep Extension,10,20,deload
-18-JAN-2024,Overhead Tricep Extension,10,20,deload
-18-JAN-2024,Overhead Tricep Extension,10,20,deload
+18-JAN-2024,Single-Arm Overhead Tricep Extension,10,20,deload
+18-JAN-2024,Single-Arm Overhead Tricep Extension,10,20,deload
+18-JAN-2024,Single-Arm Overhead Tricep Extension,10,20,deload
 18-JAN-2024,Tricep Pushdown (V-Bar),10,90,deload
 18-JAN-2024,Tricep Pushdown (V-Bar),10,90,deload
 18-JAN-2024,Tricep Pushdown (V-Bar),10,90,deload
@@ -3378,10 +3380,10 @@ date,exercise,reps,weight(lbs),rating
 12-JAN-2024,Concentration Curl,8,30,good
 12-JAN-2024,Concentration Curl,8,30,good
 12-JAN-2024,Concentration Curl,8,30,good
-12-JAN-2024,Overhead Tricep Extension,10,20,warm-up
-12-JAN-2024,Overhead Tricep Extension,10,35,good
-12-JAN-2024,Overhead Tricep Extension,10,35,good
-12-JAN-2024,Overhead Tricep Extension,10,35,good
+12-JAN-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+12-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,good
+12-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,good
+12-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,good
 12-JAN-2024,Tricep Pushdown (V-Bar),10,90,warm-up
 12-JAN-2024,Tricep Pushdown (V-Bar),10,160,good
 12-JAN-2024,Tricep Pushdown (V-Bar),10,150,good
@@ -3473,10 +3475,10 @@ date,exercise,reps,weight(lbs),rating
 05-JAN-2024,Concentration Curl,8,30,good
 05-JAN-2024,Concentration Curl,8,30,good
 05-JAN-2024,Concentration Curl,8,30,good
-05-JAN-2024,Overhead Tricep Extension,10,20,warm-up
-05-JAN-2024,Overhead Tricep Extension,10,35,good
-05-JAN-2024,Overhead Tricep Extension,10,35,good
-05-JAN-2024,Overhead Tricep Extension,10,35,good
+05-JAN-2024,Single-Arm Overhead Tricep Extension,10,20,warm-up
+05-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,good
+05-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,good
+05-JAN-2024,Single-Arm Overhead Tricep Extension,10,35,good
 05-JAN-2024,Tricep Pushdown,10,42.5,warm-up
 05-JAN-2024,Tricep Pushdown,10,52.5,good
 05-JAN-2024,Tricep Pushdown,10,54.5,good
@@ -3572,10 +3574,10 @@ date,exercise,reps,weight(lbs),rating
 29-DEC-2023,Concentration Curl,8,30,good
 29-DEC-2023,Concentration Curl,8,30,good
 29-DEC-2023,Concentration Curl,8,30,good
-29-DEC-2023,Overhead Tricep Extension,10,20,warm-up
-29-DEC-2023,Overhead Tricep Extension,10,35,good
-29-DEC-2023,Overhead Tricep Extension,10,35,good
-29-DEC-2023,Overhead Tricep Extension,10,35,good
+29-DEC-2023,Single-Arm Overhead Tricep Extension,10,20,warm-up
+29-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+29-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+29-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
 29-DEC-2023,Tricep Pushdown,10,32.5,warm-up
 29-DEC-2023,Tricep Pushdown,10,52.5,good
 29-DEC-2023,Tricep Pushdown,10,52.5,good
@@ -3649,10 +3651,10 @@ date,exercise,reps,weight(lbs),rating
 22-DEC-2023,Concentration Curl,8,30,good
 22-DEC-2023,Concentration Curl,8,30,good
 22-DEC-2023,Concentration Curl,8,30,good
-22-DEC-2023,Overhead Tricep Extension,10,15,warm-up
-22-DEC-2023,Overhead Tricep Extension,10,35,good
-22-DEC-2023,Overhead Tricep Extension,10,35,good
-22-DEC-2023,Overhead Tricep Extension,10,35,good
+22-DEC-2023,Single-Arm Overhead Tricep Extension,10,15,warm-up
+22-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+22-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+22-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
 22-DEC-2023,Tricep Pushdown,15,42.5,good
 22-DEC-2023,Tricep Pushdown,10,52.5,good
 22-DEC-2023,Tricep Pushdown,10,52.5,good
@@ -3733,10 +3735,10 @@ date,exercise,reps,weight(lbs),rating
 14-DEC-2023,Concentration Curl,8,30,good
 14-DEC-2023,Concentration Curl,8,30,good
 14-DEC-2023,Concentration Curl,8,30,good
-14-DEC-2023,Overhead Tricep Extension,10,35,good
-14-DEC-2023,Overhead Tricep Extension,10,35,good
-14-DEC-2023,Overhead Tricep Extension,10,35,good
-14-DEC-2023,Overhead Tricep Extension,7,40,good
+14-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+14-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+14-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+14-DEC-2023,Single-Arm Overhead Tricep Extension,7,40,good
 14-DEC-2023,Tricep Pushdown (V-Bar),10,90,warm-up
 14-DEC-2023,Tricep Pushdown (V-Bar),10,160,good
 14-DEC-2023,Tricep Pushdown (V-Bar),10,150,good
@@ -3841,10 +3843,10 @@ date,exercise,reps,weight(lbs),rating
 08-DEC-2023,Wide-Grip Pull-Up,10,-90,good
 08-DEC-2023,Wide-Grip Pull-Up,10,-90,good
 08-DEC-2023,Wide-Grip Pull-Up,12,-100,good
-08-DEC-2023,Overhead Tricep Extension,12,30,warm-up
-08-DEC-2023,Overhead Tricep Extension,10,35,good
-08-DEC-2023,Overhead Tricep Extension,10,35,good
-08-DEC-2023,Overhead Tricep Extension,10,35,good
+08-DEC-2023,Single-Arm Overhead Tricep Extension,12,30,warm-up
+08-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+08-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+08-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
 08-DEC-2023,Cable Lying Hip Flexors,10,30,warm-up
 08-DEC-2023,Cable Lying Hip Flexors,12,55,good
 08-DEC-2023,Cable Lying Hip Flexors,12,55,good
@@ -3921,10 +3923,10 @@ date,exercise,reps,weight(lbs),rating
 03-DEC-2023,Skullcrushers,10,72,good
 03-DEC-2023,Skullcrushers,10,77,good
 03-DEC-2023,Skullcrushers,8,82,failure
-03-DEC-2023,Overhead Tricep Extension,10,20,warm-up
-03-DEC-2023,Overhead Tricep Extension,10,35,good
-03-DEC-2023,Overhead Tricep Extension,10,35,good
-03-DEC-2023,Overhead Tricep Extension,10,35,good
+03-DEC-2023,Single-Arm Overhead Tricep Extension,10,20,warm-up
+03-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+03-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
+03-DEC-2023,Single-Arm Overhead Tricep Extension,10,35,good
 03-DEC-2023,Concentration Curl,8,30,good
 03-DEC-2023,Concentration Curl,8,30,good
 03-DEC-2023,Concentration Curl,8,30,good
@@ -3932,8 +3934,8 @@ date,exercise,reps,weight(lbs),rating
 02-DEC-2023,Bicep Curl,12,30,good
 02-DEC-2023,Bicep Curl,12,30,good
 02-DEC-2023,Bicep Curl,12,30,good
-02-DEC-2023,Overhead Tricep Extension,10,15,warm-up
-02-DEC-2023,Overhead Tricep Extension,8,35,good
+02-DEC-2023,Single-Arm Overhead Tricep Extension,10,15,warm-up
+02-DEC-2023,Single-Arm Overhead Tricep Extension,8,35,good
 02-DEC-2023,Tricep Pushdown (V-Bar),10,70,warm-up
 02-DEC-2023,Tricep Pushdown (V-Bar),10,150,good
 02-DEC-2023,Tricep Pushdown (V-Bar),10,150,good
@@ -4025,10 +4027,10 @@ date,exercise,reps,weight(lbs),rating
 26-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
 26-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
 26-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
-26-NOV-2023,Overhead Tricep Extension,10,20,warm-up
-26-NOV-2023,Overhead Tricep Extension,10,35,failure (L)
-26-NOV-2023,Overhead Tricep Extension,10,35,good
-26-NOV-2023,Overhead Tricep Extension,10,35,good
+26-NOV-2023,Single-Arm Overhead Tricep Extension,10,20,warm-up
+26-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,failure (L)
+26-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
+26-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
 26-NOV-2023,Concentration Curl,8,30,good
 26-NOV-2023,Concentration Curl,8,30,good
 26-NOV-2023,Concentration Curl,8,30,good
@@ -4104,10 +4106,10 @@ date,exercise,reps,weight(lbs),rating
 20-NOV-2023,Concentration Curl,8,30,good
 20-NOV-2023,Concentration Curl,12,25,good
 20-NOV-2023,Concentration Curl,12,25,good
-20-NOV-2023,Overhead Tricep Extension,10,20,warm-up
-20-NOV-2023,Overhead Tricep Extension,10,35,good
-20-NOV-2023,Overhead Tricep Extension,10,35,good
-20-NOV-2023,Overhead Tricep Extension,10,35,good
+20-NOV-2023,Single-Arm Overhead Tricep Extension,10,20,warm-up
+20-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
+20-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
+20-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
 20-NOV-2023,Tricep Pushdown (V-Bar),10,80,warm-up
 20-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
 20-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
@@ -4211,10 +4213,10 @@ date,exercise,reps,weight(lbs),rating
 14-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
 14-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
 14-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
-14-NOV-2023,Overhead Tricep Extension,10,20,warm-up
-14-NOV-2023,Overhead Tricep Extension,10,35,good
-14-NOV-2023,Overhead Tricep Extension,10,35,good
-14-NOV-2023,Overhead Tricep Extension,10,35,good
+14-NOV-2023,Single-Arm Overhead Tricep Extension,10,20,warm-up
+14-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
+14-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
+14-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
 14-NOV-2023,Concentration Curl,12,25,good
 14-NOV-2023,Concentration Curl,12,25,good
 14-NOV-2023,Concentration Curl,12,25,good
@@ -4309,9 +4311,9 @@ date,exercise,reps,weight(lbs),rating
 07-NOV-2023,Bicep Curl,12,30,good
 07-NOV-2023,Bicep Curl,12,30,good
 07-NOV-2023,Preacher Curl,8,62,good
-07-NOV-2023,Overhead Tricep Extension,10,35,good
-07-NOV-2023,Overhead Tricep Extension,10,35,good
-07-NOV-2023,Overhead Tricep Extension,10,35,failure (L)
+07-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
+07-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
+07-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,failure (L)
 07-NOV-2023,Tricep Pushdown (V-Bar),10,80,warm-up
 07-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
 07-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
@@ -4420,12 +4422,12 @@ date,exercise,reps,weight(lbs),rating
 01-NOV-2023,Tricep Pushdown (V-Bar),10,80,warm-up
 01-NOV-2023,Tricep Pushdown (V-Bar),12,140,good
 01-NOV-2023,Tricep Pushdown (V-Bar),10,150,good
-01-NOV-2023,Overhead Tricep Extension,5,20,warm-up
-01-NOV-2023,Overhead Tricep Extension,5,40,good
-01-NOV-2023,Overhead Tricep Extension,10,25,warm-up
-01-NOV-2023,Overhead Tricep Extension,10,35,good
-01-NOV-2023,Overhead Tricep Extension,10,35,good
-01-NOV-2023,Overhead Tricep Extension,10,35,good
+01-NOV-2023,Single-Arm Overhead Tricep Extension,5,20,warm-up
+01-NOV-2023,Single-Arm Overhead Tricep Extension,5,40,good
+01-NOV-2023,Single-Arm Overhead Tricep Extension,10,25,warm-up
+01-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
+01-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
+01-NOV-2023,Single-Arm Overhead Tricep Extension,10,35,good
 01-NOV-2023,Concentration Curl,12,25,good
 01-NOV-2023,Concentration Curl,12,25,good
 01-NOV-2023,Concentration Curl,12,25,good
@@ -4507,10 +4509,10 @@ date,exercise,reps,weight(lbs),rating
 26-OCT-2023,Concentration Curl,12,25,good
 26-OCT-2023,Concentration Curl,12,25,good
 26-OCT-2023,Concentration Curl,12,25,good
-26-OCT-2023,Overhead Tricep Extension,5,40,good
-26-OCT-2023,Overhead Tricep Extension,10,35,good
-26-OCT-2023,Overhead Tricep Extension,5,40,good
-26-OCT-2023,Overhead Tricep Extension,10,35,good
+26-OCT-2023,Single-Arm Overhead Tricep Extension,5,40,good
+26-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
+26-OCT-2023,Single-Arm Overhead Tricep Extension,5,40,good
+26-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
 26-OCT-2023,Tricep Pushdown (V-Bar),10,140,good
 26-OCT-2023,Tricep Pushdown (V-Bar),12,140,good
 26-OCT-2023,Tricep Pushdown (V-Bar),12,140,good
@@ -4592,10 +4594,10 @@ date,exercise,reps,weight(lbs),rating
 20-OCT-2023,Concentration Curl,12,25,good
 20-OCT-2023,Concentration Curl,12,25,good
 20-OCT-2023,Concentration Curl,12,25,good
-20-OCT-2023,Overhead Tricep Extension,10,15,warm-up
-20-OCT-2023,Overhead Tricep Extension,10,35,good
-20-OCT-2023,Overhead Tricep Extension,10,35,good
-20-OCT-2023,Overhead Tricep Extension,10,35,good
+20-OCT-2023,Single-Arm Overhead Tricep Extension,10,15,warm-up
+20-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
+20-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
+20-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
 20-OCT-2023,Tricep Pushdown (V-Bar),10,80,warm-up
 20-OCT-2023,Tricep Pushdown (V-Bar),12,140,good
 20-OCT-2023,Tricep Pushdown (V-Bar),12,140,good
@@ -4683,10 +4685,10 @@ date,exercise,reps,weight(lbs),rating
 14-OCT-2023,Concentration Curl,12,25,good
 14-OCT-2023,Concentration Curl,12,25,good
 14-OCT-2023,Concentration Curl,12,25,good
-14-OCT-2023,Overhead Tricep Extension,12,20,warm-up
-14-OCT-2023,Overhead Tricep Extension,10,35,good
-14-OCT-2023,Overhead Tricep Extension,10,35,good
-14-OCT-2023,Overhead Tricep Extension,10,35,good
+14-OCT-2023,Single-Arm Overhead Tricep Extension,12,20,warm-up
+14-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
+14-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
+14-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
 14-OCT-2023,Tricep Pushdown (V-Bar),10,80,warm-up
 14-OCT-2023,Tricep Pushdown (V-Bar),10,130,easy
 14-OCT-2023,Tricep Pushdown (V-Bar),10,140,good
@@ -4777,10 +4779,10 @@ date,exercise,reps,weight(lbs),rating
 08-OCT-2023,Concentration Curl,12,25,good
 08-OCT-2023,Concentration Curl,12,25,good
 08-OCT-2023,Concentration Curl,12,25,good
-08-OCT-2023,Overhead Tricep Extension,5,20,warm-up
-08-OCT-2023,Overhead Tricep Extension,10,35,good
-08-OCT-2023,Overhead Tricep Extension,10,35,good
-08-OCT-2023,Overhead Tricep Extension,10,35,good
+08-OCT-2023,Single-Arm Overhead Tricep Extension,5,20,warm-up
+08-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
+08-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
+08-OCT-2023,Single-Arm Overhead Tricep Extension,10,35,good
 08-OCT-2023,Tricep Pushdown (V-Bar),10,80,warm-up
 08-OCT-2023,Tricep Pushdown (V-Bar),10,130,good
 08-OCT-2023,Tricep Pushdown (V-Bar),10,130,good
@@ -4940,9 +4942,9 @@ date,exercise,reps,weight(lbs),rating
 25-SEP-2023,Concentration Curl,12,25,good
 25-SEP-2023,Concentration Curl,10,25,good
 25-SEP-2023,Concentration Curl,10,25,bad
-25-SEP-2023,Overhead Tricep Extension,10,35,good
-25-SEP-2023,Overhead Tricep Extension,10,35,good
-25-SEP-2023,Overhead Tricep Extension,10,35,failure (L)
+25-SEP-2023,Single-Arm Overhead Tricep Extension,10,35,good
+25-SEP-2023,Single-Arm Overhead Tricep Extension,10,35,good
+25-SEP-2023,Single-Arm Overhead Tricep Extension,10,35,failure (L)
 25-SEP-2023,Tricep Pushdown,10,80,warm-up
 25-SEP-2023,Tricep Pushdown,10,130,good
 25-SEP-2023,Tricep Pushdown,10,130,good
@@ -5030,9 +5032,9 @@ date,exercise,reps,weight(lbs),rating
 18-SEP-2023,Concentration Curl,12,20,good
 18-SEP-2023,Concentration Curl,12,20,good
 18-SEP-2023,Concentration Curl,12,20,good
-18-SEP-2023,Overhead Tricep Extension,10,35,good
-18-SEP-2023,Overhead Tricep Extension,10,35,good
-18-SEP-2023,Overhead Tricep Extension,10,35,failure (L)
+18-SEP-2023,Single-Arm Overhead Tricep Extension,10,35,good
+18-SEP-2023,Single-Arm Overhead Tricep Extension,10,35,good
+18-SEP-2023,Single-Arm Overhead Tricep Extension,10,35,failure (L)
 18-SEP-2023,Skullcrushers,10,82,good
 18-SEP-2023,Lawnmowers,10,65,good
 18-SEP-2023,Lawnmowers,10,65,good
@@ -5105,9 +5107,9 @@ date,exercise,reps,weight(lbs),rating
 10-SEP-2023,Hammer Curl,15,25,good
 10-SEP-2023,Hammer Curl,15,25,good
 10-SEP-2023,Hammer Curl,15,25,good
-10-SEP-2023,Overhead Tricep Extension,8,35,good
-10-SEP-2023,Overhead Tricep Extension,8,35,good
-10-SEP-2023,Overhead Tricep Extension,8,35,good
+10-SEP-2023,Single-Arm Overhead Tricep Extension,8,35,good
+10-SEP-2023,Single-Arm Overhead Tricep Extension,8,35,good
+10-SEP-2023,Single-Arm Overhead Tricep Extension,8,35,good
 10-SEP-2023,Tricep Pushdown,5,42.5,warm-up
 10-SEP-2023,Tricep Pushdown,10,57.5,good
 10-SEP-2023,Tricep Pushdown,10,57.5,good
@@ -5166,10 +5168,10 @@ date,exercise,reps,weight(lbs),rating
 04-SEP-2023,Hammer Curl,15,25,good
 04-SEP-2023,Hammer Curl,15,25,good
 04-SEP-2023,Hammer Curl,15,25,good
-04-SEP-2023,Overhead Tricep Extension,5,20,warm-up
-04-SEP-2023,Overhead Tricep Extension,10,35,good
-04-SEP-2023,Overhead Tricep Extension,8,35,good
-04-SEP-2023,Overhead Tricep Extension,8,35,good
+04-SEP-2023,Single-Arm Overhead Tricep Extension,5,20,warm-up
+04-SEP-2023,Single-Arm Overhead Tricep Extension,10,35,good
+04-SEP-2023,Single-Arm Overhead Tricep Extension,8,35,good
+04-SEP-2023,Single-Arm Overhead Tricep Extension,8,35,good
 04-SEP-2023,Tricep Pushdown,10,52.5,good
 04-SEP-2023,Tricep Pushdown,10,57.5,good
 04-SEP-2023,Tricep Pushdown,10,52.5,good
@@ -5267,8 +5269,8 @@ date,exercise,reps,weight(lbs),rating
 27-AUG-2023,Hammer Curl,10,20,deload
 27-AUG-2023,Concentration Curl,10,15,deload
 27-AUG-2023,Concentration Curl,10,15,deload
-27-AUG-2023,Overhead Tricep Extension,10,20,deload
-27-AUG-2023,Overhead Tricep Extension,10,20,deload
+27-AUG-2023,Single-Arm Overhead Tricep Extension,10,20,deload
+27-AUG-2023,Single-Arm Overhead Tricep Extension,10,20,deload
 27-AUG-2023,Tricep Pushdown,10,80,deload
 27-AUG-2023,Tricep Pushdown,10,80,deload
 27-AUG-2023,Skullcrushers,10,52,deload
@@ -5351,10 +5353,10 @@ date,exercise,reps,weight(lbs),rating
 20-AUG-2023,Concentration Curl,20,20,bad
 20-AUG-2023,Concentration Curl,15,20,bad
 20-AUG-2023,Concentration Curl,15,20,bad
-20-AUG-2023,Overhead Tricep Extension,5,20,warm-up
-20-AUG-2023,Overhead Tricep Extension,8,35,good
-20-AUG-2023,Overhead Tricep Extension,20,25,good
-20-AUG-2023,Overhead Tricep Extension,15,25,good
+20-AUG-2023,Single-Arm Overhead Tricep Extension,5,20,warm-up
+20-AUG-2023,Single-Arm Overhead Tricep Extension,8,35,good
+20-AUG-2023,Single-Arm Overhead Tricep Extension,20,25,good
+20-AUG-2023,Single-Arm Overhead Tricep Extension,15,25,good
 20-AUG-2023,Tricep Pushdown,5,70,warm-up
 20-AUG-2023,Tricep Pushdown,10,130,bad
 20-AUG-2023,Skullcrushers,15,72,good
@@ -5459,10 +5461,10 @@ date,exercise,reps,weight(lbs),rating
 12-AUG-2023,Concentration Curl,12,25,good
 12-AUG-2023,Concentration Curl,12,25,good
 12-AUG-2023,Concentration Curl,12,25,good
-12-AUG-2023,Overhead Tricep Extension,5,20,warm-up
-12-AUG-2023,Overhead Tricep Extension,8,35,good
-12-AUG-2023,Overhead Tricep Extension,8,35,good
-12-AUG-2023,Overhead Tricep Extension,10,35,good
+12-AUG-2023,Single-Arm Overhead Tricep Extension,5,20,warm-up
+12-AUG-2023,Single-Arm Overhead Tricep Extension,8,35,good
+12-AUG-2023,Single-Arm Overhead Tricep Extension,8,35,good
+12-AUG-2023,Single-Arm Overhead Tricep Extension,10,35,good
 12-AUG-2023,Tricep Pushdown,5,70,warm-up
 12-AUG-2023,Tricep Pushdown,10,130,good
 12-AUG-2023,Tricep Pushdown,10,130,good
@@ -5547,9 +5549,9 @@ date,exercise,reps,weight(lbs),rating
 06-AUG-2023,Concentration Curl,12,25,good
 06-AUG-2023,Concentration Curl,12,25,good
 06-AUG-2023,Concentration Curl,12,25,good
-06-AUG-2023,Overhead Tricep Extension,10,35,good
-06-AUG-2023,Overhead Tricep Extension,10,35,failure (L)
-06-AUG-2023,Overhead Tricep Extension,8,35,good
+06-AUG-2023,Single-Arm Overhead Tricep Extension,10,35,good
+06-AUG-2023,Single-Arm Overhead Tricep Extension,10,35,failure (L)
+06-AUG-2023,Single-Arm Overhead Tricep Extension,8,35,good
 06-AUG-2023,Tricep Pushdown,8,140,good
 06-AUG-2023,Tricep Pushdown,8,140,good
 06-AUG-2023,Tricep Pushdown,10,130,good
@@ -5652,9 +5654,9 @@ date,exercise,reps,weight(lbs),rating
 30-JUL-2023,Concentration Curl,10,25,good
 30-JUL-2023,Concentration Curl,10,25,good
 30-JUL-2023,Concentration Curl,10,25,good
-30-JUL-2023,Overhead Tricep Extension,8,35,good
-30-JUL-2023,Overhead Tricep Extension,8,35,good
-30-JUL-2023,Overhead Tricep Extension,8,35,good
+30-JUL-2023,Single-Arm Overhead Tricep Extension,8,35,good
+30-JUL-2023,Single-Arm Overhead Tricep Extension,8,35,good
+30-JUL-2023,Single-Arm Overhead Tricep Extension,8,35,good
 30-JUL-2023,Tricep Pushdown,10,130,good
 30-JUL-2023,Tricep Pushdown,8,140,good
 30-JUL-2023,Tricep Pushdown,10,130,bad
@@ -5754,9 +5756,9 @@ date,exercise,reps,weight(lbs),rating
 24-JUL-2023,Hammer Curl,8,35,good
 24-JUL-2023,Hammer Curl,12,30,good
 24-JUL-2023,Hammer Curl,12,30,good
-24-JUL-2023,Overhead Tricep Extension,8,35,good
-24-JUL-2023,Overhead Tricep Extension,12,30,good
-24-JUL-2023,Overhead Tricep Extension,12,30,good
+24-JUL-2023,Single-Arm Overhead Tricep Extension,8,35,good
+24-JUL-2023,Single-Arm Overhead Tricep Extension,12,30,good
+24-JUL-2023,Single-Arm Overhead Tricep Extension,12,30,good
 24-JUL-2023,Tricep Pushdown,8,140,good
 24-JUL-2023,Tricep Pushdown,12,130,good
 24-JUL-2023,Tricep Pushdown,10,130,bad
@@ -5830,9 +5832,9 @@ date,exercise,reps,weight(lbs),rating
 18-JUL-2023,Concentration Curl,10,25,good
 18-JUL-2023,Concentration Curl,10,25,good
 18-JUL-2023,Concentration Curl,10,25,good
-18-JUL-2023,Overhead Tricep Extension,8,35,good
-18-JUL-2023,Overhead Tricep Extension,8,35,good
-18-JUL-2023,Overhead Tricep Extension,8,35,good
+18-JUL-2023,Single-Arm Overhead Tricep Extension,8,35,good
+18-JUL-2023,Single-Arm Overhead Tricep Extension,8,35,good
+18-JUL-2023,Single-Arm Overhead Tricep Extension,8,35,good
 18-JUL-2023,Tricep Pushdown,10,130,good
 18-JUL-2023,Tricep Pushdown,10,130,good
 18-JUL-2023,Tricep Pushdown,10,130,good
@@ -5915,9 +5917,9 @@ date,exercise,reps,weight(lbs),rating
 13-JUL-2023,Concentration Curl,10,25,good
 13-JUL-2023,Concentration Curl,10,25,good
 13-JUL-2023,Concentration Curl,10,25,good
-13-JUL-2023,Overhead Tricep Extension,8,35,good
-13-JUL-2023,Overhead Tricep Extension,8,35,good
-13-JUL-2023,Overhead Tricep Extension,8,35,good
+13-JUL-2023,Single-Arm Overhead Tricep Extension,8,35,good
+13-JUL-2023,Single-Arm Overhead Tricep Extension,8,35,good
+13-JUL-2023,Single-Arm Overhead Tricep Extension,8,35,good
 13-JUL-2023,Tricep Pushdown,12,130,good
 13-JUL-2023,Tricep Pushdown,10,130,good
 13-JUL-2023,Tricep Pushdown,10,130,good
@@ -5994,9 +5996,9 @@ date,exercise,reps,weight(lbs),rating
 08-JUL-2023,Preacher Curl,10,62,good
 08-JUL-2023,Preacher Curl,10,62,good
 08-JUL-2023,Preacher Curl,10,62,bad
-08-JUL-2023,Overhead Tricep Extension,10,30,good
-08-JUL-2023,Overhead Tricep Extension,10,30,good
-08-JUL-2023,Overhead Tricep Extension,10,30,good
+08-JUL-2023,Single-Arm Overhead Tricep Extension,10,30,good
+08-JUL-2023,Single-Arm Overhead Tricep Extension,10,30,good
+08-JUL-2023,Single-Arm Overhead Tricep Extension,10,30,good
 08-JUL-2023,Tricep Pushdown,10,130,good
 08-JUL-2023,Tricep Pushdown,10,130,good
 08-JUL-2023,Tricep Pushdown,10,130,good
@@ -6088,9 +6090,9 @@ date,exercise,reps,weight(lbs),rating
 27-JUN-2023,Bench Press,1,285,good
 27-JUN-2023,Bench Press,2,225,warm-up
 27-JUN-2023,Bench Press,5,135,warm-up
-27-JUN-2023,Overhead Tricep Extension,10,30,good
-27-JUN-2023,Overhead Tricep Extension,10,30,good
-27-JUN-2023,Overhead Tricep Extension,10,30,good
+27-JUN-2023,Single-Arm Overhead Tricep Extension,10,30,good
+27-JUN-2023,Single-Arm Overhead Tricep Extension,10,30,good
+27-JUN-2023,Single-Arm Overhead Tricep Extension,10,30,good
 27-JUN-2023,Bicep Curl,10,30,good
 27-JUN-2023,Bicep Curl,10,30,good
 27-JUN-2023,Bicep Curl,10,30,good
@@ -6115,9 +6117,9 @@ date,exercise,reps,weight(lbs),rating
 19-JUN-2023,Leg Press,20,190,good
 19-JUN-2023,Leg Press,20,190,good
 19-JUN-2023,Leg Press,20,190,good
-19-JUN-2023,Barbell Calf Raise,20,175,good
-19-JUN-2023,Barbell Calf Raise,20,175,good
-19-JUN-2023,Barbell Calf Raise,20,175,good
+19-JUN-2023,Seated Barbell Calf Raise,20,175,good
+19-JUN-2023,Seated Barbell Calf Raise,20,175,good
+19-JUN-2023,Seated Barbell Calf Raise,20,175,good
 19-JUN-2023,Concentration Curl,10,25,good
 19-JUN-2023,Concentration Curl,10,25,good
 19-JUN-2023,Concentration Curl,10,25,good
@@ -6127,11 +6129,11 @@ date,exercise,reps,weight(lbs),rating
 19-JUN-2023,Plank,60,0,good
 19-JUN-2023,Plank,60,0,good
 19-JUN-2023,Plank,60,0,good
-19-JUN-2023,Overhead Tricep Extension,5,35,good
-19-JUN-2023,Overhead Tricep Extension,5,35,good
-19-JUN-2023,Overhead Tricep Extension,5,35,good
-19-JUN-2023,Overhead Tricep Extension,5,35,good
-19-JUN-2023,Overhead Tricep Extension,5,35,good
+19-JUN-2023,Single-Arm Overhead Tricep Extension,5,35,good
+19-JUN-2023,Single-Arm Overhead Tricep Extension,5,35,good
+19-JUN-2023,Single-Arm Overhead Tricep Extension,5,35,good
+19-JUN-2023,Single-Arm Overhead Tricep Extension,5,35,good
+19-JUN-2023,Single-Arm Overhead Tricep Extension,5,35,good
 19-JUN-2023,Arnold Press,10,50,good
 19-JUN-2023,Arnold Press,10,50,good
 19-JUN-2023,Arnold Press,10,50,good
@@ -6166,9 +6168,9 @@ date,exercise,reps,weight(lbs),rating
 17-JUN-2023,Deadlift,1,315,good
 17-JUN-2023,Deadlift,5,275,warm-up
 17-JUN-2023,Deadlift,2,225,warm-up
-16-JUN-2023,Barbell Calf Raise,20,175,good
-16-JUN-2023,Barbell Calf Raise,20,155,easy
-16-JUN-2023,Barbell Calf Raise,20,135,easy
+16-JUN-2023,Seated Barbell Calf Raise,20,175,good
+16-JUN-2023,Seated Barbell Calf Raise,20,155,easy
+16-JUN-2023,Seated Barbell Calf Raise,20,135,easy
 16-JUN-2023,Squats,10,235,good
 16-JUN-2023,Squats,10,235,good
 16-JUN-2023,Squats,10,235,good
@@ -6211,10 +6213,10 @@ date,exercise,reps,weight(lbs),rating
 14-JUN-2023,Tricep Pushdown,10,130,good
 14-JUN-2023,Tricep Pushdown,10,130,good
 14-JUN-2023,Tricep Pushdown,10,130,good
-14-JUN-2023,Overhead Tricep Extension,10,30,good
-14-JUN-2023,Overhead Tricep Extension,10,30,good
-14-JUN-2023,Overhead Tricep Extension,12,30,good
-14-JUN-2023,Overhead Tricep Extension,5,20,warm-up
+14-JUN-2023,Single-Arm Overhead Tricep Extension,10,30,good
+14-JUN-2023,Single-Arm Overhead Tricep Extension,10,30,good
+14-JUN-2023,Single-Arm Overhead Tricep Extension,12,30,good
+14-JUN-2023,Single-Arm Overhead Tricep Extension,5,20,warm-up
 14-JUN-2023,Preacher Curl,10,62,good
 14-JUN-2023,Preacher Curl,8,62,good
 14-JUN-2023,Preacher Curl,5,72,good
@@ -6311,12 +6313,12 @@ date,exercise,reps,weight(lbs),rating
 08-JUN-2023,Tricep Pushdown,5,150,good
 08-JUN-2023,Tricep Pushdown,5,150,good
 08-JUN-2023,Tricep Pushdown,5,150,good
-08-JUN-2023,Overhead Tricep Extension,5,40,failure (L)
-08-JUN-2023,Overhead Tricep Extension,5,35,good
-08-JUN-2023,Overhead Tricep Extension,5,35,good
-08-JUN-2023,Overhead Tricep Extension,5,35,good
-08-JUN-2023,Overhead Tricep Extension,5,35,good
-08-JUN-2023,Overhead Tricep Extension,5,35,good
+08-JUN-2023,Single-Arm Overhead Tricep Extension,5,40,failure (L)
+08-JUN-2023,Single-Arm Overhead Tricep Extension,5,35,good
+08-JUN-2023,Single-Arm Overhead Tricep Extension,5,35,good
+08-JUN-2023,Single-Arm Overhead Tricep Extension,5,35,good
+08-JUN-2023,Single-Arm Overhead Tricep Extension,5,35,good
+08-JUN-2023,Single-Arm Overhead Tricep Extension,5,35,good
 08-JUN-2023,Concentration Curl,5,35,good
 08-JUN-2023,Concentration Curl,5,30,good
 08-JUN-2023,Concentration Curl,5,30,good
@@ -6419,9 +6421,9 @@ date,exercise,reps,weight(lbs),rating
 02-JUN-2023,Tricep Pushdown,10,130,good
 02-JUN-2023,Tricep Pushdown,10,130,good
 02-JUN-2023,Tricep Pushdown,10,130,good
-02-JUN-2023,Overhead Tricep Extension,12,30,good
-02-JUN-2023,Overhead Tricep Extension,12,30,good
-02-JUN-2023,Overhead Tricep Extension,12,30,good
+02-JUN-2023,Single-Arm Overhead Tricep Extension,12,30,good
+02-JUN-2023,Single-Arm Overhead Tricep Extension,12,30,good
+02-JUN-2023,Single-Arm Overhead Tricep Extension,12,30,good
 02-JUN-2023,Preacher Curl,10,62,good
 02-JUN-2023,Preacher Curl,10,62,good
 02-JUN-2023,Preacher Curl,10,62,good
@@ -6457,9 +6459,9 @@ date,exercise,reps,weight(lbs),rating
 31-MAY-2023,Deadlift,10,225,good
 31-MAY-2023,Deadlift,10,225,good
 31-MAY-2023,Deadlift,5,135,warm-up
-30-MAY-2023,Overhead Tricep Extension,5,35,good
-30-MAY-2023,Overhead Tricep Extension,5,35,good
-30-MAY-2023,Overhead Tricep Extension,8,35,good
+30-MAY-2023,Single-Arm Overhead Tricep Extension,5,35,good
+30-MAY-2023,Single-Arm Overhead Tricep Extension,5,35,good
+30-MAY-2023,Single-Arm Overhead Tricep Extension,8,35,good
 30-MAY-2023,Strict Press,5,155,good
 30-MAY-2023,Strict Press,5,155,good
 30-MAY-2023,Bench Press,5,245,good
@@ -6515,9 +6517,9 @@ date,exercise,reps,weight(lbs),rating
 27-MAY-2023,Tricep Pushdown,10,130,good
 27-MAY-2023,Tricep Pushdown,10,130,good
 27-MAY-2023,Tricep Pushdown,10,130,good
-27-MAY-2023,Overhead Tricep Extension,12,30,good
-27-MAY-2023,Overhead Tricep Extension,12,30,good
-27-MAY-2023,Overhead Tricep Extension,12,30,good
+27-MAY-2023,Single-Arm Overhead Tricep Extension,12,30,good
+27-MAY-2023,Single-Arm Overhead Tricep Extension,12,30,good
+27-MAY-2023,Single-Arm Overhead Tricep Extension,12,30,good
 27-MAY-2023,Hammer Curl,12,30,good
 27-MAY-2023,Hammer Curl,12,30,good
 27-MAY-2023,Hammer Curl,12,30,good
@@ -6628,9 +6630,9 @@ date,exercise,reps,weight(lbs),rating
 21-MAY-2023,Hammer Curl,10,30,good
 21-MAY-2023,Hammer Curl,10,30,good
 21-MAY-2023,Hammer Curl,10,30,good
-21-MAY-2023,Overhead Tricep Extension,5,35,good
-21-MAY-2023,Overhead Tricep Extension,5,35,good
-21-MAY-2023,Overhead Tricep Extension,5,35,good
+21-MAY-2023,Single-Arm Overhead Tricep Extension,5,35,good
+21-MAY-2023,Single-Arm Overhead Tricep Extension,5,35,good
+21-MAY-2023,Single-Arm Overhead Tricep Extension,5,35,good
 21-MAY-2023,Bicep Curl,10,30,good
 21-MAY-2023,Bicep Curl,10,30,good
 21-MAY-2023,Bicep Curl,10,30,good
@@ -6643,8 +6645,8 @@ date,exercise,reps,weight(lbs),rating
 20-MAY-2023,Full Cans,12,10,good
 20-MAY-2023,Full Cans,12,10,good
 20-MAY-2023,Full Cans,12,10,good
-20-MAY-2023,Overhead Tricep Extension,1,45,failure (L)
-20-MAY-2023,Overhead Tricep Extension,2,40,good
+20-MAY-2023,Single-Arm Overhead Tricep Extension,1,45,failure (L)
+20-MAY-2023,Single-Arm Overhead Tricep Extension,2,40,good
 20-MAY-2023,Squats,1,335,good
 20-MAY-2023,Squats,1,315,good
 20-MAY-2023,Squats,1,275,good
@@ -6709,9 +6711,9 @@ date,exercise,reps,weight(lbs),rating
 14-MAY-2023,Tricep Pushdown,10,120,good
 14-MAY-2023,Tricep Pushdown,10,120,good
 14-MAY-2023,Tricep Pushdown,12,120,good
-14-MAY-2023,Overhead Tricep Extension,10,30,good
-14-MAY-2023,Overhead Tricep Extension,10,30,good
-14-MAY-2023,Overhead Tricep Extension,10,30,good
+14-MAY-2023,Single-Arm Overhead Tricep Extension,10,30,good
+14-MAY-2023,Single-Arm Overhead Tricep Extension,10,30,good
+14-MAY-2023,Single-Arm Overhead Tricep Extension,10,30,good
 14-MAY-2023,Concentration Curl,10,25,good
 14-MAY-2023,Concentration Curl,10,25,good
 14-MAY-2023,Concentration Curl,10,25,good
@@ -6794,9 +6796,9 @@ date,exercise,reps,weight(lbs),rating
 09-MAY-2023,Tricep Pushdown,12,120,good
 09-MAY-2023,Tricep Pushdown,10,120,good
 09-MAY-2023,Tricep Pushdown,10,120,good
-09-MAY-2023,Overhead Tricep Extension,10,30,good
-09-MAY-2023,Overhead Tricep Extension,10,30,good
-09-MAY-2023,Overhead Tricep Extension,12,30,good
+09-MAY-2023,Single-Arm Overhead Tricep Extension,10,30,good
+09-MAY-2023,Single-Arm Overhead Tricep Extension,10,30,good
+09-MAY-2023,Single-Arm Overhead Tricep Extension,12,30,good
 09-MAY-2023,Concentration Curl,10,25,good
 09-MAY-2023,Concentration Curl,10,25,good
 09-MAY-2023,Concentration Curl,10,25,good
@@ -6879,9 +6881,9 @@ date,exercise,reps,weight(lbs),rating
 03-MAY-2023,Tricep Pushdown,10,120,good
 03-MAY-2023,Tricep Pushdown,10,120,good
 03-MAY-2023,Tricep Pushdown,10,120,good
-03-MAY-2023,Overhead Tricep Extension,10,30,good
-03-MAY-2023,Overhead Tricep Extension,10,30,good
-03-MAY-2023,Overhead Tricep Extension,10,30,good
+03-MAY-2023,Single-Arm Overhead Tricep Extension,10,30,good
+03-MAY-2023,Single-Arm Overhead Tricep Extension,10,30,good
+03-MAY-2023,Single-Arm Overhead Tricep Extension,10,30,good
 03-MAY-2023,Concentration Curl,10,25,good
 03-MAY-2023,Concentration Curl,10,25,good
 03-MAY-2023,Concentration Curl,12,25,good
@@ -6966,9 +6968,9 @@ date,exercise,reps,weight(lbs),rating
 26-APR-2023,Skullcrushers,12,62,good
 26-APR-2023,Skullcrushers,12,62,good
 26-APR-2023,Skullcrushers,12,62,good
-26-APR-2023,Overhead Tricep Extension,10,30,good
-26-APR-2023,Overhead Tricep Extension,10,30,good
-26-APR-2023,Overhead Tricep Extension,10,30,good
+26-APR-2023,Single-Arm Overhead Tricep Extension,10,30,good
+26-APR-2023,Single-Arm Overhead Tricep Extension,10,30,good
+26-APR-2023,Single-Arm Overhead Tricep Extension,10,30,good
 26-APR-2023,Concentration Curl,10,25,good
 26-APR-2023,Concentration Curl,10,25,good
 26-APR-2023,Concentration Curl,10,25,good
@@ -7038,9 +7040,9 @@ date,exercise,reps,weight(lbs),rating
 21-APR-2023,Tricep Pushdown,10,120,good
 21-APR-2023,Tricep Pushdown,10,120,good
 21-APR-2023,Tricep Pushdown,10,120,good
-21-APR-2023,Overhead Tricep Extension,10,30,good
-21-APR-2023,Overhead Tricep Extension,10,30,good
-21-APR-2023,Overhead Tricep Extension,10,30,good
+21-APR-2023,Single-Arm Overhead Tricep Extension,10,30,good
+21-APR-2023,Single-Arm Overhead Tricep Extension,10,30,good
+21-APR-2023,Single-Arm Overhead Tricep Extension,10,30,good
 21-APR-2023,Concentration Curl,15,20,bad (L)
 21-APR-2023,Concentration Curl,15,20,good
 21-APR-2023,Concentration Curl,15,20,good
@@ -7103,9 +7105,9 @@ date,exercise,reps,weight(lbs),rating
 14-APR-2023,Skullcrushers,10,62,good
 14-APR-2023,Skullcrushers,10,62,good
 14-APR-2023,Skullcrushers,10,62,good
-14-APR-2023,Overhead Tricep Extension,8,30,failure
-14-APR-2023,Overhead Tricep Extension,10,30,good
-14-APR-2023,Overhead Tricep Extension,10,30,good
+14-APR-2023,Single-Arm Overhead Tricep Extension,8,30,failure
+14-APR-2023,Single-Arm Overhead Tricep Extension,10,30,good
+14-APR-2023,Single-Arm Overhead Tricep Extension,10,30,good
 14-APR-2023,Preacher Curl,10,62,failure
 14-APR-2023,Preacher Curl,10,62,failure
 14-APR-2023,Preacher Curl,10,62,good
@@ -7195,9 +7197,9 @@ date,exercise,reps,weight(lbs),rating
 08-APR-2023,Tricep Pushdown,8,120,failure
 08-APR-2023,Tricep Pushdown,10,120,good
 08-APR-2023,Tricep Pushdown,12,120,good
-08-APR-2023,Overhead Tricep Extension,8,30,good
-08-APR-2023,Overhead Tricep Extension,8,30,good
-08-APR-2023,Overhead Tricep Extension,10,30,good
+08-APR-2023,Single-Arm Overhead Tricep Extension,8,30,good
+08-APR-2023,Single-Arm Overhead Tricep Extension,8,30,good
+08-APR-2023,Single-Arm Overhead Tricep Extension,10,30,good
 08-APR-2023,Concentration Curl,12,20,good
 08-APR-2023,Concentration Curl,12,20,good
 08-APR-2023,Concentration Curl,12,20,good
@@ -7273,9 +7275,9 @@ date,exercise,reps,weight(lbs),rating
 02-APR-2023,Tricep Pushdown,10,120,good
 02-APR-2023,Tricep Pushdown,10,120,good
 02-APR-2023,Tricep Pushdown,10,110,good
-02-APR-2023,Overhead Tricep Extension,12,25,good
-02-APR-2023,Overhead Tricep Extension,12,25,good
-02-APR-2023,Overhead Tricep Extension,12,25,good
+02-APR-2023,Single-Arm Overhead Tricep Extension,12,25,good
+02-APR-2023,Single-Arm Overhead Tricep Extension,12,25,good
+02-APR-2023,Single-Arm Overhead Tricep Extension,12,25,good
 02-APR-2023,Hammer Curl,10,30,good
 02-APR-2023,Hammer Curl,10,30,good
 02-APR-2023,Hammer Curl,10,30,good
@@ -7350,9 +7352,9 @@ date,exercise,reps,weight(lbs),rating
 26-MAR-2023,Tricep Pushdown,5,130,failure
 26-MAR-2023,Tricep Pushdown,5,130,good
 26-MAR-2023,Tricep Pushdown,10,110,good
-26-MAR-2023,Overhead Tricep Extension,12,25,failure
-26-MAR-2023,Overhead Tricep Extension,12,25,good
-26-MAR-2023,Overhead Tricep Extension,12,25,good
+26-MAR-2023,Single-Arm Overhead Tricep Extension,12,25,failure
+26-MAR-2023,Single-Arm Overhead Tricep Extension,12,25,good
+26-MAR-2023,Single-Arm Overhead Tricep Extension,12,25,good
 26-MAR-2023,Hammer Curl,12,25,good
 26-MAR-2023,Hammer Curl,10,30,bad
 26-MAR-2023,Hammer Curl,13,25,good
@@ -7435,9 +7437,9 @@ date,exercise,reps,weight(lbs),rating
 20-MAR-2023,Tricep Pushdown,10,110,good
 20-MAR-2023,Tricep Pushdown,10,110,good
 20-MAR-2023,Tricep Pushdown,12,100,good
-20-MAR-2023,Overhead Tricep Extension,10,25,good
-20-MAR-2023,Overhead Tricep Extension,10,25,good
-20-MAR-2023,Overhead Tricep Extension,10,25,easy
+20-MAR-2023,Single-Arm Overhead Tricep Extension,10,25,good
+20-MAR-2023,Single-Arm Overhead Tricep Extension,10,25,good
+20-MAR-2023,Single-Arm Overhead Tricep Extension,10,25,easy
 20-MAR-2023,Concentration Curl,10,20,good
 20-MAR-2023,Concentration Curl,10,20,good
 20-MAR-2023,Concentration Curl,10,20,good
@@ -7521,9 +7523,9 @@ date,exercise,reps,weight(lbs),rating
 13-MAR-2023,Tricep Pushdown,12,100,failure
 13-MAR-2023,Tricep Pushdown,12,100,good
 13-MAR-2023,Tricep Pushdown,12,100,good
-13-MAR-2023,Overhead Tricep Extension,10,26.4,good
-13-MAR-2023,Overhead Tricep Extension,10,26.4,good
-13-MAR-2023,Overhead Tricep Extension,10,26.4,good
+13-MAR-2023,Single-Arm Overhead Tricep Extension,10,26.4,good
+13-MAR-2023,Single-Arm Overhead Tricep Extension,10,26.4,good
+13-MAR-2023,Single-Arm Overhead Tricep Extension,10,26.4,good
 13-MAR-2023,Concentration Curl,12,20,good
 13-MAR-2023,Concentration Curl,12,20,good
 13-MAR-2023,Concentration Curl,10,20,good
@@ -7647,10 +7649,10 @@ date,exercise,reps,weight(lbs),rating
 27-FEB-2023,Incline Dumbbell Press,12,50,good
 27-FEB-2023,Incline Dumbbell Press,12,50,good
 27-FEB-2023,Incline Dumbbell Press,10,50,easy
-26-FEB-2023,Overhead Tricep Extension,10,25,good
-26-FEB-2023,Overhead Tricep Extension,3,25,good
-26-FEB-2023,Overhead Tricep Extension,7,30,bad
-26-FEB-2023,Overhead Tricep Extension,10,25,easy
+26-FEB-2023,Single-Arm Overhead Tricep Extension,10,25,good
+26-FEB-2023,Single-Arm Overhead Tricep Extension,3,25,good
+26-FEB-2023,Single-Arm Overhead Tricep Extension,7,30,bad
+26-FEB-2023,Single-Arm Overhead Tricep Extension,10,25,easy
 26-FEB-2023,Concentration Curl,10,20,good
 26-FEB-2023,Concentration Curl,10,20,good
 26-FEB-2023,Concentration Curl,10,20,good
@@ -8021,21 +8023,21 @@ date,exercise,reps,weight(lbs),rating
 29-JAN-2023,Lateral Lift,12,20,good
 29-JAN-2023,Lateral Lift,12,20,good
 29-JAN-2023,Lateral Lift,10,20,easy
-25-JAN-2023,Resistance Lat Pulldown,10,100,good
-25-JAN-2023,Resistance Lat Pulldown,10,100,good
-25-JAN-2023,Resistance Lat Pulldown,10,100,good
-25-JAN-2023,Resistance Seated Row,10,100,good
-25-JAN-2023,Resistance Seated Row,10,100,good
-25-JAN-2023,Resistance Seated Row,10,100,good
+25-JAN-2023,Pneumatic Lat Pulldown,10,100,good
+25-JAN-2023,Pneumatic Lat Pulldown,10,100,good
+25-JAN-2023,Pneumatic Lat Pulldown,10,100,good
+25-JAN-2023,Pneumatic Seated Row,10,100,good
+25-JAN-2023,Pneumatic Seated Row,10,100,good
+25-JAN-2023,Pneumatic Seated Row,10,100,good
 25-JAN-2023,Lawnmowers,10,40,good
 25-JAN-2023,Lawnmowers,10,40,good
 25-JAN-2023,Lawnmowers,10,40,good
-25-JAN-2023,Resistance Tricep Pushdown,10,40,good
-25-JAN-2023,Resistance Tricep Pushdown,10,40,good
-25-JAN-2023,Resistance Tricep Pushdown,12,40,good
-25-JAN-2023,Overhead Tricep Extension,10,25,good
-25-JAN-2023,Overhead Tricep Extension,10,25,good
-25-JAN-2023,Overhead Tricep Extension,10,25,good
+25-JAN-2023,Pneumatic Tricep Pushdown,10,40,good
+25-JAN-2023,Pneumatic Tricep Pushdown,10,40,good
+25-JAN-2023,Pneumatic Tricep Pushdown,12,40,good
+25-JAN-2023,Single-Arm Overhead Tricep Extension,10,25,good
+25-JAN-2023,Single-Arm Overhead Tricep Extension,10,25,good
+25-JAN-2023,Single-Arm Overhead Tricep Extension,10,25,good
 25-JAN-2023,Concentration Curl,10,15,good
 25-JAN-2023,Concentration Curl,10,20,bad
 25-JAN-2023,Hammer Curl,10,25,good
@@ -8165,9 +8167,9 @@ date,exercise,reps,weight(lbs),rating
 05-JAN-2023,Tricep Pushdown,10,40.5,good
 05-JAN-2023,Tricep Pushdown,10,42.5,bad
 05-JAN-2023,Tricep Pushdown,10,37.5,good
-05-JAN-2023,Overhead Tricep Extension,10,25,good
-05-JAN-2023,Overhead Tricep Extension,10,25,good
-05-JAN-2023,Overhead Tricep Extension,10,20,good
+05-JAN-2023,Single-Arm Overhead Tricep Extension,10,25,good
+05-JAN-2023,Single-Arm Overhead Tricep Extension,10,25,good
+05-JAN-2023,Single-Arm Overhead Tricep Extension,10,20,good
 05-JAN-2023,Hammer Curl,10,25,good
 05-JAN-2023,Hammer Curl,10,25,good
 05-JAN-2023,Hammer Curl,10,20,good
@@ -8259,9 +8261,9 @@ date,exercise,reps,weight(lbs),rating
 21-DEC-2022,Lawnmowers,10,35,good
 21-DEC-2022,Lawnmowers,10,35,good
 21-DEC-2022,Lawnmowers,10,35,good
-21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
-21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
-21-DEC-2022,Overhead Tricep Extension,10,20,bad (L)
+21-DEC-2022,Single-Arm Overhead Tricep Extension,10,20,bad (L)
+21-DEC-2022,Single-Arm Overhead Tricep Extension,10,20,bad (L)
+21-DEC-2022,Single-Arm Overhead Tricep Extension,10,20,bad (L)
 21-DEC-2022,Seated Row,10,110,good
 21-DEC-2022,Seated Row,10,110,bad
 21-DEC-2022,Seated Row,10,95,good
@@ -8271,9 +8273,9 @@ date,exercise,reps,weight(lbs),rating
 09-DEC-2022,Lat Pulldown,11,85,good
 09-DEC-2022,Lat Pulldown,8,100,failure
 09-DEC-2022,Lat Pulldown,10,100,good
-09-DEC-2022,Overhead Tricep Extension,10,15,good
-09-DEC-2022,Overhead Tricep Extension,10,15,good
-09-DEC-2022,Overhead Tricep Extension,10,15,good
+09-DEC-2022,Single-Arm Overhead Tricep Extension,10,15,good
+09-DEC-2022,Single-Arm Overhead Tricep Extension,10,15,good
+09-DEC-2022,Single-Arm Overhead Tricep Extension,10,15,good
 09-DEC-2022,Lawnmowers,10,35,good
 09-DEC-2022,Lawnmowers,10,35,good
 09-DEC-2022,Lawnmowers,10,35,good
@@ -8292,9 +8294,9 @@ date,exercise,reps,weight(lbs),rating
 04-DEC-2022,Seated Row,10,77.5,good
 04-DEC-2022,Seated Row,10,85,good
 04-DEC-2022,Seated Row,10,100,good
-04-DEC-2022,Overhead Tricep Extension,10,15,good
-04-DEC-2022,Overhead Tricep Extension,10,15,good
-04-DEC-2022,Overhead Tricep Extension,10,12.5,good
+04-DEC-2022,Single-Arm Overhead Tricep Extension,10,15,good
+04-DEC-2022,Single-Arm Overhead Tricep Extension,10,15,good
+04-DEC-2022,Single-Arm Overhead Tricep Extension,10,12.5,good
 04-DEC-2022,Lawnmowers,10,30,good
 04-DEC-2022,Lawnmowers,10,30,good
 04-DEC-2022,Lawnmowers,10,30,good

@@ -4,10 +4,10 @@ date,workout_type,duration(HH:mm:ss),distance(km),steps,elevation(m),weight(lbs)
 25-JAN-2026,walk (treadmill),00:35:00,3.03,3666,132,0,161,176,""
 21-JAN-2026,walk (treadmill),00:33:00,2.86,3505,135,0,167,182,""
 19-JAN-2026,walk (treadmill),00:35:00,3.02,3804,113,0,166,178,""
-20-APR-2025,hike (outdoor),04:43:07,11.35,,256,0,117,172,"Long session with 10kph dash"
+20-APR-2025,hike (light or no pack),04:43:07,11.35,,256,0,117,172,"Long session with 10kph dash"
 17-APR-2025,walk (treadmill),01:02:00,5.37,,312,0,158,170,
 15-APR-2025,walk (treadmill),01:00:00,5.20,,312,0,161,170,"Also did an outdoor hike"
-13-MAR-2025,hike (outdoor),02:24:46,5.47,,111,0,116,150,""
+13-MAR-2025,hike (light or no pack),02:24:46,5.47,,111,0,116,150,""
 11-APR-2025,walk (treadmill),00:52:00,4.50,,282,0,159,192,"Intervals: 6%, 8%, 10%, 11%, 12%"
 06-APR-2025,walk (treadmill),01:30:00,7.88,,414,0,164,188,"Long session with 10kph dash"
 19-MAR-2025,walk (treadmill),01:00:00,5.20,,364,0,161,178,""
